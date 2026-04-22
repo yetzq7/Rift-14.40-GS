@@ -118,6 +118,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>minhook.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -140,6 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
+    <ClInclude Include="Hooks.h" />
     <ClInclude Include="MinHook.h" />
     <ClInclude Include="SDK\PropertyFixup.hpp" />
     <ClInclude Include="SDK\SDK.hpp" />

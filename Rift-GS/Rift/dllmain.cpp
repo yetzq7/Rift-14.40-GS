@@ -1,5 +1,6 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "framework.h"
+#include "Hooks.h"
 
 void Main()
 {
@@ -7,8 +8,20 @@ void Main()
     FILE* File = nullptr;
     freopen_s(&File, "CONOUTS", "n+", stdout);
     Sleep(5000);
+    MH_Initialize();
 
-    UKisntSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), L"open Apollo_Terrain", nullptr);
+    Hook(ImageBase + Addresses::GetNetMode, ReturnTrue, nullptr)
+
+    *reinterpret_cast<bool*>((ImageBase + Addresses::GIsClient)) = false;
+    *reinterpret_cast<bool*>((ImageBase + Addresses::GIsClient + 1)) = true;
+
+	for (auto& NullFunc : Addresses::NullFuncs)
+    {
+		Hook(ImageBase + NullFunc, ReturnHook, nullptr);
+    }   
+
+
+    UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), L"open Apollo_Terrain", nullptr);
 }
 
 
