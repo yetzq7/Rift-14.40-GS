@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Rift/Rift.vcxproj" Id="6c1557f6-5e10-4d78-a961-5e3e4bfd71c5" />
+</Solution>
