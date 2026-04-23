@@ -36,6 +36,24 @@
     <ClInclude Include="Hooks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\SDK\Engine_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\CoreUObject_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\CoreUObject_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\GameplayAbilities_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\GameplayAbilities_parameters.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK\FortniteGame_classes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">

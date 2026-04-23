@@ -5402,8 +5402,7 @@ public:
 };
 DUMPER7_ASSERTS_FFilePath;
 
-// ScriptStruct Engine.BlueprintEditorPromotionSettings
-// 0x0030 (0x0030 - 0x0000)
+
 struct FBlueprintEditorPromotionSettings final
 {
 public:
@@ -5413,8 +5412,7 @@ public:
 };
 DUMPER7_ASSERTS_FBlueprintEditorPromotionSettings;
 
-// ScriptStruct Engine.FastArraySerializer
-// 0x0108 (0x0108 - 0x0000)
+
 struct alignas(0x08) FFastArraySerializer
 {
 public:
@@ -5426,15 +5424,13 @@ public:
 };
 DUMPER7_ASSERTS_FFastArraySerializer;
 
-// ScriptStruct Engine.ScalarMaterialInput
-// 0x0000 (0x000C - 0x000C)
+
 struct FScalarMaterialInput final : public FMaterialInput
 {
 };
 DUMPER7_ASSERTS_FScalarMaterialInput;
 
-// ScriptStruct Engine.WalkableSlopeOverride
-// 0x0010 (0x0010 - 0x0000)
+
 struct FWalkableSlopeOverride final
 {
 public:
@@ -5717,8 +5713,7 @@ public:
 };
 DUMPER7_ASSERTS_FSkelMeshComponentLODInfo;
 
-// ScriptStruct Engine.CollisionResponseContainer
-// 0x0020 (0x0020 - 0x0000)
+
 struct FCollisionResponseContainer final
 {
 public:
@@ -5757,8 +5752,7 @@ public:
 };
 DUMPER7_ASSERTS_FCollisionResponseContainer;
 
-// ScriptStruct Engine.CollisionResponse
-// 0x0030 (0x0030 - 0x0000)
+
 struct FCollisionResponse final
 {
 public:
@@ -5767,8 +5761,7 @@ public:
 };
 DUMPER7_ASSERTS_FCollisionResponse;
 
-// ScriptStruct Engine.BodyInstance
-// 0x0140 (0x0158 - 0x0018)
+
 struct FBodyInstance final : public FBodyInstanceCore
 {
 public:

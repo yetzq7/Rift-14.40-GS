@@ -145,6 +145,12 @@
     <ClInclude Include="MinHook.h" />
     <ClInclude Include="SDK\PropertyFixup.hpp" />
     <ClInclude Include="SDK\SDK.hpp" />
+    <ClInclude Include="SDK\SDK\CoreUObject_classes.hpp" />
+    <ClInclude Include="SDK\SDK\CoreUObject_structs.hpp" />
+    <ClInclude Include="SDK\SDK\Engine_classes.hpp" />
+    <ClInclude Include="SDK\SDK\FortniteGame_classes.hpp" />
+    <ClInclude Include="SDK\SDK\GameplayAbilities_classes.hpp" />
+    <ClInclude Include="SDK\SDK\GameplayAbilities_parameters.hpp" />
     <ClInclude Include="SDK\UnrealContainers.hpp" />
     <ClInclude Include="SDK\UtfN.hpp" />
   </ItemGroup>
