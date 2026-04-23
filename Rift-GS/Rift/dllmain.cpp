@@ -6,11 +6,11 @@ void Main()
 {
     AllocConsole();
     FILE* File = nullptr;
-    freopen_s(&File, "CONOUTS", "n+", stdout);
+    freopen_s(&File, "CONOUT$", "w+", stdout);
     Sleep(5000);
     MH_Initialize();
 
-    Hook(ImageBase + Addresses::GetNetMode, ReturnTrue, nullptr)
+    Hook(ImageBase + Addresses::GetNetMode, ReturnTrue, nullptr);
 
     *reinterpret_cast<bool*>((ImageBase + Addresses::GIsClient)) = false;
     *reinterpret_cast<bool*>((ImageBase + Addresses::GIsClient + 1)) = true;
@@ -20,7 +20,9 @@ void Main()
 		Hook(ImageBase + NullFunc, ReturnHook, nullptr);
     }   
 
+	Hook(ImageBase + Addresses::TickFlush, TickFlush, (void**)&TickFlush_OG);
 
+	UEngine::GetEngine()->GameViewport->World->OwningGameInstance->LocalPlayers.Remove(0);
     UKismetSystemLibrary::ExecuteConsoleCommand(UWorld::GetWorld(), L"open Apollo_Terrain", nullptr);
 }
 

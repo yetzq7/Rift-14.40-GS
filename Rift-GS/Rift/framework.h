@@ -10,11 +10,11 @@
 #include <string>
 #include "SDK/SDK.hpp"
 using namespace SDK;
-#include "MinHook.h" // use "MinHook.h" instead of <MinHook.h> to avoid issues with include directories 
-// #include "SDK/UnrealContainers.hpp" maybe remove
-// #include "SDK/SDK/Basic.hpp" maybe remove
+#include "MinHook.h"  
+#include "SDK/UnrealContainers.hpp"
+#include "SDK/SDK/Basic.hpp" 
 
-inline uint64 ImageBase = uint64(GetModuleHandle(0)); // maybe use InSDKUtils::GetImageBase(); idk *note*
+inline uint64 ImageBase = uint64(GetModuleHandle(0));
 
 namespace Addresses {
     inline uint64_t Step = 0x3757230;
@@ -39,7 +39,7 @@ namespace Addresses {
 
 namespace Funcs {
     inline auto CreateNetDriver = (SDK::UNetDriver * (*)(SDK::UEngine*, SDK::UWorld*, SDK::FName)) (ImageBase + Addresses::CreateNetDriver);
-    inline auto InitListen = (bool (*)(SDK::UNetDriver*, SDK::UWorld*, SDK::FURL&, bool, UC::FString&)) (ImageBase + Addresses::InitListen);
+    inline auto InitListen = (bool (*)(SDK::UNetDriver*, SDK::UWorld*, SDK::FURL&, bool, UC::FString)) (ImageBase + Addresses::InitListen);
     inline auto SetWorld = (void (*)(SDK::UNetDriver*, SDK::UWorld*)) (ImageBase + Addresses::SetWorld);
     inline auto ServerReplicateActors = (void (*)(SDK::UReplicationDriver*, float)) (ImageBase + Addresses::ServerReplicateActors);
     inline auto Realloc = (void* (*)(void*, __int64, unsigned int)) (ImageBase + Addresses::Realloc);
@@ -49,6 +49,6 @@ namespace Funcs {
 
 static void Hook(uint64 Address, void* Detour, void** OG)
 {
-    MM_CreateHook(LPVoid(Address), Detour, OG);
-    MM_EnableHook(LPVoid(Address));
+    MH_CreateHook(LPVOID(Address), Detour, OG);
+    MH_EnableHook(LPVOID(Address));
 }

@@ -2,25 +2,24 @@
 
 inline bool ReadyToStartMatch(AFortGameModeAthena* GameMode)
 {
-	static bool bFirstTouchingSession = false,
+	static bool bFirstTouchingSession = false;
 	auto GameState = (AFortGameStateAthena*)GameMode->GameState;
-	if (!GameState || !GameState->Map) return false; // note: checks if map loads
+	if (!GameState || !GameState->MapInfo) return false; 
 	if (!bFirstTouchingSession)
 	{	
-		static UFortPlaylistAthena* Playlist = UObject::FindObject<UFortPlaylistAthena>("FortPlaylistAthena Playlist_ShowdownAlt_Solo.Playlist_ShowdownAlt_Solo"); // playlist lel
+		static UFortPlaylistAthena* Playlist = UObject::FindObject<UFortPlaylistAthena>("FortPlaylistAthena Playlist_DefaultSolo.Playlist_DefaultSolo"); 
 		GameState->CurrentPlaylistInfo.BasePlaylist = Playlist;
 		GameState->CurrentPlaylistInfo.OverridePlaylist = Playlist;
 		GameState->CurrentPlaylistInfo.PlaylistReplicationKey++;
-		GameState->CurrentPlaylistInfo.MarkArrayDirty();
 
 		GameMode->CurrentPlaylistId = Playlist->PlaylistId;
 		GameMode->CurrentPlaylistName = Playlist->PlaylistName;
 
 		GameState->CurrentPlaylistId = Playlist->PlaylistId;
 
-		GameState->AirCraftBehaviour = Playlist->AirCraftBehavior;
+		GameState->AirCraftBehavior = Playlist->AirCraftBehavior;
 
-		GameMode->WarmUpRequiredPlayerCount = 1; // player count needed to start
+		GameMode->WarmupRequiredPlayerCount = 1; 
 
 		bFirstTouchingSession = true;
 	}
@@ -38,14 +37,13 @@ inline bool ReadyToStartMatch(AFortGameModeAthena* GameMode)
 			UWorld::GetWorld()->NetDriver->NetDriverName = GameNetDriver;
 			UWorld::GetWorld()->NetDriver->World = UWorld::GetWorld();
 
-			FURL URL{};
+			FURL URL{}; 
 			URL.Port = 7777;
-
-			Funcs::InitListen(UWorld::GetWorld()->NetDriver, UWorld::GetWorld(), URL(), false, {});
+			Funcs::InitListen(UWorld::GetWorld()->NetDriver, UWorld::GetWorld(), URL, false, {});
 
 			Funcs::SetWorld(UWorld::GetWorld()->NetDriver, UWorld::GetWorld());
 
-			for (int i = 0; i < UWorld::GetWorld()->LevelCollections.Num(; i++); 
+			for (int i = 0; i < UWorld::GetWorld()->LevelCollections.Num(); i++)
 
 			{
 				UWorld::GetWorld()->LevelCollections[1].NetDriver = UWorld::GetWorld()->NetDriver;
@@ -54,7 +52,7 @@ inline bool ReadyToStartMatch(AFortGameModeAthena* GameMode)
 			GameMode->bWorldIsReady = true;
 
 			GameState->OnRep_CurrentPlaylistInfo();
-			GameState->OnRepActiveGameplayModifiers();
+			GameState->OnRep_CurrentPlaylistId();
 		}
 
 		bListen = true;
@@ -63,7 +61,7 @@ inline bool ReadyToStartMatch(AFortGameModeAthena* GameMode)
 	return GameMode->AlivePlayers.Num() > 0;
  }
 
-inline APawn* SpawnDefaultPawnFor(AFortGameModeAthena* GameMode, AFortPlayerController* PC, AActor* StartSpot)
+inline APawn* SpawnDefaultPawnFor(AFortGameModeAthena* GameMode, AFortPlayerControllerAthena* PC, AActor* StartSpot)
 {
 	auto Transform = StartSpot->GetTransform();
 
@@ -80,10 +78,13 @@ static void ReturnHook()
 	return;
 }
 
-inline void (*TickFLush_OG)(UNetDriver* Driver, float DeltaSeconds);
+inline void (*TickFlush_OG)(UNetDriver* Driver, float DeltaSeconds);
 inline void TickFlush(UNetDriver* Driver, float DeltaSeconds)
 { 
+	if (Driver->ReplicationDriver)
+	{
+		Funcs::ServerReplicateActors(Driver->ReplicationDriver, DeltaSeconds);
+	}
 
-
-
+	return TickFlush_OG(Driver, DeltaSeconds);
 }
