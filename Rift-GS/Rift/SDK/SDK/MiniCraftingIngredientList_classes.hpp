@@ -17,16 +17,16 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass MiniCraftingIngredientList.MiniCraftingIngredientList_C
-// 0x0010 (0x02C8 - 0x02B8)
+// 0x0010 (0x0328 - 0x0318)
 class UMiniCraftingIngredientList_C final : public UFortItemQuantityListBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWrapBox*                               EntriesWrapBox;                                    // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWrapBox*                               EntriesWrapBox;                                    // 0x0320(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_MiniCraftingIngredientList(int32 EntryPoint);
 	void AddListEntry(class UFortItemQuantityListEntryBase* ListEntry);
+	void ExecuteUbergraph_MiniCraftingIngredientList(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -36,33 +36,17 @@ void AGC_Athena_OutsideSafeZone_C::ExecuteUbergraph_GC_Athena_OutsideSafeZone(in
 }
 
 
-// Function GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.OnApplication
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UCameraShake*                     BurstCameraShakeInstance                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ADecalActor*                      BurstDecalInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.FlashTimeline
+// (BlueprintCallable, BlueprintEvent)
 
-void AGC_Athena_OutsideSafeZone_C::OnApplication(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance)
+void AGC_Athena_OutsideSafeZone_C::FlashTimeline()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GC_Athena_OutsideSafeZone_C", "OnApplication");
+		Func = Class->GetFunction("GC_Athena_OutsideSafeZone_C", "FlashTimeline");
 
-	Params::GC_Athena_OutsideSafeZone_C_OnApplication Parms{};
-
-	Parms.MyTarget = MyTarget;
-	Parms.Parameters = std::move(Parameters);
-	Parms.ParticleComponents = std::move(ParticleComponents);
-	Parms.AudioComponents = std::move(AudioComponents);
-	Parms.BurstCameraShakeInstance = BurstCameraShakeInstance;
-	Parms.BurstDecalInstance = BurstDecalInstance;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -71,12 +55,12 @@ void AGC_Athena_OutsideSafeZone_C::OnApplication(class AActor* MyTarget, const s
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UCameraShake*                     BurstCameraShakeInstance                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// class UMatineeCameraShake*              BurstCameraShakeInstance                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ADecalActor*                      BurstDecalInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AGC_Athena_OutsideSafeZone_C::OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance)
+void AGC_Athena_OutsideSafeZone_C::OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UMatineeCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance)
 {
 	static class UFunction* Func = nullptr;
 
@@ -101,8 +85,8 @@ void AGC_Athena_OutsideSafeZone_C::OnRemoval(class AActor* MyTarget, const struc
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 
 void AGC_Athena_OutsideSafeZone_C::OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents)
 {
@@ -122,98 +106,31 @@ void AGC_Athena_OutsideSafeZone_C::OnLoopingStart(class AActor* MyTarget, const 
 }
 
 
-// Function GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.Timeline_1__UpdateFunc
+// Function GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.LightningFlashTL__UpdateFunc
 // (BlueprintEvent)
 
-void AGC_Athena_OutsideSafeZone_C::Timeline_1__UpdateFunc()
+void AGC_Athena_OutsideSafeZone_C::LightningFlashTL__UpdateFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GC_Athena_OutsideSafeZone_C", "Timeline_1__UpdateFunc");
+		Func = Class->GetFunction("GC_Athena_OutsideSafeZone_C", "LightningFlashTL__UpdateFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.Timeline_1__FinishedFunc
+// Function GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.LightningFlashTL__FinishedFunc
 // (BlueprintEvent)
 
-void AGC_Athena_OutsideSafeZone_C::Timeline_1__FinishedFunc()
+void AGC_Athena_OutsideSafeZone_C::LightningFlashTL__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GC_Athena_OutsideSafeZone_C", "Timeline_1__FinishedFunc");
+		Func = Class->GetFunction("GC_Athena_OutsideSafeZone_C", "LightningFlashTL__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.Timeline_0__UpdateFunc
-// (BlueprintEvent)
-
-void AGC_Athena_OutsideSafeZone_C::Timeline_0__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GC_Athena_OutsideSafeZone_C", "Timeline_0__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.Timeline_0__FinishedFunc
-// (BlueprintEvent)
-
-void AGC_Athena_OutsideSafeZone_C::Timeline_0__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GC_Athena_OutsideSafeZone_C", "Timeline_0__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AGC_Athena_OutsideSafeZone_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GC_Athena_OutsideSafeZone_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.OnExecute
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool AGC_Athena_OutsideSafeZone_C::OnExecute(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GC_Athena_OutsideSafeZone_C", "OnExecute");
-
-	Params::GC_Athena_OutsideSafeZone_C_OnExecute Parms{};
-
-	Parms.MyTarget = MyTarget;
-	Parms.Parameters = std::move(Parameters);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
@@ -254,6 +171,41 @@ void AGC_Athena_OutsideSafeZone_C::RemoveStormAudio(class APlayerPawn_Athena_C* 
 	Parms.PlayerPawnAthena = PlayerPawnAthena;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.Get Location in Circle XY
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FVector*                         Location_Local_Space                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AGC_Athena_OutsideSafeZone_C::Get_Location_in_Circle_XY(struct FVector* Location_Local_Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GC_Athena_OutsideSafeZone_C", "Get Location in Circle XY");
+
+	Params::GC_Athena_OutsideSafeZone_C_Get_Location_in_Circle_XY Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Location_Local_Space != nullptr)
+		*Location_Local_Space = std::move(Parms.Location_Local_Space);
+}
+
+
+// Function GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.Random Lighting Flashes
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AGC_Athena_OutsideSafeZone_C::Random_Lighting_Flashes()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GC_Athena_OutsideSafeZone_C", "Random Lighting Flashes");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

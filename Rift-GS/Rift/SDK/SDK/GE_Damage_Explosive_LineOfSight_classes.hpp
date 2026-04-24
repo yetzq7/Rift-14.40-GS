@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_Damage_Explosive_LineOfSight.GE_Damage_Explosive_LineOfSight_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_Damage_Explosive_LineOfSight_C final : public UGE_Ranged_GenericDamage_Explosive_C
 {
 public:

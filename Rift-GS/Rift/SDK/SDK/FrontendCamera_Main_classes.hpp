@@ -17,17 +17,17 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass FrontendCamera_Main.FrontendCamera_Main_C
-// 0x0010 (0x0890 - 0x0880)
+// 0x0010 (0x07F0 - 0x07E0)
 class AFrontendCamera_Main_C final : public AFortCameraBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0880(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCameraComponent*                       LoginCamera_0;                                     // 0x0888(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7D8[0x8];                                      // 0x07D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCameraComponent*                       LoginCamera_0;                                     // 0x07E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void OnActivated(class AFortPlayerController* PlayerController);
 	void ExecuteUbergraph_FrontendCamera_Main(int32 EntryPoint);
-	void OnActivated();
-	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

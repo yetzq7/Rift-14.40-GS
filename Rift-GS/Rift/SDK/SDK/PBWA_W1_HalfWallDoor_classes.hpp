@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PBWA_W1_HalfWallDoor.PBWA_W1_HalfWallDoor_C
-// 0x0000 (0x0CE8 - 0x0CE8)
+// 0x0000 (0x0CD0 - 0x0CD0)
 class APBWA_W1_HalfWallDoor_C final : public ABuildingWall
 {
 public:

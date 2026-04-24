@@ -79,8 +79,8 @@ public:
 	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0058(0x0040)(HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0098(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData1;             // 0x00B0(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00F0(0x0010)(ZeroConstructor, ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00B0(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00F0(0x0010)(ReferenceParm, HasGetValueTypeHash)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0100(0x0018)()
 };
 DUMPER7_ASSERTS_TooltipLibrary_C_Create_Item_Tooltip;
@@ -100,26 +100,11 @@ public:
 	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0058(0x0040)(HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0098(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData1;             // 0x00B0(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00F0(0x0010)(ZeroConstructor, ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00B0(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00F0(0x0010)(ReferenceParm, HasGetValueTypeHash)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0100(0x0018)()
 };
 DUMPER7_ASSERTS_TooltipLibrary_C_Create_Compare_Item_Tooltip;
-
-// Function TooltipLibrary.TooltipLibrary_C.Create Basic Multi Line Tooltip
-// 0x0050 (0x0050 - 0x0000)
-struct TooltipLibrary_C_Create_Basic_Multi_Line_Tooltip final
-{
-public:
-	class APlayerController*                      Owning_Player;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FText>                           Body_Text;                                         // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	class FText                                   Header_Text;                                       // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class USlateBrushAsset*                       Icon_Brush;                                        // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            Output;                                            // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTooltip_BasicMultiLine_S_C*            CallFunc_Create_ReturnValue;                       // 0x0048(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_TooltipLibrary_C_Create_Basic_Multi_Line_Tooltip;
 
 // Function TooltipLibrary.TooltipLibrary_C.CreateXPTooltip
 // 0x0098 (0x0098 - 0x0000)

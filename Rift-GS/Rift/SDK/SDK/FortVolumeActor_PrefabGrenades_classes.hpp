@@ -17,16 +17,15 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass FortVolumeActor_PrefabGrenades.FortVolumeActor_PrefabGrenades_C
-// 0x0008 (0x0AD0 - 0x0AC8)
+// 0x0008 (0x0660 - 0x0658)
 class AFortVolumeActor_PrefabGrenades_C final : public AFortVolumeActor_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_FortVolumeActor_PrefabGrenades_C;   // 0x0AC8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_FortVolumeActor_PrefabGrenades_C;   // 0x0658(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_FortVolumeActor_PrefabGrenades(int32 EntryPoint);
-	void OnDeathPlayEffects(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
-	void UserConstructionScript();
+	void OnDeathPlayEffects_2(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
 
 public:
 	static class UClass* StaticClass()

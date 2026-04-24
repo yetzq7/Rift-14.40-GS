@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass TrapTool.TrapTool_C
-// 0x0000 (0x09E0 - 0x09E0)
+// 0x0000 (0x0D18 - 0x0D18)
 class ATrapTool_C final : public AFortTrapTool
 {
 public:

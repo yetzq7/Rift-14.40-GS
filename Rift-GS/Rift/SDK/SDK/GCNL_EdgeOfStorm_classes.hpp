@@ -17,22 +17,21 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C
-// 0x0020 (0x08A0 - 0x0880)
+// 0x0020 (0x07E0 - 0x07C0)
 class AGCNL_EdgeOfStorm_C final : public AFortGameplayCueNotify_Loop
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0880(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        Audio;                                             // 0x0888(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        StormPawn;                                         // 0x0890(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bBoundAudioPercent;                                // 0x0898(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_899[0x3];                                      // 0x0899(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CurrentPlaybackPercent;                            // 0x089C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        Audio;                                             // 0x07C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawn*                        StormPawn;                                         // 0x07D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bBoundAudioPercent;                                // 0x07D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7D9[0x3];                                      // 0x07D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CurrentPlaybackPercent;                            // 0x07DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GCNL_EdgeOfStorm(int32 EntryPoint);
 	void Deactivated();
 	void Activated(const struct FVector& EdgeOfStorm);
-	void UserConstructionScript();
 	bool OnActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
 	bool OnExecute(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
 	bool OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);

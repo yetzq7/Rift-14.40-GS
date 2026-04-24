@@ -18,46 +18,84 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function MainTabIconButton.MainTabIconButton_C.ExecuteUbergraph_MainTabIconButton
-// 0x0110 (0x0110 - 0x0000)
-struct MainTabIconButton_C_ExecuteUbergraph_MainTabIconButton final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate1;             // 0x0014(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate2;             // 0x0024(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_GetCurrentTextStyleClass_ReturnValue;     // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_GetCurrentTextStyleClass_ReturnValue1;    // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate3;             // 0x0050(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortTabButtonLabelInfo                K2Node_Event_TabLabelInfo;                         // 0x0068(0x00A0)(ConstParm)
-	bool                                          CallFunc_GetSelected_ReturnValue;                  // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_GetSelected_ReturnValue1;                 // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_MainTabIconButton_C_ExecuteUbergraph_MainTabIconButton;
-
-// Function MainTabIconButton.MainTabIconButton_C.SetTabLabelInfo
-// 0x00A0 (0x00A0 - 0x0000)
-struct MainTabIconButton_C_SetTabLabelInfo final
-{
-public:
-	struct FFortTabButtonLabelInfo                TabLabelInfo;                                      // 0x0000(0x00A0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_MainTabIconButton_C_SetTabLabelInfo;
-
-// Function MainTabIconButton.MainTabIconButton_C.PreConstruct
+// Function MainTabIconButton.MainTabIconButton_C.SetBangType
 // 0x0001 (0x0001 - 0x0000)
-struct MainTabIconButton_C_PreConstruct final
+struct MainTabIconButton_C_SetBangType final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	EFortBangType                                 NewBangType;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MainTabIconButton_C_PreConstruct;
+DUMPER7_ASSERTS_MainTabIconButton_C_SetBangType;
+
+// Function MainTabIconButton.MainTabIconButton_C.StopTabCallout
+// 0x0008 (0x0008 - 0x0000)
+struct MainTabIconButton_C_StopTabCallout final
+{
+public:
+	class UClass*                                 CallFunc_GetCurrentTextStyleClass_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_MainTabIconButton_C_StopTabCallout;
+
+// Function MainTabIconButton.MainTabIconButton_C.TabAdded
+// 0x0008 (0x0008 - 0x0000)
+struct MainTabIconButton_C_TabAdded final
+{
+public:
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_MainTabIconButton_C_TabAdded;
+
+// Function MainTabIconButton.MainTabIconButton_C.TabAnimateInFinished
+// 0x0008 (0x0008 - 0x0000)
+struct MainTabIconButton_C_TabAnimateInFinished final
+{
+public:
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_MainTabIconButton_C_TabAnimateInFinished;
+
+// Function MainTabIconButton.MainTabIconButton_C.SetWrapperNameIDs
+// 0x0010 (0x0010 - 0x0000)
+struct MainTabIconButton_C_SetWrapperNameIDs final
+{
+public:
+	class FName                                   InTutorialNameID;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   InBangNameID;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_MainTabIconButton_C_SetWrapperNameIDs;
+
+// Function MainTabIconButton.MainTabIconButton_C.Update Bang State
+// 0x0028 (0x0028 - 0x0000)
+struct MainTabIconButton_C_Update_Bang_State final
+{
+public:
+	bool                                          bBangEnabled_0;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	EFortUIFeature                                UIFeature;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   UIFeatureRevealText;                               // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_MainTabIconButton_C_Update_Bang_State;
+
+// Function MainTabIconButton.MainTabIconButton_C.SetTutorialBorderStyle
+// 0x0008 (0x0008 - 0x0000)
+struct MainTabIconButton_C_SetTutorialBorderStyle final
+{
+public:
+	class UClass*                                 BorderStyle;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_MainTabIconButton_C_SetTutorialBorderStyle;
+
+// Function MainTabIconButton.MainTabIconButton_C.Set Icon
+// 0x0088 (0x0088 - 0x0000)
+struct MainTabIconButton_C_Set_Icon final
+{
+public:
+	struct FSlateBrush                            IconBrush_0;                                       // 0x0000(0x0088)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_MainTabIconButton_C_Set_Icon;
 
 // Function MainTabIconButton.MainTabIconButton_C.Set Text
 // 0x0038 (0x0038 - 0x0000)
@@ -75,84 +113,46 @@ public:
 };
 DUMPER7_ASSERTS_MainTabIconButton_C_Set_Text;
 
-// Function MainTabIconButton.MainTabIconButton_C.Set Icon
-// 0x0088 (0x0088 - 0x0000)
-struct MainTabIconButton_C_Set_Icon final
-{
-public:
-	struct FSlateBrush                            IconBrush_0;                                       // 0x0000(0x0088)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-DUMPER7_ASSERTS_MainTabIconButton_C_Set_Icon;
-
-// Function MainTabIconButton.MainTabIconButton_C.SetTutorialBorderStyle
-// 0x0008 (0x0008 - 0x0000)
-struct MainTabIconButton_C_SetTutorialBorderStyle final
-{
-public:
-	class UClass*                                 BorderStyle;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_MainTabIconButton_C_SetTutorialBorderStyle;
-
-// Function MainTabIconButton.MainTabIconButton_C.Update Bang State
-// 0x0028 (0x0028 - 0x0000)
-struct MainTabIconButton_C_Update_Bang_State final
-{
-public:
-	bool                                          bBangEnabled_0;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	EFortUIFeature                                UIFeature;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   UIFeatureRevealText;                               // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue1;                  // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_MainTabIconButton_C_Update_Bang_State;
-
-// Function MainTabIconButton.MainTabIconButton_C.SetWrapperNameIDs
-// 0x0010 (0x0010 - 0x0000)
-struct MainTabIconButton_C_SetWrapperNameIDs final
-{
-public:
-	class FName                                   InTutorialNameID;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   InBangNameID;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_MainTabIconButton_C_SetWrapperNameIDs;
-
-// Function MainTabIconButton.MainTabIconButton_C.TabAnimateInFinished
-// 0x0008 (0x0008 - 0x0000)
-struct MainTabIconButton_C_TabAnimateInFinished final
-{
-public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_MainTabIconButton_C_TabAnimateInFinished;
-
-// Function MainTabIconButton.MainTabIconButton_C.TabAdded
-// 0x0008 (0x0008 - 0x0000)
-struct MainTabIconButton_C_TabAdded final
-{
-public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_MainTabIconButton_C_TabAdded;
-
-// Function MainTabIconButton.MainTabIconButton_C.StopTabCallout
-// 0x0008 (0x0008 - 0x0000)
-struct MainTabIconButton_C_StopTabCallout final
-{
-public:
-	class UClass*                                 CallFunc_GetCurrentTextStyleClass_ReturnValue;     // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_MainTabIconButton_C_StopTabCallout;
-
-// Function MainTabIconButton.MainTabIconButton_C.SetBangType
+// Function MainTabIconButton.MainTabIconButton_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
-struct MainTabIconButton_C_SetBangType final
+struct MainTabIconButton_C_PreConstruct final
 {
 public:
-	EFortBangType                                 NewBangType;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_MainTabIconButton_C_SetBangType;
+DUMPER7_ASSERTS_MainTabIconButton_C_PreConstruct;
+
+// Function MainTabIconButton.MainTabIconButton_C.SetTabLabelInfo
+// 0x00A0 (0x00A0 - 0x0000)
+struct MainTabIconButton_C_SetTabLabelInfo final
+{
+public:
+	struct FFortTabButtonLabelInfo                TabLabelInfo;                                      // 0x0000(0x00A0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_MainTabIconButton_C_SetTabLabelInfo;
+
+// Function MainTabIconButton.MainTabIconButton_C.ExecuteUbergraph_MainTabIconButton
+// 0x0108 (0x0108 - 0x0000)
+struct MainTabIconButton_C_ExecuteUbergraph_MainTabIconButton final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0014(0x0010)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_GetCurrentTextStyleClass_ReturnValue;     // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0030(0x0010)(ZeroConstructor, NoDestructor)
+	class UClass*                                 CallFunc_GetCurrentTextStyleClass_ReturnValue_1;   // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x004C(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortTabButtonLabelInfo                K2Node_Event_TabLabelInfo;                         // 0x0060(0x00A0)(ConstParm)
+	bool                                          CallFunc_GetSelected_ReturnValue;                  // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GetSelected_ReturnValue_1;                // 0x0101(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_MainTabIconButton_C_ExecuteUbergraph_MainTabIconButton;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

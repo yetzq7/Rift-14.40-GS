@@ -10,35 +10,37 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "GameplayTags_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GAB_AthenaDBNO.GAB_AthenaDBNO_C
-// 0x0100 (0x0A38 - 0x0938)
+// 0x0110 (0x0BB8 - 0x0AA8)
 class UGAB_AthenaDBNO_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0938(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAnimMontage*                           DeathMontage;                                      // 0x0940(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                DeathHitDirection;                                 // 0x0948(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             DeathHitResult;                                    // 0x0954(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_9DC[0x4];                                      // 0x09DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  DamageTags;                                        // 0x09E0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTagContainer                  GameplayStatusAfflicted;                           // 0x0A00(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UAnimMontage*                           DeathMontageSkydive;                               // 0x0A20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FActiveGameplayEffectHandle            DBNOBleedGEHandle;                                 // 0x0A28(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FName                                   HolsterId;                                         // 0x0A30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAnimMontage*                           DeathMontage;                                      // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DeathHitDirection;                                 // 0x0AB8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             DeathHitResult;                                    // 0x0AC4(0x008C)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FGameplayTagContainer                  DamageTags;                                        // 0x0B50(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTagContainer                  GameplayStatusAfflicted;                           // 0x0B70(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UAnimMontage*                           DeathMontageSkydive;                               // 0x0B90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FActiveGameplayEffectHandle            DBNOBleedGEHandle;                                 // 0x0B98(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FName                                   HolsterId;                                         // 0x0BA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           DeathMontageSwimming;                              // 0x0BA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawnAthena*                  Pawn;                                              // 0x0BB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GAB_AthenaDBNO(int32 EntryPoint);
-	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData);
+	void DropHeldObjects();
 	void K2_OnEndAbility(bool bWasCancelled);
+	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData);
 	void OnFinish_4C169D40441E45B462D83CBBA67F6E45();
 	void OnStateEnded_C85094F843D5075FE4872C95AFC5D6B6();
 	void OnStateInterrupted_C85094F843D5075FE4872C95AFC5D6B6();
@@ -48,6 +50,7 @@ public:
 	void OnCancelled_F0F6785443BD2E74F5591884CB19F35F();
 	void InitializeDeathHitDirection(const struct FGameplayEventData& EventHitData);
 	void GetInitialHealAmount(float* Health);
+	class UAnimMontage* Get_DBNO_Montage();
 
 public:
 	static class UClass* StaticClass()

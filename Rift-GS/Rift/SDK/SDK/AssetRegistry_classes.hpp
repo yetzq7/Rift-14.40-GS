@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // Class AssetRegistry.AssetRegistryImpl
-// 0x0738 (0x0760 - 0x0028)
+// 0x0790 (0x07B8 - 0x0028)
 class UAssetRegistryImpl final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x738];                                     // 0x0028(0x0738)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x790];                                     // 0x0028(0x0790)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -83,6 +83,7 @@ public:
 	void ScanModifiedAssetFiles(const TArray<class FString>& InFilePaths);
 	void ScanPathsSynchronous(const TArray<class FString>& InPaths, bool bForceRescan);
 	void SearchAllAssets(bool bSynchronousSearch);
+	void WaitForCompletion();
 
 	bool GetAllAssets(TArray<struct FAssetData>* OutAssetData, bool bIncludeOnlyOnDiskAssets) const;
 	void GetAllCachedPaths(TArray<class FString>* OutPathList) const;
@@ -94,8 +95,10 @@ public:
 	void GetSubPaths(const class FString& InBasePath, TArray<class FString>* OutPathList, bool bInRecurse) const;
 	bool HasAssets(const class FName PackagePath, const bool bRecursive) const;
 	bool IsLoadingAssets() const;
-	void RunAssetsThroughFilter(TArray<struct FAssetData>* AssetDataList, const struct FARFilter& Filter) const;
-	void UseFilterToExcludeAssets(TArray<struct FAssetData>* AssetDataList, const struct FARFilter& Filter) const;
+	bool K2_GetDependencies(class FName PackageName, const struct FAssetRegistryDependencyOptions& DependencyOptions, TArray<class FName>* OutDependencies) const;
+	bool K2_GetReferencers(class FName PackageName, const struct FAssetRegistryDependencyOptions& ReferenceOptions, TArray<class FName>* OutReferencers) const;
+	void RunAssetsThroughFilter(TArray<struct FAssetData>& AssetDataList, const struct FARFilter& Filter) const;
+	void UseFilterToExcludeAssets(TArray<struct FAssetData>& AssetDataList, const struct FARFilter& Filter) const;
 
 public:
 	static class UClass* StaticClass()

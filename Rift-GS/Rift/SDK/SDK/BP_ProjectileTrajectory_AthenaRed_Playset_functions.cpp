@@ -36,20 +36,6 @@ void ABP_ProjectileTrajectory_AthenaRed_Playset_C::ExecuteUbergraph_BP_Projectil
 }
 
 
-// Function BP_ProjectileTrajectory_AthenaRed_Playset.BP_ProjectileTrajectory_AthenaRed_Playset_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_ProjectileTrajectory_AthenaRed_Playset_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ProjectileTrajectory_AthenaRed_Playset_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_ProjectileTrajectory_AthenaRed_Playset.BP_ProjectileTrajectory_AthenaRed_Playset_C.ReceiveDestroyed
 // (Event, Public, BlueprintEvent)
 
@@ -64,15 +50,15 @@ void ABP_ProjectileTrajectory_AthenaRed_Playset_C::ReceiveDestroyed()
 }
 
 
-// Function BP_ProjectileTrajectory_AthenaRed_Playset.BP_ProjectileTrajectory_AthenaRed_Playset_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_ProjectileTrajectory_AthenaRed_Playset.BP_ProjectileTrajectory_AthenaRed_Playset_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_ProjectileTrajectory_AthenaRed_Playset_C::UserConstructionScript()
+void ABP_ProjectileTrajectory_AthenaRed_Playset_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ProjectileTrajectory_AthenaRed_Playset_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_ProjectileTrajectory_AthenaRed_Playset_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -26,15 +26,6 @@ enum class EDateType : uint8
 	EDateType_MAX                            = 3,
 };
 
-// ScriptStruct EpicCMSUIFramework.EpicCMSLayoutTypeMapping
-// 0x0028 (0x0030 - 0x0008)
-struct FEpicCMSLayoutTypeMapping final : public FTableRowBase
-{
-public:
-	TSoftClassPtr<class UClass>                   LayoutType;                                        // 0x0008(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEpicCMSLayoutTypeMapping;
-
 // ScriptStruct EpicCMSUIFramework.SlotDescription
 // 0x0014 (0x0014 - 0x0000)
 struct FSlotDescription final
@@ -58,6 +49,24 @@ public:
 };
 DUMPER7_ASSERTS_FEpicCMSTileTypeMapping;
 
+// ScriptStruct EpicCMSUIFramework.EpicCMSPage
+// 0x0070 (0x0070 - 0x0000)
+struct alignas(0x08) FEpicCMSPage final
+{
+public:
+	uint8                                         Pad_0[0x70];                                       // 0x0000(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEpicCMSPage;
+
+// ScriptStruct EpicCMSUIFramework.EpicCMSLayoutTypeMapping
+// 0x0028 (0x0030 - 0x0008)
+struct FEpicCMSLayoutTypeMapping final : public FTableRowBase
+{
+public:
+	TSoftClassPtr<class UClass>                   LayoutType;                                        // 0x0008(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEpicCMSLayoutTypeMapping;
+
 // ScriptStruct EpicCMSUIFramework.TileDefinition
 // 0x0088 (0x0088 - 0x0000)
 struct FTileDefinition final
@@ -68,7 +77,7 @@ public:
 	class FString                                 Subtitle;                                          // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Eyebrow;                                           // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Link;                                              // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 GroupID;                                           // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 GroupId;                                           // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FDateTime                              Countdown;                                         // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EDateType                                     CountdownType;                                     // 0x0068(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])

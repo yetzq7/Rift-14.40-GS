@@ -82,18 +82,4 @@ void AAthena_Enemy_Player_SneakySnowman_C::OnDamageServer(float Damage, const st
 }
 
 
-// Function Athena_Enemy_Player_SneakySnowman.Athena_Enemy_Player_SneakySnowman_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AAthena_Enemy_Player_SneakySnowman_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Athena_Enemy_Player_SneakySnowman_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 SDK_NAMESPACE_END

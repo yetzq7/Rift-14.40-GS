@@ -16,21 +16,69 @@
 
 SDK_NAMESPACE_START
 
-// Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.ExecuteUbergraph_VaultCharacterPlacementHelper
-// (Final, UbergraphFunction, HasDefaults)
+// Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.UpdatePosition For Camera
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFrontEndCamera                         FrontEndCamera                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AVaultCharacterPlacementHelper_C::ExecuteUbergraph_VaultCharacterPlacementHelper(int32 EntryPoint)
+void AVaultCharacterPlacementHelper_C::UpdatePosition_For_Camera(EFrontEndCamera FrontEndCamera)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("VaultCharacterPlacementHelper_C", "ExecuteUbergraph_VaultCharacterPlacementHelper");
+		Func = Class->GetFunction("VaultCharacterPlacementHelper_C", "UpdatePosition For Camera");
 
-	Params::VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper Parms{};
+	Params::VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.FrontEndCamera = FrontEndCamera;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AVaultCharacterPlacementHelper_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VaultCharacterPlacementHelper_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AVaultCharacterPlacementHelper_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VaultCharacterPlacementHelper_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.SubGameChanged_Event_0
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ESubGame                                SubGame                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AVaultCharacterPlacementHelper_C::SubGameChanged_Event_0(ESubGame SubGame)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VaultCharacterPlacementHelper_C", "SubGameChanged_Event_0");
+
+	Params::VaultCharacterPlacementHelper_C_SubGameChanged_Event_0 Parms{};
+
+	Parms.SubGame = SubGame;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -58,69 +106,21 @@ void AVaultCharacterPlacementHelper_C::OnFrontEndCameraChanged(EFrontEndCamera N
 }
 
 
-// Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.SubGameChanged_Event_0
-// (BlueprintCallable, BlueprintEvent)
+// Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.ExecuteUbergraph_VaultCharacterPlacementHelper
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// ESubGame                                SubGame                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AVaultCharacterPlacementHelper_C::SubGameChanged_Event_0(ESubGame SubGame)
+void AVaultCharacterPlacementHelper_C::ExecuteUbergraph_VaultCharacterPlacementHelper(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("VaultCharacterPlacementHelper_C", "SubGameChanged_Event_0");
+		Func = Class->GetFunction("VaultCharacterPlacementHelper_C", "ExecuteUbergraph_VaultCharacterPlacementHelper");
 
-	Params::VaultCharacterPlacementHelper_C_SubGameChanged_Event_0 Parms{};
+	Params::VaultCharacterPlacementHelper_C_ExecuteUbergraph_VaultCharacterPlacementHelper Parms{};
 
-	Parms.SubGame = SubGame;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AVaultCharacterPlacementHelper_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VaultCharacterPlacementHelper_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AVaultCharacterPlacementHelper_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VaultCharacterPlacementHelper_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.UpdatePosition For Camera
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EFrontEndCamera                         FrontendCamera                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AVaultCharacterPlacementHelper_C::UpdatePosition_For_Camera(EFrontEndCamera FrontendCamera)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VaultCharacterPlacementHelper_C", "UpdatePosition For Camera");
-
-	Params::VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera Parms{};
-
-	Parms.FrontendCamera = FrontendCamera;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

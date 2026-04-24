@@ -36,20 +36,6 @@ void UGA_Commando_FragGrenade_WithTrajectory_C::ExecuteUbergraph_GA_Commando_Fra
 }
 
 
-// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_Commando_FragGrenade_WithTrajectory_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.ServerSpawnProjectile
 // (BlueprintCallable, BlueprintEvent)
 
@@ -73,6 +59,20 @@ void UGA_Commando_FragGrenade_WithTrajectory_C::TossGrenade()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "TossGrenade");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Commando_FragGrenade_WithTrajectory_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Commando_FragGrenade_WithTrajectory_C", "K2_ActivateAbility");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -347,7 +347,7 @@ void UGA_Commando_FragGrenade_WithTrajectory_C::SetupDummyProjectile()
 
 
 // Function GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.UpdateTrajectorySpline
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UGA_Commando_FragGrenade_WithTrajectory_C::UpdateTrajectorySpline()
 {

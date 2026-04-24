@@ -10,8 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_classes.hpp"
 #include "OnlineSubsystemUtils_classes.hpp"
+#include "ReplicationGraph_structs.hpp"
 #include "ReplicationGraph_classes.hpp"
 #include "MeshNetwork_structs.hpp"
 
@@ -19,17 +21,22 @@
 SDK_NAMESPACE_START
 
 // Class MeshNetwork.MeshBeaconClient
-// 0x0038 (0x03E8 - 0x03B0)
+// 0x0070 (0x0320 - 0x02B0)
 class AMeshBeaconClient : public AOnlineBeaconClient
 {
 public:
-	uint8                                         Pad_3B0[0x20];                                     // 0x03B0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bConnectedToRoot;                                  // 0x03D0(0x0001)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3D1[0x17];                                     // 0x03D1(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B0[0x40];                                     // 0x02B0(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bConnectedToRoot;                                  // 0x02F0(0x0001)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2F1[0x7];                                      // 0x02F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              MeshPingTime;                                      // 0x02F8(0x0008)(Net, ZeroConstructor, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class FString>                         ParentIds;                                         // 0x0300(0x0010)(Net, ZeroConstructor, RepNotify, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_310[0x10];                                     // 0x0310(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnRep_ConnectedToRoot();
-	void ServerUpdateLevelVisibility(class FName PackageName, bool bIsVisible);
+	void OnRep_MeshPingTime();
+	void OnRep_ParentIds();
+	void ServerUpdateLevelVisibility(const struct FUpdateLevelVisibilityLevelInfo& LevelVisibility);
 	void ServerUpdateMultipleLevelsVisibility(const TArray<struct FUpdateLevelVisibilityLevelInfo>& LevelVisibilities);
 
 public:
@@ -49,12 +56,12 @@ public:
 DUMPER7_ASSERTS_AMeshBeaconClient;
 
 // Class MeshNetwork.MeshBeaconHost
-// 0x0008 (0x0420 - 0x0418)
+// 0x0008 (0x0310 - 0x0308)
 class AMeshBeaconHost : public AOnlineBeaconHost
 {
 public:
-	int32                                         MaxConnections;                                    // 0x0418(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_41C[0x4];                                      // 0x041C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         MaxConnections;                                    // 0x0308(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_30C[0x4];                                      // 0x030C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -73,13 +80,12 @@ public:
 DUMPER7_ASSERTS_AMeshBeaconHost;
 
 // Class MeshNetwork.MeshReplicationGraphNode_AlwaysRelevant_ForConnection
-// 0x0028 (0x0120 - 0x00F8)
+// 0x0020 (0x00F0 - 0x00D0)
 class UMeshReplicationGraphNode_AlwaysRelevant_ForConnection final : public UReplicationGraphNode_ActorList
 {
 public:
-	uint8                                         Pad_F8[0x18];                                      // 0x00F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 LastViewer;                                        // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 LastViewTarget;                                    // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D0[0x10];                                      // 0x00D0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAlwaysRelevantActorInfo>       PastRelevantActors;                                // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -98,11 +104,11 @@ public:
 DUMPER7_ASSERTS_UMeshReplicationGraphNode_AlwaysRelevant_ForConnection;
 
 // Class MeshNetwork.MeshBeaconHostObject
-// 0x0008 (0x0360 - 0x0358)
+// 0x0018 (0x0260 - 0x0248)
 class AMeshBeaconHostObject : public AOnlineBeaconHostObject
 {
 public:
-	uint8                                         Pad_358[0x8];                                      // 0x0358(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_248[0x18];                                     // 0x0248(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -121,7 +127,7 @@ public:
 DUMPER7_ASSERTS_AMeshBeaconHostObject;
 
 // Class MeshNetwork.MeshConnection
-// 0x0000 (0x18E8 - 0x18E8)
+// 0x0000 (0x1B50 - 0x1B50)
 class UMeshConnection final : public UIpConnection
 {
 public:
@@ -141,9 +147,12 @@ public:
 DUMPER7_ASSERTS_UMeshConnection;
 
 // Class MeshNetwork.MeshNetDriver
-// 0x0000 (0x0778 - 0x0778)
+// 0x0008 (0x07C0 - 0x07B8)
 class UMeshNetDriver final : public UIpNetDriver
 {
+public:
+	uint8                                         Pad_7B8[0x8];                                      // 0x07B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -161,14 +170,17 @@ public:
 DUMPER7_ASSERTS_UMeshNetDriver;
 
 // Class MeshNetwork.MeshNetworkComponent
-// 0x00A8 (0x01A0 - 0x00F8)
-class UMeshNetworkComponent final : public UActorComponent
+// 0x0150 (0x0200 - 0x00B0)
+class UMeshNetworkComponent : public UActorComponent
 {
 public:
-	EMeshNetworkRelevancy                         MeshRelevancy;                                     // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, double>                     AggregationTimeouts;                               // 0x0100(0x0050)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FAggregatedFunction> AggregatedFunctions;                               // 0x0150(0x0050)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	EMeshNetworkRelevancy                         MeshRelevancy;                                     // 0x00B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, double>                     AggregationTimeouts;                               // 0x00B8(0x0050)(Edit, NativeAccessSpecifierPublic)
+	TSet<class FName>                             NoAggregationFunctions;                            // 0x0108(0x0050)(Edit, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FNoAggregationParameters> NoAggregationParameters;                      // 0x0158(0x0050)(Edit, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FAggregatedFunction> AggregatedFunctions;                             // 0x01A8(0x0050)(Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1F8[0x8];                                      // 0x01F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	EMeshNetworkNodeType GetMeshNetworkNodeType() const;
@@ -190,23 +202,29 @@ public:
 DUMPER7_ASSERTS_UMeshNetworkComponent;
 
 // Class MeshNetwork.MeshNetworkSubsystem
-// 0x0070 (0x0098 - 0x0028)
+// 0x00D8 (0x0108 - 0x0030)
 class UMeshNetworkSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	UMulticastDelegateProperty_                   OnMeshNodeTypeChanged;                             // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	UMulticastDelegateProperty_                   OnConnectedToRootChanged;                          // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	UMulticastDelegateProperty_                   OnGameServerNodeTypeChanged;                       // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	UMulticastDelegateProperty_                   OnMeshMetaDataUpdated;                             // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_68[0x18];                                      // 0x0068(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	EMeshNetworkNodeType                          NodeType;                                          // 0x0080(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EMeshNetworkNodeType                          GameServerNodeType;                                // 0x0081(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bConnectedToRoot;                                  // 0x0082(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_83[0x15];                                      // 0x0083(0x0015)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(EMeshNetworkNodeType NodeType)> OnMeshNodeTypeChanged;             // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(bool bConnected)> OnConnectedToRootChanged;                        // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(EMeshNetworkNodeType NodeType)> OnGameServerNodeTypeChanged;       // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnMeshMetaDataUpdated;                             // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class APlayerController* Player, class FName Tag)> OnMeshPlayerRequested; // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_80[0x30];                                      // 0x0080(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	EMeshNetworkNodeType                          NodeType;                                          // 0x00B0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EMeshNetworkNodeType                          GameServerNodeType;                                // 0x00B1(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bConnectedToRoot;                                  // 0x00B2(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bMetadataReceived;                                 // 0x00B3(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_B4[0x54];                                      // 0x00B4(0x0054)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	void DisableMeshReplication(class AActor* Actor);
+	void EnableMeshReplication(class AActor* Actor, TSubclassOf<class UMeshNetworkComponent> MeshComponentClass);
 	void GetMetadata(struct FMeshMetaDataStruct& MetaData);
+	bool GetMetaDataWithKey(class FName Key, struct FMeshMetaDataStruct& MetaData);
 	void SetMetaData(const struct FMeshMetaDataStruct& MetaData);
+	void SetMetaDataWithKey(class FName Key, const struct FMeshMetaDataStruct& MetaData);
 
 	bool GetConnectedToRoot() const;
 	EMeshNetworkNodeType GetGameServerNodeType() const;
@@ -228,13 +246,32 @@ public:
 };
 DUMPER7_ASSERTS_UMeshNetworkSubsystem;
 
+// Class MeshNetwork.MeshReplicationGraphConnection
+// 0x0000 (0x0238 - 0x0238)
+class UMeshReplicationGraphConnection final : public UNetReplicationGraphConnection
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MeshReplicationGraphConnection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MeshReplicationGraphConnection")
+	}
+	static class UMeshReplicationGraphConnection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeshReplicationGraphConnection>();
+	}
+};
+DUMPER7_ASSERTS_UMeshReplicationGraphConnection;
+
 // Class MeshNetwork.MeshReplicationGraph
-// 0x0010 (0x0470 - 0x0460)
+// 0x0000 (0x04A0 - 0x04A0)
 class UMeshReplicationGraph : public UReplicationGraph
 {
 public:
-	class UReplicationGraphNode_ActorList*        AlwaysRelevantNode;                                // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_468[0x8];                                      // 0x0468(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UReplicationGraphNode_ActorList*        AlwaysRelevantNode;                                // 0x0498(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()

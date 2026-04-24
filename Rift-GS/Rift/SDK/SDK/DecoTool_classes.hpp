@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass DecoTool.DecoTool_C
-// 0x0000 (0x09E0 - 0x09E0)
+// 0x0000 (0x0D10 - 0x0D10)
 class ADecoTool_C final : public AFortDecoTool
 {
 public:

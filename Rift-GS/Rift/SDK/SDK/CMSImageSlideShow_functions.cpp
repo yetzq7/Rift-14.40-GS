@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function CMSImageSlideShow.CMSImageSlideShow_C.ExecuteUbergraph_CMSImageSlideShow
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -36,10 +36,32 @@ void UCMSImageSlideShow_C::ExecuteUbergraph_CMSImageSlideShow(int32 EntryPoint)
 }
 
 
+// Function CMSImageSlideShow.CMSImageSlideShow_C.BndEvt__Images_K2Node_ComponentBoundEvent_0_OnCurrentPageIndexChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonWidgetCarousel*            CarouselWidget                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   CurrentPageIndex                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCMSImageSlideShow_C::BndEvt__Images_K2Node_ComponentBoundEvent_0_OnCurrentPageIndexChanged__DelegateSignature(class UCommonWidgetCarousel* CarouselWidget, int32 CurrentPageIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CMSImageSlideShow_C", "BndEvt__Images_K2Node_ComponentBoundEvent_0_OnCurrentPageIndexChanged__DelegateSignature");
+
+	Params::CMSImageSlideShow_C_BndEvt__Images_K2Node_ComponentBoundEvent_0_OnCurrentPageIndexChanged__DelegateSignature Parms{};
+
+	Parms.CarouselWidget = CarouselWidget;
+	Parms.CurrentPageIndex = CurrentPageIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function CMSImageSlideShow.CMSImageSlideShow_C.SetMediaURLs
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const TArray<class FString>&            MediaURLs                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const TArray<class FString>&            MediaURLs                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
 void UCMSImageSlideShow_C::SetMediaURLs(const TArray<class FString>& MediaURLs)
 {

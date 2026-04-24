@@ -36,45 +36,185 @@ void UAthenaItemCustomizationSelector_C::ExecuteUbergraph_AthenaItemCustomizatio
 }
 
 
-// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.FadeItemHeaderBackIn
+// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.HandleHideInfoPanel
 // (BlueprintCallable, BlueprintEvent)
 
-void UAthenaItemCustomizationSelector_C::FadeItemHeaderBackIn()
+void UAthenaItemCustomizationSelector_C::HandleHideInfoPanel()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "FadeItemHeaderBackIn");
+		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "HandleHideInfoPanel");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.ZoomInputGiven
+// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.HandleShowInfoPanel
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFortItem*                        SelectedItem                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaItemCustomizationSelector_C::ZoomInputGiven()
+void UAthenaItemCustomizationSelector_C::HandleShowInfoPanel(class UFortItem* SelectedItem)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "ZoomInputGiven");
+		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "HandleShowInfoPanel");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::AthenaItemCustomizationSelector_C_HandleShowInfoPanel Parms{};
+
+	Parms.SelectedItem = SelectedItem;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.RotationInputGiven
-// (BlueprintCallable, BlueprintEvent)
+// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.OnVariantSelectionChangedBP
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FMcpVariantChannelInfo&    InVariant                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UAthenaItemCustomizationSelector_C::RotationInputGiven()
+void UAthenaItemCustomizationSelector_C::OnVariantSelectionChangedBP(const struct FMcpVariantChannelInfo& InVariant)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "RotationInputGiven");
+		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "OnVariantSelectionChangedBP");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::AthenaItemCustomizationSelector_C_OnVariantSelectionChangedBP Parms{};
+
+	Parms.InVariant = std::move(InVariant);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.OnUpdateExclusiveItemCallout
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// bool                                    bShouldShow                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const class FText&                      CalloutText                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UAthenaItemCustomizationSelector_C::OnUpdateExclusiveItemCallout(bool bShouldShow, const class FText& CalloutText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "OnUpdateExclusiveItemCallout");
+
+	Params::AthenaItemCustomizationSelector_C_OnUpdateExclusiveItemCallout Parms{};
+
+	Parms.bShouldShow = bShouldShow;
+	Parms.CalloutText = std::move(CalloutText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.OnHideItemInfoHeader
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    bShouldHide                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaItemCustomizationSelector_C::OnHideItemInfoHeader(bool bShouldHide)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "OnHideItemInfoHeader");
+
+	Params::AthenaItemCustomizationSelector_C_OnHideItemInfoHeader Parms{};
+
+	Parms.bShouldHide = bShouldHide;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaItemCustomizationSelector_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "BndEvt__CloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+
+	Params::AthenaItemCustomizationSelector_C_BndEvt__CloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.HandleTextChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      NewText                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UAthenaItemCustomizationSelector_C::HandleTextChanged(const class FText& NewText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "HandleTextChanged");
+
+	Params::AthenaItemCustomizationSelector_C_HandleTextChanged Parms{};
+
+	Parms.NewText = std::move(NewText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.HandleTextSearchSelectedChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaItemCustomizationSelector_C::HandleTextSearchSelectedChanged(bool bIsSelected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "HandleTextSearchSelectedChanged");
+
+	Params::AthenaItemCustomizationSelector_C_HandleTextSearchSelectedChanged Parms{};
+
+	Parms.bIsSelected = bIsSelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.OnFinishedItemSetup
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      CategoryDisplayName                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FText&                      ItemDisplayTypeName                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// EAthenaCustomizationCategory            SelectedCategory                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInstance*                OverrideSlotImage                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaItemCustomizationSelector_C::OnFinishedItemSetup(const class FText& CategoryDisplayName, const class FText& ItemDisplayTypeName, EAthenaCustomizationCategory SelectedCategory, class UMaterialInstance* OverrideSlotImage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "OnFinishedItemSetup");
+
+	Params::AthenaItemCustomizationSelector_C_OnFinishedItemSetup Parms{};
+
+	Parms.CategoryDisplayName = std::move(CategoryDisplayName);
+	Parms.ItemDisplayTypeName = std::move(ItemDisplayTypeName);
+	Parms.SelectedCategory = SelectedCategory;
+	Parms.OverrideSlotImage = OverrideSlotImage;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -103,30 +243,6 @@ void UAthenaItemCustomizationSelector_C::BndEvt__Picker_ItemSelector_K2Node_Comp
 		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "BndEvt__Picker_ItemSelector_K2Node_ComponentBoundEvent_1_OnUpdateSaveButtonVisuals__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.OnFinsihedItemSetup
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const class FText&                      CategoryDisplayName                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const class FText&                      ItemDisplayTypeName                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// EAthenaCustomizationCategory            SelectedCategory                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaItemCustomizationSelector_C::OnFinsihedItemSetup(const class FText& CategoryDisplayName, const class FText& ItemDisplayTypeName, EAthenaCustomizationCategory SelectedCategory)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "OnFinsihedItemSetup");
-
-	Params::AthenaItemCustomizationSelector_C_OnFinsihedItemSetup Parms{};
-
-	Parms.CategoryDisplayName = std::move(CategoryDisplayName);
-	Parms.ItemDisplayTypeName = std::move(ItemDisplayTypeName);
-	Parms.SelectedCategory = SelectedCategory;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -170,39 +286,15 @@ void UAthenaItemCustomizationSelector_C::OnTabSelectionChanged(bool bShowingVari
 }
 
 
-// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.BndEvt__Picker_VariantSelector_K2Node_ComponentBoundEvent_0_OnVariantChangedEvent__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              VariantChannel                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTag&              VariantTag                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsOwned                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UAthenaItemCustomizationSelector_C::BndEvt__Picker_VariantSelector_K2Node_ComponentBoundEvent_0_OnVariantChangedEvent__DelegateSignature(const struct FGameplayTag& VariantChannel, const struct FGameplayTag& VariantTag, bool IsOwned)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "BndEvt__Picker_VariantSelector_K2Node_ComponentBoundEvent_0_OnVariantChangedEvent__DelegateSignature");
-
-	Params::AthenaItemCustomizationSelector_C_BndEvt__Picker_VariantSelector_K2Node_ComponentBoundEvent_0_OnVariantChangedEvent__DelegateSignature Parms{};
-
-	Parms.VariantChannel = std::move(VariantChannel);
-	Parms.VariantTag = std::move(VariantTag);
-	Parms.IsOwned = IsOwned;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.OnActivated
+// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UAthenaItemCustomizationSelector_C::OnActivated()
+void UAthenaItemCustomizationSelector_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "OnActivated");
+		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -293,47 +385,6 @@ void UAthenaItemCustomizationSelector_C::HandleBack(bool* PassThrough)
 }
 
 
-// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.ToggleFavorite
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UAthenaItemCustomizationSelector_C::ToggleFavorite(bool* PassThrough)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "ToggleFavorite");
-
-	Params::AthenaItemCustomizationSelector_C_ToggleFavorite Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (PassThrough != nullptr)
-		*PassThrough = Parms.PassThrough;
-}
-
-
-// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.GetWidgetForFramingViewedItem
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UAthenaItemCustomizationSelector_C::GetWidgetForFramingViewedItem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "GetWidgetForFramingViewedItem");
-
-	Params::AthenaItemCustomizationSelector_C_GetWidgetForFramingViewedItem Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.ShowSavingModal
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -369,43 +420,66 @@ void UAthenaItemCustomizationSelector_C::GetCurrentItemCosmeticDefinition(class 
 }
 
 
-// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.UpdateToggleFavoriteVisibility
+// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.HandleItemSetupFinished
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFortItem*                        Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// EAthenaCustomizationCategory            Category                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInstance*                OverrideImage                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaItemCustomizationSelector_C::UpdateToggleFavoriteVisibility(class UFortItem* Item)
+void UAthenaItemCustomizationSelector_C::HandleItemSetupFinished(const class FText& InText, EAthenaCustomizationCategory Category, class UMaterialInstance* OverrideImage)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "UpdateToggleFavoriteVisibility");
+		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "HandleItemSetupFinished");
 
-	Params::AthenaItemCustomizationSelector_C_UpdateToggleFavoriteVisibility Parms{};
+	Params::AthenaItemCustomizationSelector_C_HandleItemSetupFinished Parms{};
 
-	Parms.Item = Item;
+	Parms.InText = std::move(InText);
+	Parms.Category = Category;
+	Parms.OverrideImage = OverrideImage;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.UpdateEditStyleButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.GetCategoryImage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UFortItem*                        Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EAthenaCustomizationCategory            Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInstance*                OverrideImage                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInstance*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaItemCustomizationSelector_C::UpdateEditStyleButton(class UFortItem* Item)
+class UMaterialInstance* UAthenaItemCustomizationSelector_C::GetCategoryImage(EAthenaCustomizationCategory Index_0, class UMaterialInstance* OverrideImage)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "UpdateEditStyleButton");
+		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "GetCategoryImage");
 
-	Params::AthenaItemCustomizationSelector_C_UpdateEditStyleButton Parms{};
+	Params::AthenaItemCustomizationSelector_C_GetCategoryImage Parms{};
 
-	Parms.Item = Item;
+	Parms.Index_0 = Index_0;
+	Parms.OverrideImage = OverrideImage;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C.UpdateSeasonButtonEnabledState
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UAthenaItemCustomizationSelector_C::UpdateSeasonButtonEnabledState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaItemCustomizationSelector_C", "UpdateSeasonButtonEnabledState");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

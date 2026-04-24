@@ -17,7 +17,7 @@ SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Athena_ButtonStyle_AngledBlueMenuButton.Athena_ButtonStyle_AngledBlueMenuButton_C
 // 0x0000 (0x0570 - 0x0570)
-class UAthena_ButtonStyle_AngledBlueMenuButton_C final : public UCommonButtonStyle
+class UAthena_ButtonStyle_AngledBlueMenuButton_C : public UCommonButtonStyle
 {
 public:
 	static class UClass* StaticClass()

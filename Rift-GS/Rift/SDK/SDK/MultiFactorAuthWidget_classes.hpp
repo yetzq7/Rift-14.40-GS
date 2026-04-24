@@ -10,24 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass MultiFactorAuthWidget.MultiFactorAuthWidget_C
-// 0x0010 (0x0388 - 0x0378)
+// 0x0000 (0x04A0 - 0x04A0)
 class UMultiFactorAuthWidget_C final : public UFortMultiFactorAuthWidget
 {
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       CommonTextPromptText;                              // 0x0380(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void ExecuteUbergraph_MultiFactorAuthWidget(int32 EntryPoint);
-	void Construct();
-
 public:
 	static class UClass* StaticClass()
 	{

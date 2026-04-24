@@ -36,6 +36,20 @@ void UFireModeSelectTile_C::ExecuteUbergraph_FireModeSelectTile(int32 EntryPoint
 }
 
 
+// Function FireModeSelectTile.FireModeSelectTile_C.SelectFireMode
+// (Event, Public, BlueprintEvent)
+
+void UFireModeSelectTile_C::SelectFireMode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FireModeSelectTile_C", "SelectFireMode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function FireModeSelectTile.FireModeSelectTile_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

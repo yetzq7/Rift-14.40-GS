@@ -13,28 +13,27 @@
 #include "Engine_structs.hpp"
 #include "FortniteUI_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ItemPerksListDetailWidget.ItemPerksListDetailWidget_C
-// 0x0020 (0x02A0 - 0x0280)
+// 0x0020 (0x0300 - 0x02E0)
 class UItemPerksListDetailWidget_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UPerksList_C*                           PerksList;                                         // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               RootBox;                                           // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          ShowActiveAbilitiesOnly;                           // 0x0298(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_299[0x3];                                      // 0x0299(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         WrapPerkTextAt;                                    // 0x029C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UPerksList_C*                           PerksList;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               RootBox;                                           // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          ShowActiveAbilitiesOnly;                           // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2F9[0x3];                                      // 0x02F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         WrapPerkTextAt;                                    // 0x02FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_ItemPerksListDetailWidget(int32 EntryPoint);
-	void Construct();
-	void HandlePostDifferentItemToDetailSet();
 	void SetState(EFortPerksWidgetState InState, class UFortHero* InEvolutionOption);
+	void HandlePostDifferentItemToDetailSet();
+	void Construct();
+	void ExecuteUbergraph_ItemPerksListDetailWidget(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

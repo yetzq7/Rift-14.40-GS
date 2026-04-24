@@ -10,66 +10,67 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass AlterationsWidget.AlterationsWidget_C
-// 0x0088 (0x0338 - 0x02B0)
+// 0x0088 (0x0388 - 0x0300)
 class UAlterationsWidget_C final : public UFortAlterationsWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonBorder*                          Border_PerksMessage;                               // 0x02B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          BorderLocked;                                      // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          BorderUnlocked;                                    // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UPerkDivider_C*                         LockedUnlockedDivider;                             // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBoxAlterationsLocked;                      // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBoxAlterationsUnlocked;                    // 0x02E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bIncludeName;                                      // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	bool                                          bIncludeDescription;                               // 0x02E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	bool                                          bIncludeShortDescription;                          // 0x02EA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	bool                                          FirstAlterationComplete;                           // 0x02EB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          FirstLockedComplete;                               // 0x02EC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	EFortBrushSize                                IconSize;                                          // 0x02ED(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_2EE[0x2];                                      // 0x02EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMargin                                RowPadding;                                        // 0x02F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bUseLargeFormatNameOnly;                           // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_301[0x3];                                      // 0x0301(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMargin                                Description_Padding;                               // 0x0304(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_314[0x4];                                      // 0x0314(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           PerkAnimIntroTimer;                                // 0x0318(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         NextAnimToPlay;                                    // 0x0320(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMargin                                RowPadding2;                                       // 0x0324(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonBorder*                          Border_PerksMessage;                               // 0x0308(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          BorderLocked;                                      // 0x0310(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          BorderUnlocked;                                    // 0x0318(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UPerkDivider_C*                         LockedUnlockedDivider;                             // 0x0320(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBoxAlterationsLocked;                      // 0x0328(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBoxAlterationsUnlocked;                    // 0x0330(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bIncludeName;                                      // 0x0338(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	bool                                          bIncludeDescription;                               // 0x0339(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	bool                                          bIncludeShortDescription;                          // 0x033A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	bool                                          FirstAlterationComplete;                           // 0x033B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          FirstLockedComplete;                               // 0x033C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	EFortBrushSize                                IconSize;                                          // 0x033D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_33E[0x2];                                      // 0x033E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMargin                                RowPadding;                                        // 0x0340(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bUseLargeFormatNameOnly;                           // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	uint8                                         Pad_351[0x3];                                      // 0x0351(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMargin                                Description_Padding;                               // 0x0354(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_364[0x4];                                      // 0x0364(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           PerkAnimIntroTimer;                                // 0x0368(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         NextAnimToPlay;                                    // 0x0370(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMargin                                RowPadding2;                                       // 0x0374(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void ExecuteUbergraph_AlterationsWidget(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
-	void Destruct();
-	void OnAlterationSlotIndexModifiedBP(int32 ModifiedIndex);
-	void OnFocusFirstItem();
-	void OnGenerateAlteration(class UFortAlterationInfo* AlterationInfo);
-	void OnStateChanged();
-	void OnItemToCompareWithChanged();
-	void OnItemChanged(bool bIntroAlterations);
-	void Construct();
-	void UpdatePerksMessage();
-	void AddAlterationToVerticalbox(class UCommonUserWidget* Alteration, bool IsUnlocked);
-	void GenerateAlteration(class UFortAlterationInfo* AlterationInfo);
-	class UCommonUserWidget* CreateAlterationWidget();
-	void SetupAlteration(class UCommonUserWidget* Alteration, class UFortAlterationInfo* AlterationInfo);
-	void TriggerModificationAnim(int32 ModifiedSlotIndex);
-	void SetupBorders();
-	void CenterWidget();
-	void IntroAnim();
-	void CreateAnimations(bool IntroAnims);
-	void Reset();
-	void ClearAndInitialize(bool IntroAlterations);
 	void Clear();
+	void ClearAndInitialize(bool IntroAlterations);
+	void Reset();
+	void CreateAnimations(bool IntroAnims);
+	void IntroAnim();
+	void CenterWidget();
+	void SetupBorders();
+	void TriggerModificationAnim(int32 ModifiedSlotIndex);
+	void SetupAlteration(class UCommonUserWidget* Alteration, class UFortAlterationInfo* AlterationInfo);
+	class UCommonUserWidget* CreateAlterationWidget();
+	void GenerateAlteration(class UFortAlterationInfo* AlterationInfo);
+	void AddAlterationToVerticalbox(class UCommonUserWidget* Alteration, bool IsUnlocked);
+	void UpdatePerksMessage();
+	void Construct();
+	void OnItemChanged(bool bIntroAlterations, bool bWasFavoritedChanged);
+	void OnItemToCompareWithChanged();
+	void OnStateChanged();
+	void OnGenerateAlteration(class UFortAlterationInfo* AlterationInfo);
+	void OnFocusFirstItem();
+	void OnAlterationSlotIndexModifiedBP(int32 ModifiedIndex);
+	void Destruct();
+	void PreConstruct(bool IsDesignTime);
+	void OnUpgradeLevelDeltaChanged();
+	void ExecuteUbergraph_AlterationsWidget(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

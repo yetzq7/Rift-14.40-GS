@@ -16,11 +16,10 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GCL_Rift_Teleport.GCL_Rift_Teleport_C
-// 0x0000 (0x0428 - 0x0428)
+// 0x0000 (0x0318 - 0x0318)
 class AGCL_Rift_Teleport_C final : public AFortGameplayCueNotify_Looping
 {
 public:
-	void UserConstructionScript();
 	bool OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
 	bool WhileActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
 

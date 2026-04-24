@@ -17,18 +17,17 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PBW_BP_Parent.PBW_BP_Parent_C
-// 0x0018 (0x0D00 - 0x0CE8)
+// 0x0018 (0x0CE8 - 0x0CD0)
 class APBW_BP_Parent_C final : public ABuildingWall
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0CE8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TArray<class UStaticMesh*>                    StaticMeshAlternateArray;                          // 0x0CF0(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0CD0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class UStaticMesh*>                    StaticMeshAlternateArray;                          // 0x0CD8(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_PBW_BP_Parent(int32 EntryPoint);
-	void OnRep_Random_Chance();
 	void ReceiveBeginPlay();
-	void UserConstructionScript();
+	void OnRep_Random_Chance();
 
 public:
 	static class UClass* StaticClass()

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Athena_PlayerCameraModeTargetingScope.Athena_PlayerCameraModeTargetingScope_C
-// 0x0000 (0x0C50 - 0x0C50)
+// 0x0000 (0x0DC0 - 0x0DC0)
 class UAthena_PlayerCameraModeTargetingScope_C final : public UAthena_PlayerCameraModeSniper_C
 {
 public:

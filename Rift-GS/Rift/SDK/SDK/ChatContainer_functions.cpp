@@ -92,6 +92,20 @@ void UChatContainer_C::BndEvt__ConsoleChatShortcut_K2Node_ComponentBoundEvent_0_
 }
 
 
+// Function ChatContainer.ChatContainer_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UChatContainer_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChatContainer_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ChatContainer.ChatContainer_C.OnSendButtonDisplayChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -129,20 +143,6 @@ void UChatContainer_C::OnChatOpenChanged(bool bShouldBeOpen)
 	Parms.bShouldBeOpen = bShouldBeOpen;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ChatContainer.ChatContainer_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UChatContainer_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChatContainer_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -226,6 +226,34 @@ struct FEventReply UChatContainer_C::OnKeyDown(const struct FGeometry& MyGeometr
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function ChatContainer.ChatContainer_C.SetChatBoxStyle
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UChatContainer_C::SetChatBoxStyle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChatContainer_C", "SetChatBoxStyle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ChatContainer.ChatContainer_C.FocusChat
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UChatContainer_C::FocusChat()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChatContainer_C", "FocusChat");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

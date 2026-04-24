@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass TT_Constructor_HammerHitsHeal.TT_Constructor_HammerHitsHeal_C
-// 0x0000 (0x0168 - 0x0168)
+// 0x0000 (0x0180 - 0x0180)
 class UTT_Constructor_HammerHitsHeal_C final : public UFortGameplayAbilityTooltip
 {
 public:

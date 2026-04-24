@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_AthenaInVehicle.GE_AthenaInVehicle_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_AthenaInVehicle_C final : public UGameplayEffect
 {
 public:

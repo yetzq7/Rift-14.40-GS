@@ -187,7 +187,7 @@ void UGamepadMappingInfo_v3_C::OnLoaded_CDBC1B27496027B96D10BC9A64224F3D(class U
 
 
 // Function GamepadMappingInfo_v3.GamepadMappingInfo_v3_C.Update Displayed Mapping
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   Platform                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EFortInputActionGroup                   Mode                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -331,7 +331,7 @@ void UGamepadMappingInfo_v3_C::Handle_Config_Changed_Hide_or_Show_Unused_Text_Li
 
 
 // Function GamepadMappingInfo_v3.GamepadMappingInfo_v3_C.InitializeListOfButtonLabelTextWidgets
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UGamepadMappingInfo_v3_C::InitializeListOfButtonLabelTextWidgets()
 {
@@ -347,7 +347,7 @@ void UGamepadMappingInfo_v3_C::InitializeListOfButtonLabelTextWidgets()
 // Function GamepadMappingInfo_v3.GamepadMappingInfo_v3_C.InitializeListOfButtonTextForSTWCombatProBuild
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class FText>&                    ButtonTextLabels                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class FText>&                    ButtonTextLabels                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
 void UGamepadMappingInfo_v3_C::InitializeListOfButtonTextForSTWCombatProBuild(TArray<class FText>& ButtonTextLabels)
 {
@@ -413,7 +413,7 @@ void UGamepadMappingInfo_v3_C::SetTextFieldVisibilityForExtraLine(class UTextBlo
 // Function GamepadMappingInfo_v3.GamepadMappingInfo_v3_C.InitializeListOfButtonTextForSTWCombatProCombat
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class FText>&                    ButtonTextLabels                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class FText>&                    ButtonTextLabels                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
 void UGamepadMappingInfo_v3_C::InitializeListOfButtonTextForSTWCombatProCombat(TArray<class FText>& ButtonTextLabels)
 {
@@ -470,7 +470,7 @@ void UGamepadMappingInfo_v3_C::GetControllerImage(TSoftObjectPtr<class UTexture2
 // Function GamepadMappingInfo_v3.GamepadMappingInfo_v3_C.InitializeListOfButtonTextForSTW_BuilderProBuild
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class FText>&                    ButtonTextLabels                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class FText>&                    ButtonTextLabels                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
 void UGamepadMappingInfo_v3_C::InitializeListOfButtonTextForSTW_BuilderProBuild(TArray<class FText>& ButtonTextLabels)
 {
@@ -492,7 +492,7 @@ void UGamepadMappingInfo_v3_C::InitializeListOfButtonTextForSTW_BuilderProBuild(
 // Function GamepadMappingInfo_v3.GamepadMappingInfo_v3_C.SetButtonTextLabelsFromTextArray
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class FText>&                    Array                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class FText>&                    Array                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
 void UGamepadMappingInfo_v3_C::SetButtonTextLabelsFromTextArray(TArray<class FText>& Array)
 {

@@ -16,107 +16,47 @@
 
 SDK_NAMESPACE_START
 
-// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.ExecuteUbergraph_FortnitePartyHeroSelect_Camera
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.HandleMousePress
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AFortnitePartyHeroSelect_Camera_C::ExecuteUbergraph_FortnitePartyHeroSelect_Camera(int32 EntryPoint)
+void AFortnitePartyHeroSelect_Camera_C::HandleMousePress()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "ExecuteUbergraph_FortnitePartyHeroSelect_Camera");
-
-	Params::FortnitePartyHeroSelect_Camera_C_ExecuteUbergraph_FortnitePartyHeroSelect_Camera Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.OnActivated
-// (Event, Public, BlueprintEvent)
-
-void AFortnitePartyHeroSelect_Camera_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "OnActivated");
+		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "HandleMousePress");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.HandleMouseRelease
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AFortnitePartyHeroSelect_Camera_C::ReceiveTick(float DeltaSeconds)
+void AFortnitePartyHeroSelect_Camera_C::HandleMouseRelease()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "ReceiveTick");
-
-	Params::FortnitePartyHeroSelect_Camera_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.OnDeactivated
-// (Event, Public, BlueprintEvent)
-
-void AFortnitePartyHeroSelect_Camera_C::OnDeactivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "OnDeactivated");
+		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "HandleMouseRelease");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0
+// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void AFortnitePartyHeroSelect_Camera_C::InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0(const struct FKey& Key)
+void AFortnitePartyHeroSelect_Camera_C::InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0");
+		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3");
 
-	Params::FortnitePartyHeroSelect_Camera_C_InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0 Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1
-// (BlueprintEvent)
-// Parameters:
-// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void AFortnitePartyHeroSelect_Camera_C::InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1(const struct FKey& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1");
-
-	Params::FortnitePartyHeroSelect_Camera_C_InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1 Parms{};
+	Params::FortnitePartyHeroSelect_Camera_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -144,19 +84,19 @@ void AFortnitePartyHeroSelect_Camera_C::InpActEvt_LeftMouseButton_K2Node_InputKe
 }
 
 
-// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3
+// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void AFortnitePartyHeroSelect_Camera_C::InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3(const struct FKey& Key)
+void AFortnitePartyHeroSelect_Camera_C::InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3");
+		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1");
 
-	Params::FortnitePartyHeroSelect_Camera_C_InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3 Parms{};
+	Params::FortnitePartyHeroSelect_Camera_C_InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -164,45 +104,103 @@ void AFortnitePartyHeroSelect_Camera_C::InpActEvt_LeftMouseButton_K2Node_InputKe
 }
 
 
-// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void AFortnitePartyHeroSelect_Camera_C::UserConstructionScript()
+void AFortnitePartyHeroSelect_Camera_C::InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "UserConstructionScript");
+		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::FortnitePartyHeroSelect_Camera_C_InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.HandleMouseRelease
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.OnActivated
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AFortnitePartyHeroSelect_Camera_C::HandleMouseRelease()
+void AFortnitePartyHeroSelect_Camera_C::OnActivated(class AFortPlayerController* PlayerController)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "HandleMouseRelease");
+		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "OnActivated");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::FortnitePartyHeroSelect_Camera_C_OnActivated Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.HandleMousePress
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.OnDeactivated
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AFortnitePartyHeroSelect_Camera_C::HandleMousePress()
+void AFortnitePartyHeroSelect_Camera_C::OnDeactivated(class AFortPlayerController* PlayerController)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "HandleMousePress");
+		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "OnDeactivated");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::FortnitePartyHeroSelect_Camera_C_OnDeactivated Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AFortnitePartyHeroSelect_Camera_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "ReceiveTick");
+
+	Params::FortnitePartyHeroSelect_Camera_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.ExecuteUbergraph_FortnitePartyHeroSelect_Camera
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AFortnitePartyHeroSelect_Camera_C::ExecuteUbergraph_FortnitePartyHeroSelect_Camera(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortnitePartyHeroSelect_Camera_C", "ExecuteUbergraph_FortnitePartyHeroSelect_Camera");
+
+	Params::FortnitePartyHeroSelect_Camera_C_ExecuteUbergraph_FortnitePartyHeroSelect_Camera Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

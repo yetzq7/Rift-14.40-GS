@@ -20,21 +20,12 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function PlayerBanner.PlayerBanner_C.ExecuteUbergraph_PlayerBanner
-// 0x0250 (0x0250 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct PlayerBanner_C_ExecuteUbergraph_PlayerBanner final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortTeamMemberInfo                    K2Node_CustomEvent_TeamMemberInfo;                 // 0x0008(0x0200)(HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_UniqueNetIdRepl_ReturnValue;      // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_SetBannerImage_Success;                   // 0x0209(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_UniqueNetIdReplUniqueNetIdRepl_ReturnValue; // 0x020A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x020B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FFortPublicAccountInfo                 K2Node_CustomEvent_NewInfo;                        // 0x020C(0x0034)(NoDestructor)
-	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESubGame                                      CallFunc_GetSubGame_ReturnValue;                   // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0249(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FFortPublicAccountInfo                 K2Node_CustomEvent_NewInfo;                        // 0x0004(0x0034)(NoDestructor)
 };
 DUMPER7_ASSERTS_PlayerBanner_C_ExecuteUbergraph_PlayerBanner;
 
@@ -47,15 +38,6 @@ public:
 };
 DUMPER7_ASSERTS_PlayerBanner_C_Account_Info_Changed;
 
-// Function PlayerBanner.PlayerBanner_C.OnTeamMemberStateChanged
-// 0x0200 (0x0200 - 0x0000)
-struct PlayerBanner_C_OnTeamMemberStateChanged final
-{
-public:
-	struct FFortTeamMemberInfo                    TeamMemberInfo;                                    // 0x0000(0x0200)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_PlayerBanner_C_OnTeamMemberStateChanged;
-
 // Function PlayerBanner.PlayerBanner_C.SetBannerImage
 // 0x0058 (0x0058 - 0x0000)
 struct PlayerBanner_C_SetBannerImage final
@@ -65,7 +47,7 @@ public:
 	bool                                          Success;                                           // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0044(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue1;           // 0x004C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue_1;          // 0x004C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_PlayerBanner_C_SetBannerImage;
 
@@ -84,7 +66,7 @@ public:
 	TSoftObjectPtr<class UTexture2D>              CallFunc_GetBannerLargeIconAssetFromRowName_ReturnValue; // 0x0048(0x0028)(HasGetValueTypeHash)
 	TSoftObjectPtr<class UObject>                 K2Node_Select_Default;                             // 0x0070(0x0028)(HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_GetBannerMID_BannerMID;                   // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_NameName_ReturnValue1;           // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_NameName_ReturnValue_1;          // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_PlayerBanner_C_SetBannerIconId;
 
@@ -99,26 +81,22 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHomebaseBannerColor                   CallFunc_GetBannerColorFromRowName_ReturnValue;    // 0x0014(0x0020)(NoDestructor)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_GetBannerMID_BannerMID1;                  // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_GetBannerMID_BannerMID_1;                 // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_GetSecondaryColor_ReturnValue;            // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_GetPrimaryColor_ReturnValue;              // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_NameName_ReturnValue1;           // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_NameName_ReturnValue_1;          // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_PlayerBanner_C_SetBannerColorId;
 
 // Function PlayerBanner.PlayerBanner_C.SetBannerOwner
-// 0x0068 (0x0068 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct PlayerBanner_C_SetBannerOwner final
 {
 public:
 	struct FUniqueNetIdRepl                       OwnerId;                                           // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	TDelegate<void(const struct FFortPublicAccountInfo& NewInfo)> K2Node_CreateDelegate_OutputDelegate; // 0x0028(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void(const struct FFortTeamMemberInfo& TeamMemberInfo)> K2Node_CreateDelegate_OutputDelegate1; // 0x0038(0x0010)(ZeroConstructor, NoDestructor)
-	class UFortPartyContext*                      CallFunc_GetContext_ReturnValue;                   // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_UniqueNetIdRepl_ReturnValue;      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortUITeamInfo*                        CallFunc_GetLocalPlayerTeam_ReturnValue;           // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortMcpContext*                        CallFunc_GetContext_ReturnValue1;                  // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortMcpContext*                        CallFunc_GetContext_ReturnValue;                   // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_UniqueNetIdRepl_ReturnValue;      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_PlayerBanner_C_SetBannerOwner;
 
@@ -185,7 +163,7 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Temp_float_Variable;                               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Temp_float_Variable1;                              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_float_Variable_1;                             // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_GetBannerMID_BannerMID;                   // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Select_Default;                             // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -203,22 +181,14 @@ public:
 DUMPER7_ASSERTS_PlayerBanner_C_SetBannerIconAndColor;
 
 // Function PlayerBanner.PlayerBanner_C.SetBannerIconAndColorFromProfile
-// 0x0150 (0x0150 - 0x0000)
+// 0x0108 (0x0108 - 0x0000)
 struct PlayerBanner_C_SetBannerIconAndColorFromProfile final
 {
 public:
 	class UFortMcpContext*                        CallFunc_GetContext_ReturnValue;                   // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortMcpContext*                        CallFunc_GetContext_ReturnValue1;                  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue2;                  // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFortAthenaLoadout                     CallFunc_GetLoadoutForPlayer_ReturnValue;          // 0x0018(0x00D8)()
-	ESubGame                                      CallFunc_GetSubGame_ReturnValue;                   // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_F2[0x2];                                       // 0x00F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x00F4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue1;           // 0x00FC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortHomeBaseInfo                      CallFunc_GetHomeBaseInfoForPlayer_Result;          // 0x0108(0x0040)()
-	bool                                          CallFunc_SetBannerImage_Success;                   // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FFortAthenaLoadout                     CallFunc_GetLoadoutForPlayer_ReturnValue;          // 0x0008(0x00F0)()
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue_1;          // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_PlayerBanner_C_SetBannerIconAndColorFromProfile;
 
@@ -234,15 +204,12 @@ public:
 DUMPER7_ASSERTS_PlayerBanner_C_SetupSurround;
 
 // Function PlayerBanner.PlayerBanner_C.UnbindDelegates
-// 0x0038 (0x0038 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct PlayerBanner_C_UnbindDelegates final
 {
 public:
-	class UFortPartyContext*                      CallFunc_GetContext_ReturnValue;                   // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortMcpContext*                        CallFunc_GetContext_ReturnValue;                   // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(const struct FFortPublicAccountInfo& NewInfo)> K2Node_CreateDelegate_OutputDelegate; // 0x0008(0x0010)(ZeroConstructor, NoDestructor)
-	class UFortUITeamInfo*                        CallFunc_GetLocalPlayerTeam_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FFortTeamMemberInfo& TeamMemberInfo)> K2Node_CreateDelegate_OutputDelegate1; // 0x0020(0x0010)(ZeroConstructor, NoDestructor)
-	class UFortMcpContext*                        CallFunc_GetContext_ReturnValue1;                  // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_PlayerBanner_C_UnbindDelegates;
 

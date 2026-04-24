@@ -26,11 +26,11 @@ public:
 DUMPER7_ASSERTS_Tracer_Shotgun_C_ExecuteUbergraph_Tracer_Shotgun;
 
 // Function Tracer_Shotgun.Tracer_Shotgun_C.UserConstructionScript
-// 0x0088 (0x0088 - 0x0000)
+// 0x008C (0x008C - 0x0000)
 struct Tracer_Shotgun_C_UserConstructionScript final
 {
 public:
-	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0000(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0000(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 DUMPER7_ASSERTS_Tracer_Shotgun_C_UserConstructionScript;
 

@@ -11,32 +11,29 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "B_Prj_Athena_Grenade_Base_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_Prj_Athena_DanceGrenade.B_Prj_Athena_DanceGrenade_C
-// 0x0088 (0x08B0 - 0x0828)
+// 0x0048 (0x0988 - 0x0940)
 class AB_Prj_Athena_DanceGrenade_C final : public AB_Prj_Athena_Grenade_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_Prj_Athena_DanceGrenade_C;        // 0x0828(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTagContainer                  StunAbility;                                       // 0x0830(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AFortPlayerController*                  ControllerWhoThrew;                                // 0x0850(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortQuestItemDefinition*               QuestItem;                                         // 0x0858(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ObjBackendName;                                    // 0x0860(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    ObjStat;                                           // 0x0868(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	class USoundBase*                             QuestSuccessSound;                                 // 0x0878(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        QuestSuccessEmitter;                               // 0x0880(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPawn*                              Target;                                            // 0x0888(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortQuestItemDefinition*               QuestItem_2;                                       // 0x0890(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ObjBackendName_2;                                  // 0x0898(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    ObjStat_2;                                         // 0x08A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_Prj_Athena_DanceGrenade_C;        // 0x0940(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerController*                  ControllerWhoThrew;                                // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortQuestItemDefinition*               QuestItem;                                         // 0x0950(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ObjBackendName;                                    // 0x0958(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             QuestSuccessSound;                                 // 0x0960(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        QuestSuccessEmitter;                               // 0x0968(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPawn*                              Target;                                            // 0x0970(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortQuestItemDefinition*               QuestItem_2;                                       // 0x0978(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ObjBackendName_2;                                  // 0x0980(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_Prj_Athena_DanceGrenade(int32 EntryPoint);
+	void BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody);
 	void OnBeginPlayQuestCheck();
 	void ReceiveBeginPlay();
 	void Play_Quest_Success_FX();
@@ -44,7 +41,6 @@ public:
 	void FuseEnded();
 	void OnBounce(const struct FHitResult& Hit);
 	void OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults);
-	void UserConstructionScript();
 	void QuestUpdate();
 
 public:

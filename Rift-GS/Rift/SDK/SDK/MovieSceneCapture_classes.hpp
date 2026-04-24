@@ -25,8 +25,7 @@ class UMovieSceneCaptureProtocolBase : public UObject
 public:
 	uint8                                         Pad_28[0x28];                                      // 0x0028(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
 	EMovieSceneCaptureProtocolState               State;                                             // 0x0050(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bFrameRequested;                                   // 0x0051(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	EMovieSceneCaptureProtocolState GetState() const;
@@ -216,7 +215,7 @@ DUMPER7_ASSERTS_UImageSequenceProtocol;
 class UCompressedImageSequenceProtocol : public UImageSequenceProtocol
 {
 public:
-	int32                                         CompressionQuality;                                // 0x00D8(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CompressionQuality;                                // 0x00D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -350,22 +349,22 @@ public:
 DUMPER7_ASSERTS_IMovieSceneCaptureInterface;
 
 // Class MovieSceneCapture.MovieSceneCapture
-// 0x01C8 (0x01F0 - 0x0028)
+// 0x01F8 (0x0220 - 0x0028)
 class UMovieSceneCapture : public UObject
 {
 public:
 	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftClassPath                         ImageCaptureProtocolType;                          // 0x0038(0x0018)(Edit, ZeroConstructor, Config, NoClear, NativeAccessSpecifierPublic)
-	struct FSoftClassPath                         AudioCaptureProtocolType;                          // 0x0050(0x0018)(Edit, ZeroConstructor, Config, NoClear, NativeAccessSpecifierPublic)
+	struct FSoftClassPath                         ImageCaptureProtocolType;                          // 0x0038(0x0018)(Edit, ZeroConstructor, Config, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftClassPath                         AudioCaptureProtocolType;                          // 0x0050(0x0018)(Edit, ZeroConstructor, Config, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMovieSceneImageCaptureProtocolBase*    ImageCaptureProtocol;                              // 0x0068(0x0008)(Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMovieSceneAudioCaptureProtocolBase*    AudioCaptureProtocol;                              // 0x0070(0x0008)(Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMovieSceneCaptureSettings             Settings;                                          // 0x0078(0x0050)(Edit, BlueprintVisible, Config, NativeAccessSpecifierPublic)
-	bool                                          bUseSeparateProcess;                               // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCloseEditorWhenCaptureStarts;                     // 0x00C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CA[0x6];                                       // 0x00CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AdditionalCommandLineArguments;                    // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 InheritedCommandLineArguments;                     // 0x00E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Transient, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F0[0x100];                                     // 0x00F0(0x0100)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMovieSceneCaptureSettings             Settings;                                          // 0x0078(0x0070)(Edit, BlueprintVisible, Config, NativeAccessSpecifierPublic)
+	bool                                          bUseSeparateProcess;                               // 0x00E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCloseEditorWhenCaptureStarts;                     // 0x00E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_EA[0x6];                                       // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AdditionalCommandLineArguments;                    // 0x00F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InheritedCommandLineArguments;                     // 0x0100(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Transient, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_110[0x110];                                    // 0x0110(0x0110)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class UMovieSceneCaptureProtocolBase* GetAudioCaptureProtocol();
@@ -390,14 +389,14 @@ public:
 DUMPER7_ASSERTS_UMovieSceneCapture;
 
 // Class MovieSceneCapture.LevelCapture
-// 0x0020 (0x0210 - 0x01F0)
+// 0x0020 (0x0240 - 0x0220)
 class ULevelCapture final : public UMovieSceneCapture
 {
 public:
-	bool                                          bAutoStartCapture;                                 // 0x01F0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F1[0xB];                                      // 0x01F1(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  PrerequisiteActorId;                               // 0x01FC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bAutoStartCapture;                                 // 0x0220(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_221[0xB];                                      // 0x0221(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  PrerequisiteActorId;                               // 0x022C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_23C[0x4];                                      // 0x023C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -443,27 +442,26 @@ public:
 DUMPER7_ASSERTS_UMovieSceneCaptureEnvironment;
 
 // Class MovieSceneCapture.UserDefinedCaptureProtocol
-// 0x0088 (0x00E0 - 0x0058)
+// 0x0080 (0x00D8 - 0x0058)
 class UUserDefinedCaptureProtocol : public UMovieSceneImageCaptureProtocolBase
 {
 public:
 	class UWorld*                                 World;                                             // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_60[0x80];                                      // 0x0060(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60[0x78];                                      // 0x0060(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void BindToStream(class FName StreamName, TDelegate<void(const struct FCapturedPixels& Pixels, class FName StreamName, const struct FFrameMetrics& FrameMetrics)> Handler);
 	void OnBeginFinalize();
 	void OnCaptureFrame();
 	void OnFinalize();
 	void OnPauseCapture();
+	void OnPixelsReceived(const struct FCapturedPixels& Pixels, const struct FCapturedPixelsID& ID, const struct FFrameMetrics& FrameMetrics);
 	void OnPreTick();
 	bool OnSetup();
 	void OnStartCapture();
 	void OnTick();
 	void OnWarmUp();
-	void PushBufferToStream(class UTexture* Buffer, class FName StreamName);
-	void ResolveBuffer(class UTexture* Buffer, class FName BufferName, TDelegate<void(const struct FCapturedPixels& Pixels, class FName StreamName, const struct FFrameMetrics& FrameMetrics)> Handler);
-	void StartCapturingFinalPixels(class FName StreamName);
+	void ResolveBuffer(class UTexture* Buffer, const struct FCapturedPixelsID& BufferID);
+	void StartCapturingFinalPixels(const struct FCapturedPixelsID& StreamID);
 	void StopCapturingFinalPixels();
 
 	class FString GenerateFilename(const struct FFrameMetrics& InFrameMetrics) const;
@@ -487,19 +485,19 @@ public:
 DUMPER7_ASSERTS_UUserDefinedCaptureProtocol;
 
 // Class MovieSceneCapture.UserDefinedImageCaptureProtocol
-// 0x0008 (0x00E8 - 0x00E0)
+// 0x0008 (0x00E0 - 0x00D8)
 class UUserDefinedImageCaptureProtocol final : public UUserDefinedCaptureProtocol
 {
 public:
-	EDesiredImageFormat                           Format;                                            // 0x00E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableCompression;                                // 0x00E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E2[0x2];                                       // 0x00E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CompressionQuality;                                // 0x00E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDesiredImageFormat                           Format;                                            // 0x00D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableCompression;                                // 0x00D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_DA[0x2];                                       // 0x00DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CompressionQuality;                                // 0x00DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
-	class FString GenerateFilenameForBuffer(class UTexture* Buffer, class FName StreamName);
+	class FString GenerateFilenameForBuffer(class UTexture* Buffer, const struct FCapturedPixelsID& StreamID);
 	class FString GenerateFilenameForCurrentFrame();
-	void WriteImageToDisk(const struct FCapturedPixels& PixelData, class FName StreamName, const struct FFrameMetrics& FrameMetrics, bool bCopyImageData);
+	void WriteImageToDisk(const struct FCapturedPixels& PixelData, const struct FCapturedPixelsID& StreamID, const struct FFrameMetrics& FrameMetrics, bool bCopyImageData);
 
 public:
 	static class UClass* StaticClass()
@@ -518,15 +516,14 @@ public:
 DUMPER7_ASSERTS_UUserDefinedImageCaptureProtocol;
 
 // Class MovieSceneCapture.VideoCaptureProtocol
-// 0x0028 (0x0090 - 0x0068)
+// 0x0018 (0x0080 - 0x0068)
 class UVideoCaptureProtocol final : public UFrameGrabberProtocol
 {
 public:
 	bool                                          bUseCompression;                                   // 0x0068(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CompressionQuality;                                // 0x006C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 VideoCodec;                                        // 0x0070(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_80[0x10];                                      // 0x0080(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_70[0x10];                                      // 0x0070(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

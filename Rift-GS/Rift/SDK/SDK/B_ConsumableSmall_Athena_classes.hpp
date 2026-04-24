@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_ConsumableSmall_Athena.B_ConsumableSmall_Athena_C
-// 0x0000 (0x0988 - 0x0988)
+// 0x0000 (0x0CC8 - 0x0CC8)
 class AB_ConsumableSmall_Athena_C : public AB_UtilityItem_Generic_Athena_C
 {
 public:

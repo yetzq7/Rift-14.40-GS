@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass KeybindWidget.KeybindWidget_C
-// 0x0000 (0x0890 - 0x0890)
+// 0x0000 (0x08E8 - 0x08E8)
 class UKeybindWidget_C final : public UFortKeybindWidget
 {
 public:

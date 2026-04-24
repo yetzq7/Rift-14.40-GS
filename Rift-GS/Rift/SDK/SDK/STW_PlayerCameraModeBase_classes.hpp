@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass STW_PlayerCameraModeBase.STW_PlayerCameraModeBase_C
-// 0x0000 (0x0C50 - 0x0C50)
+// 0x0000 (0x0DC0 - 0x0DC0)
 class USTW_PlayerCameraModeBase_C final : public USTW_PlayerCameraModeMelee_C
 {
 public:

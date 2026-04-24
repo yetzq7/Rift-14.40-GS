@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_Commando_FragGrenadeKeepOutDamage.GE_Commando_FragGrenadeKeepOutDamage_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_Commando_FragGrenadeKeepOutDamage_C final : public UGET_DirectEnergyDamage_C
 {
 public:

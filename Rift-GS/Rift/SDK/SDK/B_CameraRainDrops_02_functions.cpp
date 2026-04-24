@@ -36,15 +36,15 @@ void AB_CameraRainDrops_02_C::ExecuteUbergraph_B_CameraRainDrops_02(int32 EntryP
 }
 
 
-// Function B_CameraRainDrops_02.B_CameraRainDrops_02_C.Alpha__FinishedFunc
-// (BlueprintEvent)
+// Function B_CameraRainDrops_02.B_CameraRainDrops_02_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AB_CameraRainDrops_02_C::Alpha__FinishedFunc()
+void AB_CameraRainDrops_02_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_CameraRainDrops_02_C", "Alpha__FinishedFunc");
+		Func = Class->GetFunction("B_CameraRainDrops_02_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,29 +64,15 @@ void AB_CameraRainDrops_02_C::Alpha__UpdateFunc()
 }
 
 
-// Function B_CameraRainDrops_02.B_CameraRainDrops_02_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function B_CameraRainDrops_02.B_CameraRainDrops_02_C.Alpha__FinishedFunc
+// (BlueprintEvent)
 
-void AB_CameraRainDrops_02_C::ReceiveBeginPlay()
+void AB_CameraRainDrops_02_C::Alpha__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_CameraRainDrops_02_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_CameraRainDrops_02.B_CameraRainDrops_02_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AB_CameraRainDrops_02_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_CameraRainDrops_02_C", "UserConstructionScript");
+		Func = Class->GetFunction("B_CameraRainDrops_02_C", "Alpha__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

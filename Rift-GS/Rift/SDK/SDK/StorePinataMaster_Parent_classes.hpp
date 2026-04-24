@@ -17,19 +17,18 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass StorePinataMaster_Parent.StorePinataMaster_Parent_C
-// 0x0010 (0x0340 - 0x0330)
-class AStorePinataMaster_Parent_C : public AActor
+// 0x0010 (0x0230 - 0x0220)
+class AStorePinataMaster_Parent_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0330(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        PinataSceneRoot;                                   // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        PinataSceneRoot;                                   // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_StorePinataMaster_Parent(int32 EntryPoint);
+	void InitiatePinata();
 	void CameraResetComplete();
 	void CameraTransitionComplete();
-	void InitiatePinata();
-	void UserConstructionScript();
+	void ExecuteUbergraph_StorePinataMaster_Parent(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

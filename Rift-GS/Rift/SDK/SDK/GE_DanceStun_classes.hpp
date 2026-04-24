@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_DanceStun.GE_DanceStun_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_DanceStun_C final : public UGameplayEffect
 {
 public:

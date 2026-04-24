@@ -45,7 +45,7 @@ DUMPER7_ASSERTS_UBlueprintGameplayStatsLibrary;
 class UGameplayTagTableManager final : public UDataAsset
 {
 public:
-	TArray<struct FManagedGameplayTagDataTableItem> Tables;                                          // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FManagedGameplayTagDataTableItem> Tables;                                          // 0x0030(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_40[0x58];                                      // 0x0040(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

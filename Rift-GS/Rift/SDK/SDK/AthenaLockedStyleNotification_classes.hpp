@@ -11,23 +11,30 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_classes.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass AthenaLockedStyleNotification.AthenaLockedStyleNotification_C
-// 0x0010 (0x0240 - 0x0230)
-class UAthenaLockedStyleNotification_C final : public UUserWidget
+// 0x0030 (0x0318 - 0x02E8)
+class UAthenaLockedStyleNotification_C final : public UAthenaCosmeticUnlockingInfo
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0230(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       DescriptionText;                                   // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       DataUpdate;                                        // 0x02F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Intro;                                             // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_ProgressInfo;                              // 0x0300(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_StaticText;                                // 0x0308(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        Switcher_LockedInfo;                               // 0x0310(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
+	void OnUnlockingInfoSet(bool bShowProgression);
+	void RequestUpdateAnim();
+	void RequestIntroAnim();
+	void RequestOutroAnim();
+	void OutroFinished();
 	void ExecuteUbergraph_AthenaLockedStyleNotification(int32 EntryPoint);
-	void Construct();
-	void SetLockedStyleDescription(const class FText& LockedStyleDescription);
 
 public:
 	static class UClass* StaticClass()

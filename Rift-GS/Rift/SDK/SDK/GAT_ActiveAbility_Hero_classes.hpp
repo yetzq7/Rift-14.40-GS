@@ -17,12 +17,12 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GAT_ActiveAbility_Hero.GAT_ActiveAbility_Hero_C
-// 0x0010 (0x0978 - 0x0968)
+// 0x0010 (0x0AE8 - 0x0AD8)
 class UGAT_ActiveAbility_Hero_C : public UGAT_ActiveAbility_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_ActiveAbility_Hero_C;           // 0x0968(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          UseHeroLoadoutSystem;                              // 0x0970(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_ActiveAbility_Hero_C;           // 0x0AD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          UseHeroLoadoutSystem;                              // 0x0AE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GAT_ActiveAbility_Hero(int32 EntryPoint);

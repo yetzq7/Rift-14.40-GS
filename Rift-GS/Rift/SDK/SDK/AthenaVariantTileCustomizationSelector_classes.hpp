@@ -16,8 +16,8 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass AthenaVariantTileCustomizationSelector.AthenaVariantTileCustomizationSelector_C
-// 0x0000 (0x02C0 - 0x02C0)
-class UAthenaVariantTileCustomizationSelector_C final : public UFortVariantTileSelector
+// 0x0000 (0x0328 - 0x0328)
+class UAthenaVariantTileCustomizationSelector_C final : public UFortVariantSelector
 {
 public:
 	static class UClass* StaticClass()

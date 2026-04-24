@@ -37,12 +37,12 @@ void ABP_ProjectileTrajectory_Athena_SnapToGridArrow_C::ExecuteUbergraph_BP_Proj
 
 
 // Function BP_ProjectileTrajectory_Athena_SnapToGridArrow.BP_ProjectileTrajectory_Athena_SnapToGridArrow_C.SetTrajectorySpline
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FVector>&                 SplinePoints                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>&                 SplineTangents                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const TArray<struct FVector>&           SplinePoints                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FVector>&           SplineTangents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
-void ABP_ProjectileTrajectory_Athena_SnapToGridArrow_C::SetTrajectorySpline(TArray<struct FVector>& SplinePoints, TArray<struct FVector>& SplineTangents)
+void ABP_ProjectileTrajectory_Athena_SnapToGridArrow_C::SetTrajectorySpline(const TArray<struct FVector>& SplinePoints, const TArray<struct FVector>& SplineTangents)
 {
 	static class UFunction* Func = nullptr;
 
@@ -55,9 +55,6 @@ void ABP_ProjectileTrajectory_Athena_SnapToGridArrow_C::SetTrajectorySpline(TArr
 	Parms.SplineTangents = std::move(SplineTangents);
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	SplinePoints = std::move(Parms.SplinePoints);
-	SplineTangents = std::move(Parms.SplineTangents);
 }
 
 
@@ -70,20 +67,6 @@ void ABP_ProjectileTrajectory_Athena_SnapToGridArrow_C::ReceiveBeginPlay()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_ProjectileTrajectory_Athena_SnapToGridArrow_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ProjectileTrajectory_Athena_SnapToGridArrow.BP_ProjectileTrajectory_Athena_SnapToGridArrow_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_ProjectileTrajectory_Athena_SnapToGridArrow_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ProjectileTrajectory_Athena_SnapToGridArrow_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

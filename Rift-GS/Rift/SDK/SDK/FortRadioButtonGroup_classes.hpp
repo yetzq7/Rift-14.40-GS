@@ -10,36 +10,36 @@
 
 #include "Basic.hpp"
 
-#include "FortRadioButtonItemStruct_structs.hpp"
 #include "Engine_structs.hpp"
+#include "FortRadioButtonItemStruct_structs.hpp"
 #include "UMG_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass FortRadioButtonGroup.FortRadioButtonGroup_C
-// 0x0068 (0x0298 - 0x0230)
+// 0x0068 (0x02C8 - 0x0260)
 class UFortRadioButtonGroup_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0230(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USizeBox*                               SizeBox_Buttons;                                   // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBox_Buttons;                               // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<struct FFortRadioButtonItemStruct>     Buttons;                                           // 0x0248(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference)
-	TArray<class UIconTextButton_C*>              CreatedButtons;                                    // 0x0258(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	UMulticastDelegateProperty_                   RadioButtonClicked_Event;                          // 0x0268(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	float                                         WidthOverride;                                     // 0x0278(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonButtonGroup*                     CreatedButtonsGroup;                               // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CommonButtonGroup;                                 // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         HeightOverride;                                    // 0x0290(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USizeBox*                               SizeBox_Buttons;                                   // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBox_Buttons;                               // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<struct FFortRadioButtonItemStruct>     Buttons;                                           // 0x0278(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<class UIconTextButton_C*>              CreatedButtons;                                    // 0x0288(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(int32 SelectedIndex)> RadioButtonClicked_Event;                    // 0x0298(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	float                                         WidthOverride;                                     // 0x02A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCommonButtonGroup*                     CreatedButtonsGroup;                               // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CommonButtonGroup;                                 // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         HeightOverride;                                    // 0x02C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_FortRadioButtonGroup(int32 EntryPoint);
-	void CenterOnWidget();
+	void UpdateButtons();
 	void Destruct();
 	void OnButtonClicked_Bind(class UCommonButton* AssociatedButton, int32 ButtonIndex);
-	void UpdateButtons();
+	void CenterOnWidget();
 
 public:
 	static class UClass* StaticClass()

@@ -36,6 +36,46 @@ void UBP_LocalPlayerBannerEditor_C::ExecuteUbergraph_BP_LocalPlayerBannerEditor(
 }
 
 
+// Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.BndEvt__Button_CloseEditorButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_LocalPlayerBannerEditor_C::BndEvt__Button_CloseEditorButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LocalPlayerBannerEditor_C", "BndEvt__Button_CloseEditorButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+
+	Params::BP_LocalPlayerBannerEditor_C_BndEvt__Button_CloseEditorButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.BndEvt__CloseButton_97_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_LocalPlayerBannerEditor_C::BndEvt__CloseButton_97_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LocalPlayerBannerEditor_C", "BndEvt__CloseButton_97_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
+
+	Params::BP_LocalPlayerBannerEditor_C_BndEvt__CloseButton_97_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.OnShowNextCategory
 // (Event, Protected, BlueprintEvent)
 
@@ -155,9 +195,9 @@ void UBP_LocalPlayerBannerEditor_C::BndEvt__ApplyButton_K2Node_ComponentBoundEve
 // Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.HandleInputMethodChanged
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// ECommonInputType                        InputType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_LocalPlayerBannerEditor_C::HandleInputMethodChanged(bool bUsingGamepad)
+void UBP_LocalPlayerBannerEditor_C::HandleInputMethodChanged(ECommonInputType InputType)
 {
 	static class UFunction* Func = nullptr;
 
@@ -166,7 +206,7 @@ void UBP_LocalPlayerBannerEditor_C::HandleInputMethodChanged(bool bUsingGamepad)
 
 	Params::BP_LocalPlayerBannerEditor_C_HandleInputMethodChanged Parms{};
 
-	Parms.bUsingGamepad = bUsingGamepad;
+	Parms.InputType = InputType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -245,26 +285,6 @@ void UBP_LocalPlayerBannerEditor_C::RefreshBannerEditor()
 		Func = Class->GetFunction("BP_LocalPlayerBannerEditor_C", "RefreshBannerEditor");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.BndEvt__CloseEditorButton_K2Node_ComponentBoundEvent_74_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_LocalPlayerBannerEditor_C::BndEvt__CloseEditorButton_K2Node_ComponentBoundEvent_74_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LocalPlayerBannerEditor_C", "BndEvt__CloseEditorButton_K2Node_ComponentBoundEvent_74_CommonButtonClicked__DelegateSignature");
-
-	Params::BP_LocalPlayerBannerEditor_C_BndEvt__CloseEditorButton_K2Node_ComponentBoundEvent_74_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -377,7 +397,7 @@ void UBP_LocalPlayerBannerEditor_C::OnWidgetActivated()
 
 
 // Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.Setup Tileview For Icons
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             CategoryRowName                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -397,7 +417,7 @@ void UBP_LocalPlayerBannerEditor_C::Setup_Tileview_For_Icons(class FName Categor
 
 
 // Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.Setup Tileview For Colorswatches
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName&                            CategoryRowName                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -439,7 +459,7 @@ void UBP_LocalPlayerBannerEditor_C::Set_Current_Category(class FName CurrentCate
 
 
 // Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.Next Category
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UBP_LocalPlayerBannerEditor_C::Next_Category()
 {
@@ -453,7 +473,7 @@ void UBP_LocalPlayerBannerEditor_C::Next_Category()
 
 
 // Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.Previous Category
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UBP_LocalPlayerBannerEditor_C::Previous_Category()
 {
@@ -750,7 +770,7 @@ void UBP_LocalPlayerBannerEditor_C::Update_Bang_States()
 
 
 // Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.Update Icon Button Bang State
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBP_LocalPlayerBannerEditor_C::Update_Icon_Button_Bang_State()
 {
@@ -764,7 +784,7 @@ void UBP_LocalPlayerBannerEditor_C::Update_Icon_Button_Bang_State()
 
 
 // Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.Update Color Button Bang State
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBP_LocalPlayerBannerEditor_C::Update_Color_Button_Bang_State()
 {
@@ -858,7 +878,7 @@ int32 UBP_LocalPlayerBannerEditor_C::Get_Prev_Color_Category_Index()
 
 
 // Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.Update Left Icon Category Button Bang State
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBP_LocalPlayerBannerEditor_C::Update_Left_Icon_Category_Button_Bang_State()
 {
@@ -872,7 +892,7 @@ void UBP_LocalPlayerBannerEditor_C::Update_Left_Icon_Category_Button_Bang_State(
 
 
 // Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.Update Right Icon Category Button Bang State
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBP_LocalPlayerBannerEditor_C::Update_Right_Icon_Category_Button_Bang_State()
 {
@@ -886,7 +906,7 @@ void UBP_LocalPlayerBannerEditor_C::Update_Right_Icon_Category_Button_Bang_State
 
 
 // Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.Update Left Color Category Button Bang State
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBP_LocalPlayerBannerEditor_C::Update_Left_Color_Category_Button_Bang_State()
 {
@@ -900,7 +920,7 @@ void UBP_LocalPlayerBannerEditor_C::Update_Left_Color_Category_Button_Bang_State
 
 
 // Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.Update Right Color Category Button Bang State
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBP_LocalPlayerBannerEditor_C::Update_Right_Color_Category_Button_Bang_State()
 {
@@ -942,7 +962,7 @@ void UBP_LocalPlayerBannerEditor_C::Reset_Color_Category_Index()
 
 
 // Function BP_LocalPlayerBannerEditor.BP_LocalPlayerBannerEditor_C.Update Category Navigation Visibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBP_LocalPlayerBannerEditor_C::Update_Category_Navigation_Visibility()
 {

@@ -16,54 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function ItemPerksListDetailWidget.ItemPerksListDetailWidget_C.ExecuteUbergraph_ItemPerksListDetailWidget
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UItemPerksListDetailWidget_C::ExecuteUbergraph_ItemPerksListDetailWidget(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemPerksListDetailWidget_C", "ExecuteUbergraph_ItemPerksListDetailWidget");
-
-	Params::ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemPerksListDetailWidget.ItemPerksListDetailWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UItemPerksListDetailWidget_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemPerksListDetailWidget_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemPerksListDetailWidget.ItemPerksListDetailWidget_C.HandlePostDifferentItemToDetailSet
-// (Event, Protected, BlueprintEvent)
-
-void UItemPerksListDetailWidget_C::HandlePostDifferentItemToDetailSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemPerksListDetailWidget_C", "HandlePostDifferentItemToDetailSet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ItemPerksListDetailWidget.ItemPerksListDetailWidget_C.SetState
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -81,6 +33,54 @@ void UItemPerksListDetailWidget_C::SetState(EFortPerksWidgetState InState, class
 
 	Parms.InState = InState;
 	Parms.InEvolutionOption = InEvolutionOption;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemPerksListDetailWidget.ItemPerksListDetailWidget_C.HandlePostDifferentItemToDetailSet
+// (Event, Protected, BlueprintEvent)
+
+void UItemPerksListDetailWidget_C::HandlePostDifferentItemToDetailSet()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemPerksListDetailWidget_C", "HandlePostDifferentItemToDetailSet");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemPerksListDetailWidget.ItemPerksListDetailWidget_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UItemPerksListDetailWidget_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemPerksListDetailWidget_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemPerksListDetailWidget.ItemPerksListDetailWidget_C.ExecuteUbergraph_ItemPerksListDetailWidget
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UItemPerksListDetailWidget_C::ExecuteUbergraph_ItemPerksListDetailWidget(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemPerksListDetailWidget_C", "ExecuteUbergraph_ItemPerksListDetailWidget");
+
+	Params::ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

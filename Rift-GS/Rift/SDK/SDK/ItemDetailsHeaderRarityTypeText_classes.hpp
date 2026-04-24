@@ -12,24 +12,23 @@
 
 #include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "FortniteGame_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ItemDetailsHeaderRarityTypeText.ItemDetailsHeaderRarityTypeText_C
-// 0x0018 (0x0298 - 0x0280)
+// 0x0018 (0x02F8 - 0x02E0)
 class UItemDetailsHeaderRarityTypeText_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       RarityTextBlock;                                   // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TypeTextBlock;                                     // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       RarityTextBlock;                                   // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TypeTextBlock;                                     // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_ItemDetailsHeaderRarityTypeText(int32 EntryPoint);
-	void HandlePostDifferentItemToCompareWithSet();
 	void HandlePostDifferentItemToDetailSet();
+	void HandlePostDifferentItemToCompareWithSet();
+	void ExecuteUbergraph_ItemDetailsHeaderRarityTypeText(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

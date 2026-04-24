@@ -10,22 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "UMG_classes.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ConsoleProfileWidget.ConsoleProfileWidget_C
-// 0x0010 (0x0240 - 0x0230)
-class UConsoleProfileWidget_C final : public UUserWidget
+// 0x0000 (0x0270 - 0x0270)
+class UConsoleProfileWidget_C final : public UFortConsoleProfileWidget
 {
-public:
-	class UCommonTextBlock*                       DisplayName;                                       // 0x0230(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Prefix;                                            // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void SetDisplayName(const class FText& DisplayName_0);
-
 public:
 	static class UClass* StaticClass()
 	{

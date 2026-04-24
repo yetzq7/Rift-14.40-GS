@@ -25,11 +25,20 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0010(0x0038)(IsPlainOldData, NoDestructor)
-	struct FPointerEvent                          K2Node_Event_MouseEvent1;                          // 0x0048(0x0070)(ConstParm)
+	struct FPointerEvent                          K2Node_Event_MouseEvent_1;                         // 0x0048(0x0070)(ConstParm)
 	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x00B8(0x0070)(ConstParm)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue1;               // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_windowchromebuttons_C_ExecuteUbergraph_windowchromebuttons;
+
+// Function windowchromebuttons.windowchromebuttons_C.OnMouseLeave
+// 0x0070 (0x0070 - 0x0000)
+struct windowchromebuttons_C_OnMouseLeave final
+{
+public:
+	struct FPointerEvent                          MouseEvent;                                        // 0x0000(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_windowchromebuttons_C_OnMouseLeave;
 
 // Function windowchromebuttons.windowchromebuttons_C.OnMouseEnter
 // 0x00A8 (0x00A8 - 0x0000)
@@ -40,15 +49,6 @@ public:
 	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 DUMPER7_ASSERTS_windowchromebuttons_C_OnMouseEnter;
-
-// Function windowchromebuttons.windowchromebuttons_C.OnMouseLeave
-// 0x0070 (0x0070 - 0x0000)
-struct windowchromebuttons_C_OnMouseLeave final
-{
-public:
-	struct FPointerEvent                          MouseEvent;                                        // 0x0000(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_windowchromebuttons_C_OnMouseLeave;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

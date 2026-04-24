@@ -11,35 +11,30 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "FortniteUI_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Announce_EventCine.Announce_EventCine_C
-// 0x0028 (0x03C8 - 0x03A0)
+// 0x0028 (0x02C8 - 0x02A0)
 class AAnnounce_EventCine_C : public AFortClientAnnouncement_Cinematic
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UMediaSource*                           EventMediaSource;                                  // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          AllowSkipping;                                     // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	EFortUIState                                  StartingState;                                     // 0x03B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BA[0x6];                                      // 0x03BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortMediaSubtitlesPlayer*              EventSubtitlesPlayer;                              // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UMediaSource*                           EventMediaSource;                                  // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AllowSkipping;                                     // 0x02B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2B9[0x7];                                      // 0x02B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortMediaSubtitlesPlayer*              EventSubtitlesPlayer;                              // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_Announce_EventCine(int32 EntryPoint);
-	void HandleAllowSkip();
-	void HandleClientEvent_CinematicFinishedPlaying(class UObject* EventSource, class UObject* EventFocus, const struct FFortClientEvent& ClientEvent);
-	void OnClientAnnouncementStart();
 	void OnClientAnnouncementStop();
 	void OnPlayerSkippedCutscene();
-	void OnStateEntered_132DA3B4468BA1009280CFB4D4C2D0AC();
-	void OnStateEntered_2FC6E2894145586A1A4AF69426273130();
-	void UserConstructionScript();
+	void HandleClientEvent_CinematicFinishedPlaying(class UObject* EventSource, class UObject* EventFocus, const struct FFortClientEvent& ClientEvent);
+	void HandleAllowSkip();
+	void OnEnteredCinematicState();
+	void ExecuteUbergraph_Announce_EventCine(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

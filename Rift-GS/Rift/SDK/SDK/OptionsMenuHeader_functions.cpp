@@ -36,6 +36,20 @@ void UOptionsMenuHeader_C::ExecuteUbergraph_OptionsMenuHeader(int32 EntryPoint)
 }
 
 
+// Function OptionsMenuHeader.OptionsMenuHeader_C.BP_OnEntryReleased
+// (Event, Protected, BlueprintEvent)
+
+void UOptionsMenuHeader_C::BP_OnEntryReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OptionsMenuHeader_C", "BP_OnEntryReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function OptionsMenuHeader.OptionsMenuHeader_C.CenterOnWidget
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -50,17 +64,23 @@ void UOptionsMenuHeader_C::CenterOnWidget()
 }
 
 
-// Function OptionsMenuHeader.OptionsMenuHeader_C.BP_OnEntryReleased
+// Function OptionsMenuHeader.OptionsMenuHeader_C.BP_OnItemExpansionChanged
 // (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UOptionsMenuHeader_C::BP_OnEntryReleased()
+void UOptionsMenuHeader_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenuHeader_C", "BP_OnEntryReleased");
+		Func = Class->GetFunction("OptionsMenuHeader_C", "BP_OnItemExpansionChanged");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::OptionsMenuHeader_C_BP_OnItemExpansionChanged Parms{};
+
+	Parms.bIsExpanded = bIsExpanded;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -160,35 +180,15 @@ void UOptionsMenuHeader_C::BP_OnItemSelectionChanged(bool bIsSelected)
 }
 
 
-// Function OptionsMenuHeader.OptionsMenuHeader_C.BP_OnItemExpansionChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UOptionsMenuHeader_C::BP_OnItemExpansionChanged(bool bIsExpanded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenuHeader_C", "BP_OnItemExpansionChanged");
-
-	Params::OptionsMenuHeader_C_BP_OnItemExpansionChanged Parms{};
-
-	Parms.bIsExpanded = bIsExpanded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function OptionsMenuHeader.OptionsMenuHeader_C.Center on Widget
+// Function OptionsMenuHeader.OptionsMenuHeader_C.Center On Widget
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UOptionsMenuHeader_C::Center_on_Widget()
+void UOptionsMenuHeader_C::Center_On_Widget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenuHeader_C", "Center on Widget");
+		Func = Class->GetFunction("OptionsMenuHeader_C", "Center On Widget");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -222,23 +222,27 @@ void UOptionsMenuHeader_C::HandlePawnSet()
 }
 
 
-// Function OptionsMenuHeader.OptionsMenuHeader_C.GetListItemObject
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Function OptionsMenuHeader.OptionsMenuHeader_C.SetFontSize
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonTextBlock*                 Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   DefaultSize                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   MobileSize                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class UObject* UOptionsMenuHeader_C::GetListItemObject() const
+void UOptionsMenuHeader_C::SetFontSize(class UCommonTextBlock* Text, int32 DefaultSize, int32 MobileSize)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenuHeader_C", "GetListItemObject");
+		Func = Class->GetFunction("OptionsMenuHeader_C", "SetFontSize");
 
-	Params::OptionsMenuHeader_C_GetListItemObject Parms{};
+	Params::OptionsMenuHeader_C_SetFontSize Parms{};
+
+	Parms.Text = Text;
+	Parms.DefaultSize = DefaultSize;
+	Parms.MobileSize = MobileSize;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 

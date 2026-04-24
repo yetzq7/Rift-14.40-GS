@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PBWA_BG_WindowSide.PBWA_BG_WindowSide_C
-// 0x0000 (0x0CE8 - 0x0CE8)
+// 0x0000 (0x0CD0 - 0x0CD0)
 class APBWA_BG_WindowSide_C final : public ABuildingWall
 {
 public:

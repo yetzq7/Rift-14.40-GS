@@ -11,7 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "FortniteUI_structs.hpp"
+#include "UMG_structs.hpp"
 #include "FortniteUI_classes.hpp"
 #include "FortniteGame_structs.hpp"
 
@@ -19,57 +19,68 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass AthenaItemCustomizationSelector.AthenaItemCustomizationSelector_C
-// 0x00A8 (0x0660 - 0x05B8)
+// 0x00E0 (0x0870 - 0x0790)
 class UAthenaItemCustomizationSelector_C final : public UAthenaItemSelectorScreenBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       ItemInfoIntroOutro;                                // 0x05C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Intro;                                             // 0x05C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class USizeBox*                               CameraFramingWidget;                               // 0x05D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaLockedStyleNotification_C*       LockedNotification;                                // 0x05D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              MainSafeZone;                                      // 0x05E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SB_MainContent;                                    // 0x05E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SB_SaveAndExit;                                    // 0x05F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       ShortDescriptionText;                              // 0x05F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SlotImage;                                         // 0x0600(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextBox_LockerRoomMode;                            // 0x0608(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcher*                  WidgetSwitcher_InteractionMethod;                  // 0x0610(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcher*                  WidgetSwitcher_ItemEditor;                         // 0x0618(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortUIManagerWidget_NUI*               UIManager;                                         // 0x0620(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UProgressModalWidget_C*                 ProgressModal;                                     // 0x0628(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           ShowSaveProgressModalDelegate;                     // 0x0630(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    FavoriteInputActionRow;                            // 0x0638(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	int32                                         CurrentSubslotIndexBeingPopulated;                 // 0x0648(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bPickingStyle;                                     // 0x064C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_64D[0x3];                                      // 0x064D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           FadeHeaderBackInTimer;                             // 0x0650(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         HowLongToShowItemHeader;                           // 0x0658(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFadingItemHeaderOut;                              // 0x065C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0790(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       PulseAnim;                                         // 0x0798(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       CannotSlide;                                       // 0x07A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       NormalState;                                       // 0x07A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SlideRight;                                        // 0x07B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SlideLeft;                                         // 0x07B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       HideTextSearch;                                    // 0x07C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ShowTextSearch;                                    // 0x07C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ItemInfoIntroOutro;                                // 0x07D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Intro;                                             // 0x07D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UOverlay*                               CameraFrameContainer;                              // 0x07E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCloseButton_C*                         CloseButton;                                       // 0x07E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         ExclusiveCalloutBox;                               // 0x07F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   ExclusiveCalloutText;                              // 0x07F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              MainSafeZone;                                      // 0x0800(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SB_MainContent;                                    // 0x0808(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SB_SaveAndExit;                                    // 0x0810(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ShortDescriptionText;                              // 0x0818(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SlotImage;                                         // 0x0820(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextBox_LockerRoomMode;                            // 0x0828(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  WidgetSwitcher_InteractionMethod;                  // 0x0830(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  WidgetSwitcher_ItemEditor;                         // 0x0838(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressModalWidget_C*                 ProgressModal;                                     // 0x0840(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPickingStyle;                                     // 0x0848(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bHandledBackRequest;                               // 0x0849(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_84A[0x6];                                      // 0x084A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           AutoHideInfoPanelEventTimer;                       // 0x0850(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           TextEntryTimer;                                    // 0x0858(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         SeasonFilter;                                      // 0x0860(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxSeason;                                         // 0x0864(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ItemInfoHideDelayTime;                             // 0x0868(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_AthenaItemCustomizationSelector(int32 EntryPoint);
-	void FadeItemHeaderBackIn();
-	void ZoomInputGiven();
-	void RotationInputGiven();
+	void HandleHideInfoPanel();
+	void HandleShowInfoPanel(class UFortItem* SelectedItem);
+	void OnVariantSelectionChangedBP(const struct FMcpVariantChannelInfo& InVariant);
+	void OnUpdateExclusiveItemCallout(bool bShouldShow, const class FText& CalloutText);
+	void OnHideItemInfoHeader(bool bShouldHide);
+	void BndEvt__CloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void HandleTextChanged(const class FText& NewText);
+	void HandleTextSearchSelectedChanged(bool bIsSelected);
+	void OnFinishedItemSetup(const class FText& CategoryDisplayName, const class FText& ItemDisplayTypeName, EAthenaCustomizationCategory SelectedCategory, class UMaterialInstance* OverrideSlotImage);
 	void BndEvt__Picker_ItemSelector_K2Node_ComponentBoundEvent_2_OnUpdateSaveButtonVisuals__DelegateSignature();
 	void BndEvt__Picker_ItemSelector_K2Node_ComponentBoundEvent_1_OnUpdateSaveButtonVisuals__DelegateSignature();
-	void OnFinsihedItemSetup(const class FText& CategoryDisplayName, const class FText& ItemDisplayTypeName, EAthenaCustomizationCategory SelectedCategory);
 	void OnCurrentItemChanged(class UFortItem* SelectedItem);
 	void OnTabSelectionChanged(bool bShowingVariants);
-	void BndEvt__Picker_VariantSelector_K2Node_ComponentBoundEvent_0_OnVariantChangedEvent__DelegateSignature(const struct FGameplayTag& VariantChannel, const struct FGameplayTag& VariantTag, bool IsOwned);
-	void OnActivated();
+	void BP_OnActivated();
 	void OnSavingItemStarted();
 	void OnFinsihedItemSave();
 	void BndEvt__HorizontalTabList_K2Node_ComponentBoundEvent_44_OnTabButtonCreated__DelegateSignature(class FName TabId, class UCommonButton* TabButton);
 	void Construct();
 	void HandleBack(bool* PassThrough);
-	void ToggleFavorite(bool* PassThrough);
-	class UWidget* GetWidgetForFramingViewedItem();
 	void ShowSavingModal();
 	void GetCurrentItemCosmeticDefinition(class UAthenaCosmeticItemDefinition** Cosmetic_Item_Definition);
-	void UpdateToggleFavoriteVisibility(class UFortItem* Item);
-	void UpdateEditStyleButton(class UFortItem* Item);
+	void HandleItemSetupFinished(const class FText& InText, EAthenaCustomizationCategory Category, class UMaterialInstance* OverrideImage);
+	class UMaterialInstance* GetCategoryImage(EAthenaCustomizationCategory Index_0, class UMaterialInstance* OverrideImage);
+	void UpdateSeasonButtonEnabledState();
 
 public:
 	static class UClass* StaticClass()

@@ -16,8 +16,8 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_GrenadeCameraShake.B_GrenadeCameraShake_C
-// 0x0000 (0x0160 - 0x0160)
-class UB_GrenadeCameraShake_C final : public UCameraShake
+// 0x0000 (0x0180 - 0x0180)
+class UB_GrenadeCameraShake_C final : public UMatineeCameraShake
 {
 public:
 	static class UClass* StaticClass()

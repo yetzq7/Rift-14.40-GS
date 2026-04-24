@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass RelevancyZoneIndicator.RelevancyZoneIndicator_C
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x0380 - 0x0380)
 class ARelevancyZoneIndicator_C final : public AFortRelevancyZoneIndicator
 {
 public:

@@ -36,15 +36,29 @@ void UShowdownTournamentPosterFront_C::ExecuteUbergraph_ShowdownTournamentPoster
 }
 
 
-// Function ShowdownTournamentPosterFront.ShowdownTournamentPosterFront_C.RefreshDataBP
-// (Event, Protected, BlueprintEvent)
+// Function ShowdownTournamentPosterFront.ShowdownTournamentPosterFront_C.BndEvt__Image_PosterFront_K2Node_ComponentBoundEvent_1_onLoadingCompleted__DelegateSignature
+// (BlueprintEvent)
 
-void UShowdownTournamentPosterFront_C::RefreshDataBP()
+void UShowdownTournamentPosterFront_C::BndEvt__Image_PosterFront_K2Node_ComponentBoundEvent_1_onLoadingCompleted__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownTournamentPosterFront_C", "RefreshDataBP");
+		Func = Class->GetFunction("ShowdownTournamentPosterFront_C", "BndEvt__Image_PosterFront_K2Node_ComponentBoundEvent_1_onLoadingCompleted__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShowdownTournamentPosterFront.ShowdownTournamentPosterFront_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UShowdownTournamentPosterFront_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownTournamentPosterFront_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,29 +84,15 @@ void UShowdownTournamentPosterFront_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function ShowdownTournamentPosterFront.ShowdownTournamentPosterFront_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function ShowdownTournamentPosterFront.ShowdownTournamentPosterFront_C.RefreshDataBP
+// (Event, Protected, BlueprintEvent)
 
-void UShowdownTournamentPosterFront_C::Construct()
+void UShowdownTournamentPosterFront_C::RefreshDataBP()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownTournamentPosterFront_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ShowdownTournamentPosterFront.ShowdownTournamentPosterFront_C.BndEvt__Image_PosterFront_K2Node_ComponentBoundEvent_1_onLoadingCompleted__DelegateSignature
-// (BlueprintEvent)
-
-void UShowdownTournamentPosterFront_C::BndEvt__Image_PosterFront_K2Node_ComponentBoundEvent_1_onLoadingCompleted__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownTournamentPosterFront_C", "BndEvt__Image_PosterFront_K2Node_ComponentBoundEvent_1_onLoadingCompleted__DelegateSignature");
+		Func = Class->GetFunction("ShowdownTournamentPosterFront_C", "RefreshDataBP");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

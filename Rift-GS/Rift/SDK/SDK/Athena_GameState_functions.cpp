@@ -37,7 +37,7 @@ void AAthena_GameState_C::ExecuteUbergraph_Athena_GameState(int32 EntryPoint)
 
 
 // Function Athena_GameState.Athena_GameState_C.OnWinnerAnnounced
-// (Event, Public, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void AAthena_GameState_C::OnWinnerAnnounced()
 {
@@ -45,20 +45,6 @@ void AAthena_GameState_C::OnWinnerAnnounced()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("Athena_GameState_C", "OnWinnerAnnounced");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Athena_GameState.Athena_GameState_C.Timeline_0__FinishedFunc
-// (BlueprintEvent)
-
-void AAthena_GameState_C::Timeline_0__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Athena_GameState_C", "Timeline_0__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,15 +64,15 @@ void AAthena_GameState_C::Timeline_0__UpdateFunc()
 }
 
 
-// Function Athena_GameState.Athena_GameState_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function Athena_GameState.Athena_GameState_C.Timeline_0__FinishedFunc
+// (BlueprintEvent)
 
-void AAthena_GameState_C::UserConstructionScript()
+void AAthena_GameState_C::Timeline_0__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Athena_GameState_C", "UserConstructionScript");
+		Func = Class->GetFunction("Athena_GameState_C", "Timeline_0__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

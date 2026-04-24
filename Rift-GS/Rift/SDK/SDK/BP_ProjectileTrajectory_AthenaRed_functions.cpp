@@ -50,18 +50,4 @@ void ABP_ProjectileTrajectory_AthenaRed_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_ProjectileTrajectory_AthenaRed.BP_ProjectileTrajectory_AthenaRed_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_ProjectileTrajectory_AthenaRed_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ProjectileTrajectory_AthenaRed_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 SDK_NAMESPACE_END

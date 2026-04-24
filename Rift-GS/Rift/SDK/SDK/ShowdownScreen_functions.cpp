@@ -36,6 +36,20 @@ void UShowdownScreen_C::ExecuteUbergraph_ShowdownScreen(int32 EntryPoint)
 }
 
 
+// Function ShowdownScreen.ShowdownScreen_C.BP_OnDeactivated
+// (Event, Protected, BlueprintEvent)
+
+void UShowdownScreen_C::BP_OnDeactivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownScreen_C", "BP_OnDeactivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ShowdownScreen.ShowdownScreen_C.SelectedEndTournament
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -166,15 +180,15 @@ void UShowdownScreen_C::BndEvt__SwipePanel_K2Node_ComponentBoundEvent_3_OnFortSw
 }
 
 
-// Function ShowdownScreen.ShowdownScreen_C.OnActivated
+// Function ShowdownScreen.ShowdownScreen_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UShowdownScreen_C::OnActivated()
+void UShowdownScreen_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownScreen_C", "OnActivated");
+		Func = Class->GetFunction("ShowdownScreen_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -194,21 +208,21 @@ void UShowdownScreen_C::Construct()
 }
 
 
-// Function ShowdownScreen.ShowdownScreen_C.ShowTournamentDetails
-// (Event, Protected, BlueprintEvent)
+// Function ShowdownScreen.ShowdownScreen_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// const class FString&                    SelectedTournament                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UShowdownScreen_C::ShowTournamentDetails(const class FString& SelectedTournament)
+void UShowdownScreen_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownScreen_C", "ShowTournamentDetails");
+		Func = Class->GetFunction("ShowdownScreen_C", "PreConstruct");
 
-	Params::ShowdownScreen_C_ShowTournamentDetails Parms{};
+	Params::ShowdownScreen_C_PreConstruct Parms{};
 
-	Parms.SelectedTournament = std::move(SelectedTournament);
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -269,26 +283,6 @@ void UShowdownScreen_C::BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEven
 	Params::ShowdownScreen_C_BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ShowdownScreen.ShowdownScreen_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UShowdownScreen_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownScreen_C", "PreConstruct");
-
-	Params::ShowdownScreen_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

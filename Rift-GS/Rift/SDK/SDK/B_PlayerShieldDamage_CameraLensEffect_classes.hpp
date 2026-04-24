@@ -17,16 +17,15 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_PlayerShieldDamage_CameraLensEffect.B_PlayerShieldDamage_CameraLensEffect_C
-// 0x0000 (0x0400 - 0x0400)
+// 0x0000 (0x02F0 - 0x02F0)
 class AB_PlayerShieldDamage_CameraLensEffect_C final : public AB_PlayerHealthDamage_CameraLensEffect_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_PlayerShieldDamage_CameraLensEffect_C; // 0x03F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_PlayerShieldDamage_CameraLensEffect_C; // 0x02E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_B_PlayerShieldDamage_CameraLensEffect(int32 EntryPoint);
 	void PassParticle_Parameter_Shield(float NewParam);
-	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

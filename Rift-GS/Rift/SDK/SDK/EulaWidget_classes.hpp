@@ -16,15 +16,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass EulaWidget.EulaWidget_C
-// 0x0030 (0x0388 - 0x0358)
+// 0x0010 (0x04A8 - 0x0498)
 class UEulaWidget_C final : public UFortEulaWidget
 {
 public:
-	class UHorizontalBox*                         HBox_Buttons;                                      // 0x0358(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone;                                          // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TitleText;                                         // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	UMulticastDelegateProperty_                   OnEulaResponse;                                    // 0x0370(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          SelectedResponse;                                  // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	TMulticastInlineDelegate<void(bool Accepted)> OnEulaResponse;                                    // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	static class UClass* StaticClass()

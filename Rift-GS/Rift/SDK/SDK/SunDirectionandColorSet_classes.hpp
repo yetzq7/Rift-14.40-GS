@@ -18,22 +18,22 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass SunDirectionandColorSet.SunDirectionandColorSet_C
-// 0x0048 (0x0378 - 0x0330)
+// 0x0048 (0x0268 - 0x0220)
 class ASunDirectionandColorSet_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0330(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        Scene;                                             // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UArrowComponent*                        Arrow;                                             // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                SunLightVector;                                    // 0x0348(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SunLightColor;                                     // 0x0354(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMaterialParameterInfo                 Material_COllection;                               // 0x0364(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        Scene;                                             // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UArrowComponent*                        Arrow;                                             // 0x0230(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                SunLightVector;                                    // 0x0238(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SunLightColor;                                     // 0x0244(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMaterialParameterInfo                 Material_COllection;                               // 0x0254(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_SunDirectionandColorSet(int32 EntryPoint);
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
 	void UserConstructionScript();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_SunDirectionandColorSet(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

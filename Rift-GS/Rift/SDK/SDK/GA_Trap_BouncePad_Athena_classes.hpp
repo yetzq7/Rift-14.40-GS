@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Trap_BouncePad_Athena.GA_Trap_BouncePad_Athena_C
-// 0x0008 (0x0970 - 0x0968)
+// 0x0008 (0x0AE0 - 0x0AD8)
 class UGA_Trap_BouncePad_Athena_C final : public UGA_TrapGeneric_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Trap_BouncePad_Athena_C;         // 0x0968(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Trap_BouncePad_Athena_C;         // 0x0AD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_GA_Trap_BouncePad_Athena(int32 EntryPoint);

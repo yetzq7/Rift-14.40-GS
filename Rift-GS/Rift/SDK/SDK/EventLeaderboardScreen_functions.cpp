@@ -36,28 +36,6 @@ void UEventLeaderboardScreen_C::ExecuteUbergraph_EventLeaderboardScreen(int32 En
 }
 
 
-// Function EventLeaderboardScreen.EventLeaderboardScreen_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UEventLeaderboardScreen_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardScreen_C", "Tick");
-
-	Params::EventLeaderboardScreen_C_Tick Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function EventLeaderboardScreen.EventLeaderboardScreen_C.BndEvt__Button_Back2_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -73,6 +51,26 @@ void UEventLeaderboardScreen_C::BndEvt__Button_Back2_K2Node_ComponentBoundEvent_
 	Params::EventLeaderboardScreen_C_BndEvt__Button_Back2_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EventLeaderboardScreen.EventLeaderboardScreen_C.OnDetailsPanelUpdate
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bShowDetailsPanel                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UEventLeaderboardScreen_C::OnDetailsPanelUpdate(bool bShowDetailsPanel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardScreen_C", "OnDetailsPanelUpdate");
+
+	Params::EventLeaderboardScreen_C_OnDetailsPanelUpdate Parms{};
+
+	Parms.bShowDetailsPanel = bShowDetailsPanel;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -98,37 +96,153 @@ void UEventLeaderboardScreen_C::EventColorize(const struct FFortTournamentDispla
 }
 
 
-// Function EventLeaderboardScreen.EventLeaderboardScreen_C.EventIntro
-// (BlueprintCallable, BlueprintEvent)
+// Function EventLeaderboardScreen.EventLeaderboardScreen_C.InitializeTabButton
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    TabButton                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      TabText                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UEventLeaderboardScreen_C::EventIntro()
+void UEventLeaderboardScreen_C::InitializeTabButton(class UCommonButton* TabButton, const class FText& TabText)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardScreen_C", "EventIntro");
+		Func = Class->GetFunction("EventLeaderboardScreen_C", "InitializeTabButton");
+
+	Params::EventLeaderboardScreen_C_InitializeTabButton Parms{};
+
+	Parms.TabButton = TabButton;
+	Parms.TabText = std::move(TabText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EventLeaderboardScreen.EventLeaderboardScreen_C.BndEvt__LiveGames_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UEventLeaderboardScreen_C::BndEvt__LiveGames_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardScreen_C", "BndEvt__LiveGames_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+
+	Params::EventLeaderboardScreen_C_BndEvt__LiveGames_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EventLeaderboardScreen.EventLeaderboardScreen_C.OnTabVisibilityChange
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsVisible                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UEventLeaderboardScreen_C::OnTabVisibilityChange(bool bIsVisible)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardScreen_C", "OnTabVisibilityChange");
+
+	Params::EventLeaderboardScreen_C_OnTabVisibilityChange Parms{};
+
+	Parms.bIsVisible = bIsVisible;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EventLeaderboardScreen.EventLeaderboardScreen_C.Item Double-Clicked
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UEventLeaderboardScreen_C::Item_Double_Clicked(class UObject* Item)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardScreen_C", "Item Double-Clicked");
+
+	Params::EventLeaderboardScreen_C_Item_Double_Clicked Parms{};
+
+	Parms.Item = Item;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EventLeaderboardScreen.EventLeaderboardScreen_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UEventLeaderboardScreen_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardScreen_C", "BndEvt__CloseButton_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature");
+
+	Params::EventLeaderboardScreen_C_BndEvt__CloseButton_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EventLeaderboardScreen.EventLeaderboardScreen_C.ShowMyStats
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UEventLeaderboardScreen_C::ShowMyStats(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardScreen_C", "ShowMyStats");
+
+	Params::EventLeaderboardScreen_C_ShowMyStats Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EventLeaderboardScreen.EventLeaderboardScreen_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UEventLeaderboardScreen_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardScreen_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function EventLeaderboardScreen.EventLeaderboardScreen_C.Init
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    EventId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// Function EventLeaderboardScreen.EventLeaderboardScreen_C.Event Leaderboard Screen On Activated
+// (BlueprintCallable, BlueprintEvent)
 
-void UEventLeaderboardScreen_C::Init(const class FString& EventId)
+void UEventLeaderboardScreen_C::Event_Leaderboard_Screen_On_Activated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardScreen_C", "Init");
+		Func = Class->GetFunction("EventLeaderboardScreen_C", "Event Leaderboard Screen On Activated");
 
-	Params::EventLeaderboardScreen_C_Init Parms{};
-
-	Parms.EventId = std::move(EventId);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -152,31 +266,39 @@ void UEventLeaderboardScreen_C::OnLeaderboardEntrySelected(const class UFortEven
 }
 
 
-// Function EventLeaderboardScreen.EventLeaderboardScreen_C.OnLeaderboardPageRequestComplete
-// (Event, Protected, BlueprintEvent)
+// Function EventLeaderboardScreen.EventLeaderboardScreen_C.EventIntro
+// (BlueprintCallable, BlueprintEvent)
 
-void UEventLeaderboardScreen_C::OnLeaderboardPageRequestComplete()
+void UEventLeaderboardScreen_C::EventIntro()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardScreen_C", "OnLeaderboardPageRequestComplete");
+		Func = Class->GetFunction("EventLeaderboardScreen_C", "EventIntro");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function EventLeaderboardScreen.EventLeaderboardScreen_C.OnLeaderboardPageRequested
-// (Event, Protected, BlueprintEvent)
+// Function EventLeaderboardScreen.EventLeaderboardScreen_C.Init
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    EventWindowId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    TournamentSeriesId                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UEventLeaderboardScreen_C::OnLeaderboardPageRequested()
+void UEventLeaderboardScreen_C::Init(const class FString& EventWindowId, const class FString& TournamentSeriesId)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardScreen_C", "OnLeaderboardPageRequested");
+		Func = Class->GetFunction("EventLeaderboardScreen_C", "Init");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::EventLeaderboardScreen_C_Init Parms{};
+
+	Parms.EventWindowId = std::move(EventWindowId);
+	Parms.TournamentSeriesId = std::move(TournamentSeriesId);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

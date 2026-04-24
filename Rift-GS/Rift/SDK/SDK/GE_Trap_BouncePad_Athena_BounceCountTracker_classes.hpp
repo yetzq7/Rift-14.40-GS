@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_Trap_BouncePad_Athena_BounceCountTracker.GE_Trap_BouncePad_Athena_BounceCountTracker_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_Trap_BouncePad_Athena_BounceCountTracker_C final : public UGameplayEffect
 {
 public:

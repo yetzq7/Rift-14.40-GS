@@ -16,23 +16,37 @@
 
 SDK_NAMESPACE_START
 
-// Function AthenaDirectAcquisitionOffer_SalesTextBanner.AthenaDirectAcquisitionOffer_SalesTextBanner_C.ExecuteUbergraph_AthenaDirectAcquisitionOffer_SalesTextBanner
-// (Final, UbergraphFunction, HasDefaults)
+// Function AthenaDirectAcquisitionOffer_SalesTextBanner.AthenaDirectAcquisitionOffer_SalesTextBanner_C.Set Sales Text
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Sales_Text                                             (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UAthenaDirectAcquisitionOffer_SalesTextBanner_C::ExecuteUbergraph_AthenaDirectAcquisitionOffer_SalesTextBanner(int32 EntryPoint)
+void UAthenaDirectAcquisitionOffer_SalesTextBanner_C::Set_Sales_Text(const class FText& Sales_Text)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionOffer_SalesTextBanner_C", "ExecuteUbergraph_AthenaDirectAcquisitionOffer_SalesTextBanner");
+		Func = Class->GetFunction("AthenaDirectAcquisitionOffer_SalesTextBanner_C", "Set Sales Text");
 
-	Params::AthenaDirectAcquisitionOffer_SalesTextBanner_C_ExecuteUbergraph_AthenaDirectAcquisitionOffer_SalesTextBanner Parms{};
+	Params::AthenaDirectAcquisitionOffer_SalesTextBanner_C_Set_Sales_Text Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Sales_Text = std::move(Sales_Text);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaDirectAcquisitionOffer_SalesTextBanner.AthenaDirectAcquisitionOffer_SalesTextBanner_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UAthenaDirectAcquisitionOffer_SalesTextBanner_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaDirectAcquisitionOffer_SalesTextBanner_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -56,35 +70,21 @@ void UAthenaDirectAcquisitionOffer_SalesTextBanner_C::PreConstruct(bool IsDesign
 }
 
 
-// Function AthenaDirectAcquisitionOffer_SalesTextBanner.AthenaDirectAcquisitionOffer_SalesTextBanner_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UAthenaDirectAcquisitionOffer_SalesTextBanner_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionOffer_SalesTextBanner_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaDirectAcquisitionOffer_SalesTextBanner.AthenaDirectAcquisitionOffer_SalesTextBanner_C.Set Sales Text
-// (BlueprintCallable, BlueprintEvent)
+// Function AthenaDirectAcquisitionOffer_SalesTextBanner.AthenaDirectAcquisitionOffer_SalesTextBanner_C.ExecuteUbergraph_AthenaDirectAcquisitionOffer_SalesTextBanner
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const class FText&                      Sales_Text                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaDirectAcquisitionOffer_SalesTextBanner_C::Set_Sales_Text(const class FText& Sales_Text)
+void UAthenaDirectAcquisitionOffer_SalesTextBanner_C::ExecuteUbergraph_AthenaDirectAcquisitionOffer_SalesTextBanner(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionOffer_SalesTextBanner_C", "Set Sales Text");
+		Func = Class->GetFunction("AthenaDirectAcquisitionOffer_SalesTextBanner_C", "ExecuteUbergraph_AthenaDirectAcquisitionOffer_SalesTextBanner");
 
-	Params::AthenaDirectAcquisitionOffer_SalesTextBanner_C_Set_Sales_Text Parms{};
+	Params::AthenaDirectAcquisitionOffer_SalesTextBanner_C_ExecuteUbergraph_AthenaDirectAcquisitionOffer_SalesTextBanner Parms{};
 
-	Parms.Sales_Text = std::move(Sales_Text);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

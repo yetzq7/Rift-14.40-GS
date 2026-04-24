@@ -36,15 +36,15 @@ void AWeakSpot_C::ExecuteUbergraph_WeakSpot(int32 EntryPoint)
 }
 
 
-// Function WeakSpot.WeakSpot_C.HideMesh
-// (BlueprintCallable, BlueprintEvent)
+// Function WeakSpot.WeakSpot_C.OnStartDirectionEffect
+// (Event, Public, BlueprintEvent)
 
-void AWeakSpot_C::HideMesh()
+void AWeakSpot_C::OnStartDirectionEffect()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WeakSpot_C", "HideMesh");
+		Func = Class->GetFunction("WeakSpot_C", "OnStartDirectionEffect");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,6 +64,20 @@ void AWeakSpot_C::OnFadeOut()
 }
 
 
+// Function WeakSpot.WeakSpot_C.HideMesh
+// (BlueprintCallable, BlueprintEvent)
+
+void AWeakSpot_C::HideMesh()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WeakSpot_C", "HideMesh");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WeakSpot.WeakSpot_C.OnHit
 // (Event, Public, BlueprintEvent)
 
@@ -78,15 +92,15 @@ void AWeakSpot_C::OnHit()
 }
 
 
-// Function WeakSpot.WeakSpot_C.OnStartDirectionEffect
-// (Event, Public, BlueprintEvent)
+// Function WeakSpot.WeakSpot_C.ScaleDownParticleTL__UpdateFunc
+// (BlueprintEvent)
 
-void AWeakSpot_C::OnStartDirectionEffect()
+void AWeakSpot_C::ScaleDownParticleTL__UpdateFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WeakSpot_C", "OnStartDirectionEffect");
+		Func = Class->GetFunction("WeakSpot_C", "ScaleDownParticleTL__UpdateFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -101,20 +115,6 @@ void AWeakSpot_C::ScaleDownParticleTL__FinishedFunc()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WeakSpot_C", "ScaleDownParticleTL__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WeakSpot.WeakSpot_C.ScaleDownParticleTL__UpdateFunc
-// (BlueprintEvent)
-
-void AWeakSpot_C::ScaleDownParticleTL__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeakSpot_C", "ScaleDownParticleTL__UpdateFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

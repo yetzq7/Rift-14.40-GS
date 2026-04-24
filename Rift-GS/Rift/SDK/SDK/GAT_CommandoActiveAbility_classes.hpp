@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "GameplayAbilities_structs.hpp"
 #include "GAT_ActiveAbility_Hero_classes.hpp"
+#include "GameplayAbilities_structs.hpp"
 #include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GAT_CommandoActiveAbility.GAT_CommandoActiveAbility_C
-// 0x00C0 (0x0A38 - 0x0978)
+// 0x00C8 (0x0BB0 - 0x0AE8)
 class UGAT_CommandoActiveAbility_C : public UGAT_ActiveAbility_Hero_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_CommandoActiveAbility_C;        // 0x0978(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayEventData                     Event_Data;                                        // 0x0980(0x00A8)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AFortPawn*                              CommandoPlayerPawn;                                // 0x0A28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isAutoCommitted;                                   // 0x0A30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          isStaminaLockedOut;                                // 0x0A31(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_CommandoActiveAbility_C;        // 0x0AE8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayEventData                     Event_Data;                                        // 0x0AF0(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class AFortPawn*                              CommandoPlayerPawn;                                // 0x0BA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isAutoCommitted;                                   // 0x0BA8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          isStaminaLockedOut;                                // 0x0BA9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GAT_CommandoActiveAbility(int32 EntryPoint);

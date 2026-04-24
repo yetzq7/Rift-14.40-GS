@@ -14,9 +14,10 @@
 SDK_NAMESPACE_START
 
 // Enum NVIDIAGfeSDK.EGfeSDKHighlightSignificance
-// NumValues: 0x0008
+// NumValues: 0x0009
 enum class EGfeSDKHighlightSignificance : uint8
 {
+	NONE                                     = 0,
 	ExtremelyBad                             = 1,
 	VeryBad                                  = 2,
 	Bad                                      = 4,
@@ -28,9 +29,10 @@ enum class EGfeSDKHighlightSignificance : uint8
 };
 
 // Enum NVIDIAGfeSDK.EGfeSDKHighlightType
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EGfeSDKHighlightType : uint8
 {
+	NONE                                     = 0,
 	Milestone                                = 1,
 	Achievement                              = 2,
 	Incident                                 = 4,
@@ -78,7 +80,7 @@ enum class EGfeSDKReturnCode : uint8
 struct FGfeSDKHighlightGroupView final
 {
 public:
-	class FString                                 GroupID;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 GroupId;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGfeSDKHighlightType                          TagsFilter;                                        // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGfeSDKHighlightSignificance                  SignificanceFilter;                                // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -90,36 +92,16 @@ DUMPER7_ASSERTS_FGfeSDKHighlightGroupView;
 struct FGfeSDKHighlightSummaryParams final
 {
 public:
-	TArray<struct FGfeSDKHighlightGroupView>      GroupViews;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FGfeSDKHighlightGroupView>      GroupViews;                                        // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGfeSDKHighlightSummaryParams;
-
-// ScriptStruct NVIDIAGfeSDK.GfeSDKPermissionsChangedData
-// 0x0050 (0x0050 - 0x0000)
-struct FGfeSDKPermissionsChangedData final
-{
-public:
-	TMap<EGfeSDKScope, EGfeSDKPermission>         ScopePermissions;                                  // 0x0000(0x0050)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FGfeSDKPermissionsChangedData;
-
-// ScriptStruct NVIDIAGfeSDK.GfeSDKHighlightCloseGroupParams
-// 0x0018 (0x0018 - 0x0000)
-struct FGfeSDKHighlightCloseGroupParams final
-{
-public:
-	class FString                                 GroupID;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          DestroyHighlights;                                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FGfeSDKHighlightCloseGroupParams;
 
 // ScriptStruct NVIDIAGfeSDK.GfeSDKHighlightVideoParams
 // 0x0028 (0x0028 - 0x0000)
 struct FGfeSDKHighlightVideoParams final
 {
 public:
-	class FString                                 GroupID;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 GroupId;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 HighlightId;                                       // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         StartDelta;                                        // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         EndDelta;                                          // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -131,27 +113,47 @@ DUMPER7_ASSERTS_FGfeSDKHighlightVideoParams;
 struct FGfeSDKHighlightScreenshotParams final
 {
 public:
-	class FString                                 GroupID;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 GroupId;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 HighlightId;                                       // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGfeSDKHighlightScreenshotParams;
+
+// ScriptStruct NVIDIAGfeSDK.GfeSDKHighlightCloseGroupParams
+// 0x0018 (0x0018 - 0x0000)
+struct FGfeSDKHighlightCloseGroupParams final
+{
+public:
+	class FString                                 GroupId;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          DestroyHighlights;                                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGfeSDKHighlightCloseGroupParams;
 
 // ScriptStruct NVIDIAGfeSDK.GfeSDKHighlightOpenGroupParams
 // 0x0060 (0x0060 - 0x0000)
 struct FGfeSDKHighlightOpenGroupParams final
 {
 public:
-	class FString                                 GroupID;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, class FString>            GroupDescriptionTranslationTable;                  // 0x0010(0x0050)(ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 GroupId;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            GroupDescriptionTranslationTable;                  // 0x0010(0x0050)(NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGfeSDKHighlightOpenGroupParams;
+
+// ScriptStruct NVIDIAGfeSDK.GfeSDKPermissionsChangedData
+// 0x0050 (0x0050 - 0x0000)
+struct FGfeSDKPermissionsChangedData final
+{
+public:
+	TMap<EGfeSDKScope, EGfeSDKPermission>         ScopePermissions;                                  // 0x0000(0x0050)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGfeSDKPermissionsChangedData;
 
 // ScriptStruct NVIDIAGfeSDK.GfeSDKRequestPermissionsParams
 // 0x0010 (0x0010 - 0x0000)
 struct FGfeSDKRequestPermissionsParams final
 {
 public:
-	TArray<EGfeSDKScope>                          Scopes;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<EGfeSDKScope>                          Scopes;                                            // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGfeSDKRequestPermissionsParams;
 
@@ -165,7 +167,7 @@ public:
 	EGfeSDKHighlightType                          HighlightTags;                                     // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGfeSDKHighlightSignificance                  Significance;                                      // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FString, class FString>            NameTranslationTable;                              // 0x0018(0x0050)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            NameTranslationTable;                              // 0x0018(0x0050)(NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGfeSDKHighlightDefinition;
 
@@ -174,7 +176,7 @@ DUMPER7_ASSERTS_FGfeSDKHighlightDefinition;
 struct FGfeSDKHighlightConfigParams final
 {
 public:
-	TArray<struct FGfeSDKHighlightDefinition>     HighlightDefinitions;                              // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FGfeSDKHighlightDefinition>     HighlightDefinitions;                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 DefaultLocale;                                     // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGfeSDKHighlightConfigParams;
@@ -188,7 +190,7 @@ public:
 	uint16                                        VersionMinor;                                      // 0x0002(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 NVIDIAGfeVersion;                                  // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<EGfeSDKScope, EGfeSDKPermission>         ScopePermissions;                                  // 0x0018(0x0050)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<EGfeSDKScope, EGfeSDKPermission>         ScopePermissions;                                  // 0x0018(0x0050)(NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGfeSDKCreateResponse;
 
@@ -198,7 +200,7 @@ struct FGfeSDKCreateInputParams final
 {
 public:
 	class FString                                 AppName;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<EGfeSDKScope>                          RequiredScopes;                                    // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<EGfeSDKScope>                          RequiredScopes;                                    // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          PollForCallbacks;                                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };

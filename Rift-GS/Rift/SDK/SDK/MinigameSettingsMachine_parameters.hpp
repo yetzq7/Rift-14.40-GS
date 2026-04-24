@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "MinigameScoringPreset_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
@@ -18,51 +20,44 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.ExecuteUbergraph_MinigameSettingsMachine
-// 0x0070 (0x0070 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct MinigameSettingsMachine_C_ExecuteUbergraph_MinigameSettingsMachine final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	const class AFortPawn*                        K2Node_Event_InteractingPawn;                      // 0x0008(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AFortPlayerController*>          CallFunc_GetLocalFortPlayerControllers_ReturnValue; // 0x0010(0x0010)(ZeroConstructor, ReferenceParm)
-	TArray<class AFortPlayerController*>          CallFunc_GetLocalFortPlayerControllers_ReturnValue1; // 0x0020(0x0010)(ZeroConstructor, ReferenceParm)
-	class AFortPlayerController*                  CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerController*                  CallFunc_Array_Get_Item1;                          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerControllerAthena*            K2Node_DynamicCast_AsFort_Player_Controller_Athena; // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerControllerAthena*            K2Node_DynamicCast_AsFort_Player_Controller_Athena1; // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess1;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x005C(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TArray<class AFortPlayerController*>          CallFunc_GetLocalFortPlayerControllers_ReturnValue; // 0x0018(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	TArray<class AFortPlayerController*>          CallFunc_GetLocalFortPlayerControllers_ReturnValue_1; // 0x0028(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class AFortPlayerController*                  CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerController*                  CallFunc_Array_Get_Item_1;                         // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerControllerAthena*            K2Node_DynamicCast_AsFort_Player_Controller_Athena; // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerControllerAthena*            K2Node_DynamicCast_AsFort_Player_Controller_Athena_1; // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_62[0x2];                                       // 0x0062(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6B[0x1];                                       // 0x006B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Select_Default;                             // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_1;            // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         K2Node_MakeArray_Array;                            // 0x0078(0x0010)(ConstParm, ReferenceParm, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetOptionValueNameFromValue_ReturnValue;  // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetOptionKey_ReturnValue;                 // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TMap<class FString, class FString>            K2Node_MakeMap_Map;                                // 0x00A8(0x0050)(ConstParm)
+	bool                                          CallFunc_SetPropertyOverrides_ReturnValue;         // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x00FC(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x010C(0x0010)(ZeroConstructor, NoDestructor)
 };
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_ExecuteUbergraph_MinigameSettingsMachine;
-
-// Function MinigameSettingsMachine.MinigameSettingsMachine_C.BlueprintOnInteract
-// 0x0008 (0x0008 - 0x0000)
-struct MinigameSettingsMachine_C_BlueprintOnInteract final
-{
-public:
-	const class AFortPawn*                        InteractingPawn;                                   // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_MinigameSettingsMachine_C_BlueprintOnInteract;
-
-// Function MinigameSettingsMachine.MinigameSettingsMachine_C.BlueprintOnLocalInteract
-// 0x0028 (0x0028 - 0x0000)
-struct MinigameSettingsMachine_C_BlueprintOnLocalInteract final
-{
-public:
-	class AFortPlayerPawn*                        InteractingPawn;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_OnLocalInteract_bResult;                  // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortMatchmakingKnobsModal*             CallFunc_OnLocalInteract_ModalWidget;              // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCreativeMinigameGameKnobsModal_C*      K2Node_DynamicCast_AsCreative_Minigame_Game_Knobs_Modal; // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_MinigameSettingsMachine_C_BlueprintOnLocalInteract;
 
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.GetPickupSpawnLocation
 // 0x0058 (0x0058 - 0x0000)
@@ -76,19 +71,9 @@ public:
 	struct FVector                                CallFunc_GetActorForwardVector_ReturnValue;        // 0x0024(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorInt_ReturnValue;           // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x003C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue1;            // 0x0048(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0048(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_GetPickupSpawnLocation;
-
-// Function MinigameSettingsMachine.MinigameSettingsMachine_C.IsValidGame
-// 0x0002 (0x0002 - 0x0000)
-struct MinigameSettingsMachine_C_IsValidGame final
-{
-public:
-	bool                                          bCanStartGame;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_MinigameSettingsMachine_C_IsValidGame;
 
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.HasMinigameStarted
 // 0x0018 (0x0018 - 0x0000)
@@ -104,16 +89,20 @@ public:
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_HasMinigameStarted;
 
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdateGameMode
-// 0x0020 (0x0020 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct MinigameSettingsMachine_C_UpdateGameMode final
 {
 public:
 	class AFortMinigame*                          CurrentMinigame;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue_1;             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue_2;             // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue_3;             // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetUIExtensions_Return_Value;             // 0x0010(0x0020)()
+	TArray<class UClass*>                         CallFunc_GetScoreboardStatsArray_ScoreboardStats;  // 0x0030(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdateGameMode;
 
@@ -123,29 +112,24 @@ struct MinigameSettingsMachine_C_UpdateTimeLimit final
 {
 public:
 	class AFortMinigame*                          CurrentMinigame;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdateTimeLimit;
 
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.GetCurrentMinigame
-// 0x0048 (0x0048 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct MinigameSettingsMachine_C_GetCurrentMinigame final
 {
 public:
 	class AFortMinigame*                          Minigame;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortMinigameVolumeComponent*           LinkedVolumeComp;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortVolume*                            LinkedVolume;                                      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortMinigame*                          CurrentMinigame;                                   // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortMinigameVolumeComponent*           CallFunc_GetComponentByClass_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortVolume*                            CallFunc_GetLinkedVolume_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue2;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortMinigameVolumeComponent*           CallFunc_GetComponentByClass_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_GetCurrentMinigame;
 
@@ -163,15 +147,14 @@ public:
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdateSpawnLocationSetting;
 
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdateTeamSetting
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct MinigameSettingsMachine_C_UpdateTeamSetting final
 {
 public:
-	class AFortMinigame*                          CurrentMinigame;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdateTeamSetting;
 
@@ -215,39 +198,48 @@ public:
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdateAutoEndTeamThreshold;
 
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdateTeamToMoveToWhenOutOfSpawns
-// 0x0028 (0x0028 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct MinigameSettingsMachine_C_UpdateTeamToMoveToWhenOutOfSpawns final
 {
 public:
 	class AFortMinigame*                          Minigame;                                          // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Subtract_ByteByte_ReturnValue;            // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Add_ByteByte_ReturnValue;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Add_ByteByte_ReturnValue;                 // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdateTeamToMoveToWhenOutOfSpawns;
 
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdateEndConditions
-// 0x0030 (0x0030 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct MinigameSettingsMachine_C_UpdateEndConditions final
 {
 public:
-	TArray<struct FFortMinigameStatQuery>         EndConditions;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FFortMinigameStatQuery>         EndConditions;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	class AFortMinigame*                          Minigame;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TryAddEndCondition_CollectItems_bResult;  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_TryAddEndCondition_Kills_bResult;         // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortMinigameStatQuery                 K2Node_MakeStruct_FortMinigameStatQuery;           // 0x0020(0x0018)(NoDestructor)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortMinigameStatQuery                 K2Node_MakeStruct_FortMinigameStatQuery_1;         // 0x0040(0x0018)(NoDestructor)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_TryAddEndCondition_DestroyObjects_bResult; // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_TryAddEndCondition_CollectItems_bResult;  // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5B[0x1];                                       // 0x005B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortMinigameStatQuery                 K2Node_MakeStruct_FortMinigameStatQuery_2;         // 0x0068(0x0018)(NoDestructor)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_2;             // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdateEndConditions;
 
@@ -264,27 +256,12 @@ public:
 };
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdateAutoStart;
 
-// Function MinigameSettingsMachine.MinigameSettingsMachine_C.TryAddEndCondition_Kills
-// 0x0038 (0x0038 - 0x0000)
-struct MinigameSettingsMachine_C_TryAddEndCondition_Kills final
-{
-public:
-	TArray<struct FFortMinigameStatQuery>         EndConditions;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	bool                                          bResult;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bAdded;                                            // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortMinigameStatQuery                 K2Node_MakeStruct_FortMinigameStatQuery;           // 0x0018(0x0018)(NoDestructor)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_MinigameSettingsMachine_C_TryAddEndCondition_Kills;
-
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.TryAddEndCondition_CollectItems
 // 0x0038 (0x0038 - 0x0000)
 struct MinigameSettingsMachine_C_TryAddEndCondition_CollectItems final
 {
 public:
-	TArray<struct FFortMinigameStatQuery>         EndConditions;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FFortMinigameStatQuery>         EndConditions;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 	bool                                          bResult;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          bAdded;                                            // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -309,20 +286,226 @@ public:
 };
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdateJoinInProgress;
 
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdateMinigameMutators
+// 0x0080 (0x0080 - 0x0000)
+struct MinigameSettingsMachine_C_UpdateMinigameMutators final
+{
+public:
+	class UFortMutatorListComponent*              MutatorList;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortMinigame*                          CurrentMinigame;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortMutatorListComponent*              CallFunc_GetComponentByClass_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class FString, class FString>            CallFunc_GetPropertyOverrides_CurrentOptions;      // 0x0020(0x0050)()
+	bool                                          CallFunc_GetPropertyOverrides_ReturnValue;         // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdateMinigameMutators;
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdateTotalRounds
+// 0x0018 (0x0018 - 0x0000)
+struct MinigameSettingsMachine_C_UpdateTotalRounds final
+{
+public:
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdateTotalRounds;
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.TryAddEndCondition_DestroyObjects
+// 0x0038 (0x0038 - 0x0000)
+struct MinigameSettingsMachine_C_TryAddEndCondition_DestroyObjects final
+{
+public:
+	TArray<struct FFortMinigameStatQuery>         EndConditions;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	bool                                          bResult;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bAdded;                                            // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortMinigameStatQuery                 K2Node_MakeStruct_FortMinigameStatQuery;           // 0x0018(0x0018)(NoDestructor)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_MinigameSettingsMachine_C_TryAddEndCondition_DestroyObjects;
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.FillTrackedStats
+// 0x0010 (0x0010 - 0x0000)
+struct MinigameSettingsMachine_C_FillTrackedStats final
+{
+public:
+	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0000(0x0010)(ReferenceParm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_MinigameSettingsMachine_C_FillTrackedStats;
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.GetScoreboardStatsArray
+// 0x0050 (0x0050 - 0x0000)
+struct MinigameSettingsMachine_C_GetScoreboardStatsArray final
+{
+public:
+	TArray<class UClass*>                         ScoreboardStats;                                   // 0x0000(0x0010)(Parm, OutParm, HasGetValueTypeHash)
+	TArray<class UClass*>                         TrackedScoreboardStats;                            // 0x0010(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Get_Item;                           // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_Array_Get_Item_1;                         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_MinigameSettingsMachine_C_GetScoreboardStatsArray;
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.Game Mode Preset Upgrade Path
+// 0x0208 (0x0208 - 0x0000)
+struct MinigameSettingsMachine_C_Game_Mode_Preset_Upgrade_Path final
+{
+public:
+	TArray<class FString>                         K2Node_MakeArray_Array;                            // 0x0000(0x0010)(ConstParm, ReferenceParm, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetOptionKey_ReturnValue;                 // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetOptionValueNameFromValue_ReturnValue;  // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue_2;           // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue_3;           // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue_4;           // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue_5;           // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetOptionValueNameFromValue_ReturnValue_1; // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetOptionKey_ReturnValue_1;               // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetOptionValueNameFromValue_ReturnValue_2; // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetOptionValueNameFromValue_ReturnValue_3; // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetOptionKey_ReturnValue_2;               // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetOptionKey_ReturnValue_3;               // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetOptionValueNameFromValue_ReturnValue_4; // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetOptionValueNameFromValue_ReturnValue_5; // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetOptionKey_ReturnValue_4;               // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetOptionKey_ReturnValue_5;               // 0x0120(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TMap<class FString, class FString>            K2Node_MakeMap_Map;                                // 0x0130(0x0050)(ConstParm)
+	struct FMinigameScoringPreset                 CallFunc_Array_Get_Item;                           // 0x0180(0x0038)(HasGetValueTypeHash)
+	bool                                          CallFunc_SetPropertyOverrides_ReturnValue;         // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1BA[0x2];                                      // 0x01BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_Array_Get_Item_1;                         // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_Array_Get_Item_2;                         // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Find_ReturnValue_1;                 // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Find_ReturnValue_2;                 // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_Array_Get_Item_3;                         // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_Array_Get_Item_4;                         // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Find_ReturnValue_3;                 // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Find_ReturnValue_4;                 // 0x01EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_Array_Get_Item_5;                         // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1F9[0x3];                                      // 0x01F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Find_ReturnValue_5;                 // 0x01FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_2;         // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_3;         // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_4;         // 0x0202(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_5;         // 0x0203(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_MinigameSettingsMachine_C_Game_Mode_Preset_Upgrade_Path;
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.GetUIExtensions
+// 0x0068 (0x0068 - 0x0000)
+struct MinigameSettingsMachine_C_GetUIExtensions final
+{
+public:
+	struct FGameplayTagContainer                  Return_Value;                                      // 0x0000(0x0020)(Parm, OutParm)
+	struct FGameplayTagContainer                  Final_UI_Extensions;                               // 0x0020(0x0020)(Edit, BlueprintVisible)
+	struct FGameplayTagContainer                  CallFunc_Array_Get_Item;                           // 0x0040(0x0020)()
+	bool                                          CallFunc_AdditionalUIExtensionValidityChecks_bUIExtensionIsValid; // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_MinigameSettingsMachine_C_GetUIExtensions;
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdateClassSettings
+// 0x0020 (0x0020 - 0x0000)
+struct MinigameSettingsMachine_C_UpdateClassSettings final
+{
+public:
+	class AFortMinigame*                          CurrentMinigame;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_Select_Default;                             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdateClassSettings;
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdatePlayerPersistence
+// 0x0018 (0x0018 - 0x0000)
+struct MinigameSettingsMachine_C_UpdatePlayerPersistence final
+{
+public:
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdatePlayerPersistence;
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdateGameSettings
+// 0x0018 (0x0018 - 0x0000)
+struct MinigameSettingsMachine_C_UpdateGameSettings final
+{
+public:
+	class AFortMinigame*                          CurrentMinigame;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdateGameSettings;
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.AdditionalUIExtensionValidityChecks
+// 0x0028 (0x0028 - 0x0000)
+struct MinigameSettingsMachine_C_AdditionalUIExtensionValidityChecks final
+{
+public:
+	struct FGameplayTagContainer                  TagContainer;                                      // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          bUIExtensionIsValid;                               // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_MinigameSettingsMachine_C_AdditionalUIExtensionValidityChecks;
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdateGameStartCountdown
+// 0x0018 (0x0018 - 0x0000)
+struct MinigameSettingsMachine_C_UpdateGameStartCountdown final
+{
+public:
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortMinigame*                          CallFunc_GetCurrentMinigame_Minigame;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_MinigameSettingsMachine_C_UpdateGameStartCountdown;
+
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.BlueprintCanInteract
 // 0x0038 (0x0038 - 0x0000)
 struct MinigameSettingsMachine_C_BlueprintCanInteract final
 {
 public:
 	const class AFortPawn*                        InteractingPawn;                                   // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	bool                                          CanInteract;                                       // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	EInteractionBeingAttempted                    InteractionBeingAttempted;                         // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETInteractionType                             InteractionType;                                   // 0x0009(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x000A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	bool                                          CanInteract;                                       // 0x000B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AController*                            CallFunc_GetController_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AFortPlayerControllerAthena*            K2Node_DynamicCast_AsFort_Player_Controller_Athena; // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue1;                     // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AFortVolume*                            CallFunc_CanPlayerCreateInCurrentVolume_OutCurrentVolume; // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CanPlayerCreateInCurrentVolume_ReturnValue; // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -330,24 +513,37 @@ public:
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_BlueprintCanInteract;
 
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.BlueprintGetInteractionString
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct MinigameSettingsMachine_C_BlueprintGetInteractionString final
 {
 public:
 	const class AFortPawn*                        InteractingPawn;                                   // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm)
+	EInteractionBeingAttempted                    InteractionBeingAttempted;                         // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm)
 };
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_BlueprintGetInteractionString;
 
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.BlueprintGetFailedInteractionString
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct MinigameSettingsMachine_C_BlueprintGetFailedInteractionString final
 {
 public:
 	const class AFortPawn*                        InteractingPawn;                                   // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm)
+	EInteractionBeingAttempted                    InteractionBeingAttempted;                         // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm)
 };
 DUMPER7_ASSERTS_MinigameSettingsMachine_C_BlueprintGetFailedInteractionString;
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.GetTeamSetting
+// 0x0004 (0x0004 - 0x0000)
+struct MinigameSettingsMachine_C_GetTeamSetting final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_MinigameSettingsMachine_C_GetTeamSetting;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

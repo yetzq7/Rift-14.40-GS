@@ -36,6 +36,28 @@ void UOptionsMenuSetting_C::ExecuteUbergraph_OptionsMenuSetting(int32 EntryPoint
 }
 
 
+// Function OptionsMenuSetting.OptionsMenuSetting_C.SetControlsEnabled
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const class FText&                      DisabledReason                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UOptionsMenuSetting_C::SetControlsEnabled(bool bEnabled, const class FText& DisabledReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OptionsMenuSetting_C", "SetControlsEnabled");
+
+	Params::OptionsMenuSetting_C_SetControlsEnabled Parms{};
+
+	Parms.bEnabled = bEnabled;
+	Parms.DisabledReason = std::move(DisabledReason);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function OptionsMenuSetting.OptionsMenuSetting_C.Refresh
 // (BlueprintCallable, BlueprintEvent)
 
@@ -149,6 +171,20 @@ void UOptionsMenuSetting_C::BndEvt__ButtonTouchTooltip_K2Node_ComponentBoundEven
 	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function OptionsMenuSetting.OptionsMenuSetting_C.BP_OnEntryReleased
+// (Event, Protected, BlueprintEvent)
+
+void UOptionsMenuSetting_C::BP_OnEntryReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OptionsMenuSetting_C", "BP_OnEntryReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -305,20 +341,6 @@ void UOptionsMenuSetting_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 	Parms.bIsExpanded = bIsExpanded;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function OptionsMenuSetting.OptionsMenuSetting_C.BP_OnEntryReleased
-// (Event, Protected, BlueprintEvent)
-
-void UOptionsMenuSetting_C::BP_OnEntryReleased()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenuSetting_C", "BP_OnEntryReleased");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -508,23 +530,27 @@ void UOptionsMenuSetting_C::UpdateVisuals()
 }
 
 
-// Function OptionsMenuSetting.OptionsMenuSetting_C.GetListItemObject
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Function OptionsMenuSetting.OptionsMenuSetting_C.SetFontSize
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonTextBlock*                 Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   DefaulFontSize                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   MobileFont                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class UObject* UOptionsMenuSetting_C::GetListItemObject() const
+void UOptionsMenuSetting_C::SetFontSize(class UCommonTextBlock* Text, int32 DefaulFontSize, int32 MobileFont)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenuSetting_C", "GetListItemObject");
+		Func = Class->GetFunction("OptionsMenuSetting_C", "SetFontSize");
 
-	Params::OptionsMenuSetting_C_GetListItemObject Parms{};
+	Params::OptionsMenuSetting_C_SetFontSize Parms{};
+
+	Parms.Text = Text;
+	Parms.DefaulFontSize = DefaulFontSize;
+	Parms.MobileFont = MobileFont;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 

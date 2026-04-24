@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass FXSkeletonMeshComponent.FXSkeletonMeshComponent_C
-// 0x0000 (0x0BE0 - 0x0BE0)
+// 0x0000 (0x0B80 - 0x0B80)
 class UFXSkeletonMeshComponent_C final : public UFortFXSkeletonMeshComponent
 {
 public:

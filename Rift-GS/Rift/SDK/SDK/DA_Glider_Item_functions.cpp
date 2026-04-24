@@ -56,20 +56,6 @@ void ADA_Glider_Item_C::BPPressTrigger(class AFortDecoHelper* FortDecoHelper)
 }
 
 
-// Function DA_Glider_Item.DA_Glider_Item_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ADA_Glider_Item_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DA_Glider_Item_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function DA_Glider_Item.DA_Glider_Item_C.RaiseUsageError
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

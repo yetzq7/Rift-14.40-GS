@@ -52,12 +52,13 @@ enum class EHMDWornState : uint8
 };
 
 // Enum HeadMountedDisplay.EHMDTrackingOrigin
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EHMDTrackingOrigin : uint8
 {
 	Floor                                    = 0,
 	Eye                                      = 1,
-	EHMDTrackingOrigin_MAX                   = 2,
+	Stage                                    = 2,
+	EHMDTrackingOrigin_MAX                   = 3,
 };
 
 // Enum HeadMountedDisplay.EOrientPositionSelector

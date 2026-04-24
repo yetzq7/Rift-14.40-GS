@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass TrapTool_ContextTrap_Athena.TrapTool_ContextTrap_Athena_C
-// 0x0000 (0x09E8 - 0x09E8)
+// 0x0000 (0x0D20 - 0x0D20)
 class ATrapTool_ContextTrap_Athena_C final : public AFortDecoTool_ContextTrap
 {
 public:

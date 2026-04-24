@@ -51,7 +51,7 @@ enum class ECatalogSaleType : uint8
 };
 
 // Enum GameSubCatalog.EAppStore
-// NumValues: 0x000B
+// NumValues: 0x000D
 enum class EAppStore : uint8
 {
 	DebugStore                               = 0,
@@ -60,11 +60,13 @@ enum class EAppStore : uint8
 	WeGameStore                              = 3,
 	GooglePlayAppStore                       = 4,
 	KindleStore                              = 5,
-	PlayStationStore                         = 6,
+	PlayStation4Store                        = 6,
 	XboxLiveStore                            = 7,
 	NintendoEShop                            = 8,
 	SamsungGalaxyAppStore                    = 9,
-	MAX                                      = 10,
+	MicrosoftStore                           = 10,
+	PlayStation5Store                        = 11,
+	MAX                                      = 12,
 };
 
 // Enum GameSubCatalog.EStoreCurrencyType
@@ -78,16 +80,6 @@ enum class EStoreCurrencyType : uint8
 	MAX                                      = 4,
 };
 
-// ScriptStruct GameSubCatalog.CatalogMetaAssetInfo
-// 0x0030 (0x0030 - 0x0000)
-struct FCatalogMetaAssetInfo final
-{
-public:
-	class FString                                 StructName;                                        // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FJsonObjectWrapper                     Payload;                                           // 0x0010(0x0020)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCatalogMetaAssetInfo;
-
 // ScriptStruct GameSubCatalog.CatalogPurchaseNotification
 // 0x0020 (0x0020 - 0x0000)
 struct FCatalogPurchaseNotification final
@@ -96,18 +88,6 @@ public:
 	struct FMcpLootResult                         LootResult;                                        // 0x0000(0x0020)(NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCatalogPurchaseNotification;
-
-// ScriptStruct GameSubCatalog.ItemQuantity
-// 0x0038 (0x0038 - 0x0000)
-struct FItemQuantity final
-{
-public:
-	class FString                                 TemplateId;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Quantity;                                          // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FJsonObjectWrapper                     Attributes;                                        // 0x0018(0x0020)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FItemQuantity;
 
 // ScriptStruct GameSubCatalog.CatalogKeyValue
 // 0x0020 (0x0020 - 0x0000)
@@ -119,20 +99,8 @@ public:
 };
 DUMPER7_ASSERTS_FCatalogKeyValue;
 
-// ScriptStruct GameSubCatalog.CatalogOfferRequirement
-// 0x0018 (0x0018 - 0x0000)
-struct FCatalogOfferRequirement final
-{
-public:
-	ECatalogRequirementType                       RequirementType;                                   // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinQuantity;                                       // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 RequiredId;                                        // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCatalogOfferRequirement;
-
 // ScriptStruct GameSubCatalog.CatalogItemPrice
-// 0x0048 (0x0048 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct FCatalogItemPrice final
 {
 public:
@@ -145,8 +113,22 @@ public:
 	ECatalogSaleType                              SaleType;                                          // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              SaleExpiration;                                    // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAppStore                                     AppStoreId;                                        // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FCatalogItemPrice;
+
+// ScriptStruct GameSubCatalog.ItemQuantity
+// 0x0038 (0x0038 - 0x0000)
+struct FItemQuantity final
+{
+public:
+	class FString                                 TemplateId;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Quantity;                                          // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FJsonObjectWrapper                     Attributes;                                        // 0x0018(0x0020)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FItemQuantity;
 
 // ScriptStruct GameSubCatalog.CatalogDynamicBundleItem
 // 0x0078 (0x0078 - 0x0000)
@@ -165,19 +147,43 @@ public:
 DUMPER7_ASSERTS_FCatalogDynamicBundleItem;
 
 // ScriptStruct GameSubCatalog.CatalogDynamicBundle
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct FCatalogDynamicBundle final
 {
 public:
-	int32                                         BasePrice;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EStoreCurrencyType                            CurrencyType;                                      // 0x0004(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CurrencySubType;                                   // 0x0008(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECatalogSaleType                              DisplayType;                                       // 0x0018(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FCatalogDynamicBundleItem>      BundleItems;                                       // 0x0020(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	int32                                         DiscountedBasePrice;                               // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RegularBasePrice;                                  // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FloorPrice;                                        // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EStoreCurrencyType                            CurrencyType;                                      // 0x000C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CurrencySubType;                                   // 0x0010(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECatalogSaleType                              DisplayType;                                       // 0x0020(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FCatalogDynamicBundleItem>      BundleItems;                                       // 0x0028(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCatalogDynamicBundle;
+
+// ScriptStruct GameSubCatalog.CatalogMetaAssetInfo
+// 0x0030 (0x0030 - 0x0000)
+struct FCatalogMetaAssetInfo final
+{
+public:
+	class FString                                 StructName;                                        // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FJsonObjectWrapper                     Payload;                                           // 0x0010(0x0020)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCatalogMetaAssetInfo;
+
+// ScriptStruct GameSubCatalog.CatalogOfferRequirement
+// 0x0018 (0x0018 - 0x0000)
+struct FCatalogOfferRequirement final
+{
+public:
+	ECatalogRequirementType                       RequirementType;                                   // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinQuantity;                                       // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 RequiredId;                                        // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCatalogOfferRequirement;
 
 // ScriptStruct GameSubCatalog.CatalogGiftInfo
 // 0x0028 (0x0028 - 0x0000)
@@ -187,42 +193,42 @@ public:
 	bool                                          bIsEnabled;                                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ForcedGiftBoxTemplateId;                           // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FCatalogOfferRequirement>       PurchaseRequirements;                              // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FCatalogOfferRequirement>       PurchaseRequirements;                              // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCatalogGiftInfo;
 
 // ScriptStruct GameSubCatalog.CatalogOffer
-// 0x0238 (0x0238 - 0x0000)
+// 0x0260 (0x0260 - 0x0000)
 struct FCatalogOffer final
 {
 public:
 	class FString                                 OfferId;                                           // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 DevName;                                           // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FCatalogKeyValue>               MetaInfo;                                          // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FCatalogKeyValue>               MetaInfo;                                          // 0x0020(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECatalogOfferType                             OfferType;                                         // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FCatalogItemPrice>              Prices;                                            // 0x0038(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FCatalogDynamicBundle                  DynamicBundleInfo;                                 // 0x0048(0x0030)(Edit, NativeAccessSpecifierPublic)
-	int32                                         DailyLimit;                                        // 0x0078(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         WeeklyLimit;                                       // 0x007C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MonthlyLimit;                                      // 0x0080(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         Categories;                                        // 0x0088(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 CatalogGroup;                                      // 0x0098(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CatalogGroupPriority;                              // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SortPriority;                                      // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Title;                                             // 0x00B0(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class FText                                   ShortDescription;                                  // 0x00C8(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class FText                                   Description;                                       // 0x00E0(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class FString                                 AppStoreId[0xA];                                   // 0x00F8(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FCatalogMetaAssetInfo                  MetaAssetInfo;                                     // 0x0198(0x0030)(NativeAccessSpecifierPublic)
-	class FString                                 DisplayAssetPath;                                  // 0x01C8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FItemQuantity>                  ItemGrants;                                        // 0x01D8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FCatalogOfferRequirement>       Requirements;                                      // 0x01E8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FCatalogGiftInfo                       GiftInfo;                                          // 0x01F8(0x0028)(NativeAccessSpecifierPublic)
-	bool                                          Refundable;                                        // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         DenyItemTemplateIds;                               // 0x0228(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
+	TArray<struct FCatalogItemPrice>              Prices;                                            // 0x0038(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCatalogDynamicBundle                  DynamicBundleInfo;                                 // 0x0048(0x0038)(Edit, NativeAccessSpecifierPublic)
+	int32                                         DailyLimit;                                        // 0x0080(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         WeeklyLimit;                                       // 0x0084(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MonthlyLimit;                                      // 0x0088(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         Categories;                                        // 0x0090(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CatalogGroup;                                      // 0x00A0(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CatalogGroupPriority;                              // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SortPriority;                                      // 0x00B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Title;                                             // 0x00B8(0x0018)(Edit, NativeAccessSpecifierPublic)
+	class FText                                   ShortDescription;                                  // 0x00D0(0x0018)(Edit, NativeAccessSpecifierPublic)
+	class FText                                   Description;                                       // 0x00E8(0x0018)(Edit, NativeAccessSpecifierPublic)
+	class FString                                 AppStoreId[0xC];                                   // 0x0100(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCatalogMetaAssetInfo                  MetaAssetInfo;                                     // 0x01C0(0x0030)(NativeAccessSpecifierPublic)
+	class FString                                 DisplayAssetPath;                                  // 0x01F0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FItemQuantity>                  ItemGrants;                                        // 0x0200(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FCatalogOfferRequirement>       Requirements;                                      // 0x0210(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCatalogGiftInfo                       GiftInfo;                                          // 0x0220(0x0028)(NativeAccessSpecifierPublic)
+	bool                                          Refundable;                                        // 0x0248(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         DenyItemTemplateIds;                               // 0x0250(0x0010)(ZeroConstructor, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
 DUMPER7_ASSERTS_FCatalogOffer;
 
@@ -232,7 +238,7 @@ struct FStorefront final
 {
 public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FCatalogOffer>                  CatalogEntries;                                    // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FCatalogOffer>                  CatalogEntries;                                    // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FStorefront;
 
@@ -244,7 +250,7 @@ public:
 	int32                                         RefreshIntervalHrs;                                // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         DailyPurchaseHrs;                                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FDateTime                              Expiration;                                        // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FStorefront>                    Storefronts;                                       // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FStorefront>                    Storefronts;                                       // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCatalogDownload;
 
@@ -273,7 +279,7 @@ public:
 	int32                                         ExpectedTotalPrice;                                // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 GameContext;                                       // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ReceiverAccountIds;                                // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ReceiverAccountIds;                                // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 GiftWrapTemplateId;                                // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PersonalMessage;                                   // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };

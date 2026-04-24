@@ -118,26 +118,6 @@ void UIconTextButton_C::OnTriggeredInputActionChanged(const struct FDataTableRow
 }
 
 
-// Function IconTextButton.IconTextButton_C.BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UIconTextButton_C::BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IconTextButton_C", "BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature");
-
-	Params::IconTextButton_C_BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature Parms{};
-
-	Parms.bUsingGamepad = bUsingGamepad;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function IconTextButton.IconTextButton_C.SetTabLabelInfo
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -249,9 +229,9 @@ void UIconTextButton_C::InitializeButton()
 // Function IconTextButton.IconTextButton_C.UpdateTextAndStyle
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// ECommonInputType                        InputType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UIconTextButton_C::UpdateTextAndStyle(bool bUsingGamepad)
+void UIconTextButton_C::UpdateTextAndStyle(ECommonInputType InputType)
 {
 	static class UFunction* Func = nullptr;
 
@@ -260,7 +240,7 @@ void UIconTextButton_C::UpdateTextAndStyle(bool bUsingGamepad)
 
 	Params::IconTextButton_C_UpdateTextAndStyle Parms{};
 
-	Parms.bUsingGamepad = bUsingGamepad;
+	Parms.InputType = InputType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -460,6 +440,27 @@ void UIconTextButton_C::Get_Dynamic_Material(class UMaterialInstanceDynamic** Re
 
 	if (Ret_Material != nullptr)
 		*Ret_Material = Parms.Ret_Material;
+}
+
+
+// Function IconTextButton.IconTextButton_C.GetPressProgress
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float*                                  Progress                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UIconTextButton_C::GetPressProgress(float* Progress)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("IconTextButton_C", "GetPressProgress");
+
+	Params::IconTextButton_C_GetPressProgress Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Progress != nullptr)
+		*Progress = Parms.Progress;
 }
 
 

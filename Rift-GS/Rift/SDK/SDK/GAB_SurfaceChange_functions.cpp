@@ -36,6 +36,30 @@ void UGAB_SurfaceChange_C::ExecuteUbergraph_GAB_SurfaceChange(int32 EntryPoint)
 }
 
 
+// Function GAB_SurfaceChange.GAB_SurfaceChange_C.MovementModeChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ACharacter*                       Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMovementMode                           PrevMovementMode                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   PreviousCustomMode                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGAB_SurfaceChange_C::MovementModeChanged(class ACharacter* Character, EMovementMode PrevMovementMode, uint8 PreviousCustomMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_SurfaceChange_C", "MovementModeChanged");
+
+	Params::GAB_SurfaceChange_C_MovementModeChanged Parms{};
+
+	Parms.Character = Character;
+	Parms.PrevMovementMode = PrevMovementMode;
+	Parms.PreviousCustomMode = PreviousCustomMode;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GAB_SurfaceChange.GAB_SurfaceChange_C.K2_ActivateAbilityFromEvent
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -56,15 +80,15 @@ void UGAB_SurfaceChange_C::K2_ActivateAbilityFromEvent(const struct FGameplayEve
 }
 
 
-// Function GAB_SurfaceChange.GAB_SurfaceChange_C.RemoveGameplayEffects
+// Function GAB_SurfaceChange.GAB_SurfaceChange_C.SurfaceCleanupSpecial
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UGAB_SurfaceChange_C::RemoveGameplayEffects()
+void UGAB_SurfaceChange_C::SurfaceCleanupSpecial()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_SurfaceChange_C", "RemoveGameplayEffects");
+		Func = Class->GetFunction("GAB_SurfaceChange_C", "SurfaceCleanupSpecial");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,6 +115,56 @@ void UGAB_SurfaceChange_C::HotfixableGEApplication(const struct FScalableFloat& 
 	Parms.GameplayEffectAppliedOnFalse = GameplayEffectAppliedOnFalse;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GAB_SurfaceChange.GAB_SurfaceChange_C.LavaBounce
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UGAB_SurfaceChange_C::LavaBounce()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_SurfaceChange_C", "LavaBounce");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GAB_SurfaceChange.GAB_SurfaceChange_C.SurfaceCleanup
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    AddLingeringEffects                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// EPhysicalSurface                        SurfaceType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGAB_SurfaceChange_C::SurfaceCleanup(bool AddLingeringEffects, EPhysicalSurface SurfaceType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_SurfaceChange_C", "SurfaceCleanup");
+
+	Params::GAB_SurfaceChange_C_SurfaceCleanup Parms{};
+
+	Parms.AddLingeringEffects = AddLingeringEffects;
+	Parms.SurfaceType = SurfaceType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GAB_SurfaceChange.GAB_SurfaceChange_C.OnRep_ReplicatedRandomAngle
+// (BlueprintCallable, BlueprintEvent)
+
+void UGAB_SurfaceChange_C::OnRep_ReplicatedRandomAngle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_SurfaceChange_C", "OnRep_ReplicatedRandomAngle");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

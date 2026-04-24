@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_Assault_Bulletswarm.B_Assault_Bulletswarm_C
-// 0x0000 (0x0DE8 - 0x0DE8)
+// 0x0000 (0x1258 - 0x1258)
 class AB_Assault_Bulletswarm_C : public AB_Assault_Auto_C
 {
 public:

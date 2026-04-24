@@ -16,83 +16,15 @@
 
 SDK_NAMESPACE_START
 
-// Function TabRevealMeassage.TabRevealMeassage_C.ExecuteUbergraph_TabRevealMeassage
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function TabRevealMeassage.TabRevealMeassage_C.AutoClose
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UTabRevealMeassage_C::ExecuteUbergraph_TabRevealMeassage(int32 EntryPoint)
+void UTabRevealMeassage_C::AutoClose()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TabRevealMeassage_C", "ExecuteUbergraph_TabRevealMeassage");
-
-	Params::TabRevealMeassage_C_ExecuteUbergraph_TabRevealMeassage Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TabRevealMeassage.TabRevealMeassage_C.CloseWindow
-// (BlueprintCallable, BlueprintEvent)
-
-void UTabRevealMeassage_C::CloseWindow()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabRevealMeassage_C", "CloseWindow");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TabRevealMeassage.TabRevealMeassage_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UTabRevealMeassage_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabRevealMeassage_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TabRevealMeassage.TabRevealMeassage_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTabRevealMeassage_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabRevealMeassage_C", "BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
-
-	Params::TabRevealMeassage_C_BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TabRevealMeassage.TabRevealMeassage_C.OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UTabRevealMeassage_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabRevealMeassage_C", "OnActivated");
+		Func = Class->GetFunction("TabRevealMeassage_C", "AutoClose");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -118,17 +50,65 @@ void UTabRevealMeassage_C::ToggleTimer(bool Enabled)
 }
 
 
-// Function TabRevealMeassage.TabRevealMeassage_C.AutoClose
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function TabRevealMeassage.TabRevealMeassage_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
 
-void UTabRevealMeassage_C::AutoClose()
+void UTabRevealMeassage_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TabRevealMeassage_C", "AutoClose");
+		Func = Class->GetFunction("TabRevealMeassage_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TabRevealMeassage.TabRevealMeassage_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UTabRevealMeassage_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabRevealMeassage_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TabRevealMeassage.TabRevealMeassage_C.CloseWindow
+// (BlueprintCallable, BlueprintEvent)
+
+void UTabRevealMeassage_C::CloseWindow()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabRevealMeassage_C", "CloseWindow");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TabRevealMeassage.TabRevealMeassage_C.ExecuteUbergraph_TabRevealMeassage
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTabRevealMeassage_C::ExecuteUbergraph_TabRevealMeassage(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabRevealMeassage_C", "ExecuteUbergraph_TabRevealMeassage");
+
+	Params::TabRevealMeassage_C_ExecuteUbergraph_TabRevealMeassage Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

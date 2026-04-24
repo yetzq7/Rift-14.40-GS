@@ -36,6 +36,20 @@ void UGAB_Spray_Generic_C::ExecuteUbergraph_GAB_Spray_Generic(int32 EntryPoint)
 }
 
 
+// Function GAB_Spray_Generic.GAB_Spray_Generic_C.OnMontageStartedPlaying
+// (BlueprintCallable, BlueprintEvent)
+
+void UGAB_Spray_Generic_C::OnMontageStartedPlaying()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_Spray_Generic_C", "OnMontageStartedPlaying");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GAB_Spray_Generic.GAB_Spray_Generic_C.TargetLineTrace
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -65,20 +79,6 @@ void UGAB_Spray_Generic_C::TargetLineTrace(class AFortPawn* ActivatingPawn, bool
 
 	if (Normal != nullptr)
 		*Normal = std::move(Parms.Normal);
-}
-
-
-// Function GAB_Spray_Generic.GAB_Spray_Generic_C.OnMontageStartedPlaying
-// (BlueprintCallable, BlueprintEvent)
-
-void UGAB_Spray_Generic_C::OnMontageStartedPlaying()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_Spray_Generic_C", "OnMontageStartedPlaying");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

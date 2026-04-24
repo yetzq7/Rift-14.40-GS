@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function StoreMain_MTXOffer.StoreMain_MTXOffer_C.ExecuteUbergraph_StoreMain_MTXOffer
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -31,6 +31,94 @@ void UStoreMain_MTXOffer_C::ExecuteUbergraph_StoreMain_MTXOffer(int32 EntryPoint
 	Params::StoreMain_MTXOffer_C_ExecuteUbergraph_StoreMain_MTXOffer Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StoreMain_MTXOffer.StoreMain_MTXOffer_C.OnOfferTileBrushLoaded
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FSlateBrush&               OfferBrush                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UStoreMain_MTXOffer_C::OnOfferTileBrushLoaded(const struct FSlateBrush& OfferBrush)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_MTXOffer_C", "OnOfferTileBrushLoaded");
+
+	Params::StoreMain_MTXOffer_C_OnOfferTileBrushLoaded Parms{};
+
+	Parms.OfferBrush = std::move(OfferBrush);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StoreMain_MTXOffer.StoreMain_MTXOffer_C.OnStoreSelectionOfferSet
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_MTXOffer_C::OnStoreSelectionOfferSet()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_MTXOffer_C", "OnStoreSelectionOfferSet");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_MTXOffer.StoreMain_MTXOffer_C.OnUpdateStorePrice
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      InStorePrice                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UStoreMain_MTXOffer_C::OnUpdateStorePrice(const class FText& InStorePrice)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_MTXOffer_C", "OnUpdateStorePrice");
+
+	Params::StoreMain_MTXOffer_C_OnUpdateStorePrice Parms{};
+
+	Parms.InStorePrice = std::move(InStorePrice);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StoreMain_MTXOffer.StoreMain_MTXOffer_C.OnOfferSet
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_MTXOffer_C::OnOfferSet()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_MTXOffer_C", "OnOfferSet");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_MTXOffer.StoreMain_MTXOffer_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UStoreMain_MTXOffer_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_MTXOffer_C", "PreConstruct");
+
+	Params::StoreMain_MTXOffer_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -61,26 +149,6 @@ void UStoreMain_MTXOffer_C::BP_OnHovered()
 		Func = Class->GetFunction("StoreMain_MTXOffer_C", "BP_OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StoreMain_MTXOffer.StoreMain_MTXOffer_C.OnClick
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UStoreMain_MTXOffer_C::OnClick(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_MTXOffer_C", "OnClick");
-
-	Params::StoreMain_MTXOffer_C_OnClick Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -169,11 +237,11 @@ void UStoreMain_MTXOffer_C::TriggerReset()
 
 
 // Function StoreMain_MTXOffer.StoreMain_MTXOffer_C.SetTileSize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Large                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// EFortMtxOfferDisplaySize                DisplaySize                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UStoreMain_MTXOffer_C::SetTileSize(bool Large)
+void UStoreMain_MTXOffer_C::SetTileSize(EFortMtxOfferDisplaySize DisplaySize)
 {
 	static class UFunction* Func = nullptr;
 
@@ -182,9 +250,55 @@ void UStoreMain_MTXOffer_C::SetTileSize(bool Large)
 
 	Params::StoreMain_MTXOffer_C_SetTileSize Parms{};
 
-	Parms.Large = Large;
+	Parms.DisplaySize = DisplaySize;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StoreMain_MTXOffer.StoreMain_MTXOffer_C.SetTextOutlineColor
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTextBlock*                       Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FFortMtxGradient&          Gradient                                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+
+void UStoreMain_MTXOffer_C::SetTextOutlineColor(class UTextBlock* Text, const struct FFortMtxGradient& Gradient)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_MTXOffer_C", "SetTextOutlineColor");
+
+	Params::StoreMain_MTXOffer_C_SetTextOutlineColor Parms{};
+
+	Parms.Text = Text;
+	Parms.Gradient = std::move(Gradient);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StoreMain_MTXOffer.StoreMain_MTXOffer_C.GetBonusText
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UFortStoreFrontOfferInfo*         OfferInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText*                            BonusText_0                                            (Parm, OutParm)
+
+void UStoreMain_MTXOffer_C::GetBonusText(class UFortStoreFrontOfferInfo* OfferInfo, class FText* BonusText_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_MTXOffer_C", "GetBonusText");
+
+	Params::StoreMain_MTXOffer_C_GetBonusText Parms{};
+
+	Parms.OfferInfo = OfferInfo;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (BonusText_0 != nullptr)
+		*BonusText_0 = std::move(Parms.BonusText_0);
 }
 
 

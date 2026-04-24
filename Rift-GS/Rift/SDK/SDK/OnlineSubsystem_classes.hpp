@@ -16,31 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Class OnlineSubsystem.NamedInterfaces
-// 0x0038 (0x0060 - 0x0028)
-class UNamedInterfaces final : public UObject
-{
-public:
-	TArray<struct FNamedInterface>                NamedInterfaces;                                   // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FNamedInterfaceDef>             NamedInterfaceDefs;                                // 0x0038(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_48[0x18];                                      // 0x0048(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NamedInterfaces")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NamedInterfaces")
-	}
-	static class UNamedInterfaces* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNamedInterfaces>();
-	}
-};
-DUMPER7_ASSERTS_UNamedInterfaces;
-
 // Class OnlineSubsystem.TurnBasedMatchInterface
 // 0x0000 (0x0000 - 0x0000)
 class ITurnBasedMatchInterface final
@@ -73,5 +48,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ITurnBasedMatchInterface;
+
+// Class OnlineSubsystem.NamedInterfaces
+// 0x0038 (0x0060 - 0x0028)
+class UNamedInterfaces final : public UObject
+{
+public:
+	TArray<struct FNamedInterface>                NamedInterfaces;                                   // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FNamedInterfaceDef>             NamedInterfaceDefs;                                // 0x0038(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_48[0x18];                                      // 0x0048(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NamedInterfaces")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NamedInterfaces")
+	}
+	static class UNamedInterfaces* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNamedInterfaces>();
+	}
+};
+DUMPER7_ASSERTS_UNamedInterfaces;
 
 SDK_NAMESPACE_END

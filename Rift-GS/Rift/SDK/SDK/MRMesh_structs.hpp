@@ -13,6 +13,16 @@
 
 SDK_NAMESPACE_START
 
+// Enum MRMesh.EMeshTrackerVertexColorMode
+// NumValues: 0x0004
+enum class EMeshTrackerVertexColorMode : uint8
+{
+	None                                     = 0,
+	Confidence                               = 1,
+	Block                                    = 2,
+	EMeshTrackerVertexColorMode_MAX          = 3,
+};
+
 // ScriptStruct MRMesh.MRMeshConfiguration
 // 0x0001 (0x0001 - 0x0000)
 struct FMRMeshConfiguration final

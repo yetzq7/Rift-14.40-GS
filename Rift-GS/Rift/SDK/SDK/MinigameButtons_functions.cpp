@@ -232,21 +232,15 @@ void UMinigameButtons_C::BndEvt__StartGameButton_K2Node_ComponentBoundEvent_0_Co
 
 // Function MinigameButtons.MinigameButtons_C.UpdateButtons
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortMinigameSettingsBuilding*    Machine                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMinigameButtons_C::UpdateButtons(class AFortMinigameSettingsBuilding* Machine)
+void UMinigameButtons_C::UpdateButtons()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("MinigameButtons_C", "UpdateButtons");
 
-	Params::MinigameButtons_C_UpdateButtons Parms{};
-
-	Parms.Machine = Machine;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

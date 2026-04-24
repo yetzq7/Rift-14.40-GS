@@ -16,13 +16,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GC_HuskDeath.GC_HuskDeath_C
-// 0x0000 (0x0558 - 0x0558)
+// 0x0000 (0x0460 - 0x0460)
 class AGC_HuskDeath_C final : public AFortGameplayCueNotify_BurstLatent
 {
 public:
-	void UserConstructionScript();
-
-	void OnBurst(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance) const;
+	void OnBurst(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UMatineeCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance) const;
 
 public:
 	static class UClass* StaticClass()

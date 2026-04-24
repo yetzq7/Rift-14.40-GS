@@ -226,6 +226,26 @@ void UShowdownEventTile_C::EventResize(bool Out)
 }
 
 
+// Function ShowdownEventTile.ShowdownEventTile_C.EventIntro
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UShowdownEventTile_C::EventIntro(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownEventTile_C", "EventIntro");
+
+	Params::ShowdownEventTile_C_EventIntro Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function ShowdownEventTile.ShowdownEventTile_C.BP_OnClicked
 // (Event, Protected, BlueprintEvent)
 
@@ -251,26 +271,6 @@ void UShowdownEventTile_C::Construct()
 		Func = Class->GetFunction("ShowdownEventTile_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ShowdownEventTile.ShowdownEventTile_C.EventIntro
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UShowdownEventTile_C::EventIntro(int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownEventTile_C", "EventIntro");
-
-	Params::ShowdownEventTile_C_EventIntro Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "FortniteUI_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "FortniteUI_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -19,38 +20,33 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function ShowdownTournamentDetailsScoringRule.ShowdownTournamentDetailsScoringRule_C.SetData
-// 0x0330 (0x0330 - 0x0000)
+// 0x0308 (0x0308 - 0x0000)
 struct ShowdownTournamentDetailsScoringRule_C_SetData final
 {
 public:
 	struct FFortShowdownScoringRuleInfo           ScoreRule;                                         // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FFortTournamentDisplayInfo             TournamentDisplayInfo;                             // 0x0018(0x0170)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FLinearColor                           Temp_struct_Variable;                              // 0x0188(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0198(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01D8(0x0010)(ZeroConstructor, ReferenceParm)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData1;             // 0x01F0(0x0040)(HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FFortTournamentDisplayInfo             TournamentDisplayInfo;                             // 0x0018(0x01A8)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FLinearColor                           Temp_struct_Variable;                              // 0x01C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x01D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x01E0(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0220(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array1;                           // 0x0238(0x0010)(ZeroConstructor, ReferenceParm)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0250(0x0018)()
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_269[0x3];                                      // 0x0269(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           Temp_struct_Variable1;                             // 0x026C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x027C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_27D[0x3];                                      // 0x027D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0280(0x0018)()
-	struct FLinearColor                           K2Node_Select_Default;                             // 0x0298(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable1;                               // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2A9[0x7];                                      // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortShowdownScoringRuleDisplayInfo    CallFunc_GetDataTableRowFromName_OutRow;           // 0x02B0(0x0048)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2F9[0x7];                                      // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue1;                      // 0x0300(0x0018)()
-	class FText                                   K2Node_Select1_Default;                            // 0x0318(0x0018)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0238(0x0018)()
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0251(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0252(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0253(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_254[0x4];                                      // 0x0254(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0258(0x0018)()
+	struct FLinearColor                           K2Node_Select_Default;                             // 0x0270(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortShowdownScoringRuleDisplayInfo    CallFunc_GetDataTableRowFromName_OutRow;           // 0x0288(0x0048)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2D1[0x7];                                      // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x02D8(0x0018)()
+	class FText                                   K2Node_Select_Default_1;                           // 0x02F0(0x0018)()
 };
 DUMPER7_ASSERTS_ShowdownTournamentDetailsScoringRule_C_SetData;
 

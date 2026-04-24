@@ -14,9 +14,10 @@
 SDK_NAMESPACE_START
 
 // Enum MediaAssets.EMediaWebcamCaptureDeviceFilter
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EMediaWebcamCaptureDeviceFilter : uint8
 {
+	None                                     = 0,
 	DepthSensor                              = 1,
 	Front                                    = 2,
 	Rear                                     = 4,
@@ -25,9 +26,10 @@ enum class EMediaWebcamCaptureDeviceFilter : uint8
 };
 
 // Enum MediaAssets.EMediaVideoCaptureDeviceFilter
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EMediaVideoCaptureDeviceFilter : uint8
 {
+	None                                     = 0,
 	Card                                     = 1,
 	Software                                 = 2,
 	Unknown                                  = 4,
@@ -36,9 +38,10 @@ enum class EMediaVideoCaptureDeviceFilter : uint8
 };
 
 // Enum MediaAssets.EMediaAudioCaptureDeviceFilter
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EMediaAudioCaptureDeviceFilter : uint8
 {
+	None                                     = 0,
 	Card                                     = 1,
 	Microphone                               = 2,
 	Software                                 = 4,
@@ -79,6 +82,26 @@ enum class EMediaSoundChannels : uint32
 	Stereo                                   = 1,
 	Surround                                 = 2,
 	EMediaSoundChannels_MAX                  = 3,
+};
+
+// Enum MediaAssets.MediaTextureOrientation
+// NumValues: 0x0005
+enum class EMediaTextureOrientation : uint8
+{
+	MTORI_Original                           = 0,
+	MTORI_CW90                               = 1,
+	MTORI_CW180                              = 2,
+	MTORI_CW270                              = 3,
+	MTORI_MAX                                = 4,
+};
+
+// Enum MediaAssets.MediaTextureOutputFormat
+// NumValues: 0x0003
+enum class EMediaTextureOutputFormat : uint8
+{
+	MTOF_Default                             = 0,
+	MTOF_SRGB_LINOUT                         = 1,
+	MTOF_MAX                                 = 2,
 };
 
 // ScriptStruct MediaAssets.MediaCaptureDevice

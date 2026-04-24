@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass RewardOrWidget.RewardOrWidget_C
-// 0x0000 (0x0B50 - 0x0B50)
+// 0x0000 (0x0BC0 - 0x0BC0)
 class URewardOrWidget_C final : public UFortRewardInfoButton
 {
 public:

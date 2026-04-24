@@ -121,13 +121,12 @@ void UPartySuggestionButton_C::OnSuggestionAccepted()
 
 
 // Function PartySuggestionButton.PartySuggestionButton_C.OnDisplayInfoUpdated
-// (Event, Protected, HasOutParams, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// const struct FDateTime&                 LFGTime                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 // bool                                    bIsInvited                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    bIsPlaying                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UPartySuggestionButton_C::OnDisplayInfoUpdated(const struct FDateTime& LFGTime, bool bIsInvited, bool bIsPlaying)
+void UPartySuggestionButton_C::OnDisplayInfoUpdated(bool bIsInvited, bool bIsPlaying)
 {
 	static class UFunction* Func = nullptr;
 
@@ -136,7 +135,6 @@ void UPartySuggestionButton_C::OnDisplayInfoUpdated(const struct FDateTime& LFGT
 
 	Params::PartySuggestionButton_C_OnDisplayInfoUpdated Parms{};
 
-	Parms.LFGTime = std::move(LFGTime);
 	Parms.bIsInvited = bIsInvited;
 	Parms.bIsPlaying = bIsPlaying;
 

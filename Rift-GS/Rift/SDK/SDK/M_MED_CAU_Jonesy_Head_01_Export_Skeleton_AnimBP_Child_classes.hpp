@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass M_MED_CAU_Jonesy_Head_01_Export_Skeleton_AnimBP_Child.M_MED_CAU_Jonesy_Head_01_Export_Skeleton_AnimBP_Child_C
-// 0x0000 (0x1190 - 0x1190)
+// 0x0000 (0x15A0 - 0x15A0)
 class UM_MED_CAU_Jonesy_Head_01_Export_Skeleton_AnimBP_Child_C final : public UFortnite_Base_Head_Export_Skeleton_AnimBP_C
 {
 public:

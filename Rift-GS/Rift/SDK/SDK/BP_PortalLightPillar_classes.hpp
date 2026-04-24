@@ -16,14 +16,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_PortalLightPillar.BP_PortalLightPillar_C
-// 0x0008 (0x0388 - 0x0380)
+// 0x0008 (0x0278 - 0x0270)
 class ABP_PortalLightPillar_C final : public AEmitter
 {
 public:
-	class UAudioComponent*                        PillarSound;                                       // 0x0380(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-
-public:
-	void UserConstructionScript();
+	class UAudioComponent*                        PillarSound;                                       // 0x0270(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

@@ -18,18 +18,17 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_CameraLens_SpookyMist_End.B_CameraLens_SpookyMist_End_C
-// 0x0020 (0x0410 - 0x03F0)
+// 0x0020 (0x0300 - 0x02E0)
 class AB_CameraLens_SpookyMist_End_C final : public AEmitterCameraLensEffectBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AActor*                                 VelocityActor;                                     // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                TargetRot;                                         // 0x0400(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AActor*                                 VelocityActor;                                     // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                TargetRot;                                         // 0x02F0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_CameraLens_SpookyMist_End(int32 EntryPoint);
 	void ReceiveBeginPlay();
-	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

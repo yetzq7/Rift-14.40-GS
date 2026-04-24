@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_ZipLine_Damage_Structure.GE_ZipLine_Damage_Structure_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_ZipLine_Damage_Structure_C final : public UGET_DirectPhysicalDamage_C
 {
 public:

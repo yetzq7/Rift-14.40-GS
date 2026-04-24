@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass AthenaMinimapTeamIndicators.AthenaMinimapTeamIndicators_C
-// 0x0000 (0x04E8 - 0x04E8)
+// 0x0000 (0x0588 - 0x0588)
 class UAthenaMinimapTeamIndicators_C final : public UFortMiniMapTeamIndicators
 {
 public:

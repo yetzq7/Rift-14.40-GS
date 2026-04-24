@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass FeedbackManagerAthena.FeedbackManagerAthena_C
-// 0x0008 (0x0470 - 0x0468)
+// 0x0008 (0x0360 - 0x0358)
 class AFeedbackManagerAthena_C final : public AFortFeedbackManager
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

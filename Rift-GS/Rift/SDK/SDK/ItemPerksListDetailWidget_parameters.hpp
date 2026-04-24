@@ -11,28 +11,10 @@
 #include "Basic.hpp"
 
 #include "FortniteUI_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function ItemPerksListDetailWidget.ItemPerksListDetailWidget_C.ExecuteUbergraph_ItemPerksListDetailWidget
-// 0x0018 (0x0018 - 0x0000)
-struct ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable1;                               // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortHero*                              K2Node_DynamicCast_AsFort_Hero;                    // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsHeroLoadoutSystemEnabled_ReturnValue;   // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget;
 
 // Function ItemPerksListDetailWidget.ItemPerksListDetailWidget_C.SetState
 // 0x0010 (0x0010 - 0x0000)
@@ -44,6 +26,18 @@ public:
 	class UFortHero*                              InEvolutionOption;                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_ItemPerksListDetailWidget_C_SetState;
+
+// Function ItemPerksListDetailWidget.ItemPerksListDetailWidget_C.ExecuteUbergraph_ItemPerksListDetailWidget
+// 0x0018 (0x0018 - 0x0000)
+struct ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortHero*                              K2Node_DynamicCast_AsFort_Hero;                    // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

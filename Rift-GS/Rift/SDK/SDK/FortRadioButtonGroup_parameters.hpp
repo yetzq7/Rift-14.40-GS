@@ -42,7 +42,7 @@ public:
 	TDelegate<void(class UCommonButton* AssociatedButton, int32 ButtonIndex)> K2Node_CreateDelegate_OutputDelegate; // 0x0074(0x0010)(ZeroConstructor, NoDestructor)
 	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCommonButtonGroup*                     CallFunc_SpawnObject_ReturnValue;                  // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue1;          // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -50,16 +50,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup;
-
-// Function FortRadioButtonGroup.FortRadioButtonGroup_C.CenterOnWidget
-// 0x0010 (0x0010 - 0x0000)
-struct FortRadioButtonGroup_C_CenterOnWidget final
-{
-public:
-	class UFortUINavigationManager*               CallFunc_GetUINavigationManager_ReturnValue;       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UIconTextButton_C*                      CallFunc_Array_Get_Item;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_FortRadioButtonGroup_C_CenterOnWidget;
 
 // Function FortRadioButtonGroup.FortRadioButtonGroup_C.OnButtonClicked_Bind
 // 0x0010 (0x0010 - 0x0000)
@@ -70,6 +60,15 @@ public:
 	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FortRadioButtonGroup_C_OnButtonClicked_Bind;
+
+// Function FortRadioButtonGroup.FortRadioButtonGroup_C.CenterOnWidget
+// 0x0008 (0x0008 - 0x0000)
+struct FortRadioButtonGroup_C_CenterOnWidget final
+{
+public:
+	class UIconTextButton_C*                      CallFunc_Array_Get_Item;                           // 0x0000(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_FortRadioButtonGroup_C_CenterOnWidget;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

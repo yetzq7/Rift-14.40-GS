@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_Generic_Character_Launch.GE_Generic_Character_Launch_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_Generic_Character_Launch_C final : public UGameplayEffect
 {
 public:

@@ -36,6 +36,78 @@ void AB_Ranged_Generic_C::ExecuteUbergraph_B_Ranged_Generic(int32 EntryPoint)
 }
 
 
+// Function B_Ranged_Generic.B_Ranged_Generic_C.OnApplyFireModeData
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UFortWeaponFireModeData*          FireModeData                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Ranged_Generic_C::OnApplyFireModeData(class UFortWeaponFireModeData* FireModeData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Ranged_Generic_C", "OnApplyFireModeData");
+
+	Params::B_Ranged_Generic_C_OnApplyFireModeData Parms{};
+
+	Parms.FireModeData = FireModeData;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Ranged_Generic.B_Ranged_Generic_C.LoadNiagaraMuzzleSoftObject
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Ranged_Generic_C::LoadNiagaraMuzzleSoftObject()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Ranged_Generic_C", "LoadNiagaraMuzzleSoftObject");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Ranged_Generic.B_Ranged_Generic_C.OnStartOverheated
+// (Event, Protected, BlueprintEvent)
+
+void AB_Ranged_Generic_C::OnStartOverheated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Ranged_Generic_C", "OnStartOverheated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Ranged_Generic.B_Ranged_Generic_C.OnPlayImpactFX
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FHitResult&                HitResult                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// EPhysicalSurface                        ImpactPhysicalSurface                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFXSystemComponent*               SpawnedPSC                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Ranged_Generic_C::OnPlayImpactFX(const struct FHitResult& HitResult, EPhysicalSurface ImpactPhysicalSurface, class UFXSystemComponent* SpawnedPSC)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Ranged_Generic_C", "OnPlayImpactFX");
+
+	Params::B_Ranged_Generic_C_OnPlayImpactFX Parms{};
+
+	Parms.HitResult = std::move(HitResult);
+	Parms.ImpactPhysicalSurface = ImpactPhysicalSurface;
+	Parms.SpawnedPSC = SpawnedPSC;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_Ranged_Generic.B_Ranged_Generic_C.ForceScopeBackImmediatly
 // (BlueprintCallable, BlueprintEvent)
 
@@ -121,20 +193,6 @@ void AB_Ranged_Generic_C::BindFireRateChange()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Ranged_Generic_C", "BindFireRateChange");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Ranged_Generic.B_Ranged_Generic_C.SetupScopePostProcess
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Ranged_Generic_C::SetupScopePostProcess()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Ranged_Generic_C", "SetupScopePostProcess");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -346,8 +404,9 @@ void AB_Ranged_Generic_C::HideWeaponMesh()
 // (Event, Protected, BlueprintEvent)
 // Parameters:
 // bool                                    bVisible                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bSetForLocalControllerOnly                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AB_Ranged_Generic_C::OnWeaponVisibilityChanged(bool bVisible)
+void AB_Ranged_Generic_C::OnWeaponVisibilityChanged(bool bVisible, bool bSetForLocalControllerOnly)
 {
 	static class UFunction* Func = nullptr;
 
@@ -357,6 +416,7 @@ void AB_Ranged_Generic_C::OnWeaponVisibilityChanged(bool bVisible)
 	Params::B_Ranged_Generic_C_OnWeaponVisibilityChanged Parms{};
 
 	Parms.bVisible = bVisible;
+	Parms.bSetForLocalControllerOnly = bSetForLocalControllerOnly;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -452,9 +512,8 @@ void AB_Ranged_Generic_C::ShellsON__onPump_()
 // (Event, Protected, BlueprintEvent)
 // Parameters:
 // const struct FFortCosmeticModification& CosmeticMod                                            (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UMaterialInstanceDynamic*         DynamicMaterialInstance                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Ranged_Generic_C::OnInitCosmeticAlterations(const struct FFortCosmeticModification& CosmeticMod, class UMaterialInstanceDynamic* DynamicMaterialInstance)
+void AB_Ranged_Generic_C::OnInitCosmeticAlterations(const struct FFortCosmeticModification& CosmeticMod)
 {
 	static class UFunction* Func = nullptr;
 
@@ -464,7 +523,6 @@ void AB_Ranged_Generic_C::OnInitCosmeticAlterations(const struct FFortCosmeticMo
 	Params::B_Ranged_Generic_C_OnInitCosmeticAlterations Parms{};
 
 	Parms.CosmeticMod = std::move(CosmeticMod);
-	Parms.DynamicMaterialInstance = DynamicMaterialInstance;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -710,6 +768,26 @@ void AB_Ranged_Generic_C::OnLoaded_4DE6158742ED7EE528BC98A240A81632(class UObjec
 }
 
 
+// Function B_Ranged_Generic.B_Ranged_Generic_C.OnLoaded_4D1409A247BFDB4C074B628406FC7A72
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Ranged_Generic_C::OnLoaded_4D1409A247BFDB4C074B628406FC7A72(class UObject* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Ranged_Generic_C", "OnLoaded_4D1409A247BFDB4C074B628406FC7A72");
+
+	Params::B_Ranged_Generic_C_OnLoaded_4D1409A247BFDB4C074B628406FC7A72 Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_Ranged_Generic.B_Ranged_Generic_C.AnimateScopePostProcess__UpdateFunc
 // (BlueprintEvent)
 
@@ -753,7 +831,7 @@ void AB_Ranged_Generic_C::UserConstructionScript()
 
 
 // Function B_Ranged_Generic.B_Ranged_Generic_C.AddRandomScale
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AB_Ranged_Generic_C::AddRandomScale()
 {
@@ -781,7 +859,7 @@ void AB_Ranged_Generic_C::SetWpnRarity()
 
 
 // Function B_Ranged_Generic.B_Ranged_Generic_C.Muzzle Flash FX
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    Persistent_Fire                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
@@ -821,7 +899,7 @@ void AB_Ranged_Generic_C::Muzzle_Play_Reload_FX(EFortReloadFXState Selection)
 
 
 // Function B_Ranged_Generic.B_Ranged_Generic_C.UpdateShellEmittersFX
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AB_Ranged_Generic_C::UpdateShellEmittersFX()
 {
@@ -911,7 +989,7 @@ void AB_Ranged_Generic_C::DeactivateReloadSmokeFX()
 
 
 // Function B_Ranged_Generic.B_Ranged_Generic_C.DeactivateMuzzleFX
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AB_Ranged_Generic_C::DeactivateMuzzleFX()
 {
@@ -1037,6 +1115,76 @@ void AB_Ranged_Generic_C::StopScopedAudio()
 		Func = Class->GetFunction("B_Ranged_Generic_C", "StopScopedAudio");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Ranged_Generic.B_Ranged_Generic_C.SetActiveMuzzleComponent
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    NiagaraEnabled                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AB_Ranged_Generic_C::SetActiveMuzzleComponent(bool NiagaraEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Ranged_Generic_C", "SetActiveMuzzleComponent");
+
+	Params::B_Ranged_Generic_C_SetActiveMuzzleComponent Parms{};
+
+	Parms.NiagaraEnabled = NiagaraEnabled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Ranged_Generic.B_Ranged_Generic_C.GetActiveMuzzleComponents
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<class UFXSystemComponent*>*      NewParam                                               (Parm, OutParm, ContainsInstancedReference, HasGetValueTypeHash)
+
+void AB_Ranged_Generic_C::GetActiveMuzzleComponents(TArray<class UFXSystemComponent*>* NewParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Ranged_Generic_C", "GetActiveMuzzleComponents");
+
+	Params::B_Ranged_Generic_C_GetActiveMuzzleComponents Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (NewParam != nullptr)
+		*NewParam = std::move(Parms.NewParam);
+}
+
+
+// Function B_Ranged_Generic.B_Ranged_Generic_C.GetScopeParameters
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UStaticMeshComponent**            ScopeComponent                                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector2D*                       DepthOfFieldVignetteRange                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  WeaponSightsCameraOffset                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Ranged_Generic_C::GetScopeParameters(class UStaticMeshComponent** ScopeComponent, struct FVector2D* DepthOfFieldVignetteRange, float* WeaponSightsCameraOffset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Ranged_Generic_C", "GetScopeParameters");
+
+	Params::B_Ranged_Generic_C_GetScopeParameters Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ScopeComponent != nullptr)
+		*ScopeComponent = Parms.ScopeComponent;
+
+	if (DepthOfFieldVignetteRange != nullptr)
+		*DepthOfFieldVignetteRange = std::move(Parms.DepthOfFieldVignetteRange);
+
+	if (WeaponSightsCameraOffset != nullptr)
+		*WeaponSightsCameraOffset = Parms.WeaponSightsCameraOffset;
 }
 
 

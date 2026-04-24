@@ -98,4 +98,26 @@ void UCircleArrowButton_C::PreConstruct(bool IsDesignTime)
 }
 
 
+// Function CircleArrowButton.CircleArrowButton_C.UpdateArrowColor
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FLinearColor&              Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              HoverColor_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCircleArrowButton_C::UpdateArrowColor(const struct FLinearColor& Color, const struct FLinearColor& HoverColor_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CircleArrowButton_C", "UpdateArrowColor");
+
+	Params::CircleArrowButton_C_UpdateArrowColor Parms{};
+
+	Parms.Color = std::move(Color);
+	Parms.HoverColor_0 = std::move(HoverColor_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 SDK_NAMESPACE_END

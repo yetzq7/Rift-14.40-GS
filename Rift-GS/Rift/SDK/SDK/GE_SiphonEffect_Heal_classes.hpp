@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_SiphonEffect_Heal.GE_SiphonEffect_Heal_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_SiphonEffect_Heal_C final : public UGameplayEffect
 {
 public:

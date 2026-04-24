@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function SocialConfirmationButton.SocialConfirmationButton_C.ExecuteUbergraph_SocialConfirmationButton
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -56,20 +56,6 @@ void USocialConfirmationButton_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function SocialConfirmationButton.SocialConfirmationButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void USocialConfirmationButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialConfirmationButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function SocialConfirmationButton.SocialConfirmationButton_C.BP_OnUnhovered
 // (Event, Protected, BlueprintEvent)
 
@@ -79,6 +65,20 @@ void USocialConfirmationButton_C::BP_OnUnhovered()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("SocialConfirmationButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialConfirmationButton.SocialConfirmationButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void USocialConfirmationButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialConfirmationButton_C", "BP_OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

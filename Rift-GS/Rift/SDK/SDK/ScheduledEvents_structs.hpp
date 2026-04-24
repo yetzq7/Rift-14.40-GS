@@ -33,7 +33,7 @@ struct FEventChannelState final
 {
 public:
 	struct FDateTime                              ValidFrom;                                         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FEventRecord>                   ActiveEvents;                                      // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FEventRecord>                   ActiveEvents;                                      // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FJsonObjectWrapper                     State;                                             // 0x0018(0x0020)(NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FEventChannelState;
@@ -44,7 +44,7 @@ struct FEventsTimeline final
 {
 public:
 	struct FDateTime                              CacheExpire;                                       // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FEventChannelState>             States;                                            // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FEventChannelState>             States;                                            // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FEventsTimeline;
 
@@ -54,8 +54,8 @@ struct FCalendarDownload final
 {
 public:
 	struct FDateTime                              CurrentTime;                                       // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        EventsTimeOffsetHrs;                               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, struct FEventsTimeline>   Channels;                                          // 0x0010(0x0050)(ZeroConstructor, NativeAccessSpecifierPublic)
+	double                                        CacheIntervalMins;                                 // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FEventsTimeline>   Channels;                                          // 0x0010(0x0050)(NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCalendarDownload;
 

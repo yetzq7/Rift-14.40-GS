@@ -36,8 +36,36 @@ void UStoreMain_Root_C::ExecuteUbergraph_StoreMain_Root(int32 EntryPoint)
 }
 
 
+// Function StoreMain_Root.StoreMain_Root_C.OnStartReadingOffers
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_Root_C::OnStartReadingOffers()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "OnStartReadingOffers");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.OnTransitionedBySwitcher
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_Root_C::OnTransitionedBySwitcher()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "OnTransitionedBySwitcher");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function StoreMain_Root.StoreMain_Root_C.OnPurchasingDisabled
-// (Event, Public, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 
 void UStoreMain_Root_C::OnPurchasingDisabled()
 {
@@ -51,7 +79,7 @@ void UStoreMain_Root_C::OnPurchasingDisabled()
 
 
 // Function StoreMain_Root.StoreMain_Root_C.GenerateOfferWidget
-// (Event, Public, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UFortStoreFrontOfferInfo*         OfferData                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -121,7 +149,7 @@ void UStoreMain_Root_C::OnAddedToActivationStack()
 
 
 // Function StoreMain_Root.StoreMain_Root_C.ClearOfferWidgets
-// (Event, Public, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 
 void UStoreMain_Root_C::ClearOfferWidgets()
 {
@@ -134,50 +162,36 @@ void UStoreMain_Root_C::ClearOfferWidgets()
 }
 
 
-// Function StoreMain_Root.StoreMain_Root_C.OnStartReadingOffers
-// (Event, Public, BlueprintEvent)
+// Function StoreMain_Root.StoreMain_Root_C.BP_OnDeactivated
+// (Event, Protected, BlueprintEvent)
 
-void UStoreMain_Root_C::OnStartReadingOffers()
+void UStoreMain_Root_C::BP_OnDeactivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "OnStartReadingOffers");
+		Func = Class->GetFunction("StoreMain_Root_C", "BP_OnDeactivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function StoreMain_Root.StoreMain_Root_C.OnDeactivated
+// Function StoreMain_Root.StoreMain_Root_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UStoreMain_Root_C::OnDeactivated()
+void UStoreMain_Root_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "OnDeactivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StoreMain_Root.StoreMain_Root_C.OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UStoreMain_Root_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "OnActivated");
+		Func = Class->GetFunction("StoreMain_Root_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function StoreMain_Root.StoreMain_Root_C.OnOffersGenerated
-// (Event, Public, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 
 void UStoreMain_Root_C::OnOffersGenerated()
 {
@@ -191,7 +205,7 @@ void UStoreMain_Root_C::OnOffersGenerated()
 
 
 // Function StoreMain_Root.StoreMain_Root_C.NoOffersAvailable
-// (Event, Public, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 
 void UStoreMain_Root_C::NoOffersAvailable()
 {
@@ -353,6 +367,98 @@ void UStoreMain_Root_C::HandleBack(bool* PassThrough)
 
 	if (PassThrough != nullptr)
 		*PassThrough = Parms.PassThrough;
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.PlayEquippedLockerMusic
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UStoreMain_Root_C::PlayEquippedLockerMusic()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "PlayEquippedLockerMusic");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.HandleGenerateOffer
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFortStoreFrontOfferInfo*         OfferInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UStoreMain_Root_C::HandleGenerateOffer(class UFortStoreFrontOfferInfo* OfferInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "HandleGenerateOffer");
+
+	Params::StoreMain_Root_C_HandleGenerateOffer Parms{};
+
+	Parms.OfferInfo = OfferInfo;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.HandleAllOffersGenerated
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UStoreMain_Root_C::HandleAllOffersGenerated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "HandleAllOffersGenerated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.GetVisibilityByChildrenPresence
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UPanelWidget*                     Panel                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ESlateVisibility*                       NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UStoreMain_Root_C::GetVisibilityByChildrenPresence(class UPanelWidget* Panel, ESlateVisibility* NewParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "GetVisibilityByChildrenPresence");
+
+	Params::StoreMain_Root_C_GetVisibilityByChildrenPresence Parms{};
+
+	Parms.Panel = Panel;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (NewParam != nullptr)
+		*NewParam = Parms.NewParam;
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.BP_GetDesiredFocusTarget
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UStoreMain_Root_C::BP_GetDesiredFocusTarget() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "BP_GetDesiredFocusTarget");
+
+	Params::StoreMain_Root_C_BP_GetDesiredFocusTarget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

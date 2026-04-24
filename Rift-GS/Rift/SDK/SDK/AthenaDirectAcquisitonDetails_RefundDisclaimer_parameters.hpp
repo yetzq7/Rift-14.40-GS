@@ -14,6 +14,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function AthenaDirectAcquisitonDetails_RefundDisclaimer.AthenaDirectAcquisitonDetails_RefundDisclaimer_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct AthenaDirectAcquisitonDetails_RefundDisclaimer_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_AthenaDirectAcquisitonDetails_RefundDisclaimer_C_PreConstruct;
+
 // Function AthenaDirectAcquisitonDetails_RefundDisclaimer.AthenaDirectAcquisitonDetails_RefundDisclaimer_C.ExecuteUbergraph_AthenaDirectAcquisitonDetails_RefundDisclaimer
 // 0x0008 (0x0008 - 0x0000)
 struct AthenaDirectAcquisitonDetails_RefundDisclaimer_C_ExecuteUbergraph_AthenaDirectAcquisitonDetails_RefundDisclaimer final
@@ -24,15 +33,6 @@ public:
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_AthenaDirectAcquisitonDetails_RefundDisclaimer_C_ExecuteUbergraph_AthenaDirectAcquisitonDetails_RefundDisclaimer;
-
-// Function AthenaDirectAcquisitonDetails_RefundDisclaimer.AthenaDirectAcquisitonDetails_RefundDisclaimer_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct AthenaDirectAcquisitonDetails_RefundDisclaimer_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_AthenaDirectAcquisitonDetails_RefundDisclaimer_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

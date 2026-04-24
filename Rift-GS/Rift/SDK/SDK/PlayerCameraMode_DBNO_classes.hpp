@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PlayerCameraMode_DBNO.PlayerCameraMode_DBNO_C
-// 0x0000 (0x0C50 - 0x0C50)
+// 0x0000 (0x0DC0 - 0x0DC0)
 class UPlayerCameraMode_DBNO_C final : public Uv3_PlayerCameraModeBase_C
 {
 public:

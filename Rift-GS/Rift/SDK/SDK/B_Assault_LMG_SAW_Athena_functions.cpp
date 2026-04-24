@@ -70,18 +70,4 @@ void AB_Assault_LMG_SAW_Athena_C::ReceiveBeginPlay()
 }
 
 
-// Function B_Assault_LMG_SAW_Athena.B_Assault_LMG_SAW_Athena_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Assault_LMG_SAW_Athena_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Assault_LMG_SAW_Athena_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 SDK_NAMESPACE_END

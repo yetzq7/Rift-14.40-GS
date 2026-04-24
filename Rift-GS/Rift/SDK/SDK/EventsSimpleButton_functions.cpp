@@ -36,6 +36,28 @@ void UEventsSimpleButton_C::ExecuteUbergraph_EventsSimpleButton(int32 EntryPoint
 }
 
 
+// Function EventsSimpleButton.EventsSimpleButton_C.UpdateColor
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    ParameterName                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FLinearColor&              New_Color                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UEventsSimpleButton_C::UpdateColor(const class FString& ParameterName, const struct FLinearColor& New_Color)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventsSimpleButton_C", "UpdateColor");
+
+	Params::EventsSimpleButton_C_UpdateColor Parms{};
+
+	Parms.ParameterName = std::move(ParameterName);
+	Parms.New_Color = std::move(New_Color);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function EventsSimpleButton.EventsSimpleButton_C.InputTypeChanged
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.ExecuteUbergraph_GamepadCustomActionSelectorPanel_v3
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -50,29 +50,29 @@ void UGamepadCustomActionSelectorPanel_v3_C::BndEvt__Button_Clear_K2Node_Compone
 }
 
 
-// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.OnDeactivated
+// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.BP_OnDeactivated
 // (Event, Protected, BlueprintEvent)
 
-void UGamepadCustomActionSelectorPanel_v3_C::OnDeactivated()
+void UGamepadCustomActionSelectorPanel_v3_C::BP_OnDeactivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "OnDeactivated");
+		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "BP_OnDeactivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.OnActivated
+// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UGamepadCustomActionSelectorPanel_v3_C::OnActivated()
+void UGamepadCustomActionSelectorPanel_v3_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "OnActivated");
+		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -101,7 +101,7 @@ void UGamepadCustomActionSelectorPanel_v3_C::BP_OnItemClicked_Bind(class UObject
 // Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.UpdatePanel
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const TArray<class UFortOptionsMenuInputData*>&InputData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const TArray<class UFortOptionsMenuInputData*>&InputData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
 void UGamepadCustomActionSelectorPanel_v3_C::UpdatePanel(const TArray<class UFortOptionsMenuInputData*>& InputData)
 {

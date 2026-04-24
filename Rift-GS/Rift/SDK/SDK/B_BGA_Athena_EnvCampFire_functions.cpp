@@ -36,6 +36,216 @@ void AB_BGA_Athena_EnvCampFire_C::ExecuteUbergraph_B_BGA_Athena_EnvCampFire(int3
 }
 
 
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.Begin_Wood_Burn_FX
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_BGA_Athena_EnvCampFire_C::Begin_Wood_Burn_FX()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "Begin_Wood_Burn_FX");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.CheckInitialOverlappingActors
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_BGA_Athena_EnvCampFire_C::CheckInitialOverlappingActors()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "CheckInitialOverlappingActors");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void AB_BGA_Athena_EnvCampFire_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.OnCurieElementDetached_BP
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTag&              ElementTag                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+
+void AB_BGA_Athena_EnvCampFire_C::OnCurieElementDetached_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& ElementTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "OnCurieElementDetached_BP");
+
+	Params::B_BGA_Athena_EnvCampFire_C_OnCurieElementDetached_BP Parms{};
+
+	Parms.CurieContainerHandle = std::move(CurieContainerHandle);
+	Parms.ElementTag = std::move(ElementTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.OnCurieElementAttached_BP
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FCurieContainerHandle&     CurieContainerHandle                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTag&              ElementTag                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+
+void AB_BGA_Athena_EnvCampFire_C::OnCurieElementAttached_BP(const struct FCurieContainerHandle& CurieContainerHandle, const struct FGameplayTag& ElementTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "OnCurieElementAttached_BP");
+
+	Params::B_BGA_Athena_EnvCampFire_C_OnCurieElementAttached_BP Parms{};
+
+	Parms.CurieContainerHandle = std::move(CurieContainerHandle);
+	Parms.ElementTag = std::move(ElementTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.EndFireInteract
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_BGA_Athena_EnvCampFire_C::EndFireInteract()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "EndFireInteract");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_BGA_Athena_EnvCampFire_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+
+	Params::B_BGA_Athena_EnvCampFire_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature Parms{};
+
+	Parms.OverlappedComponent = OverlappedComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.OtherBodyIndex = OtherBodyIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
+// (HasOutParams, BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void AB_BGA_Athena_EnvCampFire_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+
+	Params::B_BGA_Athena_EnvCampFire_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature Parms{};
+
+	Parms.OverlappedComponent = OverlappedComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.OtherBodyIndex = OtherBodyIndex;
+	Parms.bFromSweep = bFromSweep;
+	Parms.SweepResult = std::move(SweepResult);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.CheckReplaceCampfire
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_BGA_Athena_EnvCampFire_C::CheckReplaceCampfire()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "CheckReplaceCampfire");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.PayStokeCost
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFortPawn*                        InteractingPawn_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_BGA_Athena_EnvCampFire_C::PayStokeCost(class AFortPawn* InteractingPawn_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "PayStokeCost");
+
+	Params::B_BGA_Athena_EnvCampFire_C_PayStokeCost Parms{};
+
+	Parms.InteractingPawn_0 = InteractingPawn_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.PayLightCost
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFortPawn*                        InteractingPawn_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_BGA_Athena_EnvCampFire_C::PayLightCost(class AFortPawn* InteractingPawn_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "PayLightCost");
+
+	Params::B_BGA_Athena_EnvCampFire_C_PayLightCost Parms{};
+
+	Parms.InteractingPawn_0 = InteractingPawn_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.HandleCharacterVariantTransition
 // (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -114,26 +324,6 @@ void AB_BGA_Athena_EnvCampFire_C::SpecialS7LightsFireAfterOut()
 }
 
 
-// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.BlueprintOnInteract
-// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
-// Parameters:
-// const class AFortPawn*                  InteractingPawn_0                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_BGA_Athena_EnvCampFire_C::BlueprintOnInteract(const class AFortPawn* InteractingPawn_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "BlueprintOnInteract");
-
-	Params::B_BGA_Athena_EnvCampFire_C_BlueprintOnInteract Parms{};
-
-	Parms.InteractingPawn_0 = InteractingPawn_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.CheckDestroyDisabled
 // (BlueprintCallable, BlueprintEvent)
 
@@ -143,34 +333,6 @@ void AB_BGA_Athena_EnvCampFire_C::CheckDestroyDisabled()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "CheckDestroyDisabled");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.Light
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_BGA_Athena_EnvCampFire_C::Light()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "Light");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.GoOut
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_BGA_Athena_EnvCampFire_C::GoOut()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "GoOut");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -266,6 +428,70 @@ void AB_BGA_Athena_EnvCampFire_C::ReceiveBeginPlay()
 }
 
 
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.GoOut
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_BGA_Athena_EnvCampFire_C::GoOut()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "GoOut");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.Light
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_BGA_Athena_EnvCampFire_C::Light()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "Light");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.BlueprintOnInteract
+// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
+// Parameters:
+// const class AFortPawn*                  InteractingPawn_0                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_BGA_Athena_EnvCampFire_C::BlueprintOnInteract(const class AFortPawn* InteractingPawn_0, const EInteractionBeingAttempted InteractionBeingAttempted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "BlueprintOnInteract");
+
+	Params::B_BGA_Athena_EnvCampFire_C_BlueprintOnInteract Parms{};
+
+	Parms.InteractingPawn_0 = InteractingPawn_0;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.OnCurieActive_A24E3C804D14344FC0E5E0B5CDB4FF55
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_BGA_Athena_EnvCampFire_C::OnCurieActive_A24E3C804D14344FC0E5E0B5CDB4FF55()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "OnCurieActive_A24E3C804D14344FC0E5E0B5CDB4FF55");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.OnReady_9F4554BE40FCB41157835B9AD897EE69
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -287,20 +513,6 @@ void AB_BGA_Athena_EnvCampFire_C::OnReady_9F4554BE40FCB41157835B9AD897EE69(class
 	Parms.PlaylistContextTags = std::move(PlaylistContextTags);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AB_BGA_Athena_EnvCampFire_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -393,13 +605,63 @@ void AB_BGA_Athena_EnvCampFire_C::OnRep_LitRepBool()
 }
 
 
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.GetCostReActivate
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 AB_BGA_Athena_EnvCampFire_C::GetCostReActivate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "GetCostReActivate");
+
+	Params::B_BGA_Athena_EnvCampFire_C_GetCostReActivate Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.OnRep_Stoked
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_BGA_Athena_EnvCampFire_C::OnRep_Stoked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "OnRep_Stoked");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.DisableIfBelowFlood
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_BGA_Athena_EnvCampFire_C::DisableIfBelowFlood()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "DisableIfBelowFlood");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.BlueprintCanInteract
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // const class AFortPawn*                  InteractingPawn_0                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const ETInteractionType                 InteractionType                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool AB_BGA_Athena_EnvCampFire_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn_0) const
+bool AB_BGA_Athena_EnvCampFire_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn_0, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -409,6 +671,8 @@ bool AB_BGA_Athena_EnvCampFire_C::BlueprintCanInteract(const class AFortPawn* In
 	Params::B_BGA_Athena_EnvCampFire_C_BlueprintCanInteract Parms{};
 
 	Parms.InteractingPawn_0 = InteractingPawn_0;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+	Parms.InteractionType = InteractionType;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -417,12 +681,13 @@ bool AB_BGA_Athena_EnvCampFire_C::BlueprintCanInteract(const class AFortPawn* In
 
 
 // Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.BlueprintGetInteractionString
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // const class AFortPawn*                  InteractingPawn_0                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-class FText AB_BGA_Athena_EnvCampFire_C::BlueprintGetInteractionString(const class AFortPawn* InteractingPawn_0) const
+class FText AB_BGA_Athena_EnvCampFire_C::BlueprintGetInteractionString(const class AFortPawn* InteractingPawn_0, const EInteractionBeingAttempted InteractionBeingAttempted) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -432,10 +697,84 @@ class FText AB_BGA_Athena_EnvCampFire_C::BlueprintGetInteractionString(const cla
 	Params::B_BGA_Athena_EnvCampFire_C_BlueprintGetInteractionString Parms{};
 
 	Parms.InteractingPawn_0 = InteractingPawn_0;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.BlueprintGetFailedInteractionString
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// const class AFortPawn*                  InteractingPawn_0                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+class FText AB_BGA_Athena_EnvCampFire_C::BlueprintGetFailedInteractionString(const class AFortPawn* InteractingPawn_0, const EInteractionBeingAttempted InteractionBeingAttempted) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "BlueprintGetFailedInteractionString");
+
+	Params::B_BGA_Athena_EnvCampFire_C_BlueprintGetFailedInteractionString Parms{};
+
+	Parms.InteractingPawn_0 = InteractingPawn_0;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.HasInfiniteResources
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// class APawn*                            Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   HasInfiniteResources_0                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AB_BGA_Athena_EnvCampFire_C::HasInfiniteResources(class APawn* Pawn, bool* HasInfiniteResources_0) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "HasInfiniteResources");
+
+	Params::B_BGA_Athena_EnvCampFire_C_HasInfiniteResources Parms{};
+
+	Parms.Pawn = Pawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (HasInfiniteResources_0 != nullptr)
+		*HasInfiniteResources_0 = Parms.HasInfiniteResources_0;
+}
+
+
+// Function B_BGA_Athena_EnvCampFire.B_BGA_Athena_EnvCampFire_C.ShouldPlayNativeCurieFX
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// EFortCurieNativeFXType                  FXType                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FFortNativeCurieFXResponse*      OutResponse                                            (Parm, OutParm, NoDestructor)
+
+void AB_BGA_Athena_EnvCampFire_C::ShouldPlayNativeCurieFX(EFortCurieNativeFXType FXType, struct FFortNativeCurieFXResponse* OutResponse) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_BGA_Athena_EnvCampFire_C", "ShouldPlayNativeCurieFX");
+
+	Params::B_BGA_Athena_EnvCampFire_C_ShouldPlayNativeCurieFX Parms{};
+
+	Parms.FXType = FXType;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutResponse != nullptr)
+		*OutResponse = std::move(Parms.OutResponse);
 }
 
 

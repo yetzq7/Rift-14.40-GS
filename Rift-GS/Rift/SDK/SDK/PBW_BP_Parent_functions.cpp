@@ -36,20 +36,6 @@ void APBW_BP_Parent_C::ExecuteUbergraph_PBW_BP_Parent(int32 EntryPoint)
 }
 
 
-// Function PBW_BP_Parent.PBW_BP_Parent_C.OnRep_Random Chance
-// (BlueprintCallable, BlueprintEvent)
-
-void APBW_BP_Parent_C::OnRep_Random_Chance()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PBW_BP_Parent_C", "OnRep_Random Chance");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function PBW_BP_Parent.PBW_BP_Parent_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -64,15 +50,15 @@ void APBW_BP_Parent_C::ReceiveBeginPlay()
 }
 
 
-// Function PBW_BP_Parent.PBW_BP_Parent_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function PBW_BP_Parent.PBW_BP_Parent_C.OnRep_Random Chance
+// (BlueprintCallable, BlueprintEvent)
 
-void APBW_BP_Parent_C::UserConstructionScript()
+void APBW_BP_Parent_C::OnRep_Random_Chance()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PBW_BP_Parent_C", "UserConstructionScript");
+		Func = Class->GetFunction("PBW_BP_Parent_C", "OnRep_Random Chance");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

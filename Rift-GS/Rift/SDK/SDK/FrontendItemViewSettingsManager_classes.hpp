@@ -21,8 +21,8 @@ SDK_NAMESPACE_START
 class UFrontendItemViewSettingsManager_C final : public UFortFrontendItemViewSettingsManager
 {
 public:
-	struct FFortItemViewSettings GetItemViewSettings(const EFrontEndCamera Camera, const ESubGame GameMode, const class UFortItemDefinition* ItemDefinition) const;
-	bool Is_Hero_or_Previews_on_Hero(class UFortItemDefinition* Item_Definition) const;
+	struct FFortItemViewSettings GetItemViewSettings(const EFrontEndCamera Camera, const ESubGame GameMode, const class UFortItemDefinition* ItemDefinition, const int32 SubslotIndex) const;
+	bool Is_Hero_or_Previews_on_Hero(class UFortItemDefinition* Item_Definition, int32 SubslotIndex) const;
 
 public:
 	static class UClass* StaticClass()

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Athena_PlayerCameraModeBase.Athena_PlayerCameraModeBase_C
-// 0x0000 (0x0C50 - 0x0C50)
+// 0x0000 (0x0DC0 - 0x0DC0)
 class UAthena_PlayerCameraModeBase_C : public UFortCameraMode_ThirdPerson
 {
 public:

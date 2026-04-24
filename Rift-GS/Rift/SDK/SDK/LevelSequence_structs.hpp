@@ -10,23 +10,22 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "MovieScene_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
-// ScriptStruct LevelSequence.LevelSequenceObject
-// 0x0038 (0x0038 - 0x0000)
-struct FLevelSequenceObject final
+// ScriptStruct LevelSequence.LevelSequenceCameraSettings
+// 0x0002 (0x0002 - 0x0000)
+struct FLevelSequenceCameraSettings final
 {
 public:
-	TLazyObjectPtr<class UObject>                 ObjectOrOwner;                                     // 0x0000(0x001C)(IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ComponentName;                                     // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TWeakObjectPtr<class UObject>                 CachedComponent;                                   // 0x0030(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bOverrideAspectRatioAxisConstraint;                // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAspectRatioAxisConstraint                    AspectRatioAxisConstraint;                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLevelSequenceObject;
+DUMPER7_ASSERTS_FLevelSequenceCameraSettings;
 
 // ScriptStruct LevelSequence.BoundActorProxy
 // 0x0001 (0x0001 - 0x0000)
@@ -53,7 +52,7 @@ DUMPER7_ASSERTS_FLevelSequenceBindingReference;
 struct FLevelSequenceBindingReferenceArray final
 {
 public:
-	TArray<struct FLevelSequenceBindingReference> References;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FLevelSequenceBindingReference> References;                                        // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FLevelSequenceBindingReferenceArray;
 
@@ -62,10 +61,19 @@ DUMPER7_ASSERTS_FLevelSequenceBindingReferenceArray;
 struct FLevelSequenceBindingReferences final
 {
 public:
-	TMap<struct FGuid, struct FLevelSequenceBindingReferenceArray> BindingIdToReferences;            // 0x0000(0x0050)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TSet<struct FGuid>                            AnimSequenceInstances;                             // 0x0050(0x0050)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TMap<struct FGuid, struct FLevelSequenceBindingReferenceArray> BindingIdToReferences;            // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
+	TSet<struct FGuid>                            AnimSequenceInstances;                             // 0x0050(0x0050)(NativeAccessSpecifierPrivate)
 };
 DUMPER7_ASSERTS_FLevelSequenceBindingReferences;
+
+// ScriptStruct LevelSequence.LevelSequenceObjectReferenceMap
+// 0x0050 (0x0050 - 0x0000)
+struct alignas(0x08) FLevelSequenceObjectReferenceMap final
+{
+public:
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FLevelSequenceObjectReferenceMap;
 
 // ScriptStruct LevelSequence.LevelSequenceLegacyObjectReference
 // 0x0020 (0x0020 - 0x0000)
@@ -76,14 +84,17 @@ public:
 };
 DUMPER7_ASSERTS_FLevelSequenceLegacyObjectReference;
 
-// ScriptStruct LevelSequence.LevelSequenceObjectReferenceMap
-// 0x0050 (0x0050 - 0x0000)
-struct alignas(0x08) FLevelSequenceObjectReferenceMap final
+// ScriptStruct LevelSequence.LevelSequenceObject
+// 0x0038 (0x0038 - 0x0000)
+struct FLevelSequenceObject final
 {
 public:
-	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TLazyObjectPtr<class UObject>                 ObjectOrOwner;                                     // 0x0000(0x001C)(IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ComponentName;                                     // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TWeakObjectPtr<class UObject>                 CachedComponent;                                   // 0x0030(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FLevelSequenceObjectReferenceMap;
+DUMPER7_ASSERTS_FLevelSequenceObject;
 
 // ScriptStruct LevelSequence.LevelSequenceSnapshotSettings
 // 0x000C (0x000C - 0x0000)
@@ -97,7 +108,7 @@ public:
 DUMPER7_ASSERTS_FLevelSequenceSnapshotSettings;
 
 // ScriptStruct LevelSequence.LevelSequencePlayerSnapshot
-// 0x0088 (0x0088 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct FLevelSequencePlayerSnapshot final
 {
 public:
@@ -108,9 +119,12 @@ public:
 	struct FQualifiedFrameTime                    CurrentShotLocalTime;                              // 0x0040(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FQualifiedFrameTime                    CurrentShotSourceTime;                             // 0x0050(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 SourceTimecode;                                    // 0x0060(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCameraComponent*                       CameraComponent;                                   // 0x0070(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLevelSequenceSnapshotSettings         Settings;                                          // 0x0078(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMovieSceneSequenceID                  ShotID;                                            // 0x0084(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UCameraComponent>        CameraComponent;                                   // 0x0070(0x0028)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, EditConst, InstancedReference, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLevelSequenceSnapshotSettings         Settings;                                          // 0x0098(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULevelSequence*                         ActiveShot;                                        // 0x00A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMovieSceneSequenceID                  ShotID;                                            // 0x00B0(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FLevelSequencePlayerSnapshot;
 

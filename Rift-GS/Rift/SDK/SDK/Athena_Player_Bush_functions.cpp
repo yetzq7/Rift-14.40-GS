@@ -36,6 +36,20 @@ void AAthena_Player_Bush_C::ExecuteUbergraph_Athena_Player_Bush(int32 EntryPoint
 }
 
 
+// Function Athena_Player_Bush.Athena_Player_Bush_C.RemoveBush
+// (BlueprintCallable, BlueprintEvent)
+
+void AAthena_Player_Bush_C::RemoveBush()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Athena_Player_Bush_C", "RemoveBush");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Athena_Player_Bush.Athena_Player_Bush_C.OnDeathServer
 // (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -125,6 +139,30 @@ void AAthena_Player_Bush_C::UserConstructionScript()
 		Func = Class->GetFunction("Athena_Player_Bush_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Athena_Player_Bush.Athena_Player_Bush_C.CheckInstIsOwner
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor**                          Owner_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AAthena_Player_Bush_C::CheckInstIsOwner(class AActor* DamageCauser, class AActor** Owner_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Athena_Player_Bush_C", "CheckInstIsOwner");
+
+	Params::Athena_Player_Bush_C_CheckInstIsOwner Parms{};
+
+	Parms.DamageCauser = DamageCauser;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Owner_0 != nullptr)
+		*Owner_0 = Parms.Owner_0;
 }
 
 

@@ -1,4 +1,4 @@
-#pragma once
+#pragma once 
 
 inline bool ReadyToStartMatch(AFortGameModeAthena* GameMode)
 {
@@ -11,7 +11,6 @@ inline bool ReadyToStartMatch(AFortGameModeAthena* GameMode)
 		GameState->CurrentPlaylistInfo.BasePlaylist = Playlist;
 		GameState->CurrentPlaylistInfo.OverridePlaylist = Playlist;
 		GameState->CurrentPlaylistInfo.PlaylistReplicationKey++;
-
 
 		GameMode->CurrentPlaylistId = Playlist->PlaylistId;
 		GameMode->CurrentPlaylistName = Playlist->PlaylistName;

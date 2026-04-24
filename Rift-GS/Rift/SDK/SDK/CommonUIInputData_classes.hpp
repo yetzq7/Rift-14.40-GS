@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass CommonUIInputData.CommonUIInputData_C
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0048 - 0x0048)
 class UCommonUIInputData_C final : public UCommonUIInputData
 {
 public:

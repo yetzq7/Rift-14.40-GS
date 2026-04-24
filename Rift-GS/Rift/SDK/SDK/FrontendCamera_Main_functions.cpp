@@ -16,8 +16,28 @@
 
 SDK_NAMESPACE_START
 
+// Function FrontendCamera_Main.FrontendCamera_Main_C.OnActivated
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AFrontendCamera_Main_C::OnActivated(class AFortPlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FrontendCamera_Main_C", "OnActivated");
+
+	Params::FrontendCamera_Main_C_OnActivated Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function FrontendCamera_Main.FrontendCamera_Main_C.ExecuteUbergraph_FrontendCamera_Main
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -33,34 +53,6 @@ void AFrontendCamera_Main_C::ExecuteUbergraph_FrontendCamera_Main(int32 EntryPoi
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FrontendCamera_Main.FrontendCamera_Main_C.OnActivated
-// (Event, Public, BlueprintEvent)
-
-void AFrontendCamera_Main_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FrontendCamera_Main_C", "OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FrontendCamera_Main.FrontendCamera_Main_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AFrontendCamera_Main_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FrontendCamera_Main_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

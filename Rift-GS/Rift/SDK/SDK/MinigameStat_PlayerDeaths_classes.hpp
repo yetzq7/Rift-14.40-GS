@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass MinigameStat_PlayerDeaths.MinigameStat_PlayerDeaths_C
-// 0x0000 (0x0188 - 0x0188)
+// 0x0000 (0x0190 - 0x0190)
 class UMinigameStat_PlayerDeaths_C final : public UFortMinigameStatFilter
 {
 public:

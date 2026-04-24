@@ -19,7 +19,7 @@ SDK_NAMESPACE_START
 // Function AndroidPermission.AndroidPermissionFunctionLibrary.AcquirePermissions
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const TArray<class FString>&            Permissions                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            Permissions                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UAndroidPermissionCallbackProxy*  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UAndroidPermissionCallbackProxy* UAndroidPermissionFunctionLibrary::AcquirePermissions(const TArray<class FString>& Permissions)

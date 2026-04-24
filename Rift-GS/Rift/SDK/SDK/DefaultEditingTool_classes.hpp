@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass DefaultEditingTool.DefaultEditingTool_C
-// 0x0000 (0x09B8 - 0x09B8)
+// 0x0000 (0x0D00 - 0x0D00)
 class ADefaultEditingTool_C final : public AFortWeap_EditingTool
 {
 public:

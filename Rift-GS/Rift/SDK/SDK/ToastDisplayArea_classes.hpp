@@ -11,36 +11,23 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUI_classes.hpp"
-#include "FortniteGame_structs.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ToastDisplayArea.ToastDisplayArea_C
-// 0x0040 (0x0278 - 0x0238)
-class UToastDisplayArea_C final : public UCommonUserWidget
+// 0x0018 (0x02E8 - 0x02D0)
+class UToastDisplayArea_C final : public UFortToastDisplayArea
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UPowerToastWidget_C*                    PowerToastWidget;                                  // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_0;                                        // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UToastWidget_MinorError_C*              ToastWidget_MinorError;                            // 0x0250(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UToastWidget_New_C*                     ToastWidget_New;                                   // 0x0258(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortUINotificationQueue*               ToastQueue;                                        // 0x0260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortUINotification*                    CurrentToast;                                      // 0x0268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bCurrentlyDisplayingToast;                         // 0x0270(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USafeZone*                              SafeZone_0;                                        // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFriendSubscriptionToastWidget_C*       NewVar_0;                                          // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void TestFrontendToast();
 	void ExecuteUbergraph_ToastDisplayArea(int32 EntryPoint);
-	void BndEvt__ToastWidget_MinorError_K2Node_ComponentBoundEvent_3_OnFinishedToast__DelegateSignature();
-	void BndEvt__ToastWidget_New_K2Node_ComponentBoundEvent_9_OnFinishedToast__DelegateSignature();
-	void BndEvt__PowerToastWidget_K2Node_ComponentBoundEvent_8_OnFinishedToast__DelegateSignature();
-	void Destruct();
-	void HandleNewToastAvailable();
-	void Construct();
-	void RegisterToastHandler();
-	void AttemptDisplayNextToast();
 
 public:
 	static class UClass* StaticClass()

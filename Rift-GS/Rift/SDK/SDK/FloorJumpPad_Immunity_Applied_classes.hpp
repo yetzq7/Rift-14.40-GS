@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass FloorJumpPad_Immunity_Applied.FloorJumpPad_Immunity_Applied_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UFloorJumpPad_Immunity_Applied_C final : public UGameplayEffect
 {
 public:

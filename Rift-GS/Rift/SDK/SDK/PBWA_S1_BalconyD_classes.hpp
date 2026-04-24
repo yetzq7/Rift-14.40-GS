@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PBWA_S1_BalconyD.PBWA_S1_BalconyD_C
-// 0x0000 (0x0BE8 - 0x0BE8)
+// 0x0000 (0x0B70 - 0x0B70)
 class APBWA_S1_BalconyD_C final : public ABuildingFloor
 {
 public:

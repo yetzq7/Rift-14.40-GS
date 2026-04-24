@@ -24,14 +24,14 @@ struct GamepadCustomActionSelectorPanel_v3_C_ExecuteUbergraph_GamepadCustomActio
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UFortOptionsMenuInputData*>      K2Node_CustomEvent_InputData;                      // 0x0008(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
+	TArray<class UFortOptionsMenuInputData*>      K2Node_CustomEvent_InputData;                      // 0x0008(0x0010)(ConstParm, ReferenceParm, HasGetValueTypeHash)
 	class UObject*                                K2Node_CustomEvent_Item;                           // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UObject* Item)>          K2Node_CreateDelegate_OutputDelegate;              // 0x0020(0x0010)(ZeroConstructor, NoDestructor)
 	class UGamepadKeyTextButton_C*                K2Node_DynamicCast_AsGamepad_Key_Text_Button;      // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool* bPassThrough)>           K2Node_CreateDelegate_OutputDelegate1;             // 0x0040(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void(bool* bPassThrough)>           K2Node_CreateDelegate_OutputDelegate_1;            // 0x0040(0x0010)(ZeroConstructor, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -45,7 +45,7 @@ public:
 	class UGamepadKeyTextButton_C*                CallFunc_CreateCustomListItem_ReturnItem;          // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool* bPassThrough)>           K2Node_CreateDelegate_OutputDelegate2;             // 0x0084(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void(bool* bPassThrough)>           K2Node_CreateDelegate_OutputDelegate_2;            // 0x0084(0x0010)(ZeroConstructor, NoDestructor)
 };
 DUMPER7_ASSERTS_GamepadCustomActionSelectorPanel_v3_C_ExecuteUbergraph_GamepadCustomActionSelectorPanel_v3;
 
@@ -63,7 +63,7 @@ DUMPER7_ASSERTS_GamepadCustomActionSelectorPanel_v3_C_BP_OnItemClicked_Bind;
 struct GamepadCustomActionSelectorPanel_v3_C_UpdatePanel final
 {
 public:
-	TArray<class UFortOptionsMenuInputData*>      InputData;                                         // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<class UFortOptionsMenuInputData*>      InputData;                                         // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_GamepadCustomActionSelectorPanel_v3_C_UpdatePanel;
 
@@ -77,7 +77,7 @@ public:
 DUMPER7_ASSERTS_GamepadCustomActionSelectorPanel_v3_C_HandleBack;
 
 // Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.CreateCustomListItem
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct GamepadCustomActionSelectorPanel_v3_C_CreateCustomListItem final
 {
 public:
@@ -94,17 +94,16 @@ public:
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortInputData*                         CallFunc_GetFortInputDataForBlueprint_ReturnValue; // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   Temp_text_Variable;                                // 0x0050(0x0018)(ConstParm)
-	class FText                                   CallFunc_GetScreenLabel_ReturnValue;               // 0x0068(0x0018)()
-	struct FKey                                   CallFunc_GetKeyForAction_ReturnValue;              // 0x0080(0x0018)(HasGetValueTypeHash)
-	class UGamepadKeyTextButton_C*                CallFunc_Create_ReturnValue;                       // 0x0098(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue1;                  // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue2;                  // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetCustomGamepadInputPresetName_ReturnValue; // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x00C4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue_1;                 // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetCustomGamepadInputPresetName_ReturnValue; // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortInputData*                         CallFunc_GetFortInputDataForBlueprint_ReturnValue; // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGamepadKeyTextButton_C*                CallFunc_Create_ReturnValue;                       // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetScreenLabel_ReturnValue;               // 0x0080(0x0018)()
+	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue_2;                 // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKey                                   CallFunc_GetKeyForAction_ReturnValue;              // 0x00A0(0x0018)(HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_GamepadCustomActionSelectorPanel_v3_C_CreateCustomListItem;
 

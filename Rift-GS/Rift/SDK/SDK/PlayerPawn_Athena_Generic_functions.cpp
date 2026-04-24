@@ -36,6 +36,28 @@ void APlayerPawn_Athena_Generic_C::ExecuteUbergraph_PlayerPawn_Athena_Generic(in
 }
 
 
+// Function PlayerPawn_Athena_Generic.PlayerPawn_Athena_Generic_C.GameplayCue.Loop.Shadow.Bomb
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EGameplayCueEvent                       EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayCueParameters&    Parameters                                             (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
+
+void APlayerPawn_Athena_Generic_C::GameplayCue_Loop_Shadow_Bomb(EGameplayCueEvent EventType, const struct FGameplayCueParameters& Parameters)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerPawn_Athena_Generic_C", "GameplayCue.Loop.Shadow.Bomb");
+
+	Params::PlayerPawn_Athena_Generic_C_GameplayCue_Loop_Shadow_Bomb Parms{};
+
+	Parms.EventType = EventType;
+	Parms.Parameters = std::move(Parameters);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function PlayerPawn_Athena_Generic.PlayerPawn_Athena_Generic_C.GameplayCue.Shield.Reapplied
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -164,14 +186,15 @@ void APlayerPawn_Athena_Generic_C::AnimTrailsDisable()
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UParticleSystem*                  ParticleSystemReference                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UNiagaraSystem*                   NiagaraSystemReference                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             FirstSocketName                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             SecondSocketName                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   Width                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UParticleSystemComponent*         OverrideParticleComp                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFXSystemComponent*               OverrideParticleComp                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             OverideFirstSocketName                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             OverideSecondSocketName                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void APlayerPawn_Athena_Generic_C::AnimTrailsSetup(class UParticleSystem* ParticleSystemReference, class FName FirstSocketName, class FName SecondSocketName, float Width, class UParticleSystemComponent* OverrideParticleComp, class FName OverideFirstSocketName, class FName OverideSecondSocketName)
+void APlayerPawn_Athena_Generic_C::AnimTrailsSetup(class UParticleSystem* ParticleSystemReference, class UNiagaraSystem* NiagaraSystemReference, class FName FirstSocketName, class FName SecondSocketName, float Width, class UFXSystemComponent* OverrideParticleComp, class FName OverideFirstSocketName, class FName OverideSecondSocketName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -181,6 +204,7 @@ void APlayerPawn_Athena_Generic_C::AnimTrailsSetup(class UParticleSystem* Partic
 	Params::PlayerPawn_Athena_Generic_C_AnimTrailsSetup Parms{};
 
 	Parms.ParticleSystemReference = ParticleSystemReference;
+	Parms.NiagaraSystemReference = NiagaraSystemReference;
 	Parms.FirstSocketName = FirstSocketName;
 	Parms.SecondSocketName = SecondSocketName;
 	Parms.Width = Width;
@@ -466,29 +490,83 @@ void APlayerPawn_Athena_Generic_C::OnDamagePlayEffects(float Damage, const struc
 }
 
 
+// Function PlayerPawn_Athena_Generic.PlayerPawn_Athena_Generic_C.MeleeSwingLeft_End
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void APlayerPawn_Athena_Generic_C::MeleeSwingLeft_End()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerPawn_Athena_Generic_C", "MeleeSwingLeft_End");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PlayerPawn_Athena_Generic.PlayerPawn_Athena_Generic_C.MeleeSwingRight_End
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void APlayerPawn_Athena_Generic_C::MeleeSwingRight_End()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerPawn_Athena_Generic_C", "MeleeSwingRight_End");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function PlayerPawn_Athena_Generic.PlayerPawn_Athena_Generic_C.MeleeSwingLeft
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    First_Left                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void APlayerPawn_Athena_Generic_C::MeleeSwingLeft()
+void APlayerPawn_Athena_Generic_C::MeleeSwingLeft(bool First_Left)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("PlayerPawn_Athena_Generic_C", "MeleeSwingLeft");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::PlayerPawn_Athena_Generic_C_MeleeSwingLeft Parms{};
+
+	Parms.First_Left = First_Left;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function PlayerPawn_Athena_Generic.PlayerPawn_Athena_Generic_C.MeleeSwingRight
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    First_Right                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void APlayerPawn_Athena_Generic_C::MeleeSwingRight()
+void APlayerPawn_Athena_Generic_C::MeleeSwingRight(bool First_Right)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("PlayerPawn_Athena_Generic_C", "MeleeSwingRight");
+
+	Params::PlayerPawn_Athena_Generic_C_MeleeSwingRight Parms{};
+
+	Parms.First_Right = First_Right;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PlayerPawn_Athena_Generic.PlayerPawn_Athena_Generic_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void APlayerPawn_Athena_Generic_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerPawn_Athena_Generic_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -500,7 +578,7 @@ void APlayerPawn_Athena_Generic_C::MeleeSwingRight()
 // EFortCustomPartType                     BodyType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class USkeletalMeshComponent*&          DuplicatedSkeletalMeshComponent                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UMaterialInterface*               Material_to_Apply                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class UMaterialInstanceDynamic*>&Empty_MID_Array                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class UMaterialInstanceDynamic*>&Empty_MID_Array                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 // int32                                   TranslucentSortPriority                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void APlayerPawn_Athena_Generic_C::Create_and_Duplicate_Effect_Skeletal_Meshes_Parent(EFortCustomPartType BodyType, class USkeletalMeshComponent*& DuplicatedSkeletalMeshComponent, class UMaterialInterface* Material_to_Apply, TArray<class UMaterialInstanceDynamic*>& Empty_MID_Array, int32 TranslucentSortPriority)
@@ -552,7 +630,7 @@ void APlayerPawn_Athena_Generic_C::SlaveAMeshToTheBody(class USkeletalMeshCompon
 // Parameters:
 // EFortCustomPartType                     BodyType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UMaterialInterface*               Material_to_Apply                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class UMaterialInstanceDynamic*>&Empty_MID_Array                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class UMaterialInstanceDynamic*>&Empty_MID_Array                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 // int32                                   TranslucentSortPriority                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UPoseableMeshComponent*&          PoseableMesh                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -613,30 +691,6 @@ void APlayerPawn_Athena_Generic_C::Are_the_wind_and_water_RTT_passes_enabled(boo
 }
 
 
-// Function PlayerPawn_Athena_Generic.PlayerPawn_Athena_Generic_C.GetHitPoint FXLocation
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Object                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector*                         OutputLocation                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APlayerPawn_Athena_Generic_C::GetHitPoint_FXLocation(class AActor* Object, struct FVector* OutputLocation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawn_Athena_Generic_C", "GetHitPoint FXLocation");
-
-	Params::PlayerPawn_Athena_Generic_C_GetHitPoint_FXLocation Parms{};
-
-	Parms.Object = Object;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutputLocation != nullptr)
-		*OutputLocation = std::move(Parms.OutputLocation);
-}
-
-
 // Function PlayerPawn_Athena_Generic.PlayerPawn_Athena_Generic_C.ReInitFrontendPetDisplay
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -646,6 +700,40 @@ void APlayerPawn_Athena_Generic_C::ReInitFrontendPetDisplay()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("PlayerPawn_Athena_Generic_C", "ReInitFrontendPetDisplay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PlayerPawn_Athena_Generic.PlayerPawn_Athena_Generic_C.PlayShieldDestroyedSound
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayCueParameters&    GameplayCueParameters                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+
+void APlayerPawn_Athena_Generic_C::PlayShieldDestroyedSound(const struct FGameplayCueParameters& GameplayCueParameters)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerPawn_Athena_Generic_C", "PlayShieldDestroyedSound");
+
+	Params::PlayerPawn_Athena_Generic_C_PlayShieldDestroyedSound Parms{};
+
+	Parms.GameplayCueParameters = std::move(GameplayCueParameters);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PlayerPawn_Athena_Generic.PlayerPawn_Athena_Generic_C.OnRep_CapsuleEnlarged
+// (BlueprintCallable, BlueprintEvent)
+
+void APlayerPawn_Athena_Generic_C::OnRep_CapsuleEnlarged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerPawn_Athena_Generic_C", "OnRep_CapsuleEnlarged");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -669,20 +757,6 @@ void APlayerPawn_Athena_Generic_C::Melee_Effect_Color(struct FVector* Melee_Colo
 
 	if (Melee_Color_Set != nullptr)
 		*Melee_Color_Set = std::move(Parms.Melee_Color_Set);
-}
-
-
-// Function PlayerPawn_Athena_Generic.PlayerPawn_Athena_Generic_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void APlayerPawn_Athena_Generic_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawn_Athena_Generic_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

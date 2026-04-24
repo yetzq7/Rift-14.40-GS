@@ -53,8 +53,8 @@ void AB_Prj_ThrownConsumable_Parent_C::ReceiveBeginPlay()
 // Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.OnExploded
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference)
+// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 
 void AB_Prj_ThrownConsumable_Parent_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
 {
@@ -233,20 +233,6 @@ void AB_Prj_ThrownConsumable_Parent_C::ReceiveAnyDamage(float Damage, const clas
 	Parms.DamageCauser = DamageCauser;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_ThrownConsumable_Parent_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_ThrownConsumable_Parent_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

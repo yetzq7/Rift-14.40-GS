@@ -16,6 +16,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function MiniCraftingIngredientList.MiniCraftingIngredientList_C.AddListEntry
+// 0x0008 (0x0008 - 0x0000)
+struct MiniCraftingIngredientList_C_AddListEntry final
+{
+public:
+	class UFortItemQuantityListEntryBase*         ListEntry;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_MiniCraftingIngredientList_C_AddListEntry;
+
 // Function MiniCraftingIngredientList.MiniCraftingIngredientList_C.ExecuteUbergraph_MiniCraftingIngredientList
 // 0x0028 (0x0028 - 0x0000)
 struct MiniCraftingIngredientList_C_ExecuteUbergraph_MiniCraftingIngredientList final
@@ -25,18 +34,9 @@ public:
 	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFortItemQuantityListEntryBase*         K2Node_Event_ListEntry;                            // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWrapBoxSlot*                           CallFunc_AddChildWrapBox_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWrapBoxSlot*                           CallFunc_AddChildToWrapBox_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_MiniCraftingIngredientList_C_ExecuteUbergraph_MiniCraftingIngredientList;
-
-// Function MiniCraftingIngredientList.MiniCraftingIngredientList_C.AddListEntry
-// 0x0008 (0x0008 - 0x0000)
-struct MiniCraftingIngredientList_C_AddListEntry final
-{
-public:
-	class UFortItemQuantityListEntryBase*         ListEntry;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_MiniCraftingIngredientList_C_AddListEntry;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

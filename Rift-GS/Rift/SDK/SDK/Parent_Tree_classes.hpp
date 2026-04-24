@@ -10,9 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "En_LeafTypes_01_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
@@ -20,77 +19,46 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Parent_Tree.Parent_Tree_C
-// 0x0180 (0x0DB0 - 0x0C30)
-class AParent_Tree_C : public ABuildingProp
+// 0x00B8 (0x0C90 - 0x0BD8)
+class AParent_Tree_C final : public ABuildingProp
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C30(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USphereComponent*                       LeafPlacement;                                     // 0x0C38(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Wind_Direction;                                    // 0x0C40(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          EmitLeaves_;                                       // 0x0C4C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	bool                                          DebugMode_;                                        // 0x0C4D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	bool                                          DebugStorms_;                                      // 0x0C4E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	En_LeafTypes_01                               LeafTypes;                                         // 0x0C4F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	TArray<class FName>                           LeafEmitterNamesSpherical;                         // 0x0C50(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class FName>                           LeafEmitterNamesCylindrical;                       // 0x0C60(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UParticleSystemComponent*>       LeafEmitterComponents;                             // 0x0C70(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FVector                                EmitterSize;                                       // 0x0C80(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	float                                         Lifetime_Idle_;                                    // 0x0C8C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	float                                         Lifetime_Storm_;                                   // 0x0C90(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	float                                         SpawnRate_Idle_;                                   // 0x0C94(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	float                                         SpawnRate_Storm_;                                  // 0x0C98(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	float                                         WindIntensity_Idle_;                               // 0x0C9C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	float                                         WindIntensity_Storm_;                              // 0x0CA0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_CA4[0x4];                                      // 0x0CA4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     MediumLeafMaterialMasked;                          // 0x0CA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     SmallLeafMaterialMasked;                           // 0x0CB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     LargeLeafMaterialMasked;                           // 0x0CB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     PineLeafMaterialMasked;                            // 0x0CC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               LeafEmitterSetup;                                  // 0x0CC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         EmitterMaxDrawDistance;                            // 0x0CD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxEmitterCount;                                   // 0x0CD4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentEmitterCount;                               // 0x0CD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          StormActive_;                                      // 0x0CDC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_CDD[0x3];                                      // 0x0CDD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     MediumLeafMaterialTranslucent;                     // 0x0CE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     SmallLeafMaterialTranslucent;                      // 0x0CE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DistanceFieldsEnabled_;                            // 0x0CF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_CF1[0x7];                                      // 0x0CF1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     LargeLeafMaterialTranslucent;                      // 0x0CF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     PineLeafMaterialTranslucent;                       // 0x0D00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        Leaf_Emitter_Setup_Template;                       // 0x0D08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     Leaf_Material_Setup;                               // 0x0D10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFortWindImpulseHandle                 WindHandle;                                        // 0x0D18(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	bool                                          DebugWind;                                         // 0x0D1C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D1D[0x3];                                      // 0x0D1D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Debug_Wind_Intensity;                              // 0x0D20(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D24[0x4];                                      // 0x0D24(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               Debug_TempMaterial;                                // 0x0D28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DebugWindYaw;                                      // 0x0D30(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D34[0x4];                                      // 0x0D34(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMeshComponent*                   Wind_Intensity_Debug_Mesh;                         // 0x0D38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SpawnWindFX_;                                      // 0x0D40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D41[0xF];                                      // 0x0D41(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             WindFX_Transform;                                  // 0x0D50(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	float                                         WindFX_MaxDrawDistance;                            // 0x0D80(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D84[0x4];                                      // 0x0D84(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               WindFX;                                            // 0x0D88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SpawnFX;                                           // 0x0D90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D91[0x3];                                      // 0x0D91(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LeafRadius;                                        // 0x0D94(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                LeafCenter_Offset;                                 // 0x0D98(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseCylinder;                                       // 0x0DA4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_DA5[0x3];                                      // 0x0DA5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         NewVar_0;                                          // 0x0DA8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FVector                                Wind_Direction;                                    // 0x0BE0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          StormActive_;                                      // 0x0BEC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          DistanceFieldsEnabled_;                            // 0x0BED(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BEE[0x2];                                      // 0x0BEE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortWindImpulseHandle                 WindHandle;                                        // 0x0BF0(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	bool                                          DebugWind;                                         // 0x0BF4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BF5[0x3];                                      // 0x0BF5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Debug_Wind_Intensity;                              // 0x0BF8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BFC[0x4];                                      // 0x0BFC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               Debug_TempMaterial;                                // 0x0C00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DebugWindYaw;                                      // 0x0C08(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C0C[0x4];                                      // 0x0C0C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMeshComponent*                   Wind_Intensity_Debug_Mesh;                         // 0x0C10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SpawnWindFX_;                                      // 0x0C18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C19[0x7];                                      // 0x0C19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             WindFX_Transform;                                  // 0x0C20(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	float                                         WindFX_MaxDrawDistance;                            // 0x0C50(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C54[0x4];                                      // 0x0C54(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               WindFX;                                            // 0x0C58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LeafRadius;                                        // 0x0C60(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LeafCenter_Offset;                                 // 0x0C64(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseCylinder;                                       // 0x0C70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C71[0x3];                                      // 0x0C71(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Hue;                                               // 0x0C74(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                WindDirection;                                     // 0x0C78(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BoundRadius;                                       // 0x0C84(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BoundsHeight_CylinderOnly_;                        // 0x0C88(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_Parent_Tree(int32 EntryPoint);
+	void RemoveTestWind(float BlendTime);
+	void UserConstructionScript();
 	void ChangeWindIntensity(float Intensity, float Time_It_Takes_To_Reach_New_Intensity);
 	void ReceiveDestroyed();
-	void UserConstructionScript();
-	void FX_UpdateEmitterStates();
-	void FX_UpdateEmitterParameters();
-	void RemoveTestWind(float BlendTime);
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_Parent_Tree(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

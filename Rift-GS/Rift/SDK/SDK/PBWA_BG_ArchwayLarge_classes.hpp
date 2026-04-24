@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PBWA_BG_ArchwayLarge.PBWA_BG_ArchwayLarge_C
-// 0x0000 (0x0CE8 - 0x0CE8)
+// 0x0000 (0x0CD0 - 0x0CD0)
 class APBWA_BG_ArchwayLarge_C final : public ABuildingWall
 {
 public:

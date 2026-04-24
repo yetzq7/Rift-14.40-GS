@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass MinigameStat_Challenge_All.MinigameStat_Challenge_All_C
-// 0x0000 (0x0188 - 0x0188)
+// 0x0000 (0x0190 - 0x0190)
 class UMinigameStat_Challenge_All_C final : public UFortMinigameStatFilter
 {
 public:

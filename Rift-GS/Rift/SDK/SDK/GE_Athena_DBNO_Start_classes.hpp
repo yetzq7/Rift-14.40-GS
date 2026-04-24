@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_Athena_DBNO_Start.GE_Athena_DBNO_Start_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_Athena_DBNO_Start_C final : public UGE_Map_Fortitude_To_Health_C
 {
 public:

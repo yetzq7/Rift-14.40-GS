@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Athena_UtilityGrenade_WithTrajectory.GA_Athena_UtilityGrenade_WithTrajectory_C
-// 0x0000 (0x0C38 - 0x0C38)
+// 0x0000 (0x0E68 - 0x0E68)
 class UGA_Athena_UtilityGrenade_WithTrajectory_C : public UGA_Athena_Grenade_WithTrajectory_C
 {
 public:

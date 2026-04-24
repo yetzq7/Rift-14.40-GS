@@ -11,26 +11,25 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "FortniteUI_classes.hpp"
 #include "UMG_structs.hpp"
-#include "FortniteGame_structs.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ItemDetailsHeaderTagListText.ItemDetailsHeaderTagListText_C
-// 0x0010 (0x0290 - 0x0280)
+// 0x0010 (0x02F0 - 0x02E0)
 class UItemDetailsHeaderTagListText_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       TagListTextBlock;                                  // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       TagListTextBlock;                                  // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_ItemDetailsHeaderTagListText(int32 EntryPoint);
-	void HandlePostDifferentItemToCompareWithSet();
-	void HandlePostDifferentItemToDetailSet();
 	void FormatItemDisplayTags(TArray<class FText>& TagTexts, class FText* FormatedText);
+	void HandlePostDifferentItemToDetailSet();
+	void HandlePostDifferentItemToCompareWithSet();
+	void ExecuteUbergraph_ItemDetailsHeaderTagListText(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

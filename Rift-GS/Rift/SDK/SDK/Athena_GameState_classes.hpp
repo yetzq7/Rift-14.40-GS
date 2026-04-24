@@ -17,24 +17,23 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Athena_GameState.Athena_GameState_C
-// 0x0028 (0x1DB8 - 0x1D90)
-class AAthena_GameState_C final : public AFortGameStateAthena
+// 0x0028 (0x29F8 - 0x29D0)
+class AAthena_GameState_C final : public AFortGameStateBR
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1D90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x1D98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         Timeline_0_NewTrack_0_21F3C11243B4DF8C6B6A958D51E85950; // 0x1DA0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Timeline_0__Direction_21F3C11243B4DF8C6B6A958D51E85950; // 0x1DA4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DA5[0x3];                                     // 0x1DA5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Timeline_0;                                        // 0x1DA8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Victory_Royale_Sound;                              // 0x1DB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x29D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x29D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         Timeline_0_NewTrack_0_21F3C11243B4DF8C6B6A958D51E85950; // 0x29E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_0__Direction_21F3C11243B4DF8C6B6A958D51E85950; // 0x29E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29E5[0x3];                                     // 0x29E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_0;                                        // 0x29E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Victory_Royale_Sound;                              // 0x29F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Athena_GameState(int32 EntryPoint);
 	void OnWinnerAnnounced();
-	void Timeline_0__FinishedFunc();
 	void Timeline_0__UpdateFunc();
-	void UserConstructionScript();
+	void Timeline_0__FinishedFunc();
 
 public:
 	static class UClass* StaticClass()

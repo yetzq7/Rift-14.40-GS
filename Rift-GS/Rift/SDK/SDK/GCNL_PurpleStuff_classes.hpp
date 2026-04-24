@@ -17,18 +17,17 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GCNL_PurpleStuff.GCNL_PurpleStuff_C
-// 0x0010 (0x0438 - 0x0428)
+// 0x0010 (0x0328 - 0x0318)
 class AGCNL_PurpleStuff_C final : public AFortGameplayCueNotify_Looping
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0428(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class APlayerPawn_Athena_Generic_C*           PlayerActor;                                       // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class APlayerPawn_Athena_Generic_C*           PlayerActor;                                       // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GCNL_PurpleStuff(int32 EntryPoint);
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void UserConstructionScript();
 	bool OnActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
 	bool OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
 

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass HoverboardCameraMode.HoverboardCameraMode_C
-// 0x0000 (0x0C50 - 0x0C50)
+// 0x0000 (0x0DC0 - 0x0DC0)
 class UHoverboardCameraMode_C final : public UFortHoverboardCameraMode
 {
 public:

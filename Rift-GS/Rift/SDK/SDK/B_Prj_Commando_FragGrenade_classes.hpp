@@ -10,52 +10,52 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "GameplayTags_structs.hpp"
-#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C
-// 0x0250 (0x09E8 - 0x0798)
+// 0x02F8 (0x0B70 - 0x0878)
 class AB_Prj_Commando_FragGrenade_C final : public AFortProjectileBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0798(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class URotatingMovementComponent*             RotatingMovement;                                  // 0x07A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               Fuse_Particle;                                     // 0x07A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Mesh;                                              // 0x07B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        GrenadeFuse_AudioComponent;                        // 0x07B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               Effect_Distance;                                   // 0x07C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        P_Explosion;                                       // 0x07C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Cue_DistantSound;                                  // 0x07D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Cue_CloseSound;                                    // 0x07D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ExplosionRadius;                                   // 0x07E0(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	int32                                         NumberOfBouncesTillExplode;                        // 0x07E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentNumberOfBounces;                            // 0x07E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7EC[0x4];                                      // 0x07EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             Cue_GrenadeFuseSound;                              // 0x07F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BouncePawnAgainstPawnGravityScale;                 // 0x07F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7FC[0x4];                                      // 0x07FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UForceFeedbackEffect*                   ExplosionForceFeedbackNear;                        // 0x0800(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UForceFeedbackEffect*                   ExplosionForceFeedbackFar;                         // 0x0808(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxClusterGrenades;                                // 0x0810(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           EC_ClusterExplosion;                               // 0x0814(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHasCluster;                                       // 0x081C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_81D[0x3];                                      // 0x081D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 Prj_Cluster;                                       // 0x0820(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFortGameplayEffectContainerSpec       ClusterContainerSpec;                              // 0x0828(0x0080)(Edit, BlueprintVisible, ExposeOnSpawn)
-	bool                                          bHasKeepOut;                                       // 0x08A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8A9[0x7];                                      // 0x08A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortGameplayEffectContainerSpec       KeepOutContainerSpec;                              // 0x08B0(0x0080)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UClass*                                 AOE_KeepOut;                                       // 0x0930(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHasClusterTactical;                               // 0x0938(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_939[0x7];                                      // 0x0939(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortGameplayEffectContainerSpec       Cluster_Tactical_Container_Spec;                   // 0x0940(0x0080)(Edit, BlueprintVisible, ExposeOnSpawn)
-	struct FGameplayTagContainer                  TC_ActorTagsThatShouldExplodeOnOverlap;            // 0x09C0(0x0020)(Edit, BlueprintVisible)
-	struct FGameplayTag                           T_Event_GrenadeExploded;                           // 0x09E0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0878(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class URotatingMovementComponent*             RotatingMovement;                                  // 0x0880(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               Fuse_Particle;                                     // 0x0888(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Mesh;                                              // 0x0890(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        GrenadeFuse_AudioComponent;                        // 0x0898(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               Effect_Distance;                                   // 0x08A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        P_Explosion;                                       // 0x08A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Cue_DistantSound;                                  // 0x08B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Cue_CloseSound;                                    // 0x08B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ExplosionRadius;                                   // 0x08C0(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	int32                                         NumberOfBouncesTillExplode;                        // 0x08C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentNumberOfBounces;                            // 0x08C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8CC[0x4];                                      // 0x08CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             Cue_GrenadeFuseSound;                              // 0x08D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BouncePawnAgainstPawnGravityScale;                 // 0x08D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8DC[0x4];                                      // 0x08DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UForceFeedbackEffect*                   ExplosionForceFeedbackNear;                        // 0x08E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UForceFeedbackEffect*                   ExplosionForceFeedbackFar;                         // 0x08E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxClusterGrenades;                                // 0x08F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           EC_ClusterExplosion;                               // 0x08F4(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHasCluster;                                       // 0x08FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	uint8                                         Pad_8FD[0x3];                                      // 0x08FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 Prj_Cluster;                                       // 0x0900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFortGameplayEffectContainerSpec       ClusterContainerSpec;                              // 0x0908(0x00B8)(Edit, BlueprintVisible, ExposeOnSpawn)
+	bool                                          bHasKeepOut;                                       // 0x09C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9C1[0x7];                                      // 0x09C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortGameplayEffectContainerSpec       KeepOutContainerSpec;                              // 0x09C8(0x00B8)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UClass*                                 AOE_KeepOut;                                       // 0x0A80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHasClusterTactical;                               // 0x0A88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	uint8                                         Pad_A89[0x7];                                      // 0x0A89(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortGameplayEffectContainerSpec       Cluster_Tactical_Container_Spec;                   // 0x0A90(0x00B8)(Edit, BlueprintVisible, ExposeOnSpawn)
+	struct FGameplayTagContainer                  TC_ActorTagsThatShouldExplodeOnOverlap;            // 0x0B48(0x0020)(Edit, BlueprintVisible)
+	struct FGameplayTag                           T_Event_GrenadeExploded;                           // 0x0B68(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_Prj_Commando_FragGrenade(int32 EntryPoint);

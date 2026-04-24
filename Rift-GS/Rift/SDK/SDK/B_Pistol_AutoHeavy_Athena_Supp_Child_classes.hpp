@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "B_Pistol_AutoHeavy_Athena_classes.hpp"
+#include "B_Pistol_Auto_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_Pistol_AutoHeavy_Athena_Supp_Child.B_Pistol_AutoHeavy_Athena_Supp_Child_C
-// 0x0000 (0x0DF0 - 0x0DF0)
-class AB_Pistol_AutoHeavy_Athena_Supp_Child_C final : public AB_Pistol_AutoHeavy_Athena_C
+// 0x0000 (0x1258 - 0x1258)
+class AB_Pistol_AutoHeavy_Athena_Supp_Child_C final : public AB_Pistol_Auto_C
 {
 public:
 	static class UClass* StaticClass()

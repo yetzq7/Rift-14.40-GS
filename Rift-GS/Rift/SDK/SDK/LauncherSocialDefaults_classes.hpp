@@ -40,29 +40,6 @@ public:
 };
 DUMPER7_ASSERTS_UChatColorSchemeDataAsset;
 
-// Class LauncherSocialDefaults.SocialRadioBoxStyleDataAsset
-// 0x0580 (0x05B0 - 0x0030)
-class USocialRadioBoxStyleDataAsset final : public UDataAsset
-{
-public:
-	struct FCheckBoxStyle                         Style;                                             // 0x0030(0x0580)(Edit, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SocialRadioBoxStyleDataAsset")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SocialRadioBoxStyleDataAsset")
-	}
-	static class USocialRadioBoxStyleDataAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USocialRadioBoxStyleDataAsset>();
-	}
-};
-DUMPER7_ASSERTS_USocialRadioBoxStyleDataAsset;
-
 // Class LauncherSocialDefaults.SocialActionButtonStyleDataAsset
 // 0x0278 (0x02A8 - 0x0030)
 class USocialActionButtonStyleDataAsset final : public UDataAsset
@@ -299,7 +276,7 @@ DUMPER7_ASSERTS_USocialListStyleDataAsset;
 class USocialProfanityDataAsset final : public UDataAsset
 {
 public:
-	TArray<struct FProfanityData>                 ProfanityData;                                     // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FProfanityData>                 ProfanityData;                                     // 0x0030(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -316,6 +293,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USocialProfanityDataAsset;
+
+// Class LauncherSocialDefaults.SocialRadioBoxStyleDataAsset
+// 0x0580 (0x05B0 - 0x0030)
+class USocialRadioBoxStyleDataAsset final : public UDataAsset
+{
+public:
+	struct FCheckBoxStyle                         Style;                                             // 0x0030(0x0580)(Edit, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SocialRadioBoxStyleDataAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SocialRadioBoxStyleDataAsset")
+	}
+	static class USocialRadioBoxStyleDataAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USocialRadioBoxStyleDataAsset>();
+	}
+};
+DUMPER7_ASSERTS_USocialRadioBoxStyleDataAsset;
 
 // Class LauncherSocialDefaults.SocialScrollBarStyleDataAsset
 // 0x04D0 (0x0500 - 0x0030)

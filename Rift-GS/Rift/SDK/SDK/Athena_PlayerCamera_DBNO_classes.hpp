@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Athena_PlayerCamera_DBNO.Athena_PlayerCamera_DBNO_C
-// 0x0000 (0x0C50 - 0x0C50)
+// 0x0000 (0x0DC0 - 0x0DC0)
 class UAthena_PlayerCamera_DBNO_C final : public UAthena_PlayerCameraModeBase_C
 {
 public:

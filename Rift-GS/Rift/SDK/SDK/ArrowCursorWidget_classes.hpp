@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ArrowCursorWidget.ArrowCursorWidget_C
-// 0x0000 (0x0230 - 0x0230)
+// 0x0000 (0x0260 - 0x0260)
 class UArrowCursorWidget_C final : public UUserWidget
 {
 public:

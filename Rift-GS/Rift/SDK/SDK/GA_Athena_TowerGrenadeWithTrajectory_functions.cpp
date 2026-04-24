@@ -114,4 +114,48 @@ void UGA_Athena_TowerGrenadeWithTrajectory_C::SetupDummyProjectileRed()
 }
 
 
+// Function GA_Athena_TowerGrenadeWithTrajectory.GA_Athena_TowerGrenadeWithTrajectory_C.SpawnTrajectoryIndicator
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSpawnOnEquip                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class AFortProjectileTrajectory*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class AFortProjectileTrajectory* UGA_Athena_TowerGrenadeWithTrajectory_C::SpawnTrajectoryIndicator(bool bSpawnOnEquip)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_TowerGrenadeWithTrajectory_C", "SpawnTrajectoryIndicator");
+
+	Params::GA_Athena_TowerGrenadeWithTrajectory_C_SpawnTrajectoryIndicator Parms{};
+
+	Parms.bSpawnOnEquip = bSpawnOnEquip;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GA_Athena_TowerGrenadeWithTrajectory.GA_Athena_TowerGrenadeWithTrajectory_C.Is Trajectory Hidden
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   IsHidden                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGA_Athena_TowerGrenadeWithTrajectory_C::Is_Trajectory_Hidden(bool* IsHidden)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_TowerGrenadeWithTrajectory_C", "Is Trajectory Hidden");
+
+	Params::GA_Athena_TowerGrenadeWithTrajectory_C_Is_Trajectory_Hidden Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsHidden != nullptr)
+		*IsHidden = Parms.IsHidden;
+}
+
+
 SDK_NAMESPACE_END

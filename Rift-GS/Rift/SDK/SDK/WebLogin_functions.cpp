@@ -16,21 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function WebLogin.WebLogin_C.ExecuteUbergraph_WebLogin
-// (Final, UbergraphFunction)
+// Function WebLogin.WebLogin_C.DisplayWidget
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          WebWidget                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWebLogin_C::ExecuteUbergraph_WebLogin(int32 EntryPoint)
+void UWebLogin_C::DisplayWidget(class UWidget* WebWidget)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WebLogin_C", "ExecuteUbergraph_WebLogin");
+		Func = Class->GetFunction("WebLogin_C", "DisplayWidget");
 
-	Params::WebLogin_C_ExecuteUbergraph_WebLogin Parms{};
+	Params::WebLogin_C_DisplayWidget Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.WebWidget = WebWidget;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -50,21 +50,21 @@ void UWebLogin_C::DismissWidget()
 }
 
 
-// Function WebLogin.WebLogin_C.DisplayWidget
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function WebLogin.WebLogin_C.ExecuteUbergraph_WebLogin
+// (Final, UbergraphFunction)
 // Parameters:
-// class UWidget*                          WebWidget                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWebLogin_C::DisplayWidget(class UWidget* WebWidget)
+void UWebLogin_C::ExecuteUbergraph_WebLogin(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WebLogin_C", "DisplayWidget");
+		Func = Class->GetFunction("WebLogin_C", "ExecuteUbergraph_WebLogin");
 
-	Params::WebLogin_C_DisplayWidget Parms{};
+	Params::WebLogin_C_ExecuteUbergraph_WebLogin Parms{};
 
-	Parms.WebWidget = WebWidget;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -81,9 +81,9 @@ void AB_AthenaPlayerMarker_WithCustomization_C::OnMarkerHidden()
 // Function B_AthenaPlayerMarker_WithCustomization.B_AthenaPlayerMarker_WithCustomization_C.OnSetupMarker
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FPlayerMarkerData&         MarkerData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// const struct FFortWorldMarkerData&      MarkerData_0                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AB_AthenaPlayerMarker_WithCustomization_C::OnSetupMarker(const struct FPlayerMarkerData& MarkerData)
+void AB_AthenaPlayerMarker_WithCustomization_C::OnSetupMarker(const struct FFortWorldMarkerData& MarkerData_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -92,7 +92,7 @@ void AB_AthenaPlayerMarker_WithCustomization_C::OnSetupMarker(const struct FPlay
 
 	Params::B_AthenaPlayerMarker_WithCustomization_C_OnSetupMarker Parms{};
 
-	Parms.MarkerData = std::move(MarkerData);
+	Parms.MarkerData_0 = std::move(MarkerData_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -115,20 +115,6 @@ void AB_AthenaPlayerMarker_WithCustomization_C::OnLoaded_8A042AD24DC8A8C0E9D8E0B
 	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_AthenaPlayerMarker_WithCustomization.B_AthenaPlayerMarker_WithCustomization_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AB_AthenaPlayerMarker_WithCustomization_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_AthenaPlayerMarker_WithCustomization_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

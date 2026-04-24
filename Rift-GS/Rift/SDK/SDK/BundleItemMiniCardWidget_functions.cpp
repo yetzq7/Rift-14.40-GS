@@ -16,23 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function BundleItemMiniCardWidget.BundleItemMiniCardWidget_C.ExecuteUbergraph_BundleItemMiniCardWidget
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BundleItemMiniCardWidget.BundleItemMiniCardWidget_C.Play Anim - Show
+// (BlueprintCallable, BlueprintEvent)
 
-void UBundleItemMiniCardWidget_C::ExecuteUbergraph_BundleItemMiniCardWidget(int32 EntryPoint)
+void UBundleItemMiniCardWidget_C::Play_Anim___Show()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BundleItemMiniCardWidget_C", "ExecuteUbergraph_BundleItemMiniCardWidget");
+		Func = Class->GetFunction("BundleItemMiniCardWidget_C", "Play Anim - Show");
 
-	Params::BundleItemMiniCardWidget_C_ExecuteUbergraph_BundleItemMiniCardWidget Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -50,17 +44,23 @@ void UBundleItemMiniCardWidget_C::Construct()
 }
 
 
-// Function BundleItemMiniCardWidget.BundleItemMiniCardWidget_C.Play Anim - Show
-// (BlueprintCallable, BlueprintEvent)
+// Function BundleItemMiniCardWidget.BundleItemMiniCardWidget_C.ExecuteUbergraph_BundleItemMiniCardWidget
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBundleItemMiniCardWidget_C::Play_Anim___Show()
+void UBundleItemMiniCardWidget_C::ExecuteUbergraph_BundleItemMiniCardWidget(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BundleItemMiniCardWidget_C", "Play Anim - Show");
+		Func = Class->GetFunction("BundleItemMiniCardWidget_C", "ExecuteUbergraph_BundleItemMiniCardWidget");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BundleItemMiniCardWidget_C_ExecuteUbergraph_BundleItemMiniCardWidget Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PBWA_BG_HalfWall.PBWA_BG_HalfWall_C
-// 0x0000 (0x0CE8 - 0x0CE8)
+// 0x0000 (0x0CD0 - 0x0CD0)
 class APBWA_BG_HalfWall_C final : public ABuildingWall
 {
 public:

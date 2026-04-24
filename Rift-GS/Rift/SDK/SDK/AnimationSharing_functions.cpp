@@ -19,7 +19,7 @@ SDK_NAMESPACE_START
 // Function AnimationSharing.AnimSharingStateInstance.GetInstancedActors
 // (Final, Native, Protected, HasOutParams, BlueprintCallable)
 // Parameters:
-// TArray<class AActor*>*                  Actors                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class AActor*>*                  Actors                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UAnimSharingStateInstance::GetInstancedActors(TArray<class AActor*>* Actors)
 {
@@ -42,19 +42,19 @@ void UAnimSharingStateInstance::GetInstancedActors(TArray<class AActor*>* Actors
 }
 
 
-// Function AnimationSharing.AnimationSharingManager.AnimSharingEnabled
-// (Final, Native, Static, Public, BlueprintCallable)
+// Function AnimationSharing.AnimationSharingManager.AnimationSharingEnabled
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UAnimationSharingManager::AnimSharingEnabled()
+bool UAnimationSharingManager::AnimationSharingEnabled()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AnimationSharingManager", "AnimSharingEnabled");
+		Func = StaticClass()->GetFunction("AnimationSharingManager", "AnimationSharingEnabled");
 
-	Params::AnimationSharingManager_AnimSharingEnabled Parms{};
+	Params::AnimationSharingManager_AnimationSharingEnabled Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -64,6 +64,91 @@ bool UAnimationSharingManager::AnimSharingEnabled()
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function AnimationSharing.AnimationSharingManager.CreateAnimationSharingManager
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UAnimationSharingSetup*     Setup                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAnimationSharingManager::CreateAnimationSharingManager(class UObject* WorldContextObject, const class UAnimationSharingSetup* Setup)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AnimationSharingManager", "CreateAnimationSharingManager");
+
+	Params::AnimationSharingManager_CreateAnimationSharingManager Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Setup = Setup;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimationSharing.AnimationSharingManager.GetAnimationSharingManager
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAnimationSharingManager*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAnimationSharingManager* UAnimationSharingManager::GetAnimationSharingManager(class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AnimationSharingManager", "GetAnimationSharingManager");
+
+	Params::AnimationSharingManager_GetAnimationSharingManager Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimationSharing.AnimationSharingManager.RegisterActorWithSkeletonBP
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                           InActor                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class USkeleton*                  SharingSkeleton                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAnimationSharingManager::RegisterActorWithSkeletonBP(class AActor* InActor, const class USkeleton* SharingSkeleton)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AnimationSharingManager", "RegisterActorWithSkeletonBP");
+
+	Params::AnimationSharingManager_RegisterActorWithSkeletonBP Parms{};
+
+	Parms.InActor = InActor;
+	Parms.SharingSkeleton = SharingSkeleton;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 

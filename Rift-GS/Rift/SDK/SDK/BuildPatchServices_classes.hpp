@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BuildPatchServices_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "BuildPatchServices_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -29,13 +29,13 @@ public:
 	class FString                                 BuildVersion;                                      // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 LaunchExe;                                         // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 LaunchCommand;                                     // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSet<class FString>                           PrereqIds;                                         // 0x0070(0x0050)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TSet<class FString>                           PrereqIds;                                         // 0x0070(0x0050)(NativeAccessSpecifierPublic)
 	class FString                                 PrereqName;                                        // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PrereqPath;                                        // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PrereqArgs;                                        // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FFileManifestData>              FileManifestList;                                  // 0x00F0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FChunkInfoData>                 ChunkList;                                         // 0x0100(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FCustomFieldData>               CustomFields;                                      // 0x0110(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FFileManifestData>              FileManifestList;                                  // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FChunkInfoData>                 ChunkList;                                         // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FCustomFieldData>               CustomFields;                                      // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_Pistol_Generic.B_Pistol_Generic_C
-// 0x0000 (0x0DE8 - 0x0DE8)
+// 0x0000 (0x1258 - 0x1258)
 class AB_Pistol_Generic_C : public AB_Ranged_Generic_C
 {
 public:

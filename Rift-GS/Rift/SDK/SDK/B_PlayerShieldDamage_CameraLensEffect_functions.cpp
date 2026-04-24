@@ -56,18 +56,4 @@ void AB_PlayerShieldDamage_CameraLensEffect_C::PassParticle_Parameter_Shield(flo
 }
 
 
-// Function B_PlayerShieldDamage_CameraLensEffect.B_PlayerShieldDamage_CameraLensEffect_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AB_PlayerShieldDamage_CameraLensEffect_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerShieldDamage_CameraLensEffect_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 SDK_NAMESPACE_END

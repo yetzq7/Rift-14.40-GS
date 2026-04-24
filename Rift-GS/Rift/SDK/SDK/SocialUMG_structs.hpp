@@ -16,17 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Enum SocialUMG.EOnlineStatus
-// NumValues: 0x0005
-enum class EOnlineStatus : uint8
-{
-	Online                                   = 0,
-	Away                                     = 1,
-	Offline                                  = 2,
-	Blocked                                  = 3,
-	EOnlineStatus_MAX                        = 4,
-};
-
 // ScriptStruct SocialUMG.SocialChatMessageEntryTextStyle
 // 0x0060 (0x0060 - 0x0000)
 struct FSocialChatMessageEntryTextStyle final

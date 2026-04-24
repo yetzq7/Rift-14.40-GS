@@ -17,15 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function NavigationSystem.NavRelevantComponent.SetNavigationRelevancy
-// 0x0001 (0x0001 - 0x0000)
-struct NavRelevantComponent_SetNavigationRelevancy final
-{
-public:
-	bool                                          bRelevant;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NavRelevantComponent_SetNavigationRelevancy;
-
 // Function NavigationSystem.NavigationSystemV1.FindPathToActorSynchronously
 // 0x0040 (0x0040 - 0x0000)
 struct NavigationSystemV1_FindPathToActorSynchronously final
@@ -273,6 +264,19 @@ public:
 };
 DUMPER7_ASSERTS_NavigationSystemV1_SimpleMoveToLocation;
 
+// Function NavigationSystem.NavigationSystemV1.K2_ReplaceAreaInOctreeData
+// 0x0020 (0x0020 - 0x0000)
+struct NavigationSystemV1_K2_ReplaceAreaInOctreeData final
+{
+public:
+	const class UObject*                          Object;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UNavArea>                   OldArea;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UNavArea>                   NewArea;                                           // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_NavigationSystemV1_K2_ReplaceAreaInOctreeData;
+
 // Function NavigationSystem.NavigationSystemV1.OnNavigationBoundsUpdated
 // 0x0008 (0x0008 - 0x0000)
 struct NavigationSystemV1_OnNavigationBoundsUpdated final
@@ -320,14 +324,29 @@ public:
 };
 DUMPER7_ASSERTS_NavigationSystemV1_UnregisterNavigationInvoker;
 
-// Function NavigationSystem.NavModifierComponent.SetAreaClass
-// 0x0008 (0x0008 - 0x0000)
-struct NavModifierComponent_SetAreaClass final
+// Function NavigationSystem.RecastNavMesh.K2_ReplaceAreaInTileBounds
+// 0x0038 (0x0038 - 0x0000)
+struct RecastNavMesh_K2_ReplaceAreaInTileBounds final
 {
 public:
-	TSubclassOf<class UNavArea>                   NewAreaClass;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   Bounds;                                            // 0x0000(0x001C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UNavArea>                   OldArea;                                           // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UNavArea>                   NewArea;                                           // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReplaceLinks;                                      // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_NavModifierComponent_SetAreaClass;
+DUMPER7_ASSERTS_RecastNavMesh_K2_ReplaceAreaInTileBounds;
+
+// Function NavigationSystem.NavRelevantComponent.SetNavigationRelevancy
+// 0x0001 (0x0001 - 0x0000)
+struct NavRelevantComponent_SetNavigationRelevancy final
+{
+public:
+	bool                                          bRelevant;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NavRelevantComponent_SetNavigationRelevancy;
 
 // Function NavigationSystem.NavigationPath.EnableDebugDrawing
 // 0x0014 (0x0014 - 0x0000)
@@ -402,6 +421,15 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_NavigationPath_IsValid;
+
+// Function NavigationSystem.NavModifierComponent.SetAreaClass
+// 0x0008 (0x0008 - 0x0000)
+struct NavModifierComponent_SetAreaClass final
+{
+public:
+	TSubclassOf<class UNavArea>                   NewAreaClass;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NavModifierComponent_SetAreaClass;
 
 // Function NavigationSystem.NavModifierVolume.SetAreaClass
 // 0x0008 (0x0008 - 0x0000)

@@ -123,6 +123,20 @@ struct FEventReply ULobbyPlayerPadGadgets_C::OnMouseButtonDown(const struct FGeo
 }
 
 
+// Function LobbyPlayerPadGadgets.LobbyPlayerPadGadgets_C.OnInputClicked
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ULobbyPlayerPadGadgets_C::OnInputClicked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LobbyPlayerPadGadgets_C", "OnInputClicked");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function LobbyPlayerPadGadgets.LobbyPlayerPadGadgets_C.Initialize
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -140,20 +154,6 @@ void ULobbyPlayerPadGadgets_C::Initialize(int32 PlayerIndex_0)
 	Parms.PlayerIndex_0 = PlayerIndex_0;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LobbyPlayerPadGadgets.LobbyPlayerPadGadgets_C.OnInputClicked
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ULobbyPlayerPadGadgets_C::OnInputClicked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LobbyPlayerPadGadgets_C", "OnInputClicked");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

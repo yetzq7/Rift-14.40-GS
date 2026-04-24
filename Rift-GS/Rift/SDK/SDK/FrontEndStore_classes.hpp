@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass FrontEndStore.FrontEndStore_C
-// 0x0000 (0x0348 - 0x0348)
+// 0x0000 (0x0238 - 0x0238)
 class AFrontEndStore_C final : public AFortLevelScriptActor
 {
 public:

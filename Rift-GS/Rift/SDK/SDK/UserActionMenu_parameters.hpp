@@ -10,61 +10,22 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "SocialUMG_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
-
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function UserActionMenu.UserActionMenu_C.ExecuteUbergraph_UserActionMenu
-// 0x0060 (0x0060 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct UserActionMenu_C_ExecuteUbergraph_UserActionMenu final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable1;                               // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetFirstEntryToCenter_ReturnValue;        // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortUIManagerWidget_NUI*               CallFunc_GetUIManagerWidget_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortUINavigationManager*               CallFunc_GetNavigationManager_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsVisible;                           // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EOnlineStatus                                 K2Node_Event_OnlineStatus;                         // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortUINavigationManager*               CallFunc_GetUINavigationManager_ReturnValue;       // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetFirstEntryToCenter_ReturnValue1;       // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable1;                               // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue1;               // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                K2Node_Select_Default;                             // 0x0050(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bEnableBackButtonDisplay;             // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select1_Default;                            // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bIsVisible;                           // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_UserActionMenu_C_ExecuteUbergraph_UserActionMenu;
-
-// Function UserActionMenu.UserActionMenu_C.OnEnableBackButtonDisplay
-// 0x0001 (0x0001 - 0x0000)
-struct UserActionMenu_C_OnEnableBackButtonDisplay final
-{
-public:
-	bool                                          bEnableBackButtonDisplay;                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_UserActionMenu_C_OnEnableBackButtonDisplay;
-
-// Function UserActionMenu.UserActionMenu_C.OnUserPresenceChanged
-// 0x0001 (0x0001 - 0x0000)
-struct UserActionMenu_C_OnUserPresenceChanged final
-{
-public:
-	EOnlineStatus                                 OnlineStatus;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_UserActionMenu_C_OnUserPresenceChanged;
 
 // Function UserActionMenu.UserActionMenu_C.OnToggleConfirmation
 // 0x0001 (0x0001 - 0x0000)
@@ -74,20 +35,6 @@ public:
 	bool                                          bIsVisible;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_UserActionMenu_C_OnToggleConfirmation;
-
-// Function UserActionMenu.UserActionMenu_C.HandleOnlineIndicatorView
-// 0x0040 (0x0040 - 0x0000)
-struct UserActionMenu_C_HandleOnlineIndicatorView final
-{
-public:
-	EOnlineStatus                                 OnlineStatus;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EOnlineStatus                                 Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EOnlineStatus                                 Temp_byte_Variable1;                               // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_Select_Default;                             // 0x0008(0x0028)()
-	struct FLinearColor                           K2Node_Select1_Default;                            // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_UserActionMenu_C_HandleOnlineIndicatorView;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

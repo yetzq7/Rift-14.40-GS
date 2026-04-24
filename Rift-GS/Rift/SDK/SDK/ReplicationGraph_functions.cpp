@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 // Parameters:
 // const struct FVector&                   CellLocation                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector&                   CellExtent                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<class AActor*>&            Actors                                                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class AActor*>&            Actors                                                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void AReplicationGraphDebugActor::ClientCellInfo(const struct FVector& CellLocation, const struct FVector& CellExtent, const TArray<class AActor*>& Actors)
 {
@@ -46,7 +46,7 @@ void AReplicationGraphDebugActor::ClientCellInfo(const struct FVector& CellLocat
 
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerCellInfo
-// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// (Net, NetReliable, Native, Event, Public, NetServer)
 
 void AReplicationGraphDebugActor::ServerCellInfo()
 {
@@ -65,7 +65,7 @@ void AReplicationGraphDebugActor::ServerCellInfo()
 
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerPrintAllActorInfo
-// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// (Net, NetReliable, Native, Event, Public, NetServer)
 // Parameters:
 // const class FString&                    Str                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -89,8 +89,27 @@ void AReplicationGraphDebugActor::ServerPrintAllActorInfo(const class FString& S
 }
 
 
+// Function ReplicationGraph.ReplicationGraphDebugActor.ServerPrintCullDistances
+// (Net, NetReliable, Native, Event, Public, NetServer)
+
+void AReplicationGraphDebugActor::ServerPrintCullDistances()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ReplicationGraphDebugActor", "ServerPrintCullDistances");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetConditionalActorBreakpoint
-// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// (Net, NetReliable, Native, Event, Public, NetServer)
 // Parameters:
 // class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -115,7 +134,7 @@ void AReplicationGraphDebugActor::ServerSetConditionalActorBreakpoint(class AAct
 
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetCullDistanceForClass
-// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// (Net, NetReliable, Native, Event, Public, NetServer)
 // Parameters:
 // class UClass*                           Class_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   CullDistance                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -142,7 +161,7 @@ void AReplicationGraphDebugActor::ServerSetCullDistanceForClass(class UClass* Cl
 
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetPeriodFrameForClass
-// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// (Net, NetReliable, Native, Event, Public, NetServer)
 // Parameters:
 // class UClass*                           Class_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   PeriodFrame                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -169,7 +188,7 @@ void AReplicationGraphDebugActor::ServerSetPeriodFrameForClass(class UClass* Cla
 
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerStartDebugging
-// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// (Net, NetReliable, Native, Event, Public, NetServer)
 
 void AReplicationGraphDebugActor::ServerStartDebugging()
 {
@@ -188,7 +207,7 @@ void AReplicationGraphDebugActor::ServerStartDebugging()
 
 
 // Function ReplicationGraph.ReplicationGraphDebugActor.ServerStopDebugging
-// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// (Net, NetReliable, Native, Event, Public, NetServer)
 
 void AReplicationGraphDebugActor::ServerStopDebugging()
 {

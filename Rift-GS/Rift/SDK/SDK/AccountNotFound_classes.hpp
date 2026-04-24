@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass AccountNotFound.AccountNotFound_C
-// 0x0000 (0x0260 - 0x0260)
+// 0x0000 (0x0480 - 0x0480)
 class UAccountNotFound_C final : public UFortAccountNotFound
 {
 public:

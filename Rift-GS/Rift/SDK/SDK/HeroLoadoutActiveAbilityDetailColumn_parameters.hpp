@@ -10,32 +10,76 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.ExecuteUbergraph_HeroLoadoutActiveAbilityDetailColumn
+// Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.SetAbilityKit
 // 0x0008 (0x0008 - 0x0000)
-struct HeroLoadoutActiveAbilityDetailColumn_C_ExecuteUbergraph_HeroLoadoutActiveAbilityDetailColumn final
+struct HeroLoadoutActiveAbilityDetailColumn_C_SetAbilityKit final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UFortAbilityKit*                        AbilityKit_0;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_ExecuteUbergraph_HeroLoadoutActiveAbilityDetailColumn;
+DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_SetAbilityKit;
 
-// Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct HeroLoadoutActiveAbilityDetailColumn_C_PreConstruct final
+// Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.IsAbilityUnlocked
+// 0x0002 (0x0002 - 0x0000)
+struct HeroLoadoutActiveAbilityDetailColumn_C_IsAbilityUnlocked final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsAbilityKitUnlockedForHero_ReturnValue;  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_PreConstruct;
+DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_IsAbilityUnlocked;
+
+// Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.GetAbilityKit
+// 0x0008 (0x0008 - 0x0000)
+struct HeroLoadoutActiveAbilityDetailColumn_C_GetAbilityKit final
+{
+public:
+	class UFortAbilityKit*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_GetAbilityKit;
+
+// Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.SetHero
+// 0x0008 (0x0008 - 0x0000)
+struct HeroLoadoutActiveAbilityDetailColumn_C_SetHero final
+{
+public:
+	class UFortHero*                              Hero;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_SetHero;
+
+// Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.UpdateFromState
+// 0x01E8 (0x01E8 - 0x0000)
+struct HeroLoadoutActiveAbilityDetailColumn_C_UpdateFromState final
+{
+public:
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsAbilityUnlocked_ReturnValue;            // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsAbilityUnlocked_ReturnValue_1;          // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortAbilityKit*                        CallFunc_GetAbilityKit_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            CallFunc_NoResourceBrush_ReturnValue;              // 0x0018(0x0088)()
+	struct FSlateBrush                            CallFunc_ResizeBrush_ResizedBrush;                 // 0x00A0(0x0088)()
+	struct FSlateBrush                            CallFunc_ResizeBrush_ResizedBrush_1;               // 0x0128(0x0088)()
+	struct FLinearColor                           Temp_struct_Variable;                              // 0x01B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x01C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1D1[0x3];                                      // 0x01D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           K2Node_Select_Default_1;                           // 0x01D4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_UpdateFromState;
 
 // Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.UpdateFromStyle
 // 0x0010 (0x0010 - 0x0000)
@@ -48,61 +92,24 @@ public:
 };
 DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_UpdateFromStyle;
 
-// Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.UpdateFromState
-// 0x01B8 (0x01B8 - 0x0000)
-struct HeroLoadoutActiveAbilityDetailColumn_C_UpdateFromState final
-{
-public:
-	bool                                          CallFunc_IsAbilityUnlocked_ReturnValue;            // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortAbilityKit*                        CallFunc_GetAbilityKit_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            CallFunc_NoResourceBrush_ReturnValue;              // 0x0018(0x0088)()
-	struct FSlateBrush                            CallFunc_ResizeBrush_ResizedBrush;                 // 0x00A0(0x0088)()
-	struct FSlateBrush                            CallFunc_ResizeBrush_ResizedBrush1;                // 0x0128(0x0088)()
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable1;                               // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x01B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x01B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_UpdateFromState;
-
-// Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.SetHero
-// 0x0008 (0x0008 - 0x0000)
-struct HeroLoadoutActiveAbilityDetailColumn_C_SetHero final
-{
-public:
-	class UFortHero*                              Hero;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_SetHero;
-
-// Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.GetAbilityKit
-// 0x0008 (0x0008 - 0x0000)
-struct HeroLoadoutActiveAbilityDetailColumn_C_GetAbilityKit final
-{
-public:
-	class UFortAbilityKit*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_GetAbilityKit;
-
-// Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.IsAbilityUnlocked
+// Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
-struct HeroLoadoutActiveAbilityDetailColumn_C_IsAbilityUnlocked final
+struct HeroLoadoutActiveAbilityDetailColumn_C_PreConstruct final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_IsAbilityUnlocked;
+DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_PreConstruct;
 
-// Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.SetAbilityKit
+// Function HeroLoadoutActiveAbilityDetailColumn.HeroLoadoutActiveAbilityDetailColumn_C.ExecuteUbergraph_HeroLoadoutActiveAbilityDetailColumn
 // 0x0008 (0x0008 - 0x0000)
-struct HeroLoadoutActiveAbilityDetailColumn_C_SetAbilityKit final
+struct HeroLoadoutActiveAbilityDetailColumn_C_ExecuteUbergraph_HeroLoadoutActiveAbilityDetailColumn final
 {
 public:
-	class UFortAbilityKit*                        AbilityKit_0;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_SetAbilityKit;
+DUMPER7_ASSERTS_HeroLoadoutActiveAbilityDetailColumn_C_ExecuteUbergraph_HeroLoadoutActiveAbilityDetailColumn;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

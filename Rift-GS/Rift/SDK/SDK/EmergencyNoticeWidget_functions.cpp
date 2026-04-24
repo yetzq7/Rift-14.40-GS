@@ -16,40 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function EmergencyNoticeWidget.EmergencyNoticeWidget_C.ExecuteUbergraph_EmergencyNoticeWidget
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UEmergencyNoticeWidget_C::ExecuteUbergraph_EmergencyNoticeWidget(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EmergencyNoticeWidget_C", "ExecuteUbergraph_EmergencyNoticeWidget");
-
-	Params::EmergencyNoticeWidget_C_ExecuteUbergraph_EmergencyNoticeWidget Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function EmergencyNoticeWidget.EmergencyNoticeWidget_C.HideNotice
-// (Event, Protected, BlueprintEvent)
-
-void UEmergencyNoticeWidget_C::HideNotice()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EmergencyNoticeWidget_C", "HideNotice");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function EmergencyNoticeWidget.EmergencyNoticeWidget_C.Show Notice
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -81,6 +47,40 @@ void UEmergencyNoticeWidget_C::ShowNotice(const class FText& Title, const class 
 
 	Parms.Title = std::move(Title);
 	Parms.Body = std::move(Body);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EmergencyNoticeWidget.EmergencyNoticeWidget_C.HideNotice
+// (Event, Protected, BlueprintEvent)
+
+void UEmergencyNoticeWidget_C::HideNotice()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EmergencyNoticeWidget_C", "HideNotice");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function EmergencyNoticeWidget.EmergencyNoticeWidget_C.ExecuteUbergraph_EmergencyNoticeWidget
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UEmergencyNoticeWidget_C::ExecuteUbergraph_EmergencyNoticeWidget(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EmergencyNoticeWidget_C", "ExecuteUbergraph_EmergencyNoticeWidget");
+
+	Params::EmergencyNoticeWidget_C_ExecuteUbergraph_EmergencyNoticeWidget Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

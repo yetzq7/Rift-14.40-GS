@@ -16,77 +16,57 @@
 
 SDK_NAMESPACE_START
 
-// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.ExecuteUbergraph_RedeemFriendCodeWindow
-// (Final, UbergraphFunction, HasDefaults)
+// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.HandleRedeemCodeComplete
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Success                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// ERedeemCodeFailureReason                FailureReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void URedeemFriendCodeWindow_C::ExecuteUbergraph_RedeemFriendCodeWindow(int32 EntryPoint)
+void URedeemFriendCodeWindow_C::HandleRedeemCodeComplete(bool Success, ERedeemCodeFailureReason FailureReason)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "ExecuteUbergraph_RedeemFriendCodeWindow");
+		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "HandleRedeemCodeComplete");
 
-	Params::RedeemFriendCodeWindow_C_ExecuteUbergraph_RedeemFriendCodeWindow Parms{};
+	Params::RedeemFriendCodeWindow_C_HandleRedeemCodeComplete Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Success = Success;
+	Parms.FailureReason = FailureReason;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.BndEvt__FriendCodeEntry_K2Node_ComponentBoundEvent_0_OnEditableTextChangedEvent__DelegateSignature
-// (HasOutParams, BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.Close
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void URedeemFriendCodeWindow_C::BndEvt__FriendCodeEntry_K2Node_ComponentBoundEvent_0_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
+void URedeemFriendCodeWindow_C::Close()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "BndEvt__FriendCodeEntry_K2Node_ComponentBoundEvent_0_OnEditableTextChangedEvent__DelegateSignature");
-
-	Params::RedeemFriendCodeWindow_C_BndEvt__FriendCodeEntry_K2Node_ComponentBoundEvent_0_OnEditableTextChangedEvent__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void URedeemFriendCodeWindow_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "Construct");
+		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "Close");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.OnRedeemFriendCodeComplete
-// (Event, Public, BlueprintEvent)
+// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.BndEvt__CancelButton_K2Node_ComponentBoundEvent_57_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// ERedeemCodeFailureReason                FailureReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void URedeemFriendCodeWindow_C::OnRedeemFriendCodeComplete(bool bSuccess, ERedeemCodeFailureReason FailureReason)
+void URedeemFriendCodeWindow_C::BndEvt__CancelButton_K2Node_ComponentBoundEvent_57_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "OnRedeemFriendCodeComplete");
+		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "BndEvt__CancelButton_K2Node_ComponentBoundEvent_57_CommonButtonClicked__DelegateSignature");
 
-	Params::RedeemFriendCodeWindow_C_OnRedeemFriendCodeComplete Parms{};
+	Params::RedeemFriendCodeWindow_C_BndEvt__CancelButton_K2Node_ComponentBoundEvent_57_CommonButtonClicked__DelegateSignature Parms{};
 
-	Parms.bSuccess = bSuccess;
-	Parms.FailureReason = FailureReason;
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -112,19 +92,75 @@ void URedeemFriendCodeWindow_C::BndEvt__SendButton_K2Node_ComponentBoundEvent_75
 }
 
 
-// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.BndEvt__CancelButton_K2Node_ComponentBoundEvent_57_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
+// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.OnRedeemFriendCodeComplete
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// ERedeemCodeFailureReason                FailureReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void URedeemFriendCodeWindow_C::BndEvt__CancelButton_K2Node_ComponentBoundEvent_57_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+void URedeemFriendCodeWindow_C::OnRedeemFriendCodeComplete(bool bSuccess, ERedeemCodeFailureReason FailureReason)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "BndEvt__CancelButton_K2Node_ComponentBoundEvent_57_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "OnRedeemFriendCodeComplete");
 
-	Params::RedeemFriendCodeWindow_C_BndEvt__CancelButton_K2Node_ComponentBoundEvent_57_CommonButtonClicked__DelegateSignature Parms{};
+	Params::RedeemFriendCodeWindow_C_OnRedeemFriendCodeComplete Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.FailureReason = FailureReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void URedeemFriendCodeWindow_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.BndEvt__FriendCodeEntry_K2Node_ComponentBoundEvent_0_OnEditableTextChangedEvent__DelegateSignature
+// (HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void URedeemFriendCodeWindow_C::BndEvt__FriendCodeEntry_K2Node_ComponentBoundEvent_0_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "BndEvt__FriendCodeEntry_K2Node_ComponentBoundEvent_0_OnEditableTextChangedEvent__DelegateSignature");
+
+	Params::RedeemFriendCodeWindow_C_BndEvt__FriendCodeEntry_K2Node_ComponentBoundEvent_0_OnEditableTextChangedEvent__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.BndEvt__Button_Cancel_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void URedeemFriendCodeWindow_C::BndEvt__Button_Cancel_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "BndEvt__Button_Cancel_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
+
+	Params::RedeemFriendCodeWindow_C_BndEvt__Button_Cancel_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
@@ -132,51 +168,21 @@ void URedeemFriendCodeWindow_C::BndEvt__CancelButton_K2Node_ComponentBoundEvent_
 }
 
 
-// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void URedeemFriendCodeWindow_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.Close
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void URedeemFriendCodeWindow_C::Close()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "Close");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.HandleRedeemCodeComplete
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function RedeemFriendCodeWindow.RedeemFriendCodeWindow_C.ExecuteUbergraph_RedeemFriendCodeWindow
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    Success                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// ERedeemCodeFailureReason                FailureReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void URedeemFriendCodeWindow_C::HandleRedeemCodeComplete(bool Success, ERedeemCodeFailureReason FailureReason)
+void URedeemFriendCodeWindow_C::ExecuteUbergraph_RedeemFriendCodeWindow(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "HandleRedeemCodeComplete");
+		Func = Class->GetFunction("RedeemFriendCodeWindow_C", "ExecuteUbergraph_RedeemFriendCodeWindow");
 
-	Params::RedeemFriendCodeWindow_C_HandleRedeemCodeComplete Parms{};
+	Params::RedeemFriendCodeWindow_C_ExecuteUbergraph_RedeemFriendCodeWindow Parms{};
 
-	Parms.Success = Success;
-	Parms.FailureReason = FailureReason;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

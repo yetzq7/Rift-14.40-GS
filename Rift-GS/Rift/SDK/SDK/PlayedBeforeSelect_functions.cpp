@@ -16,6 +16,20 @@
 
 SDK_NAMESPACE_START
 
+// Function PlayedBeforeSelect.PlayedBeforeSelect_C.OnActivated_1
+// (BlueprintCallable, BlueprintEvent)
+
+void UPlayedBeforeSelect_C::OnActivated_1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayedBeforeSelect_C", "OnActivated_1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function PlayedBeforeSelect.PlayedBeforeSelect_C.ExecuteUbergraph_PlayedBeforeSelect
 // (Final, UbergraphFunction)
 // Parameters:
@@ -33,20 +47,6 @@ void UPlayedBeforeSelect_C::ExecuteUbergraph_PlayedBeforeSelect(int32 EntryPoint
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PlayedBeforeSelect.PlayedBeforeSelect_C.OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UPlayedBeforeSelect_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayedBeforeSelect_C", "OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

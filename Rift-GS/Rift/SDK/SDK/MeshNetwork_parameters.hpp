@@ -18,13 +18,11 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function MeshNetwork.MeshBeaconClient.ServerUpdateLevelVisibility
-// 0x000C (0x000C - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 struct MeshBeaconClient_ServerUpdateLevelVisibility final
 {
 public:
-	class FName                                   PackageName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsVisible;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FUpdateLevelVisibilityLevelInfo        LevelVisibility;                                   // 0x0000(0x0014)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MeshBeaconClient_ServerUpdateLevelVisibility;
 
@@ -33,7 +31,7 @@ DUMPER7_ASSERTS_MeshBeaconClient_ServerUpdateLevelVisibility;
 struct MeshBeaconClient_ServerUpdateMultipleLevelsVisibility final
 {
 public:
-	TArray<struct FUpdateLevelVisibilityLevelInfo> LevelVisibilities;                                // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FUpdateLevelVisibilityLevelInfo> LevelVisibilities;                                // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MeshBeaconClient_ServerUpdateMultipleLevelsVisibility;
 
@@ -46,6 +44,25 @@ public:
 };
 DUMPER7_ASSERTS_MeshNetworkComponent_GetMeshNetworkNodeType;
 
+// Function MeshNetwork.MeshNetworkSubsystem.DisableMeshReplication
+// 0x0008 (0x0008 - 0x0000)
+struct MeshNetworkSubsystem_DisableMeshReplication final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshNetworkSubsystem_DisableMeshReplication;
+
+// Function MeshNetwork.MeshNetworkSubsystem.EnableMeshReplication
+// 0x0010 (0x0010 - 0x0000)
+struct MeshNetworkSubsystem_EnableMeshReplication final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UMeshNetworkComponent>      MeshComponentClass;                                // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshNetworkSubsystem_EnableMeshReplication;
+
 // Function MeshNetwork.MeshNetworkSubsystem.GetMetadata
 // 0x0001 (0x0001 - 0x0000)
 struct MeshNetworkSubsystem_GetMetadata final
@@ -55,6 +72,18 @@ public:
 };
 DUMPER7_ASSERTS_MeshNetworkSubsystem_GetMetadata;
 
+// Function MeshNetwork.MeshNetworkSubsystem.GetMetaDataWithKey
+// 0x000C (0x000C - 0x0000)
+struct MeshNetworkSubsystem_GetMetaDataWithKey final
+{
+public:
+	class FName                                   Key;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMeshMetaDataStruct                    MetaData;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MeshNetworkSubsystem_GetMetaDataWithKey;
+
 // Function MeshNetwork.MeshNetworkSubsystem.SetMetaData
 // 0x0001 (0x0001 - 0x0000)
 struct MeshNetworkSubsystem_SetMetaData final
@@ -63,6 +92,17 @@ public:
 	struct FMeshMetaDataStruct                    MetaData;                                          // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MeshNetworkSubsystem_SetMetaData;
+
+// Function MeshNetwork.MeshNetworkSubsystem.SetMetaDataWithKey
+// 0x000C (0x000C - 0x0000)
+struct MeshNetworkSubsystem_SetMetaDataWithKey final
+{
+public:
+	class FName                                   Key;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMeshMetaDataStruct                    MetaData;                                          // 0x0008(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MeshNetworkSubsystem_SetMetaDataWithKey;
 
 // Function MeshNetwork.MeshNetworkSubsystem.GetConnectedToRoot
 // 0x0001 (0x0001 - 0x0000)

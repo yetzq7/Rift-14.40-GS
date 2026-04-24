@@ -16,8 +16,28 @@
 
 SDK_NAMESPACE_START
 
+// Function LoginCamera_Blueprint.LoginCamera_Blueprint_C.OnActivated
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ALoginCamera_Blueprint_C::OnActivated(class AFortPlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LoginCamera_Blueprint_C", "OnActivated");
+
+	Params::LoginCamera_Blueprint_C_OnActivated Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function LoginCamera_Blueprint.LoginCamera_Blueprint_C.ExecuteUbergraph_LoginCamera_Blueprint
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -33,34 +53,6 @@ void ALoginCamera_Blueprint_C::ExecuteUbergraph_LoginCamera_Blueprint(int32 Entr
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LoginCamera_Blueprint.LoginCamera_Blueprint_C.OnActivated
-// (Event, Public, BlueprintEvent)
-
-void ALoginCamera_Blueprint_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LoginCamera_Blueprint_C", "OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function LoginCamera_Blueprint.LoginCamera_Blueprint_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ALoginCamera_Blueprint_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LoginCamera_Blueprint_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

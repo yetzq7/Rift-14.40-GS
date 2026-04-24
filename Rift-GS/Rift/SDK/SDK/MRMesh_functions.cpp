@@ -167,6 +167,56 @@ bool UMeshReconstructorBase::IsReconstructionStarted() const
 }
 
 
+// Function MRMesh.MockDataMeshTrackerComponent.ConnectMRMesh
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMRMeshComponent*                 InMRMeshPtr                                            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMockDataMeshTrackerComponent::ConnectMRMesh(class UMRMeshComponent* InMRMeshPtr)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MockDataMeshTrackerComponent", "ConnectMRMesh");
+
+	Params::MockDataMeshTrackerComponent_ConnectMRMesh Parms{};
+
+	Parms.InMRMeshPtr = InMRMeshPtr;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MRMesh.MockDataMeshTrackerComponent.DisconnectMRMesh
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMRMeshComponent*                 InMRMeshPtr                                            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMockDataMeshTrackerComponent::DisconnectMRMesh(class UMRMeshComponent* InMRMeshPtr)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MockDataMeshTrackerComponent", "DisconnectMRMesh");
+
+	Params::MockDataMeshTrackerComponent_DisconnectMRMesh Parms{};
+
+	Parms.InMRMeshPtr = InMRMeshPtr;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function MRMesh.MRMeshComponent.Clear
 // (Final, Native, Public, BlueprintCallable)
 

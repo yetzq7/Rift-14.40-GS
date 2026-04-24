@@ -16,12 +16,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ShowdownEventTile_RoundBreak.ShowdownEventTile_RoundBreak_C
-// 0x0010 (0x0240 - 0x0230)
+// 0x0010 (0x0270 - 0x0260)
 class UShowdownEventTile_RoundBreak_C final : public UUserWidget
 {
 public:
-	class UWidgetAnimation*                       TransitionSize;                                    // 0x0230(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image_BG;                                          // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       TransitionSize;                                    // 0x0260(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Image_BG;                                          // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

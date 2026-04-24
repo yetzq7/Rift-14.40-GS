@@ -18,29 +18,41 @@ SDK_NAMESPACE_START
 
 // Function InterfacePlayerPawn.InterfacePlayerPawn_C.MeleeSwingRight
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    First_Right                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void IInterfacePlayerPawn_C::MeleeSwingRight()
+void IInterfacePlayerPawn_C::MeleeSwingRight(bool First_Right)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = AsUObject()->Class->GetFunction("InterfacePlayerPawn_C", "MeleeSwingRight");
 
-	AsUObject()->ProcessEvent(Func, nullptr);
+	Params::InterfacePlayerPawn_C_MeleeSwingRight Parms{};
+
+	Parms.First_Right = First_Right;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
 
 // Function InterfacePlayerPawn.InterfacePlayerPawn_C.MeleeSwingLeft
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    First_Left                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void IInterfacePlayerPawn_C::MeleeSwingLeft()
+void IInterfacePlayerPawn_C::MeleeSwingLeft(bool First_Left)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = AsUObject()->Class->GetFunction("InterfacePlayerPawn_C", "MeleeSwingLeft");
 
-	AsUObject()->ProcessEvent(Func, nullptr);
+	Params::InterfacePlayerPawn_C_MeleeSwingLeft Parms{};
+
+	Parms.First_Left = First_Left;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
 
@@ -88,6 +100,34 @@ void IInterfacePlayerPawn_C::FootStepRight()
 
 	if (Func == nullptr)
 		Func = AsUObject()->Class->GetFunction("InterfacePlayerPawn_C", "FootStepRight");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function InterfacePlayerPawn.InterfacePlayerPawn_C.MeleeSwingRight_End
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IInterfacePlayerPawn_C::MeleeSwingRight_End()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("InterfacePlayerPawn_C", "MeleeSwingRight_End");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function InterfacePlayerPawn.InterfacePlayerPawn_C.MeleeSwingLeft_End
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IInterfacePlayerPawn_C::MeleeSwingLeft_End()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("InterfacePlayerPawn_C", "MeleeSwingLeft_End");
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }

@@ -37,7 +37,7 @@ void AB_Prj_Athena_TowerGrenade_C::ExecuteUbergraph_B_Prj_Athena_TowerGrenade(in
 
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -141,8 +141,8 @@ void AB_Prj_Athena_TowerGrenade_C::ReceiveHit(class UPrimitiveComponent* MyComp,
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.OnExploded
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference)
+// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 
 void AB_Prj_Athena_TowerGrenade_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
 {
@@ -218,9 +218,9 @@ void AB_Prj_Athena_TowerGrenade_C::SetBaseDestination(const struct FHitResult& H
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FVector&                   ReferenceLocation                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const TArray<class UClass*>&            BGAClassArray                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>&                 BGALocationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FRotator>&                BGARotationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const TArray<class UClass*>&            BGAClassArray                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// TArray<struct FVector>&                 BGALocationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// TArray<struct FRotator>&                BGARotationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
 void AB_Prj_Athena_TowerGrenade_C::CreateBaseSection(const struct FVector& ReferenceLocation, const TArray<class UClass*>& BGAClassArray, TArray<struct FVector>& BGALocationArray, TArray<struct FRotator>& BGARotationArray)
 {
@@ -268,10 +268,10 @@ void AB_Prj_Athena_TowerGrenade_C::DestroyActorsInGridCell(const struct FVector&
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.ClearAndBuild
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FVector>&                 ClearedGridCells                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// const TArray<class UClass*>&            BGAClassArray                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>&                 BGALocationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FRotator>&                BGARotationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector>&                 ClearedGridCells                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<class UClass*>&            BGAClassArray                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// TArray<struct FVector>&                 BGALocationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// TArray<struct FRotator>&                BGARotationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 // bool                                    DestroyFloorsQuickly                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AB_Prj_Athena_TowerGrenade_C::ClearAndBuild(TArray<struct FVector>& ClearedGridCells, const TArray<class UClass*>& BGAClassArray, TArray<struct FVector>& BGALocationArray, TArray<struct FRotator>& BGARotationArray, bool DestroyFloorsQuickly)
@@ -320,7 +320,7 @@ void AB_Prj_Athena_TowerGrenade_C::SpawnTires(const struct FVector& ReferenceLoc
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.HandleProps
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class AActor*>&                  Array                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class AActor*>&                  Array                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
 void AB_Prj_Athena_TowerGrenade_C::HandleProps(TArray<class AActor*>& Array)
 {

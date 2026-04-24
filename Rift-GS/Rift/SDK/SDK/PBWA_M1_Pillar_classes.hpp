@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PBWA_M1_Pillar.PBWA_M1_Pillar_C
-// 0x0000 (0x0BE8 - 0x0BE8)
+// 0x0000 (0x0B70 - 0x0B70)
 class APBWA_M1_Pillar_C final : public ABuildingPillar
 {
 public:

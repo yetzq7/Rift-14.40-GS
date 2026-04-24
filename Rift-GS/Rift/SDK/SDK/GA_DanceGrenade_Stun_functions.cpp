@@ -56,26 +56,6 @@ void UGA_DanceGrenade_Stun_C::K2_OnEndAbility(bool bWasCancelled)
 }
 
 
-// Function GA_DanceGrenade_Stun.GA_DanceGrenade_Stun_C.InvalidHandle_93D7E1854196ECDA2F2306926AC3D608
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayEffectRemovalInfo&GameplayEffectRemovalInfo                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UGA_DanceGrenade_Stun_C::InvalidHandle_93D7E1854196ECDA2F2306926AC3D608(const struct FGameplayEffectRemovalInfo& GameplayEffectRemovalInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_DanceGrenade_Stun_C", "InvalidHandle_93D7E1854196ECDA2F2306926AC3D608");
-
-	Params::GA_DanceGrenade_Stun_C_InvalidHandle_93D7E1854196ECDA2F2306926AC3D608 Parms{};
-
-	Parms.GameplayEffectRemovalInfo = std::move(GameplayEffectRemovalInfo);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GA_DanceGrenade_Stun.GA_DanceGrenade_Stun_C.K2_ActivateAbility
 // (Event, Protected, BlueprintEvent)
 
@@ -87,26 +67,6 @@ void UGA_DanceGrenade_Stun_C::K2_ActivateAbility()
 		Func = Class->GetFunction("GA_DanceGrenade_Stun_C", "K2_ActivateAbility");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_DanceGrenade_Stun.GA_DanceGrenade_Stun_C.OnRemoved_93D7E1854196ECDA2F2306926AC3D608
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayEffectRemovalInfo&GameplayEffectRemovalInfo                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UGA_DanceGrenade_Stun_C::OnRemoved_93D7E1854196ECDA2F2306926AC3D608(const struct FGameplayEffectRemovalInfo& GameplayEffectRemovalInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_DanceGrenade_Stun_C", "OnRemoved_93D7E1854196ECDA2F2306926AC3D608");
-
-	Params::GA_DanceGrenade_Stun_C_OnRemoved_93D7E1854196ECDA2F2306926AC3D608 Parms{};
-
-	Parms.GameplayEffectRemovalInfo = std::move(GameplayEffectRemovalInfo);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

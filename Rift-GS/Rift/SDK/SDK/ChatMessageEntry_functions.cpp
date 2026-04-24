@@ -36,6 +36,20 @@ void UChatMessageEntry_C::ExecuteUbergraph_ChatMessageEntry(int32 EntryPoint)
 }
 
 
+// Function ChatMessageEntry.ChatMessageEntry_C.OnEntryUpdated_1
+// (BlueprintCallable, BlueprintEvent)
+
+void UChatMessageEntry_C::OnEntryUpdated_1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChatMessageEntry_C", "OnEntryUpdated_1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ChatMessageEntry.ChatMessageEntry_C.OnFocusedChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -65,20 +79,6 @@ void UChatMessageEntry_C::BndEvt__Button_FocusTarget_K2Node_ComponentBoundEvent_
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ChatMessageEntry_C", "BndEvt__Button_FocusTarget_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ChatMessageEntry.ChatMessageEntry_C.OnEntryUpdated_1
-// (BlueprintCallable, BlueprintEvent)
-
-void UChatMessageEntry_C::OnEntryUpdated_1()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChatMessageEntry_C", "OnEntryUpdated_1");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

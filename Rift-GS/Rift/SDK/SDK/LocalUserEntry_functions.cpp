@@ -39,9 +39,9 @@ void ULocalUserEntry_C::ExecuteUbergraph_LocalUserEntry(int32 EntryPoint)
 // Function LocalUserEntry.LocalUserEntry_C.OnOnlineStatusChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// ELocalUserOnlineStatus                  OnlineStatus_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ELocalUserOnlineStatus                  OnlineStatus                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULocalUserEntry_C::OnOnlineStatusChanged(ELocalUserOnlineStatus OnlineStatus_0)
+void ULocalUserEntry_C::OnOnlineStatusChanged(ELocalUserOnlineStatus OnlineStatus)
 {
 	static class UFunction* Func = nullptr;
 
@@ -50,7 +50,7 @@ void ULocalUserEntry_C::OnOnlineStatusChanged(ELocalUserOnlineStatus OnlineStatu
 
 	Params::LocalUserEntry_C_OnOnlineStatusChanged Parms{};
 
-	Parms.OnlineStatus_0 = OnlineStatus_0;
+	Parms.OnlineStatus = OnlineStatus;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -85,7 +85,7 @@ void ULocalUserEntry_C::BP_OnHovered()
 
 
 // Function LocalUserEntry.LocalUserEntry_C.HandleOnlineIndicatorView
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ELocalUserOnlineStatus                  InLocalUserOnlineStatus                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

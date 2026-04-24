@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "GameplayAbilities_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 #include "FortniteGame_structs.hpp"
 
 
@@ -21,124 +21,111 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.ExecuteUbergraph_GA_Athena_Grenade_WithTrajectory
-// 0x0690 (0x0690 - 0x0000)
+// 0x05C0 (0x05C0 - 0x0000)
 struct GA_Athena_Grenade_WithTrajectory_C_ExecuteUbergraph_GA_Athena_Grenade_WithTrajectory final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FProjectileEventData                   K2Node_CustomEvent_ProjectileData1;                // 0x0008(0x0028)(ConstParm, ContainsInstancedReference)
-	TDelegate<void(const struct FProjectileEventData& ProjectileData)> K2Node_CreateDelegate_OutputDelegate; // 0x0030(0x0010)(ZeroConstructor, NoDestructor)
-	struct FProjectileEventData                   K2Node_CustomEvent_ProjectileData;                 // 0x0040(0x0028)(ConstParm, ContainsInstancedReference)
-	TDelegate<void(const struct FProjectileEventData& ProjectileData)> K2Node_CreateDelegate_OutputDelegate1; // 0x0068(0x0010)(ZeroConstructor, NoDestructor)
-	struct FProjectileEventData                   Temp_struct_Variable;                              // 0x0078(0x0028)(ContainsInstancedReference)
-	TDelegate<void(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)> K2Node_CreateDelegate_OutputDelegate2; // 0x00A0(0x0010)(ZeroConstructor, NoDestructor)
-	struct FGameplayAbilityTargetDataHandle       K2Node_CustomEvent_TargetData2;                    // 0x00B0(0x0020)(ConstParm)
-	struct FGameplayTag                           K2Node_CustomEvent_ApplicationTag2;                // 0x00D0(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FGameplayAbilityTargetDataHandle       K2Node_CustomEvent_TargetData1;                    // 0x00D8(0x0020)(ConstParm)
-	struct FGameplayTag                           K2Node_CustomEvent_ApplicationTag1;                // 0x00F8(0x0008)(NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)> K2Node_CreateDelegate_OutputDelegate3; // 0x0100(0x0010)(ZeroConstructor, NoDestructor)
-	struct FGameplayAbilityTargetDataHandle       K2Node_CustomEvent_TargetData;                     // 0x0110(0x0020)(ConstParm)
-	struct FGameplayTag                           K2Node_CustomEvent_ApplicationTag;                 // 0x0130(0x0008)(NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)> K2Node_CreateDelegate_OutputDelegate4; // 0x0138(0x0010)(ZeroConstructor, NoDestructor)
-	struct FGameplayTag                           Temp_struct_Variable1;                             // 0x0148(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FGameplayAbilityTargetDataHandle       Temp_struct_Variable2;                             // 0x0150(0x0020)()
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate5;             // 0x0170(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate6;             // 0x0180(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate7;             // 0x0190(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate8;             // 0x01A0(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate9;             // 0x01B0(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate10;            // 0x01C0(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate11;            // 0x01D0(0x0010)(ZeroConstructor, NoDestructor)
-	float                                         CallFunc_GetScaledCapsuleSize_OutRadius;           // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScaledCapsuleSize_OutHalfHeight;       // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FMax_ReturnValue;                         // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetGravityZ_ReturnValue;                  // 0x01EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F4[0x4];                                      // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FProjectileEventData                   K2Node_CustomEvent_ProjectileData2;                // 0x01F8(0x0028)(ConstParm, ContainsInstancedReference)
-	TDelegate<void(const struct FProjectileEventData& ProjectileData)> K2Node_CreateDelegate_OutputDelegate12; // 0x0220(0x0010)(ZeroConstructor, NoDestructor)
-	struct FProjectileEventData                   K2Node_CustomEvent_ProjectileData5;                // 0x0230(0x0028)(ConstParm, ContainsInstancedReference)
-	class UFortAbilityTask_PlayMontageWaitTarget* CallFunc_PlayMontageInfoAndWaitForTrigger_ReturnValue; // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_261[0x3];                                      // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                K2Node_CustomEvent_Location;                       // 0x0264(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               K2Node_CustomEvent_Direction;                      // 0x0270(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_SpawnLocationAndRotation_OutLoc;          // 0x027C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_SpawnLocationAndRotation_OutRot;          // 0x0288(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x0294(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x029C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CallFunc_SetupGrenade_Base_Grenade;                // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetupGrenade_Projectile_Speed;            // 0x02A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortGameplayEffectContainerSpec       CallFunc_SetupGrenade_Explosion_Gameplay_Spec;     // 0x02B0(0x0080)()
-	float                                         CallFunc_SetupGrenade_Projectile_Gravity_Scale;    // 0x0330(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_334[0x4];                                      // 0x0334(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortGameplayEffectContainerSpec       CallFunc_SetupGrenade_Additional_Explosion_Gameplay_Spec; // 0x0338(0x0080)()
-	float                                         CallFunc_BreakRotator_Roll1;                       // 0x03B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch1;                      // 0x03BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw1;                        // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_CalcGrenadeSpeedFromPitch_GrenadeSpeed;   // 0x03C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FProjectileEventData                   K2Node_CustomEvent_ProjectileData3;                // 0x03C8(0x0028)(ConstParm, ContainsInstancedReference)
-	bool                                          CallFunc_IsStandalone_ReturnValue;                 // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bWasCancelled;                        // 0x03F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_CommitAbility_ReturnValue;             // 0x03F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3F3[0x5];                                      // 0x03F3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityActorInfo              CallFunc_GetActorInfo_ReturnValue;                 // 0x03F8(0x0040)(ContainsInstancedReference)
-	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn;             // 0x0438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0440(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_441[0x7];                                      // 0x0441(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayEventData                     K2Node_MakeStruct_GameplayEventData;               // 0x0448(0x00A8)()
-	struct FGameplayAbilityTargetDataHandle       CallFunc_AbilityTargetDataFromActor_ReturnValue;   // 0x04F0(0x0020)()
-	TArray<struct FActiveGameplayEffectHandle>    CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue; // 0x0510(0x0010)(ZeroConstructor, ReferenceParm)
-	TDelegate<void(const struct FProjectileEventData& ProjectileData)> K2Node_CreateDelegate_OutputDelegate13; // 0x0520(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_K2_CommitAbility_ReturnValue1;            // 0x0530(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_531[0x7];                                      // 0x0531(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilityTask_PlayMontageAndWait*        CallFunc_CreatePlayMontageAndWaitProxy_ReturnValue; // 0x0538(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FProjectileEventData& ProjectileData)> K2Node_CreateDelegate_OutputDelegate14; // 0x0540(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue1;                     // 0x0550(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_551[0x7];                                      // 0x0551(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FProjectileEventData                   K2Node_CustomEvent_ProjectileData4;                // 0x0558(0x0028)(ConstParm, ContainsInstancedReference)
-	class UAbilityTask_WaitDelay*                 CallFunc_WaitDelay_ReturnValue;                    // 0x0580(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAbilityTask_WaitDelay*                 CallFunc_WaitDelay_ReturnValue1;                   // 0x0588(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue2;                     // 0x0590(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue3;                     // 0x0591(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_592[0x6];                                      // 0x0592(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn;              // 0x0598(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn1;             // 0x05A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x05A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x05A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5AA[0x6];                                      // 0x05AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn2;             // 0x05B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x05B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5B9[0x7];                                      // 0x05B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortAbilityTask_SpawnProjectileAndWait* CallFunc_SpawnProjectileAndWait_ReturnValue;      // 0x05C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortProjectileBase*                    CallFunc_BeginSpawningActor_SpawnedActor;          // 0x05C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BeginSpawningActor_ReturnValue;           // 0x05D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue4;                     // 0x05D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5D2[0x2];                                      // 0x05D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x05D4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x05E0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EC[0x4];                                      // 0x05EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn3;             // 0x05F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_VSize_ReturnValue;                        // 0x05F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x05FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn4;             // 0x0600(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_608[0x8];                                      // 0x0608(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0610(0x0030)(IsPlainOldData, NoDestructor)
-	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0640(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAbilityTask_WaitDelay*                 CallFunc_WaitDelay_ReturnValue2;                   // 0x0648(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue5;                     // 0x0650(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_651[0x7];                                      // 0x0651(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortProjectileBase*                    CallFunc_FinishSpawningActor_ReturnValue;          // 0x0658(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortProjectileBase*                    K2Node_CustomEvent_ProjectileReference;            // 0x0660(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x0668(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_669[0x3];                                      // 0x0669(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const struct FProjectileEventData& ProjectileData)> K2Node_CreateDelegate_OutputDelegate15; // 0x066C(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_67C[0x4];                                      // 0x067C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortProjectileTrajectory*              CallFunc_SpawnTrajectoryIndicator_ReturnValue;     // 0x0680(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue1;                 // 0x0688(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0014(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0024(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0034(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0044(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_5;            // 0x0054(0x0010)(ZeroConstructor, NoDestructor)
+	ECollisionChannel                             CallFunc_GetCollisionObjectType_ReturnValue;       // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetGravityZ_ReturnValue;                  // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScaledCapsuleSize_OutRadius;           // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScaledCapsuleSize_OutHalfHeight;       // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FMax_ReturnValue;                         // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       K2Node_CustomEvent_TargetData_2;                   // 0x0080(0x0028)(ConstParm)
+	struct FGameplayTag                           K2Node_CustomEvent_ApplicationTag_2;               // 0x00A8(0x0008)(NoDestructor, HasGetValueTypeHash)
+	class UFortAbilityTask_PlayMontageWaitTarget* CallFunc_PlayMontageInfoAndWaitForTrigger_ReturnValue; // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                K2Node_CustomEvent_Location;                       // 0x00BC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               K2Node_CustomEvent_Direction;                      // 0x00C8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_SpawnLocationAndRotation_OutLoc;          // 0x00D4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_SpawnLocationAndRotation_OutRot;          // 0x00E0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_SetupGrenade_Base_Grenade;                // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetupGrenade_Projectile_Speed;            // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortGameplayEffectContainerSpec       CallFunc_SetupGrenade_Explosion_Gameplay_Spec;     // 0x0108(0x00B8)()
+	float                                         CallFunc_SetupGrenade_Projectile_Gravity_Scale;    // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortGameplayEffectContainerSpec       CallFunc_SetupGrenade_Additional_Explosion_Gameplay_Spec; // 0x01C8(0x00B8)()
+	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x0280(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x0284(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x0288(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_CalcGrenadeSpeedFromPitch_GrenadeSpeed;   // 0x028C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayAbilityTargetDataHandle       Temp_struct_Variable;                              // 0x0290(0x0028)()
+	struct FGameplayTag                           Temp_struct_Variable_1;                            // 0x02B8(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsStandalone_ReturnValue;                 // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bWasCancelled;                        // 0x02C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C2[0x6];                                      // 0x02C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       K2Node_CustomEvent_TargetData;                     // 0x02C8(0x0028)(ConstParm)
+	struct FGameplayTag                           K2Node_CustomEvent_ApplicationTag;                 // 0x02F0(0x0008)(NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)> K2Node_CreateDelegate_OutputDelegate_6; // 0x02F8(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          CallFunc_K2_CommitAbility_ReturnValue;             // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_K2_CommitAbility_ReturnValue_1;           // 0x0309(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_30A[0x2];                                      // 0x030A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)> K2Node_CreateDelegate_OutputDelegate_7; // 0x030C(0x0010)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_31C[0x4];                                      // 0x031C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityTask_PlayMontageAndWait*        CallFunc_CreatePlayMontageAndWaitProxy_ReturnValue; // 0x0320(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_329[0x7];                                      // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       K2Node_CustomEvent_TargetData_1;                   // 0x0330(0x0028)(ConstParm)
+	struct FGameplayTag                           K2Node_CustomEvent_ApplicationTag_1;               // 0x0358(0x0008)(NoDestructor, HasGetValueTypeHash)
+	class UAbilityTask_WaitDelay*                 CallFunc_WaitDelay_ReturnValue;                    // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0368(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_369[0x7];                                      // 0x0369(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn;              // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_379[0x7];                                      // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn_1;            // 0x0380(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0388(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0389(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_38A[0x6];                                      // 0x038A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn_2;            // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortProjectileBase*                    CallFunc_SpawnProjectile_ReturnValue;              // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x03A0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x03AC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_VSize_ReturnValue;                        // 0x03B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3BC[0x4];                                      // 0x03BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn_3;            // 0x03C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn_4;            // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D8[0x8];                                      // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x03E0(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
+	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0410(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAbilityTask_WaitDelay*                 CallFunc_WaitDelay_ReturnValue_1;                  // 0x0418(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_421[0x7];                                      // 0x0421(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortProjectileBase*                    CallFunc_FinishSpawningActor_ReturnValue;          // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortProjectileBase*                    K2Node_CustomEvent_ProjectileReference;            // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)> K2Node_CreateDelegate_OutputDelegate_8; // 0x0438(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x0448(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_449[0x7];                                      // 0x0449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortProjectileTrajectory*              CallFunc_SpawnTrajectoryIndicator_ReturnValue;     // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0458(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_459[0x7];                                      // 0x0459(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityActorInfo              CallFunc_GetActorInfo_ReturnValue;                 // 0x0460(0x0048)(ContainsInstancedReference)
+	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn;             // 0x04A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x04B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4B1[0x7];                                      // 0x04B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayEventData                     K2Node_MakeStruct_GameplayEventData;               // 0x04B8(0x00B0)()
+	struct FGameplayAbilityTargetDataHandle       CallFunc_AbilityTargetDataFromActor_ReturnValue;   // 0x0568(0x0028)()
+	TArray<struct FActiveGameplayEffectHandle>    CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue; // 0x0590(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class AFortPlayerController*                  CallFunc_GetFortPlayerControllerFromActor_ReturnValue; // 0x05A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortQuestManager*                      CallFunc_GetQuestManager_ReturnValue;              // 0x05A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SendComplexCustomStatEvent_QuestActive;   // 0x05B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_SendComplexCustomStatEvent_QuestCompleted; // 0x05B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_ExecuteUbergraph_GA_Athena_Grenade_WithTrajectory;
 
@@ -171,91 +158,37 @@ public:
 DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_Server_SpawnProjectile;
 
 // Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Triggered_B08560984B3818F6EECB3C9A92E61ADC
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct GA_Athena_Grenade_WithTrajectory_C_Triggered_B08560984B3818F6EECB3C9A92E61ADC final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FGameplayTag                           ApplicationTag;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_Triggered_B08560984B3818F6EECB3C9A92E61ADC;
 
 // Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Cancelled_B08560984B3818F6EECB3C9A92E61ADC
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct GA_Athena_Grenade_WithTrajectory_C_Cancelled_B08560984B3818F6EECB3C9A92E61ADC final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FGameplayTag                           ApplicationTag;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_Cancelled_B08560984B3818F6EECB3C9A92E61ADC;
 
 // Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Completed_B08560984B3818F6EECB3C9A92E61ADC
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct GA_Athena_Grenade_WithTrajectory_C_Completed_B08560984B3818F6EECB3C9A92E61ADC final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FGameplayTag                           ApplicationTag;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_Completed_B08560984B3818F6EECB3C9A92E61ADC;
 
-// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Created_40FE015D40E881984FE611B980B75D52
-// 0x0028 (0x0028 - 0x0000)
-struct GA_Athena_Grenade_WithTrajectory_C_Created_40FE015D40E881984FE611B980B75D52 final
-{
-public:
-	struct FProjectileEventData                   ProjectileData;                                    // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_Created_40FE015D40E881984FE611B980B75D52;
-
-// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Touched_40FE015D40E881984FE611B980B75D52
-// 0x0028 (0x0028 - 0x0000)
-struct GA_Athena_Grenade_WithTrajectory_C_Touched_40FE015D40E881984FE611B980B75D52 final
-{
-public:
-	struct FProjectileEventData                   ProjectileData;                                    // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_Touched_40FE015D40E881984FE611B980B75D52;
-
-// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Bounced_40FE015D40E881984FE611B980B75D52
-// 0x0028 (0x0028 - 0x0000)
-struct GA_Athena_Grenade_WithTrajectory_C_Bounced_40FE015D40E881984FE611B980B75D52 final
-{
-public:
-	struct FProjectileEventData                   ProjectileData;                                    // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_Bounced_40FE015D40E881984FE611B980B75D52;
-
-// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Stopped_40FE015D40E881984FE611B980B75D52
-// 0x0028 (0x0028 - 0x0000)
-struct GA_Athena_Grenade_WithTrajectory_C_Stopped_40FE015D40E881984FE611B980B75D52 final
-{
-public:
-	struct FProjectileEventData                   ProjectileData;                                    // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_Stopped_40FE015D40E881984FE611B980B75D52;
-
-// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Exploded_40FE015D40E881984FE611B980B75D52
-// 0x0028 (0x0028 - 0x0000)
-struct GA_Athena_Grenade_WithTrajectory_C_Exploded_40FE015D40E881984FE611B980B75D52 final
-{
-public:
-	struct FProjectileEventData                   ProjectileData;                                    // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_Exploded_40FE015D40E881984FE611B980B75D52;
-
-// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Destroyed_40FE015D40E881984FE611B980B75D52
-// 0x0028 (0x0028 - 0x0000)
-struct GA_Athena_Grenade_WithTrajectory_C_Destroyed_40FE015D40E881984FE611B980B75D52 final
-{
-public:
-	struct FProjectileEventData                   ProjectileData;                                    // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_Destroyed_40FE015D40E881984FE611B980B75D52;
-
 // Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.SetupGrenade
-// 0x0228 (0x0228 - 0x0000)
+// 0x0308 (0x0308 - 0x0000)
 struct GA_Athena_Grenade_WithTrajectory_C_SetupGrenade final
 {
 public:
@@ -264,14 +197,14 @@ public:
 	class UClass*                                 Base_Grenade;                                      // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Projectile_Speed;                                  // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortGameplayEffectContainerSpec       Explosion_Gameplay_Spec;                           // 0x0018(0x0080)(Parm, OutParm)
-	float                                         Projectile_Gravity_Scale;                          // 0x0098(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortGameplayEffectContainerSpec       Additional_Explosion_Gameplay_Spec;                // 0x00A0(0x0080)(Parm, OutParm)
-	struct FFortGameplayEffectContainerSpec       CallFunc_MakeGameplayEffectContainerSpec_ReturnValue; // 0x0120(0x0080)()
-	float                                         CallFunc_CalcGrenadeSpeedFromPitch_GrenadeSpeed;   // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortGameplayEffectContainerSpec       CallFunc_MakeGameplayEffectContainerSpec_ReturnValue1; // 0x01A8(0x0080)()
+	struct FFortGameplayEffectContainerSpec       Explosion_Gameplay_Spec;                           // 0x0018(0x00B8)(Parm, OutParm)
+	float                                         Projectile_Gravity_Scale;                          // 0x00D0(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortGameplayEffectContainerSpec       Additional_Explosion_Gameplay_Spec;                // 0x00D8(0x00B8)(Parm, OutParm)
+	struct FFortGameplayEffectContainerSpec       CallFunc_MakeGameplayEffectContainerSpec_ReturnValue; // 0x0190(0x00B8)()
+	float                                         CallFunc_CalcGrenadeSpeedFromPitch_GrenadeSpeed;   // 0x0248(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortGameplayEffectContainerSpec       CallFunc_MakeGameplayEffectContainerSpec_ReturnValue_1; // 0x0250(0x00B8)()
 };
 DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_SetupGrenade;
 
@@ -282,7 +215,7 @@ struct GA_Athena_Grenade_WithTrajectory_C_SetupDummyProjectile final
 public:
 	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn;              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0010(0x0030)(IsPlainOldData, NoDestructor)
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0010(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -297,12 +230,39 @@ DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_SetupDummyProjectile;
 struct GA_Athena_Grenade_WithTrajectory_C_UpdateTrajectorySpline final
 {
 public:
-	TArray<struct FVector>                        CallFunc_GetProjectileTrajectoryPoints_OutSplinePoints; // 0x0000(0x0010)(ZeroConstructor, ReferenceParm)
-	TArray<struct FVector>                        CallFunc_GetProjectileTrajectoryPoints_OutSplineTangents; // 0x0010(0x0010)(ZeroConstructor, ReferenceParm)
-	struct FHitResult                             CallFunc_GetProjectileTrajectoryPoints_OutHitResult; // 0x0020(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TArray<struct FVector>                        CallFunc_GetProjectileTrajectoryPoints_OutSplinePoints; // 0x0000(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	TArray<struct FVector>                        CallFunc_GetProjectileTrajectoryPoints_OutSplineTangents; // 0x0010(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_GetProjectileTrajectoryPoints_OutHitResult; // 0x0020(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_UpdateTrajectorySpline;
+
+// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.GetProjectileTrajectoryPoints
+// 0x01B0 (0x01B0 - 0x0000)
+struct GA_Athena_Grenade_WithTrajectory_C_GetProjectileTrajectoryPoints final
+{
+public:
+	TArray<struct FVector>                        OutSplinePoints;                                   // 0x0000(0x0010)(Parm, OutParm, HasGetValueTypeHash)
+	TArray<struct FVector>                        OutSplineTangents;                                 // 0x0010(0x0010)(Parm, OutParm, HasGetValueTypeHash)
+	struct FHitResult                             OutHitResult;                                      // 0x0020(0x008C)(Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn;              // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SelectFloat_ReturnValue;                  // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_SpawnLocationAndRotation_OutLoc;          // 0x00BC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_SpawnLocationAndRotation_OutRot;          // 0x00C8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_Conv_RotatorToVector_ReturnValue;         // 0x00D4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_CalcGrenadeSpeedFromPitch_GrenadeSpeed;   // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x00F0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FMax_ReturnValue;                         // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_CalculateProjectileTrajectorySplineWithHit_OutHitResult; // 0x0100(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVector>                        CallFunc_CalculateProjectileTrajectorySplineWithHit_OutSplinePoints; // 0x0190(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	TArray<struct FVector>                        CallFunc_CalculateProjectileTrajectorySplineWithHit_OutSplineTangents; // 0x01A0(0x0010)(ReferenceParm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_GetProjectileTrajectoryPoints;
 
 // Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.SpawnTrajectoryIndicator
 // 0x0028 (0x0028 - 0x0000)
@@ -331,16 +291,16 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn1;             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn_1;            // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_GetDefaultTargetingRotation_ReturnValue;  // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                         CallFunc_BreakRotator_Roll;                        // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0048(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0054(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Roll1;                       // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch1;                      // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw1;                        // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                K2Node_Select_Default;                             // 0x006C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_RotateAngleAxis_ReturnValue;              // 0x007C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -360,23 +320,23 @@ public:
 	float                                         CallFunc_NormalizeAxis_ReturnValue;                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_FClamp_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue1;         // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Lerp_ReturnValue;                         // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_CalcGrenadeSpeedFromPitch;
 
 // Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.GetOwningPlayer
-// 0x0060 (0x0060 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct GA_Athena_Grenade_WithTrajectory_C_GetOwningPlayer final
 {
 public:
 	class AFortPlayerPawn*                        Player_Pawn;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityActorInfo              CallFunc_GetActorInfo_ReturnValue;                 // 0x0010(0x0040)(ContainsInstancedReference)
-	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn;             // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FGameplayAbilityActorInfo              CallFunc_GetActorInfo_ReturnValue;                 // 0x0010(0x0048)(ContainsInstancedReference)
+	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn;             // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_GetOwningPlayer;
 
@@ -389,30 +349,14 @@ public:
 };
 DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_GetProjectileTrajectoryActor;
 
-// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.GetProjectileTrajectoryPoints
-// 0x01A0 (0x01A0 - 0x0000)
-struct GA_Athena_Grenade_WithTrajectory_C_GetProjectileTrajectoryPoints final
+// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.ShouldOnlyShowTrajectoryOnUse
+// 0x0001 (0x0001 - 0x0000)
+struct GA_Athena_Grenade_WithTrajectory_C_ShouldOnlyShowTrajectoryOnUse final
 {
 public:
-	TArray<struct FVector>                        OutSplinePoints;                                   // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor)
-	TArray<struct FVector>                        OutSplineTangents;                                 // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor)
-	struct FHitResult                             OutHitResult;                                      // 0x0020(0x0088)(Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AFortPlayerPawn*                        CallFunc_GetOwningPlayer_Player_Pawn;              // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SelectFloat_ReturnValue;                  // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_SpawnLocationAndRotation_OutLoc;          // 0x00B4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_SpawnLocationAndRotation_OutRot;          // 0x00C0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_Conv_RotatorToVector_ReturnValue;         // 0x00CC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_CalcGrenadeSpeedFromPitch_GrenadeSpeed;   // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x00E8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FMax_ReturnValue;                         // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_CalculateProjectileTrajectorySplineWithHit_OutHitResult; // 0x00F8(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	TArray<struct FVector>                        CallFunc_CalculateProjectileTrajectorySplineWithHit_OutSplinePoints; // 0x0180(0x0010)(ZeroConstructor, ReferenceParm)
-	TArray<struct FVector>                        CallFunc_CalculateProjectileTrajectorySplineWithHit_OutSplineTangents; // 0x0190(0x0010)(ZeroConstructor, ReferenceParm)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_GetProjectileTrajectoryPoints;
+DUMPER7_ASSERTS_GA_Athena_Grenade_WithTrajectory_C_ShouldOnlyShowTrajectoryOnUse;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

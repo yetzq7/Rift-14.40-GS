@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_Rift_Athena_Teleport.GE_Rift_Athena_Teleport_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_Rift_Athena_Teleport_C final : public UGameplayEffect
 {
 public:

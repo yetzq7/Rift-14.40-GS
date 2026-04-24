@@ -17,17 +17,16 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_PlayerHealthDamage_CameraLensEffect.B_PlayerHealthDamage_CameraLensEffect_C
-// 0x0010 (0x0400 - 0x03F0)
+// 0x0010 (0x02F0 - 0x02E0)
 #pragma pack(push, 0x1)
 class SDK_ALIGN(0x10) AB_PlayerHealthDamage_CameraLensEffect_C : public AEmitterCameraLensEffectBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_B_PlayerHealthDamage_CameraLensEffect(int32 EntryPoint);
 	void PassParticle_Parameter(float NewParam, bool First_Hit);
-	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

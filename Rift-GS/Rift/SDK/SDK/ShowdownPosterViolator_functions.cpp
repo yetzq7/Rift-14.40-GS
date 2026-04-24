@@ -36,17 +36,23 @@ void UShowdownPosterViolator_C::ExecuteUbergraph_ShowdownPosterViolator(int32 En
 }
 
 
-// Function ShowdownPosterViolator.ShowdownPosterViolator_C.RefreshDataBP
+// Function ShowdownPosterViolator.ShowdownPosterViolator_C.OnViolatorStateRefreshed
 // (Event, Protected, BlueprintEvent)
+// Parameters:
+// ETournmentPosterViolatorState           NewTimeState                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UShowdownPosterViolator_C::RefreshDataBP()
+void UShowdownPosterViolator_C::OnViolatorStateRefreshed(ETournmentPosterViolatorState NewTimeState)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownPosterViolator_C", "RefreshDataBP");
+		Func = Class->GetFunction("ShowdownPosterViolator_C", "OnViolatorStateRefreshed");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::ShowdownPosterViolator_C_OnViolatorStateRefreshed Parms{};
+
+	Parms.NewTimeState = NewTimeState;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

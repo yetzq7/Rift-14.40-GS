@@ -11,24 +11,24 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "FortniteUI_classes.hpp"
 #include "UMG_structs.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ItemCraftingIngredientsDetailWidget.ItemCraftingIngredientsDetailWidget_C
-// 0x0010 (0x0290 - 0x0280)
+// 0x0010 (0x02F0 - 0x02E0)
 class UItemCraftingIngredientsDetailWidget_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UItemCraftingIngredientList_C*          ItemCraftingIngredientList;                        // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UItemCraftingIngredientList_C*          DetailsWidget_ItemCraftingIngredientsList;         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_ItemCraftingIngredientsDetailWidget(int32 EntryPoint);
-	void HandlePostDifferentItemToCompareWithSet();
 	void HandlePostDifferentItemToDetailSet();
+	void HandlePostDifferentItemToCompareWithSet();
+	void ExecuteUbergraph_ItemCraftingIngredientsDetailWidget(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

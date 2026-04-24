@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GET_AfflictedParent.GET_AfflictedParent_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGET_AfflictedParent_C : public UGET_DamageParent_C
 {
 public:

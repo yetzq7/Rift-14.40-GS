@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass RedirectToEpicAccount.RedirectToEpicAccount_C
-// 0x0008 (0x0370 - 0x0368)
+// 0x0008 (0x04A8 - 0x04A0)
 class URedirectToEpicAccount_C final : public UFortRedirectToEpicAccountWidget
 {
 public:
-	class UImage*                                 Image_4;                                           // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_4;                                           // 0x04A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

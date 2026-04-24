@@ -36,8 +36,8 @@ void AFortVolumeActor_PrefabGrenades_C::ExecuteUbergraph_FortVolumeActor_PrefabG
 }
 
 
-// Function FortVolumeActor_PrefabGrenades.FortVolumeActor_PrefabGrenades_C.OnDeathPlayEffects
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Function FortVolumeActor_PrefabGrenades.FortVolumeActor_PrefabGrenades_C.OnDeathPlayEffects_2
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayTagContainer&     DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -47,14 +47,14 @@ void AFortVolumeActor_PrefabGrenades_C::ExecuteUbergraph_FortVolumeActor_PrefabG
 // class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayEffectContextHandle&EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AFortVolumeActor_PrefabGrenades_C::OnDeathPlayEffects(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
+void AFortVolumeActor_PrefabGrenades_C::OnDeathPlayEffects_2(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortVolumeActor_PrefabGrenades_C", "OnDeathPlayEffects");
+		Func = Class->GetFunction("FortVolumeActor_PrefabGrenades_C", "OnDeathPlayEffects_2");
 
-	Params::FortVolumeActor_PrefabGrenades_C_OnDeathPlayEffects Parms{};
+	Params::FortVolumeActor_PrefabGrenades_C_OnDeathPlayEffects_2 Parms{};
 
 	Parms.Damage = Damage;
 	Parms.DamageTags = std::move(DamageTags);
@@ -65,20 +65,6 @@ void AFortVolumeActor_PrefabGrenades_C::OnDeathPlayEffects(float Damage, const s
 	Parms.EffectContext = std::move(EffectContext);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortVolumeActor_PrefabGrenades.FortVolumeActor_PrefabGrenades_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AFortVolumeActor_PrefabGrenades_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortVolumeActor_PrefabGrenades_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -10,15 +10,23 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass StatusWidget.StatusWidget_C
-// 0x0000 (0x0348 - 0x0348)
+// 0x0008 (0x0500 - 0x04F8)
 class UStatusWidget_C final : public UFortLoginStatus
 {
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void SetContinueButtonText(const class FText& ContinueText);
+	void ExecuteUbergraph_StatusWidget(int32 EntryPoint);
+
 public:
 	static class UClass* StaticClass()
 	{

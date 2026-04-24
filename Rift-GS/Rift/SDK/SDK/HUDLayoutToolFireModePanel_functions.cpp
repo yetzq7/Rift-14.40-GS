@@ -36,6 +36,110 @@ void UHUDLayoutToolFireModePanel_C::ExecuteUbergraph_HUDLayoutToolFireModePanel(
 }
 
 
+// Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UHUDLayoutToolFireModePanel_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDLayoutToolFireModePanel_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.DeselectTile
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFireModeSelectTile_C*            Tile                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UHUDLayoutToolFireModePanel_C::DeselectTile(class UFireModeSelectTile_C* Tile)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDLayoutToolFireModePanel_C", "DeselectTile");
+
+	Params::HUDLayoutToolFireModePanel_C_DeselectTile Parms{};
+
+	Parms.Tile = Tile;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.UpdateSelectButtonVisibility
+// (BlueprintCallable, BlueprintEvent)
+
+void UHUDLayoutToolFireModePanel_C::UpdateSelectButtonVisibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDLayoutToolFireModePanel_C", "UpdateSelectButtonVisibility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.BndEvt__3DTouchCheckbox_K2Node_ComponentBoundEvent_9_OnClicked__DelegateSignature
+// (BlueprintEvent)
+
+void UHUDLayoutToolFireModePanel_C::BndEvt__3DTouchCheckbox_K2Node_ComponentBoundEvent_9_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDLayoutToolFireModePanel_C", "BndEvt__3DTouchCheckbox_K2Node_ComponentBoundEvent_9_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.BndEvt__DedicatedButtonCheckbox_K2Node_ComponentBoundEvent_8_OnClicked__DelegateSignature
+// (BlueprintEvent)
+
+void UHUDLayoutToolFireModePanel_C::BndEvt__DedicatedButtonCheckbox_K2Node_ComponentBoundEvent_8_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDLayoutToolFireModePanel_C", "BndEvt__DedicatedButtonCheckbox_K2Node_ComponentBoundEvent_8_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.BndEvt__TapAnywhereCheckbox_K2Node_ComponentBoundEvent_7_OnClicked__DelegateSignature
+// (BlueprintEvent)
+
+void UHUDLayoutToolFireModePanel_C::BndEvt__TapAnywhereCheckbox_K2Node_ComponentBoundEvent_7_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDLayoutToolFireModePanel_C", "BndEvt__TapAnywhereCheckbox_K2Node_ComponentBoundEvent_7_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.BndEvt__AutofireCheckbox_K2Node_ComponentBoundEvent_6_OnClicked__DelegateSignature
+// (BlueprintEvent)
+
+void UHUDLayoutToolFireModePanel_C::BndEvt__AutofireCheckbox_K2Node_ComponentBoundEvent_6_OnClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDLayoutToolFireModePanel_C", "BndEvt__AutofireCheckbox_K2Node_ComponentBoundEvent_6_OnClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.OnFire Mode Changed
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -96,6 +200,20 @@ void UHUDLayoutToolFireModePanel_C::BndEvt__CustomButton_K2Node_ComponentBoundEv
 }
 
 
+// Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UHUDLayoutToolFireModePanel_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDLayoutToolFireModePanel_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.BndEvt__TutorialConfirm_K2Node_ComponentBoundEvent_185_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -113,20 +231,6 @@ void UHUDLayoutToolFireModePanel_C::BndEvt__TutorialConfirm_K2Node_ComponentBoun
 	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UHUDLayoutToolFireModePanel_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HUDLayoutToolFireModePanel_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -211,7 +315,7 @@ void UHUDLayoutToolFireModePanel_C::HandleTileButtonFocused(class UFireModeSelec
 
 
 // Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.PlayCurFocusedTileMovie
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFireModeSelectTile_C*            CurFocusedTile                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -267,7 +371,7 @@ void UHUDLayoutToolFireModePanel_C::HandleCurSelectedTile(class UFireModeSelectT
 // Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.InitButtonBindings
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class UHUDLayoutToolFireModeButton*>&ArrayOfFireModeButtons                                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class UHUDLayoutToolFireModeButton*>&ArrayOfFireModeButtons                                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 
 void UHUDLayoutToolFireModePanel_C::InitButtonBindings(TArray<class UHUDLayoutToolFireModeButton*>& ArrayOfFireModeButtons)
 {
@@ -334,6 +438,41 @@ void UHUDLayoutToolFireModePanel_C::SetCustomFireMode()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("HUDLayoutToolFireModePanel_C", "SetCustomFireMode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.HasSelectedCustomMode
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UHUDLayoutToolFireModePanel_C::HasSelectedCustomMode(bool* Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDLayoutToolFireModePanel_C", "HasSelectedCustomMode");
+
+	Params::HUDLayoutToolFireModePanel_C_HasSelectedCustomMode Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Value != nullptr)
+		*Value = Parms.Value;
+}
+
+
+// Function HUDLayoutToolFireModePanel.HUDLayoutToolFireModePanel_C.PlayTileMovie
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UHUDLayoutToolFireModePanel_C::PlayTileMovie()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HUDLayoutToolFireModePanel_C", "PlayTileMovie");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

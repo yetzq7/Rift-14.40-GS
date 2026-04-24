@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GCN_EnvCampFire_Death.GCN_EnvCampFire_Death_C
-// 0x0000 (0x01A0 - 0x01A0)
+// 0x0000 (0x01B8 - 0x01B8)
 class UGCN_EnvCampFire_Death_C final : public UFortGameplayCueNotify_Burst
 {
 public:

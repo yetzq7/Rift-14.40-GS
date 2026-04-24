@@ -84,20 +84,6 @@ void AAOE_Commando_KeepOutExplosion_C::Send_Info(float Radius_0)
 }
 
 
-// Function AOE_Commando_KeepOutExplosion.AOE_Commando_KeepOutExplosion_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AAOE_Commando_KeepOutExplosion_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AOE_Commando_KeepOutExplosion_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function AOE_Commando_KeepOutExplosion.AOE_Commando_KeepOutExplosion_C.OnRep_Radius
 // (HasDefaults, BlueprintCallable, BlueprintEvent)
 

@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "SocialUMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -46,6 +45,15 @@ public:
 };
 DUMPER7_ASSERTS_SocialChatMessageEntry_CanInteract;
 
+// Function SocialUMG.SocialGroupListEntry.HandleGetMenuContent
+// 0x0008 (0x0008 - 0x0000)
+struct SocialGroupListEntry_HandleGetMenuContent final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SocialGroupListEntry_HandleGetMenuContent;
+
 // Function SocialUMG.SocialInteractionButton.GetInteractionName
 // 0x0008 (0x0008 - 0x0000)
 struct SocialInteractionButton_GetInteractionName final
@@ -63,6 +71,15 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SocialInteractionButton_IsPlatformOnlyFriend;
+
+// Function SocialUMG.SocialActionMenu.HandleMenuAnchorOpenChanged
+// 0x0001 (0x0001 - 0x0000)
+struct SocialActionMenu_HandleMenuAnchorOpenChanged final
+{
+public:
+	bool                                          bIsOpen;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SocialActionMenu_HandleMenuAnchorOpenChanged;
 
 // Function SocialUMG.SocialInteractionMenu.OnToggleConfirmation
 // 0x0001 (0x0001 - 0x0000)
@@ -82,23 +99,23 @@ public:
 };
 DUMPER7_ASSERTS_SocialInteractionMenu_GetFirstEntryToCenter;
 
-// Function SocialUMG.SocialListEntry.HandleGetMenuContent
+// Function SocialUMG.SocialListInteractableEntryBase.HandleGetMenuContent
 // 0x0008 (0x0008 - 0x0000)
-struct SocialListEntry_HandleGetMenuContent final
+struct SocialListInteractableEntryBase_HandleGetMenuContent final
 {
 public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SocialListEntry_HandleGetMenuContent;
+DUMPER7_ASSERTS_SocialListInteractableEntryBase_HandleGetMenuContent;
 
-// Function SocialUMG.SocialUserListEntry.OnUserPresenceChanged
+// Function SocialUMG.SocialListInteractableEntryBase.HandleMenuOpenChanged
 // 0x0001 (0x0001 - 0x0000)
-struct SocialUserListEntry_OnUserPresenceChanged final
+struct SocialListInteractableEntryBase_HandleMenuOpenChanged final
 {
 public:
-	EOnlineStatus                                 OnlineStatus;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsMenuOpen;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SocialUserListEntry_OnUserPresenceChanged;
+DUMPER7_ASSERTS_SocialListInteractableEntryBase_HandleMenuOpenChanged;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

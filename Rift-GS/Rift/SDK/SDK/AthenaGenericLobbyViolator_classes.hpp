@@ -16,12 +16,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass AthenaGenericLobbyViolator.AthenaGenericLobbyViolator_C
-// 0x0010 (0x0240 - 0x0230)
+// 0x0010 (0x0270 - 0x0260)
 class UAthenaGenericLobbyViolator_C final : public UUserWidget
 {
 public:
-	class UCommonTextBlock*                       ModeName;                                          // 0x0230(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       SubText;                                           // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ModeName;                                          // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       SubText;                                           // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void SetGamemodeName(const class FText& Name_0, const class FText& SubText_0);

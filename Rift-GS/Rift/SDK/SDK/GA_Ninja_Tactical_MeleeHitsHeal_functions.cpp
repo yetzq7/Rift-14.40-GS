@@ -56,26 +56,6 @@ void UGA_Ninja_Tactical_MeleeHitsHeal_C::K2_OnEndAbility(bool bWasCancelled)
 }
 
 
-// Function GA_Ninja_Tactical_MeleeHitsHeal.GA_Ninja_Tactical_MeleeHitsHeal_C.SetupAbility
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAbilitySystemComponent*          AbilitySystem                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Ninja_Tactical_MeleeHitsHeal_C::SetupAbility(class UAbilitySystemComponent* AbilitySystem)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Ninja_Tactical_MeleeHitsHeal_C", "SetupAbility");
-
-	Params::GA_Ninja_Tactical_MeleeHitsHeal_C_SetupAbility Parms{};
-
-	Parms.AbilitySystem = AbilitySystem;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GA_Ninja_Tactical_MeleeHitsHeal.GA_Ninja_Tactical_MeleeHitsHeal_C.K2_ActivateAbilityFromEvent
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -91,6 +71,26 @@ void UGA_Ninja_Tactical_MeleeHitsHeal_C::K2_ActivateAbilityFromEvent(const struc
 	Params::GA_Ninja_Tactical_MeleeHitsHeal_C_K2_ActivateAbilityFromEvent Parms{};
 
 	Parms.EventData_0 = std::move(EventData_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Ninja_Tactical_MeleeHitsHeal.GA_Ninja_Tactical_MeleeHitsHeal_C.SetupAbility
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAbilitySystemComponent*          AbilitySystem                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Ninja_Tactical_MeleeHitsHeal_C::SetupAbility(class UAbilitySystemComponent* AbilitySystem)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Ninja_Tactical_MeleeHitsHeal_C", "SetupAbility");
+
+	Params::GA_Ninja_Tactical_MeleeHitsHeal_C_SetupAbility Parms{};
+
+	Parms.AbilitySystem = AbilitySystem;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -11,49 +11,44 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "SocialUMG_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass UserListEntry_XS.UserListEntry_XS_C
-// 0x0128 (0x0C98 - 0x0B70)
+// 0x0120 (0x0D30 - 0x0C10)
 class UUserListEntry_XS_C final : public UFortSocialUserListEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B70(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Selected;                                          // 0x0B78(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hovered;                                           // 0x0B80(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                AnimatedInputBorder;                               // 0x0B88(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Arrow;                                             // 0x0B90(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                Border_OnlineStatusIndicator;                      // 0x0B98(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UIconTextButton_C*                      EmptyButtonToEatOneMouseUpEvent;                   // 0x0BA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                EntryBorder;                                       // 0x0BA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_EncourageEpicFriend;                         // 0x0BB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FLinearColor                           Online;                                            // 0x0BB8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Offline;                                           // 0x0BC8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Away;                                              // 0x0BD8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           bLocked;                                           // 0x0BE8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            UserNameOnline;                                    // 0x0BF8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateColor                            UserNameOfflineAway;                               // 0x0C20(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateColor                            UserNameBlocked;                                   // 0x0C48(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          IsPlatOnlyFriend;                                  // 0x0C70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C71[0x3];                                      // 0x0C71(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           EncourageEpicFriend_IdleColor;                     // 0x0C74(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EncourageEpicFriend_HoveredColor;                  // 0x0C84(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Selected;                                          // 0x0C18(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hovered;                                           // 0x0C20(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Arrow;                                             // 0x0C28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIconTextButton_C*                      EmptyButtonToEatOneMouseUpEvent;                   // 0x0C30(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   Text_DisplayName;                                  // 0x0C38(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UUserActionMenuInputButton_C*           UserActionMenuInputButton;                         // 0x0C40(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FLinearColor                           Online;                                            // 0x0C48(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Offline;                                           // 0x0C58(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Away;                                              // 0x0C68(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           bLocked;                                           // 0x0C78(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            UserNameOnline;                                    // 0x0C88(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateColor                            UserNameOfflineAway;                               // 0x0CB0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateColor                            UserNameBlocked;                                   // 0x0CD8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          IsPlatOnlyFriend;                                  // 0x0D00(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D01[0x3];                                      // 0x0D01(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           EncourageEpicFriend_IdleColor;                     // 0x0D04(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EncourageEpicFriend_HoveredColor;                  // 0x0D14(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FColor                                 NickNameOnline;                                    // 0x0D24(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FColor                                 NickNameOffline;                                   // 0x0D28(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_UserListEntry_XS(int32 EntryPoint);
 	void BP_OnHovered();
-	void BP_OnUnhovered();
-	void OnUserPresenceChanged(EOnlineStatus OnlineStatus);
-	void OnListItemObjectSet(class UObject* ListItemObject);
 	void BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);
-	void HandleOnlineIndicatorView(EOnlineStatus OnlineStatus);
+	void BP_OnUnhovered();
 
 public:
 	static class UClass* StaticClass()

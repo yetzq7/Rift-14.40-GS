@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function AthenaDirectAcquisitonDetails_RefundDisclaimer.AthenaDirectAcquisitonDetails_RefundDisclaimer_C.ExecuteUbergraph_AthenaDirectAcquisitonDetails_RefundDisclaimer
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaDirectAcquisitonDetails_RefundDisclaimer_C::ExecuteUbergraph_AthenaDirectAcquisitonDetails_RefundDisclaimer(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitonDetails_RefundDisclaimer_C", "ExecuteUbergraph_AthenaDirectAcquisitonDetails_RefundDisclaimer");
-
-	Params::AthenaDirectAcquisitonDetails_RefundDisclaimer_C_ExecuteUbergraph_AthenaDirectAcquisitonDetails_RefundDisclaimer Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function AthenaDirectAcquisitonDetails_RefundDisclaimer.AthenaDirectAcquisitonDetails_RefundDisclaimer_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -51,6 +31,26 @@ void UAthenaDirectAcquisitonDetails_RefundDisclaimer_C::PreConstruct(bool IsDesi
 	Params::AthenaDirectAcquisitonDetails_RefundDisclaimer_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaDirectAcquisitonDetails_RefundDisclaimer.AthenaDirectAcquisitonDetails_RefundDisclaimer_C.ExecuteUbergraph_AthenaDirectAcquisitonDetails_RefundDisclaimer
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaDirectAcquisitonDetails_RefundDisclaimer_C::ExecuteUbergraph_AthenaDirectAcquisitonDetails_RefundDisclaimer(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaDirectAcquisitonDetails_RefundDisclaimer_C", "ExecuteUbergraph_AthenaDirectAcquisitonDetails_RefundDisclaimer");
+
+	Params::AthenaDirectAcquisitonDetails_RefundDisclaimer_C_ExecuteUbergraph_AthenaDirectAcquisitonDetails_RefundDisclaimer Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

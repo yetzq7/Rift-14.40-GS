@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Athena_PlayerCameraModeTargetingAssault.Athena_PlayerCameraModeTargetingAssault_C
-// 0x0000 (0x0C50 - 0x0C50)
+// 0x0000 (0x0DC0 - 0x0DC0)
 class UAthena_PlayerCameraModeTargetingAssault_C : public UAthena_PlayerCameraModeRangedTargeting_C
 {
 public:

@@ -10,36 +10,48 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "FortniteUI_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.ExecuteUbergraph_AthenaMatchmakingModeButton
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x01D0 (0x01D0 - 0x0000)
 struct AthenaMatchmakingModeButton_C_ExecuteUbergraph_AthenaMatchmakingModeButton final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFortTabButtonLabelInfo                K2Node_Event_TabLabelInfo;                         // 0x0008(0x00A0)(ConstParm)
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x00A8(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerEvent                          K2Node_Event_MouseEvent_1;                         // 0x00E0(0x0070)(ConstParm)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x0160(0x0070)(ConstParm)
 };
 DUMPER7_ASSERTS_AthenaMatchmakingModeButton_C_ExecuteUbergraph_AthenaMatchmakingModeButton;
 
-// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct AthenaMatchmakingModeButton_C_Tick final
+// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.OnMouseLeave
+// 0x0070 (0x0070 - 0x0000)
+struct AthenaMatchmakingModeButton_C_OnMouseLeave final
+{
+public:
+	struct FPointerEvent                          MouseEvent;                                        // 0x0000(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_AthenaMatchmakingModeButton_C_OnMouseLeave;
+
+// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.OnMouseEnter
+// 0x00A8 (0x00A8 - 0x0000)
+struct AthenaMatchmakingModeButton_C_OnMouseEnter final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_AthenaMatchmakingModeButton_C_Tick;
+DUMPER7_ASSERTS_AthenaMatchmakingModeButton_C_OnMouseEnter;
 
 // Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.SetTabLabelInfo
 // 0x00A0 (0x00A0 - 0x0000)
@@ -51,39 +63,12 @@ public:
 DUMPER7_ASSERTS_AthenaMatchmakingModeButton_C_SetTabLabelInfo;
 
 // Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.PlaylistChanged
-// 0x01A8 (0x01A8 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct AthenaMatchmakingModeButton_C_PlaylistChanged final
 {
 public:
 	class UFortPlaylistAthena*                    NewPlaylist;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   OverrideName;                                      // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue;         // 0x0028(0x0088)()
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue1;        // 0x00B8(0x0088)()
-	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0140(0x0018)()
-	bool                                          CallFunc_TextIsEmpty_ReturnValue1;                 // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable;                                // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable1;                               // 0x015A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable2;                               // 0x015B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable3;                               // 0x015C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x015D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable1;                               // 0x015E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable4;                               // 0x015F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select1_Default;                            // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable5;                               // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable2;                               // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable3;                               // 0x0172(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select2_Default;                            // 0x0173(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_174[0x4];                                      // 0x0174(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select3_Default;                            // 0x0178(0x0018)()
-	class FText                                   CallFunc_TextToUpper_ReturnValue1;                 // 0x0190(0x0018)()
 };
 DUMPER7_ASSERTS_AthenaMatchmakingModeButton_C_PlaylistChanged;
 
@@ -96,15 +81,14 @@ public:
 };
 DUMPER7_ASSERTS_AthenaMatchmakingModeButton_C_SetSquadFillText;
 
-// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.RefreshFillText
-// 0x0020 (0x0020 - 0x0000)
-struct AthenaMatchmakingModeButton_C_RefreshFillText final
+// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.RefreshLimitedPoolWarning
+// 0x0001 (0x0001 - 0x0000)
+struct AthenaMatchmakingModeButton_C_RefreshLimitedPoolWarning final
 {
 public:
-	class UFortMatchmakingContext*                CallFunc_GetContext_ReturnValue;                   // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetMatchmakingFillText_ReturnValue;       // 0x0008(0x0018)()
+	bool                                          IsCrossplayEnabled;                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_AthenaMatchmakingModeButton_C_RefreshFillText;
+DUMPER7_ASSERTS_AthenaMatchmakingModeButton_C_RefreshLimitedPoolWarning;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

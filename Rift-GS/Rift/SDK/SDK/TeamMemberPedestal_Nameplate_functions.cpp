@@ -36,6 +36,26 @@ void UTeamMemberPedestal_Nameplate_C::ExecuteUbergraph_TeamMemberPedestal_Namepl
 }
 
 
+// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.OnCurrentSubGameChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// ESubGame                                NewSubGame                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTeamMemberPedestal_Nameplate_C::OnCurrentSubGameChanged(ESubGame NewSubGame)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_Nameplate_C", "OnCurrentSubGameChanged");
+
+	Params::TeamMemberPedestal_Nameplate_C_OnCurrentSubGameChanged Parms{};
+
+	Parms.NewSubGame = NewSubGame;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.OnPlayReadyAudio
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -92,21 +112,21 @@ void UTeamMemberPedestal_Nameplate_C::Construct()
 }
 
 
-// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.OnTeamMemberEstablished
-// (Event, Protected, HasOutParams, BlueprintEvent)
+// Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.BP_OnTeamMemberEstablished
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// const struct FUniqueNetIdRepl&          UniqueId                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// bool                                    bHasValidMember                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UTeamMemberPedestal_Nameplate_C::OnTeamMemberEstablished(const struct FUniqueNetIdRepl& UniqueId)
+void UTeamMemberPedestal_Nameplate_C::BP_OnTeamMemberEstablished(bool bHasValidMember)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_Nameplate_C", "OnTeamMemberEstablished");
+		Func = Class->GetFunction("TeamMemberPedestal_Nameplate_C", "BP_OnTeamMemberEstablished");
 
-	Params::TeamMemberPedestal_Nameplate_C_OnTeamMemberEstablished Parms{};
+	Params::TeamMemberPedestal_Nameplate_C_BP_OnTeamMemberEstablished Parms{};
 
-	Parms.UniqueId = std::move(UniqueId);
+	Parms.bHasValidMember = bHasValidMember;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -115,9 +135,9 @@ void UTeamMemberPedestal_Nameplate_C::OnTeamMemberEstablished(const struct FUniq
 // Function TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C.OnReadyStatusChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bIsReadyForMatchmaking                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// EGameReadiness                          GameReadiness                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTeamMemberPedestal_Nameplate_C::OnReadyStatusChanged(bool bIsReadyForMatchmaking)
+void UTeamMemberPedestal_Nameplate_C::OnReadyStatusChanged(EGameReadiness GameReadiness)
 {
 	static class UFunction* Func = nullptr;
 
@@ -126,7 +146,7 @@ void UTeamMemberPedestal_Nameplate_C::OnReadyStatusChanged(bool bIsReadyForMatch
 
 	Params::TeamMemberPedestal_Nameplate_C_OnReadyStatusChanged Parms{};
 
-	Parms.bIsReadyForMatchmaking = bIsReadyForMatchmaking;
+	Parms.GameReadiness = GameReadiness;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

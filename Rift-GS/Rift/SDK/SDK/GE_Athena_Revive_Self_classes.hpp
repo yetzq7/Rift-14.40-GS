@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_Athena_Revive_Self.GE_Athena_Revive_Self_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_Athena_Revive_Self_C final : public UGameplayEffect
 {
 public:

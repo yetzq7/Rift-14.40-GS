@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Trap_WallSpikesMetal.GA_Trap_WallSpikesMetal_C
-// 0x0000 (0x0968 - 0x0968)
+// 0x0000 (0x0AD8 - 0x0AD8)
 class UGA_Trap_WallSpikesMetal_C final : public UGA_TrapGeneric_C
 {
 public:

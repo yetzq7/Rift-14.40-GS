@@ -11,54 +11,65 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "GameplayTags_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Athena_PlayerController.Athena_PlayerController_C
-// 0x00B8 (0x2D28 - 0x2C70)
+// 0x0170 (0x3B90 - 0x3A20)
 class AAthena_PlayerController_C final : public AFortPlayerControllerAthena
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2C70(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        ListenerOverride;                                  // 0x2C78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        VictoryRoyaleAudio;                                // 0x2C80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        VictoryRoyaleMusic;                                // 0x2C88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             VictoryRoyaleMenuMusicAsset;                       // 0x2C90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UFortWorldItemDefinition> CreativeTool;                                     // 0x2C98(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  BladeWielderTag;                                   // 0x2CC0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	EFortItemType                                 InteractingItemType;                               // 0x2CE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2CE1[0x7];                                     // 0x2CE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  InteractionTags;                                   // 0x2CE8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	UMulticastDelegateProperty_                   PawnPossessedDispatcher;                           // 0x2D08(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	float                                         PermissionRecheckTime;                             // 0x2D18(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D1C[0x4];                                     // 0x2D1C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           PermissionsRecheckTimerHandle;                     // 0x2D20(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x3A20(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UUnderwaterAudioComponent_C*            UnderwaterAudioComponent;                          // 0x3A28(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        ListenerOverride;                                  // 0x3A30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        VictoryRoyaleAudio;                                // 0x3A38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        VictoryRoyaleMusic1;                               // 0x3A40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             CurrentMusic;                                      // 0x3A48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  BladeWielderTag;                                   // 0x3A50(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	EFortItemType                                 InteractingItemType;                               // 0x3A70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A71[0x7];                                     // 0x3A71(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  InteractionTags;                                   // 0x3A78(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMulticastInlineDelegate<void(class APawn* PossessedPawn)> PawnPossessedDispatcher;              // 0x3A98(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FTimerHandle                           PermissionsRecheckTimerHandle;                     // 0x3AA8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         LobbyMusicOnVictoryDelayTime;                      // 0x3AB0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3AB4[0x4];                                     // 0x3AB4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundMix*                              CamUnderwaterSoundMix;                             // 0x3AB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             CamUnderwaterLoopSound;                            // 0x3AC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CamUnderwaterAudio;                                // 0x3AC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             CamUnderwaterStartSound;                           // 0x3AD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             CamUnderwaterStopSound;                            // 0x3AD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        VictoryRoyaleMusic2;                               // 0x3AE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, int32>                      NearbyEmotingPawnCount;                            // 0x3AE8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TSet<class AFortPawn*>                        NearbyEmotingPawns;                                // 0x3B38(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_Athena_PlayerController(int32 EntryPoint);
+	void Change_Music(class USoundBase* New_Music, float StartTime);
+	void Handle_Victory_Royale_Audio(bool Audio_Only);
+	void K2_OnEnterVolume(class AFortVolume* Volume);
+	void K2_OnLeaveVolume(class AFortVolume* Volume);
+	void ReplicateRotationScaleReset();
 	void ReactToPawnPossession(class APawn* PossessedPawn);
-	void RevokeCreativeTool();
+	void ReceiveBeginPlay();
+	void PlayWinEffects(class APawn* FinisherPawn, const class UFortWeaponItemDefinition* FinishingWeapon, EDeathCause DeathCause, bool bAudioOnly);
 	void RemoveItem();
 	void OnLocalInteraction(class AActor* ReceivingActor);
-	void PermissionsChanged();
 	void RevokeItem(TSoftObjectPtr<class UFortWorldItemDefinition> Item);
 	void GrantItem(TSoftObjectPtr<class UFortWorldItemDefinition> Item);
-	void HandlePermissions(class AFortVolume* Volume);
-	void OnEnterVolume(class AFortVolume* Volume);
-	void OnLeaveVolume(class AFortVolume* Volume);
-	void OnMusicPackLoaded(const class UAthenaMusicPackItemDefinition* NewMusicPack);
+	void OnMusicPackLoaded(const class UAthenaMusicPackItemDefinition* NewMusicPack, float StartTimeOffset);
 	void Start_Victory_Royale_Music();
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void PlayWinEffects(class APawn* FinisherPawn, const class UFortWeaponItemDefinition* FinishingWeapon, EDeathCause DeathCause);
-	void ReceiveBeginPlay();
+	void OnReady_B4409EAB4038578B1EBA9DB1586489B9(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags);
 	void OnLoaded_F82CC70840156DFAFAF85EB0D93E5E2D(class UObject* Loaded);
 	void UserConstructionScript();
 	void LeftAllVolumes(bool* bLeftVolumes);
 	void SetupPermissionRecheckTimer();
+	bool Is_Creative_Mode();
+	void FadeAudioComponents(class UAudioComponent* NewMusicComponent, class UAudioComponent* PreviousMusicComponent, class USoundBase* Music, float StartTime);
 
 public:
 	static class UClass* StaticClass()

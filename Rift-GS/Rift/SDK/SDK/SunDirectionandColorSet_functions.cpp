@@ -16,23 +16,31 @@
 
 SDK_NAMESPACE_START
 
-// Function SunDirectionandColorSet.SunDirectionandColorSet_C.ExecuteUbergraph_SunDirectionandColorSet
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function SunDirectionandColorSet.SunDirectionandColorSet_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ASunDirectionandColorSet_C::ExecuteUbergraph_SunDirectionandColorSet(int32 EntryPoint)
+void ASunDirectionandColorSet_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SunDirectionandColorSet_C", "ExecuteUbergraph_SunDirectionandColorSet");
+		Func = Class->GetFunction("SunDirectionandColorSet_C", "UserConstructionScript");
 
-	Params::SunDirectionandColorSet_C_ExecuteUbergraph_SunDirectionandColorSet Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function SunDirectionandColorSet.SunDirectionandColorSet_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ASunDirectionandColorSet_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SunDirectionandColorSet_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -56,31 +64,23 @@ void ASunDirectionandColorSet_C::ReceiveTick(float DeltaSeconds)
 }
 
 
-// Function SunDirectionandColorSet.SunDirectionandColorSet_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function SunDirectionandColorSet.SunDirectionandColorSet_C.ExecuteUbergraph_SunDirectionandColorSet
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ASunDirectionandColorSet_C::ReceiveBeginPlay()
+void ASunDirectionandColorSet_C::ExecuteUbergraph_SunDirectionandColorSet(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SunDirectionandColorSet_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("SunDirectionandColorSet_C", "ExecuteUbergraph_SunDirectionandColorSet");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::SunDirectionandColorSet_C_ExecuteUbergraph_SunDirectionandColorSet Parms{};
 
+	Parms.EntryPoint = EntryPoint;
 
-// Function SunDirectionandColorSet.SunDirectionandColorSet_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ASunDirectionandColorSet_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SunDirectionandColorSet_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

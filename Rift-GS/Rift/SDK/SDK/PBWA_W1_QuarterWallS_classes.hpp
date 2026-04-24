@@ -10,26 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "GameplayAbilities_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PBWA_W1_QuarterWallS.PBWA_W1_QuarterWallS_C
-// 0x0008 (0x0CF0 - 0x0CE8)
+// 0x0000 (0x0CD0 - 0x0CD0)
 class APBWA_W1_QuarterWallS_C final : public ABuildingWall
 {
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0CE8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-
-public:
-	void ExecuteUbergraph_PBWA_W1_QuarterWallS(int32 EntryPoint);
-	void GameplayCue_Abilities_Activation_Generic_BannerWallBuff2(EGameplayCueEvent EventType, const struct FGameplayCueParameters& Parameters);
-	void GameplayCue_Abilities_Activation_Generic_BannerWallBuff1(EGameplayCueEvent EventType, const struct FGameplayCueParameters& Parameters);
-	void UserConstructionScript();
-
 public:
 	static class UClass* StaticClass()
 	{

@@ -10,15 +10,23 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass AthenaVariantTileButton.AthenaVariantTileButton_C
-// 0x0000 (0x0B70 - 0x0B70)
+// 0x0008 (0x0C18 - 0x0C10)
 class UAthenaVariantTileButton_C final : public UFortVariantTileButton
 {
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void OnListItemObjectSet(class UObject* ListItemObject);
+	void ExecuteUbergraph_AthenaVariantTileButton(int32 EntryPoint);
+
 public:
 	static class UClass* StaticClass()
 	{

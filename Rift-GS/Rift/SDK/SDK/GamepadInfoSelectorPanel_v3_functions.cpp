@@ -50,15 +50,15 @@ void UGamepadInfoSelectorPanel_v3_C::BndEvt__ResetButton_K2Node_ComponentBoundEv
 }
 
 
-// Function GamepadInfoSelectorPanel_v3.GamepadInfoSelectorPanel_v3_C.OnActivated
+// Function GamepadInfoSelectorPanel_v3.GamepadInfoSelectorPanel_v3_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UGamepadInfoSelectorPanel_v3_C::OnActivated()
+void UGamepadInfoSelectorPanel_v3_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GamepadInfoSelectorPanel_v3_C", "OnActivated");
+		Func = Class->GetFunction("GamepadInfoSelectorPanel_v3_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,15 +84,15 @@ void UGamepadInfoSelectorPanel_v3_C::OnAddedToFocusPath(const struct FFocusEvent
 }
 
 
-// Function GamepadInfoSelectorPanel_v3.GamepadInfoSelectorPanel_v3_C.OnDeactivated
+// Function GamepadInfoSelectorPanel_v3.GamepadInfoSelectorPanel_v3_C.BP_OnDeactivated
 // (Event, Protected, BlueprintEvent)
 
-void UGamepadInfoSelectorPanel_v3_C::OnDeactivated()
+void UGamepadInfoSelectorPanel_v3_C::BP_OnDeactivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GamepadInfoSelectorPanel_v3_C", "OnDeactivated");
+		Func = Class->GetFunction("GamepadInfoSelectorPanel_v3_C", "BP_OnDeactivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

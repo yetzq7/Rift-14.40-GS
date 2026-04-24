@@ -16,12 +16,9 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass TwitchNotification.TwitchNotification_C
-// 0x0000 (0x00D8 - 0x00D8)
+// 0x0000 (0x0108 - 0x0108)
 class UTwitchNotification_C final : public UFortUIFriendNotification
 {
-public:
-	class UTexture2D* GetImageOverride();
-
 public:
 	static class UClass* StaticClass()
 	{

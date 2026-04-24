@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass TT_Ninja_SwordHitsHeal.TT_Ninja_SwordHitsHeal_C
-// 0x0000 (0x0168 - 0x0168)
+// 0x0000 (0x0180 - 0x0180)
 class UTT_Ninja_SwordHitsHeal_C final : public UFortGameplayAbilityTooltip
 {
 public:

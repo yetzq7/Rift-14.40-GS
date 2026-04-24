@@ -16,8 +16,8 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass TracerGeneric_Athena.TracerGeneric_Athena_C
-// 0x0000 (0x03E8 - 0x03E8)
-class ATracerGeneric_Athena_C : public AFortTracerBase
+// 0x0000 (0x02B8 - 0x02B8)
+class ATracerGeneric_Athena_C final : public AFortTracerBase
 {
 public:
 	static class UClass* StaticClass()

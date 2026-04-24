@@ -16,8 +16,8 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_GrapplingHook_Travel_Mid_Camera.BP_GrapplingHook_Travel_Mid_Camera_C
-// 0x0000 (0x0160 - 0x0160)
-class UBP_GrapplingHook_Travel_Mid_Camera_C final : public UCameraShake
+// 0x0000 (0x0180 - 0x0180)
+class UBP_GrapplingHook_Travel_Mid_Camera_C final : public UMatineeCameraShake
 {
 public:
 	static class UClass* StaticClass()

@@ -178,40 +178,6 @@ void UTooltipLibrary_C::Create_Compare_Item_Tooltip(class APlayerController* Own
 }
 
 
-// Function TooltipLibrary.TooltipLibrary_C.Create Basic Multi Line Tooltip
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class APlayerController*                Owning_Player                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class FText>&                    Body_Text                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// const class FText&                      Header_Text                                            (BlueprintVisible, BlueprintReadOnly, Parm)
-// class USlateBrushAsset*                 Icon_Brush                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UUserWidget**                     Output                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTooltipLibrary_C::Create_Basic_Multi_Line_Tooltip(class APlayerController* Owning_Player, TArray<class FText>& Body_Text, const class FText& Header_Text, class USlateBrushAsset* Icon_Brush, class UObject* __WorldContext, class UUserWidget** Output)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("TooltipLibrary_C", "Create Basic Multi Line Tooltip");
-
-	Params::TooltipLibrary_C_Create_Basic_Multi_Line_Tooltip Parms{};
-
-	Parms.Owning_Player = Owning_Player;
-	Parms.Body_Text = std::move(Body_Text);
-	Parms.Header_Text = std::move(Header_Text);
-	Parms.Icon_Brush = Icon_Brush;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Body_Text = std::move(Parms.Body_Text);
-
-	if (Output != nullptr)
-		*Output = Parms.Output;
-}
-
-
 // Function TooltipLibrary.TooltipLibrary_C.CreateXPTooltip
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass CreativeServerFriend.CreativeServerFriend_C
-// 0x0008 (0x0240 - 0x0238)
+// 0x0008 (0x0290 - 0x0288)
 class UCreativeServerFriend_C final : public UCommonUserWidget
 {
 public:
-	class UCommonTextBlock*                       Text_FriendName;                                   // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_FriendName;                                   // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void InitData(const class FString& FriendName);

@@ -16,125 +16,15 @@
 
 SDK_NAMESPACE_START
 
-// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.ExecuteUbergraph_ItemAttributesDetailWidget
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.UpdateItemsForWidgets
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UItemAttributesDetailWidget_C::ExecuteUbergraph_ItemAttributesDetailWidget(int32 EntryPoint)
+void UItemAttributesDetailWidget_C::UpdateItemsForWidgets()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "ExecuteUbergraph_ItemAttributesDetailWidget");
-
-	Params::ItemAttributesDetailWidget_C_ExecuteUbergraph_ItemAttributesDetailWidget Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.HandleItemToCompareWithChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bItemChanged                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    bAmmoChanged                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    bIngredientsChanged                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UItemAttributesDetailWidget_C::HandleItemToCompareWithChanged(bool bItemChanged, bool bAmmoChanged, bool bIngredientsChanged)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "HandleItemToCompareWithChanged");
-
-	Params::ItemAttributesDetailWidget_C_HandleItemToCompareWithChanged Parms{};
-
-	Parms.bItemChanged = bItemChanged;
-	Parms.bAmmoChanged = bAmmoChanged;
-	Parms.bIngredientsChanged = bIngredientsChanged;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.HandleItemToDetailChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bItemChanged                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    bAmmoChanged                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    bIngredientsChanged                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UItemAttributesDetailWidget_C::HandleItemToDetailChanged(bool bItemChanged, bool bAmmoChanged, bool bIngredientsChanged)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "HandleItemToDetailChanged");
-
-	Params::ItemAttributesDetailWidget_C_HandleItemToDetailChanged Parms{};
-
-	Parms.bItemChanged = bItemChanged;
-	Parms.bAmmoChanged = bAmmoChanged;
-	Parms.bIngredientsChanged = bIngredientsChanged;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.HandlePreDifferentItemToCompareWithSet
-// (Event, Protected, BlueprintEvent)
-
-void UItemAttributesDetailWidget_C::HandlePreDifferentItemToCompareWithSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "HandlePreDifferentItemToCompareWithSet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.HandlePreDifferentItemToDetailSet
-// (Event, Protected, BlueprintEvent)
-
-void UItemAttributesDetailWidget_C::HandlePreDifferentItemToDetailSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "HandlePreDifferentItemToDetailSet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.HandleShouldPreviewUpgradingItemChanged
-// (Event, Protected, BlueprintEvent)
-
-void UItemAttributesDetailWidget_C::HandleShouldPreviewUpgradingItemChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "HandleShouldPreviewUpgradingItemChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.HandlePostDifferentItemToCompareWithSet
-// (Event, Protected, BlueprintEvent)
-
-void UItemAttributesDetailWidget_C::HandlePostDifferentItemToCompareWithSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "HandlePostDifferentItemToCompareWithSet");
+		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "UpdateItemsForWidgets");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -154,17 +44,93 @@ void UItemAttributesDetailWidget_C::HandlePostDifferentItemToDetailSet()
 }
 
 
-// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.UpdateItemsForWidgets
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.HandlePostDifferentItemToCompareWithSet
+// (Event, Protected, BlueprintEvent)
 
-void UItemAttributesDetailWidget_C::UpdateItemsForWidgets()
+void UItemAttributesDetailWidget_C::HandlePostDifferentItemToCompareWithSet()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "UpdateItemsForWidgets");
+		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "HandlePostDifferentItemToCompareWithSet");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.HandleShouldPreviewUpgradingItemChanged
+// (Event, Protected, BlueprintEvent)
+
+void UItemAttributesDetailWidget_C::HandleShouldPreviewUpgradingItemChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "HandleShouldPreviewUpgradingItemChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.HandleItemToDetailChangedBP
+// (Event, Protected, BlueprintEvent)
+
+void UItemAttributesDetailWidget_C::HandleItemToDetailChangedBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "HandleItemToDetailChangedBP");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.HandleItemToCompareWithChangedBP
+// (Event, Protected, BlueprintEvent)
+
+void UItemAttributesDetailWidget_C::HandleItemToCompareWithChangedBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "HandleItemToCompareWithChangedBP");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.HandleUpgradeLevelDeltaChanged
+// (Event, Protected, BlueprintEvent)
+
+void UItemAttributesDetailWidget_C::HandleUpgradeLevelDeltaChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "HandleUpgradeLevelDeltaChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemAttributesDetailWidget.ItemAttributesDetailWidget_C.ExecuteUbergraph_ItemAttributesDetailWidget
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UItemAttributesDetailWidget_C::ExecuteUbergraph_ItemAttributesDetailWidget(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemAttributesDetailWidget_C", "ExecuteUbergraph_ItemAttributesDetailWidget");
+
+	Params::ItemAttributesDetailWidget_C_ExecuteUbergraph_ItemAttributesDetailWidget Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

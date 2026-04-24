@@ -16,15 +16,15 @@
 SDK_NAMESPACE_START
 
 // Class EasyAntiCheatCommon.EasyAntiCheatNetComponent
-// 0x0008 (0x0100 - 0x00F8)
+// 0x0008 (0x00B8 - 0x00B0)
 class UEasyAntiCheatNetComponent final : public UActorComponent
 {
 public:
-	uint8                                         Pad_F8[0x8];                                       // 0x00F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B0[0x8];                                       // 0x00B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void ClientMessage(const TArray<uint8>& MESSAGE);
-	void ServerMessage(const TArray<uint8>& MESSAGE);
+	void ClientMessage(const TArray<uint8>& Message);
+	void ServerMessage(const TArray<uint8>& Message);
 
 public:
 	static class UClass* StaticClass()

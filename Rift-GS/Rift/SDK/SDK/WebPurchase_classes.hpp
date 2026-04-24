@@ -11,28 +11,25 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUI_classes.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WebPurchase.WebPurchase_C
-// 0x0028 (0x0348 - 0x0320)
-class UWebPurchase_C final : public UCommonActivatablePanel
+// 0x0020 (0x0488 - 0x0468)
+class UWebPurchase_C final : public UFortWebPurchaseScreen
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCircularThrobber*                      Throbber;                                          // 0x0328(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                WebContent;                                        // 0x0330(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    BackAction;                                        // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0468(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCircularThrobber*                      Throbber;                                          // 0x0470(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    BackAction;                                        // 0x0478(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
-	void ExecuteUbergraph_WebPurchase(int32 EntryPoint);
-	void OnActivated();
-	void Display(class UWidget* WebWidget, const class FString& AttemptedMTXOfferId);
-	void Dismiss();
-	void BindDelegates();
 	void HandleBack(bool* bPassThrough);
+	void BindDelegates();
+	void BP_OnActivated();
+	void ExecuteUbergraph_WebPurchase(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

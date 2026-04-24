@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PlayerCameraMode1P_Targeting.PlayerCameraMode1P_Targeting_C
-// 0x0000 (0x0C50 - 0x0C50)
+// 0x0000 (0x0DC0 - 0x0DC0)
 class UPlayerCameraMode1P_Targeting_C final : public UPlayerCameraMode1P_C
 {
 public:

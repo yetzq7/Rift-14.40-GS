@@ -367,6 +367,25 @@ void ALobbyBeaconPlayerState::OnRep_PartyOwner()
 }
 
 
+// Function Lobby.LobbyBeaconPlayerState.OnRep_UniqueId
+// (Final, Native, Protected)
+
+void ALobbyBeaconPlayerState::OnRep_UniqueId()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LobbyBeaconPlayerState", "OnRep_UniqueId");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function Lobby.LobbyBeaconState.OnRep_LobbyStarted
 // (Final, Native, Protected)
 

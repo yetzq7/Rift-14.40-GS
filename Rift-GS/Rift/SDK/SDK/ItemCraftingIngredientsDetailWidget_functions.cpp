@@ -16,23 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function ItemCraftingIngredientsDetailWidget.ItemCraftingIngredientsDetailWidget_C.ExecuteUbergraph_ItemCraftingIngredientsDetailWidget
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function ItemCraftingIngredientsDetailWidget.ItemCraftingIngredientsDetailWidget_C.HandlePostDifferentItemToDetailSet
+// (Event, Protected, BlueprintEvent)
 
-void UItemCraftingIngredientsDetailWidget_C::ExecuteUbergraph_ItemCraftingIngredientsDetailWidget(int32 EntryPoint)
+void UItemCraftingIngredientsDetailWidget_C::HandlePostDifferentItemToDetailSet()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemCraftingIngredientsDetailWidget_C", "ExecuteUbergraph_ItemCraftingIngredientsDetailWidget");
+		Func = Class->GetFunction("ItemCraftingIngredientsDetailWidget_C", "HandlePostDifferentItemToDetailSet");
 
-	Params::ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -50,17 +44,23 @@ void UItemCraftingIngredientsDetailWidget_C::HandlePostDifferentItemToCompareWit
 }
 
 
-// Function ItemCraftingIngredientsDetailWidget.ItemCraftingIngredientsDetailWidget_C.HandlePostDifferentItemToDetailSet
-// (Event, Protected, BlueprintEvent)
+// Function ItemCraftingIngredientsDetailWidget.ItemCraftingIngredientsDetailWidget_C.ExecuteUbergraph_ItemCraftingIngredientsDetailWidget
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UItemCraftingIngredientsDetailWidget_C::HandlePostDifferentItemToDetailSet()
+void UItemCraftingIngredientsDetailWidget_C::ExecuteUbergraph_ItemCraftingIngredientsDetailWidget(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemCraftingIngredientsDetailWidget_C", "HandlePostDifferentItemToDetailSet");
+		Func = Class->GetFunction("ItemCraftingIngredientsDetailWidget_C", "ExecuteUbergraph_ItemCraftingIngredientsDetailWidget");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

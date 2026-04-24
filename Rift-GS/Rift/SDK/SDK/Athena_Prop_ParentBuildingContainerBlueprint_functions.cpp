@@ -51,9 +51,9 @@ void AAthena_Prop_ParentBuildingContainerBlueprint_C::OnSetSearched()
 
 
 // Function Athena_Prop_ParentBuildingContainerBlueprint.Athena_Prop_ParentBuildingContainerBlueprint_C.OnBounceAnimationUpdate
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FFortBounceData&           Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FFortBounceData&           Data                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
 void AAthena_Prop_ParentBuildingContainerBlueprint_C::OnBounceAnimationUpdate(const struct FFortBounceData& Data)
 {
@@ -137,9 +137,9 @@ void AAthena_Prop_ParentBuildingContainerBlueprint_C::UserConstructionScript()
 
 
 // Function Athena_Prop_ParentBuildingContainerBlueprint.Athena_Prop_ParentBuildingContainerBlueprint_C.GetTimeOfDayBlueprintDefaultVariables
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Event, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FTimeOfDayBlueprintDefaultVariables*OutVariables                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FTimeOfDayBlueprintDefaultVariables*OutVariables                                           (Parm, OutParm, NoDestructor)
 
 void AAthena_Prop_ParentBuildingContainerBlueprint_C::GetTimeOfDayBlueprintDefaultVariables(struct FTimeOfDayBlueprintDefaultVariables* OutVariables)
 {

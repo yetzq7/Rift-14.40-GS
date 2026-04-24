@@ -11,18 +11,21 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "FortniteGame_structs.hpp"
 #include "GAB_GenericDeath_classes.hpp"
+#include "GameplayTags_structs.hpp"
+#include "FortniteGame_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_DefaultPlayer_Death.GA_DefaultPlayer_Death_C
-// 0x0008 (0x0AD0 - 0x0AC8)
+// 0x0018 (0x0C58 - 0x0C40)
 class UGA_DefaultPlayer_Death_C final : public UGAB_GenericDeath_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_DefaultPlayer_Death_C;           // 0x0AC8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_DefaultPlayer_Death_C;           // 0x0C40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTag                           FadeCapsuleStWCue;                                 // 0x0C48(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           FadeCapsuleAthenaCue;                              // 0x0C50(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_DefaultPlayer_Death(int32 EntryPoint);

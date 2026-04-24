@@ -36,23 +36,17 @@ void UGAB_AthenaDBNO_C::ExecuteUbergraph_GAB_AthenaDBNO(int32 EntryPoint)
 }
 
 
-// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.K2_ActivateAbilityFromEvent
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FGameplayEventData&        EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.DropHeldObjects
+// (BlueprintCallable, BlueprintEvent)
 
-void UGAB_AthenaDBNO_C::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
+void UGAB_AthenaDBNO_C::DropHeldObjects()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_AthenaDBNO_C", "K2_ActivateAbilityFromEvent");
+		Func = Class->GetFunction("GAB_AthenaDBNO_C", "DropHeldObjects");
 
-	Params::GAB_AthenaDBNO_C_K2_ActivateAbilityFromEvent Parms{};
-
-	Parms.EventData = std::move(EventData);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -71,6 +65,26 @@ void UGAB_AthenaDBNO_C::K2_OnEndAbility(bool bWasCancelled)
 	Params::GAB_AthenaDBNO_C_K2_OnEndAbility Parms{};
 
 	Parms.bWasCancelled = bWasCancelled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.K2_ActivateAbilityFromEvent
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FGameplayEventData&        EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UGAB_AthenaDBNO_C::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_AthenaDBNO_C", "K2_ActivateAbilityFromEvent");
+
+	Params::GAB_AthenaDBNO_C_K2_ActivateAbilityFromEvent Parms{};
+
+	Parms.EventData = std::move(EventData);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -212,6 +226,26 @@ void UGAB_AthenaDBNO_C::GetInitialHealAmount(float* Health)
 
 	if (Health != nullptr)
 		*Health = Parms.Health;
+}
+
+
+// Function GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get DBNO Montage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UAnimMontage*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UAnimMontage* UGAB_AthenaDBNO_C::Get_DBNO_Montage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAB_AthenaDBNO_C", "Get DBNO Montage");
+
+	Params::GAB_AthenaDBNO_C_Get_DBNO_Montage Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

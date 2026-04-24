@@ -16,9 +16,12 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_BroadcastSpectatorPC.BP_BroadcastSpectatorPC_C
-// 0x0000 (0x26C0 - 0x26C0)
+// 0x0000 (0x3040 - 0x3040)
 class ABP_BroadcastSpectatorPC_C final : public AFortLiveBroadcastController
 {
+public:
+	void UserConstructionScript();
+
 public:
 	static class UClass* StaticClass()
 	{

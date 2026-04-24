@@ -19,7 +19,7 @@ SDK_PARAM_NAMESPACE_START
 struct EasyAntiCheatNetComponent_ClientMessage final
 {
 public:
-	TArray<uint8>                                 MESSAGE;                                           // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 Message;                                           // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_EasyAntiCheatNetComponent_ClientMessage;
 
@@ -28,7 +28,7 @@ DUMPER7_ASSERTS_EasyAntiCheatNetComponent_ClientMessage;
 struct EasyAntiCheatNetComponent_ServerMessage final
 {
 public:
-	TArray<uint8>                                 MESSAGE;                                           // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 Message;                                           // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_EasyAntiCheatNetComponent_ServerMessage;
 

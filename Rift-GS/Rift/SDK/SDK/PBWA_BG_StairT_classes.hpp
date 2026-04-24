@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PBWA_BG_StairT.PBWA_BG_StairT_C
-// 0x0000 (0x0BF0 - 0x0BF0)
+// 0x0000 (0x0B78 - 0x0B78)
 class APBWA_BG_StairT_C final : public ABuildingStairs
 {
 public:

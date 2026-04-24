@@ -11,80 +11,75 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUI_structs.hpp"
+#include "UMG_structs.hpp"
 #include "FortniteUI_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "CommonUI_structs.hpp"
 #include "FortniteGame_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass OptionsMenu.OptionsMenu_C
-// 0x0250 (0x0598 - 0x0348)
+// 0x0280 (0x0820 - 0x05A0)
 class UOptionsMenu_C final : public UFortOptionsMenu
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonBorder*                          BackgroundBorder;                                  // 0x0350(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          BorderBackground;                                  // 0x0358(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcher*                  CurrentTabSwitcher;                                // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_0;                                           // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          MESSAGE;                                           // 0x0370(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       OverlayText;                                       // 0x0378(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_0;                                        // 0x0380(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_1;                                        // 0x0388(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNamedSlot*                             SavingLayer;                                       // 0x0390(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalTabList_C*                   SettingsTabs;                                      // 0x0398(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Title;                                             // 0x03A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UIconTextButton_C*                      VideoSettingsAccept;                               // 0x03A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UIconTextButton_C*                      VideoSettingsCancel;                               // 0x03B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class Uwindowchromebuttons_C*                 windowchromebuttons;                               // 0x03B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         SelectedOption;                                    // 0x03C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Current_Tab;                                       // 0x03C4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Accept_Input;                                      // 0x03CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          Video_Tab_Selected;                                // 0x03CD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          Apply_Visible;                                     // 0x03CE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3CF[0x1];                                      // 0x03CF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UFortOptionsTab*>                AllTabWidgets;                                     // 0x03D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UProgressModalWidget_C*                 SavingModal;                                       // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 VideoTabClass;                                     // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 AccountTabClass;                                   // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GamepadTabClass;                                   // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 InputTabClass;                                     // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         LoadCount;                                         // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   TabGamePad;                                        // 0x0410(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TSoftClassPtr<class UClass>                   TabAccount;                                        // 0x0438(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TSoftClassPtr<class UClass>                   TabVideoOptions;                                   // 0x0460(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TSoftClassPtr<class UClass>                   TabInputOptions;                                   // 0x0488(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    ToggleModeAction;                                  // 0x04B0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ApplyAction;                                       // 0x04C0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ResetToDefault;                                    // 0x04D0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    Back;                                              // 0x04E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor)
-	struct FTimerHandle                           ResetVideoOptionsTimer;                            // 0x04F0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TSoftClassPtr<class UClass>                   TabAccessibilityOptions;                           // 0x04F8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class UClass*                                 AccessibilityTabClass;                             // 0x0520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSoftClassPtr<class UClass>                   TabBrightnessOptions;                              // 0x0528(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class UClass*                                 BrightnessTabClass;                                // 0x0550(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFortTabButtonLabelInfo>        TabLabels;                                         // 0x0558(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class FName>                           TabIds;                                            // 0x0568(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	UMulticastDelegateProperty_                   OnSettingsApplied;                                 // 0x0578(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FDataTableRowHandle                    ChoosePreset;                                      // 0x0588(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonBorder*                          BackgroundBorder;                                  // 0x05A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          BorderBackground;                                  // 0x05B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCloseButton_C*                         CloseButton;                                       // 0x05B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          Message;                                           // 0x05C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       OverlayText;                                       // 0x05C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNamedSlot*                             SavingLayer;                                       // 0x05D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Title;                                             // 0x05D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIconTextButton_C*                      VideoSettingsAccept;                               // 0x05E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIconTextButton_C*                      VideoSettingsCancel;                               // 0x05E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	int32                                         SelectedOption;                                    // 0x05F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Current_Tab;                                       // 0x05F4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Video_Tab_Selected;                                // 0x05FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Apply_Visible;                                     // 0x05FD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5FE[0x2];                                      // 0x05FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UFortOptionsTab*>                AllTabWidgets;                                     // 0x0600(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	class UProgressModalWidget_C*                 SavingModal;                                       // 0x0610(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 VideoTabClass;                                     // 0x0618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 AccountTabClass;                                   // 0x0620(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GamepadTabClass;                                   // 0x0628(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 InputTabClass;                                     // 0x0630(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         LoadCount;                                         // 0x0638(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_63C[0x4];                                      // 0x063C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   TabGamePad;                                        // 0x0640(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   TabAccountV2;                                      // 0x0668(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   TabVideoOptionsV2;                                 // 0x0690(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    ToggleModeAction;                                  // 0x06B8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor)
+	struct FDataTableRowHandle                    ApplyAction;                                       // 0x06C8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor)
+	struct FDataTableRowHandle                    ResetToDefault;                                    // 0x06D8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor)
+	struct FDataTableRowHandle                    Back;                                              // 0x06E8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor)
+	TSoftClassPtr<class UClass>                   TabInputOptionsV2;                                 // 0x06F8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FTimerHandle                           ResetVideoOptionsTimer;                            // 0x0720(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFortTabButtonLabelInfo>        TabLabels;                                         // 0x0728(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class FName>                           TabIds;                                            // 0x0738(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnSettingsApplied;                                 // 0x0748(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FDataTableRowHandle                    ChoosePreset;                                      // 0x0758(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	TSoftClassPtr<class UClass>                   NewControllerSettingsTab;                          // 0x0768(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FSlateBrush                            ControllerSensitivity;                             // 0x0790(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UClass*                                 ControllerSensitivityTabClass;                     // 0x0818(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_OptionsMenu(int32 EntryPoint);
+	void OnResetToDefault();
+	void BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void OnApplySettings();
+	void OnToggleMode();
+	void OnBack();
 	void HandleTabGamePadActionsNeedBinds(TArray<class FText>& ScreenLabels);
-	void OnHandleApply();
-	void ShowInputReset_DefaultConfirmation();
 	void ShowLangaugeConfirmation();
-	void ShowResetDefaultConfirmation();
 	void BndEvt__SettingsTabs_K2Node_ComponentBoundEvent_20_OnTabSelected__DelegateSignature(class FName TabId);
 	void ResetVideoOptionsTimerDelegate();
 	void LoadTabClasses();
-	void OnDeactivated();
+	void BP_OnDeactivated();
 	void HandleSettingsSaveComplete();
-	void TabGameOptions_OnActiveWidgetChanged_Bind(class UWidget* ActiveWidget, int32 ActiveWidgetIndex);
 	void Construct();
 	void BndEvt__CurrentTabSwitcher_K2Node_ComponentBoundEvent_13_OnActiveWidgetChanged__DelegateSignature(class UWidget* ActiveWidget, int32 ActiveWidgetIndex);
 	void OnHandleBack();
@@ -92,58 +87,39 @@ public:
 	void BndEvt__LanguageOk_K2Node_ComponentBoundEvent_112_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void HandleBenchmarkComplete();
 	void BndEvt__SettingsTabs_K2Node_ComponentBoundEvent_95_OnTabButtonCreated__DelegateSignature(class FName TabId, class UCommonButton* TabButton);
-	void Gamepad_Changed(bool Gamepad_Enabled);
-	void Disable_Overlay_Input();
-	void OnActivated();
+	void BP_OnActivated();
 	void Tab_Setting_Changed();
 	void Destruct();
 	void BndEvt__VideoSettingsCancel_K2Node_ComponentBoundEvent_43_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void BndEvt__VideoSettingsAccept_K2Node_ComponentBoundEvent_22_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void Disable_Overlay();
-	void Enable_Overlay_Video(bool Accept_Input_0);
-	void Enable_Overlay_Input(bool Accept_Input_0, const class FText& Overlay_Text);
+	void DialogResult_2757852D46593FD0C2380D8F102C53DD(EFortDialogResult Result, class FName ResultName);
+	void OnLoaded_8C5A9E8C42027607DE7ED0B10409E5CE(class UClass* Loaded);
 	void DialogResult_B31FF5BD4C0772716F27509EA83B418E(EFortDialogResult Result, class FName ResultName);
 	void DialogResult_826C59EC4C294BC872A644878B35A13B(EFortDialogResult Result, class FName ResultName);
-	void DialogResult_BC062FC047B05F5EE0C6A09D64BFEB2A(EFortDialogResult Result, class FName ResultName);
 	void DialogResult_505313CB4EC9E510DD07E6B544334958(EFortDialogResult Result, class FName ResultName);
-	void DialogResult_865D48E84DB087F08A2C9797E6CB619E(EFortDialogResult Result, class FName ResultName);
 	void DialogResult_F3FA83AA4F97C266A3A1C9BB3F66C1C1(EFortDialogResult Result, class FName ResultName);
-	void OnLoaded_EF0A182C49925D83A3E55080FA222F7D(class UClass* Loaded);
-	void OnLoaded_B8BA00A14ACF4BA8F4B657B2B247D3CD(class UClass* Loaded);
 	void OnLoaded_598823E641B8288CD371F0B50BE07C91(class UClass* Loaded);
 	void OnLoaded_488EE90943BFF7AA4DB2049A7D72238C(class UClass* Loaded);
 	void OnLoaded_56F757014AB176CE2140009FB54D0D23(class UClass* Loaded);
 	void OnLoaded_FF56A1B94C8CEF8FA4611BB655D07426(class UClass* Loaded);
 	void Initialize();
-	struct FEventReply OnPreviewMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	struct FEventReply OnMouseWheel(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void Handle_Apply(bool* PassThrough);
-	void HandleResetToDefault(bool* PassThrough);
+	void Handle_Apply();
 	void Handle_Reset(bool* PassThrough);
-	void HandleBack(bool* PassThrough);
-	void Set_Input_Action_Handlers();
-	void Handle_Toggle_Mode(bool* PassThrough);
+	void HandleBack();
+	void Handle_Toggle_Mode();
 	void HandleCursorModeChanging(bool IsEnabled);
-	void AddTab(class UClass* WidgetClass, const class FText& DisplayName, class FName NameId, const struct FSlateBrush& Icon, ESettingTab Tab_Type);
+	void AddTabs(class UClass* WidgetClass, const class FText& DisplayName, class FName NameId, const struct FSlateBrush& Icon, ESettingTab Tab_Type);
 	void SetBackground();
 	void CenterOnActiveTab();
-	void HandleTabGameOptionsActionHandlerStates(int32 Active_Widget_Index);
-	void HandleTabInputOptionsActionHandlerStates(class UTabInputOptions_C* TabInputOptionsActor);
-	void HandleResetUnavailableActionHandlerStates(bool ShouldShowApply);
 	void HandleTabGamepadConfigActionHandlerStates();
-	void DoResetGameOptionsToDefault(class UFortOptionsTab* Tab_To_Reset);
-	void DoResetHUDOptionsToDefault();
-	void ApplySettings();
+	void BP_ApplySettings();
 	void UpdateBasedOnActiveWidget(class UObject* ActiveWidget, bool ShouldCenterOnTab);
-	void ResetActionHandlerStates(bool DisableBack);
 	void UpdateAllOptionsTabs();
-	void HandleResetCustomGamepadToDefault();
-	void DoResetKBMToDefault(int32 Preset_To_Set);
 	void Update_Header_Text_by_Tab_ID(class FName TabId);
 	void HandleResetAvailableActionHandlerStates();
-	void HandleInputResetToDefault(bool* PassThrough);
 	void NotifyTabsOfActivationState(class UFortOptionsTab* ActivatedTab);
+	void CreateMobileBackButton();
+	void ResetGameOptionsToDefault(class UFortOptionsTab* InputPin);
 
 public:
 	static class UClass* StaticClass()

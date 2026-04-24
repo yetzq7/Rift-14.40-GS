@@ -12,49 +12,70 @@
 
 #include "FortniteUI_structs.hpp"
 #include "FortniteGame_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.ExecuteUbergraph_MainTabTutorialWrapper
-// 0x0018 (0x0018 - 0x0000)
-struct MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable1;                               // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bEnabled;                             // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	int32                                         K2Node_Event_Count;                                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Event_TutorialObjectiveName;                // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETutorialType                                 K2Node_Event_TutorialType;                         // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper;
-
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.OnStartCallout
-// 0x000C (0x000C - 0x0000)
-struct MainTabTutorialWrapper_C_OnStartCallout final
-{
-public:
-	class FName                                   TutorialObjectiveName;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETutorialType                                 TutorialType;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_MainTabTutorialWrapper_C_OnStartCallout;
-
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.OnBangStateChanged
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.SetParentButton
 // 0x0008 (0x0008 - 0x0000)
-struct MainTabTutorialWrapper_C_OnBangStateChanged final
+struct MainTabTutorialWrapper_C_SetParentButton final
 {
 public:
-	bool                                          bEnabled;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Count;                                             // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCommonButton*                          ParentButton_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MainTabTutorialWrapper_C_OnBangStateChanged;
+DUMPER7_ASSERTS_MainTabTutorialWrapper_C_SetParentButton;
+
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.GetTutorialCalloutData
+// 0x0158 (0x0158 - 0x0000)
+struct MainTabTutorialWrapper_C_GetTutorialCalloutData final
+{
+public:
+	struct FFortUITutorialData                    TutorialData;                                      // 0x0000(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FFortToastDisplayInfo                  FortToastDisplayInfo;                              // 0x0058(0x0060)(Parm, OutParm)
+	class FText                                   CallFunc_Array_Get_Item;                           // 0x00B8(0x0018)()
+	TSoftObjectPtr<class UTexture2D>              CallFunc_Array_Get_Item_1;                         // 0x00D0(0x0028)(HasGetValueTypeHash)
+	struct FFortToastDisplayInfo                  K2Node_MakeStruct_FortToastDisplayInfo;            // 0x00F8(0x0060)()
+};
+DUMPER7_ASSERTS_MainTabTutorialWrapper_C_GetTutorialCalloutData;
+
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.HasValidData
+// 0x0068 (0x0068 - 0x0000)
+struct MainTabTutorialWrapper_C_HasValidData final
+{
+public:
+	struct FFortUITutorialData                    FortUITutorialData;                                // 0x0000(0x0058)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          Result;                                            // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0065(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0066(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_MainTabTutorialWrapper_C_HasValidData;
+
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.HandleTutorialCallout
+// 0x0138 (0x0138 - 0x0000)
+struct MainTabTutorialWrapper_C_HandleTutorialCallout final
+{
+public:
+	class FName                                   TutorialObjectiveName;                             // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETutorialType                                 TutorialType;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortUITutorialData                    TutorialData;                                      // 0x0010(0x0058)(Edit, BlueprintVisible)
+	class UFortTutorialContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GetSelected_ReturnValue;                  // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_73[0x5];                                       // 0x0073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortUITutorialData                    CallFunc_GetTutorialData_OutTutorialData;          // 0x0078(0x0058)()
+	bool                                          CallFunc_GetTutorialData_ReturnValue;              // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasValidData_Result;                      // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D2[0x6];                                       // 0x00D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortToastDisplayInfo                  CallFunc_GetTutorialCalloutData_FortToastDisplayInfo; // 0x00D8(0x0060)()
+};
+DUMPER7_ASSERTS_MainTabTutorialWrapper_C_HandleTutorialCallout;
 
 // Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.CheckFinishTutorialWrapper
 // 0x0010 (0x0010 - 0x0000)
@@ -66,66 +87,27 @@ public:
 };
 DUMPER7_ASSERTS_MainTabTutorialWrapper_C_CheckFinishTutorialWrapper;
 
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.HandleTutorialCallout
-// 0x0140 (0x0140 - 0x0000)
-struct MainTabTutorialWrapper_C_HandleTutorialCallout final
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.OnStartCallout
+// 0x000C (0x000C - 0x0000)
+struct MainTabTutorialWrapper_C_OnStartCallout final
 {
 public:
-	class FName                                   TutorialObjectiveName;                             // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   TutorialObjectiveName;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETutorialType                                 TutorialType;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortUITutorialData                    TutorialData;                                      // 0x0010(0x0058)(Edit, BlueprintVisible)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_GetSelected_ReturnValue;                  // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortTutorialContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortUITutorialData                    CallFunc_GetTutorialData_OutTutorialData;          // 0x0080(0x0058)()
-	bool                                          CallFunc_GetTutorialData_ReturnValue;              // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasValidData_Result;                      // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_DA[0x6];                                       // 0x00DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortToastDisplayInfo                  CallFunc_GetTutorialCalloutData_FortToastDisplayInfo; // 0x00E0(0x0060)()
 };
-DUMPER7_ASSERTS_MainTabTutorialWrapper_C_HandleTutorialCallout;
+DUMPER7_ASSERTS_MainTabTutorialWrapper_C_OnStartCallout;
 
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.HasValidData
-// 0x0068 (0x0068 - 0x0000)
-struct MainTabTutorialWrapper_C_HasValidData final
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.ExecuteUbergraph_MainTabTutorialWrapper
+// 0x0020 (0x0020 - 0x0000)
+struct MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper final
 {
 public:
-	struct FFortUITutorialData                    FortUITutorialData;                                // 0x0000(0x0058)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          Result;                                            // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue1;                // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue1;              // 0x0065(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0066(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   K2Node_Event_TutorialObjectiveName;                // 0x0014(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETutorialType                                 K2Node_Event_TutorialType;                         // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MainTabTutorialWrapper_C_HasValidData;
-
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.GetTutorialCalloutData
-// 0x0158 (0x0158 - 0x0000)
-struct MainTabTutorialWrapper_C_GetTutorialCalloutData final
-{
-public:
-	struct FFortUITutorialData                    TutorialData;                                      // 0x0000(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FFortToastDisplayInfo                  FortToastDisplayInfo;                              // 0x0058(0x0060)(Parm, OutParm)
-	class FText                                   CallFunc_Array_Get_Item;                           // 0x00B8(0x0018)()
-	TSoftObjectPtr<class UTexture2D>              CallFunc_Array_Get_Item1;                          // 0x00D0(0x0028)(HasGetValueTypeHash)
-	struct FFortToastDisplayInfo                  K2Node_MakeStruct_FortToastDisplayInfo;            // 0x00F8(0x0060)()
-};
-DUMPER7_ASSERTS_MainTabTutorialWrapper_C_GetTutorialCalloutData;
-
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.SetParentButton
-// 0x0008 (0x0008 - 0x0000)
-struct MainTabTutorialWrapper_C_SetParentButton final
-{
-public:
-	class UCommonButton*                          ParentButton_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_MainTabTutorialWrapper_C_SetParentButton;
+DUMPER7_ASSERTS_MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

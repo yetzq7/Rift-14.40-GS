@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GC_Commando_FragGrenade_Throw.GC_Commando_FragGrenade_Throw_C
-// 0x0000 (0x01A0 - 0x01A0)
+// 0x0000 (0x01B8 - 0x01B8)
 class UGC_Commando_FragGrenade_Throw_C final : public UFortGameplayCueNotify_Burst
 {
 public:

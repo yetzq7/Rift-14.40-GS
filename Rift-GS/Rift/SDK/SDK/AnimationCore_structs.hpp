@@ -35,6 +35,20 @@ enum class EConstraintType : uint8
 	MAX                                      = 2,
 };
 
+// ScriptStruct AnimationCore.ConstraintOffset
+// 0x0060 (0x0060 - 0x0000)
+struct FConstraintOffset final
+{
+public:
+	struct FVector                                Translation;                                       // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Rotation;                                          // 0x0010(0x0010)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Scale;                                             // 0x0020(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Parent;                                            // 0x0030(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FConstraintOffset;
+
 // ScriptStruct AnimationCore.NodeObject
 // 0x0010 (0x0010 - 0x0000)
 struct FNodeObject final
@@ -50,9 +64,9 @@ DUMPER7_ASSERTS_FNodeObject;
 struct FNodeHierarchyData final
 {
 public:
-	TArray<struct FNodeObject>                    Nodes;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FTransform>                     Transforms;                                        // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<class FName, int32>                      NodeNameToIndexMapping;                            // 0x0020(0x0050)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FNodeObject>                    Nodes;                                             // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     Transforms;                                        // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FName, int32>                      NodeNameToIndexMapping;                            // 0x0020(0x0050)(NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FNodeHierarchyData;
 
@@ -66,6 +80,17 @@ public:
 };
 DUMPER7_ASSERTS_FNodeHierarchyWithUserData;
 
+// ScriptStruct AnimationCore.TransformNoScale
+// 0x0020 (0x0020 - 0x0000)
+struct FTransformNoScale final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Rotation;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTransformNoScale;
+
 // ScriptStruct AnimationCore.FilterOptionPerAxis
 // 0x0003 (0x0003 - 0x0000)
 struct FFilterOptionPerAxis final
@@ -76,17 +101,6 @@ public:
 	bool                                          bZ;                                                // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFilterOptionPerAxis;
-
-// ScriptStruct AnimationCore.TransformFilter
-// 0x0009 (0x0009 - 0x0000)
-struct FTransformFilter final
-{
-public:
-	struct FFilterOptionPerAxis                   TranslationFilter;                                 // 0x0000(0x0003)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFilterOptionPerAxis                   RotationFilter;                                    // 0x0003(0x0003)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFilterOptionPerAxis                   ScaleFilter;                                       // 0x0006(0x0003)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTransformFilter;
 
 // ScriptStruct AnimationCore.ConstraintDescription
 // 0x000D (0x000D - 0x0000)
@@ -118,42 +132,6 @@ public:
 };
 DUMPER7_ASSERTS_FTransformConstraint;
 
-// ScriptStruct AnimationCore.ConstraintOffset
-// 0x0060 (0x0060 - 0x0000)
-struct FConstraintOffset final
-{
-public:
-	struct FVector                                Translation;                                       // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Rotation;                                          // 0x0010(0x0010)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Scale;                                             // 0x0020(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Parent;                                            // 0x0030(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FConstraintOffset;
-
-// ScriptStruct AnimationCore.EulerTransform
-// 0x0024 (0x0024 - 0x0000)
-struct FEulerTransform final
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               Rotation;                                          // 0x000C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Scale;                                             // 0x0018(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEulerTransform;
-
-// ScriptStruct AnimationCore.Axis
-// 0x0010 (0x0010 - 0x0000)
-struct FAxis final
-{
-public:
-	struct FVector                                Axis;                                              // 0x0000(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInLocalSpace;                                     // 0x000C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAxis;
-
 // ScriptStruct AnimationCore.ConstraintDescriptor
 // 0x0010 (0x0010 - 0x0000)
 struct alignas(0x08) FConstraintDescriptor final
@@ -177,6 +155,57 @@ public:
 	struct FTransform                             CurrentTransform;                                  // 0x0050(0x0030)(Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FConstraintData;
+
+// ScriptStruct AnimationCore.TransformFilter
+// 0x0009 (0x0009 - 0x0000)
+struct FTransformFilter final
+{
+public:
+	struct FFilterOptionPerAxis                   TranslationFilter;                                 // 0x0000(0x0003)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFilterOptionPerAxis                   RotationFilter;                                    // 0x0003(0x0003)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFilterOptionPerAxis                   ScaleFilter;                                       // 0x0006(0x0003)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTransformFilter;
+
+// ScriptStruct AnimationCore.CCDIKChainLink
+// 0x0080 (0x0080 - 0x0000)
+struct alignas(0x10) FCCDIKChainLink final
+{
+public:
+	uint8                                         Pad_0[0x80];                                       // 0x0000(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FCCDIKChainLink;
+
+// ScriptStruct AnimationCore.EulerTransform
+// 0x0024 (0x0024 - 0x0000)
+struct FEulerTransform final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               Rotation;                                          // 0x000C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Scale;                                             // 0x0018(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEulerTransform;
+
+// ScriptStruct AnimationCore.FABRIKChainLink
+// 0x0038 (0x0038 - 0x0000)
+struct alignas(0x08) FFABRIKChainLink final
+{
+public:
+	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FFABRIKChainLink;
+
+// ScriptStruct AnimationCore.Axis
+// 0x0010 (0x0010 - 0x0000)
+struct FAxis final
+{
+public:
+	struct FVector                                Axis;                                              // 0x0000(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInLocalSpace;                                     // 0x000C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAxis;
 
 // ScriptStruct AnimationCore.ConstraintDescriptionEx
 // 0x0010 (0x0010 - 0x0000)
@@ -217,7 +246,7 @@ DUMPER7_ASSERTS_FTransformConstraintDescription;
 struct FNodeChain final
 {
 public:
-	TArray<class FName>                           Nodes;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           Nodes;                                             // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FNodeChain;
 

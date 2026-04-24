@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass CMSImage.CMSImage_C
-// 0x0008 (0x0238 - 0x0230)
+// 0x0008 (0x0268 - 0x0260)
 class UCMSImage_C final : public UUserWidget
 {
 public:
-	class UEpicCMSImage*                          Image;                                             // 0x0230(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEpicCMSImage*                          Image;                                             // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void SetMediaURL(const class FString& MediaUrl);

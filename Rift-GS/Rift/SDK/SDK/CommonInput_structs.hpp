@@ -16,18 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Enum CommonInput.ECommonGamepadType
-// NumValues: 0x0006
-enum class ECommonGamepadType : uint8
-{
-	XboxOneController                        = 0,
-	PS4Controller                            = 1,
-	SwitchController                         = 2,
-	GenericController                        = 3,
-	Count                                    = 4,
-	ECommonGamepadType_MAX                   = 5,
-};
-
 // Enum CommonInput.ECommonInputType
 // NumValues: 0x0005
 enum class ECommonInputType : uint8
@@ -39,8 +27,22 @@ enum class ECommonInputType : uint8
 	ECommonInputType_MAX                     = 4,
 };
 
+// Enum CommonInput.ECommonGamepadType
+// NumValues: 0x0008
+enum class ECommonGamepadType : uint8
+{
+	XboxOneController                        = 0,
+	PS4Controller                            = 1,
+	SwitchController                         = 2,
+	GenericController                        = 3,
+	XboxSeriesXController                    = 4,
+	PS5Controller                            = 5,
+	Count                                    = 6,
+	ECommonGamepadType_MAX                   = 7,
+};
+
 // Enum CommonInput.ECommonPlatformType
-// NumValues: 0x0009
+// NumValues: 0x000B
 enum class ECommonPlatformType : uint8
 {
 	PC                                       = 0,
@@ -50,8 +52,10 @@ enum class ECommonPlatformType : uint8
 	IOS                                      = 4,
 	Android                                  = 5,
 	Switch                                   = 6,
-	Count                                    = 7,
-	ECommonPlatformType_MAX                  = 8,
+	XSX                                      = 7,
+	PS5                                      = 8,
+	Count                                    = 9,
+	ECommonPlatformType_MAX                  = 10,
 };
 
 // ScriptStruct CommonInput.CommonInputPlatformData
@@ -67,10 +71,20 @@ public:
 	bool                                          bCanChangeGamepadType;                             // 0x0005(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bSupportsTouch;                                    // 0x0006(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TSoftClassPtr<class UClass>>           ControllerData;                                    // 0x0008(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<TSoftClassPtr<class UClass>>           ControllerData;                                    // 0x0008(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<TSubclassOf<class UCommonInputControllerData>> ControllerDataClasses;                     // 0x0018(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
 DUMPER7_ASSERTS_FCommonInputPlatformData;
+
+// ScriptStruct CommonInput.CommonInputKeySetBrushConfiguration
+// 0x0098 (0x0098 - 0x0000)
+struct FCommonInputKeySetBrushConfiguration final
+{
+public:
+	TArray<struct FKey>                           Keys;                                              // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            KeyBrush;                                          // 0x0010(0x0088)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCommonInputKeySetBrushConfiguration;
 
 // ScriptStruct CommonInput.CommonInputKeyBrushConfiguration
 // 0x00A0 (0x00A0 - 0x0000)

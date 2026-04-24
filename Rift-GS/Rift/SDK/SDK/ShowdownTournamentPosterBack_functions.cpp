@@ -36,6 +36,20 @@ void UShowdownTournamentPosterBack_C::ExecuteUbergraph_ShowdownTournamentPosterB
 }
 
 
+// Function ShowdownTournamentPosterBack.ShowdownTournamentPosterBack_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UShowdownTournamentPosterBack_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownTournamentPosterBack_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ShowdownTournamentPosterBack.ShowdownTournamentPosterBack_C.EventPopulateEventWindowData
 // (BlueprintCallable, BlueprintEvent)
 

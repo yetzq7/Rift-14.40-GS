@@ -36,6 +36,34 @@ void AB_Pickups_Default_C::ExecuteUbergraph_B_Pickups_Default(int32 EntryPoint)
 }
 
 
+// Function B_Pickups_Default.B_Pickups_Default_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AB_Pickups_Default_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Default_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Pickups_Default.B_Pickups_Default_C.HideBackgroundAndSpotlight
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Pickups_Default_C::HideBackgroundAndSpotlight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Default_C", "HideBackgroundAndSpotlight");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_Pickups_Default.B_Pickups_Default_C.OnPickedUp
 // (Event, Public, BlueprintEvent)
 
@@ -59,20 +87,6 @@ void AB_Pickups_Default_C::OnTossed()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Pickups_Default_C", "OnTossed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Pickups_Default.B_Pickups_Default_C.Randomize Mesh Rotation for BR
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Pickups_Default_C::Randomize_Mesh_Rotation_for_BR()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Pickups_Default_C", "Randomize Mesh Rotation for BR");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

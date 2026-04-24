@@ -18,7 +18,7 @@ SDK_NAMESPACE_START
 struct FListOfWaterComponentsThatTheCharactersInteractingWithByIndex final
 {
 public:
-	TArray<int32>                                 WaterCollisionComponentIndices_3_A6FB8AAE4E16FD605B61E1A03FF83823; // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<int32>                                 WaterCollisionComponentIndices_3_A6FB8AAE4E16FD605B61E1A03FF83823; // 0x0000(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FListOfWaterComponentsThatTheCharactersInteractingWithByIndex;
 

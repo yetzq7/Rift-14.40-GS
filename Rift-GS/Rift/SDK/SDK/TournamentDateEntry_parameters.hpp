@@ -10,74 +10,84 @@
 
 #include "Basic.hpp"
 
-#include "FortniteUI_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
-#include "Engine_structs.hpp"
+#include "FortniteUI_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function TournamentDateEntry.TournamentDateEntry_C.ExecuteUbergraph_TournamentDateEntry
-// 0x0360 (0x0360 - 0x0000)
+// 0x0508 (0x0508 - 0x0000)
 struct TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              CallFunc_GetEventEndTime_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetEventTimeAsText_ReturnValue;           // 0x0018(0x0018)()
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0040)(HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable1;                               // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable1;                               // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7A[0x2];                                       // 0x007A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           Temp_struct_Variable;                              // 0x007C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable2;                               // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E[0x2];                                       // 0x008E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortTournamentDisplayInfo             K2Node_CustomEvent_showdownData;                   // 0x0090(0x0170)(ConstParm)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0200(0x0028)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor1;                     // 0x0228(0x0028)()
-	EFortShowdownEventState                       CallFunc_GetEventState_ReturnValue;                // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_251[0x3];                                      // 0x0251(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue1;         // 0x0259(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_25A[0x2];                                      // 0x025A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable1;                                // 0x025C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0261(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_262[0x6];                                      // 0x0262(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_Select1_Default;                            // 0x0268(0x0028)()
-	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_294[0x4];                                      // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable3;                               // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2A1[0x3];                                      // 0x02A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Select2_Default;                            // 0x02A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDateTime                              CallFunc_GetEventBeginTime_ReturnValue;            // 0x02A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_Select3_Default;                            // 0x02B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetEventDateAsText_ReturnValue;           // 0x02C0(0x0018)()
-	struct FDateTime                              CallFunc_GetEventBeginTime_ReturnValue1;           // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetEventTimeAsText_ReturnValue1;          // 0x02E0(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData1;             // 0x02F8(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0338(0x0010)(ZeroConstructor, ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0348(0x0018)()
+	EFortShowdownEventState                       CallFunc_GetEventTimeState_ReturnValue;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x000F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           Temp_struct_Variable;                              // 0x0014(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_3;                              // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0028(0x0018)()
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortTournamentDisplayInfo             K2Node_CustomEvent_showdownData;                   // 0x0048(0x01A8)(ConstParm)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x01F0(0x0028)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0218(0x0028)()
+	struct FSlateColor                            K2Node_Select_Default_1;                           // 0x0240(0x0028)()
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDateTime                              CallFunc_GetEventBeginTime_ReturnValue;            // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetEventDateAsText_ReturnValue;           // 0x0280(0x0018)()
+	struct FDateTime                              CallFunc_GetEventEndTime_ReturnValue;              // 0x0298(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           K2Node_Select_Default_2;                           // 0x02A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetEventDateAsText_ReturnValue_1;         // 0x02B0(0x0018)()
+	bool                                          CallFunc_EqualEqual_TextText_ReturnValue;          // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              CallFunc_GetEventBeginTime_ReturnValue_1;          // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetEventTimeAsText_ReturnValue;           // 0x02D8(0x0018)()
+	struct FDateTime                              CallFunc_GetEventEndTime_ReturnValue_1;            // 0x02F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x02F8(0x0040)(HasGetValueTypeHash)
+	class FText                                   CallFunc_GetEventTimeAsText_ReturnValue_1;         // 0x0338(0x0018)()
+	struct FDateTime                              CallFunc_GetEventBeginTime_ReturnValue_2;          // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0358(0x0040)(HasGetValueTypeHash)
+	class FText                                   CallFunc_GetEventDateAsText_ReturnValue_2;         // 0x0398(0x0018)()
+	struct FDateTime                              CallFunc_GetEventEndTime_ReturnValue_2;            // 0x03B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x03B8(0x0040)(HasGetValueTypeHash)
+	class FText                                   CallFunc_GetEventDateAsText_ReturnValue_3;         // 0x03F8(0x0018)()
+	bool                                          Temp_bool_Variable_4;                              // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0418(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0458(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default_3;                           // 0x0468(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46C[0x4];                                      // 0x046C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0470(0x0018)()
+	class FText                                   K2Node_Select_Default_4;                           // 0x0488(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x04A0(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x04E0(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x04F0(0x0018)()
 };
 DUMPER7_ASSERTS_TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry;
 
 // Function TournamentDateEntry.TournamentDateEntry_C.EventColor
-// 0x0170 (0x0170 - 0x0000)
+// 0x01A8 (0x01A8 - 0x0000)
 struct TournamentDateEntry_C_EventColor final
 {
 public:
-	struct FFortTournamentDisplayInfo             showdownData;                                      // 0x0000(0x0170)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FFortTournamentDisplayInfo             showdownData;                                      // 0x0000(0x01A8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 DUMPER7_ASSERTS_TournamentDateEntry_C_EventColor;
 

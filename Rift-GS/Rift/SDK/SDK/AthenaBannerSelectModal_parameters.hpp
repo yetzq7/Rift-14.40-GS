@@ -18,15 +18,19 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function AthenaBannerSelectModal.AthenaBannerSelectModal_C.ExecuteUbergraph_AthenaBannerSelectModal
-// 0x0018 (0x0018 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct AthenaBannerSelectModal_C_ExecuteUbergraph_AthenaBannerSelectModal final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_ComponentBoundEvent_IconId;                 // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_ComponentBoundEvent_ColorId;                // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HandleCloseAction_PassThrough;            // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HandleCloseAction_PassThrough1;           // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsMobileGame_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HandleCloseAction_PassThrough;            // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HandleCloseAction_PassThrough_1;          // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOverlaySlot*                           CallFunc_SlotAsOverlaySlot_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class FName                                   K2Node_ComponentBoundEvent_IconId;                 // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_ComponentBoundEvent_ColorId;                // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_AthenaBannerSelectModal_C_ExecuteUbergraph_AthenaBannerSelectModal;
 
@@ -41,44 +45,23 @@ public:
 DUMPER7_ASSERTS_AthenaBannerSelectModal_C_BndEvt__BP_LocalPlayerBannerEditor_K2Node_ComponentBoundEvent_18_CloseBannerEditor__DelegateSignature;
 
 // Function AthenaBannerSelectModal.AthenaBannerSelectModal_C.HandleCloseAction
-// 0x0010 (0x0010 - 0x0000)
+// 0x0002 (0x0002 - 0x0000)
 struct AthenaBannerSelectModal_C_HandleCloseAction final
 {
 public:
 	bool                                          PassThrough;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortUIManagerWidget_NUI*               CallFunc_GetUIManagerWidget_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Attempt_Leave_Picker_Left;                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_AthenaBannerSelectModal_C_HandleCloseAction;
 
 // Function AthenaBannerSelectModal.AthenaBannerSelectModal_C.Setup Input Action Handlers
-// 0x0030 (0x0030 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct AthenaBannerSelectModal_C_Setup_Input_Action_Handlers final
 {
 public:
 	TDelegate<void(bool* bPassThrough)>           K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void(bool* bPassThrough)>           K2Node_CreateDelegate_OutputDelegate1;             // 0x0010(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void(bool* bPassThrough)>           K2Node_CreateDelegate_OutputDelegate2;             // 0x0020(0x0010)(ZeroConstructor, NoDestructor)
 };
 DUMPER7_ASSERTS_AthenaBannerSelectModal_C_Setup_Input_Action_Handlers;
-
-// Function AthenaBannerSelectModal.AthenaBannerSelectModal_C.HandlePreviousAction
-// 0x0001 (0x0001 - 0x0000)
-struct AthenaBannerSelectModal_C_HandlePreviousAction final
-{
-public:
-	bool                                          PassThrough;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_AthenaBannerSelectModal_C_HandlePreviousAction;
-
-// Function AthenaBannerSelectModal.AthenaBannerSelectModal_C.HandleNextAction
-// 0x0001 (0x0001 - 0x0000)
-struct AthenaBannerSelectModal_C_HandleNextAction final
-{
-public:
-	bool                                          PassThrough;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_AthenaBannerSelectModal_C_HandleNextAction;
 
 // Function AthenaBannerSelectModal.AthenaBannerSelectModal_C.On_BorderTouch_MouseButtonDown_0
 // 0x02D8 (0x02D8 - 0x0000)

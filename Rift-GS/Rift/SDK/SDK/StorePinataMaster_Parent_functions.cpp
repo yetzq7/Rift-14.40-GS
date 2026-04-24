@@ -16,23 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function StorePinataMaster_Parent.StorePinataMaster_Parent_C.ExecuteUbergraph_StorePinataMaster_Parent
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function StorePinataMaster_Parent.StorePinataMaster_Parent_C.InitiatePinata
+// (BlueprintCallable, BlueprintEvent)
 
-void AStorePinataMaster_Parent_C::ExecuteUbergraph_StorePinataMaster_Parent(int32 EntryPoint)
+void AStorePinataMaster_Parent_C::InitiatePinata()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StorePinataMaster_Parent_C", "ExecuteUbergraph_StorePinataMaster_Parent");
+		Func = Class->GetFunction("StorePinataMaster_Parent_C", "InitiatePinata");
 
-	Params::StorePinataMaster_Parent_C_ExecuteUbergraph_StorePinataMaster_Parent Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -64,31 +58,23 @@ void AStorePinataMaster_Parent_C::CameraTransitionComplete()
 }
 
 
-// Function StorePinataMaster_Parent.StorePinataMaster_Parent_C.InitiatePinata
-// (BlueprintCallable, BlueprintEvent)
+// Function StorePinataMaster_Parent.StorePinataMaster_Parent_C.ExecuteUbergraph_StorePinataMaster_Parent
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AStorePinataMaster_Parent_C::InitiatePinata()
+void AStorePinataMaster_Parent_C::ExecuteUbergraph_StorePinataMaster_Parent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StorePinataMaster_Parent_C", "InitiatePinata");
+		Func = Class->GetFunction("StorePinataMaster_Parent_C", "ExecuteUbergraph_StorePinataMaster_Parent");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::StorePinataMaster_Parent_C_ExecuteUbergraph_StorePinataMaster_Parent Parms{};
 
+	Parms.EntryPoint = EntryPoint;
 
-// Function StorePinataMaster_Parent.StorePinataMaster_Parent_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AStorePinataMaster_Parent_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StorePinataMaster_Parent_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

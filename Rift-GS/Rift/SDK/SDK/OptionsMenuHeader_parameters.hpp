@@ -10,33 +10,44 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function OptionsMenuHeader.OptionsMenuHeader_C.ExecuteUbergraph_OptionsMenuHeader
-// 0x0148 (0x0148 - 0x0000)
+// 0x0150 (0x0150 - 0x0000)
 struct OptionsMenuHeader_C_ExecuteUbergraph_OptionsMenuHeader final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsSelected;                          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsUsingGamepad_ReturnValue;               // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerEvent                          K2Node_Event_MouseEvent1;                          // 0x0018(0x0070)(ConstParm)
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0088(0x0038)(IsPlainOldData, NoDestructor)
-	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x00C0(0x0070)(ConstParm)
-	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortSettingInfo*                       K2Node_DynamicCast_AsFort_Setting_Info;            // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bIsExpanded;                          // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortSettingInfo*                       K2Node_DynamicCast_AsFort_Setting_Info;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bIsExpanded;                          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x001C(0x0038)(IsPlainOldData, NoDestructor)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x0058(0x0070)(ConstParm)
+	struct FPointerEvent                          K2Node_Event_MouseEvent_1;                         // 0x00C8(0x0070)(ConstParm)
+	bool                                          K2Node_Event_bIsSelected;                          // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsUsingGamepad_ReturnValue;               // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_OptionsMenuHeader_C_ExecuteUbergraph_OptionsMenuHeader;
+
+// Function OptionsMenuHeader.OptionsMenuHeader_C.BP_OnItemExpansionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct OptionsMenuHeader_C_BP_OnItemExpansionChanged final
+{
+public:
+	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_OptionsMenuHeader_C_BP_OnItemExpansionChanged;
 
 // Function OptionsMenuHeader.OptionsMenuHeader_C.OnListItemObjectSet
 // 0x0008 (0x0008 - 0x0000)
@@ -75,17 +86,8 @@ public:
 };
 DUMPER7_ASSERTS_OptionsMenuHeader_C_BP_OnItemSelectionChanged;
 
-// Function OptionsMenuHeader.OptionsMenuHeader_C.BP_OnItemExpansionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct OptionsMenuHeader_C_BP_OnItemExpansionChanged final
-{
-public:
-	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_OptionsMenuHeader_C_BP_OnItemExpansionChanged;
-
 // Function OptionsMenuHeader.OptionsMenuHeader_C.UpdateSize
-// 0x0040 (0x0040 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct OptionsMenuHeader_C_UpdateSize final
 {
 public:
@@ -93,17 +95,11 @@ public:
 	struct FVector2D                              SmallSize;                                         // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Temp_float_Variable;                               // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Temp_float_Variable1;                              // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable1;                               // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              Temp_struct_Variable;                              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Temp_struct_Variable1;                             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsBROnly_ReturnValue;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsBROnly_ReturnValue1;                    // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Select_Default;                             // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              K2Node_Select1_Default;                            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              Temp_struct_Variable;                              // 0x0014(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              Temp_struct_Variable_1;                            // 0x001C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsBROnly_ReturnValue;                     // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              K2Node_Select_Default;                             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_OptionsMenuHeader_C_UpdateSize;
 
@@ -123,14 +119,21 @@ public:
 };
 DUMPER7_ASSERTS_OptionsMenuHeader_C_HandlePawnSet;
 
-// Function OptionsMenuHeader.OptionsMenuHeader_C.GetListItemObject
-// 0x0008 (0x0008 - 0x0000)
-struct OptionsMenuHeader_C_GetListItemObject final
+// Function OptionsMenuHeader.OptionsMenuHeader_C.SetFontSize
+// 0x0068 (0x0068 - 0x0000)
+struct OptionsMenuHeader_C_SetFontSize final
 {
 public:
-	class UObject*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         DefaultSize;                                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MobileSize;                                        // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateFontInfo                         TempFont;                                          // 0x0010(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsMobileGame_ReturnValue;                 // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_62[0x2];                                       // 0x0062(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Select_Default;                             // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_OptionsMenuHeader_C_GetListItemObject;
+DUMPER7_ASSERTS_OptionsMenuHeader_C_SetFontSize;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

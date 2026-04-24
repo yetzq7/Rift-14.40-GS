@@ -10,24 +10,17 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CommonUI_classes.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass AthenaCustomizationBannerButton.AthenaCustomizationBannerButton_C
-// 0x0018 (0x0B48 - 0x0B30)
-class UAthenaCustomizationBannerButton_C final : public UCommonButton
+// 0x0008 (0x0BB0 - 0x0BA8)
+class UAthenaCustomizationBannerButton_C final : public UFortBannerSlotButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B30(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNormalBangWrapper_C*                   NormalBangWrapper;                                 // 0x0B38(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UPlayerBanner_C*                        PlayerBanner;                                      // 0x0B40(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void ExecuteUbergraph_AthenaCustomizationBannerButton(int32 EntryPoint);
-	void Construct();
+	class UNormalBangWrapper_C*                   NormalBangWrapper;                                 // 0x0BA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

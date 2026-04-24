@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UMaterialShaderQualitySettings final : public UObject
 {
 public:
-	TMap<class FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                      // 0x0028(0x0050)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TMap<class FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                      // 0x0028(0x0050)(NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -40,12 +40,12 @@ public:
 DUMPER7_ASSERTS_UMaterialShaderQualitySettings;
 
 // Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings
-// 0x0028 (0x0050 - 0x0028)
+// 0x0038 (0x0060 - 0x0028)
 class UShaderPlatformQualitySettings final : public UObject
 {
 public:
-	struct FMaterialQualityOverrides              QualityOverrides[0x3];                             // 0x0028(0x0008)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0x10];                                      // 0x0040(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMaterialQualityOverrides              QualityOverrides[0x4];                             // 0x0028(0x0009)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x14];                                      // 0x004C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

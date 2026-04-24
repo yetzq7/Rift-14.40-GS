@@ -50,29 +50,29 @@ void UAthenaBannerSelectModal_C::Close()
 }
 
 
-// Function AthenaBannerSelectModal.AthenaBannerSelectModal_C.OnActivated
+// Function AthenaBannerSelectModal.AthenaBannerSelectModal_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UAthenaBannerSelectModal_C::OnActivated()
+void UAthenaBannerSelectModal_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaBannerSelectModal_C", "OnActivated");
+		Func = Class->GetFunction("AthenaBannerSelectModal_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AthenaBannerSelectModal.AthenaBannerSelectModal_C.OnDeactivated
+// Function AthenaBannerSelectModal.AthenaBannerSelectModal_C.BP_OnDeactivated
 // (Event, Protected, BlueprintEvent)
 
-void UAthenaBannerSelectModal_C::OnDeactivated()
+void UAthenaBannerSelectModal_C::BP_OnDeactivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaBannerSelectModal_C", "OnDeactivated");
+		Func = Class->GetFunction("AthenaBannerSelectModal_C", "BP_OnDeactivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -97,20 +97,6 @@ void UAthenaBannerSelectModal_C::BndEvt__BP_LocalPlayerBannerEditor_K2Node_Compo
 	Parms.ColorId = ColorId;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaBannerSelectModal.AthenaBannerSelectModal_C.BndEvt__BP_LocalPlayerProfileManagement_K2Node_ComponentBoundEvent_14_CloseProfileModal__DelegateSignature
-// (BlueprintEvent)
-
-void UAthenaBannerSelectModal_C::BndEvt__BP_LocalPlayerProfileManagement_K2Node_ComponentBoundEvent_14_CloseProfileModal__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaBannerSelectModal_C", "BndEvt__BP_LocalPlayerProfileManagement_K2Node_ComponentBoundEvent_14_CloseProfileModal__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -160,48 +146,6 @@ void UAthenaBannerSelectModal_C::Setup_Input_Action_Handlers()
 		Func = Class->GetFunction("AthenaBannerSelectModal_C", "Setup Input Action Handlers");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaBannerSelectModal.AthenaBannerSelectModal_C.HandlePreviousAction
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UAthenaBannerSelectModal_C::HandlePreviousAction(bool* PassThrough)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaBannerSelectModal_C", "HandlePreviousAction");
-
-	Params::AthenaBannerSelectModal_C_HandlePreviousAction Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (PassThrough != nullptr)
-		*PassThrough = Parms.PassThrough;
-}
-
-
-// Function AthenaBannerSelectModal.AthenaBannerSelectModal_C.HandleNextAction
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UAthenaBannerSelectModal_C::HandleNextAction(bool* PassThrough)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaBannerSelectModal_C", "HandleNextAction");
-
-	Params::AthenaBannerSelectModal_C_HandleNextAction Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (PassThrough != nullptr)
-		*PassThrough = Parms.PassThrough;
 }
 
 

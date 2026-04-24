@@ -16,37 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function ItemAlterationsListDetailWidget.ItemAlterationsListDetailWidget_C.ExecuteUbergraph_ItemAlterationsListDetailWidget
-// (Final, UbergraphFunction)
+// Function ItemAlterationsListDetailWidget.ItemAlterationsListDetailWidget_C.SetState
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFortAlterationWidgetState              State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UItemAlterationsListDetailWidget_C::ExecuteUbergraph_ItemAlterationsListDetailWidget(int32 EntryPoint)
+void UItemAlterationsListDetailWidget_C::SetState(EFortAlterationWidgetState State)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemAlterationsListDetailWidget_C", "ExecuteUbergraph_ItemAlterationsListDetailWidget");
+		Func = Class->GetFunction("ItemAlterationsListDetailWidget_C", "SetState");
 
-	Params::ItemAlterationsListDetailWidget_C_ExecuteUbergraph_ItemAlterationsListDetailWidget Parms{};
+	Params::ItemAlterationsListDetailWidget_C_SetState Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.State = State;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemAlterationsListDetailWidget.ItemAlterationsListDetailWidget_C.HandlePostDifferentItemToCompareWithSet
-// (Event, Protected, BlueprintEvent)
-
-void UItemAlterationsListDetailWidget_C::HandlePostDifferentItemToCompareWithSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemAlterationsListDetailWidget_C", "HandlePostDifferentItemToCompareWithSet");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -64,21 +50,49 @@ void UItemAlterationsListDetailWidget_C::HandlePostDifferentItemToDetailSet()
 }
 
 
-// Function ItemAlterationsListDetailWidget.ItemAlterationsListDetailWidget_C.SetState
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EFortAlterationWidgetState              State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function ItemAlterationsListDetailWidget.ItemAlterationsListDetailWidget_C.HandlePostDifferentItemToCompareWithSet
+// (Event, Protected, BlueprintEvent)
 
-void UItemAlterationsListDetailWidget_C::SetState(EFortAlterationWidgetState State)
+void UItemAlterationsListDetailWidget_C::HandlePostDifferentItemToCompareWithSet()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemAlterationsListDetailWidget_C", "SetState");
+		Func = Class->GetFunction("ItemAlterationsListDetailWidget_C", "HandlePostDifferentItemToCompareWithSet");
 
-	Params::ItemAlterationsListDetailWidget_C_SetState Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.State = State;
+
+// Function ItemAlterationsListDetailWidget.ItemAlterationsListDetailWidget_C.HandleUpgradeLevelDeltaChanged
+// (Event, Protected, BlueprintEvent)
+
+void UItemAlterationsListDetailWidget_C::HandleUpgradeLevelDeltaChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemAlterationsListDetailWidget_C", "HandleUpgradeLevelDeltaChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemAlterationsListDetailWidget.ItemAlterationsListDetailWidget_C.ExecuteUbergraph_ItemAlterationsListDetailWidget
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UItemAlterationsListDetailWidget_C::ExecuteUbergraph_ItemAlterationsListDetailWidget(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemAlterationsListDetailWidget_C", "ExecuteUbergraph_ItemAlterationsListDetailWidget");
+
+	Params::ItemAlterationsListDetailWidget_C_ExecuteUbergraph_ItemAlterationsListDetailWidget Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

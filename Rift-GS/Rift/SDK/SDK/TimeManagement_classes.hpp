@@ -78,6 +78,7 @@ public:
 	static class FString Conv_TimecodeToString(const struct FTimecode& InTimecode, bool bForceSignDisplay);
 	static struct FFrameNumber Divide_FrameNumberInteger(const struct FFrameNumber& A, int32 B);
 	static struct FTimecode GetTimecode();
+	static struct FFrameRate GetTimecodeFrameRate();
 	static bool IsValid_Framerate(const struct FFrameRate& InFrameRate);
 	static bool IsValid_MultipleOf(const struct FFrameRate& InFrameRate, const struct FFrameRate& OtherFramerate);
 	static struct FFrameNumber Multiply_FrameNumberInteger(const struct FFrameNumber& A, int32 B);

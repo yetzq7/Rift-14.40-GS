@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_AthenaExitVehicle.GA_AthenaExitVehicle_C
-// 0x0008 (0x0940 - 0x0938)
+// 0x0008 (0x0AB0 - 0x0AA8)
 class UGA_AthenaExitVehicle_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0938(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_GA_AthenaExitVehicle(int32 EntryPoint);

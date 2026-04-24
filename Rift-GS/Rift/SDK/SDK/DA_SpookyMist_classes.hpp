@@ -18,27 +18,26 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass DA_SpookyMist.DA_SpookyMist_C
-// 0x0040 (0x0A50 - 0x0A10)
+// 0x0040 (0x0D80 - 0x0D40)
 class ADA_SpookyMist_C final : public AFortCustomizableAbilityDecoTool
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          CanCancelAbility;                                  // 0x0A18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A19[0x7];                                      // 0x0A19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CanCancelTimer;                                    // 0x0A20(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         CancelDelay;                                       // 0x0A28(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0A48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          CanCancelAbility;                                  // 0x0D48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D49[0x7];                                      // 0x0D49(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CanCancelTimer;                                    // 0x0D50(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         CancelDelay;                                       // 0x0D58(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0D78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_DA_SpookyMist(int32 EntryPoint);
-	void BPOnUnEquip();
-	void BPPressSecondaryFire(class AFortDecoHelper* FortDecoHelper);
-	void BPPressTrigger(class AFortDecoHelper* FortDecoHelper);
-	void BPReleaseSecondaryFire(class AFortDecoHelper* FortDecoHelper);
-	void CanCancel();
 	void On_DBNO();
 	void ReceiveBeginPlay();
-	void UserConstructionScript();
+	void CanCancel();
+	void BPReleaseSecondaryFire(class AFortDecoHelper* FortDecoHelper);
+	void BPOnUnEquip();
+	void BPPressTrigger(class AFortDecoHelper* FortDecoHelper);
+	void BPPressSecondaryFire(class AFortDecoHelper* FortDecoHelper);
 
 public:
 	static class UClass* StaticClass()

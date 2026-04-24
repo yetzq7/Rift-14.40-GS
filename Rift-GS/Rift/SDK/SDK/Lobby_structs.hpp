@@ -36,12 +36,12 @@ public:
 DUMPER7_ASSERTS_FLobbyPlayerStateActorInfo;
 
 // ScriptStruct Lobby.LobbyPlayerStateInfoArray
-// 0x0018 (0x00C8 - 0x00B0)
+// 0x0018 (0x0120 - 0x0108)
 struct FLobbyPlayerStateInfoArray final : public FFastArraySerializer
 {
 public:
-	TArray<struct FLobbyPlayerStateActorInfo>     Players;                                           // 0x00B0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	class ALobbyBeaconState*                      ParentState;                                       // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FLobbyPlayerStateActorInfo>     Players;                                           // 0x0108(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class ALobbyBeaconState*                      ParentState;                                       // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
 DUMPER7_ASSERTS_FLobbyPlayerStateInfoArray;
 

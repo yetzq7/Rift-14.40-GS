@@ -18,22 +18,26 @@
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass GrapplingHookGun_AnimBP.GrapplingHookGun_AnimBP_C
-// 0x0198 (0x0400 - 0x0268)
+// 0x0800 (0x0AC0 - 0x02C0)
 class UGrapplingHookGun_AnimBP_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_268[0x8];                                      // 0x0268(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root_7F4939FF463BFA7ADBE0D0BC3CE8B2CF; // 0x0278(0x0020)()
-	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose_32473B4946F7224F26381CAE8FAF7655; // 0x0298(0x0018)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_6A9209514BE4883363DAA19CF4AF7118; // 0x02B0(0x0108)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_FACD2E7D44A066EA8B462DB8C1391182; // 0x03B8(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_54A8C16E43BFCF837D3972B21E76142E; // 0x03D8(0x0020)()
-	bool                                          IsFired;                                           // 0x03F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x02D0(0x0030)()
+	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x0300(0x0018)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0318(0x0108)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0420(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0440(0x0020)()
+	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x0460(0x0650)()
+	bool                                          IsFired;                                           // 0x0AB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GrapplingHookGun_AnimBP(int32 EntryPoint);
 	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()

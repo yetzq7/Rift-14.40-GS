@@ -16,14 +16,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_CameraLens_CrackExit.BP_CameraLens_CrackExit_C
-// 0x0010 (0x0400 - 0x03F0)
+// 0x0010 (0x02F0 - 0x02E0)
 class ABP_CameraLens_CrackExit_C final : public AEmitterCameraLensEffectBase
 {
 public:
-	class UParticleSystemComponent*               Portal;                                            // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-
-public:
-	void UserConstructionScript();
+	class UParticleSystemComponent*               Portal;                                            // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

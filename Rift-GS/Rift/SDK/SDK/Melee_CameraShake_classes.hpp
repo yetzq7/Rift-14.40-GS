@@ -16,8 +16,8 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Melee_CameraShake.Melee_CameraShake_C
-// 0x0000 (0x0160 - 0x0160)
-class UMelee_CameraShake_C final : public UCameraShake
+// 0x0000 (0x0180 - 0x0180)
+class UMelee_CameraShake_C final : public UMatineeCameraShake
 {
 public:
 	static class UClass* StaticClass()

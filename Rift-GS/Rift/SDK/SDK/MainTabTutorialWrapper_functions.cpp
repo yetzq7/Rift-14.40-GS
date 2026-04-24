@@ -16,155 +16,37 @@
 
 SDK_NAMESPACE_START
 
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.ExecuteUbergraph_MainTabTutorialWrapper
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMainTabTutorialWrapper_C::ExecuteUbergraph_MainTabTutorialWrapper(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabTutorialWrapper_C", "ExecuteUbergraph_MainTabTutorialWrapper");
-
-	Params::MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.Tab Reveal Message Closed
-// (BlueprintCallable, BlueprintEvent)
-
-void UMainTabTutorialWrapper_C::Tab_Reveal_Message_Closed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabTutorialWrapper_C", "Tab Reveal Message Closed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.OnStartCallout
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class FName                             TutorialObjectiveName                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ETutorialType                           TutorialType                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMainTabTutorialWrapper_C::OnStartCallout(class FName TutorialObjectiveName, ETutorialType TutorialType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabTutorialWrapper_C", "OnStartCallout");
-
-	Params::MainTabTutorialWrapper_C_OnStartCallout Parms{};
-
-	Parms.TutorialObjectiveName = TutorialObjectiveName;
-	Parms.TutorialType = TutorialType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.OnStopCallout
-// (Event, Protected, BlueprintEvent)
-
-void UMainTabTutorialWrapper_C::OnStopCallout()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabTutorialWrapper_C", "OnStopCallout");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.OnBangStateChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   Count                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMainTabTutorialWrapper_C::OnBangStateChanged(bool bEnabled, int32 Count)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabTutorialWrapper_C", "OnBangStateChanged");
-
-	Params::MainTabTutorialWrapper_C_OnBangStateChanged Parms{};
-
-	Parms.bEnabled = bEnabled;
-	Parms.Count = Count;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.CheckFinishTutorialWrapper
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.TutorialWrapperFinished
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UMainTabTutorialWrapper_C::CheckFinishTutorialWrapper()
+void UMainTabTutorialWrapper_C::TutorialWrapperFinished()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabTutorialWrapper_C", "CheckFinishTutorialWrapper");
+		Func = Class->GetFunction("MainTabTutorialWrapper_C", "TutorialWrapperFinished");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.HandleTutorialCallout
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.SetParentButton
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FName&                      TutorialObjectiveName                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ETutorialType                           TutorialType                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    ParentButton_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMainTabTutorialWrapper_C::HandleTutorialCallout(const class FName& TutorialObjectiveName, ETutorialType TutorialType)
+void UMainTabTutorialWrapper_C::SetParentButton(class UCommonButton* ParentButton_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabTutorialWrapper_C", "HandleTutorialCallout");
+		Func = Class->GetFunction("MainTabTutorialWrapper_C", "SetParentButton");
 
-	Params::MainTabTutorialWrapper_C_HandleTutorialCallout Parms{};
+	Params::MainTabTutorialWrapper_C_SetParentButton Parms{};
 
-	Parms.TutorialObjectiveName = TutorialObjectiveName;
-	Parms.TutorialType = TutorialType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.HasValidData
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const struct FFortUITutorialData&       FortUITutorialData                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UMainTabTutorialWrapper_C::HasValidData(const struct FFortUITutorialData& FortUITutorialData, bool* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabTutorialWrapper_C", "HasValidData");
-
-	Params::MainTabTutorialWrapper_C_HasValidData Parms{};
-
-	Parms.FortUITutorialData = std::move(FortUITutorialData);
+	Parms.ParentButton_0 = ParentButton_0;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
 }
 
 
@@ -192,21 +74,159 @@ void UMainTabTutorialWrapper_C::GetTutorialCalloutData(const struct FFortUITutor
 }
 
 
-// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.SetParentButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.HasValidData
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UCommonButton*                    ParentButton_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FFortUITutorialData&       FortUITutorialData                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UMainTabTutorialWrapper_C::SetParentButton(class UCommonButton* ParentButton_0)
+void UMainTabTutorialWrapper_C::HasValidData(const struct FFortUITutorialData& FortUITutorialData, bool* Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabTutorialWrapper_C", "SetParentButton");
+		Func = Class->GetFunction("MainTabTutorialWrapper_C", "HasValidData");
 
-	Params::MainTabTutorialWrapper_C_SetParentButton Parms{};
+	Params::MainTabTutorialWrapper_C_HasValidData Parms{};
 
-	Parms.ParentButton_0 = ParentButton_0;
+	Parms.FortUITutorialData = std::move(FortUITutorialData);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.HandleTutorialCallout
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FName&                      TutorialObjectiveName                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ETutorialType                           TutorialType                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMainTabTutorialWrapper_C::HandleTutorialCallout(const class FName& TutorialObjectiveName, ETutorialType TutorialType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabTutorialWrapper_C", "HandleTutorialCallout");
+
+	Params::MainTabTutorialWrapper_C_HandleTutorialCallout Parms{};
+
+	Parms.TutorialObjectiveName = TutorialObjectiveName;
+	Parms.TutorialType = TutorialType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.CheckFinishTutorialWrapper
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UMainTabTutorialWrapper_C::CheckFinishTutorialWrapper()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabTutorialWrapper_C", "CheckFinishTutorialWrapper");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.OnStopCallout
+// (Event, Protected, BlueprintEvent)
+
+void UMainTabTutorialWrapper_C::OnStopCallout()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabTutorialWrapper_C", "OnStopCallout");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.OnStartCallout
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class FName                             TutorialObjectiveName                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ETutorialType                           TutorialType                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMainTabTutorialWrapper_C::OnStartCallout(class FName TutorialObjectiveName, ETutorialType TutorialType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabTutorialWrapper_C", "OnStartCallout");
+
+	Params::MainTabTutorialWrapper_C_OnStartCallout Parms{};
+
+	Parms.TutorialObjectiveName = TutorialObjectiveName;
+	Parms.TutorialType = TutorialType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UMainTabTutorialWrapper_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabTutorialWrapper_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UMainTabTutorialWrapper_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabTutorialWrapper_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.OnFinishedToast
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainTabTutorialWrapper_C::OnFinishedToast()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabTutorialWrapper_C", "OnFinishedToast");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.ExecuteUbergraph_MainTabTutorialWrapper
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMainTabTutorialWrapper_C::ExecuteUbergraph_MainTabTutorialWrapper(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabTutorialWrapper_C", "ExecuteUbergraph_MainTabTutorialWrapper");
+
+	Params::MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

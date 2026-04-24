@@ -16,16 +16,13 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_AthenaAlwaysLoadedContentHack.B_AthenaAlwaysLoadedContentHack_C
-// 0x0028 (0x0358 - 0x0330)
+// 0x0028 (0x0248 - 0x0220)
 class AB_AthenaAlwaysLoadedContentHack_C final : public AActor
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<class UObject*>                        HardObjectList;                                    // 0x0338(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                         HardClassList;                                     // 0x0348(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-
-public:
-	void UserConstructionScript();
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0220(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<class UObject*>                        HardObjectList;                                    // 0x0228(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UClass*>                         HardClassList;                                     // 0x0238(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

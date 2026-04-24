@@ -36,20 +36,6 @@ void USocialPanel_TopBarExtension_C::ExecuteUbergraph_SocialPanel_TopBarExtensio
 }
 
 
-// Function SocialPanel_TopBarExtension.SocialPanel_TopBarExtension_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void USocialPanel_TopBarExtension_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_TopBarExtension_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function SocialPanel_TopBarExtension.SocialPanel_TopBarExtension_C.BP_OnUnhovered
 // (Event, Protected, BlueprintEvent)
 
@@ -59,6 +45,20 @@ void USocialPanel_TopBarExtension_C::BP_OnUnhovered()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("SocialPanel_TopBarExtension_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialPanel_TopBarExtension.SocialPanel_TopBarExtension_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void USocialPanel_TopBarExtension_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanel_TopBarExtension_C", "BP_OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

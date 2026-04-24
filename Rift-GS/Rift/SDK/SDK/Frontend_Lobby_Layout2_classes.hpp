@@ -10,26 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Frontend_Lobby_Layout2.Frontend_Lobby_Layout2_C
-// 0x0018 (0x0360 - 0x0348)
+// 0x0000 (0x0238 - 0x0238)
 class AFrontend_Lobby_Layout2_C final : public AFortLevelScriptActor
 {
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class FName                                   CurrentBackgroundLevelName;                        // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   NewBackgroundLevelName;                            // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-public:
-	void ExecuteUbergraph_Frontend_Lobby_Layout2(int32 EntryPoint);
-	void OnBackgroundChanged();
-	void ReceiveBeginPlay();
-
 public:
 	static class UClass* StaticClass()
 	{

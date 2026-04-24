@@ -16,71 +16,80 @@
 
 SDK_NAMESPACE_START
 
-// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.ExecuteUbergraph_ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK
-// (Final, UbergraphFunction)
+// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.ShowHaveNeed
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   HaveNeed                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::ExecuteUbergraph_ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK(int32 EntryPoint)
+void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::ShowHaveNeed(bool* HaveNeed)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "ExecuteUbergraph_ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK");
+		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "ShowHaveNeed");
 
-	Params::ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C_ExecuteUbergraph_ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C_ShowHaveNeed Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (HaveNeed != nullptr)
+		*HaveNeed = Parms.HaveNeed;
 }
 
 
-// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.PreviewEnded
-// (Event, Protected, BlueprintEvent)
+// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.RefreshPreviewData
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::PreviewEnded()
+void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::RefreshPreviewData()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "PreviewEnded");
+		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "RefreshPreviewData");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.PreviewStarted
-// (Event, Protected, BlueprintEvent)
+// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.RefreshVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::PreviewStarted()
+void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::RefreshVisibility()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "PreviewStarted");
+		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "RefreshVisibility");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.HandleDifferentItemOrQuantitySetBP
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// const bool                              IsBeingReset                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.Refresh
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::HandleDifferentItemOrQuantitySetBP(const bool IsBeingReset)
+void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::Refresh()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "HandleDifferentItemOrQuantitySetBP");
+		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "Refresh");
 
-	Params::ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C_HandleDifferentItemOrQuantitySetBP Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.IsBeingReset = IsBeingReset;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.DoDesignTimeRandomization
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::DoDesignTimeRandomization()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "DoDesignTimeRandomization");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -104,80 +113,85 @@ void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::PreConstruct(bool 
 }
 
 
-// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.DoDesignTimeRandomization
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::DoDesignTimeRandomization()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "DoDesignTimeRandomization");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.Refresh
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::Refresh()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "Refresh");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.RefreshVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::RefreshVisibility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "RefreshVisibility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.RefreshPreviewData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::RefreshPreviewData()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "RefreshPreviewData");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.ShowHaveNeed
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.HandleDifferentItemOrQuantitySetBP
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool*                                   HaveNeed                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const bool                              IsBeingReset                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::ShowHaveNeed(bool* HaveNeed)
+void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::HandleDifferentItemOrQuantitySetBP(const bool IsBeingReset)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "ShowHaveNeed");
+		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "HandleDifferentItemOrQuantitySetBP");
 
-	Params::ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C_ShowHaveNeed Parms{};
+	Params::ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C_HandleDifferentItemOrQuantitySetBP Parms{};
+
+	Parms.IsBeingReset = IsBeingReset;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	if (HaveNeed != nullptr)
-		*HaveNeed = Parms.HaveNeed;
+
+// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.PreviewStarted
+// (Event, Protected, BlueprintEvent)
+
+void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::PreviewStarted()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "PreviewStarted");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.PreviewEnded
+// (Event, Protected, BlueprintEvent)
+
+void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::PreviewEnded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "PreviewEnded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.RefreshListEntry
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::RefreshListEntry()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "RefreshListEntry");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK.ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C.ExecuteUbergraph_ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C::ExecuteUbergraph_ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C", "ExecuteUbergraph_ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK");
+
+	Params::ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_C_ExecuteUbergraph_ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -17,35 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function AudioMixer.SynthComponent.SetSubmixSend
-// 0x0010 (0x0010 - 0x0000)
-struct SynthComponent_SetSubmixSend final
-{
-public:
-	class USoundSubmix*                           Submix;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SendLevel;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SynthComponent_SetSubmixSend;
-
-// Function AudioMixer.SynthComponent.SetVolumeMultiplier
-// 0x0004 (0x0004 - 0x0000)
-struct SynthComponent_SetVolumeMultiplier final
-{
-public:
-	float                                         VolumeMultiplier;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SynthComponent_SetVolumeMultiplier;
-
-// Function AudioMixer.SynthComponent.IsPlaying
-// 0x0001 (0x0001 - 0x0000)
-struct SynthComponent_IsPlaying final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SynthComponent_IsPlaying;
-
 // Function AudioMixer.AudioMixerBlueprintLibrary.AddMasterSubmixEffect
 // 0x0010 (0x0010 - 0x0000)
 struct AudioMixerBlueprintLibrary_AddMasterSubmixEffect final
@@ -67,6 +38,19 @@ public:
 };
 DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_AddSourceEffectToPresetChain;
 
+// Function AudioMixer.AudioMixerBlueprintLibrary.AddSubmixEffect
+// 0x0020 (0x0020 - 0x0000)
+struct AudioMixerBlueprintLibrary_AddSubmixEffect final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundSubmix*                           SoundSubmix;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundEffectSubmixPreset*               SubmixEffectPreset;                                // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_AddSubmixEffect;
+
 // Function AudioMixer.AudioMixerBlueprintLibrary.ClearMasterSubmixEffects
 // 0x0008 (0x0008 - 0x0000)
 struct AudioMixerBlueprintLibrary_ClearMasterSubmixEffects final
@@ -76,14 +60,24 @@ public:
 };
 DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_ClearMasterSubmixEffects;
 
+// Function AudioMixer.AudioMixerBlueprintLibrary.ClearSubmixEffects
+// 0x0010 (0x0010 - 0x0000)
+struct AudioMixerBlueprintLibrary_ClearSubmixEffects final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundSubmix*                           SoundSubmix;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_ClearSubmixEffects;
+
 // Function AudioMixer.AudioMixerBlueprintLibrary.GetMagnitudeForFrequencies
 // 0x0030 (0x0030 - 0x0000)
 struct AudioMixerBlueprintLibrary_GetMagnitudeForFrequencies final
 {
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<float>                                 Frequencies;                                       // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<float>                                 Magnitudes;                                        // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<float>                                 Frequencies;                                       // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<float>                                 Magnitudes;                                        // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundSubmix*                           SubmixToAnalyze;                                   // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_GetMagnitudeForFrequencies;
@@ -106,11 +100,68 @@ struct AudioMixerBlueprintLibrary_GetPhaseForFrequencies final
 {
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<float>                                 Frequencies;                                       // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<float>                                 Phases;                                            // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<float>                                 Frequencies;                                       // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<float>                                 Phases;                                            // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundSubmix*                           SubmixToAnalyze;                                   // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_GetPhaseForFrequencies;
+
+// Function AudioMixer.AudioMixerBlueprintLibrary.IsAudioBusActive
+// 0x0018 (0x0018 - 0x0000)
+struct AudioMixerBlueprintLibrary_IsAudioBusActive final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAudioBus*                              AudioBus;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_IsAudioBusActive;
+
+// Function AudioMixer.AudioMixerBlueprintLibrary.MakeFullSpectrumSpectralAnalysisBandSettings
+// 0x0028 (0x0028 - 0x0000)
+struct AudioMixerBlueprintLibrary_MakeFullSpectrumSpectralAnalysisBandSettings final
+{
+public:
+	int32                                         InNumBands;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InMinimumFrequency;                                // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InMaximumFrequency;                                // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InAttackTimeMsec;                                  // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InReleaseTimeMsec;                                 // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> ReturnValue;                             // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_MakeFullSpectrumSpectralAnalysisBandSettings;
+
+// Function AudioMixer.AudioMixerBlueprintLibrary.MakeMusicalSpectralAnalysisBandSettings
+// 0x0028 (0x0028 - 0x0000)
+struct AudioMixerBlueprintLibrary_MakeMusicalSpectralAnalysisBandSettings final
+{
+public:
+	int32                                         InNumSemitones;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMusicalNoteName                              InStartingMusicalNote;                             // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         InStartingOctave;                                  // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InAttackTimeMsec;                                  // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InReleaseTimeMsec;                                 // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> ReturnValue;                             // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_MakeMusicalSpectralAnalysisBandSettings;
+
+// Function AudioMixer.AudioMixerBlueprintLibrary.MakePresetSpectralAnalysisBandSettings
+// 0x0020 (0x0020 - 0x0000)
+struct AudioMixerBlueprintLibrary_MakePresetSpectralAnalysisBandSettings final
+{
+public:
+	EAudioSpectrumBandPresetType                  InBandPresetType;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         InNumBands;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InAttackTimeMsec;                                  // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InReleaseTimeMsec;                                 // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> ReturnValue;                             // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_MakePresetSpectralAnalysisBandSettings;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.PauseRecordingOutput
 // 0x0010 (0x0010 - 0x0000)
@@ -121,6 +172,25 @@ public:
 	class USoundSubmix*                           SubmixToPause;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_PauseRecordingOutput;
+
+// Function AudioMixer.AudioMixerBlueprintLibrary.PrimeSoundCueForPlayback
+// 0x0008 (0x0008 - 0x0000)
+struct AudioMixerBlueprintLibrary_PrimeSoundCueForPlayback final
+{
+public:
+	class USoundCue*                              SoundCue;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_PrimeSoundCueForPlayback;
+
+// Function AudioMixer.AudioMixerBlueprintLibrary.PrimeSoundForPlayback
+// 0x0018 (0x0018 - 0x0000)
+struct AudioMixerBlueprintLibrary_PrimeSoundForPlayback final
+{
+public:
+	class USoundWave*                             SoundWave;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const class USoundWave* LoadedSoundWave, const bool WasCancelled)> OnLoadCompletion; // 0x0008(0x0010)(ConstParm, Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_PrimeSoundForPlayback;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.RemoveMasterSubmixEffect
 // 0x0010 (0x0010 - 0x0000)
@@ -143,6 +213,42 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_RemoveSourceEffectFromPresetChain;
+
+// Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSubmixEffectPreset
+// 0x0018 (0x0018 - 0x0000)
+struct AudioMixerBlueprintLibrary_RemoveSubmixEffectPreset final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundSubmix*                           SoundSubmix;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundEffectSubmixPreset*               SubmixEffectPreset;                                // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_RemoveSubmixEffectPreset;
+
+// Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSubmixEffectPresetAtIndex
+// 0x0018 (0x0018 - 0x0000)
+struct AudioMixerBlueprintLibrary_RemoveSubmixEffectPresetAtIndex final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundSubmix*                           SoundSubmix;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SubmixChainIndex;                                  // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_RemoveSubmixEffectPresetAtIndex;
+
+// Function AudioMixer.AudioMixerBlueprintLibrary.ReplaceSoundEffectSubmix
+// 0x0020 (0x0020 - 0x0000)
+struct AudioMixerBlueprintLibrary_ReplaceSoundEffectSubmix final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USoundSubmix*                           InSoundSubmix;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SubmixChainIndex;                                  // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundEffectSubmixPreset*               SubmixEffectPreset;                                // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_ReplaceSoundEffectSubmix;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.ResumeRecordingOutput
 // 0x0010 (0x0010 - 0x0000)
@@ -168,7 +274,7 @@ public:
 DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_SetBypassSourceEffectChainEntry;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.StartAnalyzingOutput
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct AudioMixerBlueprintLibrary_StartAnalyzingOutput final
 {
 public:
@@ -179,8 +285,20 @@ public:
 	EFFTWindowType                                WindowType;                                        // 0x0012(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         HopSize;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAudioSpectrumType                            SpectrumType;                                      // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_StartAnalyzingOutput;
+
+// Function AudioMixer.AudioMixerBlueprintLibrary.StartAudioBus
+// 0x0010 (0x0010 - 0x0000)
+struct AudioMixerBlueprintLibrary_StartAudioBus final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAudioBus*                              AudioBus;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_StartAudioBus;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.StartRecordingOutput
 // 0x0018 (0x0018 - 0x0000)
@@ -204,6 +322,16 @@ public:
 };
 DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_StopAnalyzingOutput;
 
+// Function AudioMixer.AudioMixerBlueprintLibrary.StopAudioBus
+// 0x0010 (0x0010 - 0x0000)
+struct AudioMixerBlueprintLibrary_StopAudioBus final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAudioBus*                              AudioBus;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_StopAudioBus;
+
 // Function AudioMixer.AudioMixerBlueprintLibrary.StopRecordingOutput
 // 0x0048 (0x0048 - 0x0000)
 struct AudioMixerBlueprintLibrary_StopRecordingOutput final
@@ -220,12 +348,78 @@ public:
 };
 DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_StopRecordingOutput;
 
+// Function AudioMixer.AudioMixerBlueprintLibrary.TrimAudioCache
+// 0x0008 (0x0008 - 0x0000)
+struct AudioMixerBlueprintLibrary_TrimAudioCache final
+{
+public:
+	float                                         InMegabytesToFree;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_TrimAudioCache;
+
+// Function AudioMixer.SynthComponent.SetLowPassFilterEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct SynthComponent_SetLowPassFilterEnabled final
+{
+public:
+	bool                                          InLowPassFilterEnabled;                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SynthComponent_SetLowPassFilterEnabled;
+
+// Function AudioMixer.SynthComponent.SetLowPassFilterFrequency
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponent_SetLowPassFilterFrequency final
+{
+public:
+	float                                         InLowPassFilterFrequency;                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SynthComponent_SetLowPassFilterFrequency;
+
+// Function AudioMixer.SynthComponent.SetSubmixSend
+// 0x0010 (0x0010 - 0x0000)
+struct SynthComponent_SetSubmixSend final
+{
+public:
+	class USoundSubmixBase*                       Submix;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SendLevel;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SynthComponent_SetSubmixSend;
+
+// Function AudioMixer.SynthComponent.SetVolumeMultiplier
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponent_SetVolumeMultiplier final
+{
+public:
+	float                                         VolumeMultiplier;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SynthComponent_SetVolumeMultiplier;
+
+// Function AudioMixer.SynthComponent.IsPlaying
+// 0x0001 (0x0001 - 0x0000)
+struct SynthComponent_IsPlaying final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SynthComponent_IsPlaying;
+
+// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetExternalSubmix
+// 0x0008 (0x0008 - 0x0000)
+struct SubmixEffectDynamicsProcessorPreset_SetExternalSubmix final
+{
+public:
+	class USoundSubmix*                           Submix;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SubmixEffectDynamicsProcessorPreset_SetExternalSubmix;
+
 // Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings
-// 0x0028 (0x0028 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct SubmixEffectDynamicsProcessorPreset_SetSettings final
 {
 public:
-	struct FSubmixEffectDynamicsProcessorSettings InSettings;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSubmixEffectDynamicsProcessorSettings Settings_0;                                        // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SubmixEffectDynamicsProcessorPreset_SetSettings;
 
@@ -257,6 +451,26 @@ public:
 	float                                         DryLevel;                                          // 0x000C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SubmixEffectReverbPreset_SetSettingsWithReverbEffect;
+
+// Function AudioMixer.SubmixEffectReverbFastPreset.SetSettings
+// 0x0038 (0x0038 - 0x0000)
+struct SubmixEffectReverbFastPreset_SetSettings final
+{
+public:
+	struct FSubmixEffectReverbFastSettings        InSettings;                                        // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SubmixEffectReverbFastPreset_SetSettings;
+
+// Function AudioMixer.SubmixEffectReverbFastPreset.SetSettingsWithReverbEffect
+// 0x0010 (0x0010 - 0x0000)
+struct SubmixEffectReverbFastPreset_SetSettingsWithReverbEffect final
+{
+public:
+	const class UReverbEffect*                    InReverbEffect;                                    // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WetLevel;                                          // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DryLevel;                                          // 0x000C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SubmixEffectReverbFastPreset_SetSettingsWithReverbEffect;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

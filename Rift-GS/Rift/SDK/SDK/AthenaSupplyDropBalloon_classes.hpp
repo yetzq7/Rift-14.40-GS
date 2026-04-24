@@ -17,18 +17,18 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass AthenaSupplyDropBalloon.AthenaSupplyDropBalloon_C
-// 0x0040 (0x0C20 - 0x0BE0)
+// 0x0040 (0x0BA8 - 0x0B68)
 class AAthenaSupplyDropBalloon_C final : public AFortAthenaSupplyDropBalloon
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UFortHealthBarComponent*                FortHealthBar;                                     // 0x0BE8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          CrateDestroyed;                                    // 0x0BF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BF1[0x7];                                      // 0x0BF1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	UMulticastDelegateProperty_                   OnBalloonDestroyed;                                // 0x0BF8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class USoundBase*                             BalloonPopSound;                                   // 0x0C08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        BalloonPopFX;                                      // 0x0C10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GE_DamageReduction;                                // 0x0C18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B68(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UFortHealthBarComponent*                FortHealthBar;                                     // 0x0B70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          CrateDestroyed;                                    // 0x0B78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B79[0x7];                                      // 0x0B79(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnBalloonDestroyed;                                // 0x0B80(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class USoundBase*                             BalloonPopSound;                                   // 0x0B90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        BalloonPopFX;                                      // 0x0B98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GE_DamageReduction;                                // 0x0BA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_AthenaSupplyDropBalloon(int32 EntryPoint);
@@ -36,7 +36,6 @@ public:
 	void OnDeathPlayEffects(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
 	void ReceiveBeginPlay();
 	void OnDamageServer(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
-	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

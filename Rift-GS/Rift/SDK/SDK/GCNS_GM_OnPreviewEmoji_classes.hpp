@@ -10,23 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GCNS_GM_OnPreviewEmoji.GCNS_GM_OnPreviewEmoji_C
-// 0x0018 (0x0098 - 0x0080)
-class UGCNS_GM_OnPreviewEmoji_C final : public UFortGameplayCueNotify_Simple
+// 0x0000 (0x01D0 - 0x01D0)
+class UGCNS_GM_OnPreviewEmoji_C final : public UGameplayCueNotify_OnPreviewEmoji
 {
-public:
-	struct FVector                                InitialVelocity;                                   // 0x0080(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Offset;                                            // 0x008C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-public:
-	void OnStartParticleSystemSpawned(class UParticleSystemComponent* SpawnedParticleSysComponent, const struct FGameplayCueParameters& Parameters) const;
-
 public:
 	static class UClass* StaticClass()
 	{

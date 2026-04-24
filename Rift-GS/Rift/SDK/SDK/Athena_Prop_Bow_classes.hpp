@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Athena_Prop_Bow.Athena_Prop_Bow_C
-// 0x0000 (0x0C30 - 0x0C30)
+// 0x0000 (0x0BD8 - 0x0BD8)
 class AAthena_Prop_Bow_C final : public ABuildingProp
 {
 public:

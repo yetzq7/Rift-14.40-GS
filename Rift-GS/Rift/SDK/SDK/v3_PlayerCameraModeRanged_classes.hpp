@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass v3_PlayerCameraModeRanged.v3_PlayerCameraModeRanged_C
-// 0x0000 (0x0C50 - 0x0C50)
+// 0x0000 (0x0DC0 - 0x0DC0)
 class Uv3_PlayerCameraModeRanged_C : public Uv3_PlayerCameraModeBase_C
 {
 public:

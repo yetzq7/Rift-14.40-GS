@@ -18,23 +18,23 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GAB_Spray_Generic.GAB_Spray_Generic_C
-// 0x0070 (0x09F8 - 0x0988)
+// 0x0070 (0x0B80 - 0x0B10)
 class UGAB_Spray_Generic_C final : public UGAB_Emote_Generic_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GAB_Spray_Generic_C;                // 0x0988(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         DecalSize;                                         // 0x0990(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_994[0x4];                                      // 0x0994(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAthenaSprayItemDefinition*             MySpray;                                           // 0x0998(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DecalTraceDistance;                                // 0x09A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9A4[0x4];                                      // 0x09A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UAnimMontage>            DefaultSprayMontage_M;                             // 0x09A8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TSoftObjectPtr<class UAnimMontage>            DefaultSprayMontage_F;                             // 0x09D0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GAB_Spray_Generic_C;                // 0x0B10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         DecalSize;                                         // 0x0B18(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1C[0x4];                                      // 0x0B1C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAthenaSprayItemDefinition*             MySpray;                                           // 0x0B20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DecalTraceDistance;                                // 0x0B28(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B2C[0x4];                                      // 0x0B2C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UAnimMontage>            DefaultSprayMontage_M;                             // 0x0B30(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UAnimMontage>            DefaultSprayMontage_F;                             // 0x0B58(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GAB_Spray_Generic(int32 EntryPoint);
-	void TargetLineTrace(class AFortPawn* ActivatingPawn, bool* HitSomething, struct FVector* Location, struct FVector* Normal);
 	void OnMontageStartedPlaying();
+	void TargetLineTrace(class AFortPawn* ActivatingPawn, bool* HitSomething, struct FVector* Location, struct FVector* Normal);
 	TSoftObjectPtr<class UAnimMontage> GetMontageToPlay(class UFortMontageItemDefinitionBase* EmoteAsset, EFortCustomBodyType BodyType, EFortCustomGender Gender);
 
 public:

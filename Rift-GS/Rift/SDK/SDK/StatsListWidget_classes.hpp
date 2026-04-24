@@ -10,38 +10,38 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
-#include "FortniteUI_classes.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass StatsListWidget.StatsListWidget_C
-// 0x0040 (0x02A8 - 0x0268)
+// 0x0040 (0x02F8 - 0x02B8)
 class UStatsListWidget_C final : public UFortAttributeList_NUI
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0268(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UHorizontalBox*                         HBoxCapMessage;                                    // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             ScrollBox_0;                                       // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           StatsList;                                         // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FMargin                                RowMargin;                                         // 0x0288(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	int32                                         ClampedAttributeCount;                             // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29C[0x4];                                      // 0x029C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           List_Item_Time_Handle;                             // 0x02A0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UHorizontalBox*                         HBoxCapMessage;                                    // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             ScrollBox_0;                                       // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           StatsList;                                         // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FMargin                                RowMargin;                                         // 0x02D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	int32                                         ClampedAttributeCount;                             // 0x02E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2EC[0x4];                                      // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           List_Item_Time_Handle;                             // 0x02F0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_StatsListWidget(int32 EntryPoint);
-	void OnRemoveShownAttributeListItem(class UFortAttributeListItem_NUI* AttributeListItemWidget, int32 AtIndex);
-	void OnAddShownAttributeListItem(class UFortAttributeListItem_NUI* AttributeListItemWidget);
-	void OnClearShownAttributes();
-	void ToggleClampedValueMessage(bool inShow);
-	void AdjustClampCount(class UFortAttributeListItem_NUI* Widget, bool Add);
-	void Update();
-	void Trigger_Update_Anim();
 	void Trigger_Initial_Reset();
+	void Trigger_Update_Anim();
+	void Update();
+	void AdjustClampCount(class UFortAttributeListItem_NUI* Widget, bool Add);
+	void ToggleClampedValueMessage(bool inShow);
+	void OnClearShownAttributes();
+	void OnAddShownAttributeListItem(class UFortAttributeListItem_NUI* AttributeListItemWidget);
+	void OnRemoveShownAttributeListItem(class UFortAttributeListItem_NUI* AttributeListItemWidget, int32 AtIndex);
+	void ExecuteUbergraph_StatsListWidget(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

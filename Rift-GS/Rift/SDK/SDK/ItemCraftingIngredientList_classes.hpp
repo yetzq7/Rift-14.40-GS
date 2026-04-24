@@ -18,34 +18,35 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ItemCraftingIngredientList.ItemCraftingIngredientList_C
-// 0x0020 (0x02D8 - 0x02B8)
+// 0x0020 (0x0338 - 0x0318)
 class UItemCraftingIngredientList_C final : public UFortItemQuantityListBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UVerticalBox*                           IngredientsList;                                   // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortItem*                              ItemRepresented;                                   // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortBrushSize                                IconSize;                                          // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_2D1[0x3];                                      // 0x02D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Quantity;                                          // 0x02D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UVerticalBox*                           IngredientsList;                                   // 0x0320(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortItem*                              ItemRepresented;                                   // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFortBrushSize                                IconSize;                                          // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_331[0x3];                                      // 0x0331(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Quantity;                                          // 0x0334(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_ItemCraftingIngredientList(int32 EntryPoint);
-	void Construct();
-	void Destruct();
-	void AddListEntry(class UFortItemQuantityListEntryBase* ListEntry);
-	void SetItemToRepresent(class UFortItem* Item, int32 ItemQuantity);
-	void Refresh();
-	void HandleWorldItemListChanged(TArray<class UFortWorldItem*>& ItemsAdded, TArray<class UFortWorldItem*>& ItemsRemoved);
-	void RefreshInventoryTracking();
-	void HandleItemChanged(bool ItemChanged, bool AmmoChanged, bool IngredientsChanged);
-	void ItemNeedsInventoryTracking(class UFortItem* Item, bool* NeedsTracking);
-	void SetItemToCompare(class UFortItem* ItemToCompare);
-	void GetIngredients(class UObject* Item, TArray<struct FFortItemQuantityPair>* ReturnIngredients);
-	void HandleCraftItemFailed(EFortCraftFailCause FailCause);
-	void UnbindDelegates();
-	void Bind_Delegates();
+	void RefreshItemToRepresent();
 	void SetItemQuantity(int32 ItemQuantity);
+	void Bind_Delegates();
+	void UnbindDelegates();
+	void HandleCraftItemFailed(EFortCraftFailCause FailCause);
+	void GetIngredients(class UObject* Item, TArray<struct FFortItemQuantityPair>* ReturnIngredients);
+	void SetItemToCompare(class UFortItem* ItemToCompare);
+	void ItemNeedsInventoryTracking(class UFortItem* Item, bool* NeedsTracking);
+	void HandleItemChanged(bool ItemChanged, bool AmmoChanged, bool IngredientsChanged);
+	void RefreshInventoryTracking();
+	void HandleWorldItemListChanged(TArray<class UFortWorldItem*>& ItemsAdded, TArray<class UFortWorldItem*>& ItemsRemoved);
+	void Refresh();
+	void SetItemToRepresent(class UFortItem* Item, int32 ItemQuantity);
+	void AddListEntry(class UFortItemQuantityListEntryBase* ListEntry);
+	void Destruct();
+	void Construct();
+	void ExecuteUbergraph_ItemCraftingIngredientList(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

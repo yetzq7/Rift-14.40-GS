@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Announce_Storm2018Cine.Announce_Storm2018Cine_C
-// 0x0000 (0x03C8 - 0x03C8)
+// 0x0000 (0x02C8 - 0x02C8)
 class AAnnounce_Storm2018Cine_C final : public AAnnounce_EventCine_C
 {
 public:

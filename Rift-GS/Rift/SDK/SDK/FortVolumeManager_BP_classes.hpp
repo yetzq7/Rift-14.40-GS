@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass FortVolumeManager_BP.FortVolumeManager_BP_C
-// 0x0000 (0x0520 - 0x0520)
+// 0x0000 (0x0570 - 0x0570)
 class AFortVolumeManager_BP_C final : public AFortVolumeManager
 {
 public:

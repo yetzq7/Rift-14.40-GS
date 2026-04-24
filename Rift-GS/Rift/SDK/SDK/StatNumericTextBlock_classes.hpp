@@ -10,32 +10,32 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
+#include "FortniteUI_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CommonUI_classes.hpp"
-#include "FortniteUI_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass StatNumericTextBlock.StatNumericTextBlock_C
-// 0x0028 (0x0260 - 0x0238)
+// 0x0028 (0x02B0 - 0x0288)
 class UStatNumericTextBlock_C final : public UCommonUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 ComparisonArrowImage;                              // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonNumericTextBlock*                NumericText;                                       // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	EFortBuffState                                Buff_State;                                        // 0x0250(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 Numeric_Text_Style;                                // 0x0258(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 ComparisonArrowImage;                              // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonNumericTextBlock*                NumericText;                                       // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	EFortBuffState                                Buff_State;                                        // 0x02A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A1[0x7];                                      // 0x02A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 Numeric_Text_Style;                                // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_StatNumericTextBlock(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
-	void Construct();
-	void UpdateComparison();
 	void SetComparisonState(EFortBuffState Buff_State_0);
+	void UpdateComparison();
+	void Construct();
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_StatNumericTextBlock(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

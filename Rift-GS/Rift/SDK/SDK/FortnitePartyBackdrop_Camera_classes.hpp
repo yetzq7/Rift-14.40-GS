@@ -10,30 +10,30 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C
-// 0x0050 (0x08D0 - 0x0880)
+// 0x0050 (0x0830 - 0x07E0)
 class AFortnitePartyBackdrop_Camera_C final : public AFortCameraBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0880(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UArrowComponent*                        Arrow;                                             // 0x0888(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             SavedTransform;                                    // 0x0890(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
-	bool                                          Active;                                            // 0x08C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7D8[0x8];                                      // 0x07D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UArrowComponent*                        Arrow;                                             // 0x07E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             SavedTransform;                                    // 0x07F0(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
+	bool                                          Active;                                            // 0x0820(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void ExecuteUbergraph_FortnitePartyBackdrop_Camera(int32 EntryPoint);
-	void ManualActivate();
-	void OnActivated();
-	void OnDeactivated();
+	void OnActivated(class AFortPlayerController* PlayerController);
+	void OnDeactivated(class AFortPlayerController* PlayerController);
 	void Reset_Location();
-	void UserConstructionScript();
+	void ManualActivate();
+	void ExecuteUbergraph_FortnitePartyBackdrop_Camera(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

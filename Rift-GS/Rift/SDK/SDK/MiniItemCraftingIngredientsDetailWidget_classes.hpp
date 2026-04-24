@@ -17,19 +17,19 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass MiniItemCraftingIngredientsDetailWidget.MiniItemCraftingIngredientsDetailWidget_C
-// 0x0010 (0x0290 - 0x0280)
+// 0x0010 (0x02F0 - 0x02E0)
 class UMiniItemCraftingIngredientsDetailWidget_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMiniCraftingIngredientList_C*          MiniCraftingIngredientList;                        // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMiniCraftingIngredientList_C*          MiniCraftingIngredientList;                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_MiniItemCraftingIngredientsDetailWidget(int32 EntryPoint);
-	void Construct();
-	void HandlePostDifferentItemToCompareWithSet();
-	void HandlePostDifferentItemToDetailSet();
 	void GetRecipeItemQuantityPairs(class UFortItem* Item, TArray<struct FFortItemQuantityPair>* Pairs);
+	void HandlePostDifferentItemToDetailSet();
+	void HandlePostDifferentItemToCompareWithSet();
+	void Construct();
+	void ExecuteUbergraph_MiniItemCraftingIngredientsDetailWidget(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

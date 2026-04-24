@@ -16,6 +16,20 @@
 
 SDK_NAMESPACE_START
 
+// Function InviteEventTitle.InviteEventTitle_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UInviteEventTitle_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InviteEventTitle_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function InviteEventTitle.InviteEventTitle_C.ExecuteUbergraph_InviteEventTitle
 // (Final, UbergraphFunction)
 // Parameters:
@@ -33,20 +47,6 @@ void UInviteEventTitle_C::ExecuteUbergraph_InviteEventTitle(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function InviteEventTitle.InviteEventTitle_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UInviteEventTitle_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InviteEventTitle_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

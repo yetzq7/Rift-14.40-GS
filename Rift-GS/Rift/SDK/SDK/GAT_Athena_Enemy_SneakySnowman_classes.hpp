@@ -17,12 +17,12 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GAT_Athena_Enemy_SneakySnowman.GAT_Athena_Enemy_SneakySnowman_C
-// 0x0010 (0x0960 - 0x0950)
+// 0x0010 (0x0AD0 - 0x0AC0)
 class UGAT_Athena_Enemy_SneakySnowman_C final : public UGAT_TriggeredAbility_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_Athena_Enemy_SneakySnowman_C;   // 0x0950(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0958(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_Athena_Enemy_SneakySnowman_C;   // 0x0AC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0AC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GAT_Athena_Enemy_SneakySnowman(int32 EntryPoint);

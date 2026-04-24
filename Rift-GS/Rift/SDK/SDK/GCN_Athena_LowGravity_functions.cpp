@@ -36,48 +36,6 @@ void AGCN_Athena_LowGravity_C::ExecuteUbergraph_GCN_Athena_LowGravity(int32 Entr
 }
 
 
-// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.PlayExpirationSound
-// (BlueprintCallable, BlueprintEvent)
-
-void AGCN_Athena_LowGravity_C::PlayExpirationSound()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "PlayExpirationSound");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.ClearExpireTell
-// (BlueprintCallable, BlueprintEvent)
-
-void AGCN_Athena_LowGravity_C::ClearExpireTell()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "ClearExpireTell");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.ExpireTell
-// (BlueprintCallable, BlueprintEvent)
-
-void AGCN_Athena_LowGravity_C::ExpireTell()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "ExpireTell");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -112,6 +70,20 @@ void AGCN_Athena_LowGravity_C::ReceiveTick(float DeltaSeconds)
 }
 
 
+// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.PlayExpirationSound
+// (BlueprintCallable, BlueprintEvent)
+
+void AGCN_Athena_LowGravity_C::PlayExpirationSound()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "PlayExpirationSound");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.K2_HandleGameplayCue
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -136,15 +108,29 @@ void AGCN_Athena_LowGravity_C::K2_HandleGameplayCue(class AActor* MyTarget, EGam
 }
 
 
-// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.ClearExpireTell
+// (BlueprintCallable, BlueprintEvent)
 
-void AGCN_Athena_LowGravity_C::UserConstructionScript()
+void AGCN_Athena_LowGravity_C::ClearExpireTell()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "UserConstructionScript");
+		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "ClearExpireTell");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.ExpireTell
+// (BlueprintCallable, BlueprintEvent)
+
+void AGCN_Athena_LowGravity_C::ExpireTell()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Athena_LowGravity_C", "ExpireTell");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

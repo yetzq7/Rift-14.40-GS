@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Athena_GameMode.Athena_GameMode_C
-// 0x0008 (0x1190 - 0x1188)
-class AAthena_GameMode_C final : public AFortGameModeAthena
+// 0x0008 (0x1598 - 0x1590)
+class AAthena_GameMode_C final : public AFortGameModeBR
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x1188(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x1590(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

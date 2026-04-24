@@ -1,8 +1,194 @@
-﻿  dllmain.cpp
-C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(254878,9): warning C4005: 'DUMPER7_ASSERTS_FrontEnd_C_ExecuteUbergraph_FrontEnd': macro redefinition
+﻿  Basic.cpp
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(253302,9): warning C4005: 'DUMPER7_ASSERTS_M_MED_HighTower_Tapas_AnimBP_C_ExecuteUbergraph_M_MED_HighTower_Tapas_AnimBP': macro redefinition
+  (compiling source file 'SDK/SDK/Basic.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(238272,9):
+      see previous definition of 'DUMPER7_ASSERTS_M_MED_HighTower_Tapas_AnimBP_C_ExecuteUbergraph_M_MED_HighTower_Tapas_AnimBP'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343309,9): warning C4005: 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector': macro redefinition
+  (compiling source file 'SDK/SDK/Basic.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(309177,9):
+      see previous definition of 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343341,9): warning C4005: 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector': macro redefinition
+  (compiling source file 'SDK/SDK/Basic.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343309,9):
+      see previous definition of 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(3858,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'SDK/SDK/Basic.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(3858,2): warning C4369: 'SDK::ESkinCacheUsage':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'SDK/SDK/Basic.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(4334,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'SDK/SDK/Basic.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(4334,2): warning C4369: 'SDK::ESoundWaveLoadingBehavior':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'SDK/SDK/Basic.cpp')
+  
+  CoreUObject_functions.cpp
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(253302,9): warning C4005: 'DUMPER7_ASSERTS_M_MED_HighTower_Tapas_AnimBP_C_ExecuteUbergraph_M_MED_HighTower_Tapas_AnimBP': macro redefinition
+  (compiling source file 'SDK/SDK/CoreUObject_functions.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(238272,9):
+      see previous definition of 'DUMPER7_ASSERTS_M_MED_HighTower_Tapas_AnimBP_C_ExecuteUbergraph_M_MED_HighTower_Tapas_AnimBP'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343309,9): warning C4005: 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector': macro redefinition
+  (compiling source file 'SDK/SDK/CoreUObject_functions.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(309177,9):
+      see previous definition of 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343341,9): warning C4005: 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector': macro redefinition
+  (compiling source file 'SDK/SDK/CoreUObject_functions.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343309,9):
+      see previous definition of 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector'
+  
+  Engine_functions.cpp
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(253302,9): warning C4005: 'DUMPER7_ASSERTS_M_MED_HighTower_Tapas_AnimBP_C_ExecuteUbergraph_M_MED_HighTower_Tapas_AnimBP': macro redefinition
+  (compiling source file 'SDK/SDK/Engine_functions.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(238272,9):
+      see previous definition of 'DUMPER7_ASSERTS_M_MED_HighTower_Tapas_AnimBP_C_ExecuteUbergraph_M_MED_HighTower_Tapas_AnimBP'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343309,9): warning C4005: 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector': macro redefinition
+  (compiling source file 'SDK/SDK/Engine_functions.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(309177,9):
+      see previous definition of 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343341,9): warning C4005: 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector': macro redefinition
+  (compiling source file 'SDK/SDK/Engine_functions.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343309,9):
+      see previous definition of 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(3858,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'SDK/SDK/Engine_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(3858,2): warning C4369: 'SDK::ESkinCacheUsage':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'SDK/SDK/Engine_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(4334,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'SDK/SDK/Engine_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(4334,2): warning C4369: 'SDK::ESoundWaveLoadingBehavior':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'SDK/SDK/Engine_functions.cpp')
+  
+  FortniteGame_functions.cpp
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(253302,9): warning C4005: 'DUMPER7_ASSERTS_M_MED_HighTower_Tapas_AnimBP_C_ExecuteUbergraph_M_MED_HighTower_Tapas_AnimBP': macro redefinition
+  (compiling source file 'SDK/SDK/FortniteGame_functions.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(238272,9):
+      see previous definition of 'DUMPER7_ASSERTS_M_MED_HighTower_Tapas_AnimBP_C_ExecuteUbergraph_M_MED_HighTower_Tapas_AnimBP'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343309,9): warning C4005: 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector': macro redefinition
+  (compiling source file 'SDK/SDK/FortniteGame_functions.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(309177,9):
+      see previous definition of 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343341,9): warning C4005: 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector': macro redefinition
+  (compiling source file 'SDK/SDK/FortniteGame_functions.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343309,9):
+      see previous definition of 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(3858,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'SDK/SDK/FortniteGame_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(3858,2): warning C4369: 'SDK::ESkinCacheUsage':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'SDK/SDK/FortniteGame_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(4334,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'SDK/SDK/FortniteGame_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(4334,2): warning C4369: 'SDK::ESoundWaveLoadingBehavior':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'SDK/SDK/FortniteGame_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\FortniteGame_structs.hpp(4246,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'SDK/SDK/FortniteGame_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\FortniteGame_structs.hpp(4246,2): warning C4369: 'SDK::ELootElementType':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'SDK/SDK/FortniteGame_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\FortniteGame_structs.hpp(7632,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'SDK/SDK/FortniteGame_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\FortniteGame_structs.hpp(7632,2): warning C4369: 'SDK::EFortMinigameClassSlot':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'SDK/SDK/FortniteGame_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Niagara_structs.hpp(288,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'SDK/SDK/FortniteGame_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Niagara_structs.hpp(288,2): warning C4369: 'SDK::ENDISkeletalMesh_SkinningMode':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'SDK/SDK/FortniteGame_functions.cpp')
+  
+  GameplayAbilities_functions.cpp
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(253302,9): warning C4005: 'DUMPER7_ASSERTS_M_MED_HighTower_Tapas_AnimBP_C_ExecuteUbergraph_M_MED_HighTower_Tapas_AnimBP': macro redefinition
+  (compiling source file 'SDK/SDK/GameplayAbilities_functions.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(238272,9):
+      see previous definition of 'DUMPER7_ASSERTS_M_MED_HighTower_Tapas_AnimBP_C_ExecuteUbergraph_M_MED_HighTower_Tapas_AnimBP'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343309,9): warning C4005: 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector': macro redefinition
+  (compiling source file 'SDK/SDK/GameplayAbilities_functions.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(309177,9):
+      see previous definition of 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343341,9): warning C4005: 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector': macro redefinition
+  (compiling source file 'SDK/SDK/GameplayAbilities_functions.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343309,9):
+      see previous definition of 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(3858,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'SDK/SDK/GameplayAbilities_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(3858,2): warning C4369: 'SDK::ESkinCacheUsage':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'SDK/SDK/GameplayAbilities_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(4334,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'SDK/SDK/GameplayAbilities_functions.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(4334,2): warning C4369: 'SDK::ESoundWaveLoadingBehavior':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'SDK/SDK/GameplayAbilities_functions.cpp')
+  
+  dllmain.cpp
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(253302,9): warning C4005: 'DUMPER7_ASSERTS_M_MED_HighTower_Tapas_AnimBP_C_ExecuteUbergraph_M_MED_HighTower_Tapas_AnimBP': macro redefinition
   (compiling source file 'dllmain.cpp')
-      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(250905,9):
-      see previous definition of 'DUMPER7_ASSERTS_FrontEnd_C_ExecuteUbergraph_FrontEnd'
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(238272,9):
+      see previous definition of 'DUMPER7_ASSERTS_M_MED_HighTower_Tapas_AnimBP_C_ExecuteUbergraph_M_MED_HighTower_Tapas_AnimBP'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343309,9): warning C4005: 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector': macro redefinition
+  (compiling source file 'dllmain.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(309177,9):
+      see previous definition of 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343341,9): warning C4005: 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector': macro redefinition
+  (compiling source file 'dllmain.cpp')
+      C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\Assertions.inl(343309,9):
+      see previous definition of 'DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector'
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(3858,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'dllmain.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(3858,2): warning C4369: 'SDK::ESkinCacheUsage':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'dllmain.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(4334,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'dllmain.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Engine_structs.hpp(4334,2): warning C4369: 'SDK::ESoundWaveLoadingBehavior':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'dllmain.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\FortniteGame_structs.hpp(4246,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'dllmain.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\FortniteGame_structs.hpp(4246,2): warning C4369: 'SDK::ELootElementType':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'dllmain.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\FortniteGame_structs.hpp(7632,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'dllmain.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\FortniteGame_structs.hpp(7632,2): warning C4369: 'SDK::EFortMinigameClassSlot':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'dllmain.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Niagara_structs.hpp(288,2): warning C4309: 'initializing': truncation of constant value
+  (compiling source file 'dllmain.cpp')
+  
+C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\Niagara_structs.hpp(288,2): warning C4369: 'SDK::ENDISkeletalMesh_SkinningMode':  enumerator value '256' cannot be represented as 'unsigned char', value is '256'
+  (compiling source file 'dllmain.cpp')
   
 C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\HeadMountedDisplay_structs.hpp(26,2): warning C4309: 'initializing': truncation of constant value
   (compiling source file 'dllmain.cpp')
@@ -11,7 +197,7 @@ C:\Users\yetza\Desktop\GITHUB-REPOS\Rift-14.40-GS\Rift-GS\Rift\SDK\SDK\HeadMount
   (compiling source file 'dllmain.cpp')
   
   Generating code
-  31 of 305 functions (10.2%) were compiled, the rest were copied from previous compilation.
+  19 of 305 functions ( 6.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     6 functions had inline decision re-evaluated but remain unchanged
   Finished generating code

@@ -27,6 +27,15 @@ public:
 };
 DUMPER7_ASSERTS_TimeSynthComponent_AddQuantizationEventDelegate;
 
+// Function TimeSynth.TimeSynthComponent.HasActiveClips
+// 0x0001 (0x0001 - 0x0000)
+struct TimeSynthComponent_HasActiveClips final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TimeSynthComponent_HasActiveClips;
+
 // Function TimeSynth.TimeSynthComponent.PlayClip
 // 0x0020 (0x0020 - 0x0000)
 struct TimeSynthComponent_PlayClip final
@@ -190,12 +199,21 @@ public:
 };
 DUMPER7_ASSERTS_TimeSynthComponent_GetEnvelopeFollowerValue;
 
+// Function TimeSynth.TimeSynthComponent.GetMaxActiveClipLimit
+// 0x0004 (0x0004 - 0x0000)
+struct TimeSynthComponent_GetMaxActiveClipLimit final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TimeSynthComponent_GetMaxActiveClipLimit;
+
 // Function TimeSynth.TimeSynthComponent.GetSpectralData
 // 0x0010 (0x0010 - 0x0000)
 struct TimeSynthComponent_GetSpectralData final
 {
 public:
-	TArray<struct FTimeSynthSpectralData>         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	TArray<struct FTimeSynthSpectralData>         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_TimeSynthComponent_GetSpectralData;
 

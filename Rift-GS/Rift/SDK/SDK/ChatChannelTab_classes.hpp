@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ChatChannelTab.ChatChannelTab_C
-// 0x0000 (0x0B40 - 0x0B40)
+// 0x0000 (0x0BB0 - 0x0BB0)
 class UChatChannelTab_C final : public USocialChatChannelTab
 {
 public:

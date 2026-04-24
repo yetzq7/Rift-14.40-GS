@@ -36,6 +36,30 @@ void AB_Prj_Athena_GiftBox_C::ExecuteUbergraph_B_Prj_Athena_GiftBox(int32 EntryP
 }
 
 
+// Function B_Prj_Athena_GiftBox.B_Prj_Athena_GiftBox_C.BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class AFortWaterBodyActor*              WaterBody                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortWaterInteractionComponent*   WaterInteractionComponent_0                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsFirstBody                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AB_Prj_Athena_GiftBox_C::BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_GiftBox_C", "BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature");
+
+	Params::B_Prj_Athena_GiftBox_C_BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature Parms{};
+
+	Parms.WaterBody = WaterBody;
+	Parms.WaterInteractionComponent_0 = WaterInteractionComponent_0;
+	Parms.bIsFirstBody = bIsFirstBody;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_Prj_Athena_GiftBox.B_Prj_Athena_GiftBox_C.Play Quest Success FX
 // (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 
@@ -65,7 +89,7 @@ void AB_Prj_Athena_GiftBox_C::OnBeginPlayQuestCheck()
 
 
 // Function B_Prj_Athena_GiftBox.B_Prj_Athena_GiftBox_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -169,8 +193,8 @@ void AB_Prj_Athena_GiftBox_C::ReceiveHit(class UPrimitiveComponent* MyComp, clas
 // Function B_Prj_Athena_GiftBox.B_Prj_Athena_GiftBox_C.OnExploded
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference)
+// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 
 void AB_Prj_Athena_GiftBox_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
 {
@@ -246,9 +270,9 @@ void AB_Prj_Athena_GiftBox_C::SetBaseDestination(const struct FHitResult& Hit)
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FVector&                   ReferenceLocation                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const TArray<class UClass*>&            BGAClassArray                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>&                 BGALocationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FRotator>&                BGARotationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const TArray<class UClass*>&            BGAClassArray                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// TArray<struct FVector>&                 BGALocationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// TArray<struct FRotator>&                BGARotationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
 void AB_Prj_Athena_GiftBox_C::CreateBaseSection(const struct FVector& ReferenceLocation, const TArray<class UClass*>& BGAClassArray, TArray<struct FVector>& BGALocationArray, TArray<struct FRotator>& BGARotationArray)
 {
@@ -274,10 +298,10 @@ void AB_Prj_Athena_GiftBox_C::CreateBaseSection(const struct FVector& ReferenceL
 // Function B_Prj_Athena_GiftBox.B_Prj_Athena_GiftBox_C.ClearAndBuild
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FVector>&                 ClearedGridCells                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// const TArray<class UClass*>&            BGAClassArray                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>&                 BGALocationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FRotator>&                BGARotationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector>&                 ClearedGridCells                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<class UClass*>&            BGAClassArray                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// TArray<struct FVector>&                 BGALocationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// TArray<struct FRotator>&                BGARotationArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 // bool                                    DestroyFloorsQuickly                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AB_Prj_Athena_GiftBox_C::ClearAndBuild(TArray<struct FVector>& ClearedGridCells, const TArray<class UClass*>& BGAClassArray, TArray<struct FVector>& BGALocationArray, TArray<struct FRotator>& BGARotationArray, bool DestroyFloorsQuickly)
@@ -326,7 +350,7 @@ void AB_Prj_Athena_GiftBox_C::SpawnContents(const struct FVector& ReferenceLocat
 // Function B_Prj_Athena_GiftBox.B_Prj_Athena_GiftBox_C.HandleProps
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class AActor*>&                  Array                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class AActor*>&                  Array                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
 void AB_Prj_Athena_GiftBox_C::HandleProps(TArray<class AActor*>& Array)
 {
@@ -384,7 +408,7 @@ void AB_Prj_Athena_GiftBox_C::CallDynamicBuilder(class UClass* Class_0, const st
 // Function B_Prj_Athena_GiftBox.B_Prj_Athena_GiftBox_C.ClearOnly
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FVector>&                 ClearedGridCells                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector>&                 ClearedGridCells                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 // bool                                    DestroyFloorsQuickly                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AB_Prj_Athena_GiftBox_C::ClearOnly(TArray<struct FVector>& ClearedGridCells, bool DestroyFloorsQuickly)

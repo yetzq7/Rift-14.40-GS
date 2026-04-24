@@ -11,49 +11,62 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_Prj_Athena_ShockGrenade.B_Prj_Athena_ShockGrenade_C
-// 0x0170 (0x0908 - 0x0798)
+// 0x01A8 (0x0A20 - 0x0878)
 class AB_Prj_Athena_ShockGrenade_C final : public AFortProjectileBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0798(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        BeepTimer;                                         // 0x07A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               Fuse_Particle;                                     // 0x07A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 ShockGrenadeMesh;                                  // 0x07B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class URotatingMovementComponent*             RotatingMovement;                                  // 0x07B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        GrenadeFuse_AudioComponent;                        // 0x07C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               Effect_Distance;                                   // 0x07C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        P_Explosion;                                       // 0x07D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Cue_DistantSound;                                  // 0x07D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Cue_CloseSound;                                    // 0x07E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Cue_GrenadeFuseSound;                              // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                HitLocation;                                       // 0x07F0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7FC[0x4];                                      // 0x07FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPawn*                              Target;                                            // 0x0800(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Cue_BeepSound;                                     // 0x0808(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                HitNormal;                                         // 0x0810(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          StuckVehicle;                                      // 0x081C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_81D[0x3];                                      // 0x081D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class AEnemyPawn_Parent_C*                    DeimosPawn;                                        // 0x0820(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<EObjectTypeQuery>                      DestroyObjectTypes;                                // 0x0828(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FScalableFloat                         DestroyDistance;                                   // 0x0838(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         ShouldDestroy;                                     // 0x0858(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         LaunchVelocity;                                    // 0x0878(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         ExplodeDelay;                                      // 0x0898(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         EnemiesTakeFallDamage;                             // 0x08B8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         AllPlayersTakeFallDamage;                          // 0x08D8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class USoundBase*                             Cue_StopSound;                                     // 0x08F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ChestLootTableName;                                // 0x0900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0878(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        BeepTimer;                                         // 0x0880(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               Fuse_Particle;                                     // 0x0888(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 ShockGrenadeMesh;                                  // 0x0890(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class URotatingMovementComponent*             RotatingMovement;                                  // 0x0898(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        GrenadeFuse_AudioComponent;                        // 0x08A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               Effect_Distance;                                   // 0x08A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        P_Explosion;                                       // 0x08B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Cue_DistantSound;                                  // 0x08B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Cue_CloseSound;                                    // 0x08C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Cue_GrenadeFuseSound;                              // 0x08C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                HitLocation;                                       // 0x08D0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8DC[0x4];                                      // 0x08DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPawn*                              Target;                                            // 0x08E0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Cue_BeepSound;                                     // 0x08E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                HitNormal;                                         // 0x08F0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          StuckVehicle;                                      // 0x08FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_8FD[0x3];                                      // 0x08FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class AEnemyPawn_Parent_Deimos_C*             DeimosPawn;                                        // 0x0900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<EObjectTypeQuery>                      DestroyObjectTypes;                                // 0x0908(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FScalableFloat                         DestroyDistance;                                   // 0x0918(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         ShouldDestroy;                                     // 0x0938(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         LaunchVelocity;                                    // 0x0958(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         ExplodeDelay;                                      // 0x0978(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         EnemiesTakeFallDamage;                             // 0x0998(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         AllPlayersTakeFallDamage;                          // 0x09B8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class USoundBase*                             Cue_StopSound;                                     // 0x09D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ChestLootTableName;                                // 0x09E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           FeedbackCue;                                       // 0x09E8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          HitWater;                                          // 0x09F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9F1[0x7];                                      // 0x09F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             Water_Debris_Explosion;                            // 0x09F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        P_WaterExplosion;                                  // 0x0A00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortAthenaVehicle*                     TargetVehicle;                                     // 0x0A08(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GE_KnockbackStatus;                                // 0x0A10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           Tag_BuildingPhysocs;                               // 0x0A18(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_Prj_Athena_ShockGrenade(int32 EntryPoint);
+	void QuestHitPlayer();
+	void LaunchBuldingActors(class AActor* Actor);
+	void LaunchPlayerVehicle();
+	void BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody);
 	void BndEvt__ProjectileMovementComponent_K2Node_ComponentBoundEvent_1_OnProjectileBounceDelegate__DelegateSignature(const struct FHitResult& ImpactResult, const struct FVector& ImpactVelocity);
 	void OnTouched(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FHitResult& HitResult, bool bIsOverlap);
 	void LaunchDeimos();
@@ -64,6 +77,7 @@ public:
 	void ReceiveBeginPlay();
 	void UserConstructionScript();
 	void Handle_Pawn_Detach_RC();
+	struct FVector CalculateLaunchVel(class AActor* Target_0);
 
 public:
 	static class UClass* StaticClass()

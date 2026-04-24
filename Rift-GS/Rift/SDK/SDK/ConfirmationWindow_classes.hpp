@@ -10,91 +10,36 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
-#include "FortniteGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ConfirmationWindow.ConfirmationWindow_C
-// 0x0230 (0x0578 - 0x0348)
-class UConfirmationWindow_C final : public UFortActivatablePanel
+// 0x0028 (0x0650 - 0x0628)
+class UConfirmationWindow_C final : public UFortConfirmationWindow
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UHorizontalBox*                         ButtonBox;                                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcher*                  ContentSwitcher;                                   // 0x0358(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Description;                                       // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             DescriptionScroll;                                 // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       HoverDescription;                                  // 0x0370(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNamedSlot*                             LeftOptionalWidget;                                // 0x0378(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULightbox_C*                            Lightbox_NUI;                                      // 0x0380(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         MainContentHorizontalBox;                          // 0x0388(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 MainIcon;                                          // 0x0390(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNamedSlot*                             OptionalWidget;                                    // 0x0398(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               RootOverlay;                                       // 0x03A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           SelectableConfirmButtons;                          // 0x03A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          TapToCloseZone;                                    // 0x03B0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Title;                                             // 0x03B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 WaitThrobber;                                      // 0x03C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FFortDialogDescription_NUI             ConfirmationDescription;                           // 0x03C8(0x0120)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class UIconTextButton_C*>              ConfirmButtons;                                    // 0x04E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UIconTextButton_C*                      DeclineButton;                                     // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           ResultNames;                                       // 0x0500(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                          bShowingConfirmation;                              // 0x0510(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_511[0x3];                                      // 0x0511(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMargin                                ButtonBoxPadding;                                  // 0x0514(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FMargin                                ButtonBoxPadding_VerticalBox;                      // 0x0524(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_534[0x4];                                      // 0x0534(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FText>                           HoverTexts;                                        // 0x0538(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FLinearColor                           ButtonIconColor;                                   // 0x0548(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   WaitThrobberColorParamName;                        // 0x0558(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           WaitThrobberColor;                                 // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFortDialogExternalLatentActionHandle  WaitingForLatentActionHandle;                      // 0x0570(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	bool                                          bShowLightBoxAnims;                                // 0x0574(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bShouldTriggerCameraModeOnClose;                   // 0x0575(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0628(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCloseButton_C*                         CloseButton;                                       // 0x0630(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          TapToCloseZone;                                    // 0x0638(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FLinearColor                           ButtonIconColor;                                   // 0x0640(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_ConfirmationWindow(int32 EntryPoint);
-	void OnActivated();
-	void PreConstruct(bool IsDesignTime);
-	void OnBeginOutro();
-	void OnBeginIntro();
-	void HandleOutroEnded();
-	void HandleIntroEnded();
-	void Construct();
-	void SetDescription(const struct FFortDialogDescription_NUI& NewDescription);
-	void Initialize();
-	void AddConfirmButtons();
-	void AddDeclineButton();
-	void DeclineActionClicked(class UCommonButton* Button);
-	bool IsSimpleConfirmAction();
-	void ConfirmActionClicked(class UCommonButton* Button);
-	bool HasAnyConfirmAction();
-	void AddSingleConfirmButton(const struct FConfirmationDialogAction& ConfirmDialogAction, bool UseInputAction);
-	struct FDataTableRowHandle GetInputAction(class FName RowName, bool UseInputAction);
-	void GetResultName(class UIconTextButton_C* ConfirmButton, class FName* ResultName);
-	void KillCurrentConfirmation();
-	void Deinitialize();
-	void SetupMainIcon();
-	void SetupTitleAndDescription();
-	void SetupLeft();
-	void Set_Hover_Description(class UCommonButton* Button_to_Hover);
-	void GetLatentActionWaitHandle(struct FFortDialogExternalLatentActionHandle* LatentActionHandle);
-	void StopWaitingForLatentAction();
-	void OnWaitForExternalLatentAction(const struct FFortDialogExternalLatentActionHandle& LatentActionHandle);
-	void ClickButtonIfBot();
-	void SetupNonInteractiveContent();
-	void SetupLeftAdditionalContent();
-	void SetupAdditionalContent();
-	void CloseConfirmation();
-	void CenterFirstButton();
-	struct FEventReply TapToClose(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void HandleConfigureDeclineButton(class UCommonButton* New_Button);
+	void ConfigureConfirmationButton(class UCommonButton* Button, const struct FConfirmationDialogAction& Action, bool bSimpleConfirm);
 	void PlayShowSound();
+	struct FEventReply TapToClose(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void SetupNonInteractiveContent();
+	struct FDataTableRowHandle GetInputAction(class FName RowName, bool UseInputAction);
+	void Initialize();
+	void OnBeginOutro();
+	void ConfigureDeclineButton(class UCommonButton* Button);
+	void BP_OnActivated();
+	void BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void ExecuteUbergraph_ConfirmationWindow(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

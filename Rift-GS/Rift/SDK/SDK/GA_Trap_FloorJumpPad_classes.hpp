@@ -10,31 +10,31 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "GA_TrapGeneric_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Trap_FloorJumpPad.GA_Trap_FloorJumpPad_C
-// 0x0048 (0x09B0 - 0x0968)
+// 0x0050 (0x0B28 - 0x0AD8)
 class UGA_Trap_FloorJumpPad_C final : public UGA_TrapGeneric_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Trap_FloorJumpPad_C;             // 0x0968(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        PlayerJumping;                                     // 0x0970(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           TC_LaunchTag;                                      // 0x0978(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         OverlappingTargets;                                // 0x0980(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0990(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Trap_FloorJumpPad_C;             // 0x0AD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        PlayerJumping;                                     // 0x0AE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           TC_LaunchTag;                                      // 0x0AE8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         OverlappingTargets;                                // 0x0AF0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0B00(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_GA_Trap_FloorJumpPad(int32 EntryPoint);
-	void Cancelled_E91C59AB43D826926CE5CEAA22E84570(const struct FGameplayAbilityTargetDataHandle& TargetData_0, const struct FGameplayTag& ApplicationTag);
-	void K2_ActivateAbility();
 	void PlayPlayerFX(class AFortPlayerPawn* Player);
+	void K2_ActivateAbility();
 	void Targeted_E91C59AB43D826926CE5CEAA22E84570(const struct FGameplayAbilityTargetDataHandle& TargetData_0, const struct FGameplayTag& ApplicationTag);
+	void Cancelled_E91C59AB43D826926CE5CEAA22E84570(const struct FGameplayAbilityTargetDataHandle& TargetData_0, const struct FGameplayTag& ApplicationTag);
 
 public:
 	static class UClass* StaticClass()

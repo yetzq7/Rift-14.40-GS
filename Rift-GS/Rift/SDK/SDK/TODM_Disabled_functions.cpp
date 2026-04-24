@@ -16,35 +16,15 @@
 
 SDK_NAMESPACE_START
 
-// Function TODM_Disabled.TODM_Disabled_C.ExecuteUbergraph_TODM_Disabled
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function TODM_Disabled.TODM_Disabled_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ATODM_Disabled_C::ExecuteUbergraph_TODM_Disabled(int32 EntryPoint)
+void ATODM_Disabled_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TODM_Disabled_C", "ExecuteUbergraph_TODM_Disabled");
-
-	Params::TODM_Disabled_C_ExecuteUbergraph_TODM_Disabled Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TODM_Disabled.TODM_Disabled_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ATODM_Disabled_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TODM_Disabled_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("TODM_Disabled_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,17 +50,37 @@ void ATODM_Disabled_C::DisableLightAndFog(bool Enable)
 }
 
 
-// Function TODM_Disabled.TODM_Disabled_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function TODM_Disabled.TODM_Disabled_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ATODM_Disabled_C::UserConstructionScript()
+void ATODM_Disabled_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TODM_Disabled_C", "UserConstructionScript");
+		Func = Class->GetFunction("TODM_Disabled_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TODM_Disabled.TODM_Disabled_C.ExecuteUbergraph_TODM_Disabled
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ATODM_Disabled_C::ExecuteUbergraph_TODM_Disabled(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TODM_Disabled_C", "ExecuteUbergraph_TODM_Disabled");
+
+	Params::TODM_Disabled_C_ExecuteUbergraph_TODM_Disabled Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

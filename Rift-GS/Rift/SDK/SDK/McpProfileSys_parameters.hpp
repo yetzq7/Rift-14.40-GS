@@ -17,60 +17,60 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function McpProfileSys.McpProfile.DeleteAllProfiles
-// 0x0038 (0x0038 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct McpProfile_DeleteAllProfiles final
 {
 public:
-	struct FClientUrlContext                      Context;                                           // 0x0000(0x0038)(Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
+	struct FClientUrlContext                      Context;                                           // 0x0000(0x0080)(Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_McpProfile_DeleteAllProfiles;
 
 // Function McpProfileSys.McpProfile.DeleteProfile
-// 0x0038 (0x0038 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct McpProfile_DeleteProfile final
 {
 public:
-	struct FClientUrlContext                      Context;                                           // 0x0000(0x0038)(Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
+	struct FClientUrlContext                      Context;                                           // 0x0000(0x0080)(Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_McpProfile_DeleteProfile;
 
 // Function McpProfileSys.McpProfile.LockProfileForWrite
-// 0x0050 (0x0050 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct McpProfile_LockProfileForWrite final
 {
 public:
 	class FString                                 Code;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Timeout;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDedicatedServerUrlContext             Context;                                           // 0x0018(0x0038)(Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0xC];                                       // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDedicatedServerUrlContext             Context;                                           // 0x0020(0x0080)(Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_McpProfile_LockProfileForWrite;
 
 // Function McpProfileSys.McpProfile.QueryProfile
-// 0x0038 (0x0038 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct McpProfile_QueryProfile final
 {
 public:
-	struct FBaseUrlContext                        Context;                                           // 0x0000(0x0038)(Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
+	struct FBaseUrlContext                        Context;                                           // 0x0000(0x0080)(Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_McpProfile_QueryProfile;
 
 // Function McpProfileSys.McpProfile.QueryPublicProfile
-// 0x0038 (0x0038 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct McpProfile_QueryPublicProfile final
 {
 public:
-	struct FBaseUrlContext                        Context;                                           // 0x0000(0x0038)(Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
+	struct FBaseUrlContext                        Context;                                           // 0x0000(0x0080)(Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_McpProfile_QueryPublicProfile;
 
 // Function McpProfileSys.McpProfile.UnlockProfileForWrite
-// 0x0048 (0x0048 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct McpProfile_UnlockProfileForWrite final
 {
 public:
 	class FString                                 Code;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDedicatedServerUrlContext             Context;                                           // 0x0010(0x0038)(Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
+	struct FDedicatedServerUrlContext             Context;                                           // 0x0010(0x0080)(Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_McpProfile_UnlockProfileForWrite;
 

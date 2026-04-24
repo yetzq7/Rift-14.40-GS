@@ -16,20 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function GCL_Rift_Teleport.GCL_Rift_Teleport_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AGCL_Rift_Teleport_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCL_Rift_Teleport_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GCL_Rift_Teleport.GCL_Rift_Teleport_C.OnRemove
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

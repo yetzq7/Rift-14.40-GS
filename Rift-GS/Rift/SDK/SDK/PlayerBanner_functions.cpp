@@ -70,28 +70,8 @@ void UPlayerBanner_C::Account_Info_Changed(const struct FFortPublicAccountInfo& 
 }
 
 
-// Function PlayerBanner.PlayerBanner_C.OnTeamMemberStateChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FFortTeamMemberInfo&       TeamMemberInfo                                         (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void UPlayerBanner_C::OnTeamMemberStateChanged(const struct FFortTeamMemberInfo& TeamMemberInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBanner_C", "OnTeamMemberStateChanged");
-
-	Params::PlayerBanner_C_OnTeamMemberStateChanged Parms{};
-
-	Parms.TeamMemberInfo = std::move(TeamMemberInfo);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function PlayerBanner.PlayerBanner_C.SetBannerImage
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FFortHomeBaseInfo&         Image_info                                             (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -340,7 +320,7 @@ void UPlayerBanner_C::SetBannerIconAndColorFromProfile()
 
 
 // Function PlayerBanner.PlayerBanner_C.SetupSurround
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UPlayerBanner_C::SetupSurround()
 {
