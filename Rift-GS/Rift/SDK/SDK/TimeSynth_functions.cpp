@@ -43,31 +43,6 @@ void UTimeSynthComponent::AddQuantizationEventDelegate(ETimeSynthEventQuantizati
 }
 
 
-// Function TimeSynth.TimeSynthComponent.HasActiveClips
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UTimeSynthComponent::HasActiveClips()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TimeSynthComponent", "HasActiveClips");
-
-	Params::TimeSynthComponent_HasActiveClips Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function TimeSynth.TimeSynthComponent.PlayClip
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -512,35 +487,10 @@ float UTimeSynthComponent::GetEnvelopeFollowerValue() const
 }
 
 
-// Function TimeSynth.TimeSynthComponent.GetMaxActiveClipLimit
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UTimeSynthComponent::GetMaxActiveClipLimit() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TimeSynthComponent", "GetMaxActiveClipLimit");
-
-	Params::TimeSynthComponent_GetMaxActiveClipLimit Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function TimeSynth.TimeSynthComponent.GetSpectralData
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FTimeSynthSpectralData>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FTimeSynthSpectralData>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<struct FTimeSynthSpectralData> UTimeSynthComponent::GetSpectralData() const
 {

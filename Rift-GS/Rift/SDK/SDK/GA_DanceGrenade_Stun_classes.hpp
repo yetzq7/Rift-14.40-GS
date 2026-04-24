@@ -11,27 +11,30 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_DanceGrenade_Stun.GA_DanceGrenade_Stun_C
-// 0x0020 (0x0AC8 - 0x0AA8)
+// 0x0028 (0x0960 - 0x0938)
 class UGA_DanceGrenade_Stun_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAnimMontage*                           AnimMontage;                                       // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldUseSharedAnim;                               // 0x0AB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_AB9[0x3];                                      // 0x0AB9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   DanceGrenadeHolsterId;                             // 0x0ABC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsSkydiving;                                       // 0x0AC4(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0938(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FActiveGameplayEffectHandle            EffectHandle;                                      // 0x0940(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           AnimMontage;                                       // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldUseSharedAnim;                               // 0x0950(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_951[0x3];                                      // 0x0951(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   DanceGrenadeHolsterId;                             // 0x0954(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_DanceGrenade_Stun(int32 EntryPoint);
 	void K2_OnEndAbility(bool bWasCancelled);
+	void InvalidHandle_93D7E1854196ECDA2F2306926AC3D608(const struct FGameplayEffectRemovalInfo& GameplayEffectRemovalInfo);
 	void K2_ActivateAbility();
+	void OnRemoved_93D7E1854196ECDA2F2306926AC3D608(const struct FGameplayEffectRemovalInfo& GameplayEffectRemovalInfo);
 
 public:
 	static class UClass* StaticClass()

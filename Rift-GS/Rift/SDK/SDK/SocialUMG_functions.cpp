@@ -178,31 +178,6 @@ bool USocialChatMessageEntry::CanInteract() const
 }
 
 
-// Function SocialUMG.SocialGroupListEntry.HandleGetMenuContent
-// (Final, Native, Protected)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UWidget* USocialGroupListEntry::HandleGetMenuContent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialGroupListEntry", "HandleGetMenuContent");
-
-	Params::SocialGroupListEntry_HandleGetMenuContent Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function SocialUMG.SocialInteractionButton.OnInteractionSet
 // (Event, Protected, BlueprintEvent)
 
@@ -267,40 +242,15 @@ bool USocialInteractionButton::IsPlatformOnlyFriend() const
 }
 
 
-// Function SocialUMG.SocialActionMenu.HandleMenuAnchorOpenChanged
-// (Final, Native, Protected)
-// Parameters:
-// bool                                    bIsOpen                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USocialActionMenu::HandleMenuAnchorOpenChanged(bool bIsOpen)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialActionMenu", "HandleMenuAnchorOpenChanged");
-
-	Params::SocialActionMenu_HandleMenuAnchorOpenChanged Parms{};
-
-	Parms.bIsOpen = bIsOpen;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SocialUMG.SocialActionMenu.OnOpened
+// Function SocialUMG.SocialInteractionMenu.OnSocialContextSet
 // (Event, Protected, BlueprintEvent)
 
-void USocialActionMenu::OnOpened()
+void USocialInteractionMenu::OnSocialContextSet()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SocialActionMenu", "OnOpened");
+		Func = Class->GetFunction("SocialInteractionMenu", "OnSocialContextSet");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -327,7 +277,7 @@ void USocialInteractionMenu::OnToggleConfirmation(bool bIsVisible)
 
 
 // Function SocialUMG.SocialInteractionMenu.GetFirstEntryToCenter
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -351,19 +301,19 @@ class UWidget* USocialInteractionMenu::GetFirstEntryToCenter() const
 }
 
 
-// Function SocialUMG.SocialListInteractableEntryBase.HandleGetMenuContent
+// Function SocialUMG.SocialListEntry.HandleGetMenuContent
 // (Final, Native, Protected)
 // Parameters:
 // class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UWidget* USocialListInteractableEntryBase::HandleGetMenuContent()
+class UWidget* USocialListEntry::HandleGetMenuContent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SocialListInteractableEntryBase", "HandleGetMenuContent");
+		Func = Class->GetFunction("SocialListEntry", "HandleGetMenuContent");
 
-	Params::SocialListInteractableEntryBase_HandleGetMenuContent Parms{};
+	Params::SocialListEntry_HandleGetMenuContent Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -376,28 +326,23 @@ class UWidget* USocialListInteractableEntryBase::HandleGetMenuContent()
 }
 
 
-// Function SocialUMG.SocialListInteractableEntryBase.HandleMenuOpenChanged
-// (Final, Native, Private)
+// Function SocialUMG.SocialUserListEntry.OnUserPresenceChanged
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bIsMenuOpen                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EOnlineStatus                           OnlineStatus                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USocialListInteractableEntryBase::HandleMenuOpenChanged(bool bIsMenuOpen)
+void USocialUserListEntry::OnUserPresenceChanged(EOnlineStatus OnlineStatus)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SocialListInteractableEntryBase", "HandleMenuOpenChanged");
+		Func = Class->GetFunction("SocialUserListEntry", "OnUserPresenceChanged");
 
-	Params::SocialListInteractableEntryBase_HandleMenuOpenChanged Parms{};
+	Params::SocialUserListEntry_OnUserPresenceChanged Parms{};
 
-	Parms.bIsMenuOpen = bIsMenuOpen;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
+	Parms.OnlineStatus = OnlineStatus;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 }
 
 

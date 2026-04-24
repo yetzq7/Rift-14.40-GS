@@ -17,12 +17,15 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Parent_BuildingWall.Parent_BuildingWall_C
-// 0x0018 (0x0CE8 - 0x0CD0)
+// 0x0018 (0x0D00 - 0x0CE8)
 class AParent_BuildingWall_C : public ABuildingWall
 {
 public:
-	struct FVector                                BuildingBoundsMax;                                 // 0x0CD0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FVector                                BuildingBoundsMin;                                 // 0x0CDC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FVector                                BuildingBoundsMax;                                 // 0x0CE8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FVector                                BuildingBoundsMin;                                 // 0x0CF4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+
+public:
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

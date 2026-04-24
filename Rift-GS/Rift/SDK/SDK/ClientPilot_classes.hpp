@@ -38,26 +38,6 @@ public:
 };
 DUMPER7_ASSERTS_UClientPilotBlackboardManager;
 
-// Class ClientPilot.ClientPilotComponent
-// 0x0000 (0x0028 - 0x0028)
-class UClientPilotComponent : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ClientPilotComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ClientPilotComponent")
-	}
-	static class UClientPilotComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UClientPilotComponent>();
-	}
-};
-DUMPER7_ASSERTS_UClientPilotComponent;
-
 // Class ClientPilot.ClientPilotBlackboard
 // 0x0050 (0x0078 - 0x0028)
 class UClientPilotBlackboard : public UObject
@@ -80,5 +60,25 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UClientPilotBlackboard;
+
+// Class ClientPilot.ClientPilotComponent
+// 0x0000 (0x0028 - 0x0028)
+class UClientPilotComponent : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ClientPilotComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ClientPilotComponent")
+	}
+	static class UClientPilotComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClientPilotComponent>();
+	}
+};
+DUMPER7_ASSERTS_UClientPilotComponent;
 
 SDK_NAMESPACE_END

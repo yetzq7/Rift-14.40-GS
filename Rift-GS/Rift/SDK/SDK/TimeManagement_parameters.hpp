@@ -100,15 +100,6 @@ public:
 };
 DUMPER7_ASSERTS_TimeManagementBlueprintLibrary_GetTimecode;
 
-// Function TimeManagement.TimeManagementBlueprintLibrary.GetTimecodeFrameRate
-// 0x0008 (0x0008 - 0x0000)
-struct TimeManagementBlueprintLibrary_GetTimecodeFrameRate final
-{
-public:
-	struct FFrameRate                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TimeManagementBlueprintLibrary_GetTimecodeFrameRate;
-
 // Function TimeManagement.TimeManagementBlueprintLibrary.IsValid_Framerate
 // 0x000C (0x000C - 0x0000)
 struct TimeManagementBlueprintLibrary_IsValid_Framerate final

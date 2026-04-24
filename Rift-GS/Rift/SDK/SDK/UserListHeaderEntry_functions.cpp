@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function UserListHeaderEntry.UserListHeaderEntry_C.ExecuteUbergraph_UserListHeaderEntry
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -36,19 +36,33 @@ void UUserListHeaderEntry_C::ExecuteUbergraph_UserListHeaderEntry(int32 EntryPoi
 }
 
 
-// Function UserListHeaderEntry.UserListHeaderEntry_C.OnListItemObjectSet_1
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function UserListHeaderEntry.UserListHeaderEntry_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UUserListHeaderEntry_C::OnListItemObjectSet_1(class UObject* ListItemObject)
+void UUserListHeaderEntry_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UserListHeaderEntry_C", "OnListItemObjectSet_1");
+		Func = Class->GetFunction("UserListHeaderEntry_C", "Construct");
 
-	Params::UserListHeaderEntry_C_OnListItemObjectSet_1 Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UserListHeaderEntry.UserListHeaderEntry_C.OnListItemObjectSet
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUserListHeaderEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UserListHeaderEntry_C", "OnListItemObjectSet");
+
+	Params::UserListHeaderEntry_C_OnListItemObjectSet Parms{};
 
 	Parms.ListItemObject = ListItemObject;
 

@@ -17,17 +17,17 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass SpecialEventsCamera_Blueprint.SpecialEventsCamera_Blueprint_C
-// 0x0010 (0x07F0 - 0x07E0)
+// 0x0010 (0x0890 - 0x0880)
 class ASpecialEventsCamera_Blueprint_C final : public AFortCameraBase
 {
 public:
-	uint8                                         Pad_7D8[0x8];                                      // 0x07D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0880(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void OnActivated(class AFortPlayerController* PlayerController);
-	void OnDeactivated(class AFortPlayerController* PlayerController);
 	void ExecuteUbergraph_SpecialEventsCamera_Blueprint(int32 EntryPoint);
+	void OnActivated();
+	void OnDeactivated();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

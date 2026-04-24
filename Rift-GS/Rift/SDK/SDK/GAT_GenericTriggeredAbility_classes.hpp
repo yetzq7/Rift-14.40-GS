@@ -18,15 +18,15 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GAT_GenericTriggeredAbility.GAT_GenericTriggeredAbility_C
-// 0x00C8 (0x0B88 - 0x0AC0)
+// 0x00C0 (0x0A10 - 0x0950)
 class UGAT_GenericTriggeredAbility_C : public UGAT_TriggeredAbility_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_GenericTriggeredAbility_C;      // 0x0AC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayEventData                     EventData;                                         // 0x0AC8(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AFortPlayerPawn*                        FortPlayerPawn;                                    // 0x0B78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isAutoCommitted;                                   // 0x0B80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          isStaminaLockedOut;                                // 0x0B81(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_GenericTriggeredAbility_C;      // 0x0950(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayEventData                     EventData;                                         // 0x0958(0x00A8)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class AFortPlayerPawn*                        FortPlayerPawn;                                    // 0x0A00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isAutoCommitted;                                   // 0x0A08(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          isStaminaLockedOut;                                // 0x0A09(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GAT_GenericTriggeredAbility(int32 EntryPoint);

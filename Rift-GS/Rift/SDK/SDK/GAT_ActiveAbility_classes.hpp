@@ -10,25 +10,25 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
-#include "Engine_structs.hpp"
 #include "FortniteGame_classes.hpp"
+#include "GameplayTags_structs.hpp"
+#include "Engine_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GAT_ActiveAbility.GAT_ActiveAbility_C
-// 0x0030 (0x0AD8 - 0x0AA8)
+// 0x0030 (0x0968 - 0x0938)
 class UGAT_ActiveAbility_C : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTag                           TC_AbilitiesGenericActiveAbilityActivate;          // 0x0AB0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FName                                   N_SavedCollisionChannel;                           // 0x0AB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GE_KnockBackImmunity;                              // 0x0AC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FActiveGameplayEffectHandle            GEH_KnockBackImmunity;                             // 0x0AC8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bPlayerHolsterState;                               // 0x0AD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0938(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTag                           TC_AbilitiesGenericActiveAbilityActivate;          // 0x0940(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FName                                   N_SavedCollisionChannel;                           // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GE_KnockBackImmunity;                              // 0x0950(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FActiveGameplayEffectHandle            GEH_KnockBackImmunity;                             // 0x0958(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPlayerHolsterState;                               // 0x0960(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GAT_ActiveAbility(int32 EntryPoint);
@@ -38,7 +38,6 @@ public:
 	void ActiveAbilitySetup(class UAbilitySystemComponent* AbilitySystemIn, class UAbilitySystemComponent** AbilitySystemOut);
 	void SetHolsterWeaponWithName(class AFortPawn* Target_Fort_Pawn, bool ShouldHolster, bool PlayEquipAnim, bool ShowDebugPrintName, bool* IsWeaponHolstered, bool* OperationSuccessful);
 	void SendHeroAbilityActivationEvent();
-	void EndAbilityWithReason(const class FString& Reason);
 
 	bool K2_ShouldAbilityRespondToEvent(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayEventData& Payload) const;
 

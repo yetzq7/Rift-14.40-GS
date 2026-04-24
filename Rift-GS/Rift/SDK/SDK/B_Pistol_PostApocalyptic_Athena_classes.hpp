@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_Pistol_PostApocalyptic_Athena.B_Pistol_PostApocalyptic_Athena_C
-// 0x0000 (0x1258 - 0x1258)
+// 0x0000 (0x0DE8 - 0x0DE8)
 class AB_Pistol_PostApocalyptic_Athena_C final : public AB_Pistol_Auto_C
 {
 public:

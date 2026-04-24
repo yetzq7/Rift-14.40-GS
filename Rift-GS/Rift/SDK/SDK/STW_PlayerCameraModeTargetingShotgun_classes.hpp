@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass STW_PlayerCameraModeTargetingShotgun.STW_PlayerCameraModeTargetingShotgun_C
-// 0x0000 (0x0DC0 - 0x0DC0)
+// 0x0000 (0x0C50 - 0x0C50)
 class USTW_PlayerCameraModeTargetingShotgun_C final : public UAthena_PlayerCameraModeTargetingShotgun_C
 {
 public:

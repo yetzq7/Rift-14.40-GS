@@ -36,15 +36,15 @@ void UShowdownEventTileViolator_C::ExecuteUbergraph_ShowdownEventTileViolator(in
 }
 
 
-// Function ShowdownEventTileViolator.ShowdownEventTileViolator_C.RefreshViolatorData
-// (BlueprintCallable, BlueprintEvent)
+// Function ShowdownEventTileViolator.ShowdownEventTileViolator_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UShowdownEventTileViolator_C::RefreshViolatorData()
+void UShowdownEventTileViolator_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownEventTileViolator_C", "RefreshViolatorData");
+		Func = Class->GetFunction("ShowdownEventTileViolator_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -59,20 +59,6 @@ void UShowdownEventTileViolator_C::RefreshDataBP()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ShowdownEventTileViolator_C", "RefreshDataBP");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ShowdownEventTileViolator.ShowdownEventTileViolator_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UShowdownEventTileViolator_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownEventTileViolator_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

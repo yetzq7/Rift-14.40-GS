@@ -17,11 +17,11 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function TracerGeneric.TracerGeneric_C.UserConstructionScript
-// 0x008C (0x008C - 0x0000)
+// 0x0088 (0x0088 - 0x0000)
 struct TracerGeneric_C_UserConstructionScript final
 {
 public:
-	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0000(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0000(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 DUMPER7_ASSERTS_TracerGeneric_C_UserConstructionScript;
 

@@ -36,26 +36,6 @@ void AB_Prj_Athena_PlaysetGrenade_C::ExecuteUbergraph_B_Prj_Athena_PlaysetGrenad
 }
 
 
-// Function B_Prj_Athena_PlaysetGrenade.B_Prj_Athena_PlaysetGrenade_C.Play Spawn Prefab Sound
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Prj_Athena_PlaysetGrenade_C::Play_Spawn_Prefab_Sound(const struct FVector& Location)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_PlaysetGrenade_C", "Play Spawn Prefab Sound");
-
-	Params::B_Prj_Athena_PlaysetGrenade_C_Play_Spawn_Prefab_Sound Parms{};
-
-	Parms.Location = std::move(Location);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_Prj_Athena_PlaysetGrenade.B_Prj_Athena_PlaysetGrenade_C.SpawnPlayspaceServer
 // (Net, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -81,7 +61,7 @@ void AB_Prj_Athena_PlaysetGrenade_C::SpawnPlayspaceServer(class UFortPlaysetItem
 
 
 // Function B_Prj_Athena_PlaysetGrenade.B_Prj_Athena_PlaysetGrenade_C.ReceiveEndPlay
-// (Event, Protected, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -95,6 +75,26 @@ void AB_Prj_Athena_PlaysetGrenade_C::ReceiveEndPlay(EEndPlayReason EndPlayReason
 	Params::B_Prj_Athena_PlaysetGrenade_C_ReceiveEndPlay Parms{};
 
 	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Prj_Athena_PlaysetGrenade.B_Prj_Athena_PlaysetGrenade_C.Handle Bounce
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   Hit_Location                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Prj_Athena_PlaysetGrenade_C::Handle_Bounce(const struct FVector& Hit_Location)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_PlaysetGrenade_C", "Handle Bounce");
+
+	Params::B_Prj_Athena_PlaysetGrenade_C_Handle_Bounce Parms{};
+
+	Parms.Hit_Location = std::move(Hit_Location);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -151,8 +151,8 @@ void AB_Prj_Athena_PlaysetGrenade_C::ReceiveHit(class UPrimitiveComponent* MyCom
 // Function B_Prj_Athena_PlaysetGrenade.B_Prj_Athena_PlaysetGrenade_C.OnExploded
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference)
 
 void AB_Prj_Athena_PlaysetGrenade_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
 {
@@ -185,26 +185,6 @@ void AB_Prj_Athena_PlaysetGrenade_C::OnStop(const struct FHitResult& Hit)
 	Params::B_Prj_Athena_PlaysetGrenade_C_OnStop Parms{};
 
 	Parms.Hit = std::move(Hit);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Prj_Athena_PlaysetGrenade.B_Prj_Athena_PlaysetGrenade_C.OnLoaded_3645F4484F4ECED813C69D92F55C7A1F
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Prj_Athena_PlaysetGrenade_C::OnLoaded_3645F4484F4ECED813C69D92F55C7A1F(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_PlaysetGrenade_C", "OnLoaded_3645F4484F4ECED813C69D92F55C7A1F");
-
-	Params::B_Prj_Athena_PlaysetGrenade_C_OnLoaded_3645F4484F4ECED813C69D92F55C7A1F Parms{};
-
-	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

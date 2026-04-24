@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass PerkDivider.PerkDivider_C
-// 0x0000 (0x0260 - 0x0260)
+// 0x0000 (0x0230 - 0x0230)
 class UPerkDivider_C final : public UUserWidget
 {
 public:

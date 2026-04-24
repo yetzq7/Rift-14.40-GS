@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function SocialPanelView_UserLists.SocialPanelView_UserLists_C.ExecuteUbergraph_SocialPanelView_UserLists
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -36,55 +36,41 @@ void USocialPanelView_UserLists_C::ExecuteUbergraph_SocialPanelView_UserLists(in
 }
 
 
-// Function SocialPanelView_UserLists.SocialPanelView_UserLists_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function SocialPanelView_UserLists.SocialPanelView_UserLists_C.BndEvt__Button_AddWeGameFriends_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USocialPanelView_UserLists_C::PreConstruct(bool IsDesignTime)
+void USocialPanelView_UserLists_C::BndEvt__Button_AddWeGameFriends_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanelView_UserLists_C", "PreConstruct");
+		Func = Class->GetFunction("SocialPanelView_UserLists_C", "BndEvt__Button_AddWeGameFriends_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
 
-	Params::SocialPanelView_UserLists_C_PreConstruct Parms{};
+	Params::SocialPanelView_UserLists_C_BndEvt__Button_AddWeGameFriends_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function SocialPanelView_UserLists.SocialPanelView_UserLists_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void USocialPanelView_UserLists_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanelView_UserLists_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialPanelView_UserLists.SocialPanelView_UserLists_C.OnSetVoiceChannelButtonText
-// (Event, Protected, HasOutParams, BlueprintEvent)
+// Function SocialPanelView_UserLists.SocialPanelView_UserLists_C.BndEvt__Button_AddWeGameFriends_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const class FText&                      ButtonText                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USocialPanelView_UserLists_C::OnSetVoiceChannelButtonText(const class FText& ButtonText)
+void USocialPanelView_UserLists_C::BndEvt__Button_AddWeGameFriends_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanelView_UserLists_C", "OnSetVoiceChannelButtonText");
+		Func = Class->GetFunction("SocialPanelView_UserLists_C", "BndEvt__Button_AddWeGameFriends_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
 
-	Params::SocialPanelView_UserLists_C_OnSetVoiceChannelButtonText Parms{};
+	Params::SocialPanelView_UserLists_C_BndEvt__Button_AddWeGameFriends_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
 
-	Parms.ButtonText = std::move(ButtonText);
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -109,6 +95,56 @@ void USocialPanelView_UserLists_C::BndEvt__Switcher_UserLists_K2Node_ComponentBo
 	Parms.ActiveWidgetIndex = ActiveWidgetIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SocialPanelView_UserLists.SocialPanelView_UserLists_C.OnKeyDown
+// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FKeyEvent&                 InKeyEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FEventReply USocialPanelView_UserLists_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanelView_UserLists_C", "OnKeyDown");
+
+	Params::SocialPanelView_UserLists_C_OnKeyDown Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InKeyEvent = std::move(InKeyEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SocialPanelView_UserLists.SocialPanelView_UserLists_C.OnKeyUp
+// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FKeyEvent&                 InKeyEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FEventReply USocialPanelView_UserLists_C::OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanelView_UserLists_C", "OnKeyUp");
+
+	Params::SocialPanelView_UserLists_C_OnKeyUp Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InKeyEvent = std::move(InKeyEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

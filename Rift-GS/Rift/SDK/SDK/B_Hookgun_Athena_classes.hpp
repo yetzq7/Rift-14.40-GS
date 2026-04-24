@@ -10,20 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "B_Ranged_Generic_classes.hpp"
 #include "Engine_structs.hpp"
+#include "B_Ranged_Generic_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_Hookgun_Athena.B_Hookgun_Athena_C
-// 0x0018 (0x1270 - 0x1258)
+// 0x0018 (0x0E00 - 0x0DE8)
 class AB_Hookgun_Athena_C final : public AB_Ranged_Generic_C
 {
 public:
-	struct FTimerHandle                           Timer;                                             // 0x1258(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawnAthena*                  Player_Pawn;                                       // 0x1260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Debug;                                             // 0x1268(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FTimerHandle                           Timer;                                             // 0x0DE8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawnAthena*                  Player_Pawn;                                       // 0x0DF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Debug;                                             // 0x0DF8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+
+public:
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

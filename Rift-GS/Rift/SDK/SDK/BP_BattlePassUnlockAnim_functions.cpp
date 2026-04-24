@@ -50,15 +50,15 @@ void UBP_BattlePassUnlockAnim_C::PlayIntro()
 }
 
 
-// Function BP_BattlePassUnlockAnim.BP_BattlePassUnlockAnim_C.BP_OnActivated
+// Function BP_BattlePassUnlockAnim.BP_BattlePassUnlockAnim_C.OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UBP_BattlePassUnlockAnim_C::BP_OnActivated()
+void UBP_BattlePassUnlockAnim_C::OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BattlePassUnlockAnim_C", "BP_OnActivated");
+		Func = Class->GetFunction("BP_BattlePassUnlockAnim_C", "OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

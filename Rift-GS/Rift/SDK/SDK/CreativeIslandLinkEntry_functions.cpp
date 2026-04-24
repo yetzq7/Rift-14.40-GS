@@ -56,26 +56,6 @@ void UCreativeIslandLinkEntry_C::BndEvt__SimplePipButton_K2Node_ComponentBoundEv
 }
 
 
-// Function CreativeIslandLinkEntry.CreativeIslandLinkEntry_C.OnListItemObjectSet
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UCreativeIslandLinkEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreativeIslandLinkEntry_C", "OnListItemObjectSet");
-
-	Params::CreativeIslandLinkEntry_C_OnListItemObjectSet Parms{};
-
-	Parms.ListItemObject = ListItemObject;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function CreativeIslandLinkEntry.CreativeIslandLinkEntry_C.BP_OnDeselected
 // (Event, Protected, BlueprintEvent)
 
@@ -101,6 +81,26 @@ void UCreativeIslandLinkEntry_C::BP_OnSelected()
 		Func = Class->GetFunction("CreativeIslandLinkEntry_C", "BP_OnSelected");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CreativeIslandLinkEntry.CreativeIslandLinkEntry_C.OnListItemObjectSet
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCreativeIslandLinkEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeIslandLinkEntry_C", "OnListItemObjectSet");
+
+	Params::CreativeIslandLinkEntry_C_OnListItemObjectSet Parms{};
+
+	Parms.ListItemObject = ListItemObject;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

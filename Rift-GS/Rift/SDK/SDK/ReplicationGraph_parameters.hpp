@@ -23,7 +23,7 @@ struct ReplicationGraphDebugActor_ClientCellInfo final
 public:
 	struct FVector                                CellLocation;                                      // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                CellExtent;                                        // 0x000C(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class AActor*>                         Actors;                                            // 0x0018(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         Actors;                                            // 0x0018(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_ReplicationGraphDebugActor_ClientCellInfo;
 

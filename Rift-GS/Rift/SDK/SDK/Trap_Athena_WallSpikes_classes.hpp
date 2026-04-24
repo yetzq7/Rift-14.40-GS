@@ -17,15 +17,16 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Trap_Athena_WallSpikes.Trap_Athena_WallSpikes_C
-// 0x0008 (0x0E78 - 0x0E70)
+// 0x0008 (0x0E40 - 0x0E38)
 class ATrap_Athena_WallSpikes_C final : public ATrap_Athena_Spikes_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Trap_Athena_WallSpikes_C;           // 0x0E70(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Trap_Athena_WallSpikes_C;           // 0x0E38(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_Trap_Athena_WallSpikes(int32 EntryPoint);
 	void SetSpikePosition(float NewSpikePosition);
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

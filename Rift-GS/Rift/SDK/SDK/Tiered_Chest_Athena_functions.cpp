@@ -36,62 +36,6 @@ void ATiered_Chest_Athena_C::ExecuteUbergraph_Tiered_Chest_Athena(int32 EntryPoi
 }
 
 
-// Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.PlayChestOpeningTimeline
-// (BlueprintCallable, BlueprintEvent)
-
-void ATiered_Chest_Athena_C::PlayChestOpeningTimeline()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Chest_Athena_C", "PlayChestOpeningTimeline");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.SpawnChestOpenVFX
-// (BlueprintCallable, BlueprintEvent)
-
-void ATiered_Chest_Athena_C::SpawnChestOpenVFX()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Chest_Athena_C", "SpawnChestOpenVFX");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.DetermineVFXRotation
-// (BlueprintCallable, BlueprintEvent)
-
-void ATiered_Chest_Athena_C::DetermineVFXRotation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Chest_Athena_C", "DetermineVFXRotation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.HideChestOpenableCosmetics
-// (BlueprintCallable, BlueprintEvent)
-
-void ATiered_Chest_Athena_C::HideChestOpenableCosmetics()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Chest_Athena_C", "HideChestOpenableCosmetics");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.OnDeathPlayEffects
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -161,6 +105,20 @@ void ATiered_Chest_Athena_C::EnableBacchusHighlight()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("Tiered_Chest_Athena_C", "EnableBacchusHighlight");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.Chime Visual
+// (BlueprintCallable, BlueprintEvent)
+
+void ATiered_Chest_Athena_C::Chime_Visual()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Chest_Athena_C", "Chime Visual");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -273,34 +231,6 @@ void ATiered_Chest_Athena_C::OnLoot()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("Tiered_Chest_Athena_C", "OnLoot");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.Timeline_0__UpdateFunc
-// (BlueprintEvent)
-
-void ATiered_Chest_Athena_C::Timeline_0__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Chest_Athena_C", "Timeline_0__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.Timeline_0__FinishedFunc
-// (BlueprintEvent)
-
-void ATiered_Chest_Athena_C::Timeline_0__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Chest_Athena_C", "Timeline_0__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -424,7 +354,7 @@ bool ATiered_Chest_Athena_C::ShouldDie(float Damage, class AController* EventIns
 
 
 // Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.CreateMobileMIDs
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ATiered_Chest_Athena_C::CreateMobileMIDs()
 {
@@ -495,7 +425,7 @@ void ATiered_Chest_Athena_C::SetVisibleMobileInteractIcon(bool Visible)
 // Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.OnSetCustomDepthStencilValue
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const TArray<class UPrimitiveComponent*>&PrimComponents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class UPrimitiveComponent*>&PrimComponents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool                                    bUseCustomDepth                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // int32                                   StencilValue                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   bOutConsume                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -524,11 +454,9 @@ void ATiered_Chest_Athena_C::OnSetCustomDepthStencilValue(const TArray<class UPr
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const ETInteractionType                 InteractionType                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool ATiered_Chest_Athena_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const
+bool ATiered_Chest_Athena_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -538,8 +466,6 @@ bool ATiered_Chest_Athena_C::BlueprintCanInteract(const class AFortPawn* Interac
 	Params::Tiered_Chest_Athena_C_BlueprintCanInteract Parms{};
 
 	Parms.InteractingPawn = InteractingPawn;
-	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
-	Parms.InteractionType = InteractionType;
 
 	UObject::ProcessEvent(Func, &Parms);
 

@@ -17,12 +17,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass TextRotator.TextRotator_C
-// 0x0010 (0x0C08 - 0x0BF8)
+// 0x0010 (0x0B80 - 0x0B70)
 class UTextRotator_C final : public UCommonRotator
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BF8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonBorder*                          MainBorder;                                        // 0x0C00(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B70(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonBorder*                          MainBorder;                                        // 0x0B78(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_TextRotator(int32 EntryPoint);

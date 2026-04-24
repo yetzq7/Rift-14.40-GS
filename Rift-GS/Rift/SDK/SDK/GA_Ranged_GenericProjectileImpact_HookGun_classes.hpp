@@ -11,20 +11,22 @@
 #include "Basic.hpp"
 
 #include "GameplayTags_structs.hpp"
+#include "Engine_structs.hpp"
 #include "GA_Ranged_GenericDamage_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Ranged_GenericProjectileImpact_HookGun.GA_Ranged_GenericProjectileImpact_HookGun_C
-// 0x0038 (0x0B28 - 0x0AF0)
+// 0x0048 (0x09C8 - 0x0980)
 class UGA_Ranged_GenericProjectileImpact_HookGun_C final : public UGA_Ranged_GenericDamage_C
 {
 public:
-	struct FGameplayTagContainer                  ChangeEquipmentTag;                                // 0x0AF0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTag                           RopeActiveTag;                                     // 0x0B10(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UFortQuestItemDefinition*               QuestItem;                                         // 0x0B18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ObjBackendName;                                    // 0x0B20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  ChangeEquipmentTag;                                // 0x0980(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTag                           RopeActiveTag;                                     // 0x09A0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UFortQuestItemDefinition*               QuestItem;                                         // 0x09A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ObjBackendName;                                    // 0x09B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    ObjStat;                                           // 0x09B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
 	void K2_CommitExecute();

@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "FortniteUI_classes.hpp"
+#include "CommonInput_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass CommonUI_GenericBrushData.CommonUI_GenericBrushData_C
-// 0x0000 (0x00A0 - 0x00A0)
-class UCommonUI_GenericBrushData_C final : public UFortInputControllerData
+// 0x0000 (0x0040 - 0x0040)
+class UCommonUI_GenericBrushData_C final : public UCommonInputControllerData
 {
 public:
 	static class UClass* StaticClass()

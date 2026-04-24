@@ -54,9 +54,8 @@ void AB_Melee_Generic_C::OnWeaponDetached()
 // (Event, Protected, BlueprintEvent)
 // Parameters:
 // bool                                    bVisible                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    bSetForLocalControllerOnly                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AB_Melee_Generic_C::OnWeaponVisibilityChanged(bool bVisible, bool bSetForLocalControllerOnly)
+void AB_Melee_Generic_C::OnWeaponVisibilityChanged(bool bVisible)
 {
 	static class UFunction* Func = nullptr;
 
@@ -66,7 +65,6 @@ void AB_Melee_Generic_C::OnWeaponVisibilityChanged(bool bVisible, bool bSetForLo
 	Params::B_Melee_Generic_C_OnWeaponVisibilityChanged Parms{};
 
 	Parms.bVisible = bVisible;
-	Parms.bSetForLocalControllerOnly = bSetForLocalControllerOnly;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -76,8 +74,9 @@ void AB_Melee_Generic_C::OnWeaponVisibilityChanged(bool bVisible, bool bSetForLo
 // (Event, Protected, BlueprintEvent)
 // Parameters:
 // const struct FFortCosmeticModification& CosmeticMod                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UMaterialInstanceDynamic*         DynamicMaterialInstance                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Melee_Generic_C::OnInitCosmeticAlterations(const struct FFortCosmeticModification& CosmeticMod)
+void AB_Melee_Generic_C::OnInitCosmeticAlterations(const struct FFortCosmeticModification& CosmeticMod, class UMaterialInstanceDynamic* DynamicMaterialInstance)
 {
 	static class UFunction* Func = nullptr;
 
@@ -87,6 +86,7 @@ void AB_Melee_Generic_C::OnInitCosmeticAlterations(const struct FFortCosmeticMod
 	Params::B_Melee_Generic_C_OnInitCosmeticAlterations Parms{};
 
 	Parms.CosmeticMod = std::move(CosmeticMod);
+	Parms.DynamicMaterialInstance = DynamicMaterialInstance;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -125,9 +125,9 @@ void AB_Melee_Generic_C::OnEquippedWeaponDestory()
 // Parameters:
 // const struct FHitResult&                HitResult                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 // EPhysicalSurface                        ImpactPhysicalSurface                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UFXSystemComponent*               SpawnedPSC                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UParticleSystemComponent*         SpawnedPSC                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Melee_Generic_C::OnPlayImpactFX(const struct FHitResult& HitResult, EPhysicalSurface ImpactPhysicalSurface, class UFXSystemComponent* SpawnedPSC)
+void AB_Melee_Generic_C::OnPlayImpactFX(const struct FHitResult& HitResult, EPhysicalSurface ImpactPhysicalSurface, class UParticleSystemComponent* SpawnedPSC)
 {
 	static class UFunction* Func = nullptr;
 
@@ -194,34 +194,6 @@ void AB_Melee_Generic_C::ReceiveBeginPlay()
 }
 
 
-// Function B_Melee_Generic.B_Melee_Generic_C.MeleeSwingLeft_End
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::MeleeSwingLeft_End()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "MeleeSwingLeft_End");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.MeleeSwingRight_End
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Melee_Generic_C::MeleeSwingRight_End()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "MeleeSwingRight_End");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_Melee_Generic.B_Melee_Generic_C.FootStepRight
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -252,41 +224,29 @@ void AB_Melee_Generic_C::FootStepLeft()
 
 // Function B_Melee_Generic.B_Melee_Generic_C.MeleeSwingLeft
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    First_Left                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AB_Melee_Generic_C::MeleeSwingLeft(bool First_Left)
+void AB_Melee_Generic_C::MeleeSwingLeft()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Melee_Generic_C", "MeleeSwingLeft");
 
-	Params::B_Melee_Generic_C_MeleeSwingLeft Parms{};
-
-	Parms.First_Left = First_Left;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function B_Melee_Generic.B_Melee_Generic_C.MeleeSwingRight
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    First_Right                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AB_Melee_Generic_C::MeleeSwingRight(bool First_Right)
+void AB_Melee_Generic_C::MeleeSwingRight()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Melee_Generic_C", "MeleeSwingRight");
 
-	Params::B_Melee_Generic_C_MeleeSwingRight Parms{};
-
-	Parms.First_Right = First_Right;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -355,26 +315,6 @@ void AB_Melee_Generic_C::SetActiveAlterationIdleParticles(bool Active, bool Rese
 
 	Parms.Active = Active;
 	Parms.Reset = Reset;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Melee_Generic.B_Melee_Generic_C.PlayCQCPickaxeEnemyAudio
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FHitResult&                Hit_Result                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-
-void AB_Melee_Generic_C::PlayCQCPickaxeEnemyAudio(const struct FHitResult& Hit_Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Melee_Generic_C", "PlayCQCPickaxeEnemyAudio");
-
-	Params::B_Melee_Generic_C_PlayCQCPickaxeEnemyAudio Parms{};
-
-	Parms.Hit_Result = std::move(Hit_Result);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -18,22 +18,21 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass MiniCraftingIngredientListEntry.MiniCraftingIngredientListEntry_C
-// 0x0010 (0x02C0 - 0x02B0)
+// 0x0010 (0x0270 - 0x0260)
 class UMiniCraftingIngredientListEntry_C final : public UFortItemQuantityListEntryBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UItemCount_C*                           ItemCountWidget;                                   // 0x02B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UItemCount_C*                           ItemCountWidget;                                   // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	class UWidget* Get_ItemCountWidget_ToolTipWidget();
-	void RefreshBeingPreviewed();
-	void Refresh();
-	void HandleDifferentItemOrQuantitySetBP(const bool IsBeingReset);
-	void PreviewStarted();
-	void PreviewEnded();
-	void RefreshListEntry();
 	void ExecuteUbergraph_MiniCraftingIngredientListEntry(int32 EntryPoint);
+	void PreviewEnded();
+	void PreviewStarted();
+	void HandleDifferentItemOrQuantitySetBP(const bool IsBeingReset);
+	void Refresh();
+	void RefreshBeingPreviewed();
+	class UWidget* Get_ItemCountWidget_ToolTipWidget();
 
 public:
 	static class UClass* StaticClass()

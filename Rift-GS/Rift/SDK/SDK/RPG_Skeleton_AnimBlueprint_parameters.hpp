@@ -10,8 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
@@ -24,15 +22,6 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_RPG_Skeleton_AnimBlueprint_C_ExecuteUbergraph_RPG_Skeleton_AnimBlueprint;
-
-// Function RPG_Skeleton_AnimBlueprint.RPG_Skeleton_AnimBlueprint_C.AnimGraph
-// 0x0010 (0x0010 - 0x0000)
-struct RPG_Skeleton_AnimBlueprint_C_AnimGraph final
-{
-public:
-	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
-};
-DUMPER7_ASSERTS_RPG_Skeleton_AnimBlueprint_C_AnimGraph;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

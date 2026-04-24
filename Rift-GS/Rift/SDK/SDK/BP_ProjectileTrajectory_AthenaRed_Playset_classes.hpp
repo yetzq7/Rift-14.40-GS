@@ -10,24 +10,25 @@
 
 #include "Basic.hpp"
 
-#include "BP_ProjectileTrajectory_Athena_SnapBoxToGrid_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_ProjectileTrajectory_Athena_SnapBoxToGrid_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ProjectileTrajectory_AthenaRed_Playset.BP_ProjectileTrajectory_AthenaRed_Playset_C
-// 0x0010 (0x0308 - 0x02F8)
+// 0x0010 (0x0420 - 0x0410)
 class ABP_ProjectileTrajectory_AthenaRed_Playset_C final : public ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ProjectileTrajectory_AthenaRed_Playset_C; // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        Creative_Grenade_LoopRed_Cue;                      // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ProjectileTrajectory_AthenaRed_Playset_C; // 0x0410(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        Creative_Grenade_LoopRed_Cue;                      // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_ProjectileTrajectory_AthenaRed_Playset(int32 EntryPoint);
-	void ReceiveDestroyed();
 	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

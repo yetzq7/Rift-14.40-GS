@@ -16,96 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievementDescriptions
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UAchievementQueryCallbackProxy*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchievementDescriptions(class UObject* WorldContextObject, class APlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AchievementQueryCallbackProxy", "CacheAchievementDescriptions");
-
-	Params::AchievementQueryCallbackProxy_CacheAchievementDescriptions Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.PlayerController = PlayerController;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievements
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UAchievementQueryCallbackProxy*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchievements(class UObject* WorldContextObject, class APlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AchievementQueryCallbackProxy", "CacheAchievements");
-
-	Params::AchievementQueryCallbackProxy_CacheAchievements Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.PlayerController = PlayerController;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemUtils.LogoutCallbackProxy.Logout
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULogoutCallbackProxy*             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class ULogoutCallbackProxy* ULogoutCallbackProxy::Logout(class UObject* WorldContextObject, class APlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("LogoutCallbackProxy", "Logout");
-
-	Params::LogoutCallbackProxy_Logout Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.PlayerController = PlayerController;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemUtils.OnlineBeaconClient.ClientOnConnected
 // (Final, Net, NetReliable, Native, Event, Private, NetClient)
 
@@ -125,33 +35,176 @@ void AOnlineBeaconClient::ClientOnConnected()
 }
 
 
-// Function OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2.CreateProxyObjectForInAppPurchaseQuery
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Function OnlineSubsystemUtils.PartyBeaconClient.ClientCancelReservationResponse
+// (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<class FString>&            ProductIdentifiers                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UInAppPurchaseQueryCallbackProxy2*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EPartyReservationResult                 ReservationResponse                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UInAppPurchaseQueryCallbackProxy2* UInAppPurchaseQueryCallbackProxy2::CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, const TArray<class FString>& ProductIdentifiers)
+void APartyBeaconClient::ClientCancelReservationResponse(EPartyReservationResult ReservationResponse)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("InAppPurchaseQueryCallbackProxy2", "CreateProxyObjectForInAppPurchaseQuery");
+		Func = Class->GetFunction("PartyBeaconClient", "ClientCancelReservationResponse");
 
-	Params::InAppPurchaseQueryCallbackProxy2_CreateProxyObjectForInAppPurchaseQuery Parms{};
+	Params::PartyBeaconClient_ClientCancelReservationResponse Parms{};
 
-	Parms.PlayerController = PlayerController;
-	Parms.ProductIdentifiers = std::move(ProductIdentifiers);
+	Parms.ReservationResponse = ReservationResponse;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
 
-	return Parms.ReturnValue;
+
+// Function OnlineSubsystemUtils.PartyBeaconClient.ClientReservationResponse
+// (Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// EPartyReservationResult                 ReservationResponse                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void APartyBeaconClient::ClientReservationResponse(EPartyReservationResult ReservationResponse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ClientReservationResponse");
+
+	Params::PartyBeaconClient_ClientReservationResponse Parms{};
+
+	Parms.ReservationResponse = ReservationResponse;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationFull
+// (Net, NetReliable, Native, Event, Public, NetClient)
+
+void APartyBeaconClient::ClientSendReservationFull()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ClientSendReservationFull");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationUpdates
+// (Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// int32                                   NumRemainingReservations                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void APartyBeaconClient::ClientSendReservationUpdates(int32 NumRemainingReservations)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ClientSendReservationUpdates");
+
+	Params::PartyBeaconClient_ClientSendReservationUpdates Parms{};
+
+	Parms.NumRemainingReservations = NumRemainingReservations;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemUtils.PartyBeaconClient.ServerCancelReservationRequest
+// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// const struct FUniqueNetIdRepl&          PartyLeader                                            (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void APartyBeaconClient::ServerCancelReservationRequest(const struct FUniqueNetIdRepl& PartyLeader)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ServerCancelReservationRequest");
+
+	Params::PartyBeaconClient_ServerCancelReservationRequest Parms{};
+
+	Parms.PartyLeader = std::move(PartyLeader);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemUtils.PartyBeaconClient.ServerReservationRequest
+// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPartyReservation&         Reservation                                            (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void APartyBeaconClient::ServerReservationRequest(const class FString& SessionId, const struct FPartyReservation& Reservation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ServerReservationRequest");
+
+	Params::PartyBeaconClient_ServerReservationRequest Parms{};
+
+	Parms.SessionId = std::move(SessionId);
+	Parms.Reservation = std::move(Reservation);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemUtils.PartyBeaconClient.ServerUpdateReservationRequest
+// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPartyReservation&         ReservationUpdate                                      (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void APartyBeaconClient::ServerUpdateReservationRequest(const class FString& SessionId, const struct FPartyReservation& ReservationUpdate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ServerUpdateReservationRequest");
+
+	Params::PartyBeaconClient_ServerUpdateReservationRequest Parms{};
+
+	Parms.SessionId = std::move(SessionId);
+	Parms.ReservationUpdate = std::move(ReservationUpdate);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
@@ -265,6 +318,96 @@ class UAchievementWriteCallbackProxy* UAchievementWriteCallbackProxy::WriteAchie
 	Parms.AchievementName = AchievementName;
 	Parms.Progress = Progress;
 	Parms.UserTag = UserTag;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APlayerController*                InPlayerController                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UShowLoginUICallbackProxy*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UShowLoginUICallbackProxy* UShowLoginUICallbackProxy::ShowExternalLoginUI(class UObject* WorldContextObject, class APlayerController* InPlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ShowLoginUICallbackProxy", "ShowExternalLoginUI");
+
+	Params::ShowLoginUICallbackProxy_ShowExternalLoginUI Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.InPlayerController = InPlayerController;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievementDescriptions
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAchievementQueryCallbackProxy*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchievementDescriptions(class UObject* WorldContextObject, class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AchievementQueryCallbackProxy", "CacheAchievementDescriptions");
+
+	Params::AchievementQueryCallbackProxy_CacheAchievementDescriptions Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.PlayerController = PlayerController;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievements
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAchievementQueryCallbackProxy*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchievements(class UObject* WorldContextObject, class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AchievementQueryCallbackProxy", "CacheAchievements");
+
+	Params::AchievementQueryCallbackProxy_CacheAchievements Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.PlayerController = PlayerController;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -659,97 +802,11 @@ class UInAppPurchaseCallbackProxy* UInAppPurchaseCallbackProxy::CreateProxyObjec
 }
 
 
-// Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchase
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FInAppPurchaseProductRequest2&ProductRequest                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UInAppPurchaseCallbackProxy2*     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObjectForInAppPurchase(class APlayerController* PlayerController, const struct FInAppPurchaseProductRequest2& ProductRequest)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("InAppPurchaseCallbackProxy2", "CreateProxyObjectForInAppPurchase");
-
-	Params::InAppPurchaseCallbackProxy2_CreateProxyObjectForInAppPurchase Parms{};
-
-	Parms.PlayerController = PlayerController;
-	Parms.ProductRequest = std::move(ProductRequest);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseQueryOwned
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UInAppPurchaseCallbackProxy2*     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObjectForInAppPurchaseQueryOwned(class APlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("InAppPurchaseCallbackProxy2", "CreateProxyObjectForInAppPurchaseQueryOwned");
-
-	Params::InAppPurchaseCallbackProxy2_CreateProxyObjectForInAppPurchaseQueryOwned Parms{};
-
-	Parms.PlayerController = PlayerController;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseUnprocessedPurchases
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UInAppPurchaseCallbackProxy2*     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObjectForInAppPurchaseUnprocessedPurchases(class APlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("InAppPurchaseCallbackProxy2", "CreateProxyObjectForInAppPurchaseUnprocessedPurchases");
-
-	Params::InAppPurchaseCallbackProxy2_CreateProxyObjectForInAppPurchaseUnprocessedPurchases Parms{};
-
-	Parms.PlayerController = PlayerController;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy.CreateProxyObjectForInAppPurchaseQuery
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<class FString>&            ProductIdentifiers                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            ProductIdentifiers                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // class UInAppPurchaseQueryCallbackProxy* ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class UInAppPurchaseQueryCallbackProxy* UInAppPurchaseQueryCallbackProxy::CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, const TArray<class FString>& ProductIdentifiers)
@@ -778,7 +835,7 @@ class UInAppPurchaseQueryCallbackProxy* UInAppPurchaseQueryCallbackProxy::Create
 // Function OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy.CreateProxyObjectForInAppPurchaseRestore
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const TArray<struct FInAppPurchaseProductRequest>&ConsumableProductFlags                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FInAppPurchaseProductRequest>&ConsumableProductFlags                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UInAppPurchaseRestoreCallbackProxy*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -790,36 +847,6 @@ class UInAppPurchaseRestoreCallbackProxy* UInAppPurchaseRestoreCallbackProxy::Cr
 		Func = StaticClass()->GetFunction("InAppPurchaseRestoreCallbackProxy", "CreateProxyObjectForInAppPurchaseRestore");
 
 	Params::InAppPurchaseRestoreCallbackProxy_CreateProxyObjectForInAppPurchaseRestore Parms{};
-
-	Parms.ConsumableProductFlags = std::move(ConsumableProductFlags);
-	Parms.PlayerController = PlayerController;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2.CreateProxyObjectForInAppPurchaseRestore
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FInAppPurchaseProductRequest2>&ConsumableProductFlags                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UInAppPurchaseRestoreCallbackProxy2*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UInAppPurchaseRestoreCallbackProxy2* UInAppPurchaseRestoreCallbackProxy2::CreateProxyObjectForInAppPurchaseRestore(const TArray<struct FInAppPurchaseProductRequest2>& ConsumableProductFlags, class APlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("InAppPurchaseRestoreCallbackProxy2", "CreateProxyObjectForInAppPurchaseRestore");
-
-	Params::InAppPurchaseRestoreCallbackProxy2_CreateProxyObjectForInAppPurchaseRestore Parms{};
 
 	Parms.ConsumableProductFlags = std::move(ConsumableProductFlags);
 	Parms.PlayerController = PlayerController;
@@ -959,203 +986,33 @@ class ULeaderboardQueryCallbackProxy* ULeaderboardQueryCallbackProxy::CreateProx
 }
 
 
-// Function OnlineSubsystemUtils.PartyBeaconClient.ClientCancelReservationResponse
-// (Net, NetReliable, Native, Event, Public, NetClient)
+// Function OnlineSubsystemUtils.LogoutCallbackProxy.Logout
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// EPartyReservationResult                 ReservationResponse                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULogoutCallbackProxy*             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void APartyBeaconClient::ClientCancelReservationResponse(EPartyReservationResult ReservationResponse)
+class ULogoutCallbackProxy* ULogoutCallbackProxy::Logout(class UObject* WorldContextObject, class APlayerController* PlayerController)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ClientCancelReservationResponse");
+		Func = StaticClass()->GetFunction("LogoutCallbackProxy", "Logout");
 
-	Params::PartyBeaconClient_ClientCancelReservationResponse Parms{};
+	Params::LogoutCallbackProxy_Logout Parms{};
 
-	Parms.ReservationResponse = ReservationResponse;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ClientReservationResponse
-// (Net, NetReliable, Native, Event, Public, NetClient)
-// Parameters:
-// EPartyReservationResult                 ReservationResponse                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void APartyBeaconClient::ClientReservationResponse(EPartyReservationResult ReservationResponse)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ClientReservationResponse");
-
-	Params::PartyBeaconClient_ClientReservationResponse Parms{};
-
-	Parms.ReservationResponse = ReservationResponse;
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.PlayerController = PlayerController;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
 
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationFull
-// (Net, NetReliable, Native, Event, Public, NetClient)
-
-void APartyBeaconClient::ClientSendReservationFull()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ClientSendReservationFull");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationUpdates
-// (Net, NetReliable, Native, Event, Public, NetClient)
-// Parameters:
-// int32                                   NumRemainingReservations                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void APartyBeaconClient::ClientSendReservationUpdates(int32 NumRemainingReservations)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ClientSendReservationUpdates");
-
-	Params::PartyBeaconClient_ClientSendReservationUpdates Parms{};
-
-	Parms.NumRemainingReservations = NumRemainingReservations;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ServerCancelReservationRequest
-// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
-// Parameters:
-// const struct FUniqueNetIdRepl&          PartyLeader                                            (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void APartyBeaconClient::ServerCancelReservationRequest(const struct FUniqueNetIdRepl& PartyLeader)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ServerCancelReservationRequest");
-
-	Params::PartyBeaconClient_ServerCancelReservationRequest Parms{};
-
-	Parms.PartyLeader = std::move(PartyLeader);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ServerRemoveMemberFromReservationRequest
-// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
-// Parameters:
-// const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FPartyReservation&         ReservationUpdate                                      (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void APartyBeaconClient::ServerRemoveMemberFromReservationRequest(const class FString& SessionId, const struct FPartyReservation& ReservationUpdate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ServerRemoveMemberFromReservationRequest");
-
-	Params::PartyBeaconClient_ServerRemoveMemberFromReservationRequest Parms{};
-
-	Parms.SessionId = std::move(SessionId);
-	Parms.ReservationUpdate = std::move(ReservationUpdate);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ServerReservationRequest
-// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
-// Parameters:
-// const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FPartyReservation&         Reservation                                            (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void APartyBeaconClient::ServerReservationRequest(const class FString& SessionId, const struct FPartyReservation& Reservation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ServerReservationRequest");
-
-	Params::PartyBeaconClient_ServerReservationRequest Parms{};
-
-	Parms.SessionId = std::move(SessionId);
-	Parms.Reservation = std::move(Reservation);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ServerUpdateReservationRequest
-// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
-// Parameters:
-// const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FPartyReservation&         ReservationUpdate                                      (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void APartyBeaconClient::ServerUpdateReservationRequest(const class FString& SessionId, const struct FPartyReservation& ReservationUpdate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ServerUpdateReservationRequest");
-
-	Params::PartyBeaconClient_ServerUpdateReservationRequest Parms{};
-
-	Parms.SessionId = std::move(SessionId);
-	Parms.ReservationUpdate = std::move(ReservationUpdate);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
+	return Parms.ReturnValue;
 }
 
 
@@ -1192,182 +1049,6 @@ class UQuitMatchCallbackProxy* UQuitMatchCallbackProxy::QuitMatch(class UObject*
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerController*                InPlayerController                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UShowLoginUICallbackProxy*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UShowLoginUICallbackProxy* UShowLoginUICallbackProxy::ShowExternalLoginUI(class UObject* WorldContextObject, class APlayerController* InPlayerController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ShowLoginUICallbackProxy", "ShowExternalLoginUI");
-
-	Params::ShowLoginUICallbackProxy_ShowExternalLoginUI Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.InPlayerController = InPlayerController;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientCancelReservationResponse
-// (Net, NetReliable, Native, Event, Public, NetClient)
-// Parameters:
-// ESpectatorReservationResult             ReservationResponse                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ASpectatorBeaconClient::ClientCancelReservationResponse(ESpectatorReservationResult ReservationResponse)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SpectatorBeaconClient", "ClientCancelReservationResponse");
-
-	Params::SpectatorBeaconClient_ClientCancelReservationResponse Parms{};
-
-	Parms.ReservationResponse = ReservationResponse;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientReservationResponse
-// (Net, NetReliable, Native, Event, Public, NetClient)
-// Parameters:
-// ESpectatorReservationResult             ReservationResponse                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ASpectatorBeaconClient::ClientReservationResponse(ESpectatorReservationResult ReservationResponse)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SpectatorBeaconClient", "ClientReservationResponse");
-
-	Params::SpectatorBeaconClient_ClientReservationResponse Parms{};
-
-	Parms.ReservationResponse = ReservationResponse;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationFull
-// (Net, NetReliable, Native, Event, Public, NetClient)
-
-void ASpectatorBeaconClient::ClientSendReservationFull()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SpectatorBeaconClient", "ClientSendReservationFull");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationUpdates
-// (Net, NetReliable, Native, Event, Public, NetClient)
-// Parameters:
-// int32                                   NumRemainingReservations                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ASpectatorBeaconClient::ClientSendReservationUpdates(int32 NumRemainingReservations)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SpectatorBeaconClient", "ClientSendReservationUpdates");
-
-	Params::SpectatorBeaconClient_ClientSendReservationUpdates Parms{};
-
-	Parms.NumRemainingReservations = NumRemainingReservations;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.SpectatorBeaconClient.ServerCancelReservationRequest
-// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
-// Parameters:
-// const struct FUniqueNetIdRepl&          Spectator                                              (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ASpectatorBeaconClient::ServerCancelReservationRequest(const struct FUniqueNetIdRepl& Spectator)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SpectatorBeaconClient", "ServerCancelReservationRequest");
-
-	Params::SpectatorBeaconClient_ServerCancelReservationRequest Parms{};
-
-	Parms.Spectator = std::move(Spectator);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.SpectatorBeaconClient.ServerReservationRequest
-// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
-// Parameters:
-// const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FSpectatorReservation&     Reservation                                            (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void ASpectatorBeaconClient::ServerReservationRequest(const class FString& SessionId, const struct FSpectatorReservation& Reservation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SpectatorBeaconClient", "ServerReservationRequest");
-
-	Params::SpectatorBeaconClient_ServerReservationRequest Parms{};
-
-	Parms.SessionId = std::move(SessionId);
-	Parms.Reservation = std::move(Reservation);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 }
 
 

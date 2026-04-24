@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass DefaultBuildingTool.DefaultBuildingTool_C
-// 0x0000 (0x0E00 - 0x0E00)
+// 0x0000 (0x0AA8 - 0x0AA8)
 class ADefaultBuildingTool_C final : public AFortWeap_BuildingTool
 {
 public:

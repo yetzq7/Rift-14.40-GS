@@ -18,17 +18,17 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Constructor_HammerHitsHeal.GA_Constructor_HammerHitsHeal_C
-// 0x0028 (0x0C78 - 0x0C50)
+// 0x0028 (0x0A90 - 0x0A68)
 class UGA_Constructor_HammerHitsHeal_C final : public UGA_Ninja_Tactical_MeleeHitsHeal_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Constructor_HammerHitsHeal_C;    // 0x0C50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTagContainer                  TC_RequiredTags;                                   // 0x0C58(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Constructor_HammerHitsHeal_C;    // 0x0A68(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTagContainer                  TC_RequiredTags;                                   // 0x0A70(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_GA_Constructor_HammerHitsHeal(int32 EntryPoint);
-	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData_0);
 	void SetupAbility(class UAbilitySystemComponent* AbilitySystem);
+	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData_0);
 
 	bool K2_ShouldAbilityRespondToEvent(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayEventData& Payload) const;
 

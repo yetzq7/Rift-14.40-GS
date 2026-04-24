@@ -10,37 +10,37 @@
 
 #include "Basic.hpp"
 
-#include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "FortniteUI_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass GamepadKeyTextButton.GamepadKeyTextButton_C
-// 0x0150 (0x0CF8 - 0x0BA8)
+// 0x0150 (0x0C88 - 0x0B38)
 class UGamepadKeyTextButton_C final : public UFortGamepadCustomListItem
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UKeybindWidget_C*                       BoundKey;                                          // 0x0BB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                ContentBorder;                                     // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortRichTextBlockLegacy*               FortRichTextBlock_Desc;                            // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortRichTextBlockLegacy*               FortRichTextBlock_NoKey;                           // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_Nokey;                                     // 0x0BD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   ButtonText;                                        // 0x0BD8(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
-	struct FSlateBrush                            IconBrush;                                         // 0x0BF0(0x0088)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class UClass*                                 ControllerInputStyle;                              // 0x0C78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    ButtonClickAction;                                 // 0x0C80(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	EHorizontalAlignment                          ContentAlignment;                                  // 0x0C90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C91[0x7];                                      // 0x0C91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class FName ActionName, const struct FKey& Key)> ChangeTheBinding_Button; // 0x0C98(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class FName                                   ActionNameData;                                    // 0x0CA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FKey                                   KeyData;                                           // 0x0CB0(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FText                                   TextData;                                          // 0x0CC8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FKey                                   KeyNone;                                           // 0x0CE0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B38(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UKeybindWidget_C*                       BoundKey;                                          // 0x0B40(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                ContentBorder;                                     // 0x0B48(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortRichTextBlock*                     FortRichTextBlock_Desc;                            // 0x0B50(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortRichTextBlock*                     FortRichTextBlock_NoKey;                           // 0x0B58(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_Nokey;                                     // 0x0B60(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   ButtonText;                                        // 0x0B68(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	struct FSlateBrush                            IconBrush;                                         // 0x0B80(0x0088)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class UClass*                                 ControllerInputStyle;                              // 0x0C08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    ButtonClickAction;                                 // 0x0C10(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	EHorizontalAlignment                          ContentAlignment;                                  // 0x0C20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C21[0x7];                                      // 0x0C21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   ChangeTheBinding_Button;                           // 0x0C28(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FName                                   ActionNameData;                                    // 0x0C38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKey                                   KeyData;                                           // 0x0C40(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FText                                   TextData;                                          // 0x0C58(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FKey                                   KeyNone;                                           // 0x0C70(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GamepadKeyTextButton(int32 EntryPoint);

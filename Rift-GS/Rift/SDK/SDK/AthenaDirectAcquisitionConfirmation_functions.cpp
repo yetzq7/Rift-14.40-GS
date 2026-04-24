@@ -16,49 +16,117 @@
 
 SDK_NAMESPACE_START
 
-// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.SetPurchaseNumber
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.ExecuteUbergraph_AthenaDirectAcquisitionConfirmation
+// (Final, UbergraphFunction)
 // Parameters:
-// int32                                   InNumToPurchse                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaDirectAcquisitionConfirmation_C::SetPurchaseNumber(int32 InNumToPurchse)
+void UAthenaDirectAcquisitionConfirmation_C::ExecuteUbergraph_AthenaDirectAcquisitionConfirmation(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "SetPurchaseNumber");
+		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "ExecuteUbergraph_AthenaDirectAcquisitionConfirmation");
 
-	Params::AthenaDirectAcquisitionConfirmation_C_SetPurchaseNumber Parms{};
+	Params::AthenaDirectAcquisitionConfirmation_C_ExecuteUbergraph_AthenaDirectAcquisitionConfirmation Parms{};
 
-	Parms.InNumToPurchse = InNumToPurchse;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.UpdateCatalogOfferName
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.BndEvt__CancelButton_K2Node_ComponentBoundEvent_171_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaDirectAcquisitionConfirmation_C::UpdateCatalogOfferName()
+void UAthenaDirectAcquisitionConfirmation_C::BndEvt__CancelButton_K2Node_ComponentBoundEvent_171_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "UpdateCatalogOfferName");
+		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "BndEvt__CancelButton_K2Node_ComponentBoundEvent_171_CommonButtonClicked__DelegateSignature");
+
+	Params::AthenaDirectAcquisitionConfirmation_C_BndEvt__CancelButton_K2Node_ComponentBoundEvent_171_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UAthenaDirectAcquisitionConfirmation_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.UpdateItemList
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaDirectAcquisitionConfirmation_C::UpdateItemList()
+void UAthenaDirectAcquisitionConfirmation_C::BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "UpdateItemList");
+		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
+
+	Params::AthenaDirectAcquisitionConfirmation_C_BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UAthenaDirectAcquisitionConfirmation_C::OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.OnOfferSet
+// (Event, Public, BlueprintEvent)
+
+void UAthenaDirectAcquisitionConfirmation_C::OnOfferSet()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "OnOfferSet");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.UpdateFromOffer
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UAthenaDirectAcquisitionConfirmation_C::UpdateFromOffer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "UpdateFromOffer");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,119 +160,51 @@ void UAthenaDirectAcquisitionConfirmation_C::SetupPrice(class UWidget* PriceCont
 }
 
 
-// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.UpdateFromOffer
+// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.UpdateItemList
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UAthenaDirectAcquisitionConfirmation_C::UpdateItemList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "UpdateItemList");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.SetPurchaseNumber
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InNumToPurchse                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaDirectAcquisitionConfirmation_C::SetPurchaseNumber(int32 InNumToPurchse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "SetPurchaseNumber");
+
+	Params::AthenaDirectAcquisitionConfirmation_C_SetPurchaseNumber Parms{};
+
+	Parms.InNumToPurchse = InNumToPurchse;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.UpdateCatalogOfferName
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UAthenaDirectAcquisitionConfirmation_C::UpdateFromOffer()
+void UAthenaDirectAcquisitionConfirmation_C::UpdateCatalogOfferName()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "UpdateFromOffer");
+		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "UpdateCatalogOfferName");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.BP_OnOfferSet
-// (Event, Public, BlueprintEvent)
-
-void UAthenaDirectAcquisitionConfirmation_C::BP_OnOfferSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "BP_OnOfferSet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UAthenaDirectAcquisitionConfirmation_C::BP_OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "BP_OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaDirectAcquisitionConfirmation_C::BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
-
-	Params::AthenaDirectAcquisitionConfirmation_C_BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UAthenaDirectAcquisitionConfirmation_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.BndEvt__CancelButton_K2Node_ComponentBoundEvent_171_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaDirectAcquisitionConfirmation_C::BndEvt__CancelButton_K2Node_ComponentBoundEvent_171_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "BndEvt__CancelButton_K2Node_ComponentBoundEvent_171_CommonButtonClicked__DelegateSignature");
-
-	Params::AthenaDirectAcquisitionConfirmation_C_BndEvt__CancelButton_K2Node_ComponentBoundEvent_171_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.ExecuteUbergraph_AthenaDirectAcquisitionConfirmation
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaDirectAcquisitionConfirmation_C::ExecuteUbergraph_AthenaDirectAcquisitionConfirmation(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "ExecuteUbergraph_AthenaDirectAcquisitionConfirmation");
-
-	Params::AthenaDirectAcquisitionConfirmation_C_ExecuteUbergraph_AthenaDirectAcquisitionConfirmation Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

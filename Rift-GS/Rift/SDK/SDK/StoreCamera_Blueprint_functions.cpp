@@ -16,45 +16,71 @@
 
 SDK_NAMESPACE_START
 
-// Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.ExecuteUbergraph_StoreCamera_Blueprint
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AStoreCamera_Blueprint_C::UserConstructionScript()
+void AStoreCamera_Blueprint_C::ExecuteUbergraph_StoreCamera_Blueprint(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreCamera_Blueprint_C", "UserConstructionScript");
+		Func = Class->GetFunction("StoreCamera_Blueprint_C", "ExecuteUbergraph_StoreCamera_Blueprint");
+
+	Params::StoreCamera_Blueprint_C_ExecuteUbergraph_StoreCamera_Blueprint Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.ChoicePackFOV-In
+// (BlueprintCallable, BlueprintEvent)
+
+void AStoreCamera_Blueprint_C::ChoicePackFOV_In()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreCamera_Blueprint_C", "ChoicePackFOV-In");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.Timeline_0__FinishedFunc
-// (BlueprintEvent)
+// Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.ChoicePackFOV-Out
+// (BlueprintCallable, BlueprintEvent)
 
-void AStoreCamera_Blueprint_C::Timeline_0__FinishedFunc()
+void AStoreCamera_Blueprint_C::ChoicePackFOV_Out()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreCamera_Blueprint_C", "Timeline_0__FinishedFunc");
+		Func = Class->GetFunction("StoreCamera_Blueprint_C", "ChoicePackFOV-Out");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.Timeline_0__UpdateFunc
-// (BlueprintEvent)
+// Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.DarkenBGVisibility
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AStoreCamera_Blueprint_C::Timeline_0__UpdateFunc()
+void AStoreCamera_Blueprint_C::DarkenBGVisibility(bool Enable)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreCamera_Blueprint_C", "Timeline_0__UpdateFunc");
+		Func = Class->GetFunction("StoreCamera_Blueprint_C", "DarkenBGVisibility");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::StoreCamera_Blueprint_C_DarkenBGVisibility Parms{};
+
+	Parms.Enable = Enable;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -88,41 +114,29 @@ void AStoreCamera_Blueprint_C::ChoicePack__UpdateFunc()
 
 // Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.OnActivated
 // (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AStoreCamera_Blueprint_C::OnActivated(class AFortPlayerController* PlayerController)
+void AStoreCamera_Blueprint_C::OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("StoreCamera_Blueprint_C", "OnActivated");
 
-	Params::StoreCamera_Blueprint_C_OnActivated Parms{};
-
-	Parms.PlayerController = PlayerController;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.OnDeactivated
 // (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AStoreCamera_Blueprint_C::OnDeactivated(class AFortPlayerController* PlayerController)
+void AStoreCamera_Blueprint_C::OnDeactivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("StoreCamera_Blueprint_C", "OnDeactivated");
 
-	Params::StoreCamera_Blueprint_C_OnDeactivated Parms{};
-
-	Parms.PlayerController = PlayerController;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -154,71 +168,45 @@ void AStoreCamera_Blueprint_C::ResetCamera()
 }
 
 
-// Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.DarkenBGVisibility
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.Timeline_0__FinishedFunc
+// (BlueprintEvent)
 
-void AStoreCamera_Blueprint_C::DarkenBGVisibility(bool Enable)
+void AStoreCamera_Blueprint_C::Timeline_0__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreCamera_Blueprint_C", "DarkenBGVisibility");
-
-	Params::StoreCamera_Blueprint_C_DarkenBGVisibility Parms{};
-
-	Parms.Enable = Enable;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.ChoicePackFOV-Out
-// (BlueprintCallable, BlueprintEvent)
-
-void AStoreCamera_Blueprint_C::ChoicePackFOV_Out()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreCamera_Blueprint_C", "ChoicePackFOV-Out");
+		Func = Class->GetFunction("StoreCamera_Blueprint_C", "Timeline_0__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.ChoicePackFOV-In
-// (BlueprintCallable, BlueprintEvent)
+// Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.Timeline_0__UpdateFunc
+// (BlueprintEvent)
 
-void AStoreCamera_Blueprint_C::ChoicePackFOV_In()
+void AStoreCamera_Blueprint_C::Timeline_0__UpdateFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreCamera_Blueprint_C", "ChoicePackFOV-In");
+		Func = Class->GetFunction("StoreCamera_Blueprint_C", "Timeline_0__UpdateFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.ExecuteUbergraph_StoreCamera_Blueprint
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function StoreCamera_Blueprint.StoreCamera_Blueprint_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void AStoreCamera_Blueprint_C::ExecuteUbergraph_StoreCamera_Blueprint(int32 EntryPoint)
+void AStoreCamera_Blueprint_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreCamera_Blueprint_C", "ExecuteUbergraph_StoreCamera_Blueprint");
+		Func = Class->GetFunction("StoreCamera_Blueprint_C", "UserConstructionScript");
 
-	Params::StoreCamera_Blueprint_C_ExecuteUbergraph_StoreCamera_Blueprint Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

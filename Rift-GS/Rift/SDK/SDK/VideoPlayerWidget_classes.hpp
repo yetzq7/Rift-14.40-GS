@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass VideoPlayerWidget.VideoPlayerWidget_C
-// 0x0000 (0x0358 - 0x0358)
+// 0x0000 (0x02E0 - 0x02E0)
 class UVideoPlayerWidget_C final : public UFortVideoPlayerWidget
 {
 public:

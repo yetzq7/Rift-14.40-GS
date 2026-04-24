@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass TT_Commando_FragGrenade.TT_Commando_FragGrenade_C
-// 0x0000 (0x0180 - 0x0180)
+// 0x0000 (0x0168 - 0x0168)
 class UTT_Commando_FragGrenade_C final : public UFortGameplayAbilityTooltip
 {
 public:

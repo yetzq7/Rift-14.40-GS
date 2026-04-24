@@ -16,25 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function GiftingUserItem.GiftingUserItem_C.SetSelectionState
-// 0x0002 (0x0002 - 0x0000)
-struct GiftingUserItem_C_SetSelectionState final
-{
-public:
-	ESelectionState                               NewState;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bAnimateOnSelect;                                  // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_GiftingUserItem_C_SetSelectionState;
-
-// Function GiftingUserItem.GiftingUserItem_C.UpdateMessageText
-// 0x0018 (0x0018 - 0x0000)
-struct GiftingUserItem_C_UpdateMessageText final
-{
-public:
-	class FText                                   NewMessage;                                        // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_GiftingUserItem_C_UpdateMessageText;
-
 // Function GiftingUserItem.GiftingUserItem_C.ExecuteUbergraph_GiftingUserItem
 // 0x0030 (0x0030 - 0x0000)
 struct GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem final
@@ -50,6 +31,25 @@ public:
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem;
+
+// Function GiftingUserItem.GiftingUserItem_C.UpdateMessageText
+// 0x0018 (0x0018 - 0x0000)
+struct GiftingUserItem_C_UpdateMessageText final
+{
+public:
+	class FText                                   NewMessage;                                        // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_GiftingUserItem_C_UpdateMessageText;
+
+// Function GiftingUserItem.GiftingUserItem_C.SetSelectionState
+// 0x0002 (0x0002 - 0x0000)
+struct GiftingUserItem_C_SetSelectionState final
+{
+public:
+	ESelectionState                               NewState;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bAnimateOnSelect;                                  // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_GiftingUserItem_C_SetSelectionState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

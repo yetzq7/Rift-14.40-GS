@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PBWA_S1_WindowsC.PBWA_S1_WindowsC_C
-// 0x0000 (0x0CD0 - 0x0CD0)
+// 0x0000 (0x0CE8 - 0x0CE8)
 class APBWA_S1_WindowsC_C final : public ABuildingWall
 {
 public:

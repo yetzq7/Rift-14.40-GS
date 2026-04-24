@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function AthenaCustomizationSlotButtonWrapper.AthenaCustomizationSlotButtonWrapper_C.ExecuteUbergraph_AthenaCustomizationSlotButtonWrapper
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -31,26 +31,6 @@ void UAthenaCustomizationSlotButtonWrapper_C::ExecuteUbergraph_AthenaCustomizati
 	Params::AthenaCustomizationSlotButtonWrapper_C_ExecuteUbergraph_AthenaCustomizationSlotButtonWrapper Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaCustomizationSlotButtonWrapper.AthenaCustomizationSlotButtonWrapper_C.AnimPopulateInternal
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaCustomizationSlotButtonWrapper_C::AnimPopulateInternal(int32 ButtonIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaCustomizationSlotButtonWrapper_C", "AnimPopulateInternal");
-
-	Params::AthenaCustomizationSlotButtonWrapper_C_AnimPopulateInternal Parms{};
-
-	Parms.ButtonIndex = ButtonIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -130,42 +110,23 @@ void UAthenaCustomizationSlotButtonWrapper_C::BndEvt__SlotButton_K2Node_Componen
 }
 
 
-// Function AthenaCustomizationSlotButtonWrapper.AthenaCustomizationSlotButtonWrapper_C.GetCustomizationSlotActiveState
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function AthenaCustomizationSlotButtonWrapper.AthenaCustomizationSlotButtonWrapper_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool*                                   bCosmeticAvaialble                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool*                                   bActive                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaCustomizationSlotButtonWrapper_C::GetCustomizationSlotActiveState(bool* bCosmeticAvaialble, bool* bActive)
+void UAthenaCustomizationSlotButtonWrapper_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaCustomizationSlotButtonWrapper_C", "GetCustomizationSlotActiveState");
+		Func = Class->GetFunction("AthenaCustomizationSlotButtonWrapper_C", "PreConstruct");
 
-	Params::AthenaCustomizationSlotButtonWrapper_C_GetCustomizationSlotActiveState Parms{};
+	Params::AthenaCustomizationSlotButtonWrapper_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (bCosmeticAvaialble != nullptr)
-		*bCosmeticAvaialble = Parms.bCosmeticAvaialble;
-
-	if (bActive != nullptr)
-		*bActive = Parms.bActive;
-}
-
-
-// Function AthenaCustomizationSlotButtonWrapper.AthenaCustomizationSlotButtonWrapper_C.ResetPopulateAnimVisual
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UAthenaCustomizationSlotButtonWrapper_C::ResetPopulateAnimVisual()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaCustomizationSlotButtonWrapper_C", "ResetPopulateAnimVisual");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

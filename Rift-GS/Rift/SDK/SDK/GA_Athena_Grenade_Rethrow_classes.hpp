@@ -17,27 +17,27 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C
-// 0x0020 (0x0E88 - 0x0E68)
+// 0x0020 (0x0C58 - 0x0C38)
 class UGA_Athena_Grenade_Rethrow_C final : public UGA_Athena_Grenade_WithTrajectory_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Athena_Grenade_Rethrow_C;        // 0x0E68(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortProjectileBase*                    Projectile;                                        // 0x0E70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TossDelay;                                         // 0x0E78(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   HolsterId;                                         // 0x0E7C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Athena_Grenade_Rethrow_C;        // 0x0C38(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortProjectileBase*                    Projectile;                                        // 0x0C40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TossDelay;                                         // 0x0C48(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   HolsterId;                                         // 0x0C4C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_Athena_Grenade_Rethrow(int32 EntryPoint);
-	void K2_OnEndAbility(bool bWasCancelled);
-	void Server_SpawnProjectile(const struct FVector& Location, const struct FRotator& Direction);
-	void TossGrenade();
-	void K2_ActivateAbility();
-	void OnFinish_B295E6694DBD8B2B2478A38EA60F5624();
-	void Triggered_3B7299CC49B6C5C075996A9C8DDF315F(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void AttachProjectile();
 	void Cancelled_3B7299CC49B6C5C075996A9C8DDF315F(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 	void Completed_3B7299CC49B6C5C075996A9C8DDF315F(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
-	void AttachProjectile();
 	void DetachProjectile();
+	void OnFinish_B295E6694DBD8B2B2478A38EA60F5624();
+	void Triggered_3B7299CC49B6C5C075996A9C8DDF315F(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void K2_OnEndAbility(bool bWasCancelled);
+	void K2_ActivateAbility();
+	void Server_SpawnProjectile(const struct FVector& Location, const struct FRotator& Direction);
+	void TossGrenade();
 
 public:
 	static class UClass* StaticClass()

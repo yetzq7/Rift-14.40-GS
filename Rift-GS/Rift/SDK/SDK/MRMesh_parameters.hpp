@@ -10,8 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
@@ -42,24 +40,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MeshReconstructorBase_IsReconstructionStarted;
-
-// Function MRMesh.MockDataMeshTrackerComponent.ConnectMRMesh
-// 0x0008 (0x0008 - 0x0000)
-struct MockDataMeshTrackerComponent_ConnectMRMesh final
-{
-public:
-	class UMRMeshComponent*                       InMRMeshPtr;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MockDataMeshTrackerComponent_ConnectMRMesh;
-
-// Function MRMesh.MockDataMeshTrackerComponent.DisconnectMRMesh
-// 0x0008 (0x0008 - 0x0000)
-struct MockDataMeshTrackerComponent_DisconnectMRMesh final
-{
-public:
-	class UMRMeshComponent*                       InMRMeshPtr;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MockDataMeshTrackerComponent_DisconnectMRMesh;
 
 // Function MRMesh.MRMeshComponent.IsConnected
 // 0x0001 (0x0001 - 0x0000)

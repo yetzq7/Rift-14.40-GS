@@ -10,17 +10,26 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass Subtitles.Subtitles_C
-// 0x0008 (0x02D0 - 0x02C8)
+// 0x0018 (0x0280 - 0x0268)
 class USubtitles_C final : public UFortHUDElementWidget
 {
 public:
-	class USubtitleDisplay*                       SubtitleDisplay;                                   // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0268(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USubtitleDisplay*                       SubtitleDisplay;                                   // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBoxRoot;                                   // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void ExecuteUbergraph_Subtitles(int32 EntryPoint);
+	void Construct();
+	ESlateVisibility GetSubtitleVisibility();
 
 public:
 	static class UClass* StaticClass()

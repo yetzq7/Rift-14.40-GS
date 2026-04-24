@@ -70,8 +70,22 @@ void AGCNL_EdgeOfStorm_C::Activated(const struct FVector& EdgeOfStorm)
 }
 
 
+// Function GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AGCNL_EdgeOfStorm_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCNL_EdgeOfStorm_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.OnActive
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
@@ -96,7 +110,7 @@ bool AGCNL_EdgeOfStorm_C::OnActive(class AActor* MyTarget, const struct FGamepla
 
 
 // Function GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.OnExecute
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)

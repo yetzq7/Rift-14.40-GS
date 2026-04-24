@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Get_DirectDamageParent.Get_DirectDamageParent_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x05F0 - 0x05F0)
 class UGet_DirectDamageParent_C : public UGET_DamageParent_C
 {
 public:

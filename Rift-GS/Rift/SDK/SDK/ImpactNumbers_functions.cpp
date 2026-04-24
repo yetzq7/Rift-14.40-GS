@@ -56,6 +56,20 @@ void AImpactNumbers_C::OnNewDamageNumber(const struct FFortDamageNumberInfo& New
 }
 
 
+// Function ImpactNumbers.ImpactNumbers_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AImpactNumbers_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ImpactNumbers_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ImpactNumbers.ImpactNumbers_C.init a new number set
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

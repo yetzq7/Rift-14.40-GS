@@ -36,20 +36,6 @@ void AB_Prj_Ranged_Rocket_Athena_C::ExecuteUbergraph_B_Prj_Ranged_Rocket_Athena(
 }
 
 
-// Function B_Prj_Ranged_Rocket_Athena.B_Prj_Ranged_Rocket_Athena_C.RocketWaterDelay
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Ranged_Rocket_Athena_C::RocketWaterDelay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Ranged_Rocket_Athena_C", "RocketWaterDelay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_Prj_Ranged_Rocket_Athena.B_Prj_Ranged_Rocket_Athena_C.OnTouched
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -113,8 +99,8 @@ void AB_Prj_Ranged_Rocket_Athena_C::ReceiveTick(float DeltaSeconds)
 // Function B_Prj_Ranged_Rocket_Athena.B_Prj_Ranged_Rocket_Athena_C.OnExploded
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference)
 
 void AB_Prj_Ranged_Rocket_Athena_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
 {
@@ -146,17 +132,23 @@ void AB_Prj_Ranged_Rocket_Athena_C::FuseTimerMax()
 }
 
 
-// Function B_Prj_Ranged_Rocket_Athena.B_Prj_Ranged_Rocket_Athena_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function B_Prj_Ranged_Rocket_Athena.B_Prj_Ranged_Rocket_Athena_C.OnBounce
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
-void AB_Prj_Ranged_Rocket_Athena_C::ReceiveBeginPlay()
+void AB_Prj_Ranged_Rocket_Athena_C::OnBounce(const struct FHitResult& Hit)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Ranged_Rocket_Athena_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("B_Prj_Ranged_Rocket_Athena_C", "OnBounce");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::B_Prj_Ranged_Rocket_Athena_C_OnBounce Parms{};
+
+	Parms.Hit = std::move(Hit);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -180,23 +172,17 @@ void AB_Prj_Ranged_Rocket_Athena_C::OnStop(const struct FHitResult& Hit)
 }
 
 
-// Function B_Prj_Ranged_Rocket_Athena.B_Prj_Ranged_Rocket_Athena_C.OnBounce
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// Function B_Prj_Ranged_Rocket_Athena.B_Prj_Ranged_Rocket_Athena_C.PPFader__FinishedFunc
+// (BlueprintEvent)
 
-void AB_Prj_Ranged_Rocket_Athena_C::OnBounce(const struct FHitResult& Hit)
+void AB_Prj_Ranged_Rocket_Athena_C::PPFader__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Ranged_Rocket_Athena_C", "OnBounce");
+		Func = Class->GetFunction("B_Prj_Ranged_Rocket_Athena_C", "PPFader__FinishedFunc");
 
-	Params::B_Prj_Ranged_Rocket_Athena_C_OnBounce Parms{};
-
-	Parms.Hit = std::move(Hit);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -214,15 +200,15 @@ void AB_Prj_Ranged_Rocket_Athena_C::PPFader__UpdateFunc()
 }
 
 
-// Function B_Prj_Ranged_Rocket_Athena.B_Prj_Ranged_Rocket_Athena_C.PPFader__FinishedFunc
-// (BlueprintEvent)
+// Function B_Prj_Ranged_Rocket_Athena.B_Prj_Ranged_Rocket_Athena_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AB_Prj_Ranged_Rocket_Athena_C::PPFader__FinishedFunc()
+void AB_Prj_Ranged_Rocket_Athena_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Ranged_Rocket_Athena_C", "PPFader__FinishedFunc");
+		Func = Class->GetFunction("B_Prj_Ranged_Rocket_Athena_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

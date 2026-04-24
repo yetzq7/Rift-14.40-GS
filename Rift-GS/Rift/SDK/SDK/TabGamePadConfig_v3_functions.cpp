@@ -455,6 +455,26 @@ void UTabGamePadConfig_v3_C::HandleGamepadMappingInfoChange()
 }
 
 
+// Function TabGamePadConfig_v3.TabGamePadConfig_v3_C.IsConsole
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UTabGamePadConfig_v3_C::IsConsole()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TabGamePadConfig_v3_C", "IsConsole");
+
+	Params::TabGamePadConfig_v3_C_IsConsole Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function TabGamePadConfig_v3.TabGamePadConfig_v3_C.IsCustomConfig
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -541,7 +561,7 @@ void UTabGamePadConfig_v3_C::CloseCustomActionsPanel(bool FocusLastButton)
 // Function TabGamePadConfig_v3.TabGamePadConfig_v3_C.CreateCustomResetToDefaultList
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FConfirmationDialogAction>ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash)
+// TArray<struct FConfirmationDialogAction>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FConfirmationDialogAction> UTabGamePadConfig_v3_C::CreateCustomResetToDefaultList()
 {
@@ -579,7 +599,7 @@ void UTabGamePadConfig_v3_C::ChangeCustomTabListVisibilityForInputType(ECommonIn
 
 
 // Function TabGamePadConfig_v3.TabGamePadConfig_v3_C.HandleGamepadInfoSelectorBack
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UTabGamePadConfig_v3_C::HandleGamepadInfoSelectorBack()
 {

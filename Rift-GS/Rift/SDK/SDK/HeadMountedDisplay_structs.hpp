@@ -13,7 +13,8 @@
 
 SDK_NAMESPACE_START
 
-
+// Enum HeadMountedDisplay.EXRTrackedDeviceType
+// NumValues: 0x0007
 enum class EXRTrackedDeviceType : uint8
 {
 	HeadMountedDisplay                       = 0,
@@ -25,7 +26,8 @@ enum class EXRTrackedDeviceType : uint8
 	EXRTrackedDeviceType_MAX                 = 256,
 };
 
-
+// Enum HeadMountedDisplay.ESpectatorScreenMode
+// NumValues: 0x0009
 enum class ESpectatorScreenMode : uint8
 {
 	Disabled                                 = 0,
@@ -50,13 +52,12 @@ enum class EHMDWornState : uint8
 };
 
 // Enum HeadMountedDisplay.EHMDTrackingOrigin
-// NumValues: 0x0004
+// NumValues: 0x0003
 enum class EHMDTrackingOrigin : uint8
 {
 	Floor                                    = 0,
 	Eye                                      = 1,
-	Stage                                    = 2,
-	EHMDTrackingOrigin_MAX                   = 3,
+	EHMDTrackingOrigin_MAX                   = 2,
 };
 
 // Enum HeadMountedDisplay.EOrientPositionSelector

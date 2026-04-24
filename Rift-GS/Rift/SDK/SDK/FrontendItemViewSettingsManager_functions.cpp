@@ -22,10 +22,9 @@ SDK_NAMESPACE_START
 // const EFrontEndCamera                   Camera                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const ESubGame                          GameMode                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class UFortItemDefinition*        ItemDefinition                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const int32                             SubslotIndex                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FFortItemViewSettings            ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor)
 
-struct FFortItemViewSettings UFrontendItemViewSettingsManager_C::GetItemViewSettings(const EFrontEndCamera Camera, const ESubGame GameMode, const class UFortItemDefinition* ItemDefinition, const int32 SubslotIndex) const
+struct FFortItemViewSettings UFrontendItemViewSettingsManager_C::GetItemViewSettings(const EFrontEndCamera Camera, const ESubGame GameMode, const class UFortItemDefinition* ItemDefinition) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -37,7 +36,6 @@ struct FFortItemViewSettings UFrontendItemViewSettingsManager_C::GetItemViewSett
 	Parms.Camera = Camera;
 	Parms.GameMode = GameMode;
 	Parms.ItemDefinition = ItemDefinition;
-	Parms.SubslotIndex = SubslotIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -46,13 +44,12 @@ struct FFortItemViewSettings UFrontendItemViewSettingsManager_C::GetItemViewSett
 
 
 // Function FrontendItemViewSettingsManager.FrontendItemViewSettingsManager_C.Is Hero or Previews on Hero
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UFortItemDefinition*              Item_Definition                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   SubslotIndex                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool UFrontendItemViewSettingsManager_C::Is_Hero_or_Previews_on_Hero(class UFortItemDefinition* Item_Definition, int32 SubslotIndex) const
+bool UFrontendItemViewSettingsManager_C::Is_Hero_or_Previews_on_Hero(class UFortItemDefinition* Item_Definition) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -62,7 +59,6 @@ bool UFrontendItemViewSettingsManager_C::Is_Hero_or_Previews_on_Hero(class UFort
 	Params::FrontendItemViewSettingsManager_C_Is_Hero_or_Previews_on_Hero Parms{};
 
 	Parms.Item_Definition = Item_Definition;
-	Parms.SubslotIndex = SubslotIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 

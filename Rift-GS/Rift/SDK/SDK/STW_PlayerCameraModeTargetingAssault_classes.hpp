@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass STW_PlayerCameraModeTargetingAssault.STW_PlayerCameraModeTargetingAssault_C
-// 0x0000 (0x0DC0 - 0x0DC0)
+// 0x0000 (0x0C50 - 0x0C50)
 class USTW_PlayerCameraModeTargetingAssault_C final : public UAthena_PlayerCameraModeTargetingAssault_C
 {
 public:

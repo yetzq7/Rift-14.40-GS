@@ -64,40 +64,6 @@ void UGA_Athena_HookDestroy_C::K2_ActivateAbility()
 }
 
 
-// Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnSync_A7AA33494F9F686A79A026809EAEF410
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_HookDestroy_C::OnSync_A7AA33494F9F686A79A026809EAEF410()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_HookDestroy_C", "OnSync_A7AA33494F9F686A79A026809EAEF410");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.EventReceived_1B71851D49048B6433DA75B0D6007B6E
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayEventData&        Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UGA_Athena_HookDestroy_C::EventReceived_1B71851D49048B6433DA75B0D6007B6E(const struct FGameplayEventData& Payload)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_HookDestroy_C", "EventReceived_1B71851D49048B6433DA75B0D6007B6E");
-
-	Params::GA_Athena_HookDestroy_C_EventReceived_1B71851D49048B6433DA75B0D6007B6E Parms{};
-
-	Parms.Payload = std::move(Payload);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnCompleted_7CDAB77949F908D1F388AB845AE6C282
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -593,20 +559,6 @@ void UGA_Athena_HookDestroy_C::K2_OnEndAbility(bool bWasCancelled)
 	Parms.bWasCancelled = bWasCancelled;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnRep_BadgerGrapeDelayFailsafe
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_HookDestroy_C::OnRep_BadgerGrapeDelayFailsafe()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_HookDestroy_C", "OnRep_BadgerGrapeDelayFailsafe");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

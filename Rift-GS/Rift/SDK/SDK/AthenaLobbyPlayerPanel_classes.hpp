@@ -12,34 +12,33 @@
 
 #include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
-#include "UMG_structs.hpp"
-#include "FortniteUI_classes.hpp"
+#include "CommonUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass AthenaLobbyPlayerPanel.AthenaLobbyPlayerPanel_C
-// 0x0290 (0x07B8 - 0x0528)
-class UAthenaLobbyPlayerPanel_C final : public UAthenaLobbyPlayerPanel
+// 0x0238 (0x0470 - 0x0238)
+class UAthenaLobbyPlayerPanel_C final : public UCommonUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0528(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UHorizontalBox*                         BattlePassRow;                                     // 0x0530(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                Border_0;                                          // 0x0538(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SeasonPassIcon;                                    // 0x0540(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FFortTeamMemberInfo                    TeamMemberInfo;                                    // 0x0548(0x0200)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnGadgetsClicked;                                  // 0x0748(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class FText                                   AddFriendText;                                     // 0x0758(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   AcceptInviteText;                                  // 0x0770(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   SentInviteText;                                    // 0x0788(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   AcceptedInviteText;                                // 0x07A0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAthenaLobbyPlayerPanelActions_C*       Actions;                                           // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAthenaLobbyPlayerPanelDetails_C*       Details;                                           // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FFortTeamMemberInfo                    TeamMemberInfo;                                    // 0x0250(0x0200)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	UMulticastDelegateProperty_                   OnGadgetsClicked;                                  // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	UMulticastDelegateProperty_                   OnClosed;                                          // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_AthenaLobbyPlayerPanel(int32 EntryPoint);
-	void OnIsMutedUpdated(bool bIsMuted);
-	void OnFriendStatusUpdated(EFortFriendRequestStatus FriendRequestStatus);
-	void OnHasBattlePassUpdated(bool bHasBattlePass);
-	struct FEventReply OnMouseButtonDown_0(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void Construct();
+	void Initialize();
+	void SetTeamMemberInfo(const struct FFortTeamMemberInfo& TeamMemberInfo_0);
+	void Refresh();
+	void Focus();
+	void InitializeContextEvents();
+	void OnTeamMemberStateChanged(const struct FFortTeamMemberInfo& TeamMemberInfo_0);
+	void Cancel();
 
 public:
 	static class UClass* StaticClass()

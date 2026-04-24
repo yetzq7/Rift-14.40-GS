@@ -36,15 +36,15 @@ void APlayerPawn_Generic_Parent_C::ExecuteUbergraph_PlayerPawn_Generic_Parent(in
 }
 
 
-// Function PlayerPawn_Generic_Parent.PlayerPawn_Generic_Parent_C.ReinitializeWeaponMaterials
+// Function PlayerPawn_Generic_Parent.PlayerPawn_Generic_Parent_C.Entered Water Volume
 // (BlueprintCallable, BlueprintEvent)
 
-void APlayerPawn_Generic_Parent_C::ReinitializeWeaponMaterials()
+void APlayerPawn_Generic_Parent_C::Entered_Water_Volume()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawn_Generic_Parent_C", "ReinitializeWeaponMaterials");
+		Func = Class->GetFunction("PlayerPawn_Generic_Parent_C", "Entered Water Volume");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,20 +70,6 @@ void APlayerPawn_Generic_Parent_C::Player_Creates_a_Splash(const struct FTransfo
 }
 
 
-// Function PlayerPawn_Generic_Parent.PlayerPawn_Generic_Parent_C.Entered Water Volume
-// (BlueprintCallable, BlueprintEvent)
-
-void APlayerPawn_Generic_Parent_C::Entered_Water_Volume()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawn_Generic_Parent_C", "Entered Water Volume");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function PlayerPawn_Generic_Parent.PlayerPawn_Generic_Parent_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -93,6 +79,34 @@ void APlayerPawn_Generic_Parent_C::ReceiveBeginPlay()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("PlayerPawn_Generic_Parent_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PlayerPawn_Generic_Parent.PlayerPawn_Generic_Parent_C.ReinitializeWeaponMaterials
+// (BlueprintCallable, BlueprintEvent)
+
+void APlayerPawn_Generic_Parent_C::ReinitializeWeaponMaterials()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerPawn_Generic_Parent_C", "ReinitializeWeaponMaterials");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PlayerPawn_Generic_Parent.PlayerPawn_Generic_Parent_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void APlayerPawn_Generic_Parent_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerPawn_Generic_Parent_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

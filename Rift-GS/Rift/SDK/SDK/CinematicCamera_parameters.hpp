@@ -10,8 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "CinematicCamera_structs.hpp"
-
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
@@ -24,24 +22,6 @@ public:
 	class UCineCameraComponent*                   ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CineCameraActor_GetCineCameraComponent;
-
-// Function CinematicCamera.CineCameraComponent.GetLensPresetsCopy
-// 0x0010 (0x0010 - 0x0000)
-struct CineCameraComponent_GetLensPresetsCopy final
-{
-public:
-	TArray<struct FNamedLensPreset>               ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CineCameraComponent_GetLensPresetsCopy;
-
-// Function CinematicCamera.CineCameraComponent.SetCurrentFocalLength
-// 0x0004 (0x0004 - 0x0000)
-struct CineCameraComponent_SetCurrentFocalLength final
-{
-public:
-	float                                         InFocalLength;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CineCameraComponent_SetCurrentFocalLength;
 
 // Function CinematicCamera.CineCameraComponent.SetFilmbackPresetByName
 // 0x0010 (0x0010 - 0x0000)
@@ -60,15 +40,6 @@ public:
 	class FString                                 InPresetName;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CineCameraComponent_SetLensPresetByName;
-
-// Function CinematicCamera.CineCameraComponent.GetDefaultFilmbackPresetName
-// 0x0010 (0x0010 - 0x0000)
-struct CineCameraComponent_GetDefaultFilmbackPresetName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CineCameraComponent_GetDefaultFilmbackPresetName;
 
 // Function CinematicCamera.CineCameraComponent.GetFilmbackPresetName
 // 0x0010 (0x0010 - 0x0000)
@@ -105,15 +76,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CineCameraComponent_GetVerticalFieldOfView;
-
-// Function CinematicCamera.CameraRig_Rail.GetRailSplineComponent
-// 0x0008 (0x0008 - 0x0000)
-struct CameraRig_Rail_GetRailSplineComponent final
-{
-public:
-	class USplineComponent*                       ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CameraRig_Rail_GetRailSplineComponent;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

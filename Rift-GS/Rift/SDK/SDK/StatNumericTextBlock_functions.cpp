@@ -16,51 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function StatNumericTextBlock.StatNumericTextBlock_C.SetComparisonState
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function StatNumericTextBlock.StatNumericTextBlock_C.ExecuteUbergraph_StatNumericTextBlock
+// (Final, UbergraphFunction)
 // Parameters:
-// EFortBuffState                          Buff_State_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UStatNumericTextBlock_C::SetComparisonState(EFortBuffState Buff_State_0)
+void UStatNumericTextBlock_C::ExecuteUbergraph_StatNumericTextBlock(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StatNumericTextBlock_C", "SetComparisonState");
+		Func = Class->GetFunction("StatNumericTextBlock_C", "ExecuteUbergraph_StatNumericTextBlock");
 
-	Params::StatNumericTextBlock_C_SetComparisonState Parms{};
+	Params::StatNumericTextBlock_C_ExecuteUbergraph_StatNumericTextBlock Parms{};
 
-	Parms.Buff_State_0 = Buff_State_0;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function StatNumericTextBlock.StatNumericTextBlock_C.UpdateComparison
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UStatNumericTextBlock_C::UpdateComparison()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StatNumericTextBlock_C", "UpdateComparison");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StatNumericTextBlock.StatNumericTextBlock_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UStatNumericTextBlock_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StatNumericTextBlock_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -84,21 +56,49 @@ void UStatNumericTextBlock_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function StatNumericTextBlock.StatNumericTextBlock_C.ExecuteUbergraph_StatNumericTextBlock
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function StatNumericTextBlock.StatNumericTextBlock_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UStatNumericTextBlock_C::ExecuteUbergraph_StatNumericTextBlock(int32 EntryPoint)
+void UStatNumericTextBlock_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StatNumericTextBlock_C", "ExecuteUbergraph_StatNumericTextBlock");
+		Func = Class->GetFunction("StatNumericTextBlock_C", "Construct");
 
-	Params::StatNumericTextBlock_C_ExecuteUbergraph_StatNumericTextBlock Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function StatNumericTextBlock.StatNumericTextBlock_C.UpdateComparison
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UStatNumericTextBlock_C::UpdateComparison()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StatNumericTextBlock_C", "UpdateComparison");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StatNumericTextBlock.StatNumericTextBlock_C.SetComparisonState
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFortBuffState                          Buff_State_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UStatNumericTextBlock_C::SetComparisonState(EFortBuffState Buff_State_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StatNumericTextBlock_C", "SetComparisonState");
+
+	Params::StatNumericTextBlock_C_SetComparisonState Parms{};
+
+	Parms.Buff_State_0 = Buff_State_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PlayerCameraMode1P.PlayerCameraMode1P_C
-// 0x0000 (0x0DC0 - 0x0DC0)
+// 0x0000 (0x0C50 - 0x0C50)
 class UPlayerCameraMode1P_C : public UFortCameraMode_ThirdPerson
 {
 public:

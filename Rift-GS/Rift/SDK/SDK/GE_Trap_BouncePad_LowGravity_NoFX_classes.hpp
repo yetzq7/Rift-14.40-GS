@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_Trap_BouncePad_LowGravity_NoFX.GE_Trap_BouncePad_LowGravity_NoFX_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x05F0 - 0x05F0)
 class UGE_Trap_BouncePad_LowGravity_NoFX_C final : public UGameplayEffect
 {
 public:

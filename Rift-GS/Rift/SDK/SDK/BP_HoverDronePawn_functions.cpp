@@ -36,6 +36,20 @@ void ABP_HoverDronePawn_C::ExecuteUbergraph_BP_HoverDronePawn(int32 EntryPoint)
 }
 
 
+// Function BP_HoverDronePawn.BP_HoverDronePawn_C.Update Wind Audio
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_HoverDronePawn_C::Update_Wind_Audio()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HoverDronePawn_C", "Update Wind Audio");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_HoverDronePawn.BP_HoverDronePawn_C.ReceiveUnpossessed
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -76,34 +90,6 @@ void ABP_HoverDronePawn_C::ReceivePossessed(class AController* NewController)
 }
 
 
-// Function BP_HoverDronePawn.BP_HoverDronePawn_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_HoverDronePawn_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoverDronePawn_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_HoverDronePawn.BP_HoverDronePawn_C.Update Wind Audio
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_HoverDronePawn_C::Update_Wind_Audio()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoverDronePawn_C", "Update Wind Audio");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_HoverDronePawn.BP_HoverDronePawn_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -121,6 +107,34 @@ void ABP_HoverDronePawn_C::ReceiveTick(float DeltaSeconds)
 	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_HoverDronePawn.BP_HoverDronePawn_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_HoverDronePawn_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HoverDronePawn_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_HoverDronePawn.BP_HoverDronePawn_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_HoverDronePawn_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HoverDronePawn_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

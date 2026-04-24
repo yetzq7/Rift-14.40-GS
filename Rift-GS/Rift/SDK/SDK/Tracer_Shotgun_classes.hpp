@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Tracer_Shotgun.Tracer_Shotgun_C
-// 0x0008 (0x02C0 - 0x02B8)
+// 0x0008 (0x03F0 - 0x03E8)
 class ATracer_Shotgun_C final : public AFortTracerBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_Tracer_Shotgun(int32 EntryPoint);

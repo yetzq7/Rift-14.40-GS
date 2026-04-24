@@ -17,27 +17,27 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass HeroesCamera_Blueprint.HeroesCamera_Blueprint_C
-// 0x0020 (0x0800 - 0x07E0)
+// 0x0020 (0x08A0 - 0x0880)
 class AHeroesCamera_Blueprint_C final : public AFortCameraBase
 {
 public:
-	uint8                                         Pad_7D8[0x8];                                      // 0x07D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          MouseDown;                                         // 0x07E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7E9[0x7];                                      // 0x07E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        Cached_Pawn;                                       // 0x07F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0880(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          MouseDown;                                         // 0x0888(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_889[0x7];                                      // 0x0889(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        Cached_Pawn;                                       // 0x0890(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void HandleMousePress();
-	void HandleMouseRelease();
-	void InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3(const struct FKey& Key);
-	void InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2(const struct FKey& Key);
-	void InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1(const struct FKey& Key);
-	void InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0(const struct FKey& Key);
-	void OnActivated(class AFortPlayerController* PlayerController);
-	void OnDeactivated(class AFortPlayerController* PlayerController);
-	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_HeroesCamera_Blueprint(int32 EntryPoint);
+	void OnActivated();
+	void ReceiveTick(float DeltaSeconds);
+	void OnDeactivated();
+	void InpActEvt_RightMouseButton_K2Node_InputKeyEvent_0(const struct FKey& Key);
+	void InpActEvt_RightMouseButton_K2Node_InputKeyEvent_1(const struct FKey& Key);
+	void InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2(const struct FKey& Key);
+	void InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_3(const struct FKey& Key);
+	void UserConstructionScript();
+	void HandleMouseRelease();
+	void HandleMousePress();
 
 public:
 	static class UClass* StaticClass()

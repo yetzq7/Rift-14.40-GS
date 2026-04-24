@@ -60,7 +60,7 @@ DUMPER7_ASSERTS_CableComponent_GetAttachedComponent;
 struct CableComponent_GetCableParticleLocations final
 {
 public:
-	TArray<struct FVector>                        Locations;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        Locations;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CableComponent_GetCableParticleLocations;
 

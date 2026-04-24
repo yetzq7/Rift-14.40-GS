@@ -11,48 +11,47 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "FortniteUI_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass TeamMemberPedestal_Nameplate.TeamMemberPedestal_Nameplate_C
-// 0x0400 (0x1058 - 0x0C58)
+// 0x0400 (0x06A8 - 0x02A8)
 class UTeamMemberPedestal_Nameplate_C final : public UFortTeamMemberPedestalNameplate
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C58(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       NotReadyTextColor;                                 // 0x0C60(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ReadyTextColor;                                    // 0x0C68(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       On_Ready_Change_Text;                              // 0x0C70(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class USizeBox*                               SB_InputAction;                                    // 0x0C78(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               Widget_PlayerLevel;                                // 0x0C80(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FFortTeamMemberInfo                    TeamMemberInfo;                                    // 0x0C88(0x0200)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	int32                                         PlayerIndex;                                       // 0x0E88(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHovered;                                          // 0x0E8C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bIsTalking;                                        // 0x0E8D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bIsMuted;                                          // 0x0E8E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E8F[0x1];                                      // 0x0E8F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            TalkingBrush;                                      // 0x0E90(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateBrush                            MutedBrush;                                        // 0x0F18(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateBrush                            MicBrush;                                          // 0x0FA0(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FLinearColor                           ReadyColor;                                        // 0x1028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           NotReadyColor;                                     // 0x1038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             UnReadySound;                                      // 0x1048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             ReadySound;                                        // 0x1050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       NotReadyTextColor;                                 // 0x02B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       ReadyTextColor;                                    // 0x02B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       On_Ready_Change_Text;                              // 0x02C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonActionWidget*                    InputActionWidget;                                 // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SB_InputAction;                                    // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FFortTeamMemberInfo                    TeamMemberInfo;                                    // 0x02D8(0x0200)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	int32                                         PlayerIndex;                                       // 0x04D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHovered;                                          // 0x04DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsTalking;                                        // 0x04DD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsMuted;                                          // 0x04DE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4DF[0x1];                                      // 0x04DF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            TalkingBrush;                                      // 0x04E0(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            MutedBrush;                                        // 0x0568(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            MicBrush;                                          // 0x05F0(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FLinearColor                           ReadyColor;                                        // 0x0678(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           NotReadyColor;                                     // 0x0688(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             UnReadySound;                                      // 0x0698(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             ReadySound;                                        // 0x06A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_TeamMemberPedestal_Nameplate(int32 EntryPoint);
-	void OnCurrentSubGameChanged(ESubGame NewSubGame);
 	void OnPlayReadyAudio(bool bIsReadyForMatchmaking);
 	void OnFrontEndCameraChanged(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera);
 	void Construct();
-	void BP_OnTeamMemberEstablished(bool bHasValidMember);
-	void OnReadyStatusChanged(EGameReadiness GameReadiness);
+	void OnTeamMemberEstablished(const struct FUniqueNetIdRepl& UniqueId);
+	void OnReadyStatusChanged(bool bIsReadyForMatchmaking);
 
 public:
 	static class UClass* StaticClass()

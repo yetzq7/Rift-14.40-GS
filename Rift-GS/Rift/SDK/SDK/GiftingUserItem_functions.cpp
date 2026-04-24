@@ -16,23 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function GiftingUserItem.GiftingUserItem_C.SetSelectionState
-// (Event, Public, BlueprintEvent)
+// Function GiftingUserItem.GiftingUserItem_C.ExecuteUbergraph_GiftingUserItem
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// ESelectionState                         NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bAnimateOnSelect                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGiftingUserItem_C::SetSelectionState(ESelectionState NewState, bool bAnimateOnSelect)
+void UGiftingUserItem_C::ExecuteUbergraph_GiftingUserItem(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingUserItem_C", "SetSelectionState");
+		Func = Class->GetFunction("GiftingUserItem_C", "ExecuteUbergraph_GiftingUserItem");
 
-	Params::GiftingUserItem_C_SetSelectionState Parms{};
+	Params::GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem Parms{};
 
-	Parms.NewState = NewState;
-	Parms.bAnimateOnSelect = bAnimateOnSelect;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -58,21 +56,23 @@ void UGiftingUserItem_C::UpdateMessageText(const class FText& NewMessage)
 }
 
 
-// Function GiftingUserItem.GiftingUserItem_C.ExecuteUbergraph_GiftingUserItem
-// (Final, UbergraphFunction, HasDefaults)
+// Function GiftingUserItem.GiftingUserItem_C.SetSelectionState
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ESelectionState                         NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bAnimateOnSelect                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UGiftingUserItem_C::ExecuteUbergraph_GiftingUserItem(int32 EntryPoint)
+void UGiftingUserItem_C::SetSelectionState(ESelectionState NewState, bool bAnimateOnSelect)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingUserItem_C", "ExecuteUbergraph_GiftingUserItem");
+		Func = Class->GetFunction("GiftingUserItem_C", "SetSelectionState");
 
-	Params::GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem Parms{};
+	Params::GiftingUserItem_C_SetSelectionState Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.NewState = NewState;
+	Parms.bAnimateOnSelect = bAnimateOnSelect;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

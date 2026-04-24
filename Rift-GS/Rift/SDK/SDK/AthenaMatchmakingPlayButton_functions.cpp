@@ -36,31 +36,23 @@ void UAthenaMatchmakingPlayButton_C::ExecuteUbergraph_AthenaMatchmakingPlayButto
 }
 
 
-// Function AthenaMatchmakingPlayButton.AthenaMatchmakingPlayButton_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
+// Function AthenaMatchmakingPlayButton.AthenaMatchmakingPlayButton_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaMatchmakingPlayButton_C::BP_OnUnhovered()
+void UAthenaMatchmakingPlayButton_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaMatchmakingPlayButton_C", "BP_OnUnhovered");
+		Func = Class->GetFunction("AthenaMatchmakingPlayButton_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::AthenaMatchmakingPlayButton_C_PreConstruct Parms{};
 
+	Parms.IsDesignTime = IsDesignTime;
 
-// Function AthenaMatchmakingPlayButton.AthenaMatchmakingPlayButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UAthenaMatchmakingPlayButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaMatchmakingPlayButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -16,99 +16,317 @@
 
 SDK_NAMESPACE_START
 
-// Function MainTabIconButton.MainTabIconButton_C.SetBangType
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function MainTabIconButton.MainTabIconButton_C.ExecuteUbergraph_MainTabIconButton
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// EFortBangType                           NewBangType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMainTabIconButton_C::SetBangType(EFortBangType NewBangType)
+void UMainTabIconButton_C::ExecuteUbergraph_MainTabIconButton(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "SetBangType");
+		Func = Class->GetFunction("MainTabIconButton_C", "ExecuteUbergraph_MainTabIconButton");
 
-	Params::MainTabIconButton_C_SetBangType Parms{};
+	Params::MainTabIconButton_C_ExecuteUbergraph_MainTabIconButton Parms{};
 
-	Parms.NewBangType = NewBangType;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function MainTabIconButton.MainTabIconButton_C.StopTabCallout
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function MainTabIconButton.MainTabIconButton_C.BP_OnEnabled
+// (Event, Protected, BlueprintEvent)
 
-void UMainTabIconButton_C::StopTabCallout()
+void UMainTabIconButton_C::BP_OnEnabled()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "StopTabCallout");
+		Func = Class->GetFunction("MainTabIconButton_C", "BP_OnEnabled");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MainTabIconButton.MainTabIconButton_C.TabAdded
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function MainTabIconButton.MainTabIconButton_C.BP_OnDisabled
+// (Event, Protected, BlueprintEvent)
 
-void UMainTabIconButton_C::TabAdded()
+void UMainTabIconButton_C::BP_OnDisabled()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "TabAdded");
+		Func = Class->GetFunction("MainTabIconButton_C", "BP_OnDisabled");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MainTabIconButton.MainTabIconButton_C.TabDialogClosed
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function MainTabIconButton.MainTabIconButton_C.BndEvt__ToastWidget_K2Node_ComponentBoundEvent_0_OnFinishedToast__DelegateSignature
+// (BlueprintEvent)
 
-void UMainTabIconButton_C::TabDialogClosed()
+void UMainTabIconButton_C::BndEvt__ToastWidget_K2Node_ComponentBoundEvent_0_OnFinishedToast__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "TabDialogClosed");
+		Func = Class->GetFunction("MainTabIconButton_C", "BndEvt__ToastWidget_K2Node_ComponentBoundEvent_0_OnFinishedToast__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MainTabIconButton.MainTabIconButton_C.TabAnimateInFinished
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function MainTabIconButton.MainTabIconButton_C.Handle StopTabCallout
+// (BlueprintCallable, BlueprintEvent)
 
-void UMainTabIconButton_C::TabAnimateInFinished()
+void UMainTabIconButton_C::Handle_StopTabCallout()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "TabAnimateInFinished");
+		Func = Class->GetFunction("MainTabIconButton_C", "Handle StopTabCallout");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MainTabIconButton.MainTabIconButton_C.SetWrapperNameIDs
+// Function MainTabIconButton.MainTabIconButton_C.OnCurrentTextStyleChanged
+// (Event, Protected, BlueprintEvent)
+
+void UMainTabIconButton_C::OnCurrentTextStyleChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "OnCurrentTextStyleChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.HandleTabDialogCLosed
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainTabIconButton_C::HandleTabDialogCLosed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "HandleTabDialogCLosed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.HandleTabAnimateInFinished
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainTabIconButton_C::HandleTabAnimateInFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "HandleTabAnimateInFinished");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.HandleTabAdded
+// (BlueprintCallable, BlueprintEvent)
+
+void UMainTabIconButton_C::HandleTabAdded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "HandleTabAdded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UMainTabIconButton_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UMainTabIconButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UMainTabIconButton_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.BP_OnDeselected
+// (Event, Protected, BlueprintEvent)
+
+void UMainTabIconButton_C::BP_OnDeselected()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "BP_OnDeselected");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.BP_OnSelected
+// (Event, Protected, BlueprintEvent)
+
+void UMainTabIconButton_C::BP_OnSelected()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "BP_OnSelected");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.SetTabLabelInfo
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FFortTabButtonLabelInfo&   TabLabelInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UMainTabIconButton_C::SetTabLabelInfo(const struct FFortTabButtonLabelInfo& TabLabelInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "SetTabLabelInfo");
+
+	Params::MainTabIconButton_C_SetTabLabelInfo Parms{};
+
+	Parms.TabLabelInfo = std::move(TabLabelInfo);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UMainTabIconButton_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "PreConstruct");
+
+	Params::MainTabIconButton_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.Set Text
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             InTutorialNameID                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             InBangNameID                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      ButtonText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UMainTabIconButton_C::SetWrapperNameIDs(class FName InTutorialNameID, class FName InBangNameID)
+void UMainTabIconButton_C::Set_Text(const class FText& ButtonText_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "SetWrapperNameIDs");
+		Func = Class->GetFunction("MainTabIconButton_C", "Set Text");
 
-	Params::MainTabIconButton_C_SetWrapperNameIDs Parms{};
+	Params::MainTabIconButton_C_Set_Text Parms{};
 
-	Parms.InTutorialNameID = InTutorialNameID;
-	Parms.InBangNameID = InBangNameID;
+	Parms.ButtonText_0 = std::move(ButtonText_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.Set Icon
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FSlateBrush&               IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UMainTabIconButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "Set Icon");
+
+	Params::MainTabIconButton_C_Set_Icon Parms{};
+
+	Parms.IconBrush_0 = std::move(IconBrush_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.ShowText
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UMainTabIconButton_C::ShowText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "ShowText");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.SetTutorialBorderStyle
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass*                           BorderStyle                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMainTabIconButton_C::SetTutorialBorderStyle(class UClass* BorderStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "SetTutorialBorderStyle");
+
+	Params::MainTabIconButton_C_SetTutorialBorderStyle Parms{};
+
+	Parms.BorderStyle = BorderStyle;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -138,303 +356,99 @@ void UMainTabIconButton_C::Update_Bang_State(bool bBangEnabled_0, EFortUIFeature
 }
 
 
-// Function MainTabIconButton.MainTabIconButton_C.SetTutorialBorderStyle
+// Function MainTabIconButton.MainTabIconButton_C.SetWrapperNameIDs
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           BorderStyle                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             InTutorialNameID                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             InBangNameID                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMainTabIconButton_C::SetTutorialBorderStyle(class UClass* BorderStyle)
+void UMainTabIconButton_C::SetWrapperNameIDs(class FName InTutorialNameID, class FName InBangNameID)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "SetTutorialBorderStyle");
+		Func = Class->GetFunction("MainTabIconButton_C", "SetWrapperNameIDs");
 
-	Params::MainTabIconButton_C_SetTutorialBorderStyle Parms{};
+	Params::MainTabIconButton_C_SetWrapperNameIDs Parms{};
 
-	Parms.BorderStyle = BorderStyle;
+	Parms.InTutorialNameID = InTutorialNameID;
+	Parms.InBangNameID = InBangNameID;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function MainTabIconButton.MainTabIconButton_C.ShowText
+// Function MainTabIconButton.MainTabIconButton_C.TabAnimateInFinished
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UMainTabIconButton_C::ShowText()
+void UMainTabIconButton_C::TabAnimateInFinished()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "ShowText");
+		Func = Class->GetFunction("MainTabIconButton_C", "TabAnimateInFinished");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MainTabIconButton.MainTabIconButton_C.Set Icon
+// Function MainTabIconButton.MainTabIconButton_C.TabDialogClosed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UMainTabIconButton_C::TabDialogClosed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "TabDialogClosed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.TabAdded
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UMainTabIconButton_C::TabAdded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "TabAdded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.StopTabCallout
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UMainTabIconButton_C::StopTabCallout()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "StopTabCallout");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MainTabIconButton.MainTabIconButton_C.SetBangType
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FSlateBrush&               IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// EFortBangType                           NewBangType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMainTabIconButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
+void UMainTabIconButton_C::SetBangType(EFortBangType NewBangType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "Set Icon");
+		Func = Class->GetFunction("MainTabIconButton_C", "SetBangType");
 
-	Params::MainTabIconButton_C_Set_Icon Parms{};
+	Params::MainTabIconButton_C_SetBangType Parms{};
 
-	Parms.IconBrush_0 = std::move(IconBrush_0);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.Set Text
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      ButtonText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UMainTabIconButton_C::Set_Text(const class FText& ButtonText_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "Set Text");
-
-	Params::MainTabIconButton_C_Set_Text Parms{};
-
-	Parms.ButtonText_0 = std::move(ButtonText_0);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UMainTabIconButton_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "PreConstruct");
-
-	Params::MainTabIconButton_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.SetTabLabelInfo
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FFortTabButtonLabelInfo&   TabLabelInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UMainTabIconButton_C::SetTabLabelInfo(const struct FFortTabButtonLabelInfo& TabLabelInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "SetTabLabelInfo");
-
-	Params::MainTabIconButton_C_SetTabLabelInfo Parms{};
-
-	Parms.TabLabelInfo = std::move(TabLabelInfo);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.BP_OnSelected
-// (Event, Protected, BlueprintEvent)
-
-void UMainTabIconButton_C::BP_OnSelected()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "BP_OnSelected");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.BP_OnDeselected
-// (Event, Protected, BlueprintEvent)
-
-void UMainTabIconButton_C::BP_OnDeselected()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "BP_OnDeselected");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UMainTabIconButton_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UMainTabIconButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void UMainTabIconButton_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.OnCurrentTextStyleChanged
-// (Event, Protected, BlueprintEvent)
-
-void UMainTabIconButton_C::OnCurrentTextStyleChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "OnCurrentTextStyleChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.HandleTabAdded
-// (BlueprintCallable, BlueprintEvent)
-
-void UMainTabIconButton_C::HandleTabAdded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "HandleTabAdded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.HandleTabAnimateInFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void UMainTabIconButton_C::HandleTabAnimateInFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "HandleTabAnimateInFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.HandleTabDialogCLosed
-// (BlueprintCallable, BlueprintEvent)
-
-void UMainTabIconButton_C::HandleTabDialogCLosed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "HandleTabDialogCLosed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.Handle StopTabCallout
-// (BlueprintCallable, BlueprintEvent)
-
-void UMainTabIconButton_C::Handle_StopTabCallout()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "Handle StopTabCallout");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.BP_OnDisabled
-// (Event, Protected, BlueprintEvent)
-
-void UMainTabIconButton_C::BP_OnDisabled()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "BP_OnDisabled");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.BP_OnEnabled
-// (Event, Protected, BlueprintEvent)
-
-void UMainTabIconButton_C::BP_OnEnabled()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "BP_OnEnabled");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.ExecuteUbergraph_MainTabIconButton
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMainTabIconButton_C::ExecuteUbergraph_MainTabIconButton(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "ExecuteUbergraph_MainTabIconButton");
-
-	Params::MainTabIconButton_C_ExecuteUbergraph_MainTabIconButton Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.NewBangType = NewBangType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

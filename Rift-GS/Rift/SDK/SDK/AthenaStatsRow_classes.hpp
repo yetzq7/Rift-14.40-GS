@@ -17,11 +17,14 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass AthenaStatsRow.AthenaStatsRow_C
-// 0x0008 (0x02C8 - 0x02C0)
+// 0x0038 (0x0278 - 0x0240)
 class UAthenaStatsRow_C final : public UFortProfileStatsRow
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0240(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       Name_0;                                            // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   StatName;                                          // 0x0250(0x0018)(Edit, BlueprintVisible)
+	class FString                                 BaseGameplayTag;                                   // 0x0268(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_AthenaStatsRow(int32 EntryPoint);

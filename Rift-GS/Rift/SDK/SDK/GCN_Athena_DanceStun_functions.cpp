@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function GCN_Athena_DanceStun.GCN_Athena_DanceStun_C.ExecuteUbergraph_GCN_Athena_DanceStun
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -33,6 +33,34 @@ void AGCN_Athena_DanceStun_C::ExecuteUbergraph_GCN_Athena_DanceStun(int32 EntryP
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GCN_Athena_DanceStun.GCN_Athena_DanceStun_C.AnimateOut
+// (BlueprintCallable, BlueprintEvent)
+
+void AGCN_Athena_DanceStun_C::AnimateOut()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Athena_DanceStun_C", "AnimateOut");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCN_Athena_DanceStun.GCN_Athena_DanceStun_C.AnimateIn
+// (BlueprintCallable, BlueprintEvent)
+
+void AGCN_Athena_DanceStun_C::AnimateIn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Athena_DanceStun_C", "AnimateIn");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -53,6 +81,76 @@ void AGCN_Athena_DanceStun_C::ReceiveTick(float DeltaSeconds)
 	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GCN_Athena_DanceStun.GCN_Athena_DanceStun_C.OutroAnim__UpdateFunc
+// (BlueprintEvent)
+
+void AGCN_Athena_DanceStun_C::OutroAnim__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Athena_DanceStun_C", "OutroAnim__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCN_Athena_DanceStun.GCN_Athena_DanceStun_C.OutroAnim__FinishedFunc
+// (BlueprintEvent)
+
+void AGCN_Athena_DanceStun_C::OutroAnim__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Athena_DanceStun_C", "OutroAnim__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCN_Athena_DanceStun.GCN_Athena_DanceStun_C.IntroAnim__UpdateFunc
+// (BlueprintEvent)
+
+void AGCN_Athena_DanceStun_C::IntroAnim__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Athena_DanceStun_C", "IntroAnim__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCN_Athena_DanceStun.GCN_Athena_DanceStun_C.IntroAnim__FinishedFunc
+// (BlueprintEvent)
+
+void AGCN_Athena_DanceStun_C::IntroAnim__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Athena_DanceStun_C", "IntroAnim__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCN_Athena_DanceStun.GCN_Athena_DanceStun_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AGCN_Athena_DanceStun_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Athena_DanceStun_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

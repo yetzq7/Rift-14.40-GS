@@ -36,71 +36,15 @@ void USocialPanel_C::ExecuteUbergraph_SocialPanel(int32 EntryPoint)
 }
 
 
-// Function SocialPanel.SocialPanel_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void USocialPanel_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_C", "Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialPanel.SocialPanel_C.HandleIntroEnded
+// Function SocialPanel.SocialPanel_C.PopSocialPanel
 // (BlueprintCallable, BlueprintEvent)
 
-void USocialPanel_C::HandleIntroEnded()
+void USocialPanel_C::PopSocialPanel()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_C", "HandleIntroEnded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialPanel.SocialPanel_C.OnBeginIntro
-// (Event, Protected, BlueprintEvent)
-
-void USocialPanel_C::OnBeginIntro()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_C", "OnBeginIntro");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialPanel.SocialPanel_C.OnBeginOutro
-// (Event, Protected, BlueprintEvent)
-
-void USocialPanel_C::OnBeginOutro()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_C", "OnBeginOutro");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SocialPanel.SocialPanel_C.HandleOutroEnded
-// (BlueprintCallable, BlueprintEvent)
-
-void USocialPanel_C::HandleOutroEnded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_C", "HandleOutroEnded");
+		Func = Class->GetFunction("SocialPanel_C", "PopSocialPanel");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -115,6 +59,20 @@ void USocialPanel_C::ClosePanel()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("SocialPanel_C", "ClosePanel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialPanel.SocialPanel_C.OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void USocialPanel_C::OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanel_C", "OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

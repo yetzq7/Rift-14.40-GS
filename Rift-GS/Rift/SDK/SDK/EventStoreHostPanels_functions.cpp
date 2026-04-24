@@ -122,28 +122,4 @@ void UEventStoreHostPanels_C::Setup_Details_Panels()
 }
 
 
-// Function EventStoreHostPanels.EventStoreHostPanels_C.SetTabVisibilities
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ESlateVisibility                        StatVisibility                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ESlateVisibility                        BonusVisibility                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ESlateVisibility                        CraftingVisibility                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UEventStoreHostPanels_C::SetTabVisibilities(ESlateVisibility StatVisibility, ESlateVisibility BonusVisibility, ESlateVisibility CraftingVisibility)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EventStoreHostPanels_C", "SetTabVisibilities");
-
-	Params::EventStoreHostPanels_C_SetTabVisibilities Parms{};
-
-	Parms.StatVisibility = StatVisibility;
-	Parms.BonusVisibility = BonusVisibility;
-	Parms.CraftingVisibility = CraftingVisibility;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

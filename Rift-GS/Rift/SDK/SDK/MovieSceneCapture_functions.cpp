@@ -291,6 +291,33 @@ bool UMovieSceneCaptureEnvironment::IsCaptureInProgress()
 }
 
 
+// Function MovieSceneCapture.UserDefinedCaptureProtocol.BindToStream
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             StreamName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FCapturedPixels& Pixels, class FName StreamName, const struct FFrameMetrics& FrameMetrics)>Handler                                                (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+
+void UUserDefinedCaptureProtocol::BindToStream(class FName StreamName, TDelegate<void(const struct FCapturedPixels& Pixels, class FName StreamName, const struct FFrameMetrics& FrameMetrics)> Handler)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UserDefinedCaptureProtocol", "BindToStream");
+
+	Params::UserDefinedCaptureProtocol_BindToStream Parms{};
+
+	Parms.StreamName = StreamName;
+	Parms.Handler = Handler;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnBeginFinalize
 // (Event, Protected, BlueprintEvent)
 
@@ -344,30 +371,6 @@ void UUserDefinedCaptureProtocol::OnPauseCapture()
 		Func = Class->GetFunction("UserDefinedCaptureProtocol", "OnPauseCapture");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPixelsReceived
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FCapturedPixels&           Pixels                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// const struct FCapturedPixelsID&         ID                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// const struct FFrameMetrics&             FrameMetrics                                           (Parm, NoDestructor, NativeAccessSpecifierPublic)
-
-void UUserDefinedCaptureProtocol::OnPixelsReceived(const struct FCapturedPixels& Pixels, const struct FCapturedPixelsID& ID, const struct FFrameMetrics& FrameMetrics)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserDefinedCaptureProtocol", "OnPixelsReceived");
-
-	Params::UserDefinedCaptureProtocol_OnPixelsReceived Parms{};
-
-	Parms.Pixels = std::move(Pixels);
-	Parms.ID = std::move(ID);
-	Parms.FrameMetrics = std::move(FrameMetrics);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -452,13 +455,41 @@ void UUserDefinedCaptureProtocol::OnWarmUp()
 }
 
 
-// Function MovieSceneCapture.UserDefinedCaptureProtocol.ResolveBuffer
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Function MovieSceneCapture.UserDefinedCaptureProtocol.PushBufferToStream
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UTexture*                         Buffer                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FCapturedPixelsID&         BufferID                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class FName                             StreamName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UUserDefinedCaptureProtocol::ResolveBuffer(class UTexture* Buffer, const struct FCapturedPixelsID& BufferID)
+void UUserDefinedCaptureProtocol::PushBufferToStream(class UTexture* Buffer, class FName StreamName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UserDefinedCaptureProtocol", "PushBufferToStream");
+
+	Params::UserDefinedCaptureProtocol_PushBufferToStream Parms{};
+
+	Parms.Buffer = Buffer;
+	Parms.StreamName = StreamName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieSceneCapture.UserDefinedCaptureProtocol.ResolveBuffer
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UTexture*                         Buffer                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             BufferName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FCapturedPixels& Pixels, class FName StreamName, const struct FFrameMetrics& FrameMetrics)>Handler                                                (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+
+void UUserDefinedCaptureProtocol::ResolveBuffer(class UTexture* Buffer, class FName BufferName, TDelegate<void(const struct FCapturedPixels& Pixels, class FName StreamName, const struct FFrameMetrics& FrameMetrics)> Handler)
 {
 	static class UFunction* Func = nullptr;
 
@@ -468,7 +499,8 @@ void UUserDefinedCaptureProtocol::ResolveBuffer(class UTexture* Buffer, const st
 	Params::UserDefinedCaptureProtocol_ResolveBuffer Parms{};
 
 	Parms.Buffer = Buffer;
-	Parms.BufferID = std::move(BufferID);
+	Parms.BufferName = BufferName;
+	Parms.Handler = Handler;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -480,11 +512,11 @@ void UUserDefinedCaptureProtocol::ResolveBuffer(class UTexture* Buffer, const st
 
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.StartCapturingFinalPixels
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const struct FCapturedPixelsID&         StreamID                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class FName                             StreamName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UUserDefinedCaptureProtocol::StartCapturingFinalPixels(const struct FCapturedPixelsID& StreamID)
+void UUserDefinedCaptureProtocol::StartCapturingFinalPixels(class FName StreamName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -493,7 +525,7 @@ void UUserDefinedCaptureProtocol::StartCapturingFinalPixels(const struct FCaptur
 
 	Params::UserDefinedCaptureProtocol_StartCapturingFinalPixels Parms{};
 
-	Parms.StreamID = std::move(StreamID);
+	Parms.StreamName = StreamName;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -602,13 +634,13 @@ bool UUserDefinedCaptureProtocol::OnCanFinalize() const
 
 
 // Function MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForBuffer
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UTexture*                         Buffer                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FCapturedPixelsID&         StreamID                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class FName                             StreamName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString UUserDefinedImageCaptureProtocol::GenerateFilenameForBuffer(class UTexture* Buffer, const struct FCapturedPixelsID& StreamID)
+class FString UUserDefinedImageCaptureProtocol::GenerateFilenameForBuffer(class UTexture* Buffer, class FName StreamName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -618,7 +650,7 @@ class FString UUserDefinedImageCaptureProtocol::GenerateFilenameForBuffer(class 
 	Params::UserDefinedImageCaptureProtocol_GenerateFilenameForBuffer Parms{};
 
 	Parms.Buffer = Buffer;
-	Parms.StreamID = std::move(StreamID);
+	Parms.StreamName = StreamName;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -660,11 +692,11 @@ class FString UUserDefinedImageCaptureProtocol::GenerateFilenameForCurrentFrame(
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FCapturedPixels&           PixelData                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// const struct FCapturedPixelsID&         StreamID                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class FName                             StreamName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FFrameMetrics&             FrameMetrics                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    bCopyImageData                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UUserDefinedImageCaptureProtocol::WriteImageToDisk(const struct FCapturedPixels& PixelData, const struct FCapturedPixelsID& StreamID, const struct FFrameMetrics& FrameMetrics, bool bCopyImageData)
+void UUserDefinedImageCaptureProtocol::WriteImageToDisk(const struct FCapturedPixels& PixelData, class FName StreamName, const struct FFrameMetrics& FrameMetrics, bool bCopyImageData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -674,7 +706,7 @@ void UUserDefinedImageCaptureProtocol::WriteImageToDisk(const struct FCapturedPi
 	Params::UserDefinedImageCaptureProtocol_WriteImageToDisk Parms{};
 
 	Parms.PixelData = std::move(PixelData);
-	Parms.StreamID = std::move(StreamID);
+	Parms.StreamName = StreamName;
 	Parms.FrameMetrics = std::move(FrameMetrics);
 	Parms.bCopyImageData = bCopyImageData;
 

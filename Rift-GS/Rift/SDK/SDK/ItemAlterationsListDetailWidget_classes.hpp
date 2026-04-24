@@ -18,19 +18,18 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ItemAlterationsListDetailWidget.ItemAlterationsListDetailWidget_C
-// 0x0010 (0x02F0 - 0x02E0)
+// 0x0010 (0x0290 - 0x0280)
 class UItemAlterationsListDetailWidget_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAlterationsWidget_C*                   AlterationsWidget;                                 // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAlterationsWidget_C*                   AlterationsWidget;                                 // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetState(EFortAlterationWidgetState State);
-	void HandlePostDifferentItemToDetailSet();
-	void HandlePostDifferentItemToCompareWithSet();
-	void HandleUpgradeLevelDeltaChanged();
 	void ExecuteUbergraph_ItemAlterationsListDetailWidget(int32 EntryPoint);
+	void HandlePostDifferentItemToCompareWithSet();
+	void HandlePostDifferentItemToDetailSet();
+	void SetState(EFortAlterationWidgetState State);
 
 public:
 	static class UClass* StaticClass()

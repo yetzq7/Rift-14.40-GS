@@ -16,8 +16,8 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass CameraShake_ZipLineAttach.CameraShake_ZipLineAttach_C
-// 0x0000 (0x0180 - 0x0180)
-class UCameraShake_ZipLineAttach_C final : public UMatineeCameraShake
+// 0x0000 (0x0160 - 0x0160)
+class UCameraShake_ZipLineAttach_C final : public UCameraShake
 {
 public:
 	static class UClass* StaticClass()

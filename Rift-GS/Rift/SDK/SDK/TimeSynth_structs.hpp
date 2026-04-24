@@ -174,6 +174,16 @@ public:
 };
 DUMPER7_ASSERTS_FTimeSynthTimeDef;
 
+// ScriptStruct TimeSynth.TimeSynthSpectralData
+// 0x0008 (0x0008 - 0x0000)
+struct FTimeSynthSpectralData final
+{
+public:
+	float                                         FrequencyHz;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Magnitude;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTimeSynthSpectralData;
+
 // ScriptStruct TimeSynth.TimeSynthQuantizationSettings
 // 0x0014 (0x0014 - 0x0000)
 struct FTimeSynthQuantizationSettings final
@@ -188,15 +198,5 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FTimeSynthQuantizationSettings;
-
-// ScriptStruct TimeSynth.TimeSynthSpectralData
-// 0x0008 (0x0008 - 0x0000)
-struct FTimeSynthSpectralData final
-{
-public:
-	float                                         FrequencyHz;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Magnitude;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTimeSynthSpectralData;
 
 SDK_NAMESPACE_END

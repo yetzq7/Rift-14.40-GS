@@ -36,20 +36,6 @@ void ABP_ReplayPC_Athena_C::ExecuteUbergraph_BP_ReplayPC_Athena(int32 EntryPoint
 }
 
 
-// Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.Update Sound Mix
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_ReplayPC_Athena_C::Update_Sound_Mix()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReplayPC_Athena_C", "Update Sound Mix");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_ReplayPC_Athena.BP_ReplayPC_Athena_C.Looping Audio Update
 // (BlueprintCallable, BlueprintEvent)
 

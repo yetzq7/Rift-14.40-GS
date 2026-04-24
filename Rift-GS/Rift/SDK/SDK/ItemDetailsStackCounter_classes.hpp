@@ -10,42 +10,42 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
-#include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ItemDetailsStackCounter.ItemDetailsStackCounter_C
-// 0x05A0 (0x0880 - 0x02E0)
+// 0x05A0 (0x0820 - 0x0280)
 class UItemDetailsStackCounter_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USizeBox*                               _SizeBox_;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          BorderBase;                                        // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextCounter;                                       // 0x02F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FFortMultiSizeBrush                    MultiSizeBase;                                     // 0x0300(0x0330)(Edit, BlueprintVisible)
-	struct FFortMultiSizeFont                     MultiSizeFont;                                     // 0x0630(0x01E0)(Edit, BlueprintVisible)
-	struct FFortMultiSizeMargin                   MultiSizeMargin;                                   // 0x0810(0x0060)(Edit, BlueprintVisible, NoDestructor)
-	EFortBrushSize                                Brush_Size;                                        // 0x0870(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_871[0x3];                                      // 0x0871(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Count;                                             // 0x0874(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          AlwaysVisible;                                     // 0x0878(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          TruncateValue;                                     // 0x0879(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USizeBox*                               _SizeBox_;                                         // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          BorderBase;                                        // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextCounter;                                       // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FFortMultiSizeBrush                    MultiSizeBase;                                     // 0x02A0(0x0330)(Edit, BlueprintVisible)
+	struct FFortMultiSizeFont                     MultiSizeFont;                                     // 0x05D0(0x01E0)(Edit, BlueprintVisible)
+	struct FFortMultiSizeMargin                   MultiSizeMargin;                                   // 0x07B0(0x0060)(Edit, BlueprintVisible, NoDestructor)
+	EFortBrushSize                                Brush_Size;                                        // 0x0810(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_811[0x3];                                      // 0x0811(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Count;                                             // 0x0814(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AlwaysVisible;                                     // 0x0818(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          TruncateValue;                                     // 0x0819(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 
 public:
-	void Refresh_Visibility();
-	void Update_Stack_Count();
-	void PreConstruct(bool IsDesignTime);
-	void Construct();
-	void HandlePreDifferentItemToDetailSet();
-	void HandlePostDifferentItemToDetailSet();
-	void HandleOnItemChanged(bool bItemChanged, bool bAmmoChanged, bool bIngredientsChanged);
-	void HandleQuantityOverrideChanged();
 	void ExecuteUbergraph_ItemDetailsStackCounter(int32 EntryPoint);
+	void HandleQuantityOverrideChanged();
+	void HandleOnItemChanged(bool bItemChanged, bool bAmmoChanged, bool bIngredientsChanged);
+	void HandlePostDifferentItemToDetailSet();
+	void HandlePreDifferentItemToDetailSet();
+	void Construct();
+	void PreConstruct(bool IsDesignTime);
+	void Update_Stack_Count();
+	void Refresh_Visibility();
 
 public:
 	static class UClass* StaticClass()

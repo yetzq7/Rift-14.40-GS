@@ -56,40 +56,6 @@ void UCreativeIslandLinkScreen_C::BndEvt__Button_Refresh_K2Node_ComponentBoundEv
 }
 
 
-// Function CreativeIslandLinkScreen.CreativeIslandLinkScreen_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UCreativeIslandLinkScreen_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreativeIslandLinkScreen_C", "PreConstruct");
-
-	Params::CreativeIslandLinkScreen_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function CreativeIslandLinkScreen.CreativeIslandLinkScreen_C.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UCreativeIslandLinkScreen_C::BP_OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreativeIslandLinkScreen_C", "BP_OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function CreativeIslandLinkScreen.CreativeIslandLinkScreen_C.OnCreativeIslandLinkValidated
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -110,6 +76,80 @@ void UCreativeIslandLinkScreen_C::OnCreativeIslandLinkValidated(EFortCreativeIsl
 }
 
 
+// Function CreativeIslandLinkScreen.CreativeIslandLinkScreen_C.BndEvt__SimpleCommonButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCreativeIslandLinkScreen_C::BndEvt__SimpleCommonButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeIslandLinkScreen_C", "BndEvt__SimpleCommonButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
+
+	Params::CreativeIslandLinkScreen_C_BndEvt__SimpleCommonButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function CreativeIslandLinkScreen.CreativeIslandLinkScreen_C.BndEvt__CommonActionWidget_0_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UCreativeIslandLinkScreen_C::BndEvt__CommonActionWidget_0_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeIslandLinkScreen_C", "BndEvt__CommonActionWidget_0_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature");
+
+	Params::CreativeIslandLinkScreen_C_BndEvt__CommonActionWidget_0_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature Parms{};
+
+	Parms.bUsingGamepad = bUsingGamepad;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function CreativeIslandLinkScreen.CreativeIslandLinkScreen_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UCreativeIslandLinkScreen_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeIslandLinkScreen_C", "PreConstruct");
+
+	Params::CreativeIslandLinkScreen_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function CreativeIslandLinkScreen.CreativeIslandLinkScreen_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UCreativeIslandLinkScreen_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeIslandLinkScreen_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function CreativeIslandLinkScreen.CreativeIslandLinkScreen_C.Destruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -119,20 +159,6 @@ void UCreativeIslandLinkScreen_C::Destruct()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("CreativeIslandLinkScreen_C", "Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CreativeIslandLinkScreen.CreativeIslandLinkScreen_C.OnAddedToActivationStack
-// (Event, Protected, BlueprintEvent)
-
-void UCreativeIslandLinkScreen_C::OnAddedToActivationStack()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreativeIslandLinkScreen_C", "OnAddedToActivationStack");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -155,6 +181,34 @@ void UCreativeIslandLinkScreen_C::InitFromObject(class UObject* InitObject)
 	Parms.InitObject = InitObject;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function CreativeIslandLinkScreen.CreativeIslandLinkScreen_C.OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UCreativeIslandLinkScreen_C::OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeIslandLinkScreen_C", "OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CreativeIslandLinkScreen.CreativeIslandLinkScreen_C.OnAddedToActivationStack
+// (Event, Protected, BlueprintEvent)
+
+void UCreativeIslandLinkScreen_C::OnAddedToActivationStack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeIslandLinkScreen_C", "OnAddedToActivationStack");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -189,20 +243,6 @@ void UCreativeIslandLinkScreen_C::OnIslandLinkEntryTextChanged(const class FText
 	Parms.Text = std::move(Text);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function CreativeIslandLinkScreen.CreativeIslandLinkScreen_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UCreativeIslandLinkScreen_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreativeIslandLinkScreen_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

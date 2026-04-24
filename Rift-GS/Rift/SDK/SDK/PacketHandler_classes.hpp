@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
+#include "PacketHandler_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -35,27 +36,27 @@ public:
 };
 DUMPER7_ASSERTS_UHandlerComponentFactory;
 
-// Class PacketHandler.PacketHandlerProfileConfig
+// Class PacketHandler.NetAnalyticsAggregatorConfig
 // 0x0010 (0x0038 - 0x0028)
-class UPacketHandlerProfileConfig final : public UObject
+class UNetAnalyticsAggregatorConfig final : public UObject
 {
 public:
-	TArray<class FString>                         Components;                                        // 0x0028(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FNetAnalyticsDataConfig>        NetAnalyticsData;                                  // 0x0028(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("PacketHandlerProfileConfig")
+		STATIC_CLASS_IMPL("NetAnalyticsAggregatorConfig")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"PacketHandlerProfileConfig")
+		STATIC_NAME_IMPL(L"NetAnalyticsAggregatorConfig")
 	}
-	static class UPacketHandlerProfileConfig* GetDefaultObj()
+	static class UNetAnalyticsAggregatorConfig* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPacketHandlerProfileConfig>();
+		return GetDefaultObjImpl<UNetAnalyticsAggregatorConfig>();
 	}
 };
-DUMPER7_ASSERTS_UPacketHandlerProfileConfig;
+DUMPER7_ASSERTS_UNetAnalyticsAggregatorConfig;
 
 SDK_NAMESPACE_END

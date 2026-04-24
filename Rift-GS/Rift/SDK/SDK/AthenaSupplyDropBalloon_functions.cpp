@@ -146,4 +146,18 @@ void AAthenaSupplyDropBalloon_C::OnDamageServer(float Damage, const struct FGame
 }
 
 
+// Function AthenaSupplyDropBalloon.AthenaSupplyDropBalloon_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AAthenaSupplyDropBalloon_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaSupplyDropBalloon_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

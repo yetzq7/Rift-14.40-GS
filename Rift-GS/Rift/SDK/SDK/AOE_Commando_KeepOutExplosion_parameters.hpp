@@ -37,15 +37,15 @@ public:
 DUMPER7_ASSERTS_AOE_Commando_KeepOutExplosion_C_Send_Info;
 
 // Function AOE_Commando_KeepOutExplosion.AOE_Commando_KeepOutExplosion_C.OnRep_Radius
-// 0x0750 (0x0750 - 0x0000)
+// 0x05E0 (0x05E0 - 0x0000)
 struct AOE_Commando_KeepOutExplosion_C_OnRep_Radius final
 {
 public:
-	struct FSoundAttenuationSettings              CallFunc_BP_GetAttenuationSettingsToApply_OutAttenuationSettings; // 0x0000(0x03A0)()
-	bool                                          CallFunc_BP_GetAttenuationSettingsToApply_ReturnValue; // 0x03A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3A1[0x3];                                      // 0x03A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x03A4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSoundAttenuationSettings              K2Node_MakeStruct_SoundAttenuationSettings;        // 0x03B0(0x03A0)()
+	struct FSoundAttenuationSettings              CallFunc_BP_GetAttenuationSettingsToApply_OutAttenuationSettings; // 0x0000(0x02E8)()
+	bool                                          CallFunc_BP_GetAttenuationSettingsToApply_ReturnValue; // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2E9[0x3];                                      // 0x02E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x02EC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSoundAttenuationSettings              K2Node_MakeStruct_SoundAttenuationSettings;        // 0x02F8(0x02E8)()
 };
 DUMPER7_ASSERTS_AOE_Commando_KeepOutExplosion_C_OnRep_Radius;
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CommonUI_classes.hpp"
 #include "CommonInput_structs.hpp"
@@ -21,22 +21,22 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass SimplePipButton.SimplePipButton_C
-// 0x0048 (0x0BE8 - 0x0BA0)
+// 0x0048 (0x0B78 - 0x0B30)
 class USimplePipButton_C final : public UCommonButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNamedSlot*                             ContentSlot;                                       // 0x0BA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UClass*                                 ControllerInputStyle;                              // 0x0BB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UClass*                                 MouseKeyboardStyle;                                // 0x0BB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    ButtonClickAction;                                 // 0x0BC0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	EHorizontalAlignment                          InputActionHorizontalAlignment;                    // 0x0BD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EVerticalAlignment                            InputActionVerticalAlignment;                      // 0x0BD1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BD2[0x2];                                      // 0x0BD2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              InputActionRenderTranslation;                      // 0x0BD4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InputActionUseRimBrush;                            // 0x0BDC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BDD[0x3];                                      // 0x0BDD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              InputActionRimBrushSize;                           // 0x0BE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B30(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNamedSlot*                             ContentSlot;                                       // 0x0B38(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UClass*                                 ControllerInputStyle;                              // 0x0B40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UClass*                                 MouseKeyboardStyle;                                // 0x0B48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    ButtonClickAction;                                 // 0x0B50(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	EHorizontalAlignment                          InputActionHorizontalAlignment;                    // 0x0B60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EVerticalAlignment                            InputActionVerticalAlignment;                      // 0x0B61(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B62[0x2];                                      // 0x0B62(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              InputActionRenderTranslation;                      // 0x0B64(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InputActionUseRimBrush;                            // 0x0B6C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B6D[0x3];                                      // 0x0B6D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              InputActionRimBrushSize;                           // 0x0B70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_SimplePipButton(int32 EntryPoint);

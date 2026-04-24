@@ -16,8 +16,8 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Harvest_CameraShake.Harvest_CameraShake_C
-// 0x0000 (0x0180 - 0x0180)
-class UHarvest_CameraShake_C final : public UMatineeCameraShake
+// 0x0000 (0x0160 - 0x0160)
+class UHarvest_CameraShake_C final : public UCameraShake
 {
 public:
 	static class UClass* StaticClass()

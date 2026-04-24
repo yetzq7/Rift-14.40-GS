@@ -17,7 +17,7 @@ SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass AnimNotifyState_HolsterWeapon.AnimNotifyState_HolsterWeapon_C
 // 0x0010 (0x0040 - 0x0030)
-class UAnimNotifyState_HolsterWeapon_C : public UAnimNotifyState
+class UAnimNotifyState_HolsterWeapon_C final : public UAnimNotifyState
 {
 public:
 	bool                                          PlayEquipAnim;                                     // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)

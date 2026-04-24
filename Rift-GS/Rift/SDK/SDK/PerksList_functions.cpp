@@ -16,17 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function PerksList.PerksList_C.ResetVariables
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function PerksList.PerksList_C.ExecuteUbergraph_PerksList
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPerksList_C::ResetVariables()
+void UPerksList_C::ExecuteUbergraph_PerksList(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PerksList_C", "ResetVariables");
+		Func = Class->GetFunction("PerksList_C", "ExecuteUbergraph_PerksList");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::PerksList_C_ExecuteUbergraph_PerksList Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -41,28 +47,6 @@ void UPerksList_C::Construct()
 		Func = Class->GetFunction("PerksList_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PerksList.PerksList_C.OnGeneratePerkTier
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FFortUIPerkTier&           FortPerkTier                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// class UFortPerkTierWidget_NUI*          PerkTierWidget                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UPerksList_C::OnGeneratePerkTier(const struct FFortUIPerkTier& FortPerkTier, class UFortPerkTierWidget_NUI* PerkTierWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PerksList_C", "OnGeneratePerkTier");
-
-	Params::PerksList_C_OnGeneratePerkTier Parms{};
-
-	Parms.FortPerkTier = std::move(FortPerkTier);
-	Parms.PerkTierWidget = PerkTierWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -83,6 +67,28 @@ void UPerksList_C::OnGeneratePerk(const struct FFortUIPerk& FortPerk, class UFor
 
 	Parms.FortPerk = std::move(FortPerk);
 	Parms.PerkWidget = PerkWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PerksList.PerksList_C.OnGeneratePerkTier
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FFortUIPerkTier&           FortPerkTier                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// class UFortPerkTierWidget_NUI*          PerkTierWidget                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UPerksList_C::OnGeneratePerkTier(const struct FFortUIPerkTier& FortPerkTier, class UFortPerkTierWidget_NUI* PerkTierWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PerksList_C", "OnGeneratePerkTier");
+
+	Params::PerksList_C_OnGeneratePerkTier Parms{};
+
+	Parms.FortPerkTier = std::move(FortPerkTier);
+	Parms.PerkTierWidget = PerkTierWidget;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -116,23 +122,17 @@ void UPerksList_C::OnStateChanged()
 }
 
 
-// Function PerksList.PerksList_C.ExecuteUbergraph_PerksList
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function PerksList.PerksList_C.ResetVariables
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UPerksList_C::ExecuteUbergraph_PerksList(int32 EntryPoint)
+void UPerksList_C::ResetVariables()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PerksList_C", "ExecuteUbergraph_PerksList");
+		Func = Class->GetFunction("PerksList_C", "ResetVariables");
 
-	Params::PerksList_C_ExecuteUbergraph_PerksList Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

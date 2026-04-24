@@ -17,6 +17,50 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function MiniCraftingIngredientListEntry.MiniCraftingIngredientListEntry_C.ExecuteUbergraph_MiniCraftingIngredientListEntry
+// 0x0008 (0x0008 - 0x0000)
+struct MiniCraftingIngredientListEntry_C_ExecuteUbergraph_MiniCraftingIngredientListEntry final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsBeingReset;                         // 0x0004(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_MiniCraftingIngredientListEntry_C_ExecuteUbergraph_MiniCraftingIngredientListEntry;
+
+// Function MiniCraftingIngredientListEntry.MiniCraftingIngredientListEntry_C.HandleDifferentItemOrQuantitySetBP
+// 0x0001 (0x0001 - 0x0000)
+struct MiniCraftingIngredientListEntry_C_HandleDifferentItemOrQuantitySetBP final
+{
+public:
+	bool                                          IsBeingReset;                                      // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_MiniCraftingIngredientListEntry_C_HandleDifferentItemOrQuantitySetBP;
+
+// Function MiniCraftingIngredientListEntry.MiniCraftingIngredientListEntry_C.Refresh
+// 0x0008 (0x0008 - 0x0000)
+struct MiniCraftingIngredientListEntry_C_Refresh final
+{
+public:
+	class UFortItemDefinition*                    CallFunc_GetItemDefinition_ReturnValue;            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_MiniCraftingIngredientListEntry_C_Refresh;
+
+// Function MiniCraftingIngredientListEntry.MiniCraftingIngredientListEntry_C.RefreshBeingPreviewed
+// 0x0010 (0x0010 - 0x0000)
+struct MiniCraftingIngredientListEntry_C_RefreshBeingPreviewed final
+{
+public:
+	struct FFortItemEntryPreviewData              CallFunc_GetPreviewData_OutPreviewData;            // 0x0000(0x0008)(NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue1;         // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsBeingPreviewed_ReturnValue;             // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue1;                  // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_MiniCraftingIngredientListEntry_C_RefreshBeingPreviewed;
+
 // Function MiniCraftingIngredientListEntry.MiniCraftingIngredientListEntry_C.Get_ItemCountWidget_ToolTipWidget
 // 0x0070 (0x0070 - 0x0000)
 struct MiniCraftingIngredientListEntry_C_Get_ItemCountWidget_ToolTipWidget final
@@ -37,50 +81,6 @@ public:
 	class UUserWidget*                            CallFunc_Create_Basic_Tooltip_Output;              // 0x0068(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_MiniCraftingIngredientListEntry_C_Get_ItemCountWidget_ToolTipWidget;
-
-// Function MiniCraftingIngredientListEntry.MiniCraftingIngredientListEntry_C.RefreshBeingPreviewed
-// 0x0010 (0x0010 - 0x0000)
-struct MiniCraftingIngredientListEntry_C_RefreshBeingPreviewed final
-{
-public:
-	struct FFortItemEntryPreviewData              CallFunc_GetPreviewData_OutPreviewData;            // 0x0000(0x0008)(NoDestructor)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsBeingPreviewed_ReturnValue;             // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_MiniCraftingIngredientListEntry_C_RefreshBeingPreviewed;
-
-// Function MiniCraftingIngredientListEntry.MiniCraftingIngredientListEntry_C.Refresh
-// 0x0008 (0x0008 - 0x0000)
-struct MiniCraftingIngredientListEntry_C_Refresh final
-{
-public:
-	class UFortItemDefinition*                    CallFunc_GetItemDefinition_ReturnValue;            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_MiniCraftingIngredientListEntry_C_Refresh;
-
-// Function MiniCraftingIngredientListEntry.MiniCraftingIngredientListEntry_C.HandleDifferentItemOrQuantitySetBP
-// 0x0001 (0x0001 - 0x0000)
-struct MiniCraftingIngredientListEntry_C_HandleDifferentItemOrQuantitySetBP final
-{
-public:
-	bool                                          IsBeingReset;                                      // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_MiniCraftingIngredientListEntry_C_HandleDifferentItemOrQuantitySetBP;
-
-// Function MiniCraftingIngredientListEntry.MiniCraftingIngredientListEntry_C.ExecuteUbergraph_MiniCraftingIngredientListEntry
-// 0x0008 (0x0008 - 0x0000)
-struct MiniCraftingIngredientListEntry_C_ExecuteUbergraph_MiniCraftingIngredientListEntry final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsBeingReset;                         // 0x0004(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_MiniCraftingIngredientListEntry_C_ExecuteUbergraph_MiniCraftingIngredientListEntry;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

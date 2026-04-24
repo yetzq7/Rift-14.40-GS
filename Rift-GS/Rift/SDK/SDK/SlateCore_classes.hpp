@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // Class SlateCore.FontBulkData
-// 0x0050 (0x0078 - 0x0028)
+// 0x0098 (0x00C0 - 0x0028)
 class UFontBulkData final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x50];                                      // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x98];                                      // 0x0028(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

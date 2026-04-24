@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_TrapCooldownGeneric.GE_TrapCooldownGeneric_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x05F0 - 0x05F0)
 class UGE_TrapCooldownGeneric_C final : public UGameplayEffect
 {
 public:

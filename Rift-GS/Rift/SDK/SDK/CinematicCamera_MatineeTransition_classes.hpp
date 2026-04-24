@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass CinematicCamera_MatineeTransition.CinematicCamera_MatineeTransition_C
-// 0x0000 (0x0060 - 0x0060)
+// 0x0000 (0x0058 - 0x0058)
 class UCinematicCamera_MatineeTransition_C final : public UFortCinematicCamera
 {
 public:

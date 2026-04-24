@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_ThrownConsumable_InWindup.GE_ThrownConsumable_InWindup_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x05F0 - 0x05F0)
 class UGE_ThrownConsumable_InWindup_C final : public UGameplayEffect
 {
 public:

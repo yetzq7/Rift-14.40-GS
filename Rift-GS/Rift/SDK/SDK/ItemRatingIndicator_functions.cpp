@@ -16,34 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function ItemRatingIndicator.ItemRatingIndicator_C.HandleViewModelChanged
-// (Event, Protected, BlueprintEvent)
-
-void UItemRatingIndicator_C::HandleViewModelChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemRatingIndicator_C", "HandleViewModelChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemRatingIndicator.ItemRatingIndicator_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UItemRatingIndicator_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemRatingIndicator_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ItemRatingIndicator.ItemRatingIndicator_C.ExecuteUbergraph_ItemRatingIndicator
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -61,6 +33,20 @@ void UItemRatingIndicator_C::ExecuteUbergraph_ItemRatingIndicator(int32 EntryPoi
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemRatingIndicator.ItemRatingIndicator_C.HandleViewModelChanged
+// (Event, Protected, BlueprintEvent)
+
+void UItemRatingIndicator_C::HandleViewModelChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemRatingIndicator_C", "HandleViewModelChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

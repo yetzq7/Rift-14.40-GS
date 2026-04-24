@@ -16,6 +16,36 @@
 
 SDK_NAMESPACE_START
 
+// ScriptStruct LauncherSocialTypes.ChatChromeColorScheme
+// 0x0050 (0x0050 - 0x0000)
+struct FChatChromeColorScheme final
+{
+public:
+	struct FLinearColor                           ChatEntryBackgroundColor;                          // 0x0000(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           NoneActiveTabColor;                                // 0x0010(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           TabFontColor;                                      // 0x0020(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           TabFontColorInverted;                              // 0x0030(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ChatBackgroundColor;                               // 0x0040(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FChatChromeColorScheme;
+
+// ScriptStruct LauncherSocialTypes.SocialFontStyle
+// 0x0210 (0x0210 - 0x0000)
+struct FSocialFontStyle final
+{
+public:
+	struct FSlateFontInfo                         FontSmall;                                         // 0x0000(0x0050)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSlateFontInfo                         FontSmallBold;                                     // 0x0050(0x0050)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSlateFontInfo                         FontNormal;                                        // 0x00A0(0x0050)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSlateFontInfo                         FontNormalBold;                                    // 0x00F0(0x0050)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSlateFontInfo                         FontLarge;                                         // 0x0140(0x0050)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSlateFontInfo                         FontLargeBold;                                     // 0x0190(0x0050)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           DefaultFontColor;                                  // 0x01E0(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           InvertedFontColor;                                 // 0x01F0(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           DefaultDullFontColor;                              // 0x0200(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSocialFontStyle;
+
 // ScriptStruct LauncherSocialTypes.SocialListMargins
 // 0x0200 (0x0200 - 0x0000)
 struct FSocialListMargins final
@@ -60,34 +90,6 @@ public:
 };
 DUMPER7_ASSERTS_FSocialListMargins;
 
-// ScriptStruct LauncherSocialTypes.ChatChromeColorScheme
-// 0x0050 (0x0050 - 0x0000)
-struct FChatChromeColorScheme final
-{
-public:
-	struct FLinearColor                           ChatEntryBackgroundColor;                          // 0x0000(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           NoneActiveTabColor;                                // 0x0010(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           TabFontColor;                                      // 0x0020(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           TabFontColorInverted;                              // 0x0030(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ChatBackgroundColor;                               // 0x0040(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FChatChromeColorScheme;
-
-// ScriptStruct LauncherSocialTypes.ChatChromeMargins
-// 0x0064 (0x0064 - 0x0000)
-struct FChatChromeMargins final
-{
-public:
-	float                                         TabWidth;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMargin                                TabPadding;                                        // 0x0004(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMargin                                ChatWindowPadding;                                 // 0x0014(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMargin                                ChatWindowToEntryMargin;                           // 0x0024(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMargin                                ChatChannelPadding;                                // 0x0034(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMargin                                UserListButtonPadding;                             // 0x0044(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMargin                                UserListIconPadding;                               // 0x0054(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FChatChromeMargins;
-
 // ScriptStruct LauncherSocialTypes.ChatChromeStyle
 // 0x07C8 (0x07C8 - 0x0000)
 struct FChatChromeStyle final
@@ -105,6 +107,65 @@ public:
 	struct FButtonStyle                           UserListButtonStyle;                               // 0x0550(0x0278)(Edit, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FChatChromeStyle;
+
+// ScriptStruct LauncherSocialTypes.ChatChromeMargins
+// 0x0064 (0x0064 - 0x0000)
+struct FChatChromeMargins final
+{
+public:
+	float                                         TabWidth;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                TabPadding;                                        // 0x0004(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMargin                                ChatWindowPadding;                                 // 0x0014(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMargin                                ChatWindowToEntryMargin;                           // 0x0024(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMargin                                ChatChannelPadding;                                // 0x0034(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMargin                                UserListButtonPadding;                             // 0x0044(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMargin                                UserListIconPadding;                               // 0x0054(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FChatChromeMargins;
+
+// ScriptStruct LauncherSocialTypes.SocialListStyle
+// 0x26F8 (0x26F8 - 0x0000)
+struct FSocialListStyle final
+{
+public:
+	struct FButtonStyle                           GlobalChatButtonStyle;                             // 0x0000(0x0278)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            GlobalChatIcon;                                    // 0x0278(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FButtonStyle                           FriendItemButtonStyle;                             // 0x0300(0x0278)(Edit, NativeAccessSpecifierPublic)
+	struct FButtonStyle                           ConfirmButtonStyle;                                // 0x0578(0x0278)(Edit, NativeAccessSpecifierPublic)
+	struct FButtonStyle                           CancelButtonStyle;                                 // 0x07F0(0x0278)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateColor                            ButtonContentColor;                                // 0x0A68(0x0028)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateColor                            ButtonHoverContentColor;                           // 0x0A90(0x0028)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            ActionMenuArrowBrush;                              // 0x0AB8(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            ActionMenuArrowRightBrush;                         // 0x0B40(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateColor                            ActionMenuBackgroundColor;                         // 0x0BC8(0x0028)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            ToolTipArrowBrush;                                 // 0x0BF0(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FButtonStyle                           BackButtonStyle;                                   // 0x0C78(0x0278)(Edit, NativeAccessSpecifierPublic)
+	struct FButtonStyle                           HeaderButtonStyle;                                 // 0x0EF0(0x0278)(Edit, NativeAccessSpecifierPublic)
+	struct FButtonStyle                           FriendListActionButtonStyle;                       // 0x1168(0x0278)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            AddFriendButtonContentBrush;                       // 0x13E0(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            StatusIconBrush;                                   // 0x1468(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            PCIconBrush;                                       // 0x14F0(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            ConsoleIconBrush;                                  // 0x1578(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            MobileIconBrush;                                   // 0x1600(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            FacebookIconBrush;                                 // 0x1688(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            EpicIconBrush;                                     // 0x1710(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            FriendImageBrush;                                  // 0x1798(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            OfflineBrush;                                      // 0x1820(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            OnlineBrush;                                       // 0x18A8(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            AwayBrush;                                         // 0x1930(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            SpectateBrush;                                     // 0x19B8(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            FriendsContainerBackground;                        // 0x1A40(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            FriendsListBackground;                             // 0x1AC8(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FEditableTextBoxStyle                  AddFriendEditableTextStyle;                        // 0x1B50(0x07F0)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            BackBrush;                                         // 0x2340(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            SelectedOptionBrush;                               // 0x23C8(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            SettingsBrush;                                     // 0x2450(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            SeperatorBrush;                                    // 0x24D8(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            PresenceSeperatorBrush;                            // 0x2560(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            FontSizeBrush;                                     // 0x25E8(0x0088)(Edit, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            SearchBrush;                                       // 0x2670(0x0088)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSocialListStyle;
 
 // ScriptStruct LauncherSocialTypes.ChatColorScheme
 // 0x0120 (0x0120 - 0x0000)
@@ -169,67 +230,6 @@ public:
 	struct FMargin                                FriendActionStatusMargin;                          // 0x1350(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FChatStyle;
-
-// ScriptStruct LauncherSocialTypes.SocialFontStyle
-// 0x0210 (0x0210 - 0x0000)
-struct FSocialFontStyle final
-{
-public:
-	struct FSlateFontInfo                         FontSmall;                                         // 0x0000(0x0050)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSlateFontInfo                         FontSmallBold;                                     // 0x0050(0x0050)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSlateFontInfo                         FontNormal;                                        // 0x00A0(0x0050)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSlateFontInfo                         FontNormalBold;                                    // 0x00F0(0x0050)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSlateFontInfo                         FontLarge;                                         // 0x0140(0x0050)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSlateFontInfo                         FontLargeBold;                                     // 0x0190(0x0050)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           DefaultFontColor;                                  // 0x01E0(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           InvertedFontColor;                                 // 0x01F0(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           DefaultDullFontColor;                              // 0x0200(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSocialFontStyle;
-
-// ScriptStruct LauncherSocialTypes.SocialListStyle
-// 0x26F8 (0x26F8 - 0x0000)
-struct FSocialListStyle final
-{
-public:
-	struct FButtonStyle                           GlobalChatButtonStyle;                             // 0x0000(0x0278)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            GlobalChatIcon;                                    // 0x0278(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FButtonStyle                           FriendItemButtonStyle;                             // 0x0300(0x0278)(Edit, NativeAccessSpecifierPublic)
-	struct FButtonStyle                           ConfirmButtonStyle;                                // 0x0578(0x0278)(Edit, NativeAccessSpecifierPublic)
-	struct FButtonStyle                           CancelButtonStyle;                                 // 0x07F0(0x0278)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateColor                            ButtonContentColor;                                // 0x0A68(0x0028)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateColor                            ButtonHoverContentColor;                           // 0x0A90(0x0028)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            ActionMenuArrowBrush;                              // 0x0AB8(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            ActionMenuArrowRightBrush;                         // 0x0B40(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateColor                            ActionMenuBackgroundColor;                         // 0x0BC8(0x0028)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            ToolTipArrowBrush;                                 // 0x0BF0(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FButtonStyle                           BackButtonStyle;                                   // 0x0C78(0x0278)(Edit, NativeAccessSpecifierPublic)
-	struct FButtonStyle                           HeaderButtonStyle;                                 // 0x0EF0(0x0278)(Edit, NativeAccessSpecifierPublic)
-	struct FButtonStyle                           FriendListActionButtonStyle;                       // 0x1168(0x0278)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            AddFriendButtonContentBrush;                       // 0x13E0(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            StatusIconBrush;                                   // 0x1468(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            PCIconBrush;                                       // 0x14F0(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            ConsoleIconBrush;                                  // 0x1578(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            MobileIconBrush;                                   // 0x1600(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            FacebookIconBrush;                                 // 0x1688(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            EpicIconBrush;                                     // 0x1710(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            FriendImageBrush;                                  // 0x1798(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            OfflineBrush;                                      // 0x1820(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            OnlineBrush;                                       // 0x18A8(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            AwayBrush;                                         // 0x1930(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            SpectateBrush;                                     // 0x19B8(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            FriendsContainerBackground;                        // 0x1A40(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            FriendsListBackground;                             // 0x1AC8(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FEditableTextBoxStyle                  AddFriendEditableTextStyle;                        // 0x1B50(0x07F0)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            BackBrush;                                         // 0x2340(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            SelectedOptionBrush;                               // 0x23C8(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            SettingsBrush;                                     // 0x2450(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            SeperatorBrush;                                    // 0x24D8(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            PresenceSeperatorBrush;                            // 0x2560(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            FontSizeBrush;                                     // 0x25E8(0x0088)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            SearchBrush;                                       // 0x2670(0x0088)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSocialListStyle;
 
 // ScriptStruct LauncherSocialTypes.ProfanityData
 // 0x0038 (0x0038 - 0x0000)

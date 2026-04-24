@@ -12,50 +12,44 @@
 
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
+#include "FortniteUI_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C
-// 0x0140 (0x0DA8 - 0x0C68)
+// 0x0230 (0x0D80 - 0x0B50)
 class UAthenaCustomizationSlotButton_C final : public UAthenaCustomizationSlotSelectorButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C68(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       WarningPulse;                                      // 0x0C70(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnBackedOutFromSelection;                          // 0x0C78(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnConfirmedSelection;                              // 0x0C80(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnSelected;                                        // 0x0C88(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnHover;                                           // 0x0C90(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 ConfirmSelectionFlash;                             // 0x0C98(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ConfirmSelectionShine;                             // 0x0CA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ExclusiveFill;                                     // 0x0CA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               ExclusiveWarningOvr;                               // 0x0CB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortLazyImage*                         Image_empty;                                       // 0x0CB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 InactiveFilledSlot;                                // 0x0CC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_Plus;                                         // 0x0CC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   TooltipBody;                                       // 0x0CD0(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   TooltipHeader;                                     // 0x0CE8(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
-	bool                                          ShowSubTypeIcon;                                   // 0x0D00(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_D01[0x7];                                      // 0x0D01(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            SubTypeIcon;                                       // 0x0D08(0x0088)(Edit, BlueprintVisible, ExposeOnSpawn)
-	bool                                          bSuppressTooltip;                                  // 0x0D90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_D91[0x3];                                      // 0x0D91(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TypeIconVerticalOffset;                            // 0x0D94(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               ImageEmptyMID;                                     // 0x0D98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         WidthThreshold;                                    // 0x0DA0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnBackedOutFromSelection;                          // 0x0B58(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnConfirmedSelection;                              // 0x0B60(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnSelected;                                        // 0x0B68(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnHover;                                           // 0x0B70(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 ConfirmSelectionFlash;                             // 0x0B78(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ConfirmSelectionShine;                             // 0x0B80(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 EmptyImage;                                        // 0x0B88(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ImageSlotType;                                     // 0x0B90(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNormalBangWrapper_C*                   NormalBangWrapper;                                 // 0x0B98(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               SlotImageOverlay;                                  // 0x0BA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   TooltipBody;                                       // 0x0BA8(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   TooltipHeader;                                     // 0x0BC0(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	bool                                          ShowSubTypeIcon;                                   // 0x0BD8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	uint8                                         Pad_BD9[0x7];                                      // 0x0BD9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            SubTypeIcon;                                       // 0x0BE0(0x0088)(Edit, BlueprintVisible, ExposeOnSpawn)
+	bool                                          bSuppressTooltip;                                  // 0x0C68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	uint8                                         Pad_C69[0x3];                                      // 0x0C69(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TypeIconVerticalOffset;                            // 0x0C6C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FSlateBrush                            EmptyImage_M;                                      // 0x0C70(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateBrush                            EmptyImage_S;                                      // 0x0CF8(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_AthenaCustomizationSlotButton(int32 EntryPoint);
-	void OnUpdateExclusiveWarning(bool bShouldWarn);
-	void OnCardImageAndWidthChanged(const TSoftObjectPtr<class UTexture2D>& Image, float Width);
-	void OnCustomizationSlotActiveStateChanged(bool bInAttachableCosmeticAvailable, bool bInActive);
 	void Construct();
-	void HandleActiveStateChanged(bool CosmeticAvailable, bool Active);
-	class FString GetSlotDebugName();
-	void HandleWidthChanged(float Width);
+	void PreConstruct(bool IsDesignTime);
+	void SetCardSizeAndSlotImage(EFortItemCardSize CardSize, const struct FSlateBrush& SlotImage);
 
 public:
 	static class UClass* StaticClass()

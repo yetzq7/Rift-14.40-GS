@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Trap_Athena_CeilingSpikes.Trap_Athena_CeilingSpikes_C
-// 0x0000 (0x0E70 - 0x0E70)
+// 0x0000 (0x0E38 - 0x0E38)
 class ATrap_Athena_CeilingSpikes_C final : public ATrap_Athena_Spikes_C
 {
 public:

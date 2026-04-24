@@ -36,40 +36,6 @@ void ABP_SprayDecal_C::ExecuteUbergraph_BP_SprayDecal(int32 EntryPoint)
 }
 
 
-// Function BP_SprayDecal.BP_SprayDecal_C.OnWallDestoryed
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           DestroyedActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_SprayDecal_C::OnWallDestoryed(class AActor* DestroyedActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "OnWallDestoryed");
-
-	Params::BP_SprayDecal_C_OnWallDestoryed Parms{};
-
-	Parms.DestroyedActor = DestroyedActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_SprayDecal.BP_SprayDecal_C.PostLevelSaveSpawnCleanup
-// (Event, Public, BlueprintEvent)
-
-void ABP_SprayDecal_C::PostLevelSaveSpawnCleanup()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "PostLevelSaveSpawnCleanup");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_SprayDecal.BP_SprayDecal_C.OnNearbyTrapPlaced
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -230,30 +196,6 @@ void ABP_SprayDecal_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_SprayDecal.BP_SprayDecal_C.OnReady_B252FED346EAB98D54D786BD15C1CC7B
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortGameStateAthena*             GameState                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UFortPlaylist*              Playlist                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTagContainer&     PlaylistContextTags                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void ABP_SprayDecal_C::OnReady_B252FED346EAB98D54D786BD15C1CC7B(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "OnReady_B252FED346EAB98D54D786BD15C1CC7B");
-
-	Params::BP_SprayDecal_C_OnReady_B252FED346EAB98D54D786BD15C1CC7B Parms{};
-
-	Parms.GameState = GameState;
-	Parms.Playlist = Playlist;
-	Parms.PlaylistContextTags = std::move(PlaylistContextTags);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_SprayDecal.BP_SprayDecal_C.OnLoaded_F925FF00475A018319C73E9FB1540BC6
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -351,48 +293,6 @@ void ABP_SprayDecal_C::OnRep_DecalFadeoutTime()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_SprayDecal_C", "OnRep_DecalFadeoutTime");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SprayDecal.BP_SprayDecal_C.UnbindAndClearNearbyBuildingActors
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_SprayDecal_C::UnbindAndClearNearbyBuildingActors()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "UnbindAndClearNearbyBuildingActors");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SprayDecal.BP_SprayDecal_C.FindNearbyBuildingActorsAndBindDelegates
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_SprayDecal_C::FindNearbyBuildingActorsAndBindDelegates()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "FindNearbyBuildingActorsAndBindDelegates");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SprayDecal.BP_SprayDecal_C.AddBoxCollisionForCreative
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_SprayDecal_C::AddBoxCollisionForCreative()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SprayDecal_C", "AddBoxCollisionForCreative");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

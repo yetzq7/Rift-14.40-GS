@@ -11,19 +11,19 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "FortniteGame_classes.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_AthenaInVehicle.GA_AthenaInVehicle_C
-// 0x0028 (0x0AD0 - 0x0AA8)
+// 0x0028 (0x0960 - 0x0938)
 class UGA_AthenaInVehicle_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTagContainer                  ExitTag;                                           // 0x0AB0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0938(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTagContainer                  ExitTag;                                           // 0x0940(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_GA_AthenaInVehicle(int32 EntryPoint);

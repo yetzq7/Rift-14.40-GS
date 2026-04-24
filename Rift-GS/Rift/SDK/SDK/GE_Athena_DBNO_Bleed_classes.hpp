@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_Athena_DBNO_Bleed.GE_Athena_DBNO_Bleed_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x05F0 - 0x05F0)
 class UGE_Athena_DBNO_Bleed_C final : public UGET_PeriodicEnergyDamage_C
 {
 public:

@@ -16,57 +16,241 @@
 
 SDK_NAMESPACE_START
 
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.SetTutorialNameID
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.ExecuteUbergraph_QuestsCountIconTabButton
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class FName                             InTutorialBangID                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UQuestsCountIconTabButton_C::SetTutorialNameID(class FName InTutorialBangID)
+void UQuestsCountIconTabButton_C::ExecuteUbergraph_QuestsCountIconTabButton(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "SetTutorialNameID");
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "ExecuteUbergraph_QuestsCountIconTabButton");
 
-	Params::QuestsCountIconTabButton_C_SetTutorialNameID Parms{};
+	Params::QuestsCountIconTabButton_C_ExecuteUbergraph_QuestsCountIconTabButton Parms{};
 
-	Parms.InTutorialBangID = InTutorialBangID;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Update Bang State
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bBangEnabled_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   Count                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.BP_OnDisabled
+// (Event, Protected, BlueprintEvent)
 
-void UQuestsCountIconTabButton_C::Update_Bang_State(bool bBangEnabled_0, int32 Count)
+void UQuestsCountIconTabButton_C::BP_OnDisabled()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "Update Bang State");
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "BP_OnDisabled");
 
-	Params::QuestsCountIconTabButton_C_Update_Bang_State Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.bBangEnabled_0 = bBangEnabled_0;
-	Parms.Count = Count;
+
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.BP_OnEnabled
+// (Event, Protected, BlueprintEvent)
+
+void UQuestsCountIconTabButton_C::BP_OnEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "BP_OnEnabled");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Handle Quest Count Updated
+// (BlueprintCallable, BlueprintEvent)
+
+void UQuestsCountIconTabButton_C::Handle_Quest_Count_Updated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "Handle Quest Count Updated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UQuestsCountIconTabButton_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UQuestsCountIconTabButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UQuestsCountIconTabButton_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.BP_OnDeselected
+// (Event, Protected, BlueprintEvent)
+
+void UQuestsCountIconTabButton_C::BP_OnDeselected()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "BP_OnDeselected");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.BP_OnSelected
+// (Event, Protected, BlueprintEvent)
+
+void UQuestsCountIconTabButton_C::BP_OnSelected()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "BP_OnSelected");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.SetTabLabelInfo
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FFortTabButtonLabelInfo&   TabLabelInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UQuestsCountIconTabButton_C::SetTabLabelInfo(const struct FFortTabButtonLabelInfo& TabLabelInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "SetTabLabelInfo");
+
+	Params::QuestsCountIconTabButton_C_SetTabLabelInfo Parms{};
+
+	Parms.TabLabelInfo = std::move(TabLabelInfo);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Update Text
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UQuestsCountIconTabButton_C::Update_Text()
+void UQuestsCountIconTabButton_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "Update Text");
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "PreConstruct");
+
+	Params::QuestsCountIconTabButton_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.OnCurrentTextStyleChanged
+// (Event, Protected, BlueprintEvent)
+
+void UQuestsCountIconTabButton_C::OnCurrentTextStyleChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "OnCurrentTextStyleChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Set Text
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      ButtonText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UQuestsCountIconTabButton_C::Set_Text(const class FText& ButtonText_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "Set Text");
+
+	Params::QuestsCountIconTabButton_C_Set_Text Parms{};
+
+	Parms.ButtonText_0 = std::move(ButtonText_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Set Icon
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FSlateBrush&               IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UQuestsCountIconTabButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "Set Icon");
+
+	Params::QuestsCountIconTabButton_C_Set_Icon Parms{};
+
+	Parms.IconBrush_0 = std::move(IconBrush_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.ShowText
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UQuestsCountIconTabButton_C::ShowText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "ShowText");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,241 +276,57 @@ void UQuestsCountIconTabButton_C::SetTutorialBorderStyle(class UClass* BorderSty
 }
 
 
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.ShowText
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Update Text
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UQuestsCountIconTabButton_C::ShowText()
+void UQuestsCountIconTabButton_C::Update_Text()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "ShowText");
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "Update Text");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Set Icon
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Update Bang State
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FSlateBrush&               IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                                    bBangEnabled_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   Count                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UQuestsCountIconTabButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
+void UQuestsCountIconTabButton_C::Update_Bang_State(bool bBangEnabled_0, int32 Count)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "Set Icon");
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "Update Bang State");
 
-	Params::QuestsCountIconTabButton_C_Set_Icon Parms{};
+	Params::QuestsCountIconTabButton_C_Update_Bang_State Parms{};
 
-	Parms.IconBrush_0 = std::move(IconBrush_0);
+	Parms.bBangEnabled_0 = bBangEnabled_0;
+	Parms.Count = Count;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Set Text
+// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.SetTutorialNameID
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FText&                      ButtonText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FName                             InTutorialBangID                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UQuestsCountIconTabButton_C::Set_Text(const class FText& ButtonText_0)
+void UQuestsCountIconTabButton_C::SetTutorialNameID(class FName InTutorialBangID)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "Set Text");
+		Func = Class->GetFunction("QuestsCountIconTabButton_C", "SetTutorialNameID");
 
-	Params::QuestsCountIconTabButton_C_Set_Text Parms{};
+	Params::QuestsCountIconTabButton_C_SetTutorialNameID Parms{};
 
-	Parms.ButtonText_0 = std::move(ButtonText_0);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.OnCurrentTextStyleChanged
-// (Event, Protected, BlueprintEvent)
-
-void UQuestsCountIconTabButton_C::OnCurrentTextStyleChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "OnCurrentTextStyleChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UQuestsCountIconTabButton_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "PreConstruct");
-
-	Params::QuestsCountIconTabButton_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.SetTabLabelInfo
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FFortTabButtonLabelInfo&   TabLabelInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UQuestsCountIconTabButton_C::SetTabLabelInfo(const struct FFortTabButtonLabelInfo& TabLabelInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "SetTabLabelInfo");
-
-	Params::QuestsCountIconTabButton_C_SetTabLabelInfo Parms{};
-
-	Parms.TabLabelInfo = std::move(TabLabelInfo);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.BP_OnSelected
-// (Event, Protected, BlueprintEvent)
-
-void UQuestsCountIconTabButton_C::BP_OnSelected()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "BP_OnSelected");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.BP_OnDeselected
-// (Event, Protected, BlueprintEvent)
-
-void UQuestsCountIconTabButton_C::BP_OnDeselected()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "BP_OnDeselected");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UQuestsCountIconTabButton_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UQuestsCountIconTabButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void UQuestsCountIconTabButton_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Handle Quest Count Updated
-// (BlueprintCallable, BlueprintEvent)
-
-void UQuestsCountIconTabButton_C::Handle_Quest_Count_Updated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "Handle Quest Count Updated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.BP_OnEnabled
-// (Event, Protected, BlueprintEvent)
-
-void UQuestsCountIconTabButton_C::BP_OnEnabled()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "BP_OnEnabled");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.BP_OnDisabled
-// (Event, Protected, BlueprintEvent)
-
-void UQuestsCountIconTabButton_C::BP_OnDisabled()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "BP_OnDisabled");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.ExecuteUbergraph_QuestsCountIconTabButton
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UQuestsCountIconTabButton_C::ExecuteUbergraph_QuestsCountIconTabButton(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuestsCountIconTabButton_C", "ExecuteUbergraph_QuestsCountIconTabButton");
-
-	Params::QuestsCountIconTabButton_C_ExecuteUbergraph_QuestsCountIconTabButton Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.InTutorialBangID = InTutorialBangID;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

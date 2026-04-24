@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_ShieldRegen_Delay_Damaged.GE_ShieldRegen_Delay_Damaged_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x05F0 - 0x05F0)
 class UGE_ShieldRegen_Delay_Damaged_C final : public UGameplayEffect
 {
 public:

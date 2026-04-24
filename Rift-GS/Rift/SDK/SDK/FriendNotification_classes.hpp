@@ -17,16 +17,17 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass FriendNotification.FriendNotification_C
-// 0x0008 (0x0110 - 0x0108)
+// 0x0008 (0x00E0 - 0x00D8)
 class UFriendNotification_C final : public UFortUIFriendNotification
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0108(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_FriendNotification(int32 EntryPoint);
-	void ShowFriendInvites();
+	void ShowPartyInvites();
 	void JoinPartyInvite();
+	void ShowFriendInvites();
 
 public:
 	static class UClass* StaticClass()

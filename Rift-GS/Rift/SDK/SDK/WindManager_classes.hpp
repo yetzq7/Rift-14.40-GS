@@ -10,67 +10,75 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "StaticMeshMaterialArrayCombo_structs.hpp"
-#include "FortniteGame_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "FlowMapMaterials_structs.hpp"
 #include "ArrayOfWaterMeshWaterBlueprintPairs_structs.hpp"
-#include "Engine_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass WindManager.WindManager_C
-// 0x0100 (0x0560 - 0x0460)
+// 0x0118 (0x0688 - 0x0570)
 class AWindManager_C final : public AFortWindManager
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0460(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   EmptyStaticMesh;                                   // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         SmallerRenderTargetOrthoWidth;                     // 0x0478(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         External_Test_Actor;                               // 0x0480(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, HasGetValueTypeHash)
-	TArray<class AFortStaticMeshActor*>           World_Terrain_Meshes;                              // 0x0490(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FVector                                Camera_Height_Offset;                              // 0x04A0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Particle_Z_Offset;                                 // 0x04AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Is_Water_Interaction_Enabled;                      // 0x04B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4B1[0x7];                                      // 0x04B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FStaticMeshMaterialArrayCombo>  WorldStaticMeshArray;                              // 0x04B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FArrayOfWaterMeshWaterBlueprintPairs   Array_Of_Water_Assets;                             // 0x04C8(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<class UStaticMesh*>                    PrototypicalStaticMeshes;                          // 0x04D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	int32                                         Current_Water_Mesh_Index;                          // 0x04E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EC[0x4];                                      // 0x04EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFlowMapMaterials>              WaterVectorMatToDefaultMaterialPairing;            // 0x04F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          MaterialPairingFound;                              // 0x0500(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_501[0x3];                                      // 0x0501(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           WorldBoundsMinMax;                                 // 0x0504(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_514[0x4];                                      // 0x0514(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     Black_Scene_Capture_Material;                      // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBox                                   Max_level_bounds___used_to_isolate_the_level_from_the_vista; // 0x0520(0x001C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_53C[0x4];                                      // 0x053C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UStaticMeshComponent*>           StormCylinderMeshes;                               // 0x0540(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          Storm_Cyl_Mesh_Match;                              // 0x0550(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_551[0x3];                                      // 0x0551(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Wind_Cyl_Mesh_Array_Match_Index;                   // 0x0554(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Delta_Wind_Falloff_in_World_Units;                 // 0x0558(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFortWindImpulseHandle                 NewVar_1;                                          // 0x055C(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0570(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*               WaterInteractionParticle;                          // 0x0578(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   EmptyStaticMesh;                                   // 0x0580(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneCaptureComponent2D*               TopDownCaptureActorOfTheWorld;                     // 0x0588(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneCaptureComponent2D*               SceneCaptureComponent2D01;                         // 0x0590(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         SmallerRenderTargetOrthoWidth;                     // 0x05A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5A4[0x4];                                      // 0x05A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         External_Test_Actor;                               // 0x05A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AFortStaticMeshActor*>           World_Terrain_Meshes;                              // 0x05B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FVector                                Camera_Height_Offset;                              // 0x05C8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Particle_Z_Offset;                                 // 0x05D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Has_Water_Interaction_Enabled_Variable_Been_Set;   // 0x05D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Is_Water_Interaction_Enabled;                      // 0x05D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5DA[0x6];                                      // 0x05DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FStaticMeshMaterialArrayCombo>  WorldStaticMeshArray;                              // 0x05E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FArrayOfWaterMeshWaterBlueprintPairs   Array_Of_Water_Assets;                             // 0x05F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class UStaticMesh*>                    PrototypicalStaticMeshes;                          // 0x0600(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	int32                                         Current_Water_Mesh_Index;                          // 0x0610(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_614[0x4];                                      // 0x0614(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFlowMapMaterials>              WaterVectorMatToDefaultMaterialPairing;            // 0x0618(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	bool                                          MaterialPairingFound;                              // 0x0628(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_629[0x3];                                      // 0x0629(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           WorldBoundsMinMax;                                 // 0x062C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_63C[0x4];                                      // 0x063C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     Black_Scene_Capture_Material;                      // 0x0640(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBox                                   Max_level_bounds___used_to_isolate_the_level_from_the_vista; // 0x0648(0x001C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_664[0x4];                                      // 0x0664(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UStaticMeshComponent*>           StormCylinderMeshes;                               // 0x0668(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	bool                                          Storm_Cyl_Mesh_Match;                              // 0x0678(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_679[0x3];                                      // 0x0679(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Wind_Cyl_Mesh_Array_Match_Index;                   // 0x067C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Delta_Wind_Falloff_in_World_Units;                 // 0x0680(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFortWindImpulseHandle                 NewVar_1;                                          // 0x0684(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
 	void ExecuteUbergraph_WindManager(int32 EntryPoint);
-	void Add_Render_To_Texture_Particle(class UParticleSystem* EmitterTemplate, const struct FTransform& InTransform);
 	void Update_Test(float NewMagnitude);
 	void ReceiveBeginPlay();
 	void Add_Wind_Component(class UPrimitiveComponent* InComponent);
-	void Register_player_for_render_to_texture_purposes(class UPrimitiveComponent* Effect_Water_Interaction_FX, class UPrimitiveComponent* Gameplay_Wind_INteraction_Effects);
-	void AddWindParticleSystemComponent(class UParticleSystemComponent* ParticleSystemComponent);
 	void Play_Water_Splash_Particle_System_At_Location(const struct FTransform& Particle_Transform);
 	void SpawnTestWind(float Radius, float ImpulseMagnitude);
-	void OnWindImpulseCylinderCreation(const struct FFortWindImpulseCylinder& WindImpulseCylinder, const struct FFortWindImpulseCylinderDelta& WindImpulseCylinderDelta);
 	void OnWindImpulseCylinderDeltaComplete(const struct FFortWindImpulseCylinder& WindImpulseCylinder);
 	void OnWindImpulseCylinderDeath(const struct FFortWindImpulseCylinder& WindImpulseCylinder);
+	void OnWindImpulseCylinderCreation(const struct FFortWindImpulseCylinder& WindImpulseCylinder, const struct FFortWindImpulseCylinderDelta& WindImpulseCylinderDelta);
+	void AddWindParticleSystemComponent(class UParticleSystemComponent* ParticleSystemComponent);
+	void Register_player_for_render_to_texture_purposes(class UPrimitiveComponent* Effect_Water_Interaction_FX, class UPrimitiveComponent* Gameplay_Wind_INteraction_Effects);
+	void ReceiveTick(float DeltaSeconds);
+	void OnWorldReady();
+	void Add_Render_To_Texture_Particle(class UParticleSystem* EmitterTemplate, const struct FTransform& InTransform);
 	void UserConstructionScript();
+	void InitializeOrthoSettings();
+	void SetRenderOnlyAssets(class UPrimitiveComponent* InComponent);
 	struct FVector Calculate_Camera_Position(float Scale, class USceneCaptureComponent2D* Scene_Capture);
 	void UpdateStormWindCylinder(const struct FFortWindImpulseCylinder& Wind_Impulse, const struct FFortWindImpulseCylinderDelta& Wind_Delta);
 	void RemoveWindCylinder(const struct FFortWindImpulseCylinder& WindImpulseCylinder);

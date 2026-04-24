@@ -80,4 +80,18 @@ void AProp_TirePile_Tower_C::BndEvt__Jump_Collision_K2Node_ComponentBoundEvent_2
 }
 
 
+// Function Prop_TirePile_Tower.Prop_TirePile_Tower_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AProp_TirePile_Tower_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Prop_TirePile_Tower_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

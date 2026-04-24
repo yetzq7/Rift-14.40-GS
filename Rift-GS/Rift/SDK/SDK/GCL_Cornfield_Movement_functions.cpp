@@ -64,6 +64,20 @@ void AGCL_Cornfield_Movement_C::ReceiveBeginPlay()
 }
 
 
+// Function GCL_Cornfield_Movement.GCL_Cornfield_Movement_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AGCL_Cornfield_Movement_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_Cornfield_Movement_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GCL_Cornfield_Movement.GCL_Cornfield_Movement_C.OnRemove
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

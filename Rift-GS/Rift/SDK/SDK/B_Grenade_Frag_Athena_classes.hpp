@@ -16,8 +16,8 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_Grenade_Frag_Athena.B_Grenade_Frag_Athena_C
-// 0x0000 (0x0CC8 - 0x0CC8)
-class AB_Grenade_Frag_Athena_C : public AB_ConsumableSmall_Athena_C
+// 0x0000 (0x0988 - 0x0988)
+class AB_Grenade_Frag_Athena_C final : public AB_ConsumableSmall_Athena_C
 {
 public:
 	static class UClass* StaticClass()

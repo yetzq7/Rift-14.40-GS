@@ -17,18 +17,18 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass LoginCamera_Blueprint.LoginCamera_Blueprint_C
-// 0x0020 (0x0800 - 0x07E0)
+// 0x0020 (0x08A0 - 0x0880)
 class ALoginCamera_Blueprint_C final : public AFortCameraBase
 {
 public:
-	uint8                                         Pad_7D8[0x8];                                      // 0x07D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x07E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       LoginCamera_0;                                     // 0x07F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0880(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0888(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       LoginCamera_0;                                     // 0x0890(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnActivated(class AFortPlayerController* PlayerController);
 	void ExecuteUbergraph_LoginCamera_Blueprint(int32 EntryPoint);
+	void OnActivated();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

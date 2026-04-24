@@ -56,20 +56,6 @@ void USocialPanel_FriendLinkButton_C::OnShareButtonTypeSet(EFriendLinkShareButto
 }
 
 
-// Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void USocialPanel_FriendLinkButton_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_FriendLinkButton_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.BP_OnHovered
 // (Event, Protected, BlueprintEvent)
 
@@ -84,20 +70,6 @@ void USocialPanel_FriendLinkButton_C::BP_OnHovered()
 }
 
 
-// Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.OnCopiedToClipboard
-// (Event, Protected, BlueprintEvent)
-
-void USocialPanel_FriendLinkButton_C::OnCopiedToClipboard()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanel_FriendLinkButton_C", "OnCopiedToClipboard");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.BP_OnUnhovered
 // (Event, Protected, BlueprintEvent)
 
@@ -107,6 +79,34 @@ void USocialPanel_FriendLinkButton_C::BP_OnUnhovered()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("SocialPanel_FriendLinkButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USocialPanel_FriendLinkButton_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanel_FriendLinkButton_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialPanel_FriendLinkButton.SocialPanel_FriendLinkButton_C.OnCopiedToClipboard
+// (Event, Protected, BlueprintEvent)
+
+void USocialPanel_FriendLinkButton_C::OnCopiedToClipboard()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanel_FriendLinkButton_C", "OnCopiedToClipboard");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

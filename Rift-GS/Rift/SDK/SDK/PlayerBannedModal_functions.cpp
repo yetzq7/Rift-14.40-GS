@@ -36,15 +36,15 @@ void UPlayerBannedModal_C::ExecuteUbergraph_PlayerBannedModal(int32 EntryPoint)
 }
 
 
-// Function PlayerBannedModal.PlayerBannedModal_C.BP_OnActivated
+// Function PlayerBannedModal.PlayerBannedModal_C.OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UPlayerBannedModal_C::BP_OnActivated()
+void UPlayerBannedModal_C::OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBannedModal_C", "BP_OnActivated");
+		Func = Class->GetFunction("PlayerBannedModal_C", "OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -157,11 +157,9 @@ void UPlayerBannedModal_C::OnBanAck(bool Success)
 // Parameters:
 // EPlayerBanReasons                       Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class FString&                    ExploitProgramName                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// EPlayerCompetitiveBanReasons            Competitive_Ban_Reason                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsCompetitiveBan_0                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-class FText UPlayerBannedModal_C::BanEnumToText(EPlayerBanReasons Index_0, const class FString& ExploitProgramName, EPlayerCompetitiveBanReasons Competitive_Ban_Reason, bool bIsCompetitiveBan_0)
+class FText UPlayerBannedModal_C::BanEnumToText(EPlayerBanReasons Index_0, const class FString& ExploitProgramName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -172,8 +170,6 @@ class FText UPlayerBannedModal_C::BanEnumToText(EPlayerBanReasons Index_0, const
 
 	Parms.Index_0 = Index_0;
 	Parms.ExploitProgramName = std::move(ExploitProgramName);
-	Parms.Competitive_Ban_Reason = Competitive_Ban_Reason;
-	Parms.bIsCompetitiveBan_0 = bIsCompetitiveBan_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

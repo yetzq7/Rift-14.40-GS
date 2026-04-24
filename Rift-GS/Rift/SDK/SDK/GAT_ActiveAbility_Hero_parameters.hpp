@@ -15,11 +15,12 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function GAT_ActiveAbility_Hero.GAT_ActiveAbility_Hero_C.ExecuteUbergraph_GAT_ActiveAbility_Hero
-// 0x0004 (0x0004 - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct GAT_ActiveAbility_Hero_C_ExecuteUbergraph_GAT_ActiveAbility_Hero final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsHeroLoadoutSystemEnabled_ReturnValue;   // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_GAT_ActiveAbility_Hero_C_ExecuteUbergraph_GAT_ActiveAbility_Hero;
 

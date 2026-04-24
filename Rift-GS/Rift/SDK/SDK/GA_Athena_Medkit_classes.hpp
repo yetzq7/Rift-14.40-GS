@@ -10,15 +10,39 @@
 
 #include "Basic.hpp"
 
-#include "GA_Athena_MedConsumable_Parent_classes.hpp"
+#include "FortniteGame_structs.hpp"
+#include "FortniteGame_classes.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Athena_Medkit.GA_Athena_Medkit_C
-// 0x0000 (0x0BE0 - 0x0BE0)
-class UGA_Athena_Medkit_C final : public UGA_Athena_MedConsumable_Parent_C
+// 0x0090 (0x09C8 - 0x0938)
+class UGA_Athena_Medkit_C final : public UFortGameplayAbility
 {
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0938(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FFortGameplayAbilityMontageInfo        AnimMontageInfo;                                   // 0x0940(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FRotator                               SpawnHeading;                                      // 0x0998(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9A4[0x4];                                      // 0x09A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x09A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 Projectile;                                        // 0x09B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         HealingAmount;                                     // 0x09B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggerDuration;                                   // 0x09BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   MedkitHolster;                                     // 0x09C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void ExecuteUbergraph_GA_Athena_Medkit(int32 EntryPoint);
+	void K2_OnEndAbility(bool bWasCancelled);
+	void K2_ActivateAbility();
+	void Triggered_4F161F934DDA0C407BD9A48EEEE7DDCE(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void Cancelled_4F161F934DDA0C407BD9A48EEEE7DDCE(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void Completed_4F161F934DDA0C407BD9A48EEEE7DDCE(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+
+	bool K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, struct FGameplayTagContainer* RelevantTags) const;
+
 public:
 	static class UClass* StaticClass()
 	{

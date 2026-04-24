@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GCN_Zipline_Smash.GCN_Zipline_Smash_C
-// 0x0000 (0x01B8 - 0x01B8)
+// 0x0000 (0x01A0 - 0x01A0)
 class UGCN_Zipline_Smash_C final : public UFortGameplayCueNotify_Burst
 {
 public:
-	void OnBurst(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UMatineeCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance) const;
+	void OnBurst(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance) const;
 
 public:
 	static class UClass* StaticClass()

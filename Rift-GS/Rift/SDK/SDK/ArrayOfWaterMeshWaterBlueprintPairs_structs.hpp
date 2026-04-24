@@ -20,7 +20,7 @@ SDK_NAMESPACE_START
 struct FArrayOfWaterMeshWaterBlueprintPairs final
 {
 public:
-	TArray<struct FWaterMeshAssetsToReplace>      ArrayOfPairedMeshesandBlueprints_3_66DC153A4804C5BFDF6D5187A0EEF992; // 0x0000(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FWaterMeshAssetsToReplace>      ArrayOfPairedMeshesandBlueprints_3_66DC153A4804C5BFDF6D5187A0EEF992; // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
 };
 DUMPER7_ASSERTS_FArrayOfWaterMeshWaterBlueprintPairs;
 

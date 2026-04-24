@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass GiftingUserItemSmall.GiftingUserItemSmall_C
-// 0x0008 (0x0BC0 - 0x0BB8)
+// 0x0008 (0x0B50 - 0x0B48)
 class UGiftingUserItemSmall_C final : public UFortGiftingUserItem
 {
 public:
-	class UWidgetAnimation*                       Toggle;                                            // 0x0BB8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Toggle;                                            // 0x0B48(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

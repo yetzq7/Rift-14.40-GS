@@ -17,12 +17,9 @@
 SDK_NAMESPACE_START
 
 // Class LiveStreamVoice.LiveStreamVoiceChannel
-// 0x0010 (0x0080 - 0x0070)
-class ULiveStreamVoiceChannel final : public UChannel
+// 0x0000 (0x0080 - 0x0080)
+class ULiveStreamVoiceChannel final : public UVoiceChannel
 {
-public:
-	uint8                                         Pad_70[0x10];                                      // 0x0070(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -40,13 +37,11 @@ public:
 DUMPER7_ASSERTS_ULiveStreamVoiceChannel;
 
 // Class LiveStreamVoice.LiveStreamVoiceSubsystem
-// 0x0030 (0x0060 - 0x0030)
+// 0x0018 (0x0040 - 0x0028)
 class ULiveStreamVoiceSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVoiceSettings                         PlaybackSettings;                                  // 0x0038(0x0018)(NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVoiceSettings                         PlaybackSettings;                                  // 0x0028(0x0018)(NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 
 public:
 	void ClearVoiceSettings();

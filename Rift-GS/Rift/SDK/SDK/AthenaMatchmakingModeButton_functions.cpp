@@ -36,43 +36,23 @@ void UAthenaMatchmakingModeButton_C::ExecuteUbergraph_AthenaMatchmakingModeButto
 }
 
 
-// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.OnMouseLeave
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UAthenaMatchmakingModeButton_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaMatchmakingModeButton_C", "OnMouseLeave");
-
-	Params::AthenaMatchmakingModeButton_C_OnMouseLeave Parms{};
-
-	Parms.MouseEvent = std::move(MouseEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.OnMouseEnter
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaMatchmakingModeButton_C::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+void UAthenaMatchmakingModeButton_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaMatchmakingModeButton_C", "OnMouseEnter");
+		Func = Class->GetFunction("AthenaMatchmakingModeButton_C", "Tick");
 
-	Params::AthenaMatchmakingModeButton_C_OnMouseEnter Parms{};
+	Params::AthenaMatchmakingModeButton_C_Tick Parms{};
 
 	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
+	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -99,7 +79,7 @@ void UAthenaMatchmakingModeButton_C::SetTabLabelInfo(const struct FFortTabButton
 
 
 // Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.PlaylistChanged
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFortPlaylistAthena*              NewPlaylist                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class FText&                      OverrideName                                           (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -141,7 +121,7 @@ void UAthenaMatchmakingModeButton_C::SetSquadFillText(bool bFill)
 
 
 // Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.RefreshFillText
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UAthenaMatchmakingModeButton_C::RefreshFillText()
 {
@@ -151,26 +131,6 @@ void UAthenaMatchmakingModeButton_C::RefreshFillText()
 		Func = Class->GetFunction("AthenaMatchmakingModeButton_C", "RefreshFillText");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaMatchmakingModeButton.AthenaMatchmakingModeButton_C.RefreshLimitedPoolWarning
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsCrossplayEnabled                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UAthenaMatchmakingModeButton_C::RefreshLimitedPoolWarning(bool IsCrossplayEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaMatchmakingModeButton_C", "RefreshLimitedPoolWarning");
-
-	Params::AthenaMatchmakingModeButton_C_RefreshLimitedPoolWarning Parms{};
-
-	Parms.IsCrossplayEnabled = IsCrossplayEnabled;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

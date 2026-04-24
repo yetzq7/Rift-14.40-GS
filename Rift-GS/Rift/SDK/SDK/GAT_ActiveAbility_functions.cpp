@@ -164,26 +164,6 @@ void UGAT_ActiveAbility_C::SendHeroAbilityActivationEvent()
 }
 
 
-// Function GAT_ActiveAbility.GAT_ActiveAbility_C.EndAbilityWithReason
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    Reason                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UGAT_ActiveAbility_C::EndAbilityWithReason(const class FString& Reason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAT_ActiveAbility_C", "EndAbilityWithReason");
-
-	Params::GAT_ActiveAbility_C_EndAbilityWithReason Parms{};
-
-	Parms.Reason = std::move(Reason);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GAT_ActiveAbility.GAT_ActiveAbility_C.K2_ShouldAbilityRespondToEvent
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:

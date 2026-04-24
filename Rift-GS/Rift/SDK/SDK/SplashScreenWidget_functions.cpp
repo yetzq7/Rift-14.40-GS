@@ -16,40 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function SplashScreenWidget.SplashScreenWidget_C.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void USplashScreenWidget_C::BP_OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SplashScreenWidget_C", "BP_OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SplashScreenWidget.SplashScreenWidget_C.OnInputMethodChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// ECommonInputType                        InputType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void USplashScreenWidget_C::OnInputMethodChanged(ECommonInputType InputType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SplashScreenWidget_C", "OnInputMethodChanged");
-
-	Params::SplashScreenWidget_C_OnInputMethodChanged Parms{};
-
-	Parms.InputType = InputType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function SplashScreenWidget.SplashScreenWidget_C.ExecuteUbergraph_SplashScreenWidget
 // (Final, UbergraphFunction)
 // Parameters:
@@ -67,6 +33,54 @@ void USplashScreenWidget_C::ExecuteUbergraph_SplashScreenWidget(int32 EntryPoint
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SplashScreenWidget.SplashScreenWidget_C.OnInputMethodChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    UsingGampad                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void USplashScreenWidget_C::OnInputMethodChanged(bool UsingGampad)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SplashScreenWidget_C", "OnInputMethodChanged");
+
+	Params::SplashScreenWidget_C_OnInputMethodChanged Parms{};
+
+	Parms.UsingGampad = UsingGampad;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SplashScreenWidget.SplashScreenWidget_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void USplashScreenWidget_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SplashScreenWidget_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SplashScreenWidget.SplashScreenWidget_C.OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void USplashScreenWidget_C::OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SplashScreenWidget_C", "OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_UtilityItem_Generic.B_UtilityItem_Generic_C
-// 0x0000 (0x0CB8 - 0x0CB8)
+// 0x0000 (0x0988 - 0x0988)
 class AB_UtilityItem_Generic_C : public AFortWeapon
 {
 public:

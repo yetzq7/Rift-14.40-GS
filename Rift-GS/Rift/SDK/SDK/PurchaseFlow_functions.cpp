@@ -158,21 +158,21 @@ bool UPurchaseFlowJSBridge::LaunchValidatedExternalBrowserUrl(const class FStrin
 }
 
 
-// Function PurchaseFlow.PurchaseFlowJSBridge.Receipt
+// Function PurchaseFlow.PurchaseFlowJSBridge.RECEIPT
 // (Final, Native, Public)
 // Parameters:
-// const struct FPurchaseFlowReceiptParam& Receipt_0                                              (Parm, NativeAccessSpecifierPublic)
+// const struct FPurchaseFlowReceiptParam& RECEIPT_0                                              (Parm, NativeAccessSpecifierPublic)
 
-void UPurchaseFlowJSBridge::Receipt(const struct FPurchaseFlowReceiptParam& Receipt_0)
+void UPurchaseFlowJSBridge::RECEIPT(const struct FPurchaseFlowReceiptParam& RECEIPT_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PurchaseFlowJSBridge", "Receipt");
+		Func = Class->GetFunction("PurchaseFlowJSBridge", "RECEIPT");
 
-	Params::PurchaseFlowJSBridge_Receipt Parms{};
+	Params::PurchaseFlowJSBridge_RECEIPT Parms{};
 
-	Parms.Receipt_0 = std::move(Receipt_0);
+	Parms.RECEIPT_0 = std::move(RECEIPT_0);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

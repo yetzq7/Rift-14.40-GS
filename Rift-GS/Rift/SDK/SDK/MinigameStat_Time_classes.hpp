@@ -16,16 +16,12 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass MinigameStat_Time.MinigameStat_Time_C
-// 0x0008 (0x0198 - 0x0190)
-class UMinigameStat_Time_C : public UFortMinigameStatFilter
+// 0x0000 (0x0188 - 0x0188)
+class UMinigameStat_Time_C final : public UFortMinigameStatFilter
 {
-public:
-	bool                                          NewVar_0;                                          // 0x0190(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-
 public:
 	class FText FormatStat(int32 InCount) const;
 	int32 Compare(int32 FirstScore, int32 SecondScore) const;
-	int32 Accumulate(int32 A, int32 B) const;
 
 public:
 	static class UClass* StaticClass()

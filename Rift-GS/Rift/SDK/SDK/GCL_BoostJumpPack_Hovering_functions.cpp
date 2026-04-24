@@ -36,72 +36,6 @@ void AGCL_BoostJumpPack_Hovering_C::ExecuteUbergraph_GCL_BoostJumpPack_Hovering(
 }
 
 
-// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.TryToPlayGroundEffects
-// (Event, Protected, BlueprintEvent)
-
-void AGCL_BoostJumpPack_Hovering_C::TryToPlayGroundEffects()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "TryToPlayGroundEffects");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.PlayLowFuelWarning
-// (Event, Protected, BlueprintEvent)
-
-void AGCL_BoostJumpPack_Hovering_C::PlayLowFuelWarning()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "PlayLowFuelWarning");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void AGCL_BoostJumpPack_Hovering_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.K2_HandleGameplayCue
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGameplayCueEvent                       EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-
-void AGCL_BoostJumpPack_Hovering_C::K2_HandleGameplayCue(class AActor* MyTarget, EGameplayCueEvent EventType, const struct FGameplayCueParameters& Parameters)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "K2_HandleGameplayCue");
-
-	Params::GCL_BoostJumpPack_Hovering_C_K2_HandleGameplayCue Parms{};
-
-	Parms.MyTarget = MyTarget;
-	Parms.EventType = EventType;
-	Parms.Parameters = std::move(Parameters);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.ResetFX
 // (BlueprintCallable, BlueprintEvent)
 
@@ -136,8 +70,98 @@ void AGCL_BoostJumpPack_Hovering_C::On_Pawn_Landed(const struct FHitResult& Hit)
 }
 
 
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.Audio Tick
+// (BlueprintCallable, BlueprintEvent)
+
+void AGCL_BoostJumpPack_Hovering_C::Audio_Tick()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "Audio Tick");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AGCL_BoostJumpPack_Hovering_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "ReceiveTick");
+
+	Params::GCL_BoostJumpPack_Hovering_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.Jetpack Audio Modulation__FuelWarning__EventFunc
+// (BlueprintEvent)
+
+void AGCL_BoostJumpPack_Hovering_C::Jetpack_Audio_Modulation__FuelWarning__EventFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "Jetpack Audio Modulation__FuelWarning__EventFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.Jetpack Audio Modulation__UpdateFunc
+// (BlueprintEvent)
+
+void AGCL_BoostJumpPack_Hovering_C::Jetpack_Audio_Modulation__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "Jetpack Audio Modulation__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.Jetpack Audio Modulation__FinishedFunc
+// (BlueprintEvent)
+
+void AGCL_BoostJumpPack_Hovering_C::Jetpack_Audio_Modulation__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "Jetpack Audio Modulation__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AGCL_BoostJumpPack_Hovering_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.OnActive
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
@@ -203,6 +227,163 @@ void AGCL_BoostJumpPack_Hovering_C::SetJetpackAudioEnabled(bool Enabled)
 	Parms.Enabled = Enabled;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.CacheAttributes
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AGCL_BoostJumpPack_Hovering_C::CacheAttributes()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "CacheAttributes");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.GetFuelPercent
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float*                                  FuelPercent                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AGCL_BoostJumpPack_Hovering_C::GetFuelPercent(float* FuelPercent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "GetFuelPercent");
+
+	Params::GCL_BoostJumpPack_Hovering_C_GetFuelPercent Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (FuelPercent != nullptr)
+		*FuelPercent = Parms.FuelPercent;
+}
+
+
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.GetFuel
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+float AGCL_BoostJumpPack_Hovering_C::GetFuel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "GetFuel");
+
+	Params::GCL_BoostJumpPack_Hovering_C_GetFuel Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.GetMaxFuel
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+float AGCL_BoostJumpPack_Hovering_C::GetMaxFuel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "GetMaxFuel");
+
+	Params::GCL_BoostJumpPack_Hovering_C_GetMaxFuel Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.GetUpwardThrust
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+float AGCL_BoostJumpPack_Hovering_C::GetUpwardThrust()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "GetUpwardThrust");
+
+	Params::GCL_BoostJumpPack_Hovering_C_GetUpwardThrust Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.GetLateralThrust
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+float AGCL_BoostJumpPack_Hovering_C::GetLateralThrust()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "GetLateralThrust");
+
+	Params::GCL_BoostJumpPack_Hovering_C_GetLateralThrust Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.CalculateUpwardVelocity
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AGCL_BoostJumpPack_Hovering_C::CalculateUpwardVelocity()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "CalculateUpwardVelocity");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.CalculateFuelPercentage
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AGCL_BoostJumpPack_Hovering_C::CalculateFuelPercentage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "CalculateFuelPercentage");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.CacheRenderingDetailMode
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AGCL_BoostJumpPack_Hovering_C::CacheRenderingDetailMode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCL_BoostJumpPack_Hovering_C", "CacheRenderingDetailMode");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

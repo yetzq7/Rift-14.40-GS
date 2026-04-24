@@ -17,21 +17,21 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass VaultCamera_Blueprint.VaultCamera_Blueprint_C
-// 0x0020 (0x0800 - 0x07E0)
+// 0x0020 (0x08A0 - 0x0880)
 class AVaultCamera_Blueprint_C final : public AFortCameraBase
 {
 public:
-	uint8                                         Pad_7D8[0x8];                                      // 0x07D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        CachedPawn;                                        // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          MouseDown;                                         // 0x07F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7F1[0x7];                                      // 0x07F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AVaultCamera_Blueprint_C*               VaultActor;                                        // 0x07F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0880(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        CachedPawn;                                        // 0x0888(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          MouseDown;                                         // 0x0890(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_891[0x7];                                      // 0x0891(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AVaultCamera_Blueprint_C*               VaultActor;                                        // 0x0898(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnActivated(class AFortPlayerController* PlayerController);
-	void OnDeactivated(class AFortPlayerController* PlayerController);
 	void ExecuteUbergraph_VaultCamera_Blueprint(int32 EntryPoint);
+	void OnActivated();
+	void OnDeactivated();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

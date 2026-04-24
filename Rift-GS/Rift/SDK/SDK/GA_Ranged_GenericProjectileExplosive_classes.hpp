@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Ranged_GenericProjectileExplosive.GA_Ranged_GenericProjectileExplosive_C
-// 0x0000 (0x0AF0 - 0x0AF0)
+// 0x0000 (0x0980 - 0x0980)
 class UGA_Ranged_GenericProjectileExplosive_C : public UGA_Ranged_GenericDamage_C
 {
 public:

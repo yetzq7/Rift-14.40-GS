@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass v3_PlayerCameraModeTargetingScope.v3_PlayerCameraModeTargetingScope_C
-// 0x0000 (0x0DC0 - 0x0DC0)
+// 0x0000 (0x0C50 - 0x0C50)
 class Uv3_PlayerCameraModeTargetingScope_C final : public Uv3_PlayerCameraModeRanged_C
 {
 public:

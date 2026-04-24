@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "GA_ThrowConsumable_classes.hpp"
+#include "GA_Athena_Grenade_WithTrajectory_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Athena_FragGrenade_WithTrajectory.GA_Athena_FragGrenade_WithTrajectory_C
-// 0x0000 (0x0E28 - 0x0E28)
-class UGA_Athena_FragGrenade_WithTrajectory_C final : public UGA_ThrowConsumable_C
+// 0x0000 (0x0C38 - 0x0C38)
+class UGA_Athena_FragGrenade_WithTrajectory_C final : public UGA_Athena_Grenade_WithTrajectory_C
 {
 public:
 	static class UClass* StaticClass()

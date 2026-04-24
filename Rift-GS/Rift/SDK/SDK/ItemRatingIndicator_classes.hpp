@@ -17,19 +17,17 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ItemRatingIndicator.ItemRatingIndicator_C
-// 0x0020 (0x0610 - 0x05F0)
+// 0x0018 (0x05B8 - 0x05A0)
 class UItemRatingIndicator_C final : public UFortItemRatingIndicator
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Moonbeam_Power_Back_1;                             // 0x05F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PowerRatingIconImage;                              // 0x0600(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UStatNumericTextBlock_C*                PowerRatingText;                                   // 0x0608(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 PowerRatingIconImage;                              // 0x05A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UStatNumericTextBlock_C*                PowerRatingText;                                   // 0x05B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void HandleViewModelChanged();
-	void Construct();
 	void ExecuteUbergraph_ItemRatingIndicator(int32 EntryPoint);
+	void HandleViewModelChanged();
 
 public:
 	static class UClass* StaticClass()

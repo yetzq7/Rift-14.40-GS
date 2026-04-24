@@ -11,22 +11,24 @@
 #include "Basic.hpp"
 
 #include "UMG_classes.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class NetUI.BadNetworkIndicator
-// 0x0028 (0x0288 - 0x0260)
+// 0x0050 (0x0280 - 0x0230)
 class UBadNetworkIndicator final : public UUserWidget
 {
 public:
-	bool                                          bEnabled;                                          // 0x0260(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_261[0x3];                                      // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinimumDisplayTime;                                // 0x0264(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         UpdateTime;                                        // 0x0268(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         InitialDelay;                                      // 0x026C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_270[0x18];                                     // 0x0270(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         BadPingThreshold;                                  // 0x0230(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         SeverePingThreshold;                               // 0x0234(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         BadPacketLossThreshold;                            // 0x0238(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         SeverePacketLossThreshold;                         // 0x023C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEnabled;                                          // 0x0240(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_241[0x3];                                      // 0x0241(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinimumDisplayTime;                                // 0x0244(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         UpdateTime;                                        // 0x0248(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_24C[0x34];                                     // 0x024C(0x0034)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void UpdateDisplay();
@@ -56,18 +58,18 @@ public:
 DUMPER7_ASSERTS_UBadNetworkIndicator;
 
 // Class NetUI.NetDebugWidget
-// 0x00E8 (0x0348 - 0x0260)
+// 0x0100 (0x0330 - 0x0230)
 class UNetDebugWidget final : public UUserWidget
 {
 public:
-	class UCommonTextBlock*                       PingUI;                                            // 0x0260(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCommonTextBlock*                       PacketInRateUI;                                    // 0x0268(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCommonTextBlock*                       PacketOutRateUI;                                   // 0x0270(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCommonTextBlock*                       PacketInLossUI;                                    // 0x0278(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCommonTextBlock*                       PacketOutLossUI;                                   // 0x0280(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCommonTextBlock*                       UpBandwidthUI;                                     // 0x0288(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCommonTextBlock*                       DownBandwidthUI;                                   // 0x0290(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_298[0xB0];                                     // 0x0298(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UCommonTextBlock*                       PingUI;                                            // 0x0230(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCommonTextBlock*                       PacketInRateUI;                                    // 0x0238(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCommonTextBlock*                       PacketOutRateUI;                                   // 0x0240(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCommonTextBlock*                       PacketInLossUI;                                    // 0x0248(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCommonTextBlock*                       PacketOutLossUI;                                   // 0x0250(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCommonTextBlock*                       UpBandwidthUI;                                     // 0x0258(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCommonTextBlock*                       DownBandwidthUI;                                   // 0x0260(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_268[0xC8];                                     // 0x0268(0x00C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void StartTimer();
@@ -88,34 +90,5 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UNetDebugWidget;
-
-// Class NetUI.NetGraph
-// 0x0030 (0x0290 - 0x0260)
-class UNetGraph final : public UUserWidget
-{
-public:
-	struct FColor                                 BackgroundColor;                                   // 0x0260(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FColor                                 PingLineColor;                                     // 0x0264(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FColor                                 QueuedBunchesLineColor;                            // 0x0268(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FColor                                 PacketLossLineColor;                               // 0x026C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVector2D                              DesiredSize;                                       // 0x0270(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MaxPingToGraph;                                    // 0x0278(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_27C[0x14];                                     // 0x027C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NetGraph")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NetGraph")
-	}
-	static class UNetGraph* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNetGraph>();
-	}
-};
-DUMPER7_ASSERTS_UNetGraph;
 
 SDK_NAMESPACE_END

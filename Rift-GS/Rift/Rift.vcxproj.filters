@@ -84,6 +84,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="minhook.lib" />
+    <Library Include="minhook.lib">
+      <Filter>Source Files</Filter>
+    </Library>
   </ItemGroup>
 </Project>

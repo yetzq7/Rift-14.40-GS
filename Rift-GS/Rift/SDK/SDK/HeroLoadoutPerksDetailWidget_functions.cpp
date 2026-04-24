@@ -16,92 +16,49 @@
 
 SDK_NAMESPACE_START
 
-// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.IsValidHeroSlot
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.ExecuteUbergraph_HeroLoadoutPerksDetailWidget
+// (Final, UbergraphFunction)
 // Parameters:
-// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UHeroLoadoutPerksDetailWidget_C::IsValidHeroSlot(bool* Result)
+void UHeroLoadoutPerksDetailWidget_C::ExecuteUbergraph_HeroLoadoutPerksDetailWidget(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "IsValidHeroSlot");
+		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "ExecuteUbergraph_HeroLoadoutPerksDetailWidget");
 
-	Params::HeroLoadoutPerksDetailWidget_C_IsValidHeroSlot Parms{};
+	Params::HeroLoadoutPerksDetailWidget_C_ExecuteUbergraph_HeroLoadoutPerksDetailWidget Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
 }
 
 
-// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.UpdateCommanderSlotPerkVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UHeroLoadoutPerksDetailWidget_C::UpdateCommanderSlotPerkVisibility()
+void UHeroLoadoutPerksDetailWidget_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "UpdateCommanderSlotPerkVisibility");
+		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.UpdateHeroLoadoutSlotWarning
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.HandlePostDifferentItemToDetailSet
+// (Event, Protected, BlueprintEvent)
 
-void UHeroLoadoutPerksDetailWidget_C::UpdateHeroLoadoutSlotWarning()
+void UHeroLoadoutPerksDetailWidget_C::HandlePostDifferentItemToDetailSet()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "UpdateHeroLoadoutSlotWarning");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.UpdateRootVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UHeroLoadoutPerksDetailWidget_C::UpdateRootVisibility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "UpdateRootVisibility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.HandleDifferentLoadoutSlotContextSet
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UHeroLoadoutPerksDetailWidget_C::HandleDifferentLoadoutSlotContextSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "HandleDifferentLoadoutSlotContextSet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.ClearLoadoutSlotContext
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UHeroLoadoutPerksDetailWidget_C::ClearLoadoutSlotContext()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "ClearLoadoutSlotContext");
+		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "HandlePostDifferentItemToDetailSet");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -129,71 +86,142 @@ void UHeroLoadoutPerksDetailWidget_C::SetLoadoutSlotContext(class UFortCampaignH
 }
 
 
-// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.HandlePostDifferentItemToDetailSet
-// (Event, Protected, BlueprintEvent)
+// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.ClearLoadoutSlotContext
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UHeroLoadoutPerksDetailWidget_C::HandlePostDifferentItemToDetailSet()
+void UHeroLoadoutPerksDetailWidget_C::ClearLoadoutSlotContext()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "HandlePostDifferentItemToDetailSet");
+		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "ClearLoadoutSlotContext");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.HandleDifferentLoadoutSlotContextSet
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UHeroLoadoutPerksDetailWidget_C::Construct()
+void UHeroLoadoutPerksDetailWidget_C::HandleDifferentLoadoutSlotContextSet()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "Construct");
+		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "HandleDifferentLoadoutSlotContextSet");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.UpdateRootVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UHeroLoadoutPerksDetailWidget_C::PreConstruct(bool IsDesignTime)
+void UHeroLoadoutPerksDetailWidget_C::UpdateRootVisibility()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "PreConstruct");
+		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "UpdateRootVisibility");
 
-	Params::HeroLoadoutPerksDetailWidget_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.ExecuteUbergraph_HeroLoadoutPerksDetailWidget
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.UpdateHeroLoadoutSlotWarning
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UHeroLoadoutPerksDetailWidget_C::ExecuteUbergraph_HeroLoadoutPerksDetailWidget(int32 EntryPoint)
+void UHeroLoadoutPerksDetailWidget_C::UpdateHeroLoadoutSlotWarning()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "ExecuteUbergraph_HeroLoadoutPerksDetailWidget");
+		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "UpdateHeroLoadoutSlotWarning");
 
-	Params::HeroLoadoutPerksDetailWidget_C_ExecuteUbergraph_HeroLoadoutPerksDetailWidget Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.UpdateCommanderSlotPerkVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UHeroLoadoutPerksDetailWidget_C::UpdateCommanderSlotPerkVisibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "UpdateCommanderSlotPerkVisibility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.ShouldShowWarning
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const class UFortHero*                  SlottedHero                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UHeroLoadoutPerksDetailWidget_C::ShouldShowWarning(const class UFortHero* SlottedHero, bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "ShouldShowWarning");
+
+	Params::HeroLoadoutPerksDetailWidget_C_ShouldShowWarning Parms{};
+
+	Parms.SlottedHero = SlottedHero;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.GetWarningText
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UFortHero*                        Hero                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText*                            Result                                                 (Parm, OutParm)
+
+void UHeroLoadoutPerksDetailWidget_C::GetWarningText(class UFortHero* Hero, class FText* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "GetWarningText");
+
+	Params::HeroLoadoutPerksDetailWidget_C_GetWarningText Parms{};
+
+	Parms.Hero = Hero;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
+}
+
+
+// Function HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C.IsValidHeroSlot
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UHeroLoadoutPerksDetailWidget_C::IsValidHeroSlot(bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HeroLoadoutPerksDetailWidget_C", "IsValidHeroSlot");
+
+	Params::HeroLoadoutPerksDetailWidget_C_IsValidHeroSlot Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
 }
 
 

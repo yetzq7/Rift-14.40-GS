@@ -17,20 +17,20 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass StoreMain_OfferDetailsAttribute.StoreMain_OfferDetailsAttribute_C
-// 0x0050 (0x02D8 - 0x0288)
+// 0x0050 (0x0288 - 0x0238)
 class UStoreMain_OfferDetailsAttribute_C final : public UCommonUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Image_0;                                           // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonRichTextBlock*                   Name_0;                                            // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Value;                                             // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   AttributeDescription;                              // 0x02A8(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   AttributeValue;                                    // 0x02C0(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Image_0;                                           // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Name_0;                                            // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Value;                                             // 0x0250(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   AttributeDescription;                              // 0x0258(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   AttributeValue;                                    // 0x0270(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
-	void Construct();
 	void ExecuteUbergraph_StoreMain_OfferDetailsAttribute(int32 EntryPoint);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()

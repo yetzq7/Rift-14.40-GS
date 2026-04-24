@@ -16,119 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.SwitchPCLighting_LOWDetail
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.ExecuteUbergraph_VaultCharacterLightingBP
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AVaultCharacterLightingBP_C::SwitchPCLighting_LOWDetail(bool Visibility)
+void AVaultCharacterLightingBP_C::ExecuteUbergraph_VaultCharacterLightingBP(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("VaultCharacterLightingBP_C", "SwitchPCLighting_LOWDetail");
+		Func = Class->GetFunction("VaultCharacterLightingBP_C", "ExecuteUbergraph_VaultCharacterLightingBP");
 
-	Params::VaultCharacterLightingBP_C_SwitchPCLighting_LOWDetail Parms{};
+	Params::VaultCharacterLightingBP_C_ExecuteUbergraph_VaultCharacterLightingBP Parms{};
 
-	Parms.Visibility = Visibility;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.SwitchPCLighting
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AVaultCharacterLightingBP_C::SwitchPCLighting(bool Visibility)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VaultCharacterLightingBP_C", "SwitchPCLighting");
-
-	Params::VaultCharacterLightingBP_C_SwitchPCLighting Parms{};
-
-	Parms.Visibility = Visibility;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.SwitchMobileLighting
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Visibilty                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AVaultCharacterLightingBP_C::SwitchMobileLighting(bool Visibilty)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VaultCharacterLightingBP_C", "SwitchMobileLighting");
-
-	Params::VaultCharacterLightingBP_C_SwitchMobileLighting Parms{};
-
-	Parms.Visibilty = Visibilty;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void AVaultCharacterLightingBP_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VaultCharacterLightingBP_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.UpdateSettings
-// (BlueprintCallable, BlueprintEvent)
-
-void AVaultCharacterLightingBP_C::UpdateSettings()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VaultCharacterLightingBP_C", "UpdateSettings");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.ToggleLighting
-// (BlueprintCallable, BlueprintEvent)
-
-void AVaultCharacterLightingBP_C::ToggleLighting()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VaultCharacterLightingBP_C", "ToggleLighting");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.OVERRIDELIGHTING
-// (BlueprintCallable, BlueprintEvent)
-
-void AVaultCharacterLightingBP_C::OVERRIDELIGHTING()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VaultCharacterLightingBP_C", "OVERRIDELIGHTING");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -166,21 +70,117 @@ void AVaultCharacterLightingBP_C::ReceiveBeginPlay()
 }
 
 
-// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.ExecuteUbergraph_VaultCharacterLightingBP
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.OVERRIDELIGHTING
+// (BlueprintCallable, BlueprintEvent)
 
-void AVaultCharacterLightingBP_C::ExecuteUbergraph_VaultCharacterLightingBP(int32 EntryPoint)
+void AVaultCharacterLightingBP_C::OVERRIDELIGHTING()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("VaultCharacterLightingBP_C", "ExecuteUbergraph_VaultCharacterLightingBP");
+		Func = Class->GetFunction("VaultCharacterLightingBP_C", "OVERRIDELIGHTING");
 
-	Params::VaultCharacterLightingBP_C_ExecuteUbergraph_VaultCharacterLightingBP Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.ToggleLighting
+// (BlueprintCallable, BlueprintEvent)
+
+void AVaultCharacterLightingBP_C::ToggleLighting()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VaultCharacterLightingBP_C", "ToggleLighting");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.UpdateSettings
+// (BlueprintCallable, BlueprintEvent)
+
+void AVaultCharacterLightingBP_C::UpdateSettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VaultCharacterLightingBP_C", "UpdateSettings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AVaultCharacterLightingBP_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VaultCharacterLightingBP_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.SwitchMobileLighting
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Visibilty                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AVaultCharacterLightingBP_C::SwitchMobileLighting(bool Visibilty)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VaultCharacterLightingBP_C", "SwitchMobileLighting");
+
+	Params::VaultCharacterLightingBP_C_SwitchMobileLighting Parms{};
+
+	Parms.Visibilty = Visibilty;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.SwitchPCLighting
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AVaultCharacterLightingBP_C::SwitchPCLighting(bool Visibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VaultCharacterLightingBP_C", "SwitchPCLighting");
+
+	Params::VaultCharacterLightingBP_C_SwitchPCLighting Parms{};
+
+	Parms.Visibility = Visibility;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.SwitchPCLighting_LOWDetail
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AVaultCharacterLightingBP_C::SwitchPCLighting_LOWDetail(bool Visibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VaultCharacterLightingBP_C", "SwitchPCLighting_LOWDetail");
+
+	Params::VaultCharacterLightingBP_C_SwitchPCLighting_LOWDetail Parms{};
+
+	Parms.Visibility = Visibility;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

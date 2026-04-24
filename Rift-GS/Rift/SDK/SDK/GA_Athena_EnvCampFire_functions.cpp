@@ -36,68 +36,6 @@ void UGA_Athena_EnvCampFire_C::ExecuteUbergraph_GA_Athena_EnvCampFire(int32 Entr
 }
 
 
-// Function GA_Athena_EnvCampFire.GA_Athena_EnvCampFire_C.ForceEndAbility
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_EnvCampFire_C::ForceEndAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_EnvCampFire_C", "ForceEndAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_EnvCampFire.GA_Athena_EnvCampFire_C.EndEvent
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_EnvCampFire_C::EndEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_EnvCampFire_C", "EndEvent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_EnvCampFire.GA_Athena_EnvCampFire_C.SetIsStoked
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsStoked_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UGA_Athena_EnvCampFire_C::SetIsStoked(bool IsStoked_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_EnvCampFire_C", "SetIsStoked");
-
-	Params::GA_Athena_EnvCampFire_C_SetIsStoked Parms{};
-
-	Parms.IsStoked_0 = IsStoked_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Athena_EnvCampFire.GA_Athena_EnvCampFire_C.FinishStoke
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_EnvCampFire_C::FinishStoke()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_EnvCampFire_C", "FinishStoke");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_Athena_EnvCampFire.GA_Athena_EnvCampFire_C.K2_ActivateAbilityFromEvent
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -147,26 +85,6 @@ void UGA_Athena_EnvCampFire_C::K2_OnEndAbility(bool bWasCancelled)
 	Params::GA_Athena_EnvCampFire_C_K2_OnEndAbility Parms{};
 
 	Parms.bWasCancelled = bWasCancelled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Athena_EnvCampFire.GA_Athena_EnvCampFire_C.EventReceived_63E2BB3E47E5E63C7A4A0A8C45DC23E4
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayEventData&        Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UGA_Athena_EnvCampFire_C::EventReceived_63E2BB3E47E5E63C7A4A0A8C45DC23E4(const struct FGameplayEventData& Payload)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_EnvCampFire_C", "EventReceived_63E2BB3E47E5E63C7A4A0A8C45DC23E4");
-
-	Params::GA_Athena_EnvCampFire_C_EventReceived_63E2BB3E47E5E63C7A4A0A8C45DC23E4 Parms{};
-
-	Parms.Payload = std::move(Payload);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -232,21 +150,15 @@ void UGA_Athena_EnvCampFire_C::SetCustomTargetingTrans()
 
 // Function GA_Athena_EnvCampFire.GA_Athena_EnvCampFire_C.SetBalanceValues
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Stoke                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UGA_Athena_EnvCampFire_C::SetBalanceValues(bool Stoke)
+void UGA_Athena_EnvCampFire_C::SetBalanceValues()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("GA_Athena_EnvCampFire_C", "SetBalanceValues");
 
-	Params::GA_Athena_EnvCampFire_C_SetBalanceValues Parms{};
-
-	Parms.Stoke = Stoke;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

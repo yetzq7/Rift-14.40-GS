@@ -36,37 +36,23 @@ void UAthenaDirectAcquisitionMTXDetails_C::ExecuteUbergraph_AthenaDirectAcquisit
 }
 
 
-// Function AthenaDirectAcquisitionMTXDetails.AthenaDirectAcquisitionMTXDetails_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
+// Function AthenaDirectAcquisitionMTXDetails.AthenaDirectAcquisitionMTXDetails_C.HandleRealMoneyPurchaseComplete
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const bool                              bSuccess                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaDirectAcquisitionMTXDetails_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+void UAthenaDirectAcquisitionMTXDetails_C::HandleRealMoneyPurchaseComplete(const bool bSuccess)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionMTXDetails_C", "BndEvt__CloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("AthenaDirectAcquisitionMTXDetails_C", "HandleRealMoneyPurchaseComplete");
 
-	Params::AthenaDirectAcquisitionMTXDetails_C_BndEvt__CloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
+	Params::AthenaDirectAcquisitionMTXDetails_C_HandleRealMoneyPurchaseComplete Parms{};
 
-	Parms.Button = Button;
+	Parms.bSuccess = bSuccess;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaDirectAcquisitionMTXDetails.AthenaDirectAcquisitionMTXDetails_C.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UAthenaDirectAcquisitionMTXDetails_C::BP_OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionMTXDetails_C", "BP_OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -90,30 +76,6 @@ void UAthenaDirectAcquisitionMTXDetails_C::BndEvt__GiftButton_K2Node_ComponentBo
 }
 
 
-// Function AthenaDirectAcquisitionMTXDetails.AthenaDirectAcquisitionMTXDetails_C.HandlePurchaseComplete
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// const TArray<struct FPurchasedItemInfo>&PurchasedItems                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-// const class FString&                    OfferId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UAthenaDirectAcquisitionMTXDetails_C::HandlePurchaseComplete(bool bSuccess, const TArray<struct FPurchasedItemInfo>& PurchasedItems, const class FString& OfferId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionMTXDetails_C", "HandlePurchaseComplete");
-
-	Params::AthenaDirectAcquisitionMTXDetails_C_HandlePurchaseComplete Parms{};
-
-	Parms.bSuccess = bSuccess;
-	Parms.PurchasedItems = std::move(PurchasedItems);
-	Parms.OfferId = std::move(OfferId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function AthenaDirectAcquisitionMTXDetails.AthenaDirectAcquisitionMTXDetails_C.BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -129,6 +91,62 @@ void UAthenaDirectAcquisitionMTXDetails_C::BndEvt__PurchaseButton_K2Node_Compone
 	Params::AthenaDirectAcquisitionMTXDetails_C_BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaDirectAcquisitionMTXDetails.AthenaDirectAcquisitionMTXDetails_C.BndEvt__PanelButton_K2Node_ComponentBoundEvent_8_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaDirectAcquisitionMTXDetails_C::BndEvt__PanelButton_K2Node_ComponentBoundEvent_8_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaDirectAcquisitionMTXDetails_C", "BndEvt__PanelButton_K2Node_ComponentBoundEvent_8_CommonButtonClicked__DelegateSignature");
+
+	Params::AthenaDirectAcquisitionMTXDetails_C_BndEvt__PanelButton_K2Node_ComponentBoundEvent_8_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaDirectAcquisitionMTXDetails.AthenaDirectAcquisitionMTXDetails_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UAthenaDirectAcquisitionMTXDetails_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaDirectAcquisitionMTXDetails_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaDirectAcquisitionMTXDetails.AthenaDirectAcquisitionMTXDetails_C.HandlePurchaseComplete
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const TArray<struct FPurchasedItemInfo>&PurchasedItems                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UAthenaDirectAcquisitionMTXDetails_C::HandlePurchaseComplete(bool bSuccess, const TArray<struct FPurchasedItemInfo>& PurchasedItems)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaDirectAcquisitionMTXDetails_C", "HandlePurchaseComplete");
+
+	Params::AthenaDirectAcquisitionMTXDetails_C_HandlePurchaseComplete Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.PurchasedItems = std::move(PurchasedItems);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -214,20 +232,6 @@ class UWidget* UAthenaDirectAcquisitionMTXDetails_C::GetWidgetForFramingViewedIt
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function AthenaDirectAcquisitionMTXDetails.AthenaDirectAcquisitionMTXDetails_C.InitAffiliateInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UAthenaDirectAcquisitionMTXDetails_C::InitAffiliateInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionMTXDetails_C", "InitAffiliateInfo");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

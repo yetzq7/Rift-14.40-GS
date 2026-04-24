@@ -16,34 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function ItemDetailsHeaderRarityTypeText.ItemDetailsHeaderRarityTypeText_C.HandlePostDifferentItemToDetailSet
-// (Event, Protected, BlueprintEvent)
-
-void UItemDetailsHeaderRarityTypeText_C::HandlePostDifferentItemToDetailSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsHeaderRarityTypeText_C", "HandlePostDifferentItemToDetailSet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemDetailsHeaderRarityTypeText.ItemDetailsHeaderRarityTypeText_C.HandlePostDifferentItemToCompareWithSet
-// (Event, Protected, BlueprintEvent)
-
-void UItemDetailsHeaderRarityTypeText_C::HandlePostDifferentItemToCompareWithSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsHeaderRarityTypeText_C", "HandlePostDifferentItemToCompareWithSet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ItemDetailsHeaderRarityTypeText.ItemDetailsHeaderRarityTypeText_C.ExecuteUbergraph_ItemDetailsHeaderRarityTypeText
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -61,6 +33,34 @@ void UItemDetailsHeaderRarityTypeText_C::ExecuteUbergraph_ItemDetailsHeaderRarit
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemDetailsHeaderRarityTypeText.ItemDetailsHeaderRarityTypeText_C.HandlePostDifferentItemToCompareWithSet
+// (Event, Protected, BlueprintEvent)
+
+void UItemDetailsHeaderRarityTypeText_C::HandlePostDifferentItemToCompareWithSet()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemDetailsHeaderRarityTypeText_C", "HandlePostDifferentItemToCompareWithSet");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemDetailsHeaderRarityTypeText.ItemDetailsHeaderRarityTypeText_C.HandlePostDifferentItemToDetailSet
+// (Event, Protected, BlueprintEvent)
+
+void UItemDetailsHeaderRarityTypeText_C::HandlePostDifferentItemToDetailSet()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemDetailsHeaderRarityTypeText_C", "HandlePostDifferentItemToDetailSet");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

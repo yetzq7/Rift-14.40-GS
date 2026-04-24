@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EIntTypes_structs.hpp"
 #include "Engine_classes.hpp"
+#include "EIntTypes_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +22,7 @@ class URenderToTextureFunctionLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
 	static void Array_to_HLSL_Int_Array(EIntTypes Type, class FString& Variable_Name, TArray<int32>& int_0, TArray<struct FVector2D>& int2, TArray<struct FVector>& int3, TArray<struct FLinearColor>& int4, class UObject* __WorldContext, class FString* String);
-	static void Set_Canvas_Material_Scale_and_Position(const struct FVector2D& Size, const struct FVector2D& position, float Scale, class UObject* __WorldContext, struct FVector2D* Screen_Position, struct FVector2D* Screen_Size);
+	static void Set_Canvas_Material_Scale_and_Position(const struct FVector2D& Size, const struct FVector2D& Position, float Scale, class UObject* __WorldContext, struct FVector2D* Screen_Position, struct FVector2D* Screen_Size);
 
 public:
 	static class UClass* StaticClass()

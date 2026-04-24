@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ShowdownEventEmptySpacer.ShowdownEventEmptySpacer_C
-// 0x0000 (0x0260 - 0x0260)
+// 0x0000 (0x0230 - 0x0230)
 class UShowdownEventEmptySpacer_C final : public UUserWidget
 {
 public:

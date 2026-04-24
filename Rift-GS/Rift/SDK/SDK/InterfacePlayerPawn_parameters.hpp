@@ -16,24 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function InterfacePlayerPawn.InterfacePlayerPawn_C.MeleeSwingRight
-// 0x0001 (0x0001 - 0x0000)
-struct InterfacePlayerPawn_C_MeleeSwingRight final
-{
-public:
-	bool                                          First_Right;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_InterfacePlayerPawn_C_MeleeSwingRight;
-
-// Function InterfacePlayerPawn.InterfacePlayerPawn_C.MeleeSwingLeft
-// 0x0001 (0x0001 - 0x0000)
-struct InterfacePlayerPawn_C_MeleeSwingLeft final
-{
-public:
-	bool                                          First_Left;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_InterfacePlayerPawn_C_MeleeSwingLeft;
-
 // Function InterfacePlayerPawn.InterfacePlayerPawn_C.Melee_Effect_Color
 // 0x000C (0x000C - 0x0000)
 struct InterfacePlayerPawn_C_Melee_Effect_Color final

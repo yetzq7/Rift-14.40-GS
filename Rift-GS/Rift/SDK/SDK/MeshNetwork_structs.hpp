@@ -14,15 +14,14 @@
 SDK_NAMESPACE_START
 
 // Enum MeshNetwork.EMeshNetworkNodeType
-// NumValues: 0x0006
+// NumValues: 0x0005
 enum class EMeshNetworkNodeType : uint8
 {
 	Root                                     = 0,
 	Inner                                    = 1,
 	Edge                                     = 2,
 	Client                                   = 3,
-	Unknown                                  = 4,
-	EMeshNetworkNodeType_MAX                 = 5,
+	EMeshNetworkNodeType_MAX                 = 4,
 };
 
 // Enum MeshNetwork.EMeshNetworkRelevancy
@@ -34,15 +33,6 @@ enum class EMeshNetworkRelevancy : uint8
 	RelevantToClients                        = 2,
 	EMeshNetworkRelevancy_MAX                = 3,
 };
-
-// ScriptStruct MeshNetwork.NoAggregationParameters
-// 0x0050 (0x0050 - 0x0000)
-struct FNoAggregationParameters final
-{
-public:
-	TSet<class FName>                             Parameters;                                        // 0x0000(0x0050)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FNoAggregationParameters;
 
 // ScriptStruct MeshNetwork.AggregatedFunction
 // 0x0028 (0x0028 - 0x0000)

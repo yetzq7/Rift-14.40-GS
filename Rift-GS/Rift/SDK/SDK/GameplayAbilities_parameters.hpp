@@ -10,95 +10,55 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function GameplayAbilities.GameplayCueInterface.BlueprintCustomHandler
-// 0x00C0 (0x00C0 - 0x0000)
-struct GameplayCueInterface_BlueprintCustomHandler final
-{
-public:
-	EGameplayCueEvent                             EventType;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayCueInterface_BlueprintCustomHandler;
-
-// Function GameplayAbilities.AbilitySystemGlobals.ServerActivatePlayerAbility
-// 0x0010 (0x0010 - 0x0000)
-struct AbilitySystemGlobals_ServerActivatePlayerAbility final
-{
-public:
-	class FString                                 AbilityNameMatch;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AbilitySystemGlobals_ServerActivatePlayerAbility;
-
-// Function GameplayAbilities.AbilitySystemGlobals.ServerCancelPlayerAbility
-// 0x0010 (0x0010 - 0x0000)
-struct AbilitySystemGlobals_ServerCancelPlayerAbility final
-{
-public:
-	class FString                                 AbilityNameMatch;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AbilitySystemGlobals_ServerCancelPlayerAbility;
-
-// Function GameplayAbilities.AbilitySystemGlobals.ServerEndPlayerAbility
-// 0x0010 (0x0010 - 0x0000)
-struct AbilitySystemGlobals_ServerEndPlayerAbility final
-{
-public:
-	class FString                                 AbilityNameMatch;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AbilitySystemGlobals_ServerEndPlayerAbility;
-
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.AbilityTargetDataFromActor
-// 0x0030 (0x0030 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct AbilitySystemBlueprintLibrary_AbilityTargetDataFromActor final
 {
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAbilityTargetDataHandle       ReturnValue;                                       // 0x0008(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_AbilityTargetDataFromActor;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.AbilityTargetDataFromActorArray
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct AbilitySystemBlueprintLibrary_AbilityTargetDataFromActorArray final
 {
 public:
-	TArray<class AActor*>                         ActorArray;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         ActorArray;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          OneTargetPerHandle;                                // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityTargetDataHandle       ReturnValue;                                       // 0x0018(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       ReturnValue;                                       // 0x0018(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_AbilityTargetDataFromActorArray;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.AbilityTargetDataFromHitResult
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct AbilitySystemBlueprintLibrary_AbilityTargetDataFromHitResult final
 {
 public:
-	struct FHitResult                             HitResult;                                         // 0x0000(0x008C)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityTargetDataHandle       ReturnValue;                                       // 0x0090(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FHitResult                             HitResult;                                         // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       ReturnValue;                                       // 0x0088(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_AbilityTargetDataFromHitResult;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.AbilityTargetDataFromLocations
-// 0x0110 (0x0110 - 0x0000)
+// 0x0100 (0x0100 - 0x0000)
 struct AbilitySystemBlueprintLibrary_AbilityTargetDataFromLocations final
 {
 public:
 	struct FGameplayAbilityTargetingLocationInfo  SourceLocation;                                    // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	struct FGameplayAbilityTargetingLocationInfo  TargetLocation;                                    // 0x0070(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FGameplayAbilityTargetDataHandle       ReturnValue;                                       // 0x00E0(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       ReturnValue;                                       // 0x00E0(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_AbilityTargetDataFromLocations;
 
@@ -169,13 +129,13 @@ public:
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_AddLinkedGameplayEffectSpec;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.AppendTargetDataHandle
-// 0x0078 (0x0078 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct AbilitySystemBlueprintLibrary_AppendTargetDataHandle final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetHandle;                                      // 0x0000(0x0028)(Parm, NativeAccessSpecifierPublic)
-	struct FGameplayAbilityTargetDataHandle       HandleToAdd;                                       // 0x0028(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FGameplayAbilityTargetDataHandle       ReturnValue;                                       // 0x0050(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       TargetHandle;                                      // 0x0000(0x0020)(Parm, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       HandleToAdd;                                       // 0x0020(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       ReturnValue;                                       // 0x0040(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_AppendTargetDataHandle;
 
@@ -205,31 +165,6 @@ public:
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_AssignTagSetByCallerMagnitude;
 
-// Function GameplayAbilities.AbilitySystemBlueprintLibrary.BreakGameplayCueParameters
-// 0x0170 (0x0170 - 0x0000)
-struct AbilitySystemBlueprintLibrary_BreakGameplayCueParameters final
-{
-public:
-	struct FGameplayCueParameters                 Parameters;                                        // 0x0000(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	float                                         NormalizedMagnitude;                               // 0x00B8(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RawMagnitude;                                      // 0x00BC(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x00C0(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           MatchedTagName;                                    // 0x00D8(0x0008)(Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           OriginalTag;                                       // 0x00E0(0x0008)(Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  AggregatedSourceTags;                              // 0x00E8(0x0020)(Parm, OutParm, AdvancedDisplay, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  AggregatedTargetTags;                              // 0x0108(0x0020)(Parm, OutParm, AdvancedDisplay, NativeAccessSpecifierPublic)
-	struct FVector                                Location;                                          // 0x0128(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Normal;                                            // 0x0134(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 Instigator;                                        // 0x0140(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 EffectCauser;                                      // 0x0148(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                SourceObject;                                      // 0x0150(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPhysicalMaterial*                      PhysicalMaterial;                                  // 0x0158(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GameplayEffectLevel;                               // 0x0160(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AbilityLevel;                                      // 0x0164(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USceneComponent*                        TargetAttachComponent;                             // 0x0168(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_BreakGameplayCueParameters;
-
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.CloneSpecHandle
 // 0x0030 (0x0030 - 0x0000)
 struct AbilitySystemBlueprintLibrary_CloneSpecHandle final
@@ -256,16 +191,16 @@ public:
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_DoesGameplayCueMeetTagRequirements;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.DoesTargetDataContainActor
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct AbilitySystemBlueprintLibrary_DoesTargetDataContainActor final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Actor;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Actor;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_DoesTargetDataContainActor;
 
@@ -275,9 +210,9 @@ struct AbilitySystemBlueprintLibrary_EffectContextAddHitResult final
 {
 public:
 	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	struct FHitResult                             HitResult;                                         // 0x0018(0x008C)(Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          bReset;                                            // 0x00A4(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             HitResult;                                         // 0x0018(0x0088)(Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          bReset;                                            // 0x00A0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_EffectContextAddHitResult;
 
@@ -292,13 +227,12 @@ public:
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_EffectContextGetEffectCauser;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.EffectContextGetHitResult
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct AbilitySystemBlueprintLibrary_EffectContextGetHitResult final
 {
 public:
 	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	struct FHitResult                             ReturnValue;                                       // 0x0018(0x008C)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             ReturnValue;                                       // 0x0018(0x0088)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_EffectContextGetHitResult;
 
@@ -388,57 +322,57 @@ public:
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_EffectContextSetOrigin;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.EqualEqual_GameplayAttributeGameplayAttribute
-// 0x0078 (0x0078 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct AbilitySystemBlueprintLibrary_EqualEqual_GameplayAttributeGameplayAttribute final
 {
 public:
-	struct FGameplayAttribute                     AttributeA;                                        // 0x0000(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     AttributeB;                                        // 0x0038(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAttribute                     AttributeA;                                        // 0x0000(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     AttributeB;                                        // 0x0020(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_EqualEqual_GameplayAttributeGameplayAttribute;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.EvaluateAttributeValueWithTags
-// 0x0088 (0x0088 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct AbilitySystemBlueprintLibrary_EvaluateAttributeValueWithTags final
 {
 public:
 	class UAbilitySystemComponent*                AbilitySystem;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  SourceTags;                                        // 0x0040(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  TargetTags;                                        // 0x0060(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bSuccess;                                          // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReturnValue;                                       // 0x0084(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  SourceTags;                                        // 0x0028(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  TargetTags;                                        // 0x0048(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bSuccess;                                          // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x006C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_EvaluateAttributeValueWithTags;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.EvaluateAttributeValueWithTagsAndBase
-// 0x0090 (0x0090 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct AbilitySystemBlueprintLibrary_EvaluateAttributeValueWithTagsAndBase final
 {
 public:
 	class UAbilitySystemComponent*                AbilitySystem;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  SourceTags;                                        // 0x0040(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  TargetTags;                                        // 0x0060(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	float                                         BaseValue;                                         // 0x0080(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSuccess;                                          // 0x0084(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReturnValue;                                       // 0x0088(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  SourceTags;                                        // 0x0028(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  TargetTags;                                        // 0x0048(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	float                                         BaseValue;                                         // 0x0068(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSuccess;                                          // 0x006C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x0070(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_EvaluateAttributeValueWithTagsAndBase;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.FilterTargetData
-// 0x0060 (0x0060 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct AbilitySystemBlueprintLibrary_FilterTargetData final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetDataHandle;                                  // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FGameplayTargetDataFilterHandle        ActorFilterClass;                                  // 0x0028(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGameplayAbilityTargetDataHandle       ReturnValue;                                       // 0x0038(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       TargetDataHandle;                                  // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGameplayTargetDataFilterHandle        ActorFilterClass;                                  // 0x0020(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       ReturnValue;                                       // 0x0030(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_FilterTargetData;
 
@@ -560,24 +494,24 @@ public:
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetActorCount;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetActorsFromTargetData
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct AbilitySystemBlueprintLibrary_GetActorsFromTargetData final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetActorsFromTargetData;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetAllActorsFromTargetData
-// 0x0038 (0x0038 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct AbilitySystemBlueprintLibrary_GetAllActorsFromTargetData final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class AActor*>                         ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetAllActorsFromTargetData;
 
@@ -587,18 +521,18 @@ struct AbilitySystemBlueprintLibrary_GetAllLinkedGameplayEffectSpecHandles final
 {
 public:
 	struct FGameplayEffectSpecHandle              SpecHandle;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayEffectSpecHandle>      ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayEffectSpecHandle>      ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetAllLinkedGameplayEffectSpecHandles;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetDataCountFromTargetData
-// 0x0030 (0x0030 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct AbilitySystemBlueprintLibrary_GetDataCountFromTargetData final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetDataCountFromTargetData;
 
@@ -613,54 +547,54 @@ public:
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetEffectContext;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetFloatAttribute
-// 0x0048 (0x0048 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct AbilitySystemBlueprintLibrary_GetFloatAttribute final
 {
 public:
 	const class AActor*                           Actor;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSuccessfullyFoundAttribute;                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReturnValue;                                       // 0x0044(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSuccessfullyFoundAttribute;                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x002C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetFloatAttribute;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetFloatAttributeBase
-// 0x0048 (0x0048 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct AbilitySystemBlueprintLibrary_GetFloatAttributeBase final
 {
 public:
 	const class AActor*                           Actor;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSuccessfullyFoundAttribute;                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReturnValue;                                       // 0x0044(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSuccessfullyFoundAttribute;                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x002C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetFloatAttributeBase;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetFloatAttributeBaseFromAbilitySystemComponent
-// 0x0048 (0x0048 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct AbilitySystemBlueprintLibrary_GetFloatAttributeBaseFromAbilitySystemComponent final
 {
 public:
 	const class UAbilitySystemComponent*          AbilitySystemComponent;                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSuccessfullyFoundAttribute;                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReturnValue;                                       // 0x0044(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSuccessfullyFoundAttribute;                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x002C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetFloatAttributeBaseFromAbilitySystemComponent;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetFloatAttributeFromAbilitySystemComponent
-// 0x0048 (0x0048 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct AbilitySystemBlueprintLibrary_GetFloatAttributeFromAbilitySystemComponent final
 {
 public:
 	const class UAbilitySystemComponent*          AbilitySystem;                                     // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSuccessfullyFoundAttribute;                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReturnValue;                                       // 0x0044(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSuccessfullyFoundAttribute;                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x002C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetFloatAttributeFromAbilitySystemComponent;
 
@@ -692,24 +626,24 @@ public:
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetGameplayCueEndLocationAndNormal;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetHitResult
-// 0x0148 (0x0148 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct AbilitySystemBlueprintLibrary_GetHitResult final
 {
 public:
 	struct FGameplayCueParameters                 Parameters;                                        // 0x0000(0x00B8)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FHitResult                             ReturnValue;                                       // 0x00B8(0x008C)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_144[0x4];                                      // 0x0144(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             ReturnValue;                                       // 0x00B8(0x0088)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetHitResult;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetHitResultFromTargetData
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct AbilitySystemBlueprintLibrary_GetHitResultFromTargetData final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       HitResult;                                         // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FHitResult                             ReturnValue;                                       // 0x002C(0x008C)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       HitResult;                                         // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FHitResult                             ReturnValue;                                       // 0x0024(0x0088)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetHitResultFromTargetData;
 
@@ -735,14 +669,14 @@ public:
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetInstigatorTransform;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetModifiedAttributeMagnitude
-// 0x0050 (0x0050 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct AbilitySystemBlueprintLibrary_GetModifiedAttributeMagnitude final
 {
 public:
 	struct FGameplayEffectSpecHandle              SpecHandle;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     Attribute;                                         // 0x0010(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0048(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAttribute                     Attribute;                                         // 0x0010(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetModifiedAttributeMagnitude;
 
@@ -758,13 +692,13 @@ public:
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetOrigin;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.GetTargetDataEndPoint
-// 0x0038 (0x0038 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct AbilitySystemBlueprintLibrary_GetTargetDataEndPoint final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x002C(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0024(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetTargetDataEndPoint;
 
@@ -773,9 +707,9 @@ DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetTargetDataEndPoint;
 struct AbilitySystemBlueprintLibrary_GetTargetDataEndPointTransform final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0xC];                                       // 0x0024(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x0030(0x0030)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetTargetDataEndPointTransform;
@@ -785,9 +719,9 @@ DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetTargetDataEndPointTransform;
 struct AbilitySystemBlueprintLibrary_GetTargetDataOrigin final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0xC];                                       // 0x0024(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x0030(0x0030)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_GetTargetDataOrigin;
@@ -826,51 +760,26 @@ public:
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_IsInstigatorLocallyControlledPlayer;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.IsValid
-// 0x0040 (0x0040 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct AbilitySystemBlueprintLibrary_IsValid final
 {
 public:
-	struct FGameplayAttribute                     Attribute;                                         // 0x0000(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAttribute                     Attribute;                                         // 0x0000(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_IsValid;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.MakeFilterHandle
-// 0x0038 (0x0038 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct AbilitySystemBlueprintLibrary_MakeFilterHandle final
 {
 public:
-	struct FGameplayTargetDataFilter              Filter;                                            // 0x0000(0x0020)(Parm, NativeAccessSpecifierPublic)
-	class AActor*                                 FilterActor;                                       // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTargetDataFilterHandle        ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FGameplayTargetDataFilter              Filter;                                            // 0x0000(0x0028)(Parm, NativeAccessSpecifierPublic)
+	class AActor*                                 FilterActor;                                       // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTargetDataFilterHandle        ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_MakeFilterHandle;
-
-// Function GameplayAbilities.AbilitySystemBlueprintLibrary.MakeGameplayCueParameters
-// 0x0170 (0x0170 - 0x0000)
-struct AbilitySystemBlueprintLibrary_MakeGameplayCueParameters final
-{
-public:
-	float                                         NormalizedMagnitude;                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RawMagnitude;                                      // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x0008(0x0018)(Parm, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           MatchedTagName;                                    // 0x0020(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           OriginalTag;                                       // 0x0028(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  AggregatedSourceTags;                              // 0x0030(0x0020)(Parm, AdvancedDisplay, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  AggregatedTargetTags;                              // 0x0050(0x0020)(Parm, AdvancedDisplay, NativeAccessSpecifierPublic)
-	struct FVector                                Location;                                          // 0x0070(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Normal;                                            // 0x007C(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 Instigator;                                        // 0x0088(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 EffectCauser;                                      // 0x0090(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                SourceObject;                                      // 0x0098(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPhysicalMaterial*                      PhysicalMaterial;                                  // 0x00A0(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GameplayEffectLevel;                               // 0x00A8(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AbilityLevel;                                      // 0x00AC(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USceneComponent*                        TargetAttachComponent;                             // 0x00B0(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayCueParameters                 ReturnValue;                                       // 0x00B8(0x00B8)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_MakeGameplayCueParameters;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.MakeSpecHandle
 // 0x0030 (0x0030 - 0x0000)
@@ -887,25 +796,25 @@ public:
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_MakeSpecHandle;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.NotEqual_GameplayAttributeGameplayAttribute
-// 0x0078 (0x0078 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct AbilitySystemBlueprintLibrary_NotEqual_GameplayAttributeGameplayAttribute final
 {
 public:
-	struct FGameplayAttribute                     AttributeA;                                        // 0x0000(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     AttributeB;                                        // 0x0038(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAttribute                     AttributeA;                                        // 0x0000(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     AttributeB;                                        // 0x0020(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_NotEqual_GameplayAttributeGameplayAttribute;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.SendGameplayEventToActor
-// 0x00C0 (0x00C0 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct AbilitySystemBlueprintLibrary_SendGameplayEventToActor final
 {
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGameplayTag                           EventTag;                                          // 0x0008(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayEventData                     Payload;                                           // 0x0010(0x00B0)(Parm, NativeAccessSpecifierPublic)
+	struct FGameplayEventData                     Payload;                                           // 0x0010(0x00A8)(Parm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_SendGameplayEventToActor;
 
@@ -944,50 +853,50 @@ public:
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_SetStackCountToMax;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.TargetDataHasActor
-// 0x0030 (0x0030 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct AbilitySystemBlueprintLibrary_TargetDataHasActor final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x002C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_TargetDataHasActor;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.TargetDataHasEndPoint
-// 0x0030 (0x0030 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct AbilitySystemBlueprintLibrary_TargetDataHasEndPoint final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x002C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_TargetDataHasEndPoint;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.TargetDataHasHitResult
-// 0x0030 (0x0030 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct AbilitySystemBlueprintLibrary_TargetDataHasHitResult final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       HitResult;                                         // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x002C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       HitResult;                                         // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_TargetDataHasHitResult;
 
 // Function GameplayAbilities.AbilitySystemBlueprintLibrary.TargetDataHasOrigin
-// 0x0030 (0x0030 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct AbilitySystemBlueprintLibrary_TargetDataHasOrigin final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x002C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemBlueprintLibrary_TargetDataHasOrigin;
 
@@ -1051,13 +960,13 @@ public:
 DUMPER7_ASSERTS_AbilitySystemComponent_ClientActivateAbilityFailed;
 
 // Function GameplayAbilities.AbilitySystemComponent.ClientActivateAbilitySucceed
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct AbilitySystemComponent_ClientActivateAbilitySucceed final
 {
 public:
 	struct FGameplayAbilitySpecHandle             AbilityToActivate;                                 // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ClientActivateAbilitySucceed;
 
@@ -1068,30 +977,30 @@ struct AbilitySystemComponent_ClientActivateAbilitySucceedWithEventData final
 public:
 	struct FGameplayAbilitySpecHandle             AbilityToActivate;                                 // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayEventData                     TriggerEventData;                                  // 0x0018(0x00B0)(Parm, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayEventData                     TriggerEventData;                                  // 0x0020(0x00A8)(Parm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ClientActivateAbilitySucceedWithEventData;
 
 // Function GameplayAbilities.AbilitySystemComponent.ClientCancelAbility
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct AbilitySystemComponent_ClientCancelAbility final
 {
 public:
 	struct FGameplayAbilitySpecHandle             AbilityToCancel;                                   // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityActivationInfo         ActivationInfo;                                    // 0x0008(0x0018)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityActivationInfo         ActivationInfo;                                    // 0x0008(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ClientCancelAbility;
 
 // Function GameplayAbilities.AbilitySystemComponent.ClientEndAbility
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct AbilitySystemComponent_ClientEndAbility final
 {
 public:
 	struct FGameplayAbilitySpecHandle             AbilityToEnd;                                      // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityActivationInfo         ActivationInfo;                                    // 0x0008(0x0018)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityActivationInfo         ActivationInfo;                                    // 0x0008(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ClientEndAbility;
 
@@ -1100,21 +1009,21 @@ DUMPER7_ASSERTS_AbilitySystemComponent_ClientEndAbility;
 struct AbilitySystemComponent_ClientPrintDebug_Response final
 {
 public:
-	TArray<class FString>                         Strings;                                           // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         Strings;                                           // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         GameFlags;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ClientPrintDebug_Response;
 
 // Function GameplayAbilities.AbilitySystemComponent.ClientSetReplicatedEvent
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct AbilitySystemComponent_ClientSetReplicatedEvent final
 {
 public:
 	EAbilityGenericReplicatedEvent                EventType;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayAbilitySpecHandle             AbilityHandle;                                     // 0x0004(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         AbilityOriginalPredictionKey;                      // 0x0008(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         AbilityOriginalPredictionKey;                      // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ClientSetReplicatedEvent;
 
@@ -1151,110 +1060,110 @@ public:
 DUMPER7_ASSERTS_AbilitySystemComponent_K2_InitStats;
 
 // Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueAdded
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct AbilitySystemComponent_NetMulticast_InvokeGameplayCueAdded final
 {
 public:
 	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x0018(0x0018)(Parm, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x0020(0x0018)(Parm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_NetMulticast_InvokeGameplayCueAdded;
 
 // Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueAdded_WithParams
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct AbilitySystemComponent_NetMulticast_InvokeGameplayCueAdded_WithParams final
 {
 public:
 	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayCueParameters                 Parameters;                                        // 0x0018(0x00B8)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayCueParameters                 Parameters;                                        // 0x0020(0x00B8)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_NetMulticast_InvokeGameplayCueAdded_WithParams;
 
 // Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec
-// 0x0088 (0x0088 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct AbilitySystemComponent_NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec final
 {
 public:
 	struct FGameplayEffectSpecForRPC              Spec;                                              // 0x0000(0x0078)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         PredictionKey;                                     // 0x0078(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0078(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec;
 
 // Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct AbilitySystemComponent_NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams final
 {
 public:
 	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayCueParameters                 GameplayCueParameters;                             // 0x0018(0x00B8)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayCueParameters                 GameplayCueParameters;                             // 0x0020(0x00B8)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams;
 
 // Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueExecuted
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct AbilitySystemComponent_NetMulticast_InvokeGameplayCueExecuted final
 {
 public:
 	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x0018(0x0018)(Parm, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x0020(0x0018)(Parm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_NetMulticast_InvokeGameplayCueExecuted;
 
 // Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueExecuted_FromSpec
-// 0x0088 (0x0088 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct AbilitySystemComponent_NetMulticast_InvokeGameplayCueExecuted_FromSpec final
 {
 public:
 	struct FGameplayEffectSpecForRPC              Spec;                                              // 0x0000(0x0078)(ConstParm, Parm, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         PredictionKey;                                     // 0x0078(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0078(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_NetMulticast_InvokeGameplayCueExecuted_FromSpec;
 
 // Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCueExecuted_WithParams
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct AbilitySystemComponent_NetMulticast_InvokeGameplayCueExecuted_WithParams final
 {
 public:
 	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayCueParameters                 GameplayCueParameters;                             // 0x0018(0x00B8)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayCueParameters                 GameplayCueParameters;                             // 0x0020(0x00B8)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_NetMulticast_InvokeGameplayCueExecuted_WithParams;
 
 // Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct AbilitySystemComponent_NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams final
 {
 public:
 	struct FGameplayTagContainer                  GameplayCueTags;                                   // 0x0000(0x0020)(ConstParm, Parm, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         PredictionKey;                                     // 0x0020(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayCueParameters                 GameplayCueParameters;                             // 0x0030(0x00B8)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0020(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayCueParameters                 GameplayCueParameters;                             // 0x0038(0x00B8)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams;
 
 // Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCuesExecuted
-// 0x0048 (0x0048 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct AbilitySystemComponent_NetMulticast_InvokeGameplayCuesExecuted final
 {
 public:
 	struct FGameplayTagContainer                  GameplayCueTags;                                   // 0x0000(0x0020)(ConstParm, Parm, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         PredictionKey;                                     // 0x0020(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x0030(0x0018)(Parm, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0020(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x0038(0x0018)(Parm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_NetMulticast_InvokeGameplayCuesExecuted;
 
 // Function GameplayAbilities.AbilitySystemComponent.NetMulticast_InvokeGameplayCuesExecuted_WithParams
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct AbilitySystemComponent_NetMulticast_InvokeGameplayCuesExecuted_WithParams final
 {
 public:
 	struct FGameplayTagContainer                  GameplayCueTags;                                   // 0x0000(0x0020)(ConstParm, Parm, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         PredictionKey;                                     // 0x0020(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayCueParameters                 GameplayCueParameters;                             // 0x0030(0x00B8)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0020(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayCueParameters                 GameplayCueParameters;                             // 0x0038(0x00B8)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_NetMulticast_InvokeGameplayCuesExecuted_WithParams;
 
@@ -1336,13 +1245,13 @@ public:
 DUMPER7_ASSERTS_AbilitySystemComponent_ServerAbilityRPCBatch;
 
 // Function GameplayAbilities.AbilitySystemComponent.ServerCancelAbility
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct AbilitySystemComponent_ServerCancelAbility final
 {
 public:
 	struct FGameplayAbilitySpecHandle             AbilityToCancel;                                   // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityActivationInfo         ActivationInfo;                                    // 0x0008(0x0018)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityActivationInfo         ActivationInfo;                                    // 0x0008(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ServerCancelAbility;
 
@@ -1381,14 +1290,14 @@ public:
 DUMPER7_ASSERTS_AbilitySystemComponent_ServerCurrentMontageSetPlayRate;
 
 // Function GameplayAbilities.AbilitySystemComponent.ServerEndAbility
-// 0x0030 (0x0030 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct AbilitySystemComponent_ServerEndAbility final
 {
 public:
 	struct FGameplayAbilitySpecHandle             AbilityToEnd;                                      // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityActivationInfo         ActivationInfo;                                    // 0x0008(0x0018)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         PredictionKey;                                     // 0x0020(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityActivationInfo         ActivationInfo;                                    // 0x0008(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0028(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ServerEndAbility;
 
@@ -1397,7 +1306,7 @@ DUMPER7_ASSERTS_AbilitySystemComponent_ServerEndAbility;
 struct AbilitySystemComponent_ServerPrintDebug_RequestWithStrings final
 {
 public:
-	TArray<class FString>                         Strings;                                           // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         Strings;                                           // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ServerPrintDebug_RequestWithStrings;
 
@@ -1420,68 +1329,68 @@ public:
 DUMPER7_ASSERTS_AbilitySystemComponent_ServerSetInputReleased;
 
 // Function GameplayAbilities.AbilitySystemComponent.ServerSetReplicatedEvent
-// 0x0028 (0x0028 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct AbilitySystemComponent_ServerSetReplicatedEvent final
 {
 public:
 	EAbilityGenericReplicatedEvent                EventType;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayAbilitySpecHandle             AbilityHandle;                                     // 0x0004(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         AbilityOriginalPredictionKey;                      // 0x0008(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         CurrentPredictionKey;                              // 0x0018(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         AbilityOriginalPredictionKey;                      // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         CurrentPredictionKey;                              // 0x0020(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ServerSetReplicatedEvent;
 
 // Function GameplayAbilities.AbilitySystemComponent.ServerSetReplicatedEventWithPayload
-// 0x0038 (0x0038 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct AbilitySystemComponent_ServerSetReplicatedEventWithPayload final
 {
 public:
 	EAbilityGenericReplicatedEvent                EventType;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayAbilitySpecHandle             AbilityHandle;                                     // 0x0004(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         AbilityOriginalPredictionKey;                      // 0x0008(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         CurrentPredictionKey;                              // 0x0018(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector_NetQuantize100                 VectorPayload;                                     // 0x0028(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPredictionKey                         AbilityOriginalPredictionKey;                      // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         CurrentPredictionKey;                              // 0x0020(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector_NetQuantize100                 VectorPayload;                                     // 0x0038(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ServerSetReplicatedEventWithPayload;
 
 // Function GameplayAbilities.AbilitySystemComponent.ServerSetReplicatedTargetData
-// 0x0058 (0x0058 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct AbilitySystemComponent_ServerSetReplicatedTargetData final
 {
 public:
 	struct FGameplayAbilitySpecHandle             AbilityHandle;                                     // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPredictionKey                         AbilityOriginalPredictionKey;                      // 0x0008(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAbilityTargetDataHandle       ReplicatedTargetDataHandle;                        // 0x0018(0x0028)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         AbilityOriginalPredictionKey;                      // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       ReplicatedTargetDataHandle;                        // 0x0020(0x0020)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FGameplayTag                           ApplicationTag;                                    // 0x0040(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         CurrentPredictionKey;                              // 0x0048(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         CurrentPredictionKey;                              // 0x0048(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ServerSetReplicatedTargetData;
 
 // Function GameplayAbilities.AbilitySystemComponent.ServerSetReplicatedTargetDataCancelled
-// 0x0028 (0x0028 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct AbilitySystemComponent_ServerSetReplicatedTargetDataCancelled final
 {
 public:
 	struct FGameplayAbilitySpecHandle             AbilityHandle;                                     // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPredictionKey                         AbilityOriginalPredictionKey;                      // 0x0008(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         CurrentPredictionKey;                              // 0x0018(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         AbilityOriginalPredictionKey;                      // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         CurrentPredictionKey;                              // 0x0020(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ServerSetReplicatedTargetDataCancelled;
 
 // Function GameplayAbilities.AbilitySystemComponent.ServerTryActivateAbility
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct AbilitySystemComponent_ServerTryActivateAbility final
 {
 public:
 	struct FGameplayAbilitySpecHandle             AbilityToActivate;                                 // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          InputPressed;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ServerTryActivateAbility;
 
@@ -1493,8 +1402,8 @@ public:
 	struct FGameplayAbilitySpecHandle             AbilityToActivate;                                 // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          InputPressed;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0010)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayEventData                     TriggerEventData;                                  // 0x0018(0x00B0)(Parm, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayEventData                     TriggerEventData;                                  // 0x0020(0x00A8)(Parm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_ServerTryActivateAbilityWithEventData;
 
@@ -1509,13 +1418,13 @@ public:
 DUMPER7_ASSERTS_AbilitySystemComponent_SetActiveGameplayEffectLevel;
 
 // Function GameplayAbilities.AbilitySystemComponent.SetActiveGameplayEffectLevelUsingQuery
-// 0x0158 (0x0158 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct AbilitySystemComponent_SetActiveGameplayEffectLevelUsingQuery final
 {
 public:
-	struct FGameplayEffectQuery                   Query;                                             // 0x0000(0x0150)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	int32                                         NewLevel;                                          // 0x0150(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayEffectQuery                   Query;                                             // 0x0000(0x0138)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	int32                                         NewLevel;                                          // 0x0138(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_SetActiveGameplayEffectLevelUsingQuery;
 
@@ -1553,34 +1462,24 @@ public:
 DUMPER7_ASSERTS_AbilitySystemComponent_TryActivateAbilityByClass;
 
 // Function GameplayAbilities.AbilitySystemComponent.GetActiveEffects
-// 0x0160 (0x0160 - 0x0000)
+// 0x0148 (0x0148 - 0x0000)
 struct AbilitySystemComponent_GetActiveEffects final
 {
 public:
-	struct FGameplayEffectQuery                   Query;                                             // 0x0000(0x0150)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<struct FActiveGameplayEffectHandle>    ReturnValue;                                       // 0x0150(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayEffectQuery                   Query;                                             // 0x0000(0x0138)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<struct FActiveGameplayEffectHandle>    ReturnValue;                                       // 0x0138(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_GetActiveEffects;
 
-// Function GameplayAbilities.AbilitySystemComponent.GetActiveEffectsWithAllTags
-// 0x0030 (0x0030 - 0x0000)
-struct AbilitySystemComponent_GetActiveEffectsWithAllTags final
-{
-public:
-	struct FGameplayTagContainer                  Tags;                                              // 0x0000(0x0020)(Parm, NativeAccessSpecifierPublic)
-	TArray<struct FActiveGameplayEffectHandle>    ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AbilitySystemComponent_GetActiveEffectsWithAllTags;
-
 // Function GameplayAbilities.AbilitySystemComponent.GetGameplayEffectMagnitude
-// 0x0048 (0x0048 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct AbilitySystemComponent_GetGameplayEffectMagnitude final
 {
 public:
 	struct FActiveGameplayEffectHandle            Handle;                                            // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0040(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_GetGameplayEffectMagnitude;
 
@@ -1626,121 +1525,528 @@ public:
 };
 DUMPER7_ASSERTS_AbilitySystemComponent_MakeOutgoingSpec;
 
-// Function GameplayAbilities.GameplayAbilityWorldReticle.FaceTowardSource
-// 0x0001 (0x0001 - 0x0000)
-struct GameplayAbilityWorldReticle_FaceTowardSource final
+// Function GameplayAbilities.GameplayAbility.BP_ApplyGameplayEffectToOwner
+// 0x0018 (0x0018 - 0x0000)
+struct GameplayAbility_BP_ApplyGameplayEffectToOwner final
 {
 public:
-	bool                                          bFaceIn2D;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UGameplayEffect>            GameplayEffectClass;                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GameplayEffectLevel;                               // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Stacks;                                            // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FActiveGameplayEffectHandle            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_GameplayAbilityWorldReticle_FaceTowardSource;
+DUMPER7_ASSERTS_GameplayAbility_BP_ApplyGameplayEffectToOwner;
 
-// Function GameplayAbilities.GameplayAbilityWorldReticle.OnTargetingAnActor
-// 0x0001 (0x0001 - 0x0000)
-struct GameplayAbilityWorldReticle_OnTargetingAnActor final
+// Function GameplayAbilities.GameplayAbility.BP_ApplyGameplayEffectToTarget
+// 0x0040 (0x0040 - 0x0000)
+struct GameplayAbility_BP_ApplyGameplayEffectToTarget final
 {
 public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0020)(Parm, NativeAccessSpecifierPublic)
+	TSubclassOf<class UGameplayEffect>            GameplayEffectClass;                               // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GameplayEffectLevel;                               // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Stacks;                                            // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FActiveGameplayEffectHandle>    ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_GameplayAbilityWorldReticle_OnTargetingAnActor;
+DUMPER7_ASSERTS_GameplayAbility_BP_ApplyGameplayEffectToTarget;
 
-// Function GameplayAbilities.GameplayAbilityWorldReticle.OnValidTargetChanged
-// 0x0001 (0x0001 - 0x0000)
-struct GameplayAbilityWorldReticle_OnValidTargetChanged final
+// Function GameplayAbilities.GameplayAbility.BP_RemoveGameplayEffectFromOwnerWithAssetTags
+// 0x0028 (0x0028 - 0x0000)
+struct GameplayAbility_BP_RemoveGameplayEffectFromOwnerWithAssetTags final
 {
 public:
-	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  WithAssetTags;                                     // 0x0000(0x0020)(Parm, NativeAccessSpecifierPublic)
+	int32                                         StacksToRemove;                                    // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_GameplayAbilityWorldReticle_OnValidTargetChanged;
+DUMPER7_ASSERTS_GameplayAbility_BP_RemoveGameplayEffectFromOwnerWithAssetTags;
 
-// Function GameplayAbilities.GameplayAbilityWorldReticle.SetReticleMaterialParamFloat
+// Function GameplayAbilities.GameplayAbility.BP_RemoveGameplayEffectFromOwnerWithGrantedTags
+// 0x0028 (0x0028 - 0x0000)
+struct GameplayAbility_BP_RemoveGameplayEffectFromOwnerWithGrantedTags final
+{
+public:
+	struct FGameplayTagContainer                  WithGrantedTags;                                   // 0x0000(0x0020)(Parm, NativeAccessSpecifierPublic)
+	int32                                         StacksToRemove;                                    // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameplayAbility_BP_RemoveGameplayEffectFromOwnerWithGrantedTags;
+
+// Function GameplayAbilities.GameplayAbility.BP_RemoveGameplayEffectFromOwnerWithHandle
 // 0x000C (0x000C - 0x0000)
-struct GameplayAbilityWorldReticle_SetReticleMaterialParamFloat final
+struct GameplayAbility_BP_RemoveGameplayEffectFromOwnerWithHandle final
 {
 public:
-	class FName                                   ParamName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FActiveGameplayEffectHandle            Handle;                                            // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         StacksToRemove;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_GameplayAbilityWorldReticle_SetReticleMaterialParamFloat;
+DUMPER7_ASSERTS_GameplayAbility_BP_RemoveGameplayEffectFromOwnerWithHandle;
 
-// Function GameplayAbilities.GameplayAbilityWorldReticle.SetReticleMaterialParamVector
-// 0x0014 (0x0014 - 0x0000)
-struct GameplayAbilityWorldReticle_SetReticleMaterialParamVector final
-{
-public:
-	class FName                                   ParamName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Value;                                             // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbilityWorldReticle_SetReticleMaterialParamVector;
-
-// Function GameplayAbilities.GameplayCueNotify_Actor.K2_HandleGameplayCue
-// 0x00C8 (0x00C8 - 0x0000)
-struct GameplayCueNotify_Actor_K2_HandleGameplayCue final
-{
-public:
-	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGameplayCueEvent                             EventType;                                         // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 Parameters;                                        // 0x0010(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayCueNotify_Actor_K2_HandleGameplayCue;
-
-// Function GameplayAbilities.GameplayCueNotify_Actor.OnActive
-// 0x00C8 (0x00C8 - 0x0000)
-struct GameplayCueNotify_Actor_OnActive final
-{
-public:
-	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x00C0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GameplayCueNotify_Actor_OnActive;
-
-// Function GameplayAbilities.GameplayCueNotify_Actor.OnExecute
-// 0x00C8 (0x00C8 - 0x0000)
-struct GameplayCueNotify_Actor_OnExecute final
-{
-public:
-	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x00C0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GameplayCueNotify_Actor_OnExecute;
-
-// Function GameplayAbilities.GameplayCueNotify_Actor.OnOwnerDestroyed
+// Function GameplayAbilities.GameplayAbility.CancelTaskByInstanceName
 // 0x0008 (0x0008 - 0x0000)
-struct GameplayCueNotify_Actor_OnOwnerDestroyed final
+struct GameplayAbility_CancelTaskByInstanceName final
 {
 public:
-	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InstanceName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_GameplayCueNotify_Actor_OnOwnerDestroyed;
+DUMPER7_ASSERTS_GameplayAbility_CancelTaskByInstanceName;
 
-// Function GameplayAbilities.GameplayCueNotify_Actor.OnRemove
-// 0x00C8 (0x00C8 - 0x0000)
-struct GameplayCueNotify_Actor_OnRemove final
+// Function GameplayAbilities.GameplayAbility.ConfirmTaskByInstanceName
+// 0x000C (0x000C - 0x0000)
+struct GameplayAbility_ConfirmTaskByInstanceName final
 {
 public:
-	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x00C0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InstanceName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEndTask;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameplayAbility_ConfirmTaskByInstanceName;
+
+// Function GameplayAbilities.GameplayAbility.EndAbilityState
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayAbility_EndAbilityState final
+{
+public:
+	class FName                                   OptionalStateNameToEnd;                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_EndAbilityState;
+
+// Function GameplayAbilities.GameplayAbility.EndTaskByInstanceName
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayAbility_EndTaskByInstanceName final
+{
+public:
+	class FName                                   InstanceName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_EndTaskByInstanceName;
+
+// Function GameplayAbilities.GameplayAbility.K2_ActivateAbilityFromEvent
+// 0x00A8 (0x00A8 - 0x0000)
+struct GameplayAbility_K2_ActivateAbilityFromEvent final
+{
+public:
+	struct FGameplayEventData                     EventData;                                         // 0x0000(0x00A8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_K2_ActivateAbilityFromEvent;
+
+// Function GameplayAbilities.GameplayAbility.K2_AddGameplayCue
+// 0x0028 (0x0028 - 0x0000)
+struct GameplayAbility_K2_AddGameplayCue final
+{
+public:
+	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayEffectContextHandle           Context;                                           // 0x0008(0x0018)(Parm, NativeAccessSpecifierPublic)
+	bool                                          bRemoveOnAbilityEnd;                               // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameplayAbility_K2_AddGameplayCue;
+
+// Function GameplayAbilities.GameplayAbility.K2_AddGameplayCueWithParams
+// 0x00C8 (0x00C8 - 0x0000)
+struct GameplayAbility_K2_AddGameplayCueWithParams final
+{
+public:
+	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayCueParameters                 GameplayCueParameter;                              // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          bRemoveOnAbilityEnd;                               // 0x00C0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_GameplayCueNotify_Actor_OnRemove;
+DUMPER7_ASSERTS_GameplayAbility_K2_AddGameplayCueWithParams;
 
-// Function GameplayAbilities.GameplayCueNotify_Actor.WhileActive
-// 0x00C8 (0x00C8 - 0x0000)
-struct GameplayCueNotify_Actor_WhileActive final
+// Function GameplayAbilities.GameplayAbility.K2_ApplyGameplayEffectSpecToOwner
+// 0x0018 (0x0018 - 0x0000)
+struct GameplayAbility_K2_ApplyGameplayEffectSpecToOwner final
 {
 public:
-	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x00C0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayEffectSpecHandle              EffectSpecHandle;                                  // 0x0000(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	struct FActiveGameplayEffectHandle            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_GameplayCueNotify_Actor_WhileActive;
+DUMPER7_ASSERTS_GameplayAbility_K2_ApplyGameplayEffectSpecToOwner;
+
+// Function GameplayAbilities.GameplayAbility.K2_ApplyGameplayEffectSpecToTarget
+// 0x0040 (0x0040 - 0x0000)
+struct GameplayAbility_K2_ApplyGameplayEffectSpecToTarget final
+{
+public:
+	struct FGameplayEffectSpecHandle              EffectSpecHandle;                                  // 0x0000(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0010(0x0020)(Parm, NativeAccessSpecifierPublic)
+	TArray<struct FActiveGameplayEffectHandle>    ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_K2_ApplyGameplayEffectSpecToTarget;
+
+// Function GameplayAbilities.GameplayAbility.K2_CheckAbilityCooldown
+// 0x0001 (0x0001 - 0x0000)
+struct GameplayAbility_K2_CheckAbilityCooldown final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_K2_CheckAbilityCooldown;
+
+// Function GameplayAbilities.GameplayAbility.K2_CheckAbilityCost
+// 0x0001 (0x0001 - 0x0000)
+struct GameplayAbility_K2_CheckAbilityCost final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_K2_CheckAbilityCost;
+
+// Function GameplayAbilities.GameplayAbility.K2_CommitAbility
+// 0x0001 (0x0001 - 0x0000)
+struct GameplayAbility_K2_CommitAbility final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_K2_CommitAbility;
+
+// Function GameplayAbilities.GameplayAbility.K2_CommitAbilityCooldown
+// 0x0003 (0x0003 - 0x0000)
+struct GameplayAbility_K2_CommitAbilityCooldown final
+{
+public:
+	bool                                          BroadcastCommitEvent;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ForceCooldown;                                     // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_K2_CommitAbilityCooldown;
+
+// Function GameplayAbilities.GameplayAbility.K2_CommitAbilityCost
+// 0x0002 (0x0002 - 0x0000)
+struct GameplayAbility_K2_CommitAbilityCost final
+{
+public:
+	bool                                          BroadcastCommitEvent;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_K2_CommitAbilityCost;
+
+// Function GameplayAbilities.GameplayAbility.K2_ExecuteGameplayCue
+// 0x0020 (0x0020 - 0x0000)
+struct GameplayAbility_K2_ExecuteGameplayCue final
+{
+public:
+	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayEffectContextHandle           Context;                                           // 0x0008(0x0018)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_K2_ExecuteGameplayCue;
+
+// Function GameplayAbilities.GameplayAbility.K2_ExecuteGameplayCueWithParams
+// 0x00C0 (0x00C0 - 0x0000)
+struct GameplayAbility_K2_ExecuteGameplayCueWithParams final
+{
+public:
+	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayCueParameters                 GameplayCueParameters;                             // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_K2_ExecuteGameplayCueWithParams;
+
+// Function GameplayAbilities.GameplayAbility.K2_OnEndAbility
+// 0x0001 (0x0001 - 0x0000)
+struct GameplayAbility_K2_OnEndAbility final
+{
+public:
+	bool                                          bWasCancelled;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_K2_OnEndAbility;
+
+// Function GameplayAbilities.GameplayAbility.K2_RemoveGameplayCue
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayAbility_K2_RemoveGameplayCue final
+{
+public:
+	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_K2_RemoveGameplayCue;
+
+// Function GameplayAbilities.GameplayAbility.MakeTargetLocationInfoFromOwnerActor
+// 0x0070 (0x0070 - 0x0000)
+struct GameplayAbility_MakeTargetLocationInfoFromOwnerActor final
+{
+public:
+	struct FGameplayAbilityTargetingLocationInfo  ReturnValue;                                       // 0x0000(0x0070)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_MakeTargetLocationInfoFromOwnerActor;
+
+// Function GameplayAbilities.GameplayAbility.MakeTargetLocationInfoFromOwnerSkeletalMeshComponent
+// 0x0080 (0x0080 - 0x0000)
+struct GameplayAbility_MakeTargetLocationInfoFromOwnerSkeletalMeshComponent final
+{
+public:
+	class FName                                   SocketName;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetingLocationInfo  ReturnValue;                                       // 0x0010(0x0070)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_MakeTargetLocationInfoFromOwnerSkeletalMeshComponent;
+
+// Function GameplayAbilities.GameplayAbility.MontageJumpToSection
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayAbility_MontageJumpToSection final
+{
+public:
+	class FName                                   SectionName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_MontageJumpToSection;
+
+// Function GameplayAbilities.GameplayAbility.MontageSetNextSectionName
+// 0x0010 (0x0010 - 0x0000)
+struct GameplayAbility_MontageSetNextSectionName final
+{
+public:
+	class FName                                   FromSectionName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ToSectionName;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_MontageSetNextSectionName;
+
+// Function GameplayAbilities.GameplayAbility.MontageStop
+// 0x0004 (0x0004 - 0x0000)
+struct GameplayAbility_MontageStop final
+{
+public:
+	float                                         OverrideBlendOutTime;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_MontageStop;
+
+// Function GameplayAbilities.GameplayAbility.SendGameplayEvent
+// 0x00B0 (0x00B0 - 0x0000)
+struct GameplayAbility_SendGameplayEvent final
+{
+public:
+	struct FGameplayTag                           EventTag;                                          // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayEventData                     Payload;                                           // 0x0008(0x00A8)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_SendGameplayEvent;
+
+// Function GameplayAbilities.GameplayAbility.SetCanBeCanceled
+// 0x0001 (0x0001 - 0x0000)
+struct GameplayAbility_SetCanBeCanceled final
+{
+public:
+	bool                                          bCanBeCanceled;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_SetCanBeCanceled;
+
+// Function GameplayAbilities.GameplayAbility.SetShouldBlockOtherAbilities
+// 0x0001 (0x0001 - 0x0000)
+struct GameplayAbility_SetShouldBlockOtherAbilities final
+{
+public:
+	bool                                          bShouldBlockAbilities;                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_SetShouldBlockOtherAbilities;
+
+// Function GameplayAbilities.GameplayAbility.GetAbilityLevel
+// 0x0004 (0x0004 - 0x0000)
+struct GameplayAbility_GetAbilityLevel final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_GetAbilityLevel;
+
+// Function GameplayAbilities.GameplayAbility.GetAbilitySystemComponentFromActorInfo
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayAbility_GetAbilitySystemComponentFromActorInfo final
+{
+public:
+	class UAbilitySystemComponent*                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_GetAbilitySystemComponentFromActorInfo;
+
+// Function GameplayAbilities.GameplayAbility.GetActorInfo
+// 0x0040 (0x0040 - 0x0000)
+struct GameplayAbility_GetActorInfo final
+{
+public:
+	struct FGameplayAbilityActorInfo              ReturnValue;                                       // 0x0000(0x0040)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_GetActorInfo;
+
+// Function GameplayAbilities.GameplayAbility.GetAvatarActorFromActorInfo
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayAbility_GetAvatarActorFromActorInfo final
+{
+public:
+	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_GetAvatarActorFromActorInfo;
+
+// Function GameplayAbilities.GameplayAbility.GetContextFromOwner
+// 0x0038 (0x0038 - 0x0000)
+struct GameplayAbility_GetContextFromOwner final
+{
+public:
+	struct FGameplayAbilityTargetDataHandle       OptionalTargetData;                                // 0x0000(0x0020)(Parm, NativeAccessSpecifierPublic)
+	struct FGameplayEffectContextHandle           ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_GetContextFromOwner;
+
+// Function GameplayAbilities.GameplayAbility.GetCooldownTimeRemaining
+// 0x0004 (0x0004 - 0x0000)
+struct GameplayAbility_GetCooldownTimeRemaining final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_GetCooldownTimeRemaining;
+
+// Function GameplayAbilities.GameplayAbility.GetCurrentMontage
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayAbility_GetCurrentMontage final
+{
+public:
+	class UAnimMontage*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_GetCurrentMontage;
+
+// Function GameplayAbilities.GameplayAbility.GetCurrentSourceObject
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayAbility_GetCurrentSourceObject final
+{
+public:
+	class UObject*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_GetCurrentSourceObject;
+
+// Function GameplayAbilities.GameplayAbility.GetGrantedByEffectContext
+// 0x0018 (0x0018 - 0x0000)
+struct GameplayAbility_GetGrantedByEffectContext final
+{
+public:
+	struct FGameplayEffectContextHandle           ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_GetGrantedByEffectContext;
+
+// Function GameplayAbilities.GameplayAbility.GetOwningActorFromActorInfo
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayAbility_GetOwningActorFromActorInfo final
+{
+public:
+	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_GetOwningActorFromActorInfo;
+
+// Function GameplayAbilities.GameplayAbility.GetOwningComponentFromActorInfo
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayAbility_GetOwningComponentFromActorInfo final
+{
+public:
+	class USkeletalMeshComponent*                 ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_GetOwningComponentFromActorInfo;
+
+// Function GameplayAbilities.GameplayAbility.K2_CanActivateAbility
+// 0x0068 (0x0068 - 0x0000)
+struct GameplayAbility_K2_CanActivateAbility final
+{
+public:
+	struct FGameplayAbilityActorInfo              ActorInfo;                                         // 0x0000(0x0040)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  RelevantTags;                                      // 0x0040(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameplayAbility_K2_CanActivateAbility;
+
+// Function GameplayAbilities.GameplayAbility.K2_ShouldAbilityRespondToEvent
+// 0x00F0 (0x00F0 - 0x0000)
+struct GameplayAbility_K2_ShouldAbilityRespondToEvent final
+{
+public:
+	struct FGameplayAbilityActorInfo              ActorInfo;                                         // 0x0000(0x0040)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FGameplayEventData                     Payload;                                           // 0x0040(0x00A8)(Parm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00E8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameplayAbility_K2_ShouldAbilityRespondToEvent;
+
+// Function GameplayAbilities.GameplayAbility.MakeOutgoingGameplayEffectSpec
+// 0x0020 (0x0020 - 0x0000)
+struct GameplayAbility_MakeOutgoingGameplayEffectSpec final
+{
+public:
+	TSubclassOf<class UGameplayEffect>            GameplayEffectClass;                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Level;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayEffectSpecHandle              ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayAbility_MakeOutgoingGameplayEffectSpec;
+
+// Function GameplayAbilities.AbilityTask_WaitAbilityCommit.WaitForAbilityCommit
+// 0x0028 (0x0028 - 0x0000)
+struct AbilityTask_WaitAbilityCommit_WaitForAbilityCommit final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           WithTag;                                           // 0x0008(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           WithoutTage;                                       // 0x0010(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          TriggerOnce;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityTask_WaitAbilityCommit*         ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AbilityTask_WaitAbilityCommit_WaitForAbilityCommit;
+
+// Function GameplayAbilities.AbilityTask_WaitAbilityCommit.WaitForAbilityCommit_Query
+// 0x0060 (0x0060 - 0x0000)
+struct AbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Query final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTagQuery                      Query;                                             // 0x0008(0x0048)(Parm, NativeAccessSpecifierPublic)
+	bool                                          TriggerOnce;                                       // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityTask_WaitAbilityCommit*         ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Query;
+
+// Function GameplayAbilities.AbilityTask_WaitAbilityCommit.OnAbilityCommit
+// 0x0008 (0x0008 - 0x0000)
+struct AbilityTask_WaitAbilityCommit_OnAbilityCommit final
+{
+public:
+	class UGameplayAbility*                       ActivatedAbility;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AbilityTask_WaitAbilityCommit_OnAbilityCommit;
+
+// Function GameplayAbilities.AbilityTask_PlayMontageAndWait.CreatePlayMontageAndWaitProxy
+// 0x0038 (0x0038 - 0x0000)
+struct AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TaskInstanceName;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimMontage*                           MontageToPlay_0;                                   // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Rate_0;                                            // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   StartSection_0;                                    // 0x001C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStopWhenAbilityEnds_0;                            // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AnimRootMotionTranslationScale_0;                  // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityTask_PlayMontageAndWait*        ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy;
+
+// Function GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageBlendingOut
+// 0x0010 (0x0010 - 0x0000)
+struct AbilityTask_PlayMontageAndWait_OnMontageBlendingOut final
+{
+public:
+	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AbilityTask_PlayMontageAndWait_OnMontageBlendingOut;
+
+// Function GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageEnded
+// 0x0010 (0x0010 - 0x0000)
+struct AbilityTask_PlayMontageAndWait_OnMontageEnded final
+{
+public:
+	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AbilityTask_PlayMontageAndWait_OnMontageEnded;
 
 // Function GameplayAbilities.AbilityTask_ApplyRootMotionConstantForce.ApplyRootMotionConstantForce
 // 0x0050 (0x0050 - 0x0000)
@@ -1759,8 +2065,7 @@ public:
 	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                SetVelocityOnFinish;                               // 0x0034(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ClampVelocityOnFinish;                             // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableGravity_0;                                  // 0x0044(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAbilityTask_ApplyRootMotionConstantForce* ReturnValue;                                    // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilityTask_ApplyRootMotionConstantForce_ApplyRootMotionConstantForce;
@@ -1789,11 +2094,11 @@ public:
 DUMPER7_ASSERTS_AbilityTask_ApplyRootMotionJumpForce_ApplyRootMotionJumpForce;
 
 // Function GameplayAbilities.AbilityTask_ApplyRootMotionJumpForce.OnLandedCallback
-// 0x008C (0x008C - 0x0000)
+// 0x0088 (0x0088 - 0x0000)
 struct AbilityTask_ApplyRootMotionJumpForce_OnLandedCallback final
 {
 public:
-	struct FHitResult                             Hit;                                               // 0x0000(0x008C)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FHitResult                             Hit;                                               // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilityTask_ApplyRootMotionJumpForce_OnLandedCallback;
 
@@ -1829,35 +2134,35 @@ public:
 DUMPER7_ASSERTS_AbilityTask_ApplyRootMotionMoveToActorForce_ApplyRootMotionMoveToActorForce;
 
 // Function GameplayAbilities.AbilityTask_ApplyRootMotionMoveToActorForce.ApplyRootMotionMoveToTargetDataActorForce
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct AbilityTask_ApplyRootMotionMoveToActorForce_ApplyRootMotionMoveToTargetDataActorForce final
 {
 public:
 	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   TaskInstanceName;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAbilityTargetDataHandle       TargetDataHandle;                                  // 0x0010(0x0028)(Parm, NativeAccessSpecifierPublic)
-	int32                                         TargetDataIndex;                                   // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TargetActorIndex;                                  // 0x003C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                TargetLocationOffset_0;                            // 0x0040(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERootMotionMoveToActorTargetOffsetType        OffsetAlignment_0;                                 // 0x004C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Duration_0;                                        // 0x0050(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            TargetLerpSpeedHorizontal;                         // 0x0058(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            TargetLerpSpeedVertical;                           // 0x0060(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetNewMovementMode_0;                             // 0x0068(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMovementMode                                 MovementMode;                                      // 0x0069(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRestrictSpeedToExpected_0;                        // 0x006A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6B[0x5];                                       // 0x006B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveVector*                           PathOffsetCurve_0;                                 // 0x0070(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            TimeMappingCurve_0;                                // 0x0078(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERootMotionFinishVelocityMode                 VelocityOnFinishMode;                              // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                SetVelocityOnFinish;                               // 0x0084(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ClampVelocityOnFinish;                             // 0x0090(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableDestinationReachedInterrupt_0;             // 0x0094(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilityTask_ApplyRootMotionMoveToActorForce* ReturnValue;                                 // 0x0098(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       TargetDataHandle;                                  // 0x0010(0x0020)(Parm, NativeAccessSpecifierPublic)
+	int32                                         TargetDataIndex;                                   // 0x0030(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TargetActorIndex;                                  // 0x0034(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                TargetLocationOffset_0;                            // 0x0038(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERootMotionMoveToActorTargetOffsetType        OffsetAlignment_0;                                 // 0x0044(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Duration_0;                                        // 0x0048(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            TargetLerpSpeedHorizontal;                         // 0x0050(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            TargetLerpSpeedVertical;                           // 0x0058(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetNewMovementMode_0;                             // 0x0060(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovementMode                                 MovementMode;                                      // 0x0061(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRestrictSpeedToExpected_0;                        // 0x0062(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_63[0x5];                                       // 0x0063(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveVector*                           PathOffsetCurve_0;                                 // 0x0068(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            TimeMappingCurve_0;                                // 0x0070(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERootMotionFinishVelocityMode                 VelocityOnFinishMode;                              // 0x0078(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                SetVelocityOnFinish;                               // 0x007C(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ClampVelocityOnFinish;                             // 0x0088(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableDestinationReachedInterrupt_0;             // 0x008C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityTask_ApplyRootMotionMoveToActorForce* ReturnValue;                                 // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilityTask_ApplyRootMotionMoveToActorForce_ApplyRootMotionMoveToTargetDataActorForce;
 
@@ -1893,6 +2198,57 @@ public:
 	class UAbilityTask_ApplyRootMotionMoveToForce* ReturnValue;                                      // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilityTask_ApplyRootMotionMoveToForce_ApplyRootMotionMoveToForce;
+
+// Function GameplayAbilities.AbilityTask_VisualizeTargeting.VisualizeTargeting
+// 0x0028 (0x0028 - 0x0000)
+struct AbilityTask_VisualizeTargeting_VisualizeTargeting final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AGameplayAbilityTargetActor> Class_0;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TaskInstanceName;                                  // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityTask_VisualizeTargeting*        ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AbilityTask_VisualizeTargeting_VisualizeTargeting;
+
+// Function GameplayAbilities.AbilityTask_VisualizeTargeting.VisualizeTargetingUsingActor
+// 0x0028 (0x0028 - 0x0000)
+struct AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AGameplayAbilityTargetActor*            TargetActor;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TaskInstanceName;                                  // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityTask_VisualizeTargeting*        ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor;
+
+// Function GameplayAbilities.AbilityTask_VisualizeTargeting.BeginSpawningActor
+// 0x0020 (0x0020 - 0x0000)
+struct AbilityTask_VisualizeTargeting_BeginSpawningActor final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AGameplayAbilityTargetActor> Class_0;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AGameplayAbilityTargetActor*            SpawnedActor;                                      // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AbilityTask_VisualizeTargeting_BeginSpawningActor;
+
+// Function GameplayAbilities.AbilityTask_VisualizeTargeting.FinishSpawningActor
+// 0x0010 (0x0010 - 0x0000)
+struct AbilityTask_VisualizeTargeting_FinishSpawningActor final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AGameplayAbilityTargetActor*            SpawnedActor;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AbilityTask_VisualizeTargeting_FinishSpawningActor;
 
 // Function GameplayAbilities.AbilityTask_ApplyRootMotionRadialForce.ApplyRootMotionRadialForce
 // 0x0078 (0x0078 - 0x0000)
@@ -1952,46 +2308,6 @@ public:
 };
 DUMPER7_ASSERTS_AbilityTask_NetworkSyncPoint_WaitNetSync;
 
-// Function GameplayAbilities.AbilityTask_PlayMontageAndWait.CreatePlayMontageAndWaitProxy
-// 0x0038 (0x0038 - 0x0000)
-struct AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TaskInstanceName;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimMontage*                           MontageToPlay_0;                                   // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Rate_0;                                            // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   StartSection_0;                                    // 0x001C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStopWhenAbilityEnds_0;                            // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AnimRootMotionTranslationScale_0;                  // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilityTask_PlayMontageAndWait*        ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy;
-
-// Function GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageBlendingOut
-// 0x0010 (0x0010 - 0x0000)
-struct AbilityTask_PlayMontageAndWait_OnMontageBlendingOut final
-{
-public:
-	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_AbilityTask_PlayMontageAndWait_OnMontageBlendingOut;
-
-// Function GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageEnded
-// 0x0010 (0x0010 - 0x0000)
-struct AbilityTask_PlayMontageAndWait_OnMontageEnded final
-{
-public:
-	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_AbilityTask_PlayMontageAndWait_OnMontageEnded;
-
 // Function GameplayAbilities.AbilityTask_Repeat.RepeatAction
 // 0x0018 (0x0018 - 0x0000)
 struct AbilityTask_Repeat_RepeatAction final
@@ -2005,39 +2321,39 @@ public:
 DUMPER7_ASSERTS_AbilityTask_Repeat_RepeatAction;
 
 // Function GameplayAbilities.AbilityTask_SpawnActor.SpawnActor
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct AbilityTask_SpawnActor_SpawnActor final
 {
 public:
 	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0008(0x0028)(Parm, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     Class_0;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAbilityTask_SpawnActor*                ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0008(0x0020)(Parm, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     Class_0;                                           // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAbilityTask_SpawnActor*                ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilityTask_SpawnActor_SpawnActor;
 
 // Function GameplayAbilities.AbilityTask_SpawnActor.BeginSpawningActor
-// 0x0048 (0x0048 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct AbilityTask_SpawnActor_BeginSpawningActor final
 {
 public:
 	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0008(0x0028)(Parm, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     Class_0;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 SpawnedActor;                                      // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0008(0x0020)(Parm, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     Class_0;                                           // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 SpawnedActor;                                      // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilityTask_SpawnActor_BeginSpawningActor;
 
 // Function GameplayAbilities.AbilityTask_SpawnActor.FinishSpawningActor
-// 0x0038 (0x0038 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct AbilityTask_SpawnActor_FinishSpawningActor final
 {
 public:
 	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0008(0x0028)(Parm, NativeAccessSpecifierPublic)
-	class AActor*                                 SpawnedActor;                                      // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0008(0x0020)(Parm, NativeAccessSpecifierPublic)
+	class AActor*                                 SpawnedActor;                                      // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilityTask_SpawnActor_FinishSpawningActor;
 
@@ -2053,57 +2369,6 @@ public:
 	class UAbilityTask_StartAbilityState*         ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilityTask_StartAbilityState_StartAbilityState;
-
-// Function GameplayAbilities.AbilityTask_VisualizeTargeting.VisualizeTargeting
-// 0x0028 (0x0028 - 0x0000)
-struct AbilityTask_VisualizeTargeting_VisualizeTargeting final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AGameplayAbilityTargetActor> Class_0;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TaskInstanceName;                                  // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duration;                                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilityTask_VisualizeTargeting*        ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AbilityTask_VisualizeTargeting_VisualizeTargeting;
-
-// Function GameplayAbilities.AbilityTask_VisualizeTargeting.VisualizeTargetingUsingActor
-// 0x0028 (0x0028 - 0x0000)
-struct AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AGameplayAbilityTargetActor*            TargetActor;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TaskInstanceName;                                  // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duration;                                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilityTask_VisualizeTargeting*        ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor;
-
-// Function GameplayAbilities.AbilityTask_VisualizeTargeting.BeginSpawningActor
-// 0x0020 (0x0020 - 0x0000)
-struct AbilityTask_VisualizeTargeting_BeginSpawningActor final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AGameplayAbilityTargetActor> Class_0;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AGameplayAbilityTargetActor*            SpawnedActor;                                      // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_AbilityTask_VisualizeTargeting_BeginSpawningActor;
-
-// Function GameplayAbilities.AbilityTask_VisualizeTargeting.FinishSpawningActor
-// 0x0010 (0x0010 - 0x0000)
-struct AbilityTask_VisualizeTargeting_FinishSpawningActor final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AGameplayAbilityTargetActor*            SpawnedActor;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AbilityTask_VisualizeTargeting_FinishSpawningActor;
 
 // Function GameplayAbilities.AbilityTask_WaitAbilityActivate.WaitForAbilityActivate
 // 0x0028 (0x0028 - 0x0000)
@@ -2157,109 +2422,73 @@ public:
 };
 DUMPER7_ASSERTS_AbilityTask_WaitAbilityActivate_OnAbilityActivate;
 
-// Function GameplayAbilities.AbilityTask_WaitAbilityCommit.WaitForAbilityCommit
-// 0x0028 (0x0028 - 0x0000)
-struct AbilityTask_WaitAbilityCommit_WaitForAbilityCommit final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           WithTag;                                           // 0x0008(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           WithoutTage;                                       // 0x0010(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          TriggerOnce;                                       // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilityTask_WaitAbilityCommit*         ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AbilityTask_WaitAbilityCommit_WaitForAbilityCommit;
-
-// Function GameplayAbilities.AbilityTask_WaitAbilityCommit.WaitForAbilityCommit_Query
-// 0x0060 (0x0060 - 0x0000)
-struct AbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Query final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagQuery                      Query;                                             // 0x0008(0x0048)(Parm, NativeAccessSpecifierPublic)
-	bool                                          TriggerOnce;                                       // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilityTask_WaitAbilityCommit*         ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Query;
-
-// Function GameplayAbilities.AbilityTask_WaitAbilityCommit.OnAbilityCommit
-// 0x0008 (0x0008 - 0x0000)
-struct AbilityTask_WaitAbilityCommit_OnAbilityCommit final
-{
-public:
-	class UGameplayAbility*                       ActivatedAbility;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AbilityTask_WaitAbilityCommit_OnAbilityCommit;
-
 // Function GameplayAbilities.AbilityTask_WaitAttributeChange.WaitForAttributeChange
-// 0x0068 (0x0068 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct AbilityTask_WaitAttributeChange_WaitForAttributeChange final
 {
 public:
 	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           WithSrcTag;                                        // 0x0040(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           WithoutSrcTag;                                     // 0x0048(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          TriggerOnce;                                       // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 OptionalExternalOwner;                             // 0x0058(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAbilityTask_WaitAttributeChange*       ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           WithSrcTag;                                        // 0x0028(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           WithoutSrcTag;                                     // 0x0030(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          TriggerOnce;                                       // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 OptionalExternalOwner;                             // 0x0040(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAbilityTask_WaitAttributeChange*       ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilityTask_WaitAttributeChange_WaitForAttributeChange;
 
 // Function GameplayAbilities.AbilityTask_WaitAttributeChange.WaitForAttributeChangeWithComparison
-// 0x0070 (0x0070 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct AbilityTask_WaitAttributeChange_WaitForAttributeChangeWithComparison final
 {
 public:
 	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     InAttribute;                                       // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           InWithTag;                                         // 0x0040(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           InWithoutTag;                                      // 0x0048(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EWaitAttributeChangeComparison                InComparisonType;                                  // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InComparisonValue;                                 // 0x0054(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          TriggerOnce;                                       // 0x0058(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 OptionalExternalOwner;                             // 0x0060(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAbilityTask_WaitAttributeChange*       ReturnValue;                                       // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     InAttribute;                                       // 0x0008(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           InWithTag;                                         // 0x0028(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           InWithoutTag;                                      // 0x0030(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EWaitAttributeChangeComparison                InComparisonType;                                  // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InComparisonValue;                                 // 0x003C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          TriggerOnce;                                       // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 OptionalExternalOwner;                             // 0x0048(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAbilityTask_WaitAttributeChange*       ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilityTask_WaitAttributeChange_WaitForAttributeChangeWithComparison;
 
 // Function GameplayAbilities.AbilityTask_WaitAttributeChangeRatioThreshold.WaitForAttributeChangeRatioThreshold
-// 0x0098 (0x0098 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold final
 {
 public:
 	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     AttributeNumerator;                                // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     AttributeDenominator;                              // 0x0040(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EWaitAttributeChangeComparison                ComparisonType;                                    // 0x0078(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ComparisonValue;                                   // 0x007C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTriggerOnce;                                      // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 OptionalExternalOwner;                             // 0x0088(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAbilityTask_WaitAttributeChangeRatioThreshold* ReturnValue;                               // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     AttributeNumerator;                                // 0x0008(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     AttributeDenominator;                              // 0x0028(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EWaitAttributeChangeComparison                ComparisonType;                                    // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ComparisonValue;                                   // 0x004C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTriggerOnce;                                      // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 OptionalExternalOwner;                             // 0x0058(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAbilityTask_WaitAttributeChangeRatioThreshold* ReturnValue;                               // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold;
 
 // Function GameplayAbilities.AbilityTask_WaitAttributeChangeThreshold.WaitForAttributeChangeThreshold
-// 0x0060 (0x0060 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold final
 {
 public:
 	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EWaitAttributeChangeComparison                ComparisonType;                                    // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ComparisonValue;                                   // 0x0044(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTriggerOnce;                                      // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 OptionalExternalOwner;                             // 0x0050(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAbilityTask_WaitAttributeChangeThreshold* ReturnValue;                                    // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EWaitAttributeChangeComparison                ComparisonType;                                    // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ComparisonValue;                                   // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTriggerOnce;                                      // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 OptionalExternalOwner;                             // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAbilityTask_WaitAttributeChangeThreshold* ReturnValue;                                    // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold;
 
@@ -2574,7 +2803,8 @@ public:
 	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                NormalImpulse;                                     // 0x0018(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FHitResult                             Hit;                                               // 0x0024(0x008C)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FHitResult                             Hit;                                               // 0x0024(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AbilityTask_WaitOverlap_OnHitCallback;
 
@@ -2630,30 +2860,30 @@ public:
 DUMPER7_ASSERTS_AbilityTask_WaitTargetData_FinishSpawningActor;
 
 // Function GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataCancelledCallback
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct AbilityTask_WaitTargetData_OnTargetDataCancelledCallback final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       Data;                                              // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       Data;                                              // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilityTask_WaitTargetData_OnTargetDataCancelledCallback;
 
 // Function GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataReadyCallback
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct AbilityTask_WaitTargetData_OnTargetDataReadyCallback final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       Data;                                              // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       Data;                                              // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilityTask_WaitTargetData_OnTargetDataReadyCallback;
 
 // Function GameplayAbilities.AbilityTask_WaitTargetData.OnTargetDataReplicatedCallback
-// 0x0030 (0x0030 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct AbilityTask_WaitTargetData_OnTargetDataReplicatedCallback final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       Data;                                              // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           ActivationTag;                                     // 0x0028(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       Data;                                              // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           ActivationTag;                                     // 0x0020(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilityTask_WaitTargetData_OnTargetDataReplicatedCallback;
 
@@ -2669,497 +2899,132 @@ public:
 };
 DUMPER7_ASSERTS_AbilityTask_WaitVelocityChange_CreateWaitVelocityChange;
 
-// Function GameplayAbilities.GameplayAbility.BP_ApplyGameplayEffectToOwner
-// 0x0018 (0x0018 - 0x0000)
-struct GameplayAbility_BP_ApplyGameplayEffectToOwner final
+// Function GameplayAbilities.GameplayAbilityWorldReticle.FaceTowardSource
+// 0x0001 (0x0001 - 0x0000)
+struct GameplayAbilityWorldReticle_FaceTowardSource final
 {
 public:
-	TSubclassOf<class UGameplayEffect>            GameplayEffectClass;                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GameplayEffectLevel;                               // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Stacks;                                            // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FActiveGameplayEffectHandle            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFaceIn2D;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_GameplayAbility_BP_ApplyGameplayEffectToOwner;
+DUMPER7_ASSERTS_GameplayAbilityWorldReticle_FaceTowardSource;
 
-// Function GameplayAbilities.GameplayAbility.BP_ApplyGameplayEffectToTarget
-// 0x0048 (0x0048 - 0x0000)
-struct GameplayAbility_BP_ApplyGameplayEffectToTarget final
+// Function GameplayAbilities.GameplayAbilityWorldReticle.OnTargetingAnActor
+// 0x0001 (0x0001 - 0x0000)
+struct GameplayAbilityWorldReticle_OnTargetingAnActor final
 {
 public:
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0000(0x0028)(Parm, NativeAccessSpecifierPublic)
-	TSubclassOf<class UGameplayEffect>            GameplayEffectClass;                               // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GameplayEffectLevel;                               // 0x0030(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Stacks;                                            // 0x0034(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FActiveGameplayEffectHandle>    ReturnValue;                                       // 0x0038(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_GameplayAbility_BP_ApplyGameplayEffectToTarget;
+DUMPER7_ASSERTS_GameplayAbilityWorldReticle_OnTargetingAnActor;
 
-// Function GameplayAbilities.GameplayAbility.BP_RemoveGameplayEffectFromOwnerWithAssetTags
-// 0x0028 (0x0028 - 0x0000)
-struct GameplayAbility_BP_RemoveGameplayEffectFromOwnerWithAssetTags final
+// Function GameplayAbilities.GameplayAbilityWorldReticle.OnValidTargetChanged
+// 0x0001 (0x0001 - 0x0000)
+struct GameplayAbilityWorldReticle_OnValidTargetChanged final
 {
 public:
-	struct FGameplayTagContainer                  WithAssetTags;                                     // 0x0000(0x0020)(Parm, NativeAccessSpecifierPublic)
-	int32                                         StacksToRemove;                                    // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bNewValue;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_GameplayAbility_BP_RemoveGameplayEffectFromOwnerWithAssetTags;
+DUMPER7_ASSERTS_GameplayAbilityWorldReticle_OnValidTargetChanged;
 
-// Function GameplayAbilities.GameplayAbility.BP_RemoveGameplayEffectFromOwnerWithGrantedTags
-// 0x0028 (0x0028 - 0x0000)
-struct GameplayAbility_BP_RemoveGameplayEffectFromOwnerWithGrantedTags final
-{
-public:
-	struct FGameplayTagContainer                  WithGrantedTags;                                   // 0x0000(0x0020)(Parm, NativeAccessSpecifierPublic)
-	int32                                         StacksToRemove;                                    // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GameplayAbility_BP_RemoveGameplayEffectFromOwnerWithGrantedTags;
-
-// Function GameplayAbilities.GameplayAbility.BP_RemoveGameplayEffectFromOwnerWithHandle
+// Function GameplayAbilities.GameplayAbilityWorldReticle.SetReticleMaterialParamFloat
 // 0x000C (0x000C - 0x0000)
-struct GameplayAbility_BP_RemoveGameplayEffectFromOwnerWithHandle final
+struct GameplayAbilityWorldReticle_SetReticleMaterialParamFloat final
 {
 public:
-	struct FActiveGameplayEffectHandle            Handle;                                            // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         StacksToRemove;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ParamName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_GameplayAbility_BP_RemoveGameplayEffectFromOwnerWithHandle;
+DUMPER7_ASSERTS_GameplayAbilityWorldReticle_SetReticleMaterialParamFloat;
 
-// Function GameplayAbilities.GameplayAbility.CancelTaskByInstanceName
-// 0x0008 (0x0008 - 0x0000)
-struct GameplayAbility_CancelTaskByInstanceName final
+// Function GameplayAbilities.GameplayAbilityWorldReticle.SetReticleMaterialParamVector
+// 0x0014 (0x0014 - 0x0000)
+struct GameplayAbilityWorldReticle_SetReticleMaterialParamVector final
 {
 public:
-	class FName                                   InstanceName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ParamName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Value;                                             // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_GameplayAbility_CancelTaskByInstanceName;
+DUMPER7_ASSERTS_GameplayAbilityWorldReticle_SetReticleMaterialParamVector;
 
-// Function GameplayAbilities.GameplayAbility.ConfirmTaskByInstanceName
-// 0x000C (0x000C - 0x0000)
-struct GameplayAbility_ConfirmTaskByInstanceName final
+// Function GameplayAbilities.GameplayCueInterface.BlueprintCustomHandler
+// 0x00C0 (0x00C0 - 0x0000)
+struct GameplayCueInterface_BlueprintCustomHandler final
 {
 public:
-	class FName                                   InstanceName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEndTask;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EGameplayCueEvent                             EventType;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_GameplayAbility_ConfirmTaskByInstanceName;
+DUMPER7_ASSERTS_GameplayCueInterface_BlueprintCustomHandler;
 
-// Function GameplayAbilities.GameplayAbility.EndAbilityState
-// 0x0008 (0x0008 - 0x0000)
-struct GameplayAbility_EndAbilityState final
-{
-public:
-	class FName                                   OptionalStateNameToEnd;                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_EndAbilityState;
-
-// Function GameplayAbilities.GameplayAbility.EndTaskByInstanceName
-// 0x0008 (0x0008 - 0x0000)
-struct GameplayAbility_EndTaskByInstanceName final
-{
-public:
-	class FName                                   InstanceName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_EndTaskByInstanceName;
-
-// Function GameplayAbilities.GameplayAbility.K2_ActivateAbilityFromEvent
-// 0x00B0 (0x00B0 - 0x0000)
-struct GameplayAbility_K2_ActivateAbilityFromEvent final
-{
-public:
-	struct FGameplayEventData                     EventData;                                         // 0x0000(0x00B0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_K2_ActivateAbilityFromEvent;
-
-// Function GameplayAbilities.GameplayAbility.K2_AddGameplayCue
-// 0x0028 (0x0028 - 0x0000)
-struct GameplayAbility_K2_AddGameplayCue final
-{
-public:
-	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayEffectContextHandle           Context;                                           // 0x0008(0x0018)(Parm, NativeAccessSpecifierPublic)
-	bool                                          bRemoveOnAbilityEnd;                               // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GameplayAbility_K2_AddGameplayCue;
-
-// Function GameplayAbilities.GameplayAbility.K2_AddGameplayCueWithParams
+// Function GameplayAbilities.GameplayCueNotify_Actor.K2_HandleGameplayCue
 // 0x00C8 (0x00C8 - 0x0000)
-struct GameplayAbility_K2_AddGameplayCueWithParams final
+struct GameplayCueNotify_Actor_K2_HandleGameplayCue final
 {
 public:
-	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayCueParameters                 GameplayCueParameter;                              // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          bRemoveOnAbilityEnd;                               // 0x00C0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameplayCueEvent                             EventType;                                         // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayCueParameters                 Parameters;                                        // 0x0010(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayCueNotify_Actor_K2_HandleGameplayCue;
+
+// Function GameplayAbilities.GameplayCueNotify_Actor.OnActive
+// 0x00C8 (0x00C8 - 0x0000)
+struct GameplayCueNotify_Actor_OnActive final
+{
+public:
+	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00C0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_GameplayAbility_K2_AddGameplayCueWithParams;
+DUMPER7_ASSERTS_GameplayCueNotify_Actor_OnActive;
 
-// Function GameplayAbilities.GameplayAbility.K2_ApplyGameplayEffectSpecToOwner
-// 0x0018 (0x0018 - 0x0000)
-struct GameplayAbility_K2_ApplyGameplayEffectSpecToOwner final
+// Function GameplayAbilities.GameplayCueNotify_Actor.OnExecute
+// 0x00C8 (0x00C8 - 0x0000)
+struct GameplayCueNotify_Actor_OnExecute final
 {
 public:
-	struct FGameplayEffectSpecHandle              EffectSpecHandle;                                  // 0x0000(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
-	struct FActiveGameplayEffectHandle            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00C0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_GameplayAbility_K2_ApplyGameplayEffectSpecToOwner;
+DUMPER7_ASSERTS_GameplayCueNotify_Actor_OnExecute;
 
-// Function GameplayAbilities.GameplayAbility.K2_ApplyGameplayEffectSpecToTarget
-// 0x0048 (0x0048 - 0x0000)
-struct GameplayAbility_K2_ApplyGameplayEffectSpecToTarget final
-{
-public:
-	struct FGameplayEffectSpecHandle              EffectSpecHandle;                                  // 0x0000(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0010(0x0028)(Parm, NativeAccessSpecifierPublic)
-	TArray<struct FActiveGameplayEffectHandle>    ReturnValue;                                       // 0x0038(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_K2_ApplyGameplayEffectSpecToTarget;
-
-// Function GameplayAbilities.GameplayAbility.K2_CheckAbilityCooldown
-// 0x0001 (0x0001 - 0x0000)
-struct GameplayAbility_K2_CheckAbilityCooldown final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_K2_CheckAbilityCooldown;
-
-// Function GameplayAbilities.GameplayAbility.K2_CheckAbilityCost
-// 0x0001 (0x0001 - 0x0000)
-struct GameplayAbility_K2_CheckAbilityCost final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_K2_CheckAbilityCost;
-
-// Function GameplayAbilities.GameplayAbility.K2_CommitAbility
-// 0x0001 (0x0001 - 0x0000)
-struct GameplayAbility_K2_CommitAbility final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_K2_CommitAbility;
-
-// Function GameplayAbilities.GameplayAbility.K2_CommitAbilityCooldown
-// 0x0003 (0x0003 - 0x0000)
-struct GameplayAbility_K2_CommitAbilityCooldown final
-{
-public:
-	bool                                          BroadcastCommitEvent;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ForceCooldown;                                     // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_K2_CommitAbilityCooldown;
-
-// Function GameplayAbilities.GameplayAbility.K2_CommitAbilityCost
-// 0x0002 (0x0002 - 0x0000)
-struct GameplayAbility_K2_CommitAbilityCost final
-{
-public:
-	bool                                          BroadcastCommitEvent;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_K2_CommitAbilityCost;
-
-// Function GameplayAbilities.GameplayAbility.K2_ExecuteGameplayCue
-// 0x0020 (0x0020 - 0x0000)
-struct GameplayAbility_K2_ExecuteGameplayCue final
-{
-public:
-	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayEffectContextHandle           Context;                                           // 0x0008(0x0018)(Parm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_K2_ExecuteGameplayCue;
-
-// Function GameplayAbilities.GameplayAbility.K2_ExecuteGameplayCueWithParams
-// 0x00C0 (0x00C0 - 0x0000)
-struct GameplayAbility_K2_ExecuteGameplayCueWithParams final
-{
-public:
-	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayCueParameters                 GameplayCueParameters;                             // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_K2_ExecuteGameplayCueWithParams;
-
-// Function GameplayAbilities.GameplayAbility.K2_OnEndAbility
-// 0x0001 (0x0001 - 0x0000)
-struct GameplayAbility_K2_OnEndAbility final
-{
-public:
-	bool                                          bWasCancelled;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_K2_OnEndAbility;
-
-// Function GameplayAbilities.GameplayAbility.K2_RemoveGameplayCue
+// Function GameplayAbilities.GameplayCueNotify_Actor.OnOwnerDestroyed
 // 0x0008 (0x0008 - 0x0000)
-struct GameplayAbility_K2_RemoveGameplayCue final
+struct GameplayCueNotify_Actor_OnOwnerDestroyed final
 {
 public:
-	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_GameplayAbility_K2_RemoveGameplayCue;
+DUMPER7_ASSERTS_GameplayCueNotify_Actor_OnOwnerDestroyed;
 
-// Function GameplayAbilities.GameplayAbility.MakeTargetLocationInfoFromOwnerActor
-// 0x0070 (0x0070 - 0x0000)
-struct GameplayAbility_MakeTargetLocationInfoFromOwnerActor final
+// Function GameplayAbilities.GameplayCueNotify_Actor.OnRemove
+// 0x00C8 (0x00C8 - 0x0000)
+struct GameplayCueNotify_Actor_OnRemove final
 {
 public:
-	struct FGameplayAbilityTargetingLocationInfo  ReturnValue;                                       // 0x0000(0x0070)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00C0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_GameplayAbility_MakeTargetLocationInfoFromOwnerActor;
+DUMPER7_ASSERTS_GameplayCueNotify_Actor_OnRemove;
 
-// Function GameplayAbilities.GameplayAbility.MakeTargetLocationInfoFromOwnerSkeletalMeshComponent
-// 0x0080 (0x0080 - 0x0000)
-struct GameplayAbility_MakeTargetLocationInfoFromOwnerSkeletalMeshComponent final
+// Function GameplayAbilities.GameplayCueNotify_Actor.WhileActive
+// 0x00C8 (0x00C8 - 0x0000)
+struct GameplayCueNotify_Actor_WhileActive final
 {
 public:
-	class FName                                   SocketName;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityTargetingLocationInfo  ReturnValue;                                       // 0x0010(0x0070)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00C0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_GameplayAbility_MakeTargetLocationInfoFromOwnerSkeletalMeshComponent;
-
-// Function GameplayAbilities.GameplayAbility.MontageJumpToSection
-// 0x0008 (0x0008 - 0x0000)
-struct GameplayAbility_MontageJumpToSection final
-{
-public:
-	class FName                                   SectionName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_MontageJumpToSection;
-
-// Function GameplayAbilities.GameplayAbility.MontageSetNextSectionName
-// 0x0010 (0x0010 - 0x0000)
-struct GameplayAbility_MontageSetNextSectionName final
-{
-public:
-	class FName                                   FromSectionName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ToSectionName;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_MontageSetNextSectionName;
-
-// Function GameplayAbilities.GameplayAbility.MontageStop
-// 0x0004 (0x0004 - 0x0000)
-struct GameplayAbility_MontageStop final
-{
-public:
-	float                                         OverrideBlendOutTime;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_MontageStop;
-
-// Function GameplayAbilities.GameplayAbility.SendGameplayEvent
-// 0x00B8 (0x00B8 - 0x0000)
-struct GameplayAbility_SendGameplayEvent final
-{
-public:
-	struct FGameplayTag                           EventTag;                                          // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayEventData                     Payload;                                           // 0x0008(0x00B0)(Parm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_SendGameplayEvent;
-
-// Function GameplayAbilities.GameplayAbility.SetCanBeCanceled
-// 0x0001 (0x0001 - 0x0000)
-struct GameplayAbility_SetCanBeCanceled final
-{
-public:
-	bool                                          bCanBeCanceled;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_SetCanBeCanceled;
-
-// Function GameplayAbilities.GameplayAbility.SetShouldBlockOtherAbilities
-// 0x0001 (0x0001 - 0x0000)
-struct GameplayAbility_SetShouldBlockOtherAbilities final
-{
-public:
-	bool                                          bShouldBlockAbilities;                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_SetShouldBlockOtherAbilities;
-
-// Function GameplayAbilities.GameplayAbility.GetAbilityLevel
-// 0x0004 (0x0004 - 0x0000)
-struct GameplayAbility_GetAbilityLevel final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_GetAbilityLevel;
-
-// Function GameplayAbilities.GameplayAbility.GetAbilityLevel_BP
-// 0x0058 (0x0058 - 0x0000)
-struct GameplayAbility_GetAbilityLevel_BP final
-{
-public:
-	struct FGameplayAbilitySpecHandle             Handle;                                            // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityActorInfo              ActorInfo;                                         // 0x0008(0x0048)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0050(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GameplayAbility_GetAbilityLevel_BP;
-
-// Function GameplayAbilities.GameplayAbility.GetAbilitySystemComponentFromActorInfo
-// 0x0008 (0x0008 - 0x0000)
-struct GameplayAbility_GetAbilitySystemComponentFromActorInfo final
-{
-public:
-	class UAbilitySystemComponent*                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_GetAbilitySystemComponentFromActorInfo;
-
-// Function GameplayAbilities.GameplayAbility.GetActorInfo
-// 0x0048 (0x0048 - 0x0000)
-struct GameplayAbility_GetActorInfo final
-{
-public:
-	struct FGameplayAbilityActorInfo              ReturnValue;                                       // 0x0000(0x0048)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_GetActorInfo;
-
-// Function GameplayAbilities.GameplayAbility.GetAvatarActorFromActorInfo
-// 0x0008 (0x0008 - 0x0000)
-struct GameplayAbility_GetAvatarActorFromActorInfo final
-{
-public:
-	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_GetAvatarActorFromActorInfo;
-
-// Function GameplayAbilities.GameplayAbility.GetContextFromOwner
-// 0x0040 (0x0040 - 0x0000)
-struct GameplayAbility_GetContextFromOwner final
-{
-public:
-	struct FGameplayAbilityTargetDataHandle       OptionalTargetData;                                // 0x0000(0x0028)(Parm, NativeAccessSpecifierPublic)
-	struct FGameplayEffectContextHandle           ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_GetContextFromOwner;
-
-// Function GameplayAbilities.GameplayAbility.GetCooldownTimeRemaining
-// 0x0004 (0x0004 - 0x0000)
-struct GameplayAbility_GetCooldownTimeRemaining final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_GetCooldownTimeRemaining;
-
-// Function GameplayAbilities.GameplayAbility.GetCurrentMontage
-// 0x0008 (0x0008 - 0x0000)
-struct GameplayAbility_GetCurrentMontage final
-{
-public:
-	class UAnimMontage*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_GetCurrentMontage;
-
-// Function GameplayAbilities.GameplayAbility.GetCurrentSourceObject
-// 0x0008 (0x0008 - 0x0000)
-struct GameplayAbility_GetCurrentSourceObject final
-{
-public:
-	class UObject*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_GetCurrentSourceObject;
-
-// Function GameplayAbilities.GameplayAbility.GetGrantedByEffectContext
-// 0x0018 (0x0018 - 0x0000)
-struct GameplayAbility_GetGrantedByEffectContext final
-{
-public:
-	struct FGameplayEffectContextHandle           ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_GetGrantedByEffectContext;
-
-// Function GameplayAbilities.GameplayAbility.GetOwningActorFromActorInfo
-// 0x0008 (0x0008 - 0x0000)
-struct GameplayAbility_GetOwningActorFromActorInfo final
-{
-public:
-	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_GetOwningActorFromActorInfo;
-
-// Function GameplayAbilities.GameplayAbility.GetOwningComponentFromActorInfo
-// 0x0008 (0x0008 - 0x0000)
-struct GameplayAbility_GetOwningComponentFromActorInfo final
-{
-public:
-	class USkeletalMeshComponent*                 ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_GetOwningComponentFromActorInfo;
-
-// Function GameplayAbilities.GameplayAbility.GetSourceObject_BP
-// 0x0058 (0x0058 - 0x0000)
-struct GameplayAbility_GetSourceObject_BP final
-{
-public:
-	struct FGameplayAbilitySpecHandle             Handle;                                            // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityActorInfo              ActorInfo;                                         // 0x0008(0x0048)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	class UObject*                                ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_GetSourceObject_BP;
-
-// Function GameplayAbilities.GameplayAbility.IsLocallyControlled
-// 0x0001 (0x0001 - 0x0000)
-struct GameplayAbility_IsLocallyControlled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_IsLocallyControlled;
-
-// Function GameplayAbilities.GameplayAbility.K2_CanActivateAbility
-// 0x0078 (0x0078 - 0x0000)
-struct GameplayAbility_K2_CanActivateAbility final
-{
-public:
-	struct FGameplayAbilityActorInfo              ActorInfo;                                         // 0x0000(0x0048)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FGameplayAbilitySpecHandle             Handle;                                            // 0x0048(0x0004)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  RelevantTags;                                      // 0x0050(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GameplayAbility_K2_CanActivateAbility;
-
-// Function GameplayAbilities.GameplayAbility.K2_HasAuthority
-// 0x0001 (0x0001 - 0x0000)
-struct GameplayAbility_K2_HasAuthority final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_K2_HasAuthority;
-
-// Function GameplayAbilities.GameplayAbility.K2_ShouldAbilityRespondToEvent
-// 0x0100 (0x0100 - 0x0000)
-struct GameplayAbility_K2_ShouldAbilityRespondToEvent final
-{
-public:
-	struct FGameplayAbilityActorInfo              ActorInfo;                                         // 0x0000(0x0048)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FGameplayEventData                     Payload;                                           // 0x0048(0x00B0)(Parm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x00F8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GameplayAbility_K2_ShouldAbilityRespondToEvent;
-
-// Function GameplayAbilities.GameplayAbility.MakeOutgoingGameplayEffectSpec
-// 0x0020 (0x0020 - 0x0000)
-struct GameplayAbility_MakeOutgoingGameplayEffectSpec final
-{
-public:
-	TSubclassOf<class UGameplayEffect>            GameplayEffectClass;                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Level;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayEffectSpecHandle              ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GameplayAbility_MakeOutgoingGameplayEffectSpec;
+DUMPER7_ASSERTS_GameplayCueNotify_Actor_WhileActive;
 
 // Function GameplayAbilities.GameplayCueNotify_Static.K2_HandleGameplayCue
 // 0x00C8 (0x00C8 - 0x0000)
@@ -3235,12 +3100,12 @@ public:
 DUMPER7_ASSERTS_GameplayEffectCustomApplicationRequirement_CanApplyGameplayEffect;
 
 // Function GameplayAbilities.GameplayEffectExecutionCalculation.Execute
-// 0x0108 (0x0108 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct GameplayEffectExecutionCalculation_Execute final
 {
 public:
-	struct FGameplayEffectCustomExecutionParameters ExecutionParams;                                 // 0x0000(0x00F0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FGameplayEffectCustomExecutionOutput   OutExecutionOutput;                                // 0x00F0(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FGameplayEffectCustomExecutionParameters ExecutionParams;                                 // 0x0000(0x00A8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGameplayEffectCustomExecutionOutput   OutExecutionOutput;                                // 0x00A8(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GameplayEffectExecutionCalculation_Execute;
 
@@ -3268,15 +3133,6 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_GameplayTagReponseTable_TagResponseEvent;
-
-// Function GameplayAbilities.MovieSceneGameplayCueTrack.SetSequencerTrackHandler
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneGameplayCueTrack_SetSequencerTrackHandler final
-{
-public:
-	TDelegate<void(class AActor* Target, const struct FGameplayTag& GameplayTag, const struct FGameplayCueParameters& Parameters, EGameplayCueEvent Event)> InGameplayCueTrackHandler; // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_MovieSceneGameplayCueTrack_SetSequencerTrackHandler;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

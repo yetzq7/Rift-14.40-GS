@@ -50,4 +50,18 @@ void AB_CameraLens_SpookyMist_Loop_C::ReceiveBeginPlay()
 }
 
 
+// Function B_CameraLens_SpookyMist_Loop.B_CameraLens_SpookyMist_Loop_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AB_CameraLens_SpookyMist_Loop_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_CameraLens_SpookyMist_Loop_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

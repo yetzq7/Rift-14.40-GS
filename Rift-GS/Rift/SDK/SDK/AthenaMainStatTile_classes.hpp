@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass AthenaMainStatTile.AthenaMainStatTile_C
-// 0x0008 (0x02A8 - 0x02A0)
+// 0x0008 (0x0258 - 0x0250)
 class UAthenaMainStatTile_C final : public UFortProfileStatsMainTile
 {
 public:
-	class UImage*                                 Glow;                                              // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Glow;                                              // 0x0250(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void SetStatValue(const class FText& StatValueAsText);

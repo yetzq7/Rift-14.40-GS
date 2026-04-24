@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "FortniteGame_classes.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Ranged_GenericDamage.GA_Ranged_GenericDamage_C
-// 0x0010 (0x0AF0 - 0x0AE0)
+// 0x0010 (0x0980 - 0x0970)
 class UGA_Ranged_GenericDamage_C : public UFortGameplayAbility_RangedWeapon
 {
 public:
-	struct FGameplayTag                           GT_EventWeaponFire;                                // 0x0AE0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          ManualFireEvent;                                   // 0x0AE8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FGameplayTag                           GT_EventWeaponFire;                                // 0x0970(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          ManualFireEvent;                                   // 0x0978(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void K2_CommitExecute();

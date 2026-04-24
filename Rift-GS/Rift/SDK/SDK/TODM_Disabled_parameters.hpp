@@ -14,15 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function TODM_Disabled.TODM_Disabled_C.DisableLightAndFog
-// 0x0001 (0x0001 - 0x0000)
-struct TODM_Disabled_C_DisableLightAndFog final
-{
-public:
-	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_TODM_Disabled_C_DisableLightAndFog;
-
 // Function TODM_Disabled.TODM_Disabled_C.ExecuteUbergraph_TODM_Disabled
 // 0x0020 (0x0020 - 0x0000)
 struct TODM_Disabled_C_ExecuteUbergraph_TODM_Disabled final
@@ -39,6 +30,15 @@ public:
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_TODM_Disabled_C_ExecuteUbergraph_TODM_Disabled;
+
+// Function TODM_Disabled.TODM_Disabled_C.DisableLightAndFog
+// 0x0001 (0x0001 - 0x0000)
+struct TODM_Disabled_C_DisableLightAndFog final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_TODM_Disabled_C_DisableLightAndFog;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "UMG_structs.hpp"
 #include "FortniteGame_structs.hpp"
 
 
@@ -27,7 +27,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0004(0x0038)(IsPlainOldData, NoDestructor)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerEvent                          K2Node_Event_MouseEvent_1;                         // 0x0040(0x0070)(ConstParm)
+	struct FPointerEvent                          K2Node_Event_MouseEvent1;                          // 0x0040(0x0070)(ConstParm)
 	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x00B0(0x0070)(ConstParm)
 };
 DUMPER7_ASSERTS_LobbyPlayerPadGadgets_C_ExecuteUbergraph_LobbyPlayerPadGadgets;
@@ -58,14 +58,14 @@ struct LobbyPlayerPadGadgets_C_Refresh final
 public:
 	struct FFortTeamMemberInfo                    TeamMemberInfo;                                    // 0x0000(0x0200)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	class UFortItem*                              CallFunc_Array_Get_Item;                           // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortItem*                              CallFunc_Array_Get_Item_1;                         // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortItem*                              CallFunc_Array_Get_Item1;                          // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UFortWorldItem*                         K2Node_DynamicCast_AsFort_World_Item;              // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortWorldItem*                         K2Node_DynamicCast_AsFort_World_Item_1;            // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UFortWorldItem*                         K2Node_DynamicCast_AsFort_World_Item1;             // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess1;                      // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x022A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue1;          // 0x022A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_LobbyPlayerPadGadgets_C_Refresh;
 
@@ -83,15 +83,6 @@ public:
 };
 DUMPER7_ASSERTS_LobbyPlayerPadGadgets_C_OnMouseButtonDown;
 
-// Function LobbyPlayerPadGadgets.LobbyPlayerPadGadgets_C.OnInputClicked
-// 0x0008 (0x0008 - 0x0000)
-struct LobbyPlayerPadGadgets_C_OnInputClicked final
-{
-public:
-	class UFortFrontEndContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LobbyPlayerPadGadgets_C_OnInputClicked;
-
 // Function LobbyPlayerPadGadgets.LobbyPlayerPadGadgets_C.Initialize
 // 0x0004 (0x0004 - 0x0000)
 struct LobbyPlayerPadGadgets_C_Initialize final
@@ -100,6 +91,15 @@ public:
 	int32                                         PlayerIndex_0;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_LobbyPlayerPadGadgets_C_Initialize;
+
+// Function LobbyPlayerPadGadgets.LobbyPlayerPadGadgets_C.OnInputClicked
+// 0x0008 (0x0008 - 0x0000)
+struct LobbyPlayerPadGadgets_C_OnInputClicked final
+{
+public:
+	class UFortFrontEndContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LobbyPlayerPadGadgets_C_OnInputClicked;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,43 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function ItemDetailsHeader.ItemDetailsHeader_C.SetStyles
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function ItemDetailsHeader.ItemDetailsHeader_C.ExecuteUbergraph_ItemDetailsHeader
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UItemDetailsHeader_C::SetStyles()
+void UItemDetailsHeader_C::ExecuteUbergraph_ItemDetailsHeader(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsHeader_C", "SetStyles");
+		Func = Class->GetFunction("ItemDetailsHeader_C", "ExecuteUbergraph_ItemDetailsHeader");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::ItemDetailsHeader_C_ExecuteUbergraph_ItemDetailsHeader Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function ItemDetailsHeader.ItemDetailsHeader_C.UpdateItemsForWidgets
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function ItemDetailsHeader.ItemDetailsHeader_C.HandleDifferentItemToCompareSet
+// (Event, Protected, BlueprintEvent)
 
-void UItemDetailsHeader_C::UpdateItemsForWidgets()
+void UItemDetailsHeader_C::HandleDifferentItemToCompareSet()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsHeader_C", "UpdateItemsForWidgets");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemDetailsHeader.ItemDetailsHeader_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UItemDetailsHeader_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsHeader_C", "Construct");
+		Func = Class->GetFunction("ItemDetailsHeader_C", "HandleDifferentItemToCompareSet");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,57 +64,45 @@ void UItemDetailsHeader_C::HandleDifferentItemToDetailSet()
 }
 
 
-// Function ItemDetailsHeader.ItemDetailsHeader_C.HandleDifferentItemToCompareSet
-// (Event, Protected, BlueprintEvent)
+// Function ItemDetailsHeader.ItemDetailsHeader_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UItemDetailsHeader_C::HandleDifferentItemToCompareSet()
+void UItemDetailsHeader_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsHeader_C", "HandleDifferentItemToCompareSet");
+		Func = Class->GetFunction("ItemDetailsHeader_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ItemDetailsHeader.ItemDetailsHeader_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function ItemDetailsHeader.ItemDetailsHeader_C.UpdateItemsForWidgets
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UItemDetailsHeader_C::PreConstruct(bool IsDesignTime)
+void UItemDetailsHeader_C::UpdateItemsForWidgets()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsHeader_C", "PreConstruct");
+		Func = Class->GetFunction("ItemDetailsHeader_C", "UpdateItemsForWidgets");
 
-	Params::ItemDetailsHeader_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ItemDetailsHeader.ItemDetailsHeader_C.ExecuteUbergraph_ItemDetailsHeader
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function ItemDetailsHeader.ItemDetailsHeader_C.SetStyles
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UItemDetailsHeader_C::ExecuteUbergraph_ItemDetailsHeader(int32 EntryPoint)
+void UItemDetailsHeader_C::SetStyles()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsHeader_C", "ExecuteUbergraph_ItemDetailsHeader");
+		Func = Class->GetFunction("ItemDetailsHeader_C", "SetStyles");
 
-	Params::ItemDetailsHeader_C_ExecuteUbergraph_ItemDetailsHeader Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -16,119 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function StatsListWidget.StatsListWidget_C.Trigger Initial Reset
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UStatsListWidget_C::Trigger_Initial_Reset()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StatsListWidget_C", "Trigger Initial Reset");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StatsListWidget.StatsListWidget_C.Trigger Update Anim
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UStatsListWidget_C::Trigger_Update_Anim()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StatsListWidget_C", "Trigger Update Anim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StatsListWidget.StatsListWidget_C.Update
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UStatsListWidget_C::Update()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StatsListWidget_C", "Update");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StatsListWidget.StatsListWidget_C.AdjustClampCount
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function StatsListWidget.StatsListWidget_C.ExecuteUbergraph_StatsListWidget
+// (Final, UbergraphFunction)
 // Parameters:
-// class UFortAttributeListItem_NUI*       Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Add                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UStatsListWidget_C::AdjustClampCount(class UFortAttributeListItem_NUI* Widget, bool Add)
+void UStatsListWidget_C::ExecuteUbergraph_StatsListWidget(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StatsListWidget_C", "AdjustClampCount");
+		Func = Class->GetFunction("StatsListWidget_C", "ExecuteUbergraph_StatsListWidget");
 
-	Params::StatsListWidget_C_AdjustClampCount Parms{};
+	Params::StatsListWidget_C_ExecuteUbergraph_StatsListWidget Parms{};
 
-	Parms.Widget = Widget;
-	Parms.Add = Add;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function StatsListWidget.StatsListWidget_C.ToggleClampedValueMessage
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    inShow                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UStatsListWidget_C::ToggleClampedValueMessage(bool inShow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StatsListWidget_C", "ToggleClampedValueMessage");
-
-	Params::StatsListWidget_C_ToggleClampedValueMessage Parms{};
-
-	Parms.inShow = inShow;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function StatsListWidget.StatsListWidget_C.OnClearShownAttributes
-// (Event, Protected, BlueprintEvent)
-
-void UStatsListWidget_C::OnClearShownAttributes()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StatsListWidget_C", "OnClearShownAttributes");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StatsListWidget.StatsListWidget_C.OnAddShownAttributeListItem
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UFortAttributeListItem_NUI*       AttributeListItemWidget                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UStatsListWidget_C::OnAddShownAttributeListItem(class UFortAttributeListItem_NUI* AttributeListItemWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StatsListWidget_C", "OnAddShownAttributeListItem");
-
-	Params::StatsListWidget_C_OnAddShownAttributeListItem Parms{};
-
-	Parms.AttributeListItemWidget = AttributeListItemWidget;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -156,23 +58,121 @@ void UStatsListWidget_C::OnRemoveShownAttributeListItem(class UFortAttributeList
 }
 
 
-// Function StatsListWidget.StatsListWidget_C.ExecuteUbergraph_StatsListWidget
-// (Final, UbergraphFunction)
+// Function StatsListWidget.StatsListWidget_C.OnAddShownAttributeListItem
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortAttributeListItem_NUI*       AttributeListItemWidget                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UStatsListWidget_C::ExecuteUbergraph_StatsListWidget(int32 EntryPoint)
+void UStatsListWidget_C::OnAddShownAttributeListItem(class UFortAttributeListItem_NUI* AttributeListItemWidget)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StatsListWidget_C", "ExecuteUbergraph_StatsListWidget");
+		Func = Class->GetFunction("StatsListWidget_C", "OnAddShownAttributeListItem");
 
-	Params::StatsListWidget_C_ExecuteUbergraph_StatsListWidget Parms{};
+	Params::StatsListWidget_C_OnAddShownAttributeListItem Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.AttributeListItemWidget = AttributeListItemWidget;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StatsListWidget.StatsListWidget_C.OnClearShownAttributes
+// (Event, Protected, BlueprintEvent)
+
+void UStatsListWidget_C::OnClearShownAttributes()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StatsListWidget_C", "OnClearShownAttributes");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StatsListWidget.StatsListWidget_C.ToggleClampedValueMessage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    inShow                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UStatsListWidget_C::ToggleClampedValueMessage(bool inShow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StatsListWidget_C", "ToggleClampedValueMessage");
+
+	Params::StatsListWidget_C_ToggleClampedValueMessage Parms{};
+
+	Parms.inShow = inShow;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StatsListWidget.StatsListWidget_C.AdjustClampCount
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFortAttributeListItem_NUI*       Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Add                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UStatsListWidget_C::AdjustClampCount(class UFortAttributeListItem_NUI* Widget, bool Add)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StatsListWidget_C", "AdjustClampCount");
+
+	Params::StatsListWidget_C_AdjustClampCount Parms{};
+
+	Parms.Widget = Widget;
+	Parms.Add = Add;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StatsListWidget.StatsListWidget_C.Update
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UStatsListWidget_C::Update()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StatsListWidget_C", "Update");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StatsListWidget.StatsListWidget_C.Trigger Update Anim
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UStatsListWidget_C::Trigger_Update_Anim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StatsListWidget_C", "Trigger Update Anim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StatsListWidget.StatsListWidget_C.Trigger Initial Reset
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UStatsListWidget_C::Trigger_Initial_Reset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StatsListWidget_C", "Trigger Initial Reset");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

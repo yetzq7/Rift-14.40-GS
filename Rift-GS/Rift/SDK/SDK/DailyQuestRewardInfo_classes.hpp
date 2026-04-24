@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass DailyQuestRewardInfo.DailyQuestRewardInfo_C
-// 0x0000 (0x0310 - 0x0310)
+// 0x0000 (0x02C0 - 0x02C0)
 class UDailyQuestRewardInfo_C final : public UFortRewardInfoWidget
 {
 public:

@@ -16,10 +16,58 @@
 
 SDK_NAMESPACE_START
 
+// Function ItemDetailsHeaderKeywordsListText.ItemDetailsHeaderKeywordsListText_C.ExecuteUbergraph_ItemDetailsHeaderKeywordsListText
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UItemDetailsHeaderKeywordsListText_C::ExecuteUbergraph_ItemDetailsHeaderKeywordsListText(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemDetailsHeaderKeywordsListText_C", "ExecuteUbergraph_ItemDetailsHeaderKeywordsListText");
+
+	Params::ItemDetailsHeaderKeywordsListText_C_ExecuteUbergraph_ItemDetailsHeaderKeywordsListText Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemDetailsHeaderKeywordsListText.ItemDetailsHeaderKeywordsListText_C.HandlePostDifferentItemToCompareWithSet
+// (Event, Protected, BlueprintEvent)
+
+void UItemDetailsHeaderKeywordsListText_C::HandlePostDifferentItemToCompareWithSet()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemDetailsHeaderKeywordsListText_C", "HandlePostDifferentItemToCompareWithSet");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemDetailsHeaderKeywordsListText.ItemDetailsHeaderKeywordsListText_C.HandlePostDifferentItemToDetailSet
+// (Event, Protected, BlueprintEvent)
+
+void UItemDetailsHeaderKeywordsListText_C::HandlePostDifferentItemToDetailSet()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemDetailsHeaderKeywordsListText_C", "HandlePostDifferentItemToDetailSet");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ItemDetailsHeaderKeywordsListText.ItemDetailsHeaderKeywordsListText_C.FormatItemDisplayTags
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// TArray<class FText>&                    TagTexts                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// TArray<class FText>&                    TagTexts                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class FText*                            FormatedText                                           (Parm, OutParm)
 
 void UItemDetailsHeaderKeywordsListText_C::FormatItemDisplayTags(TArray<class FText>& TagTexts, class FText* FormatedText)
@@ -39,54 +87,6 @@ void UItemDetailsHeaderKeywordsListText_C::FormatItemDisplayTags(TArray<class FT
 
 	if (FormatedText != nullptr)
 		*FormatedText = std::move(Parms.FormatedText);
-}
-
-
-// Function ItemDetailsHeaderKeywordsListText.ItemDetailsHeaderKeywordsListText_C.HandlePostDifferentItemToDetailSet
-// (Event, Protected, BlueprintEvent)
-
-void UItemDetailsHeaderKeywordsListText_C::HandlePostDifferentItemToDetailSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsHeaderKeywordsListText_C", "HandlePostDifferentItemToDetailSet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemDetailsHeaderKeywordsListText.ItemDetailsHeaderKeywordsListText_C.HandlePostDifferentItemToCompareWithSet
-// (Event, Protected, BlueprintEvent)
-
-void UItemDetailsHeaderKeywordsListText_C::HandlePostDifferentItemToCompareWithSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsHeaderKeywordsListText_C", "HandlePostDifferentItemToCompareWithSet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemDetailsHeaderKeywordsListText.ItemDetailsHeaderKeywordsListText_C.ExecuteUbergraph_ItemDetailsHeaderKeywordsListText
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UItemDetailsHeaderKeywordsListText_C::ExecuteUbergraph_ItemDetailsHeaderKeywordsListText(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemDetailsHeaderKeywordsListText_C", "ExecuteUbergraph_ItemDetailsHeaderKeywordsListText");
-
-	Params::ItemDetailsHeaderKeywordsListText_C_ExecuteUbergraph_ItemDetailsHeaderKeywordsListText Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

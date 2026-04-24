@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_CameraLens_Victory_Direct.B_CameraLens_Victory_Direct_C
-// 0x0000 (0x02E0 - 0x02E0)
+// 0x0000 (0x03F0 - 0x03F0)
 class AB_CameraLens_Victory_Direct_C final : public AEmitterCameraLensEffectBase
 {
 public:

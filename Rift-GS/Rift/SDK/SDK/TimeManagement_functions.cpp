@@ -245,31 +245,6 @@ struct FTimecode UTimeManagementBlueprintLibrary::GetTimecode()
 }
 
 
-// Function TimeManagement.TimeManagementBlueprintLibrary.GetTimecodeFrameRate
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FFrameRate                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FFrameRate UTimeManagementBlueprintLibrary::GetTimecodeFrameRate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("TimeManagementBlueprintLibrary", "GetTimecodeFrameRate");
-
-	Params::TimeManagementBlueprintLibrary_GetTimecodeFrameRate Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function TimeManagement.TimeManagementBlueprintLibrary.IsValid_Framerate
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:

@@ -12,20 +12,20 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "MovieScene_classes.hpp"
 #include "ImagePlate_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "MovieScene_classes.hpp"
 #include "MovieSceneTracks_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class ImagePlate.ImagePlate
-// 0x0008 (0x0228 - 0x0220)
+// 0x0008 (0x0338 - 0x0330)
 class AImagePlate final : public AActor
 {
 public:
-	class UImagePlateComponent*                   ImagePlate;                                        // 0x0220(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UImagePlateComponent*                   ImagePlate;                                        // 0x0330(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -44,12 +44,12 @@ public:
 DUMPER7_ASSERTS_AImagePlate;
 
 // Class ImagePlate.ImagePlateComponent
-// 0x00D0 (0x0510 - 0x0440)
+// 0x00D0 (0x0640 - 0x0570)
 class UImagePlateComponent final : public UPrimitiveComponent
 {
 public:
-	struct FImagePlateParameters                  Plate;                                             // 0x0440(0x0038)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_478[0x98];                                     // 0x0478(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FImagePlateParameters                  Plate;                                             // 0x0570(0x0038)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_5A8[0x98];                                     // 0x05A8(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnRenderTextureChanged();
@@ -123,7 +123,7 @@ public:
 DUMPER7_ASSERTS_UImagePlateFileSequence;
 
 // Class ImagePlate.ImagePlateFrustumComponent
-// 0x0000 (0x0440 - 0x0440)
+// 0x0000 (0x0570 - 0x0570)
 class UImagePlateFrustumComponent final : public UPrimitiveComponent
 {
 public:
@@ -143,13 +143,13 @@ public:
 DUMPER7_ASSERTS_UImagePlateFrustumComponent;
 
 // Class ImagePlate.MovieSceneImagePlateSection
-// 0x0010 (0x00F8 - 0x00E8)
+// 0x0010 (0x00F0 - 0x00E0)
 class UMovieSceneImagePlateSection final : public UMovieSceneSection
 {
 public:
-	class UImagePlateFileSequence*                FileSequence;                                      // 0x00E8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bReuseExistingTexture;                             // 0x00F0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UImagePlateFileSequence*                FileSequence;                                      // 0x00E0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReuseExistingTexture;                             // 0x00E8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -168,12 +168,9 @@ public:
 DUMPER7_ASSERTS_UMovieSceneImagePlateSection;
 
 // Class ImagePlate.MovieSceneImagePlateTrack
-// 0x0008 (0x00B0 - 0x00A8)
+// 0x0000 (0x0080 - 0x0080)
 class UMovieSceneImagePlateTrack final : public UMovieScenePropertyTrack
 {
-public:
-	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
 public:
 	static class UClass* StaticClass()
 	{

@@ -36,86 +36,6 @@ void UAthenaStatsTab_C::ExecuteUbergraph_AthenaStatsTab(int32 EntryPoint)
 }
 
 
-// Function AthenaStatsTab.AthenaStatsTab_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaStatsTab_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaStatsTab_C", "BndEvt__CloseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
-
-	Params::AthenaStatsTab_C_BndEvt__CloseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaStatsTab.AthenaStatsTab_C.BndEvt__MobileCloseButton2_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaStatsTab_C::BndEvt__MobileCloseButton2_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaStatsTab_C", "BndEvt__MobileCloseButton2_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature");
-
-	Params::AthenaStatsTab_C_BndEvt__MobileCloseButton2_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaStatsTab.AthenaStatsTab_C.SetPlatformButtonText
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const class FText&                      PlatformButtonText                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UAthenaStatsTab_C::SetPlatformButtonText(const class FText& PlatformButtonText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaStatsTab_C", "SetPlatformButtonText");
-
-	Params::AthenaStatsTab_C_SetPlatformButtonText Parms{};
-
-	Parms.PlatformButtonText = std::move(PlatformButtonText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaStatsTab.AthenaStatsTab_C.BndEvt__IconTextButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UAthenaStatsTab_C::BndEvt__IconTextButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaStatsTab_C", "BndEvt__IconTextButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature");
-
-	Params::AthenaStatsTab_C_BndEvt__IconTextButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function AthenaStatsTab.AthenaStatsTab_C.OnInputMethodChanged_Event_0
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -133,6 +53,94 @@ void UAthenaStatsTab_C::OnInputMethodChanged_Event_0(ECommonInputType bNewInputT
 	Parms.bNewInputType = bNewInputType;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaStatsTab.AthenaStatsTab_C.BndEvt__BacchusClose3Button_K2Node_ComponentBoundEvent_36_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaStatsTab_C::BndEvt__BacchusClose3Button_K2Node_ComponentBoundEvent_36_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaStatsTab_C", "BndEvt__BacchusClose3Button_K2Node_ComponentBoundEvent_36_CommonButtonClicked__DelegateSignature");
+
+	Params::AthenaStatsTab_C_BndEvt__BacchusClose3Button_K2Node_ComponentBoundEvent_36_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaStatsTab.AthenaStatsTab_C.BndEvt__BacchusClose2Button_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaStatsTab_C::BndEvt__BacchusClose2Button_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaStatsTab_C", "BndEvt__BacchusClose2Button_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
+
+	Params::AthenaStatsTab_C_BndEvt__BacchusClose2Button_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaStatsTab.AthenaStatsTab_C.BndEvt__BacchusCloseButton_K2Node_ComponentBoundEvent_26_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaStatsTab_C::BndEvt__BacchusCloseButton_K2Node_ComponentBoundEvent_26_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaStatsTab_C", "BndEvt__BacchusCloseButton_K2Node_ComponentBoundEvent_26_CommonButtonClicked__DelegateSignature");
+
+	Params::AthenaStatsTab_C_BndEvt__BacchusCloseButton_K2Node_ComponentBoundEvent_26_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaStatsTab.AthenaStatsTab_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UAthenaStatsTab_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaStatsTab_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaStatsTab.AthenaStatsTab_C.OnDeactivated
+// (Event, Protected, BlueprintEvent)
+
+void UAthenaStatsTab_C::OnDeactivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaStatsTab_C", "OnDeactivated");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -174,9 +182,8 @@ void UAthenaStatsTab_C::BndEvt__StatsTabList_K2Node_ComponentBoundEvent_0_OnTabS
 // (Event, Public, BlueprintEvent)
 // Parameters:
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    bHasStatsToDisplay                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaStatsTab_C::OnQueryFinished(bool bWasSuccessful, bool bHasStatsToDisplay)
+void UAthenaStatsTab_C::OnQueryFinished(bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -186,37 +193,43 @@ void UAthenaStatsTab_C::OnQueryFinished(bool bWasSuccessful, bool bHasStatsToDis
 	Params::AthenaStatsTab_C_OnQueryFinished Parms{};
 
 	Parms.bWasSuccessful = bWasSuccessful;
-	Parms.bHasStatsToDisplay = bHasStatsToDisplay;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function AthenaStatsTab.AthenaStatsTab_C.BP_OnActivated
+// Function AthenaStatsTab.AthenaStatsTab_C.OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UAthenaStatsTab_C::BP_OnActivated()
+void UAthenaStatsTab_C::OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaStatsTab_C", "BP_OnActivated");
+		Func = Class->GetFunction("AthenaStatsTab_C", "OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AthenaStatsTab.AthenaStatsTab_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function AthenaStatsTab.AthenaStatsTab_C.CanShowStats
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   bCanShowStats                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaStatsTab_C::Construct()
+void UAthenaStatsTab_C::CanShowStats(bool* bCanShowStats)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaStatsTab_C", "Construct");
+		Func = Class->GetFunction("AthenaStatsTab_C", "CanShowStats");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::AthenaStatsTab_C_CanShowStats Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bCanShowStats != nullptr)
+		*bCanShowStats = Parms.bCanShowStats;
 }
 
 
@@ -252,47 +265,6 @@ void UAthenaStatsTab_C::Init_Back_Action()
 		Func = Class->GetFunction("AthenaStatsTab_C", "Init Back Action");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaStatsTab.AthenaStatsTab_C.GetAccountLevelText
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-class FText UAthenaStatsTab_C::GetAccountLevelText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaStatsTab_C", "GetAccountLevelText");
-
-	Params::AthenaStatsTab_C_GetAccountLevelText Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AthenaStatsTab.AthenaStatsTab_C.GetFriendMatchXpBoostText
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText*                            Result                                                 (Parm, OutParm)
-
-void UAthenaStatsTab_C::GetFriendMatchXpBoostText(class FText* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaStatsTab_C", "GetFriendMatchXpBoostText");
-
-	Params::AthenaStatsTab_C_GetFriendMatchXpBoostText Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
 }
 
 

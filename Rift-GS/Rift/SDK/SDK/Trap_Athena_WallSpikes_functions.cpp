@@ -56,4 +56,18 @@ void ATrap_Athena_WallSpikes_C::SetSpikePosition(float NewSpikePosition)
 }
 
 
+// Function Trap_Athena_WallSpikes.Trap_Athena_WallSpikes_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ATrap_Athena_WallSpikes_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Trap_Athena_WallSpikes_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

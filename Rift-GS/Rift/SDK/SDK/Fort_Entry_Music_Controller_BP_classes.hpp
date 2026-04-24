@@ -11,39 +11,38 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "FortniteGame_classes.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C
-// 0x0048 (0x0268 - 0x0220)
-class AFort_Entry_Music_Controller_BP_C final : public AFortEntryMusicController
+// 0x0048 (0x0378 - 0x0330)
+class AFort_Entry_Music_Controller_BP_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        Enter_Menu_Loop;                                   // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        MenuMusic_B;                                       // 0x0230(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        MenuMusic_A;                                       // 0x0238(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        LoginMusic;                                        // 0x0240(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         FadeOutTime;                                       // 0x0248(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             CurrentMusic;                                      // 0x0250(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Is_Music_Activate_Override;                        // 0x0258(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_259[0x7];                                      // 0x0259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAthenaMusicPackItemDefinition*         MusicPackToPlayLater;                              // 0x0260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0330(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        Enter_Menu_Loop;                                   // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        MenuMusic_B;                                       // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        MenuMusic_A;                                       // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        LoginMusic;                                        // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         FadeOutTime;                                       // 0x0358(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35C[0x4];                                      // 0x035C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             CurrentMusic;                                      // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Is_Music_Activate_Override;                        // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_369[0x7];                                      // 0x0369(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAthenaMusicPackItemDefinition*         MusicPackToPlayLater;                              // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Change_Music(class USoundBase* New_Music, float StartTime);
-	void ListenToMusicPacks();
-	void OnMusicPackChanged(const class UAthenaMusicPackItemDefinition* NewMusicPack, float StartTimeOffset);
-	void Lobby_Music_Override(bool Lobby_Music_Activate, class USoundBase* New_Music);
-	void MakeNextMusicPackStartFromBeginning();
-	void DelayedPlayMusicPack(class UAthenaMusicPackItemDefinition* MusicPackToPlayLater_0);
-	void ClearDelayedPlayMusicPack();
-	void PlayEquippedMusicPack();
-	void StartMusic();
 	void ExecuteUbergraph_Fort_Entry_Music_Controller_BP(int32 EntryPoint);
+	void ClearDelayedPlayMusicPack();
+	void DelayedPlayMusicPack(class UAthenaMusicPackItemDefinition* MusicPackToPlayLater_0);
+	void MakeNextMusicPackStartFromBeginning();
+	void Lobby_Music_Override(bool Lobby_Music_Activate, class USoundBase* New_Music);
+	void Change_Music(class USoundBase* New_Music);
+	void ListenToMusicPacks();
+	void OnMusicPackChanged(const class UAthenaMusicPackItemDefinition* NewMusicPack);
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

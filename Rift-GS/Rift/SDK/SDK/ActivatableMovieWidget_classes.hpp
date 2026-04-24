@@ -10,17 +10,23 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ActivatableMovieWidget.ActivatableMovieWidget_C
-// 0x0008 (0x0568 - 0x0560)
+// 0x0008 (0x0378 - 0x0370)
 class UActivatableMovieWidget_C final : public UFortActivatableVideoPanel
 {
 public:
-	class USafeZone*                              MainSafeZone;                                      // 0x0560(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0370(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ExecuteUbergraph_ActivatableMovieWidget(int32 EntryPoint);
+	void OnActivated();
+	void OnDeactivated();
 
 public:
 	static class UClass* StaticClass()

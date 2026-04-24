@@ -10,37 +10,34 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Engine_structs.hpp"
 #include "GAT_GenericTriggeredAbility_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Ninja_Tactical_MeleeHitsHeal.GA_Ninja_Tactical_MeleeHitsHeal_C
-// 0x00C8 (0x0C50 - 0x0B88)
+// 0x0058 (0x0A68 - 0x0A10)
 class UGA_Ninja_Tactical_MeleeHitsHeal_C : public UGAT_GenericTriggeredAbility_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Ninja_Tactical_MeleeHitsHeal_C;  // 0x0B88(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTag                           EventActivation;                                   // 0x0B90(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           EventComplete;                                     // 0x0B98(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GE_Ninja_Tactical_MeleeHitsHeal;                   // 0x0BA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  TC_Melee;                                          // 0x0BA8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         MeleeCount;                                        // 0x0BC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LastHitSwingTime;                                  // 0x0BCC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BaseHealValue;                                     // 0x0BD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FinalHealValue;                                    // 0x0BD4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   DataRowName;                                       // 0x0BD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayAttribute                     Attribute_HealingSourceBaseMultiplier;             // 0x0BE0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FGameplayAttribute                     Attribute_HealingSource;                           // 0x0C18(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Ninja_Tactical_MeleeHitsHeal_C;  // 0x0A10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTag                           EventActivation;                                   // 0x0A18(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           EventComplete;                                     // 0x0A20(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GE_Ninja_Tactical_MeleeHitsHeal;                   // 0x0A28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  TC_Melee;                                          // 0x0A30(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         MeleeCount;                                        // 0x0A50(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LastHitSwingTime;                                  // 0x0A54(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BaseHealValue;                                     // 0x0A58(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FinalHealValue;                                    // 0x0A5C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   DataRowName;                                       // 0x0A60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_Ninja_Tactical_MeleeHitsHeal(int32 EntryPoint);
 	void K2_OnEndAbility(bool bWasCancelled);
-	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData_0);
 	void SetupAbility(class UAbilitySystemComponent* AbilitySystem);
+	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData_0);
 
 	bool K2_ShouldAbilityRespondToEvent(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayEventData& Payload) const;
 

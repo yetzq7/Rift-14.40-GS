@@ -17,6 +17,32 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function ProgressModalWidget.ProgressModalWidget_C.ExecuteUbergraph_ProgressModalWidget
+// 0x0100 (0x0100 - 0x0000)
+struct ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate1;             // 0x0014(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate2;             // 0x0024(0x0010)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Event_InTitle;                              // 0x0038(0x0018)(ConstParm)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate3;             // 0x0050(0x0010)(ZeroConstructor, NoDestructor)
+	class FText                                   K2Node_Event_InDescription;                        // 0x0060(0x0018)(ConstParm)
+	struct FSlateBrush                            K2Node_Event_InIcon;                               // 0x0078(0x0088)()
+};
+DUMPER7_ASSERTS_ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget;
+
+// Function ProgressModalWidget.ProgressModalWidget_C.Initialize
+// 0x0008 (0x0008 - 0x0000)
+struct ProgressModalWidget_C_Initialize final
+{
+public:
+	class UFortUINavigationManager*               CallFunc_GetUINavigationManager_ReturnValue;       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ProgressModalWidget_C_Initialize;
+
 // Function ProgressModalWidget.ProgressModalWidget_C.OnAnalogValueChanged
 // 0x02A0 (0x02A0 - 0x0000)
 struct ProgressModalWidget_C_OnAnalogValueChanged final
@@ -30,18 +56,32 @@ public:
 };
 DUMPER7_ASSERTS_ProgressModalWidget_C_OnAnalogValueChanged;
 
-// Function ProgressModalWidget.ProgressModalWidget_C.ExecuteUbergraph_ProgressModalWidget
-// 0x0044 (0x0044 - 0x0000)
-struct ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget final
+// Function ProgressModalWidget.ProgressModalWidget_C.SetDescription
+// 0x0018 (0x0018 - 0x0000)
+struct ProgressModalWidget_C_SetDescription final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0014(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0024(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0034(0x0010)(ZeroConstructor, NoDestructor)
+	class FText                                   InDescription;                                     // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget;
+DUMPER7_ASSERTS_ProgressModalWidget_C_SetDescription;
+
+// Function ProgressModalWidget.ProgressModalWidget_C.SetIcon
+// 0x0088 (0x0088 - 0x0000)
+struct ProgressModalWidget_C_SetIcon final
+{
+public:
+	struct FSlateBrush                            InIcon;                                            // 0x0000(0x0088)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_ProgressModalWidget_C_SetIcon;
+
+// Function ProgressModalWidget.ProgressModalWidget_C.SetTitle
+// 0x0018 (0x0018 - 0x0000)
+struct ProgressModalWidget_C_SetTitle final
+{
+public:
+	class FText                                   InTitle;                                           // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_ProgressModalWidget_C_SetTitle;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

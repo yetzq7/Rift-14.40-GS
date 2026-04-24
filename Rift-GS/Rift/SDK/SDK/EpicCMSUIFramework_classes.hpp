@@ -20,17 +20,15 @@
 SDK_NAMESPACE_START
 
 // Class EpicCMSUIFramework.EpicCMSImage
-// 0x00B8 (0x0390 - 0x02D8)
+// 0x00B0 (0x0388 - 0x02D8)
 class UEpicCMSImage final : public UCommonLazyImage
 {
 public:
-	TMulticastInlineDelegate<void()>              OnImageLoadingComplete;                            // 0x02D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	bool                                          bMatchImageSize;                                   // 0x02E8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2E9[0x7];                                      // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            LoadingFailFallback;                               // 0x02F0(0x0088)(Edit, NativeAccessSpecifierPrivate)
-	class UTexture2D*                             ExternalMedia;                                     // 0x0378(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bDownloadingExternalMedia;                         // 0x0380(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_381[0xF];                                      // 0x0381(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	UMulticastDelegateProperty_                   OnImageLoadingComplete;                            // 0x02D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            LoadingFailFallback;                               // 0x02E8(0x0088)(Edit, NativeAccessSpecifierPrivate)
+	class UTexture2D*                             ExternalMedia;                                     // 0x0370(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bDownloadingExternalMedia;                         // 0x0378(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_379[0xF];                                      // 0x0379(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetMediaURL(const class FString& MediaUrl);
@@ -52,13 +50,13 @@ public:
 DUMPER7_ASSERTS_UEpicCMSImage;
 
 // Class EpicCMSUIFramework.EpicCMSLayoutBase
-// 0x0068 (0x02C8 - 0x0260)
+// 0x0068 (0x0298 - 0x0230)
 class UEpicCMSLayoutBase final : public UUserWidget
 {
 public:
-	TArray<struct FSlotDescription>               CarouselSlotDescriptions;                          // 0x0260(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UEpicCMSTileCarousel>       CarouselClass;                                     // 0x0270(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_278[0x50];                                     // 0x0278(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FSlotDescription>               CarouselSlotDescriptions;                          // 0x0230(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TSubclassOf<class UEpicCMSTileCarousel>       CarouselClass;                                     // 0x0240(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_248[0x50];                                     // 0x0248(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -77,11 +75,14 @@ public:
 DUMPER7_ASSERTS_UEpicCMSLayoutBase;
 
 // Class EpicCMSUIFramework.EpicCMSManager
-// 0x0080 (0x00A8 - 0x0028)
+// 0x0088 (0x00B0 - 0x0028)
 class UEpicCMSManager final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x80];                                      // 0x0028(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CmsEndpointOverride;                               // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bRefreshing;                                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_51[0x5F];                                      // 0x0051(0x005F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -100,15 +101,15 @@ public:
 DUMPER7_ASSERTS_UEpicCMSManager;
 
 // Class EpicCMSUIFramework.EpicCMSScreenBase
-// 0x0090 (0x04E8 - 0x0458)
-class UEpicCMSScreenBase final : public UCommonActivatablePanel
+// 0x0090 (0x03B0 - 0x0320)
+class UEpicCMSScreenBase : public UCommonActivatablePanel
 {
 public:
-	class FString                                 TileSetFieldName;                                  // 0x0458(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UDataTable>              TileTypeToTileClassDataTable;                      // 0x0468(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftClassPtr<class UClass>                   LayoutErrorClass;                                  // 0x0490(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftObjectPtr<class UDataTable>              LayoutTypeToLayoutClassDataTable;                  // 0x04B8(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4E0[0x8];                                      // 0x04E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 TileSetFieldName;                                  // 0x0320(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UDataTable>              TileTypeToTileClassDataTable;                      // 0x0330(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftClassPtr<class UClass>                   LayoutErrorClass;                                  // 0x0358(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftObjectPtr<class UDataTable>              LayoutTypeToLayoutClassDataTable;                  // 0x0380(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3A8[0x8];                                      // 0x03A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -127,13 +128,13 @@ public:
 DUMPER7_ASSERTS_UEpicCMSScreenBase;
 
 // Class EpicCMSUIFramework.EpicCMSSimpleMessage
-// 0x0018 (0x02A0 - 0x0288)
-class UEpicCMSSimpleMessage final : public UCommonUserWidget
+// 0x0018 (0x0250 - 0x0238)
+class UEpicCMSSimpleMessage : public UCommonUserWidget
 {
 public:
-	class UCommonTextBlock*                       TitleText;                                         // 0x0288(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCommonTextBlock*                       BodyText;                                          // 0x0290(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UEpicCMSImage*                          PrimaryImage;                                      // 0x0298(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCommonTextBlock*                       TitleText;                                         // 0x0238(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCommonTextBlock*                       BodyText;                                          // 0x0240(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UEpicCMSImage*                          PrimaryImage;                                      // 0x0248(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -152,25 +153,24 @@ public:
 DUMPER7_ASSERTS_UEpicCMSSimpleMessage;
 
 // Class EpicCMSUIFramework.EpicCMSTileBase
-// 0x0110 (0x0CB0 - 0x0BA0)
+// 0x0110 (0x0C40 - 0x0B30)
 class UEpicCMSTileBase final : public UCommonButton
 {
 public:
-	uint8                                         Pad_BA0[0x8];                                      // 0x0BA0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UCommonTextStyle>           DefaultTitleTextStyle;                             // 0x0BA8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UCommonTextStyle>           FeaturedTitleTextStyle;                            // 0x0BB0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FText                                   Title;                                             // 0x0BB8(0x0018)(BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	class FString                                 Link;                                              // 0x0BD0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bDownloadingExternalMedia;                         // 0x0BE0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bRefreshingMcpCatalog;                             // 0x0BE1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_BE2[0x6];                                      // 0x0BE2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             ExternalMedia;                                     // 0x0BE8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_BF0[0x18];                                     // 0x0BF0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonLazyImage*                       LazyImage_Icon;                                    // 0x0C08(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCommonTextBlock*                       TitleTextBlock;                                    // 0x0C10(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCommonTextBlock*                       SubtitleTextBlock;                                 // 0x0C18(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCommonTextBlock*                       EyebrowTextBlock;                                  // 0x0C20(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_C28[0x88];                                     // 0x0C28(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B30[0x8];                                      // 0x0B30(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UCommonTextStyle>           DefaultTitleTextStyle;                             // 0x0B38(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UCommonTextStyle>           FeaturedTitleTextStyle;                            // 0x0B40(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FText                                   Title;                                             // 0x0B48(0x0018)(BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	class FString                                 Link;                                              // 0x0B60(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bDownloadingExternalMedia;                         // 0x0B70(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bRefreshingMcpCatalog;                             // 0x0B71(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_B72[0x6];                                      // 0x0B72(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             ExternalMedia;                                     // 0x0B78(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_B80[0xA0];                                     // 0x0B80(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCommonLazyImage*                       LazyImage_Icon;                                    // 0x0C20(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UCommonTextBlock*                       TitleTextBlock;                                    // 0x0C28(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UCommonTextBlock*                       SubtitleTextBlock;                                 // 0x0C30(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UCommonTextBlock*                       EyebrowTextBlock;                                  // 0x0C38(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void Launch();
@@ -192,19 +192,19 @@ public:
 DUMPER7_ASSERTS_UEpicCMSTileBase;
 
 // Class EpicCMSUIFramework.EpicCMSTileCarousel
-// 0x0050 (0x02B0 - 0x0260)
+// 0x0050 (0x0280 - 0x0230)
 class UEpicCMSTileCarousel final : public UUserWidget
 {
 public:
-	struct FSlateSound                            PreviousButtonSound;                               // 0x0260(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FSlateSound                            NextButtonSound;                                   // 0x0278(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	class UCommonWidgetCarousel*                  Carousel;                                          // 0x0290(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidget*                                NextPageButton;                                    // 0x0298(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWidget*                                PreviousPageButton;                                // 0x02A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bShouldShowNavigationOnlyOnHover;                  // 0x02A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bInputActionsForPaging;                            // 0x02A9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsShowingNavigation;                              // 0x02AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2AB[0x5];                                      // 0x02AB(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSlateSound                            PreviousButtonSound;                               // 0x0230(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FSlateSound                            NextButtonSound;                                   // 0x0248(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	class UCommonWidgetCarousel*                  Carousel;                                          // 0x0260(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UWidget*                                NextPageButton;                                    // 0x0268(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UWidget*                                PreviousPageButton;                                // 0x0270(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bShouldShowNavigationOnlyOnHover;                  // 0x0278(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bInputActionsForPaging;                            // 0x0279(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsShowingNavigation;                              // 0x027A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_27B[0x5];                                      // 0x027B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddTilePage(class UWidget* TilePageWidget);

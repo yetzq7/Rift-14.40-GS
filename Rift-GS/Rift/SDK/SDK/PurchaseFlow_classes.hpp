@@ -28,7 +28,7 @@ public:
 	class FString GetExternalBrowserPath(const class FString& BrowserId);
 	bool LaunchExternalBrowserUrl(const class FString& URL);
 	bool LaunchValidatedExternalBrowserUrl(const class FString& AllowedBrowserID, const class FString& URL);
-	void Receipt(const struct FPurchaseFlowReceiptParam& Receipt_0);
+	void RECEIPT(const struct FPurchaseFlowReceiptParam& RECEIPT_0);
 	void RequestClose(const class FString& CloseInfo);
 
 public:

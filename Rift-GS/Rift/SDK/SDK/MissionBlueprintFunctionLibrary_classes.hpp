@@ -44,7 +44,7 @@ public:
 	static void BasicBuildingItemDrop(EnumEventWorldItemDrop Item_Drop_Level, const struct FVector& LootDropLocation, class UObject* __WorldContext);
 	static void SeperatePlayersWhoNeedQuest(class UFortQuestItemDefinition* QuestItemReference, class FName QuestObjectiveBackendName, class UObject* __WorldContext, TArray<class AFortPlayerController*>* PlayersWhoNeedQuest, TArray<class AFortPlayerController*>* PlayersWhoDoNotNeedQuest);
 	static void HasPlayerCompletedQuest(class AFortPlayerController* PlayerController, class UFortQuestItemDefinition* QuestReference, class FName QuestBackendName, class UObject* __WorldContext, class AFortPlayerController** PlayerControllerOut, bool* CompletedQuest);
-	static void DistanceBetweenTwoVectors(const struct FVector& vector1, const struct FVector& Vector2, class UObject* __WorldContext, float* Distance);
+	static void DistanceBetweenTwoVectors(const struct FVector& Vector1, const struct FVector& Vector2, class UObject* __WorldContext, float* Distance);
 	static void ApplyDifficultyOffset(class FName RowName, float BaseDifficulty, class UObject* __WorldContext, bool* Success);
 	static void GetCurrentDifficulty(class UObject* __WorldContext, float* Difficulty, bool* Success);
 	static void PointLocationsBetweenTwoVectors(const struct FVector& Vector_1, const struct FVector& Vector_2, int32 HowManyPoints, class UObject* __WorldContext, TArray<struct FVector>* VectorPoints, bool* SuccessfullyFoundPoints);
@@ -60,8 +60,6 @@ public:
 	static void CheckBasicVectorToActorLineOfSight(const struct FVector& Vector_A, class AActor* Actor_B, const struct FVector& Actor_B_Location_Offset, ETraceTypeQuery TraceChannel, EDrawDebugTrace DrawDebugType, float DrawTime, const TArray<class AActor*>& ActorsToIgnore, bool bTraceComplex, class UObject* __WorldContext, bool* In_Line_Of_Sight, float* Distance);
 	static void NPC_ConvertTagToNameText(const struct FGameplayTag& PawnTag, class UObject* __WorldContext, class FText* Name_0);
 	static void LaunchHoverboard(class AActor* HoverboardActor, const struct FVector& LaunchVelocity, class FName ForceFeedbackTag, class UObject* __WorldContext, bool* Success);
-	static void NPC_CanBeElemental(const struct FGameplayTag& PawnTag, class UObject* __WorldContext, bool* Value);
-	static void GetSeasonalEventManager(const class UObject* WorldContextObject, class UObject* __WorldContext, class UFortSeasonalEventManager** SeasonalEventManager);
 
 public:
 	static class UClass* StaticClass()

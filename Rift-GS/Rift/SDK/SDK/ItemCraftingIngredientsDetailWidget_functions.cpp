@@ -16,34 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function ItemCraftingIngredientsDetailWidget.ItemCraftingIngredientsDetailWidget_C.HandlePostDifferentItemToDetailSet
-// (Event, Protected, BlueprintEvent)
-
-void UItemCraftingIngredientsDetailWidget_C::HandlePostDifferentItemToDetailSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemCraftingIngredientsDetailWidget_C", "HandlePostDifferentItemToDetailSet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemCraftingIngredientsDetailWidget.ItemCraftingIngredientsDetailWidget_C.HandlePostDifferentItemToCompareWithSet
-// (Event, Protected, BlueprintEvent)
-
-void UItemCraftingIngredientsDetailWidget_C::HandlePostDifferentItemToCompareWithSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemCraftingIngredientsDetailWidget_C", "HandlePostDifferentItemToCompareWithSet");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ItemCraftingIngredientsDetailWidget.ItemCraftingIngredientsDetailWidget_C.ExecuteUbergraph_ItemCraftingIngredientsDetailWidget
 // (Final, UbergraphFunction)
 // Parameters:
@@ -61,6 +33,34 @@ void UItemCraftingIngredientsDetailWidget_C::ExecuteUbergraph_ItemCraftingIngred
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemCraftingIngredientsDetailWidget.ItemCraftingIngredientsDetailWidget_C.HandlePostDifferentItemToCompareWithSet
+// (Event, Protected, BlueprintEvent)
+
+void UItemCraftingIngredientsDetailWidget_C::HandlePostDifferentItemToCompareWithSet()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemCraftingIngredientsDetailWidget_C", "HandlePostDifferentItemToCompareWithSet");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemCraftingIngredientsDetailWidget.ItemCraftingIngredientsDetailWidget_C.HandlePostDifferentItemToDetailSet
+// (Event, Protected, BlueprintEvent)
+
+void UItemCraftingIngredientsDetailWidget_C::HandlePostDifferentItemToDetailSet()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemCraftingIngredientsDetailWidget_C", "HandlePostDifferentItemToDetailSet");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

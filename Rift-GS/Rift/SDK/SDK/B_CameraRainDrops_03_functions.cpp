@@ -36,29 +36,15 @@ void AB_CameraRainDrops_03_C::ExecuteUbergraph_B_CameraRainDrops_03(int32 EntryP
 }
 
 
-// Function B_CameraRainDrops_03.B_CameraRainDrops_03_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function B_CameraRainDrops_03.B_CameraRainDrops_03_C.Alpha__FinishedFunc
+// (BlueprintEvent)
 
-void AB_CameraRainDrops_03_C::ReceiveBeginPlay()
+void AB_CameraRainDrops_03_C::Alpha__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_CameraRainDrops_03_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_CameraRainDrops_03.B_CameraRainDrops_03_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void AB_CameraRainDrops_03_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_CameraRainDrops_03_C", "ReceiveDestroyed");
+		Func = Class->GetFunction("B_CameraRainDrops_03_C", "Alpha__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,15 +64,29 @@ void AB_CameraRainDrops_03_C::Alpha__UpdateFunc()
 }
 
 
-// Function B_CameraRainDrops_03.B_CameraRainDrops_03_C.Alpha__FinishedFunc
-// (BlueprintEvent)
+// Function B_CameraRainDrops_03.B_CameraRainDrops_03_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AB_CameraRainDrops_03_C::Alpha__FinishedFunc()
+void AB_CameraRainDrops_03_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_CameraRainDrops_03_C", "Alpha__FinishedFunc");
+		Func = Class->GetFunction("B_CameraRainDrops_03_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_CameraRainDrops_03.B_CameraRainDrops_03_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AB_CameraRainDrops_03_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_CameraRainDrops_03_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

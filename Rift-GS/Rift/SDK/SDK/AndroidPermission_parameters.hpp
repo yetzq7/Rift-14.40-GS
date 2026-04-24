@@ -19,7 +19,7 @@ SDK_PARAM_NAMESPACE_START
 struct AndroidPermissionFunctionLibrary_AcquirePermissions final
 {
 public:
-	TArray<class FString>                         Permissions;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         Permissions;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	class UAndroidPermissionCallbackProxy*        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AndroidPermissionFunctionLibrary_AcquirePermissions;

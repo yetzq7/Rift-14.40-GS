@@ -36,30 +36,6 @@ void AB_Prj_Athena_DanceGrenade_C::ExecuteUbergraph_B_Prj_Athena_DanceGrenade(in
 }
 
 
-// Function B_Prj_Athena_DanceGrenade.B_Prj_Athena_DanceGrenade_C.BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class AFortWaterBodyActor*              WaterBody                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UFortWaterInteractionComponent*   WaterInteractionComponent_0                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsFirstBody                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AB_Prj_Athena_DanceGrenade_C::BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_DanceGrenade_C", "BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature");
-
-	Params::B_Prj_Athena_DanceGrenade_C_BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature Parms{};
-
-	Parms.WaterBody = WaterBody;
-	Parms.WaterInteractionComponent_0 = WaterInteractionComponent_0;
-	Parms.bIsFirstBody = bIsFirstBody;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_Prj_Athena_DanceGrenade.B_Prj_Athena_DanceGrenade_C.OnBeginPlayQuestCheck
 // (BlueprintCallable, BlueprintEvent)
 
@@ -169,8 +145,8 @@ void AB_Prj_Athena_DanceGrenade_C::OnBounce(const struct FHitResult& Hit)
 // Function B_Prj_Athena_DanceGrenade.B_Prj_Athena_DanceGrenade_C.OnExploded
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference)
 
 void AB_Prj_Athena_DanceGrenade_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
 {
@@ -185,6 +161,20 @@ void AB_Prj_Athena_DanceGrenade_C::OnExploded(const TArray<class AActor*>& HitAc
 	Parms.HitResults = std::move(HitResults);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Prj_Athena_DanceGrenade.B_Prj_Athena_DanceGrenade_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_Athena_DanceGrenade_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Athena_DanceGrenade_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -16,6 +16,31 @@
 
 SDK_NAMESPACE_START
 
+// Function NavigationSystem.NavRelevantComponent.SetNavigationRelevancy
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bRelevant                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNavRelevantComponent::SetNavigationRelevancy(bool bRelevant)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NavRelevantComponent", "SetNavigationRelevancy");
+
+	Params::NavRelevantComponent_SetNavigationRelevancy Parms{};
+
+	Parms.bRelevant = bRelevant;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function NavigationSystem.NavigationSystemV1.FindPathToActorSynchronously
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -616,38 +641,6 @@ void UNavigationSystemV1::SimpleMoveToLocation(class AController* Controller, co
 }
 
 
-// Function NavigationSystem.NavigationSystemV1.K2_ReplaceAreaInOctreeData
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class UObject*                    Object                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSubclassOf<class UNavArea>             OldArea                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSubclassOf<class UNavArea>             NewArea                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNavigationSystemV1::K2_ReplaceAreaInOctreeData(const class UObject* Object, TSubclassOf<class UNavArea> OldArea, TSubclassOf<class UNavArea> NewArea)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NavigationSystemV1", "K2_ReplaceAreaInOctreeData");
-
-	Params::NavigationSystemV1_K2_ReplaceAreaInOctreeData Parms{};
-
-	Parms.Object = Object;
-	Parms.OldArea = OldArea;
-	Parms.NewArea = NewArea;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function NavigationSystem.NavigationSystemV1.OnNavigationBoundsUpdated
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -796,55 +789,21 @@ void UNavigationSystemV1::UnregisterNavigationInvoker(class AActor* Invoker)
 }
 
 
-// Function NavigationSystem.RecastNavMesh.K2_ReplaceAreaInTileBounds
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FBox&                      Bounds                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// TSubclassOf<class UNavArea>             OldArea                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSubclassOf<class UNavArea>             NewArea                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReplaceLinks                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ARecastNavMesh::K2_ReplaceAreaInTileBounds(const struct FBox& Bounds, TSubclassOf<class UNavArea> OldArea, TSubclassOf<class UNavArea> NewArea, bool ReplaceLinks)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RecastNavMesh", "K2_ReplaceAreaInTileBounds");
-
-	Params::RecastNavMesh_K2_ReplaceAreaInTileBounds Parms{};
-
-	Parms.Bounds = std::move(Bounds);
-	Parms.OldArea = OldArea;
-	Parms.NewArea = NewArea;
-	Parms.ReplaceLinks = ReplaceLinks;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function NavigationSystem.NavRelevantComponent.SetNavigationRelevancy
+// Function NavigationSystem.NavModifierComponent.SetAreaClass
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                                    bRelevant                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSubclassOf<class UNavArea>             NewAreaClass                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNavRelevantComponent::SetNavigationRelevancy(bool bRelevant)
+void UNavModifierComponent::SetAreaClass(TSubclassOf<class UNavArea> NewAreaClass)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("NavRelevantComponent", "SetNavigationRelevancy");
+		Func = Class->GetFunction("NavModifierComponent", "SetAreaClass");
 
-	Params::NavRelevantComponent_SetNavigationRelevancy Parms{};
+	Params::NavModifierComponent_SetAreaClass Parms{};
 
-	Parms.bRelevant = bRelevant;
+	Parms.NewAreaClass = NewAreaClass;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1054,31 +1013,6 @@ bool UNavigationPath::IsValid() const
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function NavigationSystem.NavModifierComponent.SetAreaClass
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TSubclassOf<class UNavArea>             NewAreaClass                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNavModifierComponent::SetAreaClass(TSubclassOf<class UNavArea> NewAreaClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NavModifierComponent", "SetAreaClass");
-
-	Params::NavModifierComponent_SetAreaClass Parms{};
-
-	Parms.NewAreaClass = NewAreaClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 }
 
 

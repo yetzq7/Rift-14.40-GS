@@ -17,19 +17,19 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_DefaultPlayer_InteractUse.GA_DefaultPlayer_InteractUse_C
-// 0x0008 (0x0AB0 - 0x0AA8)
+// 0x0008 (0x0940 - 0x0938)
 class UGA_DefaultPlayer_InteractUse_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0938(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_GA_DefaultPlayer_InteractUse(int32 EntryPoint);
 	void K2_ActivateAbility();
-	void OnCompleted_A513E1E044E129CC612DF5A23589BC9C();
 	void OnBlendOut_A513E1E044E129CC612DF5A23589BC9C();
-	void OnInterrupted_A513E1E044E129CC612DF5A23589BC9C();
 	void OnCancelled_A513E1E044E129CC612DF5A23589BC9C();
+	void OnCompleted_A513E1E044E129CC612DF5A23589BC9C();
+	void OnInterrupted_A513E1E044E129CC612DF5A23589BC9C();
 
 public:
 	static class UClass* StaticClass()

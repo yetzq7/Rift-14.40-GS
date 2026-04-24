@@ -16,8 +16,8 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_DudeBro_VortexActivate_Shake.B_DudeBro_VortexActivate_Shake_C
-// 0x0000 (0x0180 - 0x0180)
-class UB_DudeBro_VortexActivate_Shake_C final : public UMatineeCameraShake
+// 0x0000 (0x0160 - 0x0160)
+class UB_DudeBro_VortexActivate_Shake_C final : public UCameraShake
 {
 public:
 	static class UClass* StaticClass()

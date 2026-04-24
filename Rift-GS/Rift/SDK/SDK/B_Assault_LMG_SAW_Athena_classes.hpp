@@ -10,26 +10,27 @@
 
 #include "Basic.hpp"
 
-#include "B_Assault_Bulletswarm_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "B_Assault_Bulletswarm_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_Assault_LMG_SAW_Athena.B_Assault_LMG_SAW_Athena_C
-// 0x0020 (0x1278 - 0x1258)
+// 0x0020 (0x0E08 - 0x0DE8)
 class AB_Assault_LMG_SAW_Athena_C final : public AB_Assault_Bulletswarm_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_Assault_LMG_SAW_Athena_C;         // 0x1258(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FVector                                LaserScaleUntargeted;                              // 0x1260(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                LaserScaleTargeted;                                // 0x126C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_Assault_LMG_SAW_Athena_C;         // 0x0DE8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FVector                                LaserScaleUntargeted;                              // 0x0DF0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LaserScaleTargeted;                                // 0x0DFC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_Assault_LMG_SAW_Athena(int32 EntryPoint);
 	void OnSetTargeting(bool bNewIsTargeting);
 	void ReceiveBeginPlay();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

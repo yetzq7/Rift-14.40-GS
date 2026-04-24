@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass STW_PlayerCameraModeTargetingIronSight.STW_PlayerCameraModeTargetingIronSight_C
-// 0x0000 (0x0DC0 - 0x0DC0)
+// 0x0000 (0x0C50 - 0x0C50)
 class USTW_PlayerCameraModeTargetingIronSight_C final : public UAthena_PlayerCameraModeTargetingIronSight_C
 {
 public:

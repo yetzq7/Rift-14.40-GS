@@ -70,6 +70,20 @@ void AGCNL_PurpleStuff_C::ReceiveBeginPlay()
 }
 
 
+// Function GCNL_PurpleStuff.GCNL_PurpleStuff_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AGCNL_PurpleStuff_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCNL_PurpleStuff_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GCNL_PurpleStuff.GCNL_PurpleStuff_C.OnActive
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

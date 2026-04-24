@@ -36,15 +36,15 @@ void UFortRadioButtonGroup_C::ExecuteUbergraph_FortRadioButtonGroup(int32 EntryP
 }
 
 
-// Function FortRadioButtonGroup.FortRadioButtonGroup_C.UpdateButtons
-// (BlueprintCallable, BlueprintEvent)
+// Function FortRadioButtonGroup.FortRadioButtonGroup_C.CenterOnWidget
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UFortRadioButtonGroup_C::UpdateButtons()
+void UFortRadioButtonGroup_C::CenterOnWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortRadioButtonGroup_C", "UpdateButtons");
+		Func = Class->GetFunction("FortRadioButtonGroup_C", "CenterOnWidget");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,15 +86,15 @@ void UFortRadioButtonGroup_C::OnButtonClicked_Bind(class UCommonButton* Associat
 }
 
 
-// Function FortRadioButtonGroup.FortRadioButtonGroup_C.CenterOnWidget
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function FortRadioButtonGroup.FortRadioButtonGroup_C.UpdateButtons
+// (BlueprintCallable, BlueprintEvent)
 
-void UFortRadioButtonGroup_C::CenterOnWidget()
+void UFortRadioButtonGroup_C::UpdateButtons()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortRadioButtonGroup_C", "CenterOnWidget");
+		Func = Class->GetFunction("FortRadioButtonGroup_C", "UpdateButtons");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

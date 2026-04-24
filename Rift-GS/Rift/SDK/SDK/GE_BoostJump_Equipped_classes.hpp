@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_BoostJump_Equipped.GE_BoostJump_Equipped_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x05F0 - 0x05F0)
 class UGE_BoostJump_Equipped_C final : public UGameplayEffect
 {
 public:

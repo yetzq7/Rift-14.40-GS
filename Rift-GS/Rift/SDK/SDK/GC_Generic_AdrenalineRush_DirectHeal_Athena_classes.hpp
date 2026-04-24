@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GC_Generic_AdrenalineRush_DirectHeal_Athena.GC_Generic_AdrenalineRush_DirectHeal_Athena_C
-// 0x0000 (0x01B8 - 0x01B8)
+// 0x0000 (0x01A0 - 0x01A0)
 class UGC_Generic_AdrenalineRush_DirectHeal_Athena_C final : public UFortGameplayCueNotify_Burst
 {
 public:

@@ -11,12 +11,36 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "FortniteUI_structs.hpp"
 #include "UMG_structs.hpp"
+#include "FortniteUI_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function ItemCardWidget.ItemCardWidget_C.ExecuteUbergraph_ItemCardWidget
+// 0x0020 (0x0020 - 0x0000)
+struct ItemCardWidget_C_ExecuteUbergraph_ItemCardWidget final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_Idx;                            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFocusEvent                            K2Node_Event_InFocusEvent;                         // 0x0018(0x0008)(NoDestructor)
+};
+DUMPER7_ASSERTS_ItemCardWidget_C_ExecuteUbergraph_ItemCardWidget;
+
+// Function ItemCardWidget.ItemCardWidget_C.OnFocusLost
+// 0x0008 (0x0008 - 0x0000)
+struct ItemCardWidget_C_OnFocusLost final
+{
+public:
+	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+DUMPER7_ASSERTS_ItemCardWidget_C_OnFocusLost;
 
 // Function ItemCardWidget.ItemCardWidget_C.OnFocusReceived
 // 0x0268 (0x0268 - 0x0000)
@@ -39,30 +63,6 @@ public:
 	int32                                         idx;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_ItemCardWidget_C_PlayShow;
-
-// Function ItemCardWidget.ItemCardWidget_C.OnFocusLost
-// 0x0008 (0x0008 - 0x0000)
-struct ItemCardWidget_C_OnFocusLost final
-{
-public:
-	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_ItemCardWidget_C_OnFocusLost;
-
-// Function ItemCardWidget.ItemCardWidget_C.ExecuteUbergraph_ItemCardWidget
-// 0x0020 (0x0020 - 0x0000)
-struct ItemCardWidget_C_ExecuteUbergraph_ItemCardWidget final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_Idx;                            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFocusEvent                            K2Node_Event_InFocusEvent;                         // 0x0018(0x0008)(NoDestructor)
-};
-DUMPER7_ASSERTS_ItemCardWidget_C_ExecuteUbergraph_ItemCardWidget;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

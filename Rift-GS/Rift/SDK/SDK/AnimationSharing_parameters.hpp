@@ -19,50 +19,18 @@ SDK_PARAM_NAMESPACE_START
 struct AnimSharingStateInstance_GetInstancedActors final
 {
 public:
-	TArray<class AActor*>                         Actors;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         Actors;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AnimSharingStateInstance_GetInstancedActors;
 
-// Function AnimationSharing.AnimationSharingManager.AnimationSharingEnabled
+// Function AnimationSharing.AnimationSharingManager.AnimSharingEnabled
 // 0x0001 (0x0001 - 0x0000)
-struct AnimationSharingManager_AnimationSharingEnabled final
+struct AnimationSharingManager_AnimSharingEnabled final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AnimationSharingManager_AnimationSharingEnabled;
-
-// Function AnimationSharing.AnimationSharingManager.CreateAnimationSharingManager
-// 0x0018 (0x0018 - 0x0000)
-struct AnimationSharingManager_CreateAnimationSharingManager final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	const class UAnimationSharingSetup*           Setup;                                             // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_AnimationSharingManager_CreateAnimationSharingManager;
-
-// Function AnimationSharing.AnimationSharingManager.GetAnimationSharingManager
-// 0x0010 (0x0010 - 0x0000)
-struct AnimationSharingManager_GetAnimationSharingManager final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimationSharingManager*               ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AnimationSharingManager_GetAnimationSharingManager;
-
-// Function AnimationSharing.AnimationSharingManager.RegisterActorWithSkeletonBP
-// 0x0010 (0x0010 - 0x0000)
-struct AnimationSharingManager_RegisterActorWithSkeletonBP final
-{
-public:
-	class AActor*                                 InActor;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	const class USkeleton*                        SharingSkeleton;                                   // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AnimationSharingManager_RegisterActorWithSkeletonBP;
+DUMPER7_ASSERTS_AnimationSharingManager_AnimSharingEnabled;
 
 // Function AnimationSharing.AnimationSharingStateProcessor.GetAnimationStateEnum
 // 0x0008 (0x0008 - 0x0000)

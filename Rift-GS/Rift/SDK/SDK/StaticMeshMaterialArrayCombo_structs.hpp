@@ -19,7 +19,7 @@ struct FStaticMeshMaterialArrayCombo final
 {
 public:
 	class AStaticMeshActor*                       StaticMesh_6_F7234FBB43D39B4944E60390FB9D9D4D;     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInterface*>             MaterialArray_5_FAE74D234840C6E8BEEBE4BC4590BE6C;  // 0x0008(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<class UMaterialInterface*>             MaterialArray_5_FAE74D234840C6E8BEEBE4BC4590BE6C;  // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
 };
 DUMPER7_ASSERTS_FStaticMeshMaterialArrayCombo;
 

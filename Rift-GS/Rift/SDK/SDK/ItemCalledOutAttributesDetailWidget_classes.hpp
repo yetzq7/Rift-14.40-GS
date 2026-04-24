@@ -11,30 +11,30 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "FortniteUI_classes.hpp"
 #include "FortniteGame_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ItemCalledOutAttributesDetailWidget.ItemCalledOutAttributesDetailWidget_C
-// 0x0028 (0x0308 - 0x02E0)
+// 0x0028 (0x02A8 - 0x0280)
 class UItemCalledOutAttributesDetailWidget_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UFortItemCategoryIndicator*             AmmoTypeIndicator;                                 // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWrapBox*                               ContainerWrapBox;                                  // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UStatsListItemWIdget_C*>         StatWidgets;                                       // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UFortItemCategoryIndicator*             AmmoTypeIndicator;                                 // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWrapBox*                               ContainerWrapBox;                                  // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UStatsListItemWIdget_C*>         StatWidgets;                                       // 0x0298(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 public:
-	void Clear_Stats();
-	void UpdateStats();
-	void GetDisplayAttributesToCallOut(TArray<struct FFortDisplayAttribute>* Attributes);
-	void HandlePostDifferentItemToDetailSet();
-	void HandleItemToDetailChangedBP();
 	void ExecuteUbergraph_ItemCalledOutAttributesDetailWidget(int32 EntryPoint);
+	void HandleItemToDetailChangedBP();
+	void HandlePostDifferentItemToDetailSet();
+	void GetDisplayAttributesToCallOut(TArray<struct FFortDisplayAttribute>* Attributes);
+	void UpdateStats();
+	void Clear_Stats();
 
 public:
 	static class UClass* StaticClass()

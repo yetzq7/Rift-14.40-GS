@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Hook_Camera_LensEffect.BP_Hook_Camera_LensEffect_C
-// 0x0000 (0x02E0 - 0x02E0)
+// 0x0000 (0x03F0 - 0x03F0)
 class ABP_Hook_Camera_LensEffect_C final : public AEmitterCameraLensEffectBase
 {
 public:

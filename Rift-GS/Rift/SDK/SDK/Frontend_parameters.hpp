@@ -14,9 +14,23 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function Frontend.Frontend_C.PlaySpeech
+// Function Frontend.FrontEnd_C.ExecuteUbergraph_FrontEnd
+// 0x0018 (0x0018 - 0x0000)
+struct FrontEnd_C_ExecuteUbergraph_FrontEnd final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsBROnly_ReturnValue;                     // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsMobileApp_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_FrontEnd_C_ExecuteUbergraph_FrontEnd;
+
+// Function Frontend.FrontEnd_C.PlaySpeech
 // 0x0038 (0x0038 - 0x0000)
-struct Frontend_C_PlaySpeech final
+struct FrontEnd_C_PlaySpeech final
 {
 public:
 	class FString                                 Filename;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
@@ -27,16 +41,7 @@ public:
 	class AFortPlayerControllerFrontEnd*          K2Node_DynamicCast_AsFort_Player_Controller_Front_End; // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_Frontend_C_PlaySpeech;
-
-// Function Frontend.Frontend_C.ExecuteUbergraph_Frontend
-// 0x0004 (0x0004 - 0x0000)
-struct Frontend_C_ExecuteUbergraph_Frontend final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Frontend_C_ExecuteUbergraph_Frontend;
+DUMPER7_ASSERTS_FrontEnd_C_PlaySpeech;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

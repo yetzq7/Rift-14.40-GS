@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PBWA_W1_RoofI.PBWA_W1_RoofI_C
-// 0x0000 (0x0B70 - 0x0B70)
+// 0x0000 (0x0BE8 - 0x0BE8)
 class APBWA_W1_RoofI_C final : public ABuildingRoof
 {
 public:

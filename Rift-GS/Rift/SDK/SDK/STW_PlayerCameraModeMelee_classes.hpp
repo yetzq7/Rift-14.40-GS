@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass STW_PlayerCameraModeMelee.STW_PlayerCameraModeMelee_C
-// 0x0000 (0x0DC0 - 0x0DC0)
+// 0x0000 (0x0C50 - 0x0C50)
 class USTW_PlayerCameraModeMelee_C : public UAthena_PlayerCameraModeMelee_C
 {
 public:

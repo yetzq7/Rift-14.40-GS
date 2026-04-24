@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GET_FallingDamage.GET_FallingDamage_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x05F0 - 0x05F0)
 class UGET_FallingDamage_C final : public UGet_DirectDamageParent_C
 {
 public:

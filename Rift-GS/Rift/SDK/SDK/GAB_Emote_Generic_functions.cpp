@@ -36,20 +36,6 @@ void UGAB_Emote_Generic_C::ExecuteUbergraph_GAB_Emote_Generic(int32 EntryPoint)
 }
 
 
-// Function GAB_Emote_Generic.GAB_Emote_Generic_C.NonMontageAsyncAssetsReady
-// (BlueprintCallable, BlueprintEvent)
-
-void UGAB_Emote_Generic_C::NonMontageAsyncAssetsReady()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_Emote_Generic_C", "NonMontageAsyncAssetsReady");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GAB_Emote_Generic.GAB_Emote_Generic_C.PlayInitialEmoteMontage
 // (BlueprintCallable, BlueprintEvent)
 
@@ -89,26 +75,6 @@ void UGAB_Emote_Generic_C::K2_ActivateAbility()
 		Func = Class->GetFunction("GAB_Emote_Generic_C", "K2_ActivateAbility");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GAB_Emote_Generic.GAB_Emote_Generic_C.OnLoaded_DA96775D40CD998BF2FF0085FE5AB126
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGAB_Emote_Generic_C::OnLoaded_DA96775D40CD998BF2FF0085FE5AB126(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_Emote_Generic_C", "OnLoaded_DA96775D40CD998BF2FF0085FE5AB126");
-
-	Params::GAB_Emote_Generic_C_OnLoaded_DA96775D40CD998BF2FF0085FE5AB126 Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -301,108 +267,6 @@ void UGAB_Emote_Generic_C::ForceStopMontage()
 		Func = Class->GetFunction("GAB_Emote_Generic_C", "ForceStopMontage");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GAB_Emote_Generic.GAB_Emote_Generic_C.IsMontagePlaying
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAnimMontage*                     Montage                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UGAB_Emote_Generic_C::IsMontagePlaying(class UAnimMontage* Montage, bool* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_Emote_Generic_C", "IsMontagePlaying");
-
-	Params::GAB_Emote_Generic_C_IsMontagePlaying Parms{};
-
-	Parms.Montage = Montage;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
-}
-
-
-// Function GAB_Emote_Generic.GAB_Emote_Generic_C.HACK_CheckBadEmoteState
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UFortMontageItemDefinitionBase*   MontageItem                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AFortPlayerPawnAthena*            PlayerPawn_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   bCanPlay                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UGAB_Emote_Generic_C::HACK_CheckBadEmoteState(class UFortMontageItemDefinitionBase* MontageItem, class AFortPlayerPawnAthena* PlayerPawn_0, bool* bCanPlay)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_Emote_Generic_C", "HACK_CheckBadEmoteState");
-
-	Params::GAB_Emote_Generic_C_HACK_CheckBadEmoteState Parms{};
-
-	Parms.MontageItem = MontageItem;
-	Parms.PlayerPawn_0 = PlayerPawn_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bCanPlay != nullptr)
-		*bCanPlay = Parms.bCanPlay;
-}
-
-
-// Function GAB_Emote_Generic.GAB_Emote_Generic_C.K2_CanActivateAbility
-// (Event, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// const struct FGameplayAbilityActorInfo& ActorInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
-// const struct FGameplayAbilitySpecHandle&Handle                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayTagContainer*           RelevantTags                                           (Parm, OutParm)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool UGAB_Emote_Generic_C::K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayAbilitySpecHandle& Handle, struct FGameplayTagContainer* RelevantTags) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_Emote_Generic_C", "K2_CanActivateAbility");
-
-	Params::GAB_Emote_Generic_C_K2_CanActivateAbility Parms{};
-
-	Parms.ActorInfo = std::move(ActorInfo);
-	Parms.Handle = std::move(Handle);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (RelevantTags != nullptr)
-		*RelevantTags = std::move(Parms.RelevantTags);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GAB_Emote_Generic.GAB_Emote_Generic_C.ShouldPlayFailedMontage
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// const struct FGameplayTagContainer&     FailedReason                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool UGAB_Emote_Generic_C::ShouldPlayFailedMontage(const struct FGameplayTagContainer& FailedReason) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAB_Emote_Generic_C", "ShouldPlayFailedMontage");
-
-	Params::GAB_Emote_Generic_C_ShouldPlayFailedMontage Parms{};
-
-	Parms.FailedReason = std::move(FailedReason);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 

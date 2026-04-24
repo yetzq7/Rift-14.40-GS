@@ -16,8 +16,8 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Camera_Shake_Pulse_Zoom.BP_Camera_Shake_Pulse_Zoom_C
-// 0x0000 (0x0180 - 0x0180)
-class UBP_Camera_Shake_Pulse_Zoom_C final : public UMatineeCameraShake
+// 0x0000 (0x0160 - 0x0160)
+class UBP_Camera_Shake_Pulse_Zoom_C final : public UCameraShake
 {
 public:
 	static class UClass* StaticClass()

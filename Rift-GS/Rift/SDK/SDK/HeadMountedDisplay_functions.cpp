@@ -99,7 +99,7 @@ void UHeadMountedDisplayFunctionLibrary::EnableLowPersistenceMode(bool bEnable)
 // Parameters:
 // const class FName                       SystemId                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EXRTrackedDeviceType                    DeviceType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FXRDeviceId>              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FXRDeviceId>              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<struct FXRDeviceId> UHeadMountedDisplayFunctionLibrary::EnumerateTrackedDevices(const class FName SystemId, EXRTrackedDeviceType DeviceType)
 {
@@ -131,9 +131,9 @@ TArray<struct FXRDeviceId> UHeadMountedDisplayFunctionLibrary::EnumerateTrackedD
 // bool*                                   bIsTracked                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRotator*                        Orientation                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 // bool*                                   bHasPositionalTracking                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector*                         position                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector*                         Position                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UHeadMountedDisplayFunctionLibrary::GetDevicePose(const struct FXRDeviceId& XRDeviceId, bool* bIsTracked, struct FRotator* Orientation, bool* bHasPositionalTracking, struct FVector* position)
+void UHeadMountedDisplayFunctionLibrary::GetDevicePose(const struct FXRDeviceId& XRDeviceId, bool* bIsTracked, struct FRotator* Orientation, bool* bHasPositionalTracking, struct FVector* Position)
 {
 	static class UFunction* Func = nullptr;
 
@@ -160,8 +160,8 @@ void UHeadMountedDisplayFunctionLibrary::GetDevicePose(const struct FXRDeviceId&
 	if (bHasPositionalTracking != nullptr)
 		*bHasPositionalTracking = Parms.bHasPositionalTracking;
 
-	if (position != nullptr)
-		*position = std::move(Parms.position);
+	if (Position != nullptr)
+		*Position = std::move(Parms.Position);
 }
 
 
@@ -173,9 +173,9 @@ void UHeadMountedDisplayFunctionLibrary::GetDevicePose(const struct FXRDeviceId&
 // bool*                                   bIsTracked                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRotator*                        Orientation                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 // bool*                                   bHasPositionalTracking                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector*                         position                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector*                         Position                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UHeadMountedDisplayFunctionLibrary::GetDeviceWorldPose(class UObject* WorldContext, const struct FXRDeviceId& XRDeviceId, bool* bIsTracked, struct FRotator* Orientation, bool* bHasPositionalTracking, struct FVector* position)
+void UHeadMountedDisplayFunctionLibrary::GetDeviceWorldPose(class UObject* WorldContext, const struct FXRDeviceId& XRDeviceId, bool* bIsTracked, struct FRotator* Orientation, bool* bHasPositionalTracking, struct FVector* Position)
 {
 	static class UFunction* Func = nullptr;
 
@@ -203,8 +203,8 @@ void UHeadMountedDisplayFunctionLibrary::GetDeviceWorldPose(class UObject* World
 	if (bHasPositionalTracking != nullptr)
 		*bHasPositionalTracking = Parms.bHasPositionalTracking;
 
-	if (position != nullptr)
-		*position = std::move(Parms.position);
+	if (Position != nullptr)
+		*Position = std::move(Parms.Position);
 }
 
 
@@ -960,38 +960,6 @@ void UHeadMountedDisplayFunctionLibrary::UpdateExternalTrackingHMDPosition(const
 }
 
 
-// Function HeadMountedDisplay.MotionControllerComponent.GetHandJointPosition
-// (Final, Native, Protected, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// int32                                   jointIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool*                                   bValueFound                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector UMotionControllerComponent::GetHandJointPosition(int32 jointIndex, bool* bValueFound)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MotionControllerComponent", "GetHandJointPosition");
-
-	Params::MotionControllerComponent_GetHandJointPosition Parms{};
-
-	Parms.jointIndex = jointIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (bValueFound != nullptr)
-		*bValueFound = Parms.bValueFound;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function HeadMountedDisplay.MotionControllerComponent.GetParameterValue
 // (Final, Native, Protected, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -1452,7 +1420,7 @@ bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingOfSource(int32 Pla
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnumerateMotionSources
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<class FName> UMotionTrackedDeviceFunctionLibrary::EnumerateMotionSources()
 {
@@ -1870,131 +1838,6 @@ class UAsyncTask_LoadXRDeviceVisComponent* UAsyncTask_LoadXRDeviceVisComponent::
 		*NewComponent = Parms.NewComponent;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function HeadMountedDisplay.XRLoadingScreenFunctionLibrary.AddLoadingScreenSplash
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UTexture*                         Texture                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Translation                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FRotator&                  Rotation                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// const struct FVector2D&                 Size                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FRotator&                  DeltaRotation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// bool                                    bClearBeforeAdd                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UXRLoadingScreenFunctionLibrary::AddLoadingScreenSplash(class UTexture* Texture, const struct FVector& Translation, const struct FRotator& Rotation, const struct FVector2D& Size, const struct FRotator& DeltaRotation, bool bClearBeforeAdd)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("XRLoadingScreenFunctionLibrary", "AddLoadingScreenSplash");
-
-	Params::XRLoadingScreenFunctionLibrary_AddLoadingScreenSplash Parms{};
-
-	Parms.Texture = Texture;
-	Parms.Translation = std::move(Translation);
-	Parms.Rotation = std::move(Rotation);
-	Parms.Size = std::move(Size);
-	Parms.DeltaRotation = std::move(DeltaRotation);
-	Parms.bClearBeforeAdd = bClearBeforeAdd;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HeadMountedDisplay.XRLoadingScreenFunctionLibrary.ClearLoadingScreenSplashes
-// (Final, Native, Static, Public, BlueprintCallable)
-
-void UXRLoadingScreenFunctionLibrary::ClearLoadingScreenSplashes()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("XRLoadingScreenFunctionLibrary", "ClearLoadingScreenSplashes");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HeadMountedDisplay.XRLoadingScreenFunctionLibrary.HideLoadingScreen
-// (Final, Native, Static, Public, BlueprintCallable)
-
-void UXRLoadingScreenFunctionLibrary::HideLoadingScreen()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("XRLoadingScreenFunctionLibrary", "HideLoadingScreen");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HeadMountedDisplay.XRLoadingScreenFunctionLibrary.SetLoadingScreen
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UTexture*                         Texture                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector2D&                 Scale                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Offset                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bShowLoadingMovie                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bShowOnSet                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UXRLoadingScreenFunctionLibrary::SetLoadingScreen(class UTexture* Texture, const struct FVector2D& Scale, const struct FVector& Offset, bool bShowLoadingMovie, bool bShowOnSet)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("XRLoadingScreenFunctionLibrary", "SetLoadingScreen");
-
-	Params::XRLoadingScreenFunctionLibrary_SetLoadingScreen Parms{};
-
-	Parms.Texture = Texture;
-	Parms.Scale = std::move(Scale);
-	Parms.Offset = std::move(Offset);
-	Parms.bShowLoadingMovie = bShowLoadingMovie;
-	Parms.bShowOnSet = bShowOnSet;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HeadMountedDisplay.XRLoadingScreenFunctionLibrary.ShowLoadingScreen
-// (Final, Native, Static, Public, BlueprintCallable)
-
-void UXRLoadingScreenFunctionLibrary::ShowLoadingScreen()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("XRLoadingScreenFunctionLibrary", "ShowLoadingScreen");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
 }
 
 

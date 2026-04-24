@@ -16,8 +16,8 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass CamShake_Spooky_Dive.CamShake_Spooky_Dive_C
-// 0x0000 (0x0180 - 0x0180)
-class UCamShake_Spooky_Dive_C final : public UMatineeCameraShake
+// 0x0000 (0x0160 - 0x0160)
+class UCamShake_Spooky_Dive_C final : public UCameraShake
 {
 public:
 	static class UClass* StaticClass()

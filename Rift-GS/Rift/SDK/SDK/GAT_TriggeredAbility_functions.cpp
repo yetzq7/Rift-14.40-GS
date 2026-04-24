@@ -114,24 +114,4 @@ void UGAT_TriggeredAbility_C::SetHolsterWeaponWithName(class AFortPawn* Target_F
 }
 
 
-// Function GAT_TriggeredAbility.GAT_TriggeredAbility_C.EndAbilityWithReason
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    Reason                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UGAT_TriggeredAbility_C::EndAbilityWithReason(const class FString& Reason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GAT_TriggeredAbility_C", "EndAbilityWithReason");
-
-	Params::GAT_TriggeredAbility_C_EndAbilityWithReason Parms{};
-
-	Parms.Reason = std::move(Reason);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 SDK_NAMESPACE_END

@@ -294,6 +294,20 @@ void UGA_Athena_Grenade_WithTrajectory_C::OnFinish_4B1D92B7427697E6BD9D58ACA0F87
 }
 
 
+// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.OnFinish_E8F8DC5A465F19B633AF0E8888171F5A
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_Grenade_WithTrajectory_C::OnFinish_E8F8DC5A465F19B633AF0E8888171F5A()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Grenade_WithTrajectory_C", "OnFinish_E8F8DC5A465F19B633AF0E8888171F5A");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Triggered_B08560984B3818F6EECB3C9A92E61ADC
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -355,6 +369,126 @@ void UGA_Athena_Grenade_WithTrajectory_C::Completed_B08560984B3818F6EECB3C9A92E6
 
 	Parms.TargetData = std::move(TargetData);
 	Parms.ApplicationTag = std::move(ApplicationTag);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Created_40FE015D40E881984FE611B980B75D52
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FProjectileEventData&      ProjectileData                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+
+void UGA_Athena_Grenade_WithTrajectory_C::Created_40FE015D40E881984FE611B980B75D52(const struct FProjectileEventData& ProjectileData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Grenade_WithTrajectory_C", "Created_40FE015D40E881984FE611B980B75D52");
+
+	Params::GA_Athena_Grenade_WithTrajectory_C_Created_40FE015D40E881984FE611B980B75D52 Parms{};
+
+	Parms.ProjectileData = std::move(ProjectileData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Touched_40FE015D40E881984FE611B980B75D52
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FProjectileEventData&      ProjectileData                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+
+void UGA_Athena_Grenade_WithTrajectory_C::Touched_40FE015D40E881984FE611B980B75D52(const struct FProjectileEventData& ProjectileData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Grenade_WithTrajectory_C", "Touched_40FE015D40E881984FE611B980B75D52");
+
+	Params::GA_Athena_Grenade_WithTrajectory_C_Touched_40FE015D40E881984FE611B980B75D52 Parms{};
+
+	Parms.ProjectileData = std::move(ProjectileData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Bounced_40FE015D40E881984FE611B980B75D52
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FProjectileEventData&      ProjectileData                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+
+void UGA_Athena_Grenade_WithTrajectory_C::Bounced_40FE015D40E881984FE611B980B75D52(const struct FProjectileEventData& ProjectileData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Grenade_WithTrajectory_C", "Bounced_40FE015D40E881984FE611B980B75D52");
+
+	Params::GA_Athena_Grenade_WithTrajectory_C_Bounced_40FE015D40E881984FE611B980B75D52 Parms{};
+
+	Parms.ProjectileData = std::move(ProjectileData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Stopped_40FE015D40E881984FE611B980B75D52
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FProjectileEventData&      ProjectileData                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+
+void UGA_Athena_Grenade_WithTrajectory_C::Stopped_40FE015D40E881984FE611B980B75D52(const struct FProjectileEventData& ProjectileData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Grenade_WithTrajectory_C", "Stopped_40FE015D40E881984FE611B980B75D52");
+
+	Params::GA_Athena_Grenade_WithTrajectory_C_Stopped_40FE015D40E881984FE611B980B75D52 Parms{};
+
+	Parms.ProjectileData = std::move(ProjectileData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Exploded_40FE015D40E881984FE611B980B75D52
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FProjectileEventData&      ProjectileData                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+
+void UGA_Athena_Grenade_WithTrajectory_C::Exploded_40FE015D40E881984FE611B980B75D52(const struct FProjectileEventData& ProjectileData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Grenade_WithTrajectory_C", "Exploded_40FE015D40E881984FE611B980B75D52");
+
+	Params::GA_Athena_Grenade_WithTrajectory_C_Exploded_40FE015D40E881984FE611B980B75D52 Parms{};
+
+	Parms.ProjectileData = std::move(ProjectileData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.Destroyed_40FE015D40E881984FE611B980B75D52
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FProjectileEventData&      ProjectileData                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+
+void UGA_Athena_Grenade_WithTrajectory_C::Destroyed_40FE015D40E881984FE611B980B75D52(const struct FProjectileEventData& ProjectileData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Grenade_WithTrajectory_C", "Destroyed_40FE015D40E881984FE611B980B75D52");
+
+	Params::GA_Athena_Grenade_WithTrajectory_C_Destroyed_40FE015D40E881984FE611B980B75D52 Parms{};
+
+	Parms.ProjectileData = std::move(ProjectileData);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -425,35 +559,6 @@ void UGA_Athena_Grenade_WithTrajectory_C::UpdateTrajectorySpline()
 		Func = Class->GetFunction("GA_Athena_Grenade_WithTrajectory_C", "UpdateTrajectorySpline");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.GetProjectileTrajectoryPoints
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// TArray<struct FVector>*                 OutSplinePoints                                        (Parm, OutParm, HasGetValueTypeHash)
-// TArray<struct FVector>*                 OutSplineTangents                                      (Parm, OutParm, HasGetValueTypeHash)
-// struct FHitResult*                      OutHitResult                                           (Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-
-void UGA_Athena_Grenade_WithTrajectory_C::GetProjectileTrajectoryPoints(TArray<struct FVector>* OutSplinePoints, TArray<struct FVector>* OutSplineTangents, struct FHitResult* OutHitResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Grenade_WithTrajectory_C", "GetProjectileTrajectoryPoints");
-
-	Params::GA_Athena_Grenade_WithTrajectory_C_GetProjectileTrajectoryPoints Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutSplinePoints != nullptr)
-		*OutSplinePoints = std::move(Parms.OutSplinePoints);
-
-	if (OutSplineTangents != nullptr)
-		*OutSplineTangents = std::move(Parms.OutSplineTangents);
-
-	if (OutHitResult != nullptr)
-		*OutHitResult = std::move(Parms.OutHitResult);
 }
 
 
@@ -570,23 +675,32 @@ TSubclassOf<class AFortProjectileTrajectory> UGA_Athena_Grenade_WithTrajectory_C
 }
 
 
-// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.ShouldOnlyShowTrajectoryOnUse
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Function GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C.GetProjectileTrajectoryPoints
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+// TArray<struct FVector>*                 OutSplinePoints                                        (Parm, OutParm, ZeroConstructor)
+// TArray<struct FVector>*                 OutSplineTangents                                      (Parm, OutParm, ZeroConstructor)
+// struct FHitResult*                      OutHitResult                                           (Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
-bool UGA_Athena_Grenade_WithTrajectory_C::ShouldOnlyShowTrajectoryOnUse() const
+void UGA_Athena_Grenade_WithTrajectory_C::GetProjectileTrajectoryPoints(TArray<struct FVector>* OutSplinePoints, TArray<struct FVector>* OutSplineTangents, struct FHitResult* OutHitResult) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Grenade_WithTrajectory_C", "ShouldOnlyShowTrajectoryOnUse");
+		Func = Class->GetFunction("GA_Athena_Grenade_WithTrajectory_C", "GetProjectileTrajectoryPoints");
 
-	Params::GA_Athena_Grenade_WithTrajectory_C_ShouldOnlyShowTrajectoryOnUse Parms{};
+	Params::GA_Athena_Grenade_WithTrajectory_C_GetProjectileTrajectoryPoints Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue;
+	if (OutSplinePoints != nullptr)
+		*OutSplinePoints = std::move(Parms.OutSplinePoints);
+
+	if (OutSplineTangents != nullptr)
+		*OutSplineTangents = std::move(Parms.OutSplineTangents);
+
+	if (OutHitResult != nullptr)
+		*OutHitResult = std::move(Parms.OutHitResult);
 }
 
 

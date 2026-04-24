@@ -36,20 +36,6 @@ void ULightningViolator_C::ExecuteUbergraph_LightningViolator(int32 EntryPoint)
 }
 
 
-// Function LightningViolator.LightningViolator_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void ULightningViolator_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LightningViolator_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function LightningViolator.LightningViolator_C.EventSetText
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -105,30 +91,6 @@ void ULightningViolator_C::PreConstruct(bool IsDesignTime)
 	Params::LightningViolator_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LightningViolator.LightningViolator_C.TailPosition
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ShowTail                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// EHorizontalAlignment                    HPosition                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    OnTop                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ULightningViolator_C::TailPosition(bool ShowTail, EHorizontalAlignment HPosition, bool OnTop)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LightningViolator_C", "TailPosition");
-
-	Params::LightningViolator_C_TailPosition Parms{};
-
-	Parms.ShowTail = ShowTail;
-	Parms.HPosition = HPosition;
-	Parms.OnTop = OnTop;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

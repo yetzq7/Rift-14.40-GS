@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameplayAbilities_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -91,23 +91,14 @@ public:
 };
 DUMPER7_ASSERTS_GAT_ActiveAbility_C_SendHeroAbilityActivationEvent;
 
-// Function GAT_ActiveAbility.GAT_ActiveAbility_C.EndAbilityWithReason
-// 0x0010 (0x0010 - 0x0000)
-struct GAT_ActiveAbility_C_EndAbilityWithReason final
-{
-public:
-	class FString                                 Reason;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_GAT_ActiveAbility_C_EndAbilityWithReason;
-
 // Function GAT_ActiveAbility.GAT_ActiveAbility_C.K2_ShouldAbilityRespondToEvent
-// 0x0100 (0x0100 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct GAT_ActiveAbility_C_K2_ShouldAbilityRespondToEvent final
 {
 public:
-	struct FGameplayAbilityActorInfo              ActorInfo;                                         // 0x0000(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
-	struct FGameplayEventData                     Payload;                                           // 0x0048(0x00B0)(BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          ReturnValue;                                       // 0x00F8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	struct FGameplayAbilityActorInfo              ActorInfo;                                         // 0x0000(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
+	struct FGameplayEventData                     Payload;                                           // 0x0040(0x00A8)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          ReturnValue;                                       // 0x00E8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_GAT_ActiveAbility_C_K2_ShouldAbilityRespondToEvent;
 

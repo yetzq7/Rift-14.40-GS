@@ -16,8 +16,8 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_BoostJump_IsUsingJetpack.GE_BoostJump_IsUsingJetpack_C
-// 0x0000 (0x07B8 - 0x07B8)
-class UGE_BoostJump_IsUsingJetpack_C : public UGameplayEffect
+// 0x0000 (0x05F0 - 0x05F0)
+class UGE_BoostJump_IsUsingJetpack_C final : public UGameplayEffect
 {
 public:
 	static class UClass* StaticClass()

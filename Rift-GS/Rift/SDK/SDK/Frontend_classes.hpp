@@ -16,37 +16,37 @@
 
 SDK_NAMESPACE_START
 
-// BlueprintGeneratedClass Frontend.Frontend_C
-// 0x0018 (0x0250 - 0x0238)
-class AFrontend_C final : public AFortLevelScriptActor
+// BlueprintGeneratedClass Frontend.FrontEnd_C
+// 0x0018 (0x0360 - 0x0348)
+class AFrontEnd_C final : public AFortLevelScriptActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          NewLobby;                                          // 0x0240(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          NewVar_0;                                          // 0x0241(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_242[0x6];                                      // 0x0242(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AHBOnboardingFlow_C*                    HBOnboardingFlow_ExecuteUbergraph_Frontend_RefProperty; // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          NewLobby;                                          // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_351[0x7];                                      // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AHBOnboardingFlow_C*                    HBOnboardingFlow_ExecuteUbergraph_Frontend_RefProperty; // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void PlaySpeech(const class FString& Filename, int32 SampleRate, class USoundWave* AssetFile);
+	void ExecuteUbergraph_FrontEnd(int32 EntryPoint);
 	void OnMatchStarted();
+	void ReceiveBeginPlay();
 	void EnableTutorial();
-	void ExecuteUbergraph_Frontend(int32 EntryPoint);
+	void PlaySpeech(const class FString& Filename, int32 SampleRate, class USoundWave* AssetFile);
 
 public:
 	static class UClass* StaticClass()
 	{
-		BP_STATIC_CLASS_IMPL("Frontend_C")
+		BP_STATIC_CLASS_IMPL("FrontEnd_C")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"Frontend_C")
+		STATIC_NAME_IMPL(L"FrontEnd_C")
 	}
-	static class AFrontend_C* GetDefaultObj()
+	static class AFrontEnd_C* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AFrontend_C>();
+		return GetDefaultObjImpl<AFrontEnd_C>();
 	}
 };
-DUMPER7_ASSERTS_AFrontend_C;
+DUMPER7_ASSERTS_AFrontEnd_C;
 
 SDK_NAMESPACE_END

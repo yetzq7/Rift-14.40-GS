@@ -36,76 +36,6 @@ void AB_Prj_Athena_FragGrenade_C::ExecuteUbergraph_B_Prj_Athena_FragGrenade(int3
 }
 
 
-// Function B_Prj_Athena_FragGrenade.B_Prj_Athena_FragGrenade_C.Pre Explo Audio Tell
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Athena_FragGrenade_C::Pre_Explo_Audio_Tell()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_FragGrenade_C", "Pre Explo Audio Tell");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_FragGrenade.B_Prj_Athena_FragGrenade_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AB_Prj_Athena_FragGrenade_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_FragGrenade_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_FragGrenade.B_Prj_Athena_FragGrenade_C.OnBounce
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-
-void AB_Prj_Athena_FragGrenade_C::OnBounce(const struct FHitResult& Hit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_FragGrenade_C", "OnBounce");
-
-	Params::B_Prj_Athena_FragGrenade_C_OnBounce Parms{};
-
-	Parms.Hit = std::move(Hit);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Prj_Athena_FragGrenade.B_Prj_Athena_FragGrenade_C.OnExploded
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const TArray<class AActor*>&            HitActors                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-// const TArray<struct FHitResult>&        HitResults                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
-
-void AB_Prj_Athena_FragGrenade_C::OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_FragGrenade_C", "OnExploded");
-
-	Params::B_Prj_Athena_FragGrenade_C_OnExploded Parms{};
-
-	Parms.HitActors = std::move(HitActors);
-	Parms.HitResults = std::move(HitResults);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_Prj_Athena_FragGrenade.B_Prj_Athena_FragGrenade_C.FuseEnded
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -120,29 +50,15 @@ void AB_Prj_Athena_FragGrenade_C::FuseEnded()
 }
 
 
-// Function B_Prj_Athena_FragGrenade.B_Prj_Athena_FragGrenade_C.PreExploWarning__UpdateFunc
-// (BlueprintEvent)
+// Function B_Prj_Athena_FragGrenade.B_Prj_Athena_FragGrenade_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void AB_Prj_Athena_FragGrenade_C::PreExploWarning__UpdateFunc()
+void AB_Prj_Athena_FragGrenade_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_FragGrenade_C", "PreExploWarning__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Athena_FragGrenade.B_Prj_Athena_FragGrenade_C.PreExploWarning__FinishedFunc
-// (BlueprintEvent)
-
-void AB_Prj_Athena_FragGrenade_C::PreExploWarning__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Athena_FragGrenade_C", "PreExploWarning__FinishedFunc");
+		Func = Class->GetFunction("B_Prj_Athena_FragGrenade_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

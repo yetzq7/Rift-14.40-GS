@@ -36,166 +36,6 @@ void ATeamMemberPedestal_C::ExecuteUbergraph_TeamMemberPedestal(int32 EntryPoint
 }
 
 
-// Function TeamMemberPedestal.TeamMemberPedestal_C.OnDisconnectedToCampaignLobby
-// (Event, Protected, BlueprintEvent)
-
-void ATeamMemberPedestal_C::OnDisconnectedToCampaignLobby()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "OnDisconnectedToCampaignLobby");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.TransitionfromCharactertoLoadingscreen
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Bool                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ATeamMemberPedestal_C::TransitionfromCharactertoLoadingscreen(bool Bool)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "TransitionfromCharactertoLoadingscreen");
-
-	Params::TeamMemberPedestal_C_TransitionfromCharactertoLoadingscreen Parms{};
-
-	Parms.Bool = Bool;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.TransitionToLoadingScreen
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Bool                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ATeamMemberPedestal_C::TransitionToLoadingScreen(bool Bool)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "TransitionToLoadingScreen");
-
-	Params::TeamMemberPedestal_C_TransitionToLoadingScreen Parms{};
-
-	Parms.Bool = Bool;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.TransitionToCharacterScreen
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Bool                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ATeamMemberPedestal_C::TransitionToCharacterScreen(bool Bool)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "TransitionToCharacterScreen");
-
-	Params::TeamMemberPedestal_C_TransitionToCharacterScreen Parms{};
-
-	Parms.Bool = Bool;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.OnAvatarChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UTexture2D*                       AvatarImage                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FColor&                    AvatarBackground                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FColor&                    HighlightColor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ATeamMemberPedestal_C::OnAvatarChanged(class UTexture2D* AvatarImage, const struct FColor& AvatarBackground, const struct FColor& HighlightColor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "OnAvatarChanged");
-
-	Params::TeamMemberPedestal_C_OnAvatarChanged Parms{};
-
-	Parms.AvatarImage = AvatarImage;
-	Parms.AvatarBackground = std::move(AvatarBackground);
-	Parms.HighlightColor = std::move(HighlightColor);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.OnPreviewActorSpawned
-// (Event, Protected, BlueprintEvent)
-
-void ATeamMemberPedestal_C::OnPreviewActorSpawned()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "OnPreviewActorSpawned");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void ATeamMemberPedestal_C::OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void ATeamMemberPedestal_C::OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.OnTeamMemberSet
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bHasValidTeamMember                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ATeamMemberPedestal_C::OnTeamMemberSet(bool bHasValidTeamMember)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "OnTeamMemberSet");
-
-	Params::TeamMemberPedestal_C_OnTeamMemberSet Parms{};
-
-	Parms.bHasValidTeamMember = bHasValidTeamMember;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function TeamMemberPedestal.TeamMemberPedestal_C.OnItemClicked
 // (Event, Protected, BlueprintEvent)
 
@@ -210,123 +50,12 @@ void ATeamMemberPedestal_C::OnItemClicked()
 }
 
 
-// Function TeamMemberPedestal.TeamMemberPedestal_C.OnConnectedToCampaignLobby
-// (Event, Protected, BlueprintEvent)
-
-void ATeamMemberPedestal_C::OnConnectedToCampaignLobby()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "OnConnectedToCampaignLobby");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.OnOwningPedestalGroupEstablished
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// int32                                   SquadIdx                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bSquadHasLocalPlayer                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    bIsPopulated                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ATeamMemberPedestal_C::OnOwningPedestalGroupEstablished(int32 SquadIdx, bool bSquadHasLocalPlayer, bool bIsPopulated)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "OnOwningPedestalGroupEstablished");
-
-	Params::TeamMemberPedestal_C_OnOwningPedestalGroupEstablished Parms{};
-
-	Parms.SquadIdx = SquadIdx;
-	Parms.bSquadHasLocalPlayer = bSquadHasLocalPlayer;
-	Parms.bIsPopulated = bIsPopulated;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.OnNewSquadEstablished
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// bool                                    bMultipleSquadsPopulated                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    bOwningSquadContainsLocalPlayer                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// const struct FAthenaTeamDisplayInfo&    OwningSquadStyle                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void ATeamMemberPedestal_C::OnNewSquadEstablished(bool bMultipleSquadsPopulated, bool bOwningSquadContainsLocalPlayer, const struct FAthenaTeamDisplayInfo& OwningSquadStyle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "OnNewSquadEstablished");
-
-	Params::TeamMemberPedestal_C_OnNewSquadEstablished Parms{};
-
-	Parms.bMultipleSquadsPopulated = bMultipleSquadsPopulated;
-	Parms.bOwningSquadContainsLocalPlayer = bOwningSquadContainsLocalPlayer;
-	Parms.OwningSquadStyle = std::move(OwningSquadStyle);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.OnGameReadinessChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// EGameReadiness                          GameReadiness                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ATeamMemberPedestal_C::OnGameReadinessChanged(EGameReadiness GameReadiness)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "OnGameReadinessChanged");
-
-	Params::TeamMemberPedestal_C_OnGameReadinessChanged Parms{};
-
-	Parms.GameReadiness = GameReadiness;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.HidePad
-// (BlueprintCallable, BlueprintEvent)
-
-void ATeamMemberPedestal_C::HidePad()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "HidePad");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.SpawnPad
-// (BlueprintCallable, BlueprintEvent)
-
-void ATeamMemberPedestal_C::SpawnPad()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "SpawnPad");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function TeamMemberPedestal.TeamMemberPedestal_C.OnPedestalIsPopulatedChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
 // bool                                    bIsPopulated                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    bOwningSquadContainsLocalPlayer                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ATeamMemberPedestal_C::OnPedestalIsPopulatedChanged(bool bIsPopulated, bool bOwningSquadContainsLocalPlayer)
+void ATeamMemberPedestal_C::OnPedestalIsPopulatedChanged(bool bIsPopulated)
 {
 	static class UFunction* Func = nullptr;
 
@@ -336,7 +65,6 @@ void ATeamMemberPedestal_C::OnPedestalIsPopulatedChanged(bool bIsPopulated, bool
 	Params::TeamMemberPedestal_C_OnPedestalIsPopulatedChanged Parms{};
 
 	Parms.bIsPopulated = bIsPopulated;
-	Parms.bOwningSquadContainsLocalPlayer = bOwningSquadContainsLocalPlayer;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -362,27 +90,65 @@ void ATeamMemberPedestal_C::OnIsCurrentlyInMatchChanged(bool bIsInMatch)
 }
 
 
-// Function TeamMemberPedestal.TeamMemberPedestal_C.HandleClientEvent_StoreTabSelected
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function TeamMemberPedestal.TeamMemberPedestal_C.RefreshBattlePassOwnerVisuals
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                          EventSource                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          EventFocus                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FFortClientEvent&          ClientEvent                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// bool                                    bOwnsBattlePass                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ATeamMemberPedestal_C::HandleClientEvent_StoreTabSelected(class UObject* EventSource, class UObject* EventFocus, const struct FFortClientEvent& ClientEvent)
+void ATeamMemberPedestal_C::RefreshBattlePassOwnerVisuals(bool bOwnsBattlePass)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "HandleClientEvent_StoreTabSelected");
+		Func = Class->GetFunction("TeamMemberPedestal_C", "RefreshBattlePassOwnerVisuals");
 
-	Params::TeamMemberPedestal_C_HandleClientEvent_StoreTabSelected Parms{};
+	Params::TeamMemberPedestal_C_RefreshBattlePassOwnerVisuals Parms{};
 
-	Parms.EventSource = EventSource;
-	Parms.EventFocus = EventFocus;
-	Parms.ClientEvent = std::move(ClientEvent);
+	Parms.bOwnsBattlePass = bOwnsBattlePass;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TeamMemberPedestal.TeamMemberPedestal_C.OnConnectedToCampaignLobby
+// (Event, Protected, BlueprintEvent)
+
+void ATeamMemberPedestal_C::OnConnectedToCampaignLobby()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_C", "OnConnectedToCampaignLobby");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TeamMemberPedestal.TeamMemberPedestal_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ATeamMemberPedestal_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TeamMemberPedestal.TeamMemberPedestal_C.OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void ATeamMemberPedestal_C::OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_C", "OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -410,149 +176,41 @@ void ATeamMemberPedestal_C::HandleClientEvent_StoreTabClosed(class UObject* Even
 }
 
 
-// Function TeamMemberPedestal.TeamMemberPedestal_C.ReceiveBeginPlay
+// Function TeamMemberPedestal.TeamMemberPedestal_C.OnHovered
 // (Event, Protected, BlueprintEvent)
 
-void ATeamMemberPedestal_C::ReceiveBeginPlay()
+void ATeamMemberPedestal_C::OnHovered()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("TeamMemberPedestal_C", "OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function TeamMemberPedestal.TeamMemberPedestal_C.OnLoaded_D1FFD29E4F2735025D7C19B62CBA97B9
-// (BlueprintCallable, BlueprintEvent)
+// Function TeamMemberPedestal.TeamMemberPedestal_C.HandleClientEvent_StoreTabSelected
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          EventSource                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          EventFocus                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FFortClientEvent&          ClientEvent                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
-void ATeamMemberPedestal_C::OnLoaded_D1FFD29E4F2735025D7C19B62CBA97B9(class UObject* Loaded)
+void ATeamMemberPedestal_C::HandleClientEvent_StoreTabSelected(class UObject* EventSource, class UObject* EventFocus, const struct FFortClientEvent& ClientEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "OnLoaded_D1FFD29E4F2735025D7C19B62CBA97B9");
+		Func = Class->GetFunction("TeamMemberPedestal_C", "HandleClientEvent_StoreTabSelected");
 
-	Params::TeamMemberPedestal_C_OnLoaded_D1FFD29E4F2735025D7C19B62CBA97B9 Parms{};
+	Params::TeamMemberPedestal_C_HandleClientEvent_StoreTabSelected Parms{};
 
-	Parms.Loaded = Loaded;
+	Parms.EventSource = EventSource;
+	Parms.EventFocus = EventFocus;
+	Parms.ClientEvent = std::move(ClientEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.Timeline_2__UpdateFunc
-// (BlueprintEvent)
-
-void ATeamMemberPedestal_C::Timeline_2__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "Timeline_2__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.Timeline_2__FinishedFunc
-// (BlueprintEvent)
-
-void ATeamMemberPedestal_C::Timeline_2__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "Timeline_2__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.Timeline_1__UpdateFunc
-// (BlueprintEvent)
-
-void ATeamMemberPedestal_C::Timeline_1__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "Timeline_1__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.Timeline_1__FinishedFunc
-// (BlueprintEvent)
-
-void ATeamMemberPedestal_C::Timeline_1__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "Timeline_1__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.Timeline_0__UpdateFunc
-// (BlueprintEvent)
-
-void ATeamMemberPedestal_C::Timeline_0__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "Timeline_0__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.Timeline_0__FinishedFunc
-// (BlueprintEvent)
-
-void ATeamMemberPedestal_C::Timeline_0__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "Timeline_0__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.FadeInPodium__UpdateFunc
-// (BlueprintEvent)
-
-void ATeamMemberPedestal_C::FadeInPodium__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "FadeInPodium__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.FadeInPodium__FinishedFunc
-// (BlueprintEvent)
-
-void ATeamMemberPedestal_C::FadeInPodium__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "FadeInPodium__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -567,6 +225,154 @@ void ATeamMemberPedestal_C::UserConstructionScript()
 		Func = Class->GetFunction("TeamMemberPedestal_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TeamMemberPedestal.TeamMemberPedestal_C.InitializeContextEvents
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ATeamMemberPedestal_C::InitializeContextEvents()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_C", "InitializeContextEvents");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TeamMemberPedestal.TeamMemberPedestal_C.OnFrontEndCameraChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFrontEndCamera                         NewCamera                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFrontEndCamera                         OldCamera                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ATeamMemberPedestal_C::OnFrontEndCameraChanged(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_C", "OnFrontEndCameraChanged");
+
+	Params::TeamMemberPedestal_C_OnFrontEndCameraChanged Parms{};
+
+	Parms.NewCamera = NewCamera;
+	Parms.OldCamera = OldCamera;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TeamMemberPedestal.TeamMemberPedestal_C.OnTeamMemberStateChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FFortTeamMemberInfo&       TeamMemberInfo                                         (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ATeamMemberPedestal_C::OnTeamMemberStateChanged(const struct FFortTeamMemberInfo& TeamMemberInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_C", "OnTeamMemberStateChanged");
+
+	Params::TeamMemberPedestal_C_OnTeamMemberStateChanged Parms{};
+
+	Parms.TeamMemberInfo = std::move(TeamMemberInfo);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TeamMemberPedestal.TeamMemberPedestal_C.RefreshWidgets
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ATeamMemberPedestal_C::RefreshWidgets()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_C", "RefreshWidgets");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TeamMemberPedestal.TeamMemberPedestal_C.PlayLobbyAnimation
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ATeamMemberPedestal_C::PlayLobbyAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_C", "PlayLobbyAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TeamMemberPedestal.TeamMemberPedestal_C.IsInLobby
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   IsInLobby_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ATeamMemberPedestal_C::IsInLobby(bool* IsInLobby_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_C", "IsInLobby");
+
+	Params::TeamMemberPedestal_C_IsInLobby Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsInLobby_0 != nullptr)
+		*IsInLobby_0 = Parms.IsInLobby_0;
+}
+
+
+// Function TeamMemberPedestal.TeamMemberPedestal_C.CompletedQuestPrerequisites
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   bCompleted                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ATeamMemberPedestal_C::CompletedQuestPrerequisites(bool* bCompleted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_C", "CompletedQuestPrerequisites");
+
+	Params::TeamMemberPedestal_C_CompletedQuestPrerequisites Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bCompleted != nullptr)
+		*bCompleted = Parms.bCompleted;
+}
+
+
+// Function TeamMemberPedestal.TeamMemberPedestal_C.OnPartyDataChanged
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FFortTeamMemberInfo&             MemberInfo                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+
+void ATeamMemberPedestal_C::OnPartyDataChanged(struct FFortTeamMemberInfo& MemberInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMemberPedestal_C", "OnPartyDataChanged");
+
+	Params::TeamMemberPedestal_C_OnPartyDataChanged Parms{};
+
+	Parms.MemberInfo = std::move(MemberInfo);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	MemberInfo = std::move(Parms.MemberInfo);
 }
 
 
@@ -599,166 +405,6 @@ void ATeamMemberPedestal_C::HandleHoverInputActions(bool bIsHovered)
 	Params::TeamMemberPedestal_C_HandleHoverInputActions Parms{};
 
 	Parms.bIsHovered = bIsHovered;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.InitializeContextEvents
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ATeamMemberPedestal_C::InitializeContextEvents()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "InitializeContextEvents");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.OnFrontEndCameraChanged
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EFrontEndCamera                         New_Camera                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EFrontEndCamera                         Old_Camera                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ATeamMemberPedestal_C::OnFrontEndCameraChanged(EFrontEndCamera New_Camera, EFrontEndCamera Old_Camera)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "OnFrontEndCameraChanged");
-
-	Params::TeamMemberPedestal_C_OnFrontEndCameraChanged Parms{};
-
-	Parms.New_Camera = New_Camera;
-	Parms.Old_Camera = Old_Camera;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.RefreshWidgets
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ATeamMemberPedestal_C::RefreshWidgets()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "RefreshWidgets");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.PlayLobbyAnimation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ATeamMemberPedestal_C::PlayLobbyAnimation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "PlayLobbyAnimation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.OnTeamMemberStateChanged
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FFortTeamMemberInfo&       Team_Member_Info                                       (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void ATeamMemberPedestal_C::OnTeamMemberStateChanged(const struct FFortTeamMemberInfo& Team_Member_Info)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "OnTeamMemberStateChanged");
-
-	Params::TeamMemberPedestal_C_OnTeamMemberStateChanged Parms{};
-
-	Parms.Team_Member_Info = std::move(Team_Member_Info);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.OnPartyDataChanged
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FFortTeamMemberInfo&             Member_Info                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-
-void ATeamMemberPedestal_C::OnPartyDataChanged(struct FFortTeamMemberInfo& Member_Info)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "OnPartyDataChanged");
-
-	Params::TeamMemberPedestal_C_OnPartyDataChanged Parms{};
-
-	Parms.Member_Info = std::move(Member_Info);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Member_Info = std::move(Parms.Member_Info);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.SetFakeBlobShadowVisiblity
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ATeamMemberPedestal_C::SetFakeBlobShadowVisiblity(bool Visible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "SetFakeBlobShadowVisiblity");
-
-	Params::TeamMemberPedestal_C_SetFakeBlobShadowVisiblity Parms{};
-
-	Parms.Visible = Visible;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.StopLobbyAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ATeamMemberPedestal_C::StopLobbyAnimation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "StopLobbyAnimation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TeamMemberPedestal.TeamMemberPedestal_C.SetSparkleParticlesEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsEnabled                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ATeamMemberPedestal_C::SetSparkleParticlesEnabled(bool IsEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberPedestal_C", "SetSparkleParticlesEnabled");
-
-	Params::TeamMemberPedestal_C_SetSparkleParticlesEnabled Parms{};
-
-	Parms.IsEnabled = IsEnabled;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

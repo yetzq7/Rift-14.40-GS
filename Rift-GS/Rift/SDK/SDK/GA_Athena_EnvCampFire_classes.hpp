@@ -10,58 +10,41 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Athena_EnvCampFire.GA_Athena_EnvCampFire_C
-// 0x0148 (0x0BF0 - 0x0AA8)
+// 0x00A8 (0x09E0 - 0x0938)
 class UGA_Athena_EnvCampFire_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         TimeBetweenHeals;                                  // 0x0AB0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AB4[0x4];                                      // 0x0AB4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           Timer_ApplyHeal;                                   // 0x0AB8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxHeals;                                          // 0x0AC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentHeals;                                      // 0x0AC4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AC8[0x8];                                      // 0x0AC8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CustomTargeting;                                   // 0x0AD0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	float                                         TargetingHeightOffset;                             // 0x0B00(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B04[0x4];                                      // 0x0B04(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         Row_MaxHeals;                                      // 0x0B08(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         Row_TimeBetweenHeals;                              // 0x0B28(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         StokeTimeBetweenHeals;                             // 0x0B48(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B4C[0x4];                                      // 0x0B4C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         Row_StokeDuration;                                 // 0x0B50(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         Row_Stoke_TimeBetweenHeals;                        // 0x0B70(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         Row_Stoke_MaxHeals_Extension;                      // 0x0B90(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          IsStoked;                                          // 0x0BB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BB1[0x7];                                      // 0x0BB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         Row_HealPerTick;                                   // 0x0BB8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTag                           GC_StokedLoop;                                     // 0x0BD8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           GC_StokeBurst;                                     // 0x0BE0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_BGA_Athena_EnvCampFire_C*            Campfire;                                          // 0x0BE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0938(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         TimeBetweenHeals;                                  // 0x0940(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_944[0x4];                                      // 0x0944(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           Timer_ApplyHeal;                                   // 0x0948(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxHeals;                                          // 0x0950(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentHeals;                                      // 0x0954(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_958[0x8];                                      // 0x0958(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CustomTargeting;                                   // 0x0960(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	float                                         TargetingHeightOffset;                             // 0x0990(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_994[0x4];                                      // 0x0994(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         Row_MaxHeals;                                      // 0x0998(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         Row_TimeBetweenHeals;                              // 0x09B8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_GA_Athena_EnvCampFire(int32 EntryPoint);
-	void ForceEndAbility();
-	void EndEvent();
-	void SetIsStoked(bool IsStoked_0);
-	void FinishStoke();
 	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData);
 	void ApplyHeal();
 	void K2_OnEndAbility(bool bWasCancelled);
-	void EventReceived_63E2BB3E47E5E63C7A4A0A8C45DC23E4(const struct FGameplayEventData& Payload);
 	void Targeted_EDAB937443020D47385625B06E892DF0(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 	void Cancelled_EDAB937443020D47385625B06E892DF0(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 	void SetCustomTargetingTrans();
-	void SetBalanceValues(bool Stoke);
+	void SetBalanceValues();
 
 	struct FTransform GetCustomAbilitySourceTransform() const;
 

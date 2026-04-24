@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass v3_PlayerCameraModeMelee.v3_PlayerCameraModeMelee_C
-// 0x0000 (0x0DC0 - 0x0DC0)
+// 0x0000 (0x0C50 - 0x0C50)
 class Uv3_PlayerCameraModeMelee_C final : public Uv3_PlayerCameraModeBase_C
 {
 public:

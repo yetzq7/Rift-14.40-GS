@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_DefaultPlayer_Tooltips.GE_DefaultPlayer_Tooltips_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x05F0 - 0x05F0)
 class UGE_DefaultPlayer_Tooltips_C final : public UGameplayEffect
 {
 public:

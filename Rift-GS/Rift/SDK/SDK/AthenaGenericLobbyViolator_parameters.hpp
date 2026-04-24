@@ -24,7 +24,7 @@ public:
 	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0030(0x0018)()
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_TextToUpper_ReturnValue_1;                // 0x0050(0x0018)()
+	class FText                                   CallFunc_TextToUpper_ReturnValue1;                 // 0x0050(0x0018)()
 };
 DUMPER7_ASSERTS_AthenaGenericLobbyViolator_C_SetGamemodeName;
 

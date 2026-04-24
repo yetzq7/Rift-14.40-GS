@@ -36,92 +36,6 @@ void APlayerPawn_Athena_Generic_Parent_C::ExecuteUbergraph_PlayerPawn_Athena_Gen
 }
 
 
-// Function PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C.K2_OnEndCrouch
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   HalfHeightAdjust                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   ScaledHalfHeightAdjust                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APlayerPawn_Athena_Generic_Parent_C::K2_OnEndCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawn_Athena_Generic_Parent_C", "K2_OnEndCrouch");
-
-	Params::PlayerPawn_Athena_Generic_Parent_C_K2_OnEndCrouch Parms{};
-
-	Parms.HalfHeightAdjust = HalfHeightAdjust;
-	Parms.ScaledHalfHeightAdjust = ScaledHalfHeightAdjust;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C.K2_OnStartCrouch
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   HalfHeightAdjust                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   ScaledHalfHeightAdjust                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APlayerPawn_Athena_Generic_Parent_C::K2_OnStartCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawn_Athena_Generic_Parent_C", "K2_OnStartCrouch");
-
-	Params::PlayerPawn_Athena_Generic_Parent_C_K2_OnStartCrouch Parms{};
-
-	Parms.HalfHeightAdjust = HalfHeightAdjust;
-	Parms.ScaledHalfHeightAdjust = ScaledHalfHeightAdjust;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C.OnJumped
-// (Event, Public, BlueprintEvent)
-
-void APlayerPawn_Athena_Generic_Parent_C::OnJumped()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawn_Athena_Generic_Parent_C", "OnJumped");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C.OnExitedVehicle
-// (Event, Public, BlueprintEvent)
-
-void APlayerPawn_Athena_Generic_Parent_C::OnExitedVehicle()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawn_Athena_Generic_Parent_C", "OnExitedVehicle");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C.OnEnteredVehicle
-// (Event, Public, BlueprintEvent)
-
-void APlayerPawn_Athena_Generic_Parent_C::OnEnteredVehicle()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawn_Athena_Generic_Parent_C", "OnEnteredVehicle");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -131,6 +45,20 @@ void APlayerPawn_Athena_Generic_Parent_C::ReceiveBeginPlay()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("PlayerPawn_Athena_Generic_Parent_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void APlayerPawn_Athena_Generic_Parent_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerPawn_Athena_Generic_Parent_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

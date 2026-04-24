@@ -17,18 +17,19 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_Grenade_Playset_Athena.B_Grenade_Playset_Athena_C
-// 0x0010 (0x0CD8 - 0x0CC8)
+// 0x0010 (0x0998 - 0x0988)
 class AB_Grenade_Playset_Athena_C : public AB_Grenade_Tower_Athena_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_Grenade_Playset_Athena_C;         // 0x0CC8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UFortPlaysetGrenadeInputComponent*      AthenaPlaysetGrenadeInput;                         // 0x0CD0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0988(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UFortPlaysetGrenadeInputComponent*      AthenaPlaysetGrenadeInput;                         // 0x0990(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_Grenade_Playset_Athena(int32 EntryPoint);
-	void ReceiveBeginPlay();
-	void OnWeaponAttached();
 	void K2_OnUnEquip();
+	void OnWeaponAttached();
+	void ReceiveBeginPlay();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

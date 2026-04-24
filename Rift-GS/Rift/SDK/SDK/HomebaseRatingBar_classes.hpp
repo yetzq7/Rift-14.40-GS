@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass HomebaseRatingBar.HomebaseRatingBar_C
-// 0x0000 (0x03C0 - 0x03C0)
+// 0x0000 (0x0370 - 0x0370)
 class UHomebaseRatingBar_C final : public UFortMaterialProgressBar
 {
 public:

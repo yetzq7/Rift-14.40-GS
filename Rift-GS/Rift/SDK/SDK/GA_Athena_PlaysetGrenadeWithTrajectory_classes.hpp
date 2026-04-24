@@ -17,16 +17,16 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C
-// 0x0028 (0x0E90 - 0x0E68)
+// 0x0028 (0x0C60 - 0x0C38)
 class UGA_Athena_PlaysetGrenadeWithTrajectory_C : public UGA_Athena_UtilityGrenade_WithTrajectory_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Athena_PlaysetGrenadeWithTrajectory_C; // 0x0E68(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class ABP_ProjectileTrajectory_C*             ProjectileTrajectoryRed;                           // 0x0E70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 RedIndicatorClass;                                 // 0x0E78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortPlaysetItemDefinition*             DefaultPlayset;                                    // 0x0E80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bShouldNotThrow;                                   // 0x0E88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          CanConsume;                                        // 0x0E89(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Athena_PlaysetGrenadeWithTrajectory_C; // 0x0C38(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class ABP_ProjectileTrajectory_C*             ProjectileTrajectoryRed;                           // 0x0C40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 RedIndicatorClass;                                 // 0x0C48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortPlaysetItemDefinition*             DefaultPlayset;                                    // 0x0C50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShouldNotThrow;                                   // 0x0C58(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          CanConsume;                                        // 0x0C59(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory(int32 EntryPoint);

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass v2_PlayerCameraModeTargetingRifle.v2_PlayerCameraModeTargetingRifle_C
-// 0x0000 (0x0DC0 - 0x0DC0)
+// 0x0000 (0x0C50 - 0x0C50)
 class Uv2_PlayerCameraModeTargetingRifle_C final : public Uv2_PlayerCameraModeRanged_C
 {
 public:

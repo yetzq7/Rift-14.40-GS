@@ -10,18 +10,61 @@
 
 #include "Basic.hpp"
 
-#include "Account_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Account_structs.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Class Account.OnlineAccountCommon
+// 0x0628 (0x0650 - 0x0028)
+class UOnlineAccountCommon : public UObject
+{
+public:
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AvailabilityServiceGameName;                       // 0x0038(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bRequireLightswitchAtStartup;                      // 0x0048(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 EulaKey;                                           // 0x0050(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FWebEnvUrl>                     WebCreateEpicAccountUrl;                           // 0x0060(0x0010)(ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
+	bool                                          bAllowLocalLogout;                                 // 0x0070(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SkipRedeemOfflinePurchasesChance;                  // 0x0074(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bShouldGrantFreeAccess;                            // 0x0078(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_79[0x1];                                       // 0x0079(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bUseGameSubAccessRedemption;                       // 0x007A(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bAllowHomeSharingAccess;                           // 0x007B(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bRequireUGCPrivilege;                              // 0x007C(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_7D[0x29B];                                     // 0x007D(0x029B)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AccessGrantDelaySeconds;                           // 0x0318(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_31C[0x4];                                      // 0x031C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWaitingRoomState*                      WaitingRoomState;                                  // 0x0320(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_328[0x2F0];                                    // 0x0328(0x02F0)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bAutoCreateHeadlessAccount;                        // 0x0618(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_619[0x37];                                     // 0x0619(0x0037)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OnlineAccountCommon")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnlineAccountCommon")
+	}
+	static class UOnlineAccountCommon* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineAccountCommon>();
+	}
+};
+DUMPER7_ASSERTS_UOnlineAccountCommon;
 
 // Class Account.ExternalAccountProvider
 // 0x0010 (0x0038 - 0x0028)
 class UExternalAccountProvider final : public UObject
 {
 public:
-	TArray<struct FExternalAccountServiceConfig>  Services;                                          // 0x0028(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FExternalAccountServiceConfig>  Services;                                          // 0x0028(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -63,55 +106,5 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWaitingRoomState;
-
-// Class Account.OnlineAccountCommon
-// 0x0728 (0x0750 - 0x0028)
-class UOnlineAccountCommon : public UObject
-{
-public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AvailabilityServiceGameName;                       // 0x0038(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bRequireLightswitchAtStartup;                      // 0x0048(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 EulaKey;                                           // 0x0050(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMap<class FString, class FString>            EulaKeyMapping;                                    // 0x0060(0x0050)(Config, Protected, NativeAccessSpecifierProtected)
-	bool                                          bEnableWaitingRoom;                                // 0x00B0(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FWebEnvUrl>                     WebCreateEpicAccountUrl;                           // 0x00B8(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bAllowLocalLogout;                                 // 0x00C8(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bAllowLocalLogoutKairos;                           // 0x00C9(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_CA[0x36];                                      // 0x00CA(0x0036)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 RedeemAccessUrl;                                   // 0x0100(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 RequestFreeAccessUrl;                              // 0x0110(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 RealGameAccessUrl;                                 // 0x0120(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         SkipRedeemOfflinePurchasesChance;                  // 0x0130(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bUseFreeAccessInsteadOfGameAccess;                 // 0x0134(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bShouldGrantFreeAccess;                            // 0x0135(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_136[0x1];                                      // 0x0136(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bAllowHomeSharingAccess;                           // 0x0137(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bRequireUGCPrivilege;                              // 0x0138(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_139[0x29F];                                    // 0x0139(0x029F)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AccessGrantDelaySeconds;                           // 0x03D8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3DC[0x4];                                      // 0x03DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWaitingRoomState*                      WaitingRoomState;                                  // 0x03E0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3E8[0x330];                                    // 0x03E8(0x0330)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bAutoCreateHeadlessAccount;                        // 0x0718(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_719[0x37];                                     // 0x0719(0x0037)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OnlineAccountCommon")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OnlineAccountCommon")
-	}
-	static class UOnlineAccountCommon* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineAccountCommon>();
-	}
-};
-DUMPER7_ASSERTS_UOnlineAccountCommon;
 
 SDK_NAMESPACE_END

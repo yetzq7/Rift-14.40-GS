@@ -64,11 +64,11 @@ public:
 DUMPER7_ASSERTS_UCheckBoxWidgetStyle;
 
 // Class Slate.ComboBoxWidgetStyle
-// 0x03F0 (0x0420 - 0x0030)
+// 0x03D8 (0x0408 - 0x0030)
 class UComboBoxWidgetStyle final : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FComboBoxStyle                         ComboBoxStyle;                                     // 0x0030(0x03F0)(Edit, NativeAccessSpecifierPublic)
+	struct FComboBoxStyle                         ComboBoxStyle;                                     // 0x0030(0x03D8)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -87,11 +87,11 @@ public:
 DUMPER7_ASSERTS_UComboBoxWidgetStyle;
 
 // Class Slate.ComboButtonWidgetStyle
-// 0x03B8 (0x03E8 - 0x0030)
+// 0x03A0 (0x03D0 - 0x0030)
 class UComboButtonWidgetStyle final : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FComboButtonStyle                      ComboButtonStyle;                                  // 0x0030(0x03B8)(Edit, NativeAccessSpecifierPublic)
+	struct FComboButtonStyle                      ComboButtonStyle;                                  // 0x0030(0x03A0)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -293,25 +293,5 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UTextBlockWidgetStyle;
-
-// Class Slate.ToolMenuBase
-// 0x0000 (0x0028 - 0x0028)
-class UToolMenuBase final : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ToolMenuBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ToolMenuBase")
-	}
-	static class UToolMenuBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UToolMenuBase>();
-	}
-};
-DUMPER7_ASSERTS_UToolMenuBase;
 
 SDK_NAMESPACE_END

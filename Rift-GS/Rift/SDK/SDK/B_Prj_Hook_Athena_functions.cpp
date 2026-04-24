@@ -36,44 +36,6 @@ void AB_Prj_Hook_Athena_C::ExecuteUbergraph_B_Prj_Hook_Athena(int32 EntryPoint)
 }
 
 
-// Function B_Prj_Hook_Athena.B_Prj_Hook_Athena_C.Grapple
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Hook_Athena_C::Grapple()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Hook_Athena_C", "Grapple");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Hook_Athena.B_Prj_Hook_Athena_C.BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class AFortWaterBodyActor*              WaterBody                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UFortWaterInteractionComponent*   WaterInteractionComponent_0                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsFirstBody                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AB_Prj_Hook_Athena_C::BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Hook_Athena_C", "BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature");
-
-	Params::B_Prj_Hook_Athena_C_BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature Parms{};
-
-	Parms.WaterBody = WaterBody;
-	Parms.WaterInteractionComponent_0 = WaterInteractionComponent_0;
-	Parms.bIsFirstBody = bIsFirstBody;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_Prj_Hook_Athena.B_Prj_Hook_Athena_C.LaunchCheck
 // (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 
@@ -535,7 +497,7 @@ void AB_Prj_Hook_Athena_C::PlayStickSounds(const struct FVector& Location, class
 
 
 // Function B_Prj_Hook_Athena.B_Prj_Hook_Athena_C.HandleHits
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FHitResult&                Hit                                                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 // class AActor**                          Target_0                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -581,6 +543,20 @@ void AB_Prj_Hook_Athena_C::CalculateYankForce()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Prj_Hook_Athena_C", "CalculateYankForce");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Prj_Hook_Athena.B_Prj_Hook_Athena_C.Grapple
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Prj_Hook_Athena_C::Grapple()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Prj_Hook_Athena_C", "Grapple");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -824,109 +800,6 @@ void AB_Prj_Hook_Athena_C::JackalCheck()
 		Func = Class->GetFunction("B_Prj_Hook_Athena_C", "JackalCheck");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Hook_Athena.B_Prj_Hook_Athena_C.SpawnRope
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortPlayerPawn*                  PlayerPawn_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AB_HookGunRope_C**                RopeSpawned                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Prj_Hook_Athena_C::SpawnRope(class AFortPlayerPawn* PlayerPawn_0, class AB_HookGunRope_C** RopeSpawned)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Hook_Athena_C", "SpawnRope");
-
-	Params::B_Prj_Hook_Athena_C_SpawnRope Parms{};
-
-	Parms.PlayerPawn_0 = PlayerPawn_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (RopeSpawned != nullptr)
-		*RopeSpawned = Parms.RopeSpawned;
-}
-
-
-// Function B_Prj_Hook_Athena.B_Prj_Hook_Athena_C.GiveQuestCredit
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_Prj_Hook_Athena_C::GiveQuestCredit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Hook_Athena_C", "GiveQuestCredit");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Prj_Hook_Athena.B_Prj_Hook_Athena_C.MomentumCheck
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const struct FVector&                   A                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   A2                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-struct FVector AB_Prj_Hook_Athena_C::MomentumCheck(const struct FVector& A, const struct FVector& A2)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Hook_Athena_C", "MomentumCheck");
-
-	Params::B_Prj_Hook_Athena_C_MomentumCheck Parms{};
-
-	Parms.A = std::move(A);
-	Parms.A2 = std::move(A2);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function B_Prj_Hook_Athena.B_Prj_Hook_Athena_C.GetVehicleArc
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-float AB_Prj_Hook_Athena_C::GetVehicleArc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Hook_Athena_C", "GetVehicleArc");
-
-	Params::B_Prj_Hook_Athena_C_GetVehicleArc Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function B_Prj_Hook_Athena.B_Prj_Hook_Athena_C.GetVehicleLaunchMult
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-float AB_Prj_Hook_Athena_C::GetVehicleLaunchMult()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Prj_Hook_Athena_C", "GetVehicleLaunchMult");
-
-	Params::B_Prj_Hook_Athena_C_GetVehicleLaunchMult Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 

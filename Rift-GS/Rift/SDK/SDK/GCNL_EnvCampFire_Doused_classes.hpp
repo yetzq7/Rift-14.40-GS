@@ -18,24 +18,24 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C
-// 0x0038 (0x07F8 - 0x07C0)
+// 0x0038 (0x08B8 - 0x0880)
 class AGCNL_EnvCampFire_Doused_C final : public AFortGameplayCueNotify_Loop
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         Fade_Doused_Smoke_Fade_50A77D974140FDA04967E2BABB987458; // 0x07C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Fade_Doused_Smoke__Direction_50A77D974140FDA04967E2BABB987458; // 0x07CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7CD[0x3];                                      // 0x07CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Fade_Doused_Smoke;                                 // 0x07D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         Row_Duration;                                      // 0x07D8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0880(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         Fade_Doused_Smoke_Fade_50A77D974140FDA04967E2BABB987458; // 0x0888(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Fade_Doused_Smoke__Direction_50A77D974140FDA04967E2BABB987458; // 0x088C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_88D[0x3];                                      // 0x088D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Fade_Doused_Smoke;                                 // 0x0890(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         Row_Duration;                                      // 0x0898(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_GCNL_EnvCampFire_Doused(int32 EntryPoint);
-	void DestroyOnDestroy(class AActor* DestroyedActor);
-	void OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UMatineeCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance);
+	void OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance);
 	void OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents);
-	void Fade_Doused_Smoke__UpdateFunc();
 	void Fade_Doused_Smoke__FinishedFunc();
+	void Fade_Doused_Smoke__UpdateFunc();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

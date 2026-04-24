@@ -36,20 +36,6 @@ void ATrap_Floor_Spikes_C::ExecuteUbergraph_Trap_Floor_Spikes(int32 EntryPoint)
 }
 
 
-// Function Trap_Floor_Spikes.Trap_Floor_Spikes_C.SwitchToAlternateMaterial
-// (BlueprintCosmetic, Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ATrap_Floor_Spikes_C::SwitchToAlternateMaterial()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Trap_Floor_Spikes_C", "SwitchToAlternateMaterial");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Trap_Floor_Spikes.Trap_Floor_Spikes_C.OnInitTeam
 // (Event, Protected, BlueprintEvent)
 
@@ -313,7 +299,7 @@ void ATrap_Floor_Spikes_C::MaterialSweepOnSpikes(float SweepSpeed_0, const struc
 
 
 // Function Trap_Floor_Spikes.Trap_Floor_Spikes_C. ChangeToFriendlyMaterial
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ATrap_Floor_Spikes_C::_ChangeToFriendlyMaterial()
 {

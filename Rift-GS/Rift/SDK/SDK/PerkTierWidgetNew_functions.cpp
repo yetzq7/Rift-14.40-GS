@@ -16,6 +16,62 @@
 
 SDK_NAMESPACE_START
 
+// Function PerkTierWidgetNew.PerkTierWidgetNew_C.ExecuteUbergraph_PerkTierWidgetNew
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UPerkTierWidgetNew_C::ExecuteUbergraph_PerkTierWidgetNew(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PerkTierWidgetNew_C", "ExecuteUbergraph_PerkTierWidgetNew");
+
+	Params::PerkTierWidgetNew_C_ExecuteUbergraph_PerkTierWidgetNew Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PerkTierWidgetNew.PerkTierWidgetNew_C.OnGeneratePerk
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FFortUIPerk&               Perk                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UFortPerkWidget_NUI*              PerkWidget_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UPerkTierWidgetNew_C::OnGeneratePerk(const struct FFortUIPerk& Perk, class UFortPerkWidget_NUI* PerkWidget_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PerkTierWidgetNew_C", "OnGeneratePerk");
+
+	Params::PerkTierWidgetNew_C_OnGeneratePerk Parms{};
+
+	Parms.Perk = std::move(Perk);
+	Parms.PerkWidget_0 = PerkWidget_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PerkTierWidgetNew.PerkTierWidgetNew_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UPerkTierWidgetNew_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PerkTierWidgetNew_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function PerkTierWidgetNew.PerkTierWidgetNew_C.InitializeSettings
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -39,62 +95,6 @@ void UPerkTierWidgetNew_C::InitializeSettings(bool bIncludeName_0, bool bInclude
 	Parms.bUseLegacyFixedSizeIcons_0 = bUseLegacyFixedSizeIcons_0;
 	Parms.IconSize_0 = IconSize_0;
 	Parms.FortPerkTier_0 = std::move(FortPerkTier_0);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PerkTierWidgetNew.PerkTierWidgetNew_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UPerkTierWidgetNew_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PerkTierWidgetNew_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PerkTierWidgetNew.PerkTierWidgetNew_C.OnGeneratePerk
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FFortUIPerk&               Perk                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UFortPerkWidget_NUI*              PerkWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UPerkTierWidgetNew_C::OnGeneratePerk(const struct FFortUIPerk& Perk, class UFortPerkWidget_NUI* PerkWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PerkTierWidgetNew_C", "OnGeneratePerk");
-
-	Params::PerkTierWidgetNew_C_OnGeneratePerk Parms{};
-
-	Parms.Perk = std::move(Perk);
-	Parms.PerkWidget = PerkWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PerkTierWidgetNew.PerkTierWidgetNew_C.ExecuteUbergraph_PerkTierWidgetNew
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UPerkTierWidgetNew_C::ExecuteUbergraph_PerkTierWidgetNew(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PerkTierWidgetNew_C", "ExecuteUbergraph_PerkTierWidgetNew");
-
-	Params::PerkTierWidgetNew_C_ExecuteUbergraph_PerkTierWidgetNew Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

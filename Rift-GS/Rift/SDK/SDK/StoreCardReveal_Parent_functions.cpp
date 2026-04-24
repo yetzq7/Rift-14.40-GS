@@ -16,20 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function StoreCardReveal_Parent.StoreCardReveal_Parent_C.InitiatePinata
-// (BlueprintCallable, BlueprintEvent)
-
-void AStoreCardReveal_Parent_C::InitiatePinata()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreCardReveal_Parent_C", "InitiatePinata");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function StoreCardReveal_Parent.StoreCardReveal_Parent_C.ExecuteUbergraph_StoreCardReveal_Parent
 // (Final, UbergraphFunction)
 // Parameters:
@@ -47,6 +33,34 @@ void AStoreCardReveal_Parent_C::ExecuteUbergraph_StoreCardReveal_Parent(int32 En
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StoreCardReveal_Parent.StoreCardReveal_Parent_C.InitiatePinata
+// (BlueprintCallable, BlueprintEvent)
+
+void AStoreCardReveal_Parent_C::InitiatePinata()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreCardReveal_Parent_C", "InitiatePinata");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreCardReveal_Parent.StoreCardReveal_Parent_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AStoreCardReveal_Parent_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreCardReveal_Parent_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

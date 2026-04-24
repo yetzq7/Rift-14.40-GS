@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function FeaturedCreativeContent.FeaturedCreativeContent_C.ExecuteUbergraph_FeaturedCreativeContent
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -36,63 +36,21 @@ void UFeaturedCreativeContent_C::ExecuteUbergraph_FeaturedCreativeContent(int32 
 }
 
 
-// Function FeaturedCreativeContent.FeaturedCreativeContent_C.BndEvt__CMSImageSlideShow_K2Node_ComponentBoundEvent_0_CarouselIndexChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// int32                                   CurrentPageIndex                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UFeaturedCreativeContent_C::BndEvt__CMSImageSlideShow_K2Node_ComponentBoundEvent_0_CarouselIndexChanged__DelegateSignature(int32 CurrentPageIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FeaturedCreativeContent_C", "BndEvt__CMSImageSlideShow_K2Node_ComponentBoundEvent_0_CarouselIndexChanged__DelegateSignature");
-
-	Params::FeaturedCreativeContent_C_BndEvt__CMSImageSlideShow_K2Node_ComponentBoundEvent_0_CarouselIndexChanged__DelegateSignature Parms{};
-
-	Parms.CurrentPageIndex = CurrentPageIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FeaturedCreativeContent.FeaturedCreativeContent_C.OnSetupAds
+// Function FeaturedCreativeContent.FeaturedCreativeContent_C.OnSetMediaURLs
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const TArray<class FString>&            MediaURLs                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-// const TArray<struct FCreativeAdData>&   AdMetadata                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<class FString>&            MediaURLs                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UFeaturedCreativeContent_C::OnSetupAds(const TArray<class FString>& MediaURLs, const TArray<struct FCreativeAdData>& AdMetadata)
+void UFeaturedCreativeContent_C::OnSetMediaURLs(const TArray<class FString>& MediaURLs)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FeaturedCreativeContent_C", "OnSetupAds");
+		Func = Class->GetFunction("FeaturedCreativeContent_C", "OnSetMediaURLs");
 
-	Params::FeaturedCreativeContent_C_OnSetupAds Parms{};
+	Params::FeaturedCreativeContent_C_OnSetMediaURLs Parms{};
 
 	Parms.MediaURLs = std::move(MediaURLs);
-	Parms.AdMetadata = std::move(AdMetadata);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FeaturedCreativeContent.FeaturedCreativeContent_C.SetFeaturedContentDetails
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UFeaturedCreativeContent_C::SetFeaturedContentDetails(int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FeaturedCreativeContent_C", "SetFeaturedContentDetails");
-
-	Params::FeaturedCreativeContent_C_SetFeaturedContentDetails Parms{};
-
-	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

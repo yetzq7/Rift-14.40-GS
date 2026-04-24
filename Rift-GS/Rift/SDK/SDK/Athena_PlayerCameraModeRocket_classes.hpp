@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Athena_PlayerCameraModeRocket.Athena_PlayerCameraModeRocket_C
-// 0x0000 (0x0DC0 - 0x0DC0)
+// 0x0000 (0x0C50 - 0x0C50)
 class UAthena_PlayerCameraModeRocket_C final : public UAthena_PlayerCameraModeRanged_C
 {
 public:

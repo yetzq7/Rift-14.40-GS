@@ -36,8 +36,8 @@ void AFortVolumeActor_Base_C::ExecuteUbergraph_FortVolumeActor_Base(int32 EntryP
 }
 
 
-// Function FortVolumeActor_Base.FortVolumeActor_Base_C.OnDeathPlayEffects_1
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function FortVolumeActor_Base.FortVolumeActor_Base_C.OnDeathPlayEffects
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
 // float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayTagContainer&     DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -47,14 +47,14 @@ void AFortVolumeActor_Base_C::ExecuteUbergraph_FortVolumeActor_Base(int32 EntryP
 // class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayEffectContextHandle&EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void AFortVolumeActor_Base_C::OnDeathPlayEffects_1(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
+void AFortVolumeActor_Base_C::OnDeathPlayEffects(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortVolumeActor_Base_C", "OnDeathPlayEffects_1");
+		Func = Class->GetFunction("FortVolumeActor_Base_C", "OnDeathPlayEffects");
 
-	Params::FortVolumeActor_Base_C_OnDeathPlayEffects_1 Parms{};
+	Params::FortVolumeActor_Base_C_OnDeathPlayEffects Parms{};
 
 	Parms.Damage = Damage;
 	Parms.DamageTags = std::move(DamageTags);

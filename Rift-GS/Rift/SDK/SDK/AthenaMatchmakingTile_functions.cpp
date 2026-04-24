@@ -36,17 +36,23 @@ void UAthenaMatchmakingTile_C::ExecuteUbergraph_AthenaMatchmakingTile(int32 Entr
 }
 
 
-// Function AthenaMatchmakingTile.AthenaMatchmakingTile_C.BP_OnSelected
-// (Event, Protected, BlueprintEvent)
+// Function AthenaMatchmakingTile.AthenaMatchmakingTile_C.UpdateTileAvailability
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    Available                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaMatchmakingTile_C::BP_OnSelected()
+void UAthenaMatchmakingTile_C::UpdateTileAvailability(bool Available)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaMatchmakingTile_C", "BP_OnSelected");
+		Func = Class->GetFunction("AthenaMatchmakingTile_C", "UpdateTileAvailability");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::AthenaMatchmakingTile_C_UpdateTileAvailability Parms{};
+
+	Parms.Available = Available;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -92,20 +98,6 @@ void UAthenaMatchmakingTile_C::OnCMSDataUpdated()
 }
 
 
-// Function AthenaMatchmakingTile.AthenaMatchmakingTile_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UAthenaMatchmakingTile_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaMatchmakingTile_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function AthenaMatchmakingTile.AthenaMatchmakingTile_C.BP_OnClicked
 // (Event, Protected, BlueprintEvent)
 
@@ -134,23 +126,17 @@ void UAthenaMatchmakingTile_C::SetDefaultImage()
 }
 
 
-// Function AthenaMatchmakingTile.AthenaMatchmakingTile_C.UpdateTileAvailability
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    Available                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function AthenaMatchmakingTile.AthenaMatchmakingTile_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UAthenaMatchmakingTile_C::UpdateTileAvailability(bool Available)
+void UAthenaMatchmakingTile_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaMatchmakingTile_C", "UpdateTileAvailability");
+		Func = Class->GetFunction("AthenaMatchmakingTile_C", "Construct");
 
-	Params::AthenaMatchmakingTile_C_UpdateTileAvailability Parms{};
-
-	Parms.Available = Available;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -245,6 +231,20 @@ void UAthenaMatchmakingTile_C::BP_OnDeselected()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("AthenaMatchmakingTile_C", "BP_OnDeselected");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaMatchmakingTile.AthenaMatchmakingTile_C.BP_OnSelected
+// (Event, Protected, BlueprintEvent)
+
+void UAthenaMatchmakingTile_C::BP_OnSelected()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMatchmakingTile_C", "BP_OnSelected");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -28,20 +28,6 @@ enum class EMIDIEventType : uint8
 	EMIDIEventType_MAX                       = 15,
 };
 
-// ScriptStruct MIDIDevice.MIDIDeviceInfo
-// 0x0020 (0x0020 - 0x0000)
-struct FMIDIDeviceInfo final
-{
-public:
-	int32                                         DeviceID;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 DeviceName;                                        // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsAlreadyInUse;                                   // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsDefaultDevice;                                  // 0x0019(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMIDIDeviceInfo;
-
 // ScriptStruct MIDIDevice.FoundMIDIDevice
 // 0x0020 (0x0020 - 0x0000)
 struct FFoundMIDIDevice final

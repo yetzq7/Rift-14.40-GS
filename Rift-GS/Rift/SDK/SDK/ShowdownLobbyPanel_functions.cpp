@@ -39,9 +39,9 @@ void UShowdownLobbyPanel_C::ExecuteUbergraph_ShowdownLobbyPanel(int32 EntryPoint
 // Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.EventSwitchUI
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ECommonInputType                        bNewInputType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UShowdownLobbyPanel_C::EventSwitchUI(ECommonInputType bNewInputType)
+void UShowdownLobbyPanel_C::EventSwitchUI(bool bUsingGamepad)
 {
 	static class UFunction* Func = nullptr;
 
@@ -50,47 +50,7 @@ void UShowdownLobbyPanel_C::EventSwitchUI(ECommonInputType bNewInputType)
 
 	Params::ShowdownLobbyPanel_C_EventSwitchUI Parms{};
 
-	Parms.bNewInputType = bNewInputType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.BrandingToggle
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    hasBranding                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UShowdownLobbyPanel_C::BrandingToggle(bool hasBranding)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownLobbyPanel_C", "BrandingToggle");
-
-	Params::ShowdownLobbyPanel_C_BrandingToggle Parms{};
-
-	Parms.hasBranding = hasBranding;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UShowdownLobbyPanel_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownLobbyPanel_C", "PreConstruct");
-
-	Params::ShowdownLobbyPanel_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.bUsingGamepad = bUsingGamepad;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -161,6 +121,26 @@ void UShowdownLobbyPanel_C::Construct()
 		Func = Class->GetFunction("ShowdownLobbyPanel_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UShowdownLobbyPanel_C::BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownLobbyPanel_C", "BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+
+	Params::ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

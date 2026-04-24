@@ -36,15 +36,49 @@ void AB_HookGunRope_C::ExecuteUbergraph_B_HookGunRope(int32 EntryPoint)
 }
 
 
-// Function B_HookGunRope.B_HookGunRope_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
+// Function B_HookGunRope.B_HookGunRope_C.TightenRope
+// (BlueprintCallable, BlueprintEvent)
 
-void AB_HookGunRope_C::ReceiveDestroyed()
+void AB_HookGunRope_C::TightenRope()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_HookGunRope_C", "ReceiveDestroyed");
+		Func = Class->GetFunction("B_HookGunRope_C", "TightenRope");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_HookGunRope.B_HookGunRope_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_HookGunRope_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_HookGunRope_C", "ReceiveTick");
+
+	Params::B_HookGunRope_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_HookGunRope.B_HookGunRope_C.End Reel
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_HookGunRope_C::End_Reel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_HookGunRope_C", "End Reel");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,57 +98,29 @@ void AB_HookGunRope_C::ReceiveBeginPlay()
 }
 
 
-// Function B_HookGunRope.B_HookGunRope_C.TightenRope
-// (BlueprintCallable, BlueprintEvent)
+// Function B_HookGunRope.B_HookGunRope_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
 
-void AB_HookGunRope_C::TightenRope()
+void AB_HookGunRope_C::ReceiveDestroyed()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_HookGunRope_C", "TightenRope");
+		Func = Class->GetFunction("B_HookGunRope_C", "ReceiveDestroyed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_HookGunRope.B_HookGunRope_C.End Reel
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_HookGunRope_C::End_Reel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_HookGunRope_C", "End Reel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_HookGunRope.B_HookGunRope_C.Tight__UpdateFunc
+// Function B_HookGunRope.B_HookGunRope_C.Reel In__FinishedFunc
 // (BlueprintEvent)
 
-void AB_HookGunRope_C::Tight__UpdateFunc()
+void AB_HookGunRope_C::Reel_In__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_HookGunRope_C", "Tight__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_HookGunRope.B_HookGunRope_C.Tight__FinishedFunc
-// (BlueprintEvent)
-
-void AB_HookGunRope_C::Tight__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_HookGunRope_C", "Tight__FinishedFunc");
+		Func = Class->GetFunction("B_HookGunRope_C", "Reel In__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -134,15 +140,57 @@ void AB_HookGunRope_C::Reel_In__UpdateFunc()
 }
 
 
-// Function B_HookGunRope.B_HookGunRope_C.Reel In__FinishedFunc
-// (BlueprintEvent)
+// Function B_HookGunRope.B_HookGunRope_C.Set Start Point of Rope
+// (BlueprintCallable, BlueprintEvent)
 
-void AB_HookGunRope_C::Reel_In__FinishedFunc()
+void AB_HookGunRope_C::Set_Start_Point_of_Rope()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_HookGunRope_C", "Reel In__FinishedFunc");
+		Func = Class->GetFunction("B_HookGunRope_C", "Set Start Point of Rope");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_HookGunRope.B_HookGunRope_C.Tight__FinishedFunc
+// (BlueprintEvent)
+
+void AB_HookGunRope_C::Tight__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_HookGunRope_C", "Tight__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_HookGunRope.B_HookGunRope_C.Tight__UpdateFunc
+// (BlueprintEvent)
+
+void AB_HookGunRope_C::Tight__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_HookGunRope_C", "Tight__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_HookGunRope.B_HookGunRope_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void AB_HookGunRope_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_HookGunRope_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

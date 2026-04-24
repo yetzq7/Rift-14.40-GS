@@ -17,22 +17,19 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_Pickups_Default.B_Pickups_Default_C
-// 0x0028 (0x04C0 - 0x0498)
+// 0x0018 (0x05B0 - 0x0598)
 class AB_Pickups_Default_C final : public AB_Pickups_Parent_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_Pickups_Default_C;                // 0x0498(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   sm_rare_pickup;                                    // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    SpotLight;                                         // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Background;                                        // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UFXSystemComponent*                     ParticleSystem;                                    // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_Pickups_Default_C;                // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USpotLightComponent*                    SpotLight;                                         // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Background;                                        // 0x05A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_Pickups_Default(int32 EntryPoint);
-	void ReceiveBeginPlay();
-	void HideBackgroundAndSpotlight();
 	void OnPickedUp();
 	void OnTossed();
+	void Randomize_Mesh_Rotation_for_BR();
 	void UserConstructionScript();
 	void Setup_Light();
 	void Set_Initial_BKGD_Param(class UMaterialInstanceDynamic* Mid);

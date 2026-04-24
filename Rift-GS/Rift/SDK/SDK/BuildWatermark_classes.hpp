@@ -12,16 +12,20 @@
 
 #include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
+#include "FortniteGame_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass BuildWatermark.BuildWatermark_C
-// 0x0008 (0x02F0 - 0x02E8)
-class UBuildWatermark_C final : public UFortBuildWatermark
+// 0x0020 (0x0288 - 0x0268)
+class UBuildWatermark_C final : public UFortHUDElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0268(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             BuildText;                                         // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_CalendarOffset;                               // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextMcpVersion;                                    // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BuildWatermark(int32 EntryPoint);
@@ -29,6 +33,9 @@ public:
 	void Destruct();
 	void HandlePartyJoined();
 	void Construct();
+	void Update_Watermark();
+	void SetTextCollapseIfDefault(class UTextBlock* Text_Widget, const class FString& InputText, const class FString& DefaultText);
+	void UpdateCalenderOffset();
 
 public:
 	static class UClass* StaticClass()

@@ -36,43 +36,23 @@ void ABP_ProjectileTrajectory_C::ExecuteUbergraph_BP_ProjectileTrajectory(int32 
 }
 
 
-// Function BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.SetTrajectorySpline
+// Function BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.SetTrajectoryFromNative
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const TArray<struct FVector>&           SplinePoints                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-// const TArray<struct FVector>&           SplineTangents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FVector>&           SplinePoints                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const TArray<struct FVector>&           SplineTangents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_ProjectileTrajectory_C::SetTrajectorySpline(const TArray<struct FVector>& SplinePoints, const TArray<struct FVector>& SplineTangents)
+void ABP_ProjectileTrajectory_C::SetTrajectoryFromNative(const TArray<struct FVector>& SplinePoints, const TArray<struct FVector>& SplineTangents)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ProjectileTrajectory_C", "SetTrajectorySpline");
+		Func = Class->GetFunction("BP_ProjectileTrajectory_C", "SetTrajectoryFromNative");
 
-	Params::BP_ProjectileTrajectory_C_SetTrajectorySpline Parms{};
+	Params::BP_ProjectileTrajectory_C_SetTrajectoryFromNative Parms{};
 
 	Parms.SplinePoints = std::move(SplinePoints);
 	Parms.SplineTangents = std::move(SplineTangents);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ProjectileTrajectory_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ProjectileTrajectory_C", "ReceiveTick");
-
-	Params::BP_ProjectileTrajectory_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -92,6 +72,45 @@ void ABP_ProjectileTrajectory_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_ProjectileTrajectory_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ProjectileTrajectory_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.SetTrajectorySpline
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FVector>&                 SplinePoints                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector>&                 SplineTangents                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void ABP_ProjectileTrajectory_C::SetTrajectorySpline(TArray<struct FVector>& SplinePoints, TArray<struct FVector>& SplineTangents)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ProjectileTrajectory_C", "SetTrajectorySpline");
+
+	Params::BP_ProjectileTrajectory_C_SetTrajectorySpline Parms{};
+
+	Parms.SplinePoints = std::move(SplinePoints);
+	Parms.SplineTangents = std::move(SplineTangents);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	SplinePoints = std::move(Parms.SplinePoints);
+	SplineTangents = std::move(Parms.SplineTangents);
+}
+
+
 // Function BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.UpdateFromTrajectoryOwner
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -107,12 +126,13 @@ void ABP_ProjectileTrajectory_C::UpdateFromTrajectoryOwner()
 
 
 // Function BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.SetShouldUpdateFromOwner
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    ShouldUpdate_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    ShouldUpdate                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UObject*                          Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Interval                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ProjectileTrajectory_C::SetShouldUpdateFromOwner(bool ShouldUpdate_0, class UObject* Owner_0)
+void ABP_ProjectileTrajectory_C::SetShouldUpdateFromOwner(bool ShouldUpdate, class UObject* Owner_0, float Interval)
 {
 	static class UFunction* Func = nullptr;
 
@@ -121,8 +141,9 @@ void ABP_ProjectileTrajectory_C::SetShouldUpdateFromOwner(bool ShouldUpdate_0, c
 
 	Params::BP_ProjectileTrajectory_C_SetShouldUpdateFromOwner Parms{};
 
-	Parms.ShouldUpdate_0 = ShouldUpdate_0;
+	Parms.ShouldUpdate = ShouldUpdate;
 	Parms.Owner_0 = Owner_0;
+	Parms.Interval = Interval;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

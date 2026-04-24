@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Trap_ContextTrap_Athena.Trap_ContextTrap_Athena_C
-// 0x0000 (0x0D48 - 0x0D48)
+// 0x0000 (0x0D78 - 0x0D78)
 class ATrap_ContextTrap_Athena_C final : public ABuildingTrap
 {
 public:

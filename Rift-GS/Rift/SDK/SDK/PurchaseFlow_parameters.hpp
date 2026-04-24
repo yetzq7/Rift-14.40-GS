@@ -69,14 +69,14 @@ public:
 };
 DUMPER7_ASSERTS_PurchaseFlowJSBridge_LaunchValidatedExternalBrowserUrl;
 
-// Function PurchaseFlow.PurchaseFlowJSBridge.Receipt
+// Function PurchaseFlow.PurchaseFlowJSBridge.RECEIPT
 // 0x0030 (0x0030 - 0x0000)
-struct PurchaseFlowJSBridge_Receipt final
+struct PurchaseFlowJSBridge_RECEIPT final
 {
 public:
-	struct FPurchaseFlowReceiptParam              Receipt_0;                                         // 0x0000(0x0030)(Parm, NativeAccessSpecifierPublic)
+	struct FPurchaseFlowReceiptParam              RECEIPT_0;                                         // 0x0000(0x0030)(Parm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PurchaseFlowJSBridge_Receipt;
+DUMPER7_ASSERTS_PurchaseFlowJSBridge_RECEIPT;
 
 // Function PurchaseFlow.PurchaseFlowJSBridge.RequestClose
 // 0x0010 (0x0010 - 0x0000)

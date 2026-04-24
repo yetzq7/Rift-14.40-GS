@@ -11,57 +11,51 @@
 #include "Basic.hpp"
 
 #include "Enum_BoostJumpStates_structs.hpp"
-#include "GameplayTags_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_BoostJumpPack.GA_BoostJumpPack_C
-// 0x0180 (0x0C48 - 0x0AC8)
-class UGA_BoostJumpPack_C : public UFortGameplayAbility_JumpBoostPack
+// 0x0160 (0x0AB8 - 0x0958)
+class UGA_BoostJumpPack_C final : public UFortGameplayAbility_JumpBoostPack
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AC8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         Jump_Multiple;                                     // 0x0AD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Basic_Jump_Z_Adjust;                               // 0x0AD4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                FinalJumpHeight;                                   // 0x0AE0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AEC[0x4];                                      // 0x0AEC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayEventData                     EventTriggerData;                                  // 0x0AF0(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bJumpButtonHeld;                                   // 0x0BA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bAtApex;                                           // 0x0BA1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BA2[0x2];                                      // 0x0BA2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FActiveGameplayEffectHandle            JetpackEffectHandle;                               // 0x0BA4(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BAC[0x4];                                      // 0x0BAC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        FortPlayerPawn;                                    // 0x0BB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FuelFudge;                                         // 0x0BB8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FActiveGameplayEffectHandle            RegenEffectHandle;                                 // 0x0BBC(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bRegenEffectActive;                                // 0x0BC4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BC5[0x3];                                      // 0x0BC5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  ExecuteTags;                                       // 0x0BC8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         JumpButtonHeldCount;                               // 0x0BE8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BEC[0x4];                                      // 0x0BEC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  ReleaseTags;                                       // 0x0BF0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         TimeStartedHovering;                               // 0x0C10(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TimeStartedFalling;                                // 0x0C14(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         EndHoverDelay;                                     // 0x0C18(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         EndFallingDelay;                                   // 0x0C1C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHasDied;                                          // 0x0C20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C21[0x3];                                      // 0x0C21(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           BoostCue;                                          // 0x0C24(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           BoostJumpPackCue;                                  // 0x0C2C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C34[0x4];                                      // 0x0C34(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 JetpackInUseEffect;                                // 0x0C38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAbilityTask_WaitGameplayTagAdded*      HidingInPropTagTask;                               // 0x0C40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0958(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         Jump_Multiple;                                     // 0x0960(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Basic_Jump_Z_Adjust;                               // 0x0964(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                FinalJumpHeight;                                   // 0x0970(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_97C[0x4];                                      // 0x097C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayEventData                     EventTriggerData;                                  // 0x0980(0x00A8)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bJumpButtonHeld;                                   // 0x0A28(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bAtApex;                                           // 0x0A29(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A2A[0x2];                                      // 0x0A2A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FActiveGameplayEffectHandle            JetpackEffectHandle;                               // 0x0A2C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A34[0x4];                                      // 0x0A34(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        FortPlayerPawn;                                    // 0x0A38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bBoundToPawnLanded;                                // 0x0A40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A41[0x3];                                      // 0x0A41(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FuelFudge;                                         // 0x0A44(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FActiveGameplayEffectHandle            RegenEffectHandle;                                 // 0x0A48(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bRegenEffectActive;                                // 0x0A50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A51[0x7];                                      // 0x0A51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  ExecuteTags;                                       // 0x0A58(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         JumpButtonHeldCount;                               // 0x0A78(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A7C[0x4];                                      // 0x0A7C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  ReleaseTags;                                       // 0x0A80(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         TimeStartedHovering;                               // 0x0AA0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TimeStartedFalling;                                // 0x0AA4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         EndHoverDelay;                                     // 0x0AA8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         EndFallingDelay;                                   // 0x0AAC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHasDied;                                          // 0x0AB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GA_BoostJumpPack(int32 EntryPoint);
-	void OnEnterVehicle();
-	void OnSavedPawnChanged_(class AFortPlayerPawn* PreviousPawn, class AFortPlayerPawn* NewPawn);
 	void Delay_ProcessAbilityStateMachine();
 	void OnCurrentStateChanged(EJumpBoostPackState InPreviousState, EJumpBoostPackState InCurrentState);
 	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData);
@@ -75,10 +69,10 @@ public:
 	void TransitionFromBoost(Enum_BoostJumpStates* TargetBoostState);
 	void TransitionFromHovering(Enum_BoostJumpStates* TargetBoostState);
 	void TransitionFromFalling(Enum_BoostJumpStates* TargetBoostState);
-	void ResetTransitionVariables(bool bForceEndHovering);
+	void ResetTransitionVariables();
 	void HandleHovering();
 	void HandleFalling();
-	void HandleIdle(bool bForceEndHovering);
+	void HandleIdle();
 	void Setup_Notify_at_Apex(bool bNotifyApex);
 	void PotentiallyEndHovering(bool bForceEndHovering);
 	void SetCurrentBoostState(EJumpBoostPackState NewState);
@@ -108,8 +102,6 @@ public:
 	bool IsCurrentlyDead(const struct FGameplayTag& TagOne) const;
 	class AFortPlayerPawn* Get_Player_Pawn(class UObject* Object) const;
 	bool Reasons_To_Reset_on_Transition(const struct FGameplayTag& Tag) const;
-	bool K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayAbilitySpecHandle& Handle, struct FGameplayTagContainer* RelevantTags) const;
-	bool NotInHidingSpot() const;
 
 public:
 	static class UClass* StaticClass()

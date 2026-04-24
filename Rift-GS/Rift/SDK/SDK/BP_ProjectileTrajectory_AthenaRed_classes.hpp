@@ -17,15 +17,16 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ProjectileTrajectory_AthenaRed.BP_ProjectileTrajectory_AthenaRed_C
-// 0x0008 (0x0278 - 0x0270)
+// 0x0008 (0x0390 - 0x0388)
 class ABP_ProjectileTrajectory_AthenaRed_C final : public ABP_ProjectileTrajectory_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ProjectileTrajectory_AthenaRed_C; // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ProjectileTrajectory_AthenaRed_C; // 0x0388(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_ProjectileTrajectory_AthenaRed(int32 EntryPoint);
 	void ReceiveBeginPlay();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

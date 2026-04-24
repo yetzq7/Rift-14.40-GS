@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_FortGlobalAbilityTargetingActor.B_FortGlobalAbilityTargetingActor_C
-// 0x0000 (0x0220 - 0x0220)
+// 0x0000 (0x0330 - 0x0330)
 class AB_FortGlobalAbilityTargetingActor_C final : public AFortGlobalAbilityTargetingActor
 {
 public:

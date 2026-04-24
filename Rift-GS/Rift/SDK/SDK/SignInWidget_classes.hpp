@@ -17,15 +17,15 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass SignInWidget.SignInWidget_C
-// 0x0030 (0x04F8 - 0x04C8)
+// 0x0030 (0x03C0 - 0x0390)
 class USignInWidget_C final : public UFortSignInWidget
 {
 public:
-	class UNamedSlot*                             ButtonSlot;                                        // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonLazyImage*                       CommonLazyImage_0;                                 // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           ContentBox;                                        // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEmergencyNoticeWidget_C*               EmergencyNoticeWidget;                             // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    LoginInputAction;                                  // 0x04E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	class UNamedSlot*                             ButtonSlot;                                        // 0x0390(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonLazyImage*                       CommonLazyImage_0;                                 // 0x0398(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           ContentBox;                                        // 0x03A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEmergencyNoticeWidget_C*               EmergencyNoticeWidget;                             // 0x03A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    LoginInputAction;                                  // 0x03B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
 	static class UClass* StaticClass()

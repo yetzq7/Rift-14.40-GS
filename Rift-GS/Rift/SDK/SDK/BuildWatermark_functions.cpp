@@ -98,4 +98,56 @@ void UBuildWatermark_C::Construct()
 }
 
 
+// Function BuildWatermark.BuildWatermark_C.Update Watermark
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBuildWatermark_C::Update_Watermark()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BuildWatermark_C", "Update Watermark");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BuildWatermark.BuildWatermark_C.SetTextCollapseIfDefault
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTextBlock*                       Text_Widget                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    InputText                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    DefaultText                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UBuildWatermark_C::SetTextCollapseIfDefault(class UTextBlock* Text_Widget, const class FString& InputText, const class FString& DefaultText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BuildWatermark_C", "SetTextCollapseIfDefault");
+
+	Params::BuildWatermark_C_SetTextCollapseIfDefault Parms{};
+
+	Parms.Text_Widget = Text_Widget;
+	Parms.InputText = std::move(InputText);
+	Parms.DefaultText = std::move(DefaultText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BuildWatermark.BuildWatermark_C.UpdateCalenderOffset
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBuildWatermark_C::UpdateCalenderOffset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BuildWatermark_C", "UpdateCalenderOffset");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

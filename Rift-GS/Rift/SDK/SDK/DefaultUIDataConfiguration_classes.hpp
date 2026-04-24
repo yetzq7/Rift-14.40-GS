@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass DefaultUIDataConfiguration.DefaultUIDataConfiguration_C
-// 0x0000 (0x3CA8 - 0x3CA8)
+// 0x0000 (0x3218 - 0x3218)
 class UDefaultUIDataConfiguration_C final : public UFortUIDataConfiguration
 {
 public:

@@ -16,15 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function ItemAlterationsListDetailWidget.ItemAlterationsListDetailWidget_C.SetState
-// 0x0001 (0x0001 - 0x0000)
-struct ItemAlterationsListDetailWidget_C_SetState final
-{
-public:
-	EFortAlterationWidgetState                    State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_ItemAlterationsListDetailWidget_C_SetState;
-
 // Function ItemAlterationsListDetailWidget.ItemAlterationsListDetailWidget_C.ExecuteUbergraph_ItemAlterationsListDetailWidget
 // 0x0004 (0x0004 - 0x0000)
 struct ItemAlterationsListDetailWidget_C_ExecuteUbergraph_ItemAlterationsListDetailWidget final
@@ -33,6 +24,15 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_ItemAlterationsListDetailWidget_C_ExecuteUbergraph_ItemAlterationsListDetailWidget;
+
+// Function ItemAlterationsListDetailWidget.ItemAlterationsListDetailWidget_C.SetState
+// 0x0001 (0x0001 - 0x0000)
+struct ItemAlterationsListDetailWidget_C_SetState final
+{
+public:
+	EFortAlterationWidgetState                    State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ItemAlterationsListDetailWidget_C_SetState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

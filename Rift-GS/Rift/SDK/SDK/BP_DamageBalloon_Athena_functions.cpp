@@ -96,6 +96,20 @@ void ABP_DamageBalloon_Athena_C::OnDamageServer(float Damage, const struct FGame
 }
 
 
+// Function BP_DamageBalloon_Athena.BP_DamageBalloon_Athena_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_DamageBalloon_Athena_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageBalloon_Athena_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_DamageBalloon_Athena.BP_DamageBalloon_Athena_C.ShouldDie
 // (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

@@ -36,102 +36,6 @@ void AAthena_PlayerController_C::ExecuteUbergraph_Athena_PlayerController(int32 
 }
 
 
-// Function Athena_PlayerController.Athena_PlayerController_C.Change Music
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class USoundBase*                       New_Music                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AAthena_PlayerController_C::Change_Music(class USoundBase* New_Music, float StartTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Athena_PlayerController_C", "Change Music");
-
-	Params::Athena_PlayerController_C_Change_Music Parms{};
-
-	Parms.New_Music = New_Music;
-	Parms.StartTime = StartTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Athena_PlayerController.Athena_PlayerController_C.Handle Victory Royale Audio
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Audio_Only                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AAthena_PlayerController_C::Handle_Victory_Royale_Audio(bool Audio_Only)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Athena_PlayerController_C", "Handle Victory Royale Audio");
-
-	Params::Athena_PlayerController_C_Handle_Victory_Royale_Audio Parms{};
-
-	Parms.Audio_Only = Audio_Only;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Athena_PlayerController.Athena_PlayerController_C.K2_OnEnterVolume
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortVolume*                      Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AAthena_PlayerController_C::K2_OnEnterVolume(class AFortVolume* Volume)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Athena_PlayerController_C", "K2_OnEnterVolume");
-
-	Params::Athena_PlayerController_C_K2_OnEnterVolume Parms{};
-
-	Parms.Volume = Volume;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Athena_PlayerController.Athena_PlayerController_C.K2_OnLeaveVolume
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortVolume*                      Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AAthena_PlayerController_C::K2_OnLeaveVolume(class AFortVolume* Volume)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Athena_PlayerController_C", "K2_OnLeaveVolume");
-
-	Params::Athena_PlayerController_C_K2_OnLeaveVolume Parms{};
-
-	Parms.Volume = Volume;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Athena_PlayerController.Athena_PlayerController_C.ReplicateRotationScaleReset
-// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
-
-void AAthena_PlayerController_C::ReplicateRotationScaleReset()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Athena_PlayerController_C", "ReplicateRotationScaleReset");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Athena_PlayerController.Athena_PlayerController_C.ReactToPawnPossession
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -152,43 +56,17 @@ void AAthena_PlayerController_C::ReactToPawnPossession(class APawn* PossessedPaw
 }
 
 
-// Function Athena_PlayerController.Athena_PlayerController_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function Athena_PlayerController.Athena_PlayerController_C.RevokeCreativeTool
+// (Event, Public, BlueprintEvent)
 
-void AAthena_PlayerController_C::ReceiveBeginPlay()
+void AAthena_PlayerController_C::RevokeCreativeTool()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Athena_PlayerController_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("Athena_PlayerController_C", "RevokeCreativeTool");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Athena_PlayerController.Athena_PlayerController_C.PlayWinEffects
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class APawn*                            FinisherPawn                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UFortWeaponItemDefinition*  FinishingWeapon                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EDeathCause                             DeathCause                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bAudioOnly                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AAthena_PlayerController_C::PlayWinEffects(class APawn* FinisherPawn, const class UFortWeaponItemDefinition* FinishingWeapon, EDeathCause DeathCause, bool bAudioOnly)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Athena_PlayerController_C", "PlayWinEffects");
-
-	Params::Athena_PlayerController_C_PlayWinEffects Parms{};
-
-	Parms.FinisherPawn = FinisherPawn;
-	Parms.FinishingWeapon = FinishingWeapon;
-	Parms.DeathCause = DeathCause;
-	Parms.bAudioOnly = bAudioOnly;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -223,6 +101,20 @@ void AAthena_PlayerController_C::OnLocalInteraction(class AActor* ReceivingActor
 	Parms.ReceivingActor = ReceivingActor;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Athena_PlayerController.Athena_PlayerController_C.PermissionsChanged
+// (BlueprintCallable, BlueprintEvent)
+
+void AAthena_PlayerController_C::PermissionsChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Athena_PlayerController_C", "PermissionsChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -266,13 +158,72 @@ void AAthena_PlayerController_C::GrantItem(TSoftObjectPtr<class UFortWorldItemDe
 }
 
 
+// Function Athena_PlayerController.Athena_PlayerController_C.HandlePermissions
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFortVolume*                      Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AAthena_PlayerController_C::HandlePermissions(class AFortVolume* Volume)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Athena_PlayerController_C", "HandlePermissions");
+
+	Params::Athena_PlayerController_C_HandlePermissions Parms{};
+
+	Parms.Volume = Volume;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Athena_PlayerController.Athena_PlayerController_C.OnEnterVolume
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortVolume*                      Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AAthena_PlayerController_C::OnEnterVolume(class AFortVolume* Volume)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Athena_PlayerController_C", "OnEnterVolume");
+
+	Params::Athena_PlayerController_C_OnEnterVolume Parms{};
+
+	Parms.Volume = Volume;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Athena_PlayerController.Athena_PlayerController_C.OnLeaveVolume
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortVolume*                      Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AAthena_PlayerController_C::OnLeaveVolume(class AFortVolume* Volume)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Athena_PlayerController_C", "OnLeaveVolume");
+
+	Params::Athena_PlayerController_C_OnLeaveVolume Parms{};
+
+	Parms.Volume = Volume;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Athena_PlayerController.Athena_PlayerController_C.OnMusicPackLoaded
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class UAthenaMusicPackItemDefinition*NewMusicPack                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   StartTimeOffset                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AAthena_PlayerController_C::OnMusicPackLoaded(const class UAthenaMusicPackItemDefinition* NewMusicPack, float StartTimeOffset)
+void AAthena_PlayerController_C::OnMusicPackLoaded(const class UAthenaMusicPackItemDefinition* NewMusicPack)
 {
 	static class UFunction* Func = nullptr;
 
@@ -282,7 +233,6 @@ void AAthena_PlayerController_C::OnMusicPackLoaded(const class UAthenaMusicPackI
 	Params::Athena_PlayerController_C_OnMusicPackLoaded Parms{};
 
 	Parms.NewMusicPack = NewMusicPack;
-	Parms.StartTimeOffset = StartTimeOffset;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -303,7 +253,7 @@ void AAthena_PlayerController_C::Start_Victory_Royale_Music()
 
 
 // Function Athena_PlayerController.Athena_PlayerController_C.ReceiveEndPlay
-// (Event, Protected, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -322,27 +272,41 @@ void AAthena_PlayerController_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 }
 
 
-// Function Athena_PlayerController.Athena_PlayerController_C.OnReady_B4409EAB4038578B1EBA9DB1586489B9
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function Athena_PlayerController.Athena_PlayerController_C.PlayWinEffects
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class AFortGameStateAthena*             GameState                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UFortPlaylist*              Playlist                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTagContainer&     PlaylistContextTags                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class APawn*                            FinisherPawn                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UFortWeaponItemDefinition*  FinishingWeapon                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EDeathCause                             DeathCause                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AAthena_PlayerController_C::OnReady_B4409EAB4038578B1EBA9DB1586489B9(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags)
+void AAthena_PlayerController_C::PlayWinEffects(class APawn* FinisherPawn, const class UFortWeaponItemDefinition* FinishingWeapon, EDeathCause DeathCause)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Athena_PlayerController_C", "OnReady_B4409EAB4038578B1EBA9DB1586489B9");
+		Func = Class->GetFunction("Athena_PlayerController_C", "PlayWinEffects");
 
-	Params::Athena_PlayerController_C_OnReady_B4409EAB4038578B1EBA9DB1586489B9 Parms{};
+	Params::Athena_PlayerController_C_PlayWinEffects Parms{};
 
-	Parms.GameState = GameState;
-	Parms.Playlist = Playlist;
-	Parms.PlaylistContextTags = std::move(PlaylistContextTags);
+	Parms.FinisherPawn = FinisherPawn;
+	Parms.FinishingWeapon = FinishingWeapon;
+	Parms.DeathCause = DeathCause;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Athena_PlayerController.Athena_PlayerController_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AAthena_PlayerController_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Athena_PlayerController_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -381,7 +345,7 @@ void AAthena_PlayerController_C::UserConstructionScript()
 
 
 // Function Athena_PlayerController.Athena_PlayerController_C.LeftAllVolumes
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool*                                   bLeftVolumes                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
@@ -402,7 +366,7 @@ void AAthena_PlayerController_C::LeftAllVolumes(bool* bLeftVolumes)
 
 
 // Function Athena_PlayerController.Athena_PlayerController_C.SetupPermissionRecheckTimer
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AAthena_PlayerController_C::SetupPermissionRecheckTimer()
 {
@@ -412,52 +376,6 @@ void AAthena_PlayerController_C::SetupPermissionRecheckTimer()
 		Func = Class->GetFunction("Athena_PlayerController_C", "SetupPermissionRecheckTimer");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Athena_PlayerController.Athena_PlayerController_C.Is Creative Mode
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool AAthena_PlayerController_C::Is_Creative_Mode()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Athena_PlayerController_C", "Is Creative Mode");
-
-	Params::Athena_PlayerController_C_Is_Creative_Mode Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Athena_PlayerController.Athena_PlayerController_C.FadeAudioComponents
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAudioComponent*                  NewMusicComponent                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAudioComponent*                  PreviousMusicComponent                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class USoundBase*                       Music                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AAthena_PlayerController_C::FadeAudioComponents(class UAudioComponent* NewMusicComponent, class UAudioComponent* PreviousMusicComponent, class USoundBase* Music, float StartTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Athena_PlayerController_C", "FadeAudioComponents");
-
-	Params::Athena_PlayerController_C_FadeAudioComponents Parms{};
-
-	Parms.NewMusicComponent = NewMusicComponent;
-	Parms.PreviousMusicComponent = PreviousMusicComponent;
-	Parms.Music = Music;
-	Parms.StartTime = StartTime;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

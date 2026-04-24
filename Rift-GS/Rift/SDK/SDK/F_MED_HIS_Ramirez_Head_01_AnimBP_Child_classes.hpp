@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass F_MED_HIS_Ramirez_Head_01_AnimBP_Child.F_MED_HIS_Ramirez_Head_01_AnimBP_Child_C
-// 0x0000 (0x15A0 - 0x15A0)
+// 0x0000 (0x1190 - 0x1190)
 class UF_MED_HIS_Ramirez_Head_01_AnimBP_Child_C final : public UFortnite_Base_Head_Export_Skeleton_AnimBP_C
 {
 public:

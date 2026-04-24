@@ -131,10 +131,10 @@ void ATrap_Wall_BouncePad_C::UserConstructionScript()
 // Function Trap_Wall_BouncePad.Trap_Wall_BouncePad_C.PlayerLaunch
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AFortPlayerPawn*                  FortPlayerPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortPlayerPawnAthena*            FortPlayerPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   InVec                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ATrap_Wall_BouncePad_C::PlayerLaunch(class AFortPlayerPawn* FortPlayerPawn, const struct FVector& InVec)
+void ATrap_Wall_BouncePad_C::PlayerLaunch(class AFortPlayerPawnAthena* FortPlayerPawn, const struct FVector& InVec)
 {
 	static class UFunction* Func = nullptr;
 
@@ -151,11 +151,11 @@ void ATrap_Wall_BouncePad_C::PlayerLaunch(class AFortPlayerPawn* FortPlayerPawn,
 
 
 // Function Trap_Wall_BouncePad.Trap_Wall_BouncePad_C.VehicleLaunch
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TScriptInterface<class IFortVehicleInterface>VehicleInterface                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class AFortAthenaVehicle*               Vehicle                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ATrap_Wall_BouncePad_C::VehicleLaunch(TScriptInterface<class IFortVehicleInterface> VehicleInterface)
+void ATrap_Wall_BouncePad_C::VehicleLaunch(class AFortAthenaVehicle* Vehicle)
 {
 	static class UFunction* Func = nullptr;
 
@@ -164,21 +164,21 @@ void ATrap_Wall_BouncePad_C::VehicleLaunch(TScriptInterface<class IFortVehicleIn
 
 	Params::Trap_Wall_BouncePad_C_VehicleLaunch Parms{};
 
-	Parms.VehicleInterface = VehicleInterface;
+	Parms.Vehicle = Vehicle;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Trap_Wall_BouncePad.Trap_Wall_BouncePad_C.OnRep_OverlappedActor
+// Function Trap_Wall_BouncePad.Trap_Wall_BouncePad_C.OnRep_Overlappedactor
 // (BlueprintCallable, BlueprintEvent)
 
-void ATrap_Wall_BouncePad_C::OnRep_OverlappedActor()
+void ATrap_Wall_BouncePad_C::OnRep_Overlappedactor()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Trap_Wall_BouncePad_C", "OnRep_OverlappedActor");
+		Func = Class->GetFunction("Trap_Wall_BouncePad_C", "OnRep_Overlappedactor");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -201,9 +201,9 @@ void ATrap_Wall_BouncePad_C::PlayerApplyGameplayEffects()
 // Function Trap_Wall_BouncePad.Trap_Wall_BouncePad_C.DeimosLaunch
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AEnemyPawn_Parent_Deimos_C*       DeimosPawn_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AEnemyPawn_Parent_C*              DeimosPawn_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ATrap_Wall_BouncePad_C::DeimosLaunch(class AEnemyPawn_Parent_Deimos_C* DeimosPawn_0)
+void ATrap_Wall_BouncePad_C::DeimosLaunch(class AEnemyPawn_Parent_C* DeimosPawn_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -235,7 +235,7 @@ void ATrap_Wall_BouncePad_C::DeimosApplyGameplayEffects()
 // Function Trap_Wall_BouncePad.Trap_Wall_BouncePad_C.BP_OnTrigger
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const TArray<class AActor*>&            TouchingActors                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<class AActor*>&            TouchingActors                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool*                                   bOutConsumeEvent                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ATrap_Wall_BouncePad_C::BP_OnTrigger(const TArray<class AActor*>& TouchingActors, bool* bOutConsumeEvent)
@@ -253,26 +253,6 @@ void ATrap_Wall_BouncePad_C::BP_OnTrigger(const TArray<class AActor*>& TouchingA
 
 	if (bOutConsumeEvent != nullptr)
 		*bOutConsumeEvent = Parms.bOutConsumeEvent;
-}
-
-
-// Function Trap_Wall_BouncePad.Trap_Wall_BouncePad_C.PhysicsObjectLaunch
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortPhysicsPawnObject*           PhysicsObject                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ATrap_Wall_BouncePad_C::PhysicsObjectLaunch(class AFortPhysicsPawnObject* PhysicsObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Trap_Wall_BouncePad_C", "PhysicsObjectLaunch");
-
-	Params::Trap_Wall_BouncePad_C_PhysicsObjectLaunch Parms{};
-
-	Parms.PhysicsObject = PhysicsObject;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

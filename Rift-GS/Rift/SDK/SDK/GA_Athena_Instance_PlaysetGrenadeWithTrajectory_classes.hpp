@@ -17,20 +17,18 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Athena_Instance_PlaysetGrenadeWithTrajectory.GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C
-// 0x0010 (0x0EA0 - 0x0E90)
-class UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C final : public UGA_Athena_PlaysetGrenadeWithTrajectory_C
+// 0x0010 (0x0C70 - 0x0C60)
+class UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C : public UGA_Athena_PlaysetGrenadeWithTrajectory_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C; // 0x0E90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        Throw_Loop_Sound;                                  // 0x0E98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C; // 0x0C60(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UFortPlaysetItemDefinition*             PlaysetData;                                       // 0x0C68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_Athena_Instance_PlaysetGrenadeWithTrajectory(int32 EntryPoint);
+	void GetActivePlaysetData(class UFortPlaysetItemDefinition** OutData);
 	void SetActivePlaysetOnPlayer();
 	void SetPlaysetData(class AFortProjectileBase* Projectile_Reference);
-	void K2_OnEndAbility(bool bWasCancelled);
-	void K2_ActivateAbility();
-	void GetActivePlaysetData(class UFortPlaysetItemDefinition** OutData);
 
 public:
 	static class UClass* StaticClass()

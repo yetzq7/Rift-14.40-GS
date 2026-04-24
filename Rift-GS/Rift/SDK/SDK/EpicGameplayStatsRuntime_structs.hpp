@@ -46,6 +46,15 @@ enum class EEpicLeaderboardDataType : uint8
 	EEpicLeaderboardDataType_MAX             = 2,
 };
 
+// ScriptStruct EpicGameplayStatsRuntime.GameplayStatTag
+// 0x0008 (0x0010 - 0x0008)
+struct FGameplayStatTag final : public FGameplayTag
+{
+public:
+	struct FGameplayTag                           Tag;                                               // 0x0008(0x0008)(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+};
+DUMPER7_ASSERTS_FGameplayStatTag;
+
 // ScriptStruct EpicGameplayStatsRuntime.GameplayStatMetadataTableRow
 // 0x0058 (0x0060 - 0x0008)
 struct FGameplayStatMetadataTableRow final : public FTableRowBase
@@ -53,7 +62,7 @@ struct FGameplayStatMetadataTableRow final : public FTableRowBase
 public:
 	class FString                                 BackendName;                                       // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   DisplayName;                                       // 0x0018(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TArray<EEpicLeaderboardTimeWindow>            Windows;                                           // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<EEpicLeaderboardTimeWindow>            Windows;                                           // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	EEpicLeaderboardUpdateFunction                Metric;                                            // 0x0040(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EEpicLeaderboardDataType                      DataType;                                          // 0x0041(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPublish;                                          // 0x0042(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -65,15 +74,6 @@ public:
 	struct FGameplayTagReferenceHelper            ReferenceHelper;                                   // 0x0050(0x0010)(Edit, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGameplayStatMetadataTableRow;
-
-// ScriptStruct EpicGameplayStatsRuntime.GameplayStatTag
-// 0x0008 (0x0010 - 0x0008)
-struct FGameplayStatTag final : public FGameplayTag
-{
-public:
-	struct FGameplayTag                           Tag;                                               // 0x0008(0x0008)(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-};
-DUMPER7_ASSERTS_FGameplayStatTag;
 
 // ScriptStruct EpicGameplayStatsRuntime.ManagedGameplayTagDataTableItem
 // 0x0010 (0x0010 - 0x0000)

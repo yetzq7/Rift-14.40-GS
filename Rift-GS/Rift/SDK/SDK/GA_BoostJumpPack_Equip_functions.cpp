@@ -75,11 +75,10 @@ void UGA_BoostJumpPack_Equip_C::IsAuthority(bool* bAuthority)
 // (Event, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // const struct FGameplayAbilityActorInfo& ActorInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
-// const struct FGameplayAbilitySpecHandle&Handle                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 // struct FGameplayTagContainer*           RelevantTags                                           (Parm, OutParm)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool UGA_BoostJumpPack_Equip_C::K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayAbilitySpecHandle& Handle, struct FGameplayTagContainer* RelevantTags) const
+bool UGA_BoostJumpPack_Equip_C::K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, struct FGameplayTagContainer* RelevantTags) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -89,7 +88,6 @@ bool UGA_BoostJumpPack_Equip_C::K2_CanActivateAbility(const struct FGameplayAbil
 	Params::GA_BoostJumpPack_Equip_C_K2_CanActivateAbility Parms{};
 
 	Parms.ActorInfo = std::move(ActorInfo);
-	Parms.Handle = std::move(Handle);
 
 	UObject::ProcessEvent(Func, &Parms);
 

@@ -11,32 +11,34 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "FortniteUI_classes.hpp"
 #include "FortniteGame_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ItemDescriptionDetailWidget.ItemDescriptionDetailWidget_C
-// 0x0020 (0x0300 - 0x02E0)
+// 0x0020 (0x02A0 - 0x0280)
 class UItemDescriptionDetailWidget_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       ItemDescriptionTextBlock;                          // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       QuantityTextBlock;                                 // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          ShouldShowOnlyIfItemIsSimple;                      // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	bool                                          InCollectionBook;                                  // 0x02F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       ItemDescriptionTextBlock;                          // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       QuantityTextBlock;                                 // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          ShouldShowOnlyIfItemIsSimple;                      // 0x0298(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	bool                                          InCollectionBook;                                  // 0x0299(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_29A[0x2];                                      // 0x029A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Quantity;                                          // 0x029C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void HandleItemChanged(bool ItemChanged, bool AmmoChanged, bool IngredientsChanged);
-	void UpdateQuantityTextBlock();
-	void IsItemSimple(bool* Result);
-	void HandlePostDifferentItemToDetailSet();
-	void HandlePreDifferentItemToDetailSet();
-	void HandleQuantityOverrideChanged();
 	void ExecuteUbergraph_ItemDescriptionDetailWidget(int32 EntryPoint);
+	void HandleQuantityOverrideChanged();
+	void HandlePreDifferentItemToDetailSet();
+	void HandlePostDifferentItemToDetailSet();
+	void IsItemSimple(bool* Result);
+	void UpdateQuantityTextBlock();
+	void HandleItemChanged(bool ItemChanged, bool AmmoChanged, bool IngredientsChanged);
 
 public:
 	static class UClass* StaticClass()

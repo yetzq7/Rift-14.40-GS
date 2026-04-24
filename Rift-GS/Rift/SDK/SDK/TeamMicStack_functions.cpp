@@ -104,6 +104,30 @@ void UTeamMicStack_C::HandleTeamMemberChanged(const struct FFortTeamMemberInfo& 
 }
 
 
+// Function TeamMicStack.TeamMicStack_C.ShiftTeamMembers
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FFortTeamMemberInfo&             TeamMemberInfo                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTeamMicStack_C::ShiftTeamMembers(struct FFortTeamMemberInfo& TeamMemberInfo, int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TeamMicStack_C", "ShiftTeamMembers");
+
+	Params::TeamMicStack_C_ShiftTeamMembers Parms{};
+
+	Parms.TeamMemberInfo = std::move(TeamMemberInfo);
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	TeamMemberInfo = std::move(Parms.TeamMemberInfo);
+}
+
+
 // Function TeamMicStack.TeamMicStack_C.AppendTeamMember
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

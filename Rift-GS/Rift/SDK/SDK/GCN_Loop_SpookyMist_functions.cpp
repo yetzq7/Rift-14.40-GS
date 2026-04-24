@@ -36,34 +36,6 @@ void AGCN_Loop_SpookyMist_C::ExecuteUbergraph_GCN_Loop_SpookyMist(int32 EntryPoi
 }
 
 
-// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.Initialize Player Skeletal Meshes
-// (BlueprintCallable, BlueprintEvent)
-
-void AGCN_Loop_SpookyMist_C::Initialize_Player_Skeletal_Meshes()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "Initialize Player Skeletal Meshes");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.UpdateTeamVisbility
-// (BlueprintCallable, BlueprintEvent)
-
-void AGCN_Loop_SpookyMist_C::UpdateTeamVisbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "UpdateTeamVisbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.EndedInteract
 // (BlueprintCallable, BlueprintEvent)
 
@@ -109,6 +81,20 @@ void AGCN_Loop_SpookyMist_C::Audio_Tick(float Velocity)
 	Parms.Velocity = Velocity;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.UpdateTeamVisbility
+// (BlueprintCallable, BlueprintEvent)
+
+void AGCN_Loop_SpookyMist_C::UpdateTeamVisbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "UpdateTeamVisbility");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -179,12 +165,12 @@ void AGCN_Loop_SpookyMist_C::ReceiveTick(float DeltaSeconds)
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
-// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
-// class UMatineeCameraShake*              BurstCameraShakeInstance                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UCameraShake*                     BurstCameraShakeInstance                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ADecalActor*                      BurstDecalInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AGCN_Loop_SpookyMist_C::OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UMatineeCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance)
+void AGCN_Loop_SpookyMist_C::OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance)
 {
 	static class UFunction* Func = nullptr;
 
@@ -209,8 +195,8 @@ void AGCN_Loop_SpookyMist_C::OnRemoval(class AActor* MyTarget, const struct FGam
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
-// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void AGCN_Loop_SpookyMist_C::OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents)
 {
@@ -230,150 +216,59 @@ void AGCN_Loop_SpookyMist_C::OnLoopingStart(class AActor* MyTarget, const struct
 }
 
 
-// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.Timeline Interaction Fade In Out__UpdateFunc
+// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.FadeInOut__UpdateFunc
 // (BlueprintEvent)
 
-void AGCN_Loop_SpookyMist_C::Timeline_Interaction_Fade_In_Out__UpdateFunc()
+void AGCN_Loop_SpookyMist_C::FadeInOut__UpdateFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "Timeline Interaction Fade In Out__UpdateFunc");
+		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "FadeInOut__UpdateFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.Timeline Interaction Fade In Out__FinishedFunc
+// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.FadeInOut__FinishedFunc
 // (BlueprintEvent)
 
-void AGCN_Loop_SpookyMist_C::Timeline_Interaction_Fade_In_Out__FinishedFunc()
+void AGCN_Loop_SpookyMist_C::FadeInOut__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "Timeline Interaction Fade In Out__FinishedFunc");
+		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "FadeInOut__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.Get Skeletal Meshes
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void AGCN_Loop_SpookyMist_C::Get_Skeletal_Meshes()
+void AGCN_Loop_SpookyMist_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "Get Skeletal Meshes");
+		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.ShouldSpeedRibbonsBeVisible
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   Should_Show_Speed_Ribbons                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.GetSkeletalMeshes
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AGCN_Loop_SpookyMist_C::ShouldSpeedRibbonsBeVisible(bool* Should_Show_Speed_Ribbons)
+void AGCN_Loop_SpookyMist_C::GetSkeletalMeshes()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "ShouldSpeedRibbonsBeVisible");
+		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "GetSkeletalMeshes");
 
-	Params::GCN_Loop_SpookyMist_C_ShouldSpeedRibbonsBeVisible Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Should_Show_Speed_Ribbons != nullptr)
-		*Should_Show_Speed_Ribbons = Parms.Should_Show_Speed_Ribbons;
-}
-
-
-// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.TickMovement Opacity
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-float AGCN_Loop_SpookyMist_C::TickMovement_Opacity()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "TickMovement Opacity");
-
-	Params::GCN_Loop_SpookyMist_C_TickMovement_Opacity Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.ShouldRenderAsLocalPlayer
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool AGCN_Loop_SpookyMist_C::ShouldRenderAsLocalPlayer()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "ShouldRenderAsLocalPlayer");
-
-	Params::GCN_Loop_SpookyMist_C_ShouldRenderAsLocalPlayer Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.Is Player Controller Friendly
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class AController*                      PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Is_Friendly_Player                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AGCN_Loop_SpookyMist_C::Is_Player_Controller_Friendly(class AController* PlayerController, bool* Is_Friendly_Player)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "Is Player Controller Friendly");
-
-	Params::GCN_Loop_SpookyMist_C_Is_Player_Controller_Friendly Parms{};
-
-	Parms.PlayerController = PlayerController;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Is_Friendly_Player != nullptr)
-		*Is_Friendly_Player = Parms.Is_Friendly_Player;
-}
-
-
-// Function GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.Get Goal Visibility Level
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-float AGCN_Loop_SpookyMist_C::Get_Goal_Visibility_Level()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_SpookyMist_C", "Get Goal Visibility Level");
-
-	Params::GCN_Loop_SpookyMist_C_Get_Goal_Visibility_Level Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

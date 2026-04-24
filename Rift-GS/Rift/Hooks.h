@@ -12,6 +12,7 @@ inline bool ReadyToStartMatch(AFortGameModeAthena* GameMode)
 		GameState->CurrentPlaylistInfo.OverridePlaylist = Playlist;
 		GameState->CurrentPlaylistInfo.PlaylistReplicationKey++;
 
+
 		GameMode->CurrentPlaylistId = Playlist->PlaylistId;
 		GameMode->CurrentPlaylistName = Playlist->PlaylistName;
 

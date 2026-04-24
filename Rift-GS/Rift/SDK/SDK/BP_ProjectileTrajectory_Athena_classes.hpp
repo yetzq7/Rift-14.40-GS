@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ProjectileTrajectory_Athena.BP_ProjectileTrajectory_Athena_C
-// 0x0000 (0x0270 - 0x0270)
+// 0x0000 (0x0388 - 0x0388)
 class ABP_ProjectileTrajectory_Athena_C : public ABP_ProjectileTrajectory_C
 {
 public:

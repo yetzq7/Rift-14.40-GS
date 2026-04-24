@@ -17,17 +17,17 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PBWA_S1_Solid.PBWA_S1_Solid_C
-// 0x0028 (0x0CF8 - 0x0CD0)
+// 0x0028 (0x0D10 - 0x0CE8)
 class APBWA_S1_Solid_C final : public ABuildingWall
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0CD0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	int32                                         GnomeWallChance;                                   // 0x0CD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         GnomeWallMax;                                      // 0x0CDC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Gnomed;                                            // 0x0CE0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_CE1[0x7];                                      // 0x0CE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceConstant*              GnomeMaterial;                                     // 0x0CE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMesh*                            GnomeWall;                                         // 0x0CF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0CE8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	int32                                         GnomeWallChance;                                   // 0x0CF0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         GnomeWallMax;                                      // 0x0CF4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Gnomed;                                            // 0x0CF8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_CF9[0x7];                                      // 0x0CF9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceConstant*              GnomeMaterial;                                     // 0x0D00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMesh*                            GnomeWall;                                         // 0x0D08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_PBWA_S1_Solid(int32 EntryPoint);

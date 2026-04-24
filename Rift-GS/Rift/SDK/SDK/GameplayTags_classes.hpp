@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "DeveloperSettings_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "GameplayTags_structs.hpp"
@@ -41,7 +40,6 @@ public:
 	static bool HasAnyTags(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch);
 	static bool HasTag(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTag& Tag, bool bExactMatch);
 	static bool IsGameplayTagValid(const struct FGameplayTag& GameplayTag);
-	static bool IsTagQueryEmpty(const struct FGameplayTagQuery& TagQuery);
 	static struct FGameplayTagContainer MakeGameplayTagContainerFromArray(const TArray<struct FGameplayTag>& GameplayTags);
 	static struct FGameplayTagContainer MakeGameplayTagContainerFromTag(const struct FGameplayTag& SingleTag);
 	static struct FGameplayTagQuery MakeGameplayTagQuery(const struct FGameplayTagQuery& TagQuery);
@@ -226,7 +224,7 @@ DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_NoTagsMatch;
 class UEditableGameplayTagQueryExpression_AnyExprMatch final : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -249,7 +247,7 @@ DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AnyExprMatch;
 class UEditableGameplayTagQueryExpression_AllExprMatch final : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -272,7 +270,7 @@ DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AllExprMatch;
 class UEditableGameplayTagQueryExpression_NoExprMatch final : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -291,15 +289,16 @@ public:
 DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_NoExprMatch;
 
 // Class GameplayTags.GameplayTagsManager
-// 0x01E8 (0x0210 - 0x0028)
+// 0x0168 (0x0190 - 0x0028)
 class UGameplayTagsManager final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x98];                                      // 0x0028(0x0098)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameplayTagSource>             TagSources;                                        // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_D0[0xE0];                                      // 0x00D0(0x00E0)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UDataTable*>                     GameplayTagTables;                                 // 0x01B0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1C0[0x50];                                     // 0x01C0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x80];                                      // 0x0028(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGameplayTagSource>             TagSources;                                        // 0x00A8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_B8[0x68];                                      // 0x00B8(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UDataTable*>                     RestrictedGameplayTagTables;                       // 0x0120(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<class UDataTable*>                     GameplayTagTables;                                 // 0x0130(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_140[0x50];                                     // 0x0140(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -323,7 +322,7 @@ class UGameplayTagsList : public UObject
 {
 public:
 	class FString                                 ConfigFileName;                                    // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayTagTableRow>           GameplayTagList;                                   // 0x0038(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayTagTableRow>           GameplayTagList;                                   // 0x0038(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -347,7 +346,7 @@ class URestrictedGameplayTagsList final : public UObject
 {
 public:
 	class FString                                 ConfigFileName;                                    // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FRestrictedGameplayTagTableRow> RestrictedGameplayTagList;                         // 0x0038(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FRestrictedGameplayTagTableRow> RestrictedGameplayTagList;                         // 0x0038(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -366,22 +365,22 @@ public:
 DUMPER7_ASSERTS_URestrictedGameplayTagsList;
 
 // Class GameplayTags.GameplayTagsSettings
-// 0x0070 (0x00B8 - 0x0048)
+// 0x0068 (0x00B0 - 0x0048)
 class UGameplayTagsSettings final : public UGameplayTagsList
 {
 public:
 	bool                                          ImportTagsFromConfig;                              // 0x0048(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          WarnOnInvalidTags;                                 // 0x0049(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FastReplication;                                   // 0x004A(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 InvalidTagCharacters;                              // 0x0050(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayTagCategoryRemap>      CategoryRemapping;                                 // 0x0060(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FSoftObjectPath>                GameplayTagTableList;                              // 0x0070(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayTagRedirect>           GameplayTagRedirects;                              // 0x0080(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FName>                           CommonlyReplicatedTags;                            // 0x0090(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumBitsForContainerSize;                           // 0x00A0(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NetIndexFirstBitSegment;                           // 0x00A4(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FRestrictedConfigInfo>          RestrictedConfigFiles;                             // 0x00A8(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGameplayTagCategoryRemap>      CategoryRemapping;                                 // 0x0050(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	bool                                          FastReplication;                                   // 0x0060(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSoftObjectPath>                GameplayTagTableList;                              // 0x0068(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayTagRedirect>           GameplayTagRedirects;                              // 0x0078(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<class FName>                           CommonlyReplicatedTags;                            // 0x0088(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	int32                                         NumBitsForContainerSize;                           // 0x0098(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NetIndexFirstBitSegment;                           // 0x009C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FRestrictedConfigInfo>          RestrictedConfigFiles;                             // 0x00A0(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -400,12 +399,11 @@ public:
 DUMPER7_ASSERTS_UGameplayTagsSettings;
 
 // Class GameplayTags.GameplayTagsDeveloperSettings
-// 0x0018 (0x0050 - 0x0038)
-class UGameplayTagsDeveloperSettings final : public UDeveloperSettings
+// 0x0010 (0x0038 - 0x0028)
+class UGameplayTagsDeveloperSettings final : public UObject
 {
 public:
-	class FString                                 DeveloperConfigName;                               // 0x0038(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   FavoriteTagSource;                                 // 0x0048(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DeveloperConfigName;                               // 0x0028(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()

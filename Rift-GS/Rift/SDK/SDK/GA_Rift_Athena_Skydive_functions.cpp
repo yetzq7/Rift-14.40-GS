@@ -36,66 +36,6 @@ void UGA_Rift_Athena_Skydive_C::ExecuteUbergraph_GA_Rift_Athena_Skydive(int32 En
 }
 
 
-// Function GA_Rift_Athena_Skydive.GA_Rift_Athena_Skydive_C.OnPawnLanded
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-
-void UGA_Rift_Athena_Skydive_C::OnPawnLanded(const struct FHitResult& Hit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Rift_Athena_Skydive_C", "OnPawnLanded");
-
-	Params::GA_Rift_Athena_Skydive_C_OnPawnLanded Parms{};
-
-	Parms.Hit = std::move(Hit);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Rift_Athena_Skydive.GA_Rift_Athena_Skydive_C.OnPawnEnteredWater
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortPlayerPawn*                  FortPlayerPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Rift_Athena_Skydive_C::OnPawnEnteredWater(class AFortPlayerPawn* FortPlayerPawn)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Rift_Athena_Skydive_C", "OnPawnEnteredWater");
-
-	Params::GA_Rift_Athena_Skydive_C_OnPawnEnteredWater Parms{};
-
-	Parms.FortPlayerPawn = FortPlayerPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Rift_Athena_Skydive.GA_Rift_Athena_Skydive_C.OnDestroyed_Event_0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           DestroyedActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Rift_Athena_Skydive_C::OnDestroyed_Event_0(class AActor* DestroyedActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Rift_Athena_Skydive_C", "OnDestroyed_Event_0");
-
-	Params::GA_Rift_Athena_Skydive_C_OnDestroyed_Event_0 Parms{};
-
-	Parms.DestroyedActor = DestroyedActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GA_Rift_Athena_Skydive.GA_Rift_Athena_Skydive_C.SetPlayerToSkydive
 // (BlueprintCallable, BlueprintEvent)
 
@@ -124,17 +64,23 @@ void UGA_Rift_Athena_Skydive_C::K2_ActivateAbility()
 }
 
 
-// Function GA_Rift_Athena_Skydive.GA_Rift_Athena_Skydive_C.OnCompleted_AA0523504B7CA4F488E1E6A11F48308A
+// Function GA_Rift_Athena_Skydive.GA_Rift_Athena_Skydive_C.OnChange_16E0EB444DDAC48E8E9CC99B762C0DC5
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EMovementMode                           NewMovementMode                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Rift_Athena_Skydive_C::OnCompleted_AA0523504B7CA4F488E1E6A11F48308A()
+void UGA_Rift_Athena_Skydive_C::OnChange_16E0EB444DDAC48E8E9CC99B762C0DC5(EMovementMode NewMovementMode)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Rift_Athena_Skydive_C", "OnCompleted_AA0523504B7CA4F488E1E6A11F48308A");
+		Func = Class->GetFunction("GA_Rift_Athena_Skydive_C", "OnChange_16E0EB444DDAC48E8E9CC99B762C0DC5");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::GA_Rift_Athena_Skydive_C_OnChange_16E0EB444DDAC48E8E9CC99B762C0DC5 Parms{};
+
+	Parms.NewMovementMode = NewMovementMode;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -147,20 +93,6 @@ void UGA_Rift_Athena_Skydive_C::OnBlendOut_AA0523504B7CA4F488E1E6A11F48308A()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("GA_Rift_Athena_Skydive_C", "OnBlendOut_AA0523504B7CA4F488E1E6A11F48308A");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Rift_Athena_Skydive.GA_Rift_Athena_Skydive_C.OnInterrupted_AA0523504B7CA4F488E1E6A11F48308A
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Rift_Athena_Skydive_C::OnInterrupted_AA0523504B7CA4F488E1E6A11F48308A()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Rift_Athena_Skydive_C", "OnInterrupted_AA0523504B7CA4F488E1E6A11F48308A");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -180,35 +112,29 @@ void UGA_Rift_Athena_Skydive_C::OnCancelled_AA0523504B7CA4F488E1E6A11F48308A()
 }
 
 
-// Function GA_Rift_Athena_Skydive.GA_Rift_Athena_Skydive_C.K2_OnEndAbility
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function GA_Rift_Athena_Skydive.GA_Rift_Athena_Skydive_C.OnCompleted_AA0523504B7CA4F488E1E6A11F48308A
+// (BlueprintCallable, BlueprintEvent)
 
-void UGA_Rift_Athena_Skydive_C::K2_OnEndAbility(bool bWasCancelled)
+void UGA_Rift_Athena_Skydive_C::OnCompleted_AA0523504B7CA4F488E1E6A11F48308A()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Rift_Athena_Skydive_C", "K2_OnEndAbility");
+		Func = Class->GetFunction("GA_Rift_Athena_Skydive_C", "OnCompleted_AA0523504B7CA4F488E1E6A11F48308A");
 
-	Params::GA_Rift_Athena_Skydive_C_K2_OnEndAbility Parms{};
-
-	Parms.bWasCancelled = bWasCancelled;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GA_Rift_Athena_Skydive.GA_Rift_Athena_Skydive_C.RemoveSkydivingGameplayEffect
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function GA_Rift_Athena_Skydive.GA_Rift_Athena_Skydive_C.OnInterrupted_AA0523504B7CA4F488E1E6A11F48308A
+// (BlueprintCallable, BlueprintEvent)
 
-void UGA_Rift_Athena_Skydive_C::RemoveSkydivingGameplayEffect()
+void UGA_Rift_Athena_Skydive_C::OnInterrupted_AA0523504B7CA4F488E1E6A11F48308A()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Rift_Athena_Skydive_C", "RemoveSkydivingGameplayEffect");
+		Func = Class->GetFunction("GA_Rift_Athena_Skydive_C", "OnInterrupted_AA0523504B7CA4F488E1E6A11F48308A");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

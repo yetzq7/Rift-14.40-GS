@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BulletWhipTrackerComponent.BulletWhipTrackerComponent_C
-// 0x0000 (0x00F0 - 0x00F0)
+// 0x0000 (0x0148 - 0x0148)
 class UBulletWhipTrackerComponent_C : public UBulletWhipTrackerComponentBase
 {
 public:

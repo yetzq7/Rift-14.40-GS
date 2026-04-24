@@ -24,12 +24,11 @@ class UConsoleSettings final : public UObject
 public:
 	int32                                         MaxScrollbackSize;                                 // 0x0028(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAutoCompleteCommand>           ManualAutoCompleteList;                            // 0x0030(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         AutoCompleteMapPaths;                              // 0x0040(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FAutoCompleteCommand>           ManualAutoCompleteList;                            // 0x0030(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<class FString>                         AutoCompleteMapPaths;                              // 0x0040(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	float                                         BackgroundOpacityPercentage;                       // 0x0050(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOrderTopToBottom;                                 // 0x0054(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisplayHelpInAutoComplete;                        // 0x0055(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_56[0x2];                                       // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FColor                                 InputColor;                                        // 0x0058(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 HistoryColor;                                      // 0x005C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 AutoCompleteCommandColor;                          // 0x0060(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -54,32 +53,27 @@ public:
 DUMPER7_ASSERTS_UConsoleSettings;
 
 // Class EngineSettings.GameMapsSettings
-// 0x00C8 (0x00F0 - 0x0028)
+// 0x00F0 (0x0118 - 0x0028)
 class UGameMapsSettings final : public UObject
 {
 public:
-	class FString                                 LocalMapOptions;                                   // 0x0028(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        TransitionMap;                                     // 0x0038(0x0018)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseSplitscreen;                                   // 0x0050(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETwoPlayerSplitScreenType                     TwoPlayerSplitscreenLayout;                        // 0x0051(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EThreePlayerSplitScreenType                   ThreePlayerSplitscreenLayout;                      // 0x0052(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFourPlayerSplitScreenType                    FourPlayerSplitscreenLayout;                       // 0x0053(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOffsetPlayerGamepadIds;                           // 0x0054(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftClassPath                         GameInstanceClass;                                 // 0x0058(0x0018)(Edit, ZeroConstructor, Config, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        GameDefaultMap;                                    // 0x0070(0x0018)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FSoftObjectPath                        ServerDefaultMap;                                  // 0x0088(0x0018)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FSoftClassPath                         GlobalDefaultGameMode;                             // 0x00A0(0x0018)(Edit, ZeroConstructor, Config, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FSoftClassPath                         GlobalDefaultServerGameMode;                       // 0x00B8(0x0018)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FGameModeName>                  GameModeMapPrefixes;                               // 0x00D0(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FGameModeName>                  GameModeClassAliases;                              // 0x00E0(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UGameMapsSettings* GetGameMapsSettings();
-
-	void SetSkipAssigningGamepadToPlayer1(bool bSkipFirstPlayer);
-
-	bool GetSkipAssigningGamepadToPlayer1() const;
+	struct FSoftObjectPath                        EditorStartupMap;                                  // 0x0028(0x0018)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LocalMapOptions;                                   // 0x0040(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        TransitionMap;                                     // 0x0050(0x0018)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseSplitscreen;                                   // 0x0068(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETwoPlayerSplitScreenType                     TwoPlayerSplitscreenLayout;                        // 0x0069(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EThreePlayerSplitScreenType                   ThreePlayerSplitscreenLayout;                      // 0x006A(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFourPlayerSplitScreenType                    FourPlayerSplitscreenLayout;                       // 0x006B(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOffsetPlayerGamepadIds;                           // 0x006C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftClassPath                         GameInstanceClass;                                 // 0x0070(0x0018)(Edit, ZeroConstructor, Config, NoClear, NativeAccessSpecifierPublic)
+	TArray<struct FSubLevelStrippingInfo>         SubLevelClassesToStrip;                            // 0x0088(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        GameDefaultMap;                                    // 0x0098(0x0018)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FSoftObjectPath                        ServerDefaultMap;                                  // 0x00B0(0x0018)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FSoftClassPath                         GlobalDefaultGameMode;                             // 0x00C8(0x0018)(Edit, ZeroConstructor, Config, NoClear, NativeAccessSpecifierPrivate)
+	struct FSoftClassPath                         GlobalDefaultServerGameMode;                       // 0x00E0(0x0018)(Edit, ZeroConstructor, Config, AdvancedDisplay, NativeAccessSpecifierPrivate)
+	TArray<struct FGameModeName>                  GameModeMapPrefixes;                               // 0x00F8(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, NativeAccessSpecifierPrivate)
+	TArray<struct FGameModeName>                  GameModeClassAliases;                              // 0x0108(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -131,31 +125,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGameNetworkManagerSettings;
-
-// Class EngineSettings.HudSettings
-// 0x0018 (0x0040 - 0x0028)
-class UHudSettings final : public UObject
-{
-public:
-	uint8                                         bShowHUD : 1;                                      // 0x0028(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           DebugDisplay;                                      // 0x0030(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HudSettings")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HudSettings")
-	}
-	static class UHudSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHudSettings>();
-	}
-};
-DUMPER7_ASSERTS_UHudSettings;
 
 // Class EngineSettings.GameSessionSettings
 // 0x0010 (0x0038 - 0x0028)
@@ -247,5 +216,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGeneralProjectSettings;
+
+// Class EngineSettings.HudSettings
+// 0x0018 (0x0040 - 0x0028)
+class UHudSettings final : public UObject
+{
+public:
+	uint8                                         bShowHUD : 1;                                      // 0x0028(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           DebugDisplay;                                      // 0x0030(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("HudSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HudSettings")
+	}
+	static class UHudSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHudSettings>();
+	}
+};
+DUMPER7_ASSERTS_UHudSettings;
 
 SDK_NAMESPACE_END

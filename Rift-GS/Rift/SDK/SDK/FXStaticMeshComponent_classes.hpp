@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass FXStaticMeshComponent.FXStaticMeshComponent_C
-// 0x0000 (0x04F0 - 0x04F0)
+// 0x0000 (0x0630 - 0x0630)
 class UFXStaticMeshComponent_C final : public UFortFXStaticMeshComponent
 {
 public:

@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // ScriptStruct AnimationSharing.TickAnimationSharingFunction
-// 0x0008 (0x0030 - 0x0028)
+// 0x0008 (0x0058 - 0x0050)
 struct FTickAnimationSharingFunction final : public FTickFunction
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x8];                                       // 0x0050(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FTickAnimationSharingFunction;
 
@@ -38,15 +38,15 @@ public:
 DUMPER7_ASSERTS_FAnimationSharingScalability;
 
 // ScriptStruct AnimationSharing.AnimationSetup
-// 0x0018 (0x0018 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct FAnimationSetup final
 {
 public:
-	class UAnimSequence*                          AnimSequence;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UAnimSharingStateInstance>  AnimBlueprint;                                     // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPerPlatformInt                        NumRandomizedInstances;                            // 0x0010(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPerPlatformBool                       Enabled;                                           // 0x0014(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UAnimSharingStateInstance>  AnimBlueprint;                                     // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UAnimSequence>           AnimSequence;                                      // 0x0008(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPerPlatformInt                        NumRandomizedInstances;                            // 0x0030(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerPlatformBool                       Enabled;                                           // 0x0034(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAnimationSetup;
 
@@ -57,7 +57,7 @@ struct FAnimationStateEntry final
 public:
 	uint8                                         State;                                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAnimationSetup>                AnimationSetups;                                   // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FAnimationSetup>                AnimationSetups;                                   // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bOnDemand;                                         // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAdditive;                                         // 0x0019(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
@@ -74,16 +74,16 @@ public:
 DUMPER7_ASSERTS_FAnimationStateEntry;
 
 // ScriptStruct AnimationSharing.PerSkeletonAnimationSharingSetup
-// 0x0038 (0x0038 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct FPerSkeletonAnimationSharingSetup final
 {
 public:
-	class USkeleton*                              Skeleton;                                          // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USkeletalMesh*                          SkeletalMesh;                                      // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UAnimSharingTransitionInstance> BlendAnimBlueprint;                            // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UAnimSharingAdditiveInstance> AdditiveAnimBlueprint;                           // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UAnimationSharingStateProcessor> StateProcessorClass;                          // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FAnimationStateEntry>           AnimationStates;                                   // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class USkeleton>               Skeleton;                                          // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FAnimationStateEntry>           AnimationStates;                                   // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TSubclassOf<class UAnimationSharingStateProcessor> StateProcessorClass;                          // 0x0038(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class USkeletalMesh>           SkeletalMesh;                                      // 0x0040(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UAnimSharingTransitionInstance> BlendAnimBlueprint;                            // 0x0068(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UAnimSharingAdditiveInstance> AdditiveAnimBlueprint;                           // 0x0070(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPerSkeletonAnimationSharingSetup;
 

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass STW_PlayerCameraModeRanged.STW_PlayerCameraModeRanged_C
-// 0x0000 (0x0DC0 - 0x0DC0)
+// 0x0000 (0x0C50 - 0x0C50)
 class USTW_PlayerCameraModeRanged_C final : public UAthena_PlayerCameraModeRanged_C
 {
 public:

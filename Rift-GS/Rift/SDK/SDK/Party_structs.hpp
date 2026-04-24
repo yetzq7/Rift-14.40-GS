@@ -130,16 +130,17 @@ enum class ESocialChannelType : uint8
 	ESocialChannelType_MAX                   = 6,
 };
 
-// Enum Party.EPlatformIconDisplayRule
-// NumValues: 0x0006
-enum class EPlatformIconDisplayRule : uint8
+// Enum Party.ESendFriendInviteFailureReason
+// NumValues: 0x0007
+enum class ESendFriendInviteFailureReason : uint8
 {
-	Always                                   = 0,
-	AlwaysIfDifferent                        = 1,
-	AlwaysWhenInCrossplayParty               = 2,
-	AlwaysIfDifferentWhenInCrossplayParty    = 3,
-	Never                                    = 4,
-	EPlatformIconDisplayRule_MAX             = 5,
+	NotFound                                 = 0,
+	AlreadyFriends                           = 1,
+	InvitePending                            = 2,
+	AddingSelfFail                           = 3,
+	AddingBlockedFail                        = 4,
+	UnknownError                             = 5,
+	ESendFriendInviteFailureReason_MAX       = 6,
 };
 
 // Enum Party.ECrossplayPreference
@@ -154,18 +155,17 @@ enum class ECrossplayPreference : uint8
 };
 
 // Enum Party.ESocialRelationship
-// NumValues: 0x0009
+// NumValues: 0x0008
 enum class ESocialRelationship : uint8
 {
-	Any                                      = 0,
-	FriendInviteReceived                     = 1,
-	FriendInviteSent                         = 2,
-	PartyInvite                              = 3,
-	Friend                                   = 4,
-	BlockedPlayer                            = 5,
-	SuggestedFriend                          = 6,
-	RecentPlayer                             = 7,
-	ESocialRelationship_MAX                  = 8,
+	FriendInviteReceived                     = 0,
+	FriendInviteSent                         = 1,
+	PartyInvite                              = 2,
+	Friend                                   = 3,
+	BlockedPlayer                            = 4,
+	SuggestedFriend                          = 5,
+	RecentPlayer                             = 6,
+	ESocialRelationship_MAX                  = 7,
 };
 
 // Enum Party.ESocialSubsystem
@@ -186,46 +186,6 @@ public:
 };
 DUMPER7_ASSERTS_FOnlinePartyRepDataBase;
 
-// ScriptStruct Party.SocialPlatformDescription
-// 0x0058 (0x0058 - 0x0000)
-struct FSocialPlatformDescription final
-{
-public:
-	class FString                                 Name;                                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PlatformType;                                      // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   OnlineSubsystem;                                   // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SessionType;                                       // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ExternalAccountType;                               // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CrossplayPool;                                     // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSocialPlatformDescription;
-
-// ScriptStruct Party.UserPlatform
-// 0x0058 (0x0058 - 0x0000)
-struct FUserPlatform final
-{
-public:
-	struct FSocialPlatformDescription             PlatformDescription;                               // 0x0000(0x0058)(NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FUserPlatform;
-
-// ScriptStruct Party.PartyMemberRepData
-// 0x0160 (0x0178 - 0x0018)
-struct FPartyMemberRepData : public FOnlinePartyRepDataBase
-{
-public:
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserPlatform                          Platform;                                          // 0x0020(0x0058)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_78[0x30];                                      // 0x0078(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       PlatformUniqueId;                                  // 0x00A8(0x0028)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_D0[0x30];                                      // 0x00D0(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 PlatformSessionId;                                 // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_110[0x30];                                     // 0x0110(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	ECrossplayPreference                          CrossplayPreference;                               // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_141[0x37];                                     // 0x0141(0x0037)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPartyMemberRepData;
-
 // ScriptStruct Party.PartyPrivacySettings
 // 0x0003 (0x0003 - 0x0000)
 struct FPartyPrivacySettings final
@@ -237,16 +197,55 @@ public:
 };
 DUMPER7_ASSERTS_FPartyPrivacySettings;
 
+// ScriptStruct Party.UserPlatform
+// 0x0010 (0x0010 - 0x0000)
+struct FUserPlatform final
+{
+public:
+	class FString                                 PlatformStr;                                       // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FUserPlatform;
+
+// ScriptStruct Party.PartyMemberRepData
+// 0x0130 (0x0148 - 0x0018)
+struct FPartyMemberRepData : public FOnlinePartyRepDataBase
+{
+public:
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUserPlatform                          Platform;                                          // 0x0020(0x0010)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_30[0x38];                                      // 0x0030(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       PlatformUniqueId;                                  // 0x0068(0x0028)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_90[0x38];                                      // 0x0090(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 PlatformSessionId;                                 // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_D8[0x31];                                      // 0x00D8(0x0031)(Fixing Size After Last Property [ Dumper-7 ])
+	ECrossplayPreference                          CrossplayPreference;                               // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_10A[0x3E];                                     // 0x010A(0x003E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPartyMemberRepData;
+
 // ScriptStruct Party.PartyPlatformSessionInfo
-// 0x0048 (0x0048 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct FPartyPlatformSessionInfo final
 {
 public:
-	class FString                                 SessionType;                                       // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SessionId;                                         // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       OwnerPrimaryId;                                    // 0x0020(0x0028)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   OssName;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SessionId;                                         // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       OwnerPrimaryId;                                    // 0x0018(0x0028)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPartyPlatformSessionInfo;
+
+// ScriptStruct Party.PartyRepData
+// 0x0070 (0x0088 - 0x0018)
+struct FPartyRepData : public FOnlinePartyRepDataBase
+{
+public:
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPartyPrivacySettings                  PrivacySettings;                                   // 0x0020(0x0003)(NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_23[0x3D];                                      // 0x0023(0x003D)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPartyPlatformSessionInfo>      PlatformSessions;                                  // 0x0060(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_70[0x18];                                      // 0x0070(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPartyRepData;
 
 // ScriptStruct Party.SocialChatChannelConfig
 // 0x0040 (0x0040 - 0x0000)
@@ -255,22 +254,9 @@ struct FSocialChatChannelConfig final
 public:
 	class USocialUser*                            SocialUser;                                        // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class USocialChatChannel*>             ListenChannels;                                    // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class USocialChatChannel*>             ListenChannels;                                    // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FSocialChatChannelConfig;
-
-// ScriptStruct Party.PartyRepData
-// 0x0068 (0x0080 - 0x0018)
-struct FPartyRepData : public FOnlinePartyRepDataBase
-{
-public:
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPartyPrivacySettings                  PrivacySettings;                                   // 0x0020(0x0003)(NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_23[0x35];                                      // 0x0023(0x0035)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPartyPlatformSessionInfo>      PlatformSessions;                                  // 0x0058(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_68[0x18];                                      // 0x0068(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPartyRepData;
 
 SDK_NAMESPACE_END

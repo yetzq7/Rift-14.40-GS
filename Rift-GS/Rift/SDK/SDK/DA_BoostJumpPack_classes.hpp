@@ -11,26 +11,27 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "CommonInput_structs.hpp"
+#include "FortniteGame_classes.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass DA_BoostJumpPack.DA_BoostJumpPack_C
-// 0x0068 (0x0DA8 - 0x0D40)
+// 0x0068 (0x0A78 - 0x0A10)
 class ADA_BoostJumpPack_C final : public AFortCustomizableAbilityDecoTool
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTagContainer                  ErrorReason;                                       // 0x0D48(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTagContainer                  ErrorReasonGamepad;                                // 0x0D68(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTagContainer                  ErrorCannotUse;                                    // 0x0D88(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTagContainer                  ErrorReason;                                       // 0x0A18(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTagContainer                  ErrorReasonGamepad;                                // 0x0A38(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTagContainer                  ErrorCannotUse;                                    // 0x0A58(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_DA_BoostJumpPack(int32 EntryPoint);
 	void BPPressTrigger(class AFortDecoHelper* FortDecoHelper);
+	void UserConstructionScript();
 	void RaiseUsageError(const struct FGameplayTagContainer& FailedReason);
 	void IsOnGround(bool* bOnGround);
 

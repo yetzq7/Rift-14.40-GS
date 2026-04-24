@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GET_PeriodicPhysicalDamage.GET_PeriodicPhysicalDamage_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x05F0 - 0x05F0)
 class UGET_PeriodicPhysicalDamage_C : public UGET_PeriodicDamageParent_C
 {
 public:

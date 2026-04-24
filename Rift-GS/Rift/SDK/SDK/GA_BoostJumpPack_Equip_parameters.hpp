@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "GameplayAbilities_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -38,19 +38,17 @@ public:
 DUMPER7_ASSERTS_GA_BoostJumpPack_Equip_C_IsAuthority;
 
 // Function GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C.K2_CanActivateAbility
-// 0x00C0 (0x00C0 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct GA_BoostJumpPack_Equip_C_K2_CanActivateAbility final
 {
 public:
-	struct FGameplayAbilityActorInfo              ActorInfo;                                         // 0x0000(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
-	struct FGameplayAbilitySpecHandle             Handle;                                            // 0x0048(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  RelevantTags;                                      // 0x0050(0x0020)(Parm, OutParm)
-	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        LocalPlayerPawn;                                   // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  ErrorReasonGamepad;                                // 0x0080(0x0020)(Edit, BlueprintVisible)
-	struct FGameplayTagContainer                  ErrorReason;                                       // 0x00A0(0x0020)(Edit, BlueprintVisible)
+	struct FGameplayAbilityActorInfo              ActorInfo;                                         // 0x0000(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
+	struct FGameplayTagContainer                  RelevantTags;                                      // 0x0040(0x0020)(Parm, OutParm)
+	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        LocalPlayerPawn;                                   // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  ErrorReasonGamepad;                                // 0x0070(0x0020)(Edit, BlueprintVisible)
+	struct FGameplayTagContainer                  ErrorReason;                                       // 0x0090(0x0020)(Edit, BlueprintVisible)
 };
 DUMPER7_ASSERTS_GA_BoostJumpPack_Equip_C_K2_CanActivateAbility;
 
@@ -82,7 +80,7 @@ public:
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AFortPlayerControllerZone*              CallFunc_GetPlayerController_AsFort_Player_Controller_Zone; // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UFortItem*                              CallFunc_BP_GetInventoryItemWithGuid_ReturnValue;  // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_GA_BoostJumpPack_Equip_C_GetGadgetItem;
 

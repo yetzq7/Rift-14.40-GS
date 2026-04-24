@@ -11,22 +11,43 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "GC_Athena_OutsideSafeZone_classes.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GC_Athena_OutsideSafeZone_Stage03.GC_Athena_OutsideSafeZone_Stage03_C
-// 0x0008 (0x0858 - 0x0850)
-class AGC_Athena_OutsideSafeZone_Stage03_C final : public AGC_Athena_OutsideSafeZone_C
+// 0x0038 (0x08B8 - 0x0880)
+class AGC_Athena_OutsideSafeZone_Stage03_C final : public AFortGameplayCueNotify_Loop
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GC_Athena_OutsideSafeZone_Stage03_C; // 0x0850(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0880(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   SM_Storm_ScreenEffect;                             // 0x0888(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         Timeline_1_Opacity_F0A4C399436DEBD08D1B4485D97E6CDE; // 0x0890(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_1__Direction_F0A4C399436DEBD08D1B4485D97E6CDE; // 0x0894(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_895[0x3];                                      // 0x0895(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_1;                                        // 0x0898(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Timeline_0_Opacity_D70C1E12439995CE602A6BB6906563D6; // 0x08A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_0__Direction_D70C1E12439995CE602A6BB6906563D6; // 0x08A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8A5[0x3];                                      // 0x08A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_0;                                        // 0x08A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         StormOpacity;                                      // 0x08B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GC_Athena_OutsideSafeZone_Stage03(int32 EntryPoint);
-	void On_Distant_Lightning_Spawn(class FName EventName, float EmitterTime, const struct FVector& Location, const struct FVector& Velocity);
+	void OnApplication(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance);
+	void OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance);
 	void OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents);
+	void On_Distant_Lightning_Spawn(class FName EventName, float EmitterTime, const struct FVector& Location, const struct FVector& Velocity);
+	void Timeline_1__UpdateFunc();
+	void Timeline_1__FinishedFunc();
+	void Timeline_0__UpdateFunc();
+	void Timeline_0__FinishedFunc();
+	void UserConstructionScript();
+	bool OnExecute(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
+	void ZapFX(int32 ZapCount, class APlayerPawn_Athena_C* PlayerPawnAthena);
+	void AddStormAudio(class APlayerPawn_Athena_C* PlayerPawnAthena);
+	void RemoveStormAudio(class APlayerPawn_Athena_C* PlayerPawnAthena);
 
 public:
 	static class UClass* StaticClass()

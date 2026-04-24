@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -40,15 +40,6 @@ enum class EMovieSceneCaptureProtocolState : uint8
 	EMovieSceneCaptureProtocolState_MAX      = 4,
 };
 
-// ScriptStruct MovieSceneCapture.CompositionGraphCapturePasses
-// 0x0010 (0x0010 - 0x0000)
-struct FCompositionGraphCapturePasses final
-{
-public:
-	TArray<class FString>                         Value;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCompositionGraphCapturePasses;
-
 // ScriptStruct MovieSceneCapture.FrameMetrics
 // 0x0010 (0x0010 - 0x0000)
 struct FFrameMetrics final
@@ -61,6 +52,24 @@ public:
 };
 DUMPER7_ASSERTS_FFrameMetrics;
 
+// ScriptStruct MovieSceneCapture.CapturedPixels
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FCapturedPixels final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FCapturedPixels;
+
+// ScriptStruct MovieSceneCapture.CompositionGraphCapturePasses
+// 0x0010 (0x0010 - 0x0000)
+struct FCompositionGraphCapturePasses final
+{
+public:
+	TArray<class FString>                         Value;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCompositionGraphCapturePasses;
+
 // ScriptStruct MovieSceneCapture.CaptureResolution
 // 0x0008 (0x0008 - 0x0000)
 struct FCaptureResolution final
@@ -72,7 +81,7 @@ public:
 DUMPER7_ASSERTS_FCaptureResolution;
 
 // ScriptStruct MovieSceneCapture.MovieSceneCaptureSettings
-// 0x0070 (0x0070 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct FMovieSceneCaptureSettings final
 {
 public:
@@ -83,43 +92,19 @@ public:
 	bool                                          bUseRelativeFrameNumbers;                          // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         HandleFrames;                                      // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 MovieExtension;                                    // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         ZeroPadFrameNumbers;                               // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFrameRate                             FrameRate;                                         // 0x0044(0x0008)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseCustomFrameRate;                               // 0x004C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFrameRate                             CustomFrameRate;                                   // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FCaptureResolution                     Resolution;                                        // 0x0058(0x0008)(Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bEnableTextureStreaming;                           // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCinematicEngineScalability;                       // 0x0061(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCinematicMode;                                    // 0x0062(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowMovement;                                    // 0x0063(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowTurning;                                     // 0x0064(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowPlayer;                                       // 0x0065(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowHUD;                                          // 0x0066(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUsePathTracer;                                    // 0x0067(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PathTracerSamplePerPixel;                          // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         ZeroPadFrameNumbers;                               // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFrameRate                             FrameRate;                                         // 0x0034(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCaptureResolution                     Resolution;                                        // 0x003C(0x0008)(Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bEnableTextureStreaming;                           // 0x0044(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCinematicEngineScalability;                       // 0x0045(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCinematicMode;                                    // 0x0046(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowMovement;                                    // 0x0047(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowTurning;                                     // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowPlayer;                                       // 0x0049(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowHUD;                                          // 0x004A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMovieSceneCaptureSettings;
-
-// ScriptStruct MovieSceneCapture.CapturedPixels
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FCapturedPixels final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FCapturedPixels;
-
-// ScriptStruct MovieSceneCapture.CapturedPixelsID
-// 0x0050 (0x0050 - 0x0000)
-struct FCapturedPixelsID final
-{
-public:
-	TMap<class FName, class FName>                Identifiers;                                       // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCapturedPixelsID;
 
 SDK_NAMESPACE_END

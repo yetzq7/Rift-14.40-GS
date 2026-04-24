@@ -61,16 +61,6 @@ public:
 };
 DUMPER7_ASSERTS_CommonInputSubsystem_GetDefaultInputType;
 
-// Function CommonInput.CommonInputSubsystem.IsInputMethodActive
-// 0x0002 (0x0002 - 0x0000)
-struct CommonInputSubsystem_IsInputMethodActive final
-{
-public:
-	ECommonInputType                              InputMethod;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_CommonInputSubsystem_IsInputMethodActive;
-
 // Function CommonInput.CommonInputSubsystem.IsUsingPointerInput
 // 0x0001 (0x0001 - 0x0000)
 struct CommonInputSubsystem_IsUsingPointerInput final

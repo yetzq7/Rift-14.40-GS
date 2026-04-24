@@ -10,28 +10,27 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "FortniteGame_classes.hpp"
+#include "GameplayTags_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GAT_TriggeredAbility.GAT_TriggeredAbility_C
-// 0x0018 (0x0AC0 - 0x0AA8)
+// 0x0018 (0x0950 - 0x0938)
 class UGAT_TriggeredAbility_C : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTag                           TC_AbilitiesGenericTriggeredAbilityActivate;       // 0x0AB0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bPlayerHolsterState;                               // 0x0AB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0938(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTag                           TC_AbilitiesGenericTriggeredAbilityActivate;       // 0x0940(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPlayerHolsterState;                               // 0x0948(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GAT_TriggeredAbility(int32 EntryPoint);
 	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData);
 	void TriggeredAbilitySetup(class UAbilitySystemComponent* AbilitySystemIn, class UAbilitySystemComponent** AbilitySystemOut);
 	void SetHolsterWeaponWithName(class AFortPawn* Target_Fort_Pawn, bool ShouldHolster, bool PlayEquipAnim, bool ShowDebugPrintName, bool* IsWeaponHolstered, bool* OperationSuccessful);
-	void EndAbilityWithReason(const class FString& Reason);
 
 public:
 	static class UClass* StaticClass()

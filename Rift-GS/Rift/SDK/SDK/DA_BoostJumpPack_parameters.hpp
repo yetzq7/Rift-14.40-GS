@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "CommonInput_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 SDK_NAMESPACE_START

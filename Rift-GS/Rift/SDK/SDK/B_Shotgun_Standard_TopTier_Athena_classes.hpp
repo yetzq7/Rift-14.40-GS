@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass B_Shotgun_Standard_TopTier_Athena.B_Shotgun_Standard_TopTier_Athena_C
-// 0x0000 (0x1258 - 0x1258)
+// 0x0000 (0x0DE8 - 0x0DE8)
 class AB_Shotgun_Standard_TopTier_Athena_C final : public AB_Shotgun_Generic_C
 {
 public:

@@ -16,12 +16,12 @@
 SDK_NAMESPACE_START
 
 // Class UACBase.UACNetworkComponent
-// 0x0160 (0x0210 - 0x00B0)
+// 0x0100 (0x01F8 - 0x00F8)
 class UUACNetworkComponent final : public UActorComponent
 {
 public:
-	int32                                         PlayerId;                                          // 0x00B0(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B4[0x15C];                                     // 0x00B4(0x015C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         PlayerID;                                          // 0x00F8(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FC[0xFC];                                      // 0x00FC(0x00FC)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SendClientHello(uint32 SessionKey);

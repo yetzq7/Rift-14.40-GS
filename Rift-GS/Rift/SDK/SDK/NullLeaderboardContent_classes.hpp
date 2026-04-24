@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass NullLeaderboardContent.NullLeaderboardContent_C
-// 0x0000 (0x0288 - 0x0288)
+// 0x0000 (0x0238 - 0x0238)
 class UNullLeaderboardContent_C final : public UCommonUserWidget
 {
 public:

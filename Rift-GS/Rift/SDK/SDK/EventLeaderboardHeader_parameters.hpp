@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -17,14 +18,28 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function EventLeaderboardHeader.EventLeaderboardHeader_C.ExecuteUbergraph_EventLeaderboardHeader
-// 0x0048 (0x0048 - 0x0000)
+// 0x0170 (0x0170 - 0x0000)
 struct EventLeaderboardHeader_C_ExecuteUbergraph_EventLeaderboardHeader final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetWindowRoundDisplayString_ReturnValue;  // 0x0008(0x0018)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0020(0x0028)()
+	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumEventRounds_ReturnValue;            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetEventWindowSessionNumber_ReturnValue;  // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0018(0x0040)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData1;             // 0x0058(0x0040)(HasGetValueTypeHash)
+	int32                                         CallFunc_GetEventWindowRoundNumber_ReturnValue;    // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00A0(0x0010)(ZeroConstructor, ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData2;             // 0x00B0(0x0040)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00F0(0x0018)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array1;                           // 0x0108(0x0010)(ZeroConstructor, ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue1;                      // 0x0118(0x0018)()
+	class FText                                   K2Node_Select_Default;                             // 0x0130(0x0018)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0148(0x0028)()
 };
 DUMPER7_ASSERTS_EventLeaderboardHeader_C_ExecuteUbergraph_EventLeaderboardHeader;
 

@@ -41,7 +41,7 @@ DUMPER7_ASSERTS_UOverlays;
 class UBasicOverlays final : public UOverlays
 {
 public:
-	TArray<struct FOverlayItem>                   Overlays;                                          // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FOverlayItem>                   Overlays;                                          // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -61,11 +61,11 @@ DUMPER7_ASSERTS_UBasicOverlays;
 
 // Class Overlay.LocalizedOverlays
 // 0x0058 (0x0080 - 0x0028)
-class ULocalizedOverlays : public UOverlays
+class ULocalizedOverlays final : public UOverlays
 {
 public:
 	class UBasicOverlays*                         DefaultOverlays;                                   // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, class UBasicOverlays*>    LocaleToOverlaysMap;                               // 0x0030(0x0050)(Edit, NativeAccessSpecifierPublic)
+	TMap<class FString, class UBasicOverlays*>    LocaleToOverlaysMap;                               // 0x0030(0x0050)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()

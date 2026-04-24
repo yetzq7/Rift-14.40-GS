@@ -12,8 +12,8 @@
 
 #include "SlateCore_structs.hpp"
 #include "CommonInput_structs.hpp"
-#include "FortniteUI_structs.hpp"
 #include "UMG_structs.hpp"
+#include "FortniteUI_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -39,12 +39,12 @@ public:
 	struct FDataTableRowHandle                    K2Node_Event_NewTriggeredAction;                   // 0x00C0(0x0010)(ConstParm, NoDestructor)
 	float                                         K2Node_Event_HeldPercent;                          // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonInputSubsystem*                  CallFunc_GetContext_ReturnValue_1;                 // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCommonInputSubsystem*                  CallFunc_GetContext_ReturnValue1;                  // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_SlateBrush_ReturnValue;        // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue_1;        // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x00E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ECommonInputType                              CallFunc_GetCurrentInputType_ReturnValue1;         // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue1;         // 0x00E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x00E3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x00E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable1;                               // 0x00E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x00E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_ScrollingTextButton_C_ExecuteUbergraph_ScrollingTextButton;
@@ -102,7 +102,7 @@ public:
 	class FText                                   ButtonText_0;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable1;                               // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

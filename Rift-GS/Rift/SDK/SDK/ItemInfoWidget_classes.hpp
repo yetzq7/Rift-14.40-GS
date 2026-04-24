@@ -18,16 +18,27 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ItemInfoWidget.ItemInfoWidget_C
-// 0x0010 (0x02B8 - 0x02A8)
+// 0x0040 (0x0278 - 0x0238)
 class UItemInfoWidget_C final : public UFortItemInfoWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 RarityGlow;                                        // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UOverlay*                               MainViewItemInfoOverlay;                           // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           MainViewItemInfoVB;                                // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 RarityGlow;                                        // 0x0250(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Rule;                                              // 0x0258(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_Desc;                                         // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_ItemType;                                     // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_Name;                                         // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetRarityMaterialValues(class UFortItemDefinition* ItemDefinition);
 	void ExecuteUbergraph_ItemInfoWidget(int32 EntryPoint);
+	void Construct();
+	void Populate_Internal(class UFortItemDefinition* ItemDefinition, int32 Count);
+	void PopulateUsingItemDefinition(class UFortItemDefinition* NewItem);
+	void PopulateUsingItem(class UFortItem* NewItem);
+	void Update_Text(class UFortItemDefinition* ItemDefinition, int32 Count);
+	void GenerateItemName(class UFortItemDefinition* ItemDefinition, int32 Quantity, class FText* DisplayName);
 
 public:
 	static class UClass* StaticClass()

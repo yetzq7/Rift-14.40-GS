@@ -36,116 +36,6 @@ void AB_Pickups_Parent_C::ExecuteUbergraph_B_Pickups_Parent(int32 EntryPoint)
 }
 
 
-// Function B_Pickups_Parent.B_Pickups_Parent_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AB_Pickups_Parent_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Pickups_Parent_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Pickups_Parent.B_Pickups_Parent_C.OnPickedUp
-// (Event, Public, BlueprintEvent)
-
-void AB_Pickups_Parent_C::OnPickedUp()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Pickups_Parent_C", "OnPickedUp");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Pickups_Parent.B_Pickups_Parent_C.OnAboutToEnterBackpack
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AFortPawn*                        PickupTarget                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Pickups_Parent_C::OnAboutToEnterBackpack(class AFortPawn* PickupTarget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Pickups_Parent_C", "OnAboutToEnterBackpack");
-
-	Params::B_Pickups_Parent_C_OnAboutToEnterBackpack Parms{};
-
-	Parms.PickupTarget = PickupTarget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Pickups_Parent.B_Pickups_Parent_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Pickups_Parent_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Pickups_Parent_C", "ReceiveTick");
-
-	Params::B_Pickups_Parent_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Pickups_Parent.B_Pickups_Parent_C.OnTossed
-// (Event, Public, BlueprintEvent)
-
-void AB_Pickups_Parent_C::OnTossed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Pickups_Parent_C", "OnTossed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Pickups_Parent.B_Pickups_Parent_C.OnAttached
-// (Event, Public, BlueprintEvent)
-
-void AB_Pickups_Parent_C::OnAttached()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Pickups_Parent_C", "OnAttached");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Pickups_Parent.B_Pickups_Parent_C.HideBackgroundAndSpotlight
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Pickups_Parent_C::HideBackgroundAndSpotlight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Pickups_Parent_C", "HideBackgroundAndSpotlight");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_Pickups_Parent.B_Pickups_Parent_C.DisableBacchusHighlight
 // (Event, Public, BlueprintEvent)
 
@@ -169,6 +59,102 @@ void AB_Pickups_Parent_C::EnableBacchusHighlight()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Pickups_Parent_C", "EnableBacchusHighlight");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Pickups_Parent.B_Pickups_Parent_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void AB_Pickups_Parent_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Parent_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Pickups_Parent.B_Pickups_Parent_C.OnTossed
+// (Event, Public, BlueprintEvent)
+
+void AB_Pickups_Parent_C::OnTossed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Parent_C", "OnTossed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Pickups_Parent.B_Pickups_Parent_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Pickups_Parent_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Parent_C", "ReceiveTick");
+
+	Params::B_Pickups_Parent_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Pickups_Parent.B_Pickups_Parent_C.OnAboutToEnterBackpack
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AFortPawn*                        PickupTarget                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Pickups_Parent_C::OnAboutToEnterBackpack(class AFortPawn* PickupTarget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Parent_C", "OnAboutToEnterBackpack");
+
+	Params::B_Pickups_Parent_C_OnAboutToEnterBackpack Parms{};
+
+	Parms.PickupTarget = PickupTarget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Pickups_Parent.B_Pickups_Parent_C.OnPickedUp
+// (Event, Public, BlueprintEvent)
+
+void AB_Pickups_Parent_C::OnPickedUp()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Parent_C", "OnPickedUp");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Pickups_Parent.B_Pickups_Parent_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AB_Pickups_Parent_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Parent_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -217,7 +203,7 @@ void AB_Pickups_Parent_C::UserConstructionScript()
 
 
 // Function B_Pickups_Parent.B_Pickups_Parent_C.SetRarityColor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AB_Pickups_Parent_C::SetRarityColor()
 {
@@ -278,6 +264,20 @@ void AB_Pickups_Parent_C::ScaleHologramTimingsForPvP()
 }
 
 
+// Function B_Pickups_Parent.B_Pickups_Parent_C.ReleaseStretchMIDs
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Pickups_Parent_C::ReleaseStretchMIDs()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Parent_C", "ReleaseStretchMIDs");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_Pickups_Parent.B_Pickups_Parent_C.DestroyBackgroundVisualComponents
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -307,6 +307,68 @@ void AB_Pickups_Parent_C::SetHiddenBackgroundVisualComponents(bool Hidden)
 	Params::B_Pickups_Parent_C_SetHiddenBackgroundVisualComponents Parms{};
 
 	Parms.Hidden = Hidden;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Pickups_Parent.B_Pickups_Parent_C.SetupBaseMIDs
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Pickups_Parent_C::SetupBaseMIDs()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Parent_C", "SetupBaseMIDs");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Pickups_Parent.B_Pickups_Parent_C.SetupStretchMIDs
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AB_Pickups_Parent_C::SetupStretchMIDs()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Parent_C", "SetupStretchMIDs");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Pickups_Parent.B_Pickups_Parent_C.Unique Material MIDs
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Pickups_Parent_C::Unique_Material_MIDs()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Parent_C", "Unique Material MIDs");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Pickups_Parent.B_Pickups_Parent_C.SetInitialHologramParams
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMaterialInstanceDynamic*         Mid                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Pickups_Parent_C::SetInitialHologramParams(class UMaterialInstanceDynamic* Mid)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Parent_C", "SetInitialHologramParams");
+
+	Params::B_Pickups_Parent_C_SetInitialHologramParams Parms{};
+
+	Parms.Mid = Mid;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -354,6 +416,34 @@ void AB_Pickups_Parent_C::SetVisibleMobileInteractIcon(bool Visible)
 }
 
 
+// Function B_Pickups_Parent.B_Pickups_Parent_C.Set Draw Distance
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Pickups_Parent_C::Set_Draw_Distance()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Parent_C", "Set Draw Distance");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Pickups_Parent.B_Pickups_Parent_C.Randomize Mesh Rotation for BR
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_Pickups_Parent_C::Randomize_Mesh_Rotation_for_BR()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Parent_C", "Randomize Mesh Rotation for BR");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_Pickups_Parent.B_Pickups_Parent_C.Mobile Interation Icon Setup
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -363,6 +453,20 @@ void AB_Pickups_Parent_C::Mobile_Interation_Icon_Setup()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Pickups_Parent_C", "Mobile Interation Icon Setup");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Pickups_Parent.B_Pickups_Parent_C.Initial Parenting Setup
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AB_Pickups_Parent_C::Initial_Parenting_Setup()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Parent_C", "Initial Parenting Setup");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

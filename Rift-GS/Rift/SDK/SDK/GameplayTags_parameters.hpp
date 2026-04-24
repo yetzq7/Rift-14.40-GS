@@ -42,7 +42,7 @@ struct BlueprintGameplayTagLibrary_BreakGameplayTagContainer final
 {
 public:
 	struct FGameplayTagContainer                  GameplayTagContainer;                              // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayTag>                   GameplayTags;                                      // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayTag>                   GameplayTags;                                      // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BlueprintGameplayTagLibrary_BreakGameplayTagContainer;
 
@@ -102,7 +102,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class AActor>                     ActorClass;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGameplayTagQuery                      GameplayTagQuery;                                  // 0x0010(0x0048)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class AActor*>                         OutActors;                                         // 0x0058(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         OutActors;                                         // 0x0058(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BlueprintGameplayTagLibrary_GetAllActorsOfClassMatchingTagQuery;
 
@@ -209,23 +209,12 @@ public:
 };
 DUMPER7_ASSERTS_BlueprintGameplayTagLibrary_IsGameplayTagValid;
 
-// Function GameplayTags.BlueprintGameplayTagLibrary.IsTagQueryEmpty
-// 0x0050 (0x0050 - 0x0000)
-struct BlueprintGameplayTagLibrary_IsTagQueryEmpty final
-{
-public:
-	struct FGameplayTagQuery                      TagQuery;                                          // 0x0000(0x0048)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BlueprintGameplayTagLibrary_IsTagQueryEmpty;
-
 // Function GameplayTags.BlueprintGameplayTagLibrary.MakeGameplayTagContainerFromArray
 // 0x0030 (0x0030 - 0x0000)
 struct BlueprintGameplayTagLibrary_MakeGameplayTagContainerFromArray final
 {
 public:
-	TArray<struct FGameplayTag>                   GameplayTags;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayTag>                   GameplayTags;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FGameplayTagContainer                  ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BlueprintGameplayTagLibrary_MakeGameplayTagContainerFromArray;

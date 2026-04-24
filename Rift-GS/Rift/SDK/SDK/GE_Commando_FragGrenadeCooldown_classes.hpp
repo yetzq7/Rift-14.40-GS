@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_Commando_FragGrenadeCooldown.GE_Commando_FragGrenadeCooldown_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x05F0 - 0x05F0)
 class UGE_Commando_FragGrenadeCooldown_C final : public UGET_Cooldown_Hero_Active_C
 {
 public:

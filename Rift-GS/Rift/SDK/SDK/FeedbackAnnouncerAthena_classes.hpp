@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass FeedbackAnnouncerAthena.FeedbackAnnouncerAthena_C
-// 0x0000 (0x1180 - 0x1180)
+// 0x0000 (0x10C0 - 0x10C0)
 class AFeedbackAnnouncerAthena_C final : public AFortPawn_FeedbackAnnouncer
 {
 public:

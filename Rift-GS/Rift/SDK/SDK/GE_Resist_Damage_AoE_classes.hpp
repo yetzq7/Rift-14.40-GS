@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_Resist_Damage_AoE.GE_Resist_Damage_AoE_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x05F0 - 0x05F0)
 class UGE_Resist_Damage_AoE_C final : public UGameplayEffect
 {
 public:

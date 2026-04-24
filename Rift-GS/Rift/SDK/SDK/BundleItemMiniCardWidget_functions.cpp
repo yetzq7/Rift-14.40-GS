@@ -16,34 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BundleItemMiniCardWidget.BundleItemMiniCardWidget_C.Play Anim - Show
-// (BlueprintCallable, BlueprintEvent)
-
-void UBundleItemMiniCardWidget_C::Play_Anim___Show()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BundleItemMiniCardWidget_C", "Play Anim - Show");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BundleItemMiniCardWidget.BundleItemMiniCardWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UBundleItemMiniCardWidget_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BundleItemMiniCardWidget_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BundleItemMiniCardWidget.BundleItemMiniCardWidget_C.ExecuteUbergraph_BundleItemMiniCardWidget
 // (Final, UbergraphFunction)
 // Parameters:
@@ -61,6 +33,34 @@ void UBundleItemMiniCardWidget_C::ExecuteUbergraph_BundleItemMiniCardWidget(int3
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BundleItemMiniCardWidget.BundleItemMiniCardWidget_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UBundleItemMiniCardWidget_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BundleItemMiniCardWidget_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BundleItemMiniCardWidget.BundleItemMiniCardWidget_C.Play Anim - Show
+// (BlueprintCallable, BlueprintEvent)
+
+void UBundleItemMiniCardWidget_C::Play_Anim___Show()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BundleItemMiniCardWidget_C", "Play Anim - Show");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

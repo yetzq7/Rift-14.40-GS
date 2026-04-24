@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass AthenaVariantNumericalCustomizationSelector.AthenaVariantNumericalCustomizationSelector_C
-// 0x0000 (0x0348 - 0x0348)
+// 0x0000 (0x02E8 - 0x02E8)
 class UAthenaVariantNumericalCustomizationSelector_C final : public UFortVariantNumericalPicker
 {
 public:

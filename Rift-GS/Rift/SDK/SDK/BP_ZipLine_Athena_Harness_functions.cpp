@@ -84,6 +84,20 @@ void ABP_ZipLine_Athena_Harness_C::HandleOnDied(class AActor* DamagedActor, floa
 }
 
 
+// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_ZipLine_Athena_Harness_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.ReceiveDestroyed
 // (Event, Public, BlueprintEvent)
 
@@ -93,20 +107,6 @@ void ABP_ZipLine_Athena_Harness_C::ReceiveDestroyed()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Stop Travel Audio
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_ZipLine_Athena_Harness_C::Stop_Travel_Audio()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "Stop Travel Audio");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,15 +126,29 @@ void ABP_ZipLine_Athena_Harness_C::Start_Travel_Audio()
 }
 
 
-// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.Stop Travel Audio
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_ZipLine_Athena_Harness_C::ReceiveBeginPlay()
+void ABP_ZipLine_Athena_Harness_C::Stop_Travel_Audio()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "Stop Travel Audio");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_ZipLine_Athena_Harness_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ZipLine_Athena_Harness_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

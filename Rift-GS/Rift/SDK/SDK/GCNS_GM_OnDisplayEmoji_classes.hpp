@@ -16,9 +16,12 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GCNS_GM_OnDisplayEmoji.GCNS_GM_OnDisplayEmoji_C
-// 0x0000 (0x01C8 - 0x01C8)
-class UGCNS_GM_OnDisplayEmoji_C final : public UGameplayCueNotify_OnDisplayEmoji
+// 0x0000 (0x0080 - 0x0080)
+class UGCNS_GM_OnDisplayEmoji_C final : public UFortGameplayCueNotify_Simple
 {
+public:
+	void OnStartParticleSystemSpawned(class UParticleSystemComponent* SpawnedParticleSysComponent, const struct FGameplayCueParameters& Parameters) const;
+
 public:
 	static class UClass* StaticClass()
 	{

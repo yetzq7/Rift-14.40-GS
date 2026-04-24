@@ -19,9 +19,9 @@ SDK_NAMESPACE_START
 // Function EasyAntiCheatCommon.EasyAntiCheatNetComponent.ClientMessage
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// const TArray<uint8>&                    Message                                                (ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<uint8>&                    MESSAGE                                                (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UEasyAntiCheatNetComponent::ClientMessage(const TArray<uint8>& Message)
+void UEasyAntiCheatNetComponent::ClientMessage(const TArray<uint8>& MESSAGE)
 {
 	static class UFunction* Func = nullptr;
 
@@ -30,7 +30,7 @@ void UEasyAntiCheatNetComponent::ClientMessage(const TArray<uint8>& Message)
 
 	Params::EasyAntiCheatNetComponent_ClientMessage Parms{};
 
-	Parms.Message = std::move(Message);
+	Parms.MESSAGE = std::move(MESSAGE);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -44,9 +44,9 @@ void UEasyAntiCheatNetComponent::ClientMessage(const TArray<uint8>& Message)
 // Function EasyAntiCheatCommon.EasyAntiCheatNetComponent.ServerMessage
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// const TArray<uint8>&                    Message                                                (ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<uint8>&                    MESSAGE                                                (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UEasyAntiCheatNetComponent::ServerMessage(const TArray<uint8>& Message)
+void UEasyAntiCheatNetComponent::ServerMessage(const TArray<uint8>& MESSAGE)
 {
 	static class UFunction* Func = nullptr;
 
@@ -55,7 +55,7 @@ void UEasyAntiCheatNetComponent::ServerMessage(const TArray<uint8>& Message)
 
 	Params::EasyAntiCheatNetComponent_ServerMessage Parms{};
 
-	Parms.Message = std::move(Message);
+	Parms.MESSAGE = std::move(MESSAGE);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

@@ -10,15 +10,22 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BasicNotification.BasicNotification_C
-// 0x0000 (0x00D0 - 0x00D0)
+// 0x0088 (0x0128 - 0x00A0)
 class UBasicNotification_C final : public UFortUINotification
 {
+public:
+	struct FSlateBrush                            Image;                                             // 0x00A0(0x0088)(Edit, BlueprintVisible, ExposeOnSpawn)
+
+public:
+	class UTexture2D* GetImageOverride();
+
 public:
 	static class UClass* StaticClass()
 	{

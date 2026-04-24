@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GET_DirectEnergyDamage.GET_DirectEnergyDamage_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x05F0 - 0x05F0)
 class UGET_DirectEnergyDamage_C : public UGET_DirectPhysicalDamage_C
 {
 public:

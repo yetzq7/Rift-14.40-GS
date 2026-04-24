@@ -25,24 +25,22 @@ enum class ESubLevelStripMode : uint8
 };
 
 // Enum EngineSettings.EFourPlayerSplitScreenType
-// NumValues: 0x0004
+// NumValues: 0x0003
 enum class EFourPlayerSplitScreenType : uint8
 {
 	Grid                                     = 0,
 	Vertical                                 = 1,
-	Horizontal                               = 2,
-	EFourPlayerSplitScreenType_MAX           = 3,
+	EFourPlayerSplitScreenType_MAX           = 2,
 };
 
 // Enum EngineSettings.EThreePlayerSplitScreenType
-// NumValues: 0x0005
+// NumValues: 0x0004
 enum class EThreePlayerSplitScreenType : uint8
 {
 	FavorTop                                 = 0,
 	FavorBottom                              = 1,
 	Vertical                                 = 2,
-	Horizontal                               = 3,
-	EThreePlayerSplitScreenType_MAX          = 4,
+	EThreePlayerSplitScreenType_MAX          = 3,
 };
 
 // Enum EngineSettings.ETwoPlayerSplitScreenType
@@ -65,13 +63,24 @@ public:
 };
 DUMPER7_ASSERTS_FAutoCompleteCommand;
 
+// ScriptStruct EngineSettings.SubLevelStrippingInfo
+// 0x0020 (0x0020 - 0x0000)
+struct FSubLevelStrippingInfo final
+{
+public:
+	struct FSoftClassPath                         ClassToStrip;                                      // 0x0000(0x0018)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	ESubLevelStripMode                            StripMode;                                         // 0x0018(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSubLevelStrippingInfo;
+
 // ScriptStruct EngineSettings.GameModeName
 // 0x0028 (0x0028 - 0x0000)
 struct FGameModeName final
 {
 public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftClassPath                         GameMode;                                          // 0x0010(0x0018)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftClassPath                         GameMode;                                          // 0x0010(0x0018)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FGameModeName;
 

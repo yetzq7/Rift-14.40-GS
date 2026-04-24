@@ -16,29 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function Announce_EventCine.Announce_EventCine_C.OnClientAnnouncementStop
-// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
+// Function Announce_EventCine.Announce_EventCine_C.ExecuteUbergraph_Announce_EventCine
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AAnnounce_EventCine_C::OnClientAnnouncementStop()
+void AAnnounce_EventCine_C::ExecuteUbergraph_Announce_EventCine(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Announce_EventCine_C", "OnClientAnnouncementStop");
+		Func = Class->GetFunction("Announce_EventCine_C", "ExecuteUbergraph_Announce_EventCine");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Announce_EventCine_C_ExecuteUbergraph_Announce_EventCine Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Announce_EventCine.Announce_EventCine_C.OnPlayerSkippedCutscene
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function Announce_EventCine.Announce_EventCine_C.HandleAllowSkip
+// (BlueprintCallable, BlueprintEvent)
 
-void AAnnounce_EventCine_C::OnPlayerSkippedCutscene()
+void AAnnounce_EventCine_C::HandleAllowSkip()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Announce_EventCine_C", "OnPlayerSkippedCutscene");
+		Func = Class->GetFunction("Announce_EventCine_C", "HandleAllowSkip");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -68,51 +74,87 @@ void AAnnounce_EventCine_C::HandleClientEvent_CinematicFinishedPlaying(class UOb
 }
 
 
-// Function Announce_EventCine.Announce_EventCine_C.HandleAllowSkip
+// Function Announce_EventCine.Announce_EventCine_C.OnClientAnnouncementStart
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
+
+void AAnnounce_EventCine_C::OnClientAnnouncementStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Announce_EventCine_C", "OnClientAnnouncementStart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Announce_EventCine.Announce_EventCine_C.OnClientAnnouncementStop
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
+
+void AAnnounce_EventCine_C::OnClientAnnouncementStop()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Announce_EventCine_C", "OnClientAnnouncementStop");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Announce_EventCine.Announce_EventCine_C.OnPlayerSkippedCutscene
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void AAnnounce_EventCine_C::OnPlayerSkippedCutscene()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Announce_EventCine_C", "OnPlayerSkippedCutscene");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Announce_EventCine.Announce_EventCine_C.OnStateEntered_132DA3B4468BA1009280CFB4D4C2D0AC
 // (BlueprintCallable, BlueprintEvent)
 
-void AAnnounce_EventCine_C::HandleAllowSkip()
+void AAnnounce_EventCine_C::OnStateEntered_132DA3B4468BA1009280CFB4D4C2D0AC()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Announce_EventCine_C", "HandleAllowSkip");
+		Func = Class->GetFunction("Announce_EventCine_C", "OnStateEntered_132DA3B4468BA1009280CFB4D4C2D0AC");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Announce_EventCine.Announce_EventCine_C.OnEnteredCinematicState
-// (Event, Protected, BlueprintEvent)
+// Function Announce_EventCine.Announce_EventCine_C.OnStateEntered_2FC6E2894145586A1A4AF69426273130
+// (BlueprintCallable, BlueprintEvent)
 
-void AAnnounce_EventCine_C::OnEnteredCinematicState()
+void AAnnounce_EventCine_C::OnStateEntered_2FC6E2894145586A1A4AF69426273130()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Announce_EventCine_C", "OnEnteredCinematicState");
+		Func = Class->GetFunction("Announce_EventCine_C", "OnStateEntered_2FC6E2894145586A1A4AF69426273130");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Announce_EventCine.Announce_EventCine_C.ExecuteUbergraph_Announce_EventCine
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Announce_EventCine.Announce_EventCine_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void AAnnounce_EventCine_C::ExecuteUbergraph_Announce_EventCine(int32 EntryPoint)
+void AAnnounce_EventCine_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Announce_EventCine_C", "ExecuteUbergraph_Announce_EventCine");
+		Func = Class->GetFunction("Announce_EventCine_C", "UserConstructionScript");
 
-	Params::Announce_EventCine_C_ExecuteUbergraph_Announce_EventCine Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

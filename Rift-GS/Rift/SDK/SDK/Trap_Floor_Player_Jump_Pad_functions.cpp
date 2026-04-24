@@ -136,6 +136,20 @@ void ATrap_Floor_Player_Jump_Pad_C::OnReloadEnd()
 }
 
 
+// Function Trap_Floor_Player_Jump_Pad.Trap_Floor_Player_Jump_Pad_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ATrap_Floor_Player_Jump_Pad_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Trap_Floor_Player_Jump_Pad_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Trap_Floor_Player_Jump_Pad.Trap_Floor_Player_Jump_Pad_C.GetImpulseDirection
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

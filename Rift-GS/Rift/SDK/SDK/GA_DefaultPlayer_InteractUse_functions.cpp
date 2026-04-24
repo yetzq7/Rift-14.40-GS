@@ -50,20 +50,6 @@ void UGA_DefaultPlayer_InteractUse_C::K2_ActivateAbility()
 }
 
 
-// Function GA_DefaultPlayer_InteractUse.GA_DefaultPlayer_InteractUse_C.OnCompleted_A513E1E044E129CC612DF5A23589BC9C
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_DefaultPlayer_InteractUse_C::OnCompleted_A513E1E044E129CC612DF5A23589BC9C()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_DefaultPlayer_InteractUse_C", "OnCompleted_A513E1E044E129CC612DF5A23589BC9C");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_DefaultPlayer_InteractUse.GA_DefaultPlayer_InteractUse_C.OnBlendOut_A513E1E044E129CC612DF5A23589BC9C
 // (BlueprintCallable, BlueprintEvent)
 
@@ -78,20 +64,6 @@ void UGA_DefaultPlayer_InteractUse_C::OnBlendOut_A513E1E044E129CC612DF5A23589BC9
 }
 
 
-// Function GA_DefaultPlayer_InteractUse.GA_DefaultPlayer_InteractUse_C.OnInterrupted_A513E1E044E129CC612DF5A23589BC9C
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_DefaultPlayer_InteractUse_C::OnInterrupted_A513E1E044E129CC612DF5A23589BC9C()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_DefaultPlayer_InteractUse_C", "OnInterrupted_A513E1E044E129CC612DF5A23589BC9C");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_DefaultPlayer_InteractUse.GA_DefaultPlayer_InteractUse_C.OnCancelled_A513E1E044E129CC612DF5A23589BC9C
 // (BlueprintCallable, BlueprintEvent)
 
@@ -101,6 +73,34 @@ void UGA_DefaultPlayer_InteractUse_C::OnCancelled_A513E1E044E129CC612DF5A23589BC
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("GA_DefaultPlayer_InteractUse_C", "OnCancelled_A513E1E044E129CC612DF5A23589BC9C");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_DefaultPlayer_InteractUse.GA_DefaultPlayer_InteractUse_C.OnCompleted_A513E1E044E129CC612DF5A23589BC9C
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_DefaultPlayer_InteractUse_C::OnCompleted_A513E1E044E129CC612DF5A23589BC9C()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_DefaultPlayer_InteractUse_C", "OnCompleted_A513E1E044E129CC612DF5A23589BC9C");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_DefaultPlayer_InteractUse.GA_DefaultPlayer_InteractUse_C.OnInterrupted_A513E1E044E129CC612DF5A23589BC9C
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_DefaultPlayer_InteractUse_C::OnInterrupted_A513E1E044E129CC612DF5A23589BC9C()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_DefaultPlayer_InteractUse_C", "OnInterrupted_A513E1E044E129CC612DF5A23589BC9C");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -18,7 +18,7 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function DA_SpookyMist.DA_SpookyMist_C.ExecuteUbergraph_DA_SpookyMist
-// 0x0220 (0x0220 - 0x0000)
+// 0x0210 (0x0210 - 0x0000)
 struct DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist final
 {
 public:
@@ -31,39 +31,39 @@ public:
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x001C(0x0010)(ZeroConstructor, NoDestructor)
 	bool                                          CallFunc_IsDrivingVehicle_ReturnValue;             // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0030(0x0010)(ZeroConstructor, NoDestructor)
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue_1;              // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayEventData                     K2Node_MakeStruct_GameplayEventData;               // 0x0048(0x00B0)()
-	struct FGameplayEventData                     K2Node_MakeStruct_GameplayEventData_1;             // 0x00F8(0x00B0)()
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue_2;              // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortDecoHelper*                        K2Node_Event_FortDecoHelper_2;                     // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortDecoHelper*                        K2Node_Event_FortDecoHelper_1;                     // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortDecoHelper*                        K2Node_Event_FortDecoHelper;                       // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue_3;              // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x01D8(0x0008)(NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn_1;           // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue_4;              // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn_2;           // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue_5;              // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawnAthena*                  K2Node_DynamicCast_AsFort_Player_Pawn_Athena;      // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate1;             // 0x0030(0x0010)(ZeroConstructor, NoDestructor)
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue1;               // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayEventData                     K2Node_MakeStruct_GameplayEventData;               // 0x0048(0x00A8)()
+	struct FGameplayEventData                     K2Node_MakeStruct_GameplayEventData1;              // 0x00F0(0x00A8)()
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue2;               // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortDecoHelper*                        K2Node_Event_FortDecoHelper2;                      // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortDecoHelper*                        K2Node_Event_FortDecoHelper1;                      // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortDecoHelper*                        K2Node_Event_FortDecoHelper;                       // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue3;               // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x01C8(0x0008)(NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn1;            // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess1;                      // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1D9[0x7];                                      // 0x01D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue4;               // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn2;            // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess2;                      // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1F1[0x7];                                      // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue5;               // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawnAthena*                  K2Node_DynamicCast_AsFort_Player_Pawn_Athena;      // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess3;                      // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist;
 
-// Function DA_SpookyMist.DA_SpookyMist_C.BPReleaseSecondaryFire
+// Function DA_SpookyMist.DA_SpookyMist_C.BPPressSecondaryFire
 // 0x0008 (0x0008 - 0x0000)
-struct DA_SpookyMist_C_BPReleaseSecondaryFire final
+struct DA_SpookyMist_C_BPPressSecondaryFire final
 {
 public:
 	class AFortDecoHelper*                        FortDecoHelper;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DA_SpookyMist_C_BPReleaseSecondaryFire;
+DUMPER7_ASSERTS_DA_SpookyMist_C_BPPressSecondaryFire;
 
 // Function DA_SpookyMist.DA_SpookyMist_C.BPPressTrigger
 // 0x0008 (0x0008 - 0x0000)
@@ -74,14 +74,14 @@ public:
 };
 DUMPER7_ASSERTS_DA_SpookyMist_C_BPPressTrigger;
 
-// Function DA_SpookyMist.DA_SpookyMist_C.BPPressSecondaryFire
+// Function DA_SpookyMist.DA_SpookyMist_C.BPReleaseSecondaryFire
 // 0x0008 (0x0008 - 0x0000)
-struct DA_SpookyMist_C_BPPressSecondaryFire final
+struct DA_SpookyMist_C_BPReleaseSecondaryFire final
 {
 public:
 	class AFortDecoHelper*                        FortDecoHelper;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DA_SpookyMist_C_BPPressSecondaryFire;
+DUMPER7_ASSERTS_DA_SpookyMist_C_BPReleaseSecondaryFire;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

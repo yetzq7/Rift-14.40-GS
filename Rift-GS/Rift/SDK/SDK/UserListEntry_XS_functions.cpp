@@ -50,6 +50,60 @@ void UUserListEntry_XS_C::BP_OnHovered()
 }
 
 
+// Function UserListEntry_XS.UserListEntry_XS_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UUserListEntry_XS_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UserListEntry_XS_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UserListEntry_XS.UserListEntry_XS_C.OnUserPresenceChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EOnlineStatus                           OnlineStatus                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUserListEntry_XS_C::OnUserPresenceChanged(EOnlineStatus OnlineStatus)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UserListEntry_XS_C", "OnUserPresenceChanged");
+
+	Params::UserListEntry_XS_C_OnUserPresenceChanged Parms{};
+
+	Parms.OnlineStatus = OnlineStatus;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UserListEntry_XS.UserListEntry_XS_C.OnListItemObjectSet
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUserListEntry_XS_C::OnListItemObjectSet(class UObject* ListItemObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UserListEntry_XS_C", "OnListItemObjectSet");
+
+	Params::UserListEntry_XS_C_OnListItemObjectSet Parms{};
+
+	Parms.ListItemObject = ListItemObject;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function UserListEntry_XS.UserListEntry_XS_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -70,17 +124,23 @@ void UUserListEntry_XS_C::BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_
 }
 
 
-// Function UserListEntry_XS.UserListEntry_XS_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
+// Function UserListEntry_XS.UserListEntry_XS_C.HandleOnlineIndicatorView
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EOnlineStatus                           OnlineStatus                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUserListEntry_XS_C::BP_OnUnhovered()
+void UUserListEntry_XS_C::HandleOnlineIndicatorView(EOnlineStatus OnlineStatus)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UserListEntry_XS_C", "BP_OnUnhovered");
+		Func = Class->GetFunction("UserListEntry_XS_C", "HandleOnlineIndicatorView");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::UserListEntry_XS_C_HandleOnlineIndicatorView Parms{};
+
+	Parms.OnlineStatus = OnlineStatus;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

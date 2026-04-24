@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GE_SiphonEffect_Shield.GE_SiphonEffect_Shield_C
-// 0x0000 (0x07B8 - 0x07B8)
+// 0x0000 (0x05F0 - 0x05F0)
 class UGE_SiphonEffect_Shield_C final : public UGameplayEffect
 {
 public:

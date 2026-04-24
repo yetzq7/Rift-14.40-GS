@@ -10,79 +10,73 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
-#include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GA_Athena_Grenade_WithTrajectory.GA_Athena_Grenade_WithTrajectory_C
-// 0x03C0 (0x0E68 - 0x0AA8)
+// 0x0300 (0x0C38 - 0x0938)
 class UGA_Athena_Grenade_WithTrajectory_C : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTag                           EventActivation;                                   // 0x0AB0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           EventComplete;                                     // 0x0AB8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 Prj_Grenade;                                       // 0x0AC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         GrenadeSpeedMin;                                   // 0x0AC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         GrenadeSpeedMax;                                   // 0x0ACC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         GravityScale;                                      // 0x0AD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AD4[0x4];                                      // 0x0AD4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             GrenadeSound;                                      // 0x0AD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           EC_DefaultExplosion;                               // 0x0AE0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FFortGameplayEffectContainerSpec       EC_ReturnedEffect;                                 // 0x0AE8(0x00B8)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FFortGameplayEffectContainerSpec       EC_AdditionalReturnedEffect;                       // 0x0BA0(0x00B8)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         ExplosionRadius;                                   // 0x0C58(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         AdditionalThrowAngle;                              // 0x0C5C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFortFeedbackHandle                    GrenadeDialogFeedback;                             // 0x0C60(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	bool                                          GrenadeAmmo;                                       // 0x0C78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          PlasmaGrenades;                                    // 0x0C79(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          Flashbang;                                         // 0x0C7A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C7B[0x1];                                      // 0x0C7B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                GrenadeTargetingOriginOffset;                      // 0x0C7C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortProjectileBase*                    DummyProjectile;                                   // 0x0C88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DummyShouldBounce;                                 // 0x0C90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C91[0x3];                                      // 0x0C91(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DummyBounciness;                                   // 0x0C94(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DummyFriction;                                     // 0x0C98(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DummyMaxSpeed;                                     // 0x0C9C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DummyGravity;                                      // 0x0CA0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DummyTimeStep;                                     // 0x0CA4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DummyExtent;                                       // 0x0CA8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                GrenadeTargetingOriginOffset_Crouched;             // 0x0CAC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InThrowWindup;                                     // 0x0CB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_CB9[0x7];                                      // 0x0CB9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_ProjectileTrajectory_C*             TrajectoryIndicator;                               // 0x0CC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 TrajectoryIndicatorClass;                          // 0x0CC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFortGameplayAbilityMontageInfo        ThrowWindupMontage;                                // 0x0CD0(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          AbilityKeyPressed;                                 // 0x0D28(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D29[0x3];                                      // 0x0D29(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxSpeedPitch;                                     // 0x0D2C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MinSpeedPitch;                                     // 0x0D30(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D34[0x4];                                      // 0x0D34(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayEventData                     Event_Data;                                        // 0x0D38(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0DE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MaxTossPitch;                                      // 0x0DF0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxTrajectoryBounces;                              // 0x0DF4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         PostThrowCancelDelay;                              // 0x0DF8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         PostThrowEndDelay;                                 // 0x0DFC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortProjectileBase*                    ProjectileReference;                               // 0x0E00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DistanceFromInstigatorCheck;                       // 0x0E08(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E0C[0x4];                                      // 0x0E0C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           UpdateTrajectoryTimerHandle;                       // 0x0E10(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          Spawned_On_Equip;                                  // 0x0E18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	ECollisionChannel                             DummyCollisionChannel;                             // 0x0E19(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1A[0x6];                                      // 0x0E1A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortProjectileDecoHelper*              GrenadeDecoHelper;                                 // 0x0E20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortDecoTool_ContextTrap*              GrenadeDecoTool;                                   // 0x0E28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnProjectileSpawn;                                 // 0x0E30(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FGameplayTagContainer                  QuestCreditTargetTag;                              // 0x0E40(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	int32                                         DummyMaxSteps;                                     // 0x0E60(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0938(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTag                           EventActivation;                                   // 0x0940(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           EventComplete;                                     // 0x0948(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 Prj_Grenade;                                       // 0x0950(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         GrenadeSpeedMin;                                   // 0x0958(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         GrenadeSpeedMax;                                   // 0x095C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         GravityScale;                                      // 0x0960(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_964[0x4];                                      // 0x0964(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             GrenadeSound;                                      // 0x0968(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           EC_DefaultExplosion;                               // 0x0970(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FFortGameplayEffectContainerSpec       EC_ReturnedEffect;                                 // 0x0978(0x0080)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FFortGameplayEffectContainerSpec       EC_AdditionalReturnedEffect;                       // 0x09F8(0x0080)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         ExplosionRadius;                                   // 0x0A78(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         AdditionalThrowAngle;                              // 0x0A7C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFortFeedbackHandle                    GrenadeDialogFeedback;                             // 0x0A80(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	bool                                          GrenadeAmmo;                                       // 0x0A98(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          PlasmaGrenades;                                    // 0x0A99(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Flashbang;                                         // 0x0A9A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A9B[0x1];                                      // 0x0A9B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                GrenadeTargetingOriginOffset;                      // 0x0A9C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortProjectileBase*                    DummyProjectile;                                   // 0x0AA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DummyShouldBounce;                                 // 0x0AB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_AB1[0x3];                                      // 0x0AB1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DummyBounciness;                                   // 0x0AB4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DummyFriction;                                     // 0x0AB8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TrajectoryUpdateInterval;                          // 0x0ABC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DummyMaxSpeed;                                     // 0x0AC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DummyGravity;                                      // 0x0AC4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DummyTimeStep;                                     // 0x0AC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DummyExtent;                                       // 0x0ACC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                GrenadeTargetingOriginOffset_Crouched;             // 0x0AD0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InThrowWindup;                                     // 0x0ADC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_ADD[0x3];                                      // 0x0ADD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_ProjectileTrajectory_C*             TrajectoryIndicator;                               // 0x0AE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 TrajectoryIndicatorClass;                          // 0x0AE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFortGameplayAbilityMontageInfo        ThrowWindupMontage;                                // 0x0AF0(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          AbilityKeyPressed;                                 // 0x0B48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B49[0x3];                                      // 0x0B49(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxSpeedPitch;                                     // 0x0B4C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MinSpeedPitch;                                     // 0x0B50(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B54[0x4];                                      // 0x0B54(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayEventData                     Event_Data;                                        // 0x0B58(0x00A8)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0C00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MaxTossPitch;                                      // 0x0C08(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxTrajectoryBounces;                              // 0x0C0C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PostThrowCancelDelay;                              // 0x0C10(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PostThrowEndDelay;                                 // 0x0C14(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortProjectileBase*                    ProjectileReference;                               // 0x0C18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DistanceFromInstigatorCheck;                       // 0x0C20(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C24[0x4];                                      // 0x0C24(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           UpdateTrajectoryTimerHandle;                       // 0x0C28(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          Spawned_On_Equip;                                  // 0x0C30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GA_Athena_Grenade_WithTrajectory(int32 EntryPoint);
@@ -103,20 +97,26 @@ public:
 	void OnInterrupted_758AC809498064C01C71318E141D1E46();
 	void OnCancelled_758AC809498064C01C71318E141D1E46();
 	void OnFinish_4B1D92B7427697E6BD9D58ACA0F87155();
+	void OnFinish_E8F8DC5A465F19B633AF0E8888171F5A();
 	void Triggered_B08560984B3818F6EECB3C9A92E61ADC(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 	void Cancelled_B08560984B3818F6EECB3C9A92E61ADC(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 	void Completed_B08560984B3818F6EECB3C9A92E61ADC(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void Created_40FE015D40E881984FE611B980B75D52(const struct FProjectileEventData& ProjectileData);
+	void Touched_40FE015D40E881984FE611B980B75D52(const struct FProjectileEventData& ProjectileData);
+	void Bounced_40FE015D40E881984FE611B980B75D52(const struct FProjectileEventData& ProjectileData);
+	void Stopped_40FE015D40E881984FE611B980B75D52(const struct FProjectileEventData& ProjectileData);
+	void Exploded_40FE015D40E881984FE611B980B75D52(const struct FProjectileEventData& ProjectileData);
+	void Destroyed_40FE015D40E881984FE611B980B75D52(const struct FProjectileEventData& ProjectileData);
 	void SetupGrenade(float AimPitch, class UClass** Base_Grenade, float* Projectile_Speed, struct FFortGameplayEffectContainerSpec* Explosion_Gameplay_Spec, float* Projectile_Gravity_Scale, struct FFortGameplayEffectContainerSpec* Additional_Explosion_Gameplay_Spec);
 	void SetupDummyProjectile();
 	void UpdateTrajectorySpline();
-	void GetProjectileTrajectoryPoints(TArray<struct FVector>* OutSplinePoints, TArray<struct FVector>* OutSplineTangents, struct FHitResult* OutHitResult);
 	class AFortProjectileTrajectory* SpawnTrajectoryIndicator(bool bSpawnOnEquip);
 
 	void SpawnLocationAndRotation(struct FVector* OutLoc, struct FRotator* OutRot) const;
 	void CalcGrenadeSpeedFromPitch(float AimPitch, float* GrenadeSpeed) const;
 	void GetOwningPlayer(class AFortPlayerPawn** Player_Pawn) const;
 	TSubclassOf<class AFortProjectileTrajectory> GetProjectileTrajectoryActor() const;
-	bool ShouldOnlyShowTrajectoryOnUse() const;
+	void GetProjectileTrajectoryPoints(TArray<struct FVector>* OutSplinePoints, TArray<struct FVector>* OutSplineTangents, struct FHitResult* OutHitResult) const;
 
 public:
 	static class UClass* StaticClass()

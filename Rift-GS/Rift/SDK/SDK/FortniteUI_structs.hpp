@@ -10,18 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "GameSubCatalog_structs.hpp"
-#include "FortniteGame_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "CommonInput_structs.hpp"
+#include "FortniteGame_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "CommonUI_structs.hpp"
-#include "CommonInput_structs.hpp"
 #include "Engine_structs.hpp"
-#include "Slate_structs.hpp"
-#include "UMG_structs.hpp"
-#include "JsonUtilities_structs.hpp"
+#include "GameSubCatalog_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -64,15 +61,6 @@ enum class EFortBuildingHealthDisplayRule : uint8
 	EFortBuildingHealthDisplayRule_MAX       = 3,
 };
 
-// Enum FortniteUI.EFortUISpecialEvents
-// NumValues: 0x0003
-enum class EFortUISpecialEvents : uint8
-{
-	NoEvent                                  = 0,
-	FritTemp                                 = 1,
-	EFortUISpecialEvents_MAX                 = 2,
-};
-
 // Enum FortniteUI.EFortUIState
 // NumValues: 0x000E
 enum class EFortUIState : uint8
@@ -82,15 +70,144 @@ enum class EFortUIState : uint8
 	JoinServer                               = 2,
 	SubgameSelect                            = 3,
 	FrontEnd                                 = 4,
-	InGame_Custom                            = 5,
-	UNUSED                                   = 6,
-	InGame_STW                               = 7,
+	PvE_PostGame                             = 5,
+	PvP_PostGame                             = 6,
+	InGame                                   = 7,
 	Cinematic                                = 8,
-	InGame_BR                                = 9,
+	Athena                                   = 9,
 	AthenaSpectator                          = 10,
 	Replay                                   = 11,
-	InGame_STW_Custom                        = 12,
+	AthenaReplay                             = 12,
 	MAX                                      = 13,
+};
+
+// Enum FortniteUI.EFortStoreState
+// NumValues: 0x0014
+enum class EFortStoreState : uint8
+{
+	Error                                    = 0,
+	Closed                                   = 1,
+	CardPackStore                            = 2,
+	CurrencyStore                            = 3,
+	WebPayment                               = 4,
+	PurchaseOpen                             = 5,
+	PackOpen                                 = 6,
+	CardEnter                                = 7,
+	CardBackReveal                           = 8,
+	CardFlip                                 = 9,
+	CardFrontReveal                          = 10,
+	CardExit                                 = 11,
+	SummaryAdd                               = 12,
+	PackDestroy                              = 13,
+	Summary                                  = 14,
+	PresentChoice                            = 15,
+	ChoiceMade                               = 16,
+	SummaryAddTransition                     = 17,
+	MAX_None                                 = 18,
+	EFortStoreState_MAX                      = 19,
+};
+
+// Enum FortniteUI.EInputPriority
+// NumValues: 0x0008
+enum class EInputPriority : uint8
+{
+	Normal                                   = 0,
+	Menu                                     = 1,
+	Chat                                     = 2,
+	Modal                                    = 3,
+	Confirmation                             = 4,
+	Error                                    = 5,
+	HUD                                      = 6,
+	EInputPriority_MAX                       = 7,
+};
+
+// Enum FortniteUI.ESpectatorPlayerListSortMethod
+// NumValues: 0x0006
+enum class ESpectatorPlayerListSortMethod : uint8
+{
+	SquadId                                  = 0,
+	PlayerName                               = 1,
+	Eliminations                             = 2,
+	State                                    = 3,
+	Count                                    = 4,
+	ESpectatorPlayerListSortMethod_MAX       = 5,
+};
+
+// Enum FortniteUI.EFortItemCardSize
+// NumValues: 0x0008
+enum class EFortItemCardSize : uint8
+{
+	XXS                                      = 0,
+	XS                                       = 1,
+	S                                        = 2,
+	M                                        = 3,
+	L                                        = 4,
+	XL                                       = 5,
+	XXL                                      = 6,
+	EFortItemCardSize_MAX                    = 7,
+};
+
+// Enum FortniteUI.EFortCollectionBookPopupButtonType
+// NumValues: 0x0006
+enum class EFortCollectionBookPopupButtonType : uint8
+{
+	SelectItem                               = 0,
+	Preview                                  = 1,
+	Purchase                                 = 2,
+	Unslot                                   = 3,
+	Back                                     = 4,
+	EFortCollectionBookPopupButtonType_MAX   = 5,
+};
+
+// Enum FortniteUI.ECollectionBookSectionNavTarget
+// NumValues: 0x0003
+enum class ECollectionBookSectionNavTarget : uint8
+{
+	SlotSelect                               = 0,
+	SlotPicker                               = 1,
+	ECollectionBookSectionNavTarget_MAX      = 2,
+};
+
+// Enum FortniteUI.EFortFrontEndFeatureStateReason
+// NumValues: 0x0008
+enum class EFortFrontEndFeatureStateReason : uint8
+{
+	Default                                  = 0,
+	NoHeroes                                 = 1,
+	Tutorial                                 = 2,
+	BROnly                                   = 3,
+	NoPlayerController                       = 4,
+	UnexpectedFeature                        = 5,
+	Invalid                                  = 6,
+	EFortFrontEndFeatureStateReason_MAX      = 7,
+};
+
+// Enum FortniteUI.EFortFrontEndFeatureState
+// NumValues: 0x0005
+enum class EFortFrontEndFeatureState : uint8
+{
+	Enabled                                  = 0,
+	Disabled                                 = 1,
+	Hidden                                   = 2,
+	Invalid                                  = 3,
+	EFortFrontEndFeatureState_MAX            = 4,
+};
+
+// Enum FortniteUI.EFortFrontEndFeature
+// NumValues: 0x000B
+enum class EFortFrontEndFeature : uint8
+{
+	ShowHomeBase                             = 0,
+	ShowHeroList                             = 1,
+	ShowVault                                = 2,
+	ShowStore                                = 3,
+	PlayZone                                 = 4,
+	ShowDailyRewards                         = 5,
+	ShowHeroSelect                           = 6,
+	RecruitHero                              = 7,
+	ShowHomeBaseOverview                     = 8,
+	MAX_None                                 = 9,
+	EFortFrontEndFeature_MAX                 = 10,
 };
 
 // Enum FortniteUI.EFortUIFeatureStateReason
@@ -121,7 +238,7 @@ enum class EFortUIFeatureState : uint8
 };
 
 // Enum FortniteUI.EFortUIFeature
-// NumValues: 0x003E
+// NumValues: 0x0038
 enum class EFortUIFeature : uint8
 {
 	ShowHome                                 = 0,
@@ -153,39 +270,33 @@ enum class EFortUIFeature : uint8
 	ShowAthenaItemRandomization              = 26,
 	ShowAthenaChallenges                     = 27,
 	ShowBattlePass                           = 28,
-	ShowNewBattlePass                        = 29,
-	ShowBattlePassFAQ                        = 30,
-	ShowReplays                              = 31,
-	ShowProfileStatsUI                       = 32,
-	ShowAthenaItemShop                       = 33,
-	ShowNewAthenaItemShop                    = 34,
-	ShowAthenaCataba                         = 35,
-	ShowShowdown                             = 36,
-	ShowSpecialEvent                         = 37,
-	ShowSpatialUI                            = 38,
-	ShowAccountBoosts                        = 39,
-	ShowCustomerSupport                      = 40,
-	ShowGlobalChat                           = 41,
-	ShowEULA                                 = 42,
-	ShowEndOfZoneCinematic                   = 43,
-	ShowOnboardingCinematics                 = 44,
-	ShowFounderBannerIcons                   = 45,
-	ShowCurrentRegionInLobby                 = 46,
-	ShowPrerollLlamas                        = 47,
-	EnableFoundersDailyRewards               = 48,
-	EnableTwitchIntegration                  = 49,
-	EnableMatchmakingRegionSetting           = 50,
-	EnableLanguageSetting                    = 51,
-	EnableFriendCodeSetting                  = 52,
-	EnableEarlyAccessLoadingScreenBanner     = 53,
-	EnableAlterationModifications            = 54,
-	EnableSchematicRarityUpgrade             = 55,
-	EnableMissionActivationVote              = 56,
-	EnableLtmRetrieveTheData                 = 57,
-	EnableUpgradesVideos                     = 58,
-	ShowPreviewTestTab                       = 59,
-	Max_None                                 = 60,
-	EFortUIFeature_MAX                       = 61,
+	ShowBattlePassFAQ                        = 29,
+	ShowReplays                              = 30,
+	ShowProfileStatsUI                       = 31,
+	ShowAthenaItemShop                       = 32,
+	ShowShowdown                             = 33,
+	ShowAccountBoosts                        = 34,
+	ShowCustomerSupport                      = 35,
+	ShowGlobalChat                           = 36,
+	ShowEULA                                 = 37,
+	ShowEndOfZoneCinematic                   = 38,
+	ShowOnboardingCinematics                 = 39,
+	ShowFounderBannerIcons                   = 40,
+	ShowCurrentRegionInLobby                 = 41,
+	ShowPrerollLlamas                        = 42,
+	EnableFoundersDailyRewards               = 43,
+	EnableTwitchIntegration                  = 44,
+	EnableMatchmakingRegionSetting           = 45,
+	EnableLanguageSetting                    = 46,
+	EnableFriendCodeSetting                  = 47,
+	EnableEarlyAccessLoadingScreenBanner     = 48,
+	EnableAlterationModifications            = 49,
+	EnableSchematicRarityUpgrade             = 50,
+	EnableMissionActivationVote              = 51,
+	EnableLtmRetrieveTheData                 = 52,
+	EnableUpgradesVideos                     = 53,
+	Max_None                                 = 54,
+	EFortUIFeature_MAX                       = 55,
 };
 
 // Enum FortniteUI.EFlagStatus
@@ -195,20 +306,6 @@ enum class EFlagStatus : uint8
 	FlagPresent                              = 0,
 	FlagNotPresent                           = 1,
 	EFlagStatus_MAX                          = 2,
-};
-
-// Enum FortniteUI.EInputPriority
-// NumValues: 0x0008
-enum class EInputPriority : uint8
-{
-	Normal                                   = 0,
-	Menu                                     = 1,
-	Chat                                     = 2,
-	Modal                                    = 3,
-	Confirmation                             = 4,
-	Error                                    = 5,
-	HUD                                      = 6,
-	EInputPriority_MAX                       = 7,
 };
 
 // Enum FortniteUI.EFortInputMode
@@ -232,100 +329,6 @@ enum class EFortUrlType : uint8
 	EFortUrlType_MAX                         = 4,
 };
 
-// Enum FortniteUI.EFortStoreState
-// NumValues: 0x0014
-enum class EFortStoreState : uint8
-{
-	Error                                    = 0,
-	Closed                                   = 1,
-	CardPackStore                            = 2,
-	CurrencyStore                            = 3,
-	WebPayment                               = 4,
-	PurchaseOpen                             = 5,
-	PackOpen                                 = 6,
-	CardEnter                                = 7,
-	CardBackReveal                           = 8,
-	CardFlip                                 = 9,
-	CardFrontReveal                          = 10,
-	CardExit                                 = 11,
-	SummaryAdd                               = 12,
-	PackDestroy                              = 13,
-	Summary                                  = 14,
-	PresentChoice                            = 15,
-	ChoiceMade                               = 16,
-	SummaryAddTransition                     = 17,
-	MAX_None                                 = 18,
-	EFortStoreState_MAX                      = 19,
-};
-
-// Enum FortniteUI.EFortItemCooldownType
-// NumValues: 0x0008
-enum class EFortItemCooldownType : uint8
-{
-	None                                     = 0,
-	AmmoRegeneration                         = 1,
-	ItemActivation                           = 2,
-	WeaponReloading                          = 3,
-	Death                                    = 4,
-	AthenaWeaponFireCooldown                 = 5,
-	AbilitySetActivateByInputAbility         = 6,
-	EFortItemCooldownType_MAX                = 7,
-};
-
-// Enum FortniteUI.EActivatePanelOption
-// NumValues: 0x0004
-enum class EActivatePanelOption : uint8
-{
-	Show                                     = 0,
-	Hide                                     = 1,
-	PlatformDefault                          = 2,
-	EActivatePanelOption_MAX                 = 3,
-};
-
-// Enum FortniteUI.EFortFrontEndFeatureStateReason
-// NumValues: 0x0008
-enum class EFortFrontEndFeatureStateReason : uint8
-{
-	Default                                  = 0,
-	NoHeroes                                 = 1,
-	Tutorial                                 = 2,
-	BROnly                                   = 3,
-	NoPlayerController                       = 4,
-	UnexpectedFeature                        = 5,
-	Invalid                                  = 6,
-	EFortFrontEndFeatureStateReason_MAX      = 7,
-};
-
-// Enum FortniteUI.EFortFrontEndFeatureState
-// NumValues: 0x0005
-enum class EFortFrontEndFeatureState : uint8
-{
-	Enabled                                  = 0,
-	Disabled                                 = 1,
-	Hidden                                   = 2,
-	Invalid                                  = 3,
-	EFortFrontEndFeatureState_MAX            = 4,
-};
-
-// Enum FortniteUI.EFortFrontEndFeature
-// NumValues: 0x000D
-enum class EFortFrontEndFeature : uint8
-{
-	ShowHomeBase                             = 0,
-	ShowHeroList                             = 1,
-	ShowVault                                = 2,
-	ShowStore                                = 3,
-	PlayZone                                 = 4,
-	ShowDailyRewards                         = 5,
-	ShowHeroSelect                           = 6,
-	RecruitHero                              = 7,
-	ShowHomeBaseOverview                     = 8,
-	STWArmory_Transform                      = 9,
-	STWArmory_CollectionBook                 = 10,
-	MAX_None                                 = 11,
-	EFortFrontEndFeature_MAX                 = 12,
-};
-
 // Enum FortniteUI.EItemDisassembleRestrictionReason
 // NumValues: 0x0003
 enum class EItemDisassembleRestrictionReason : uint8
@@ -336,7 +339,7 @@ enum class EItemDisassembleRestrictionReason : uint8
 };
 
 // Enum FortniteUI.EItemRecyclingRestrictionReason
-// NumValues: 0x0008
+// NumValues: 0x0006
 enum class EItemRecyclingRestrictionReason : uint8
 {
 	InnatelyUnrecyclable                     = 0,
@@ -344,19 +347,18 @@ enum class EItemRecyclingRestrictionReason : uint8
 	MissingCatalyst                          = 2,
 	ItemOutOnExpedition                      = 3,
 	InUseByCrafting                          = 4,
-	MulchingNotAllowed                       = 5,
-	IsSlottedAttributeWorker                 = 6,
-	EItemRecyclingRestrictionReason_MAX      = 7,
+	EItemRecyclingRestrictionReason_MAX      = 5,
 };
 
 // Enum FortniteUI.EItemRecyclingWarning
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EItemRecyclingWarning : uint8
 {
 	HighLevel                                = 0,
 	HighRarity                               = 1,
-	CanSlotInCollectionBook                  = 2,
-	EItemRecyclingWarning_MAX                = 3,
+	HighTier                                 = 2,
+	CanSlotInCollectionBook                  = 3,
+	EItemRecyclingWarning_MAX                = 4,
 };
 
 // Enum FortniteUI.EConversionControlKeyRequest
@@ -378,6 +380,19 @@ enum class EVaultItemLimitStatus : uint8
 	AtCapacity                               = 2,
 	OverCapacity                             = 3,
 	EVaultItemLimitStatus_MAX                = 4,
+};
+
+// Enum FortniteUI.EFortItemCooldownType
+// NumValues: 0x0007
+enum class EFortItemCooldownType : uint8
+{
+	None                                     = 0,
+	AmmoRegeneration                         = 1,
+	ItemActivation                           = 2,
+	WeaponReloading                          = 3,
+	Death                                    = 4,
+	AthenaWeaponFireCooldown                 = 5,
+	EFortItemCooldownType_MAX                = 6,
 };
 
 // Enum FortniteUI.EFortTutorialGlowType
@@ -403,15 +418,13 @@ enum class EFortBangSize : uint8
 	EFortBangSize_MAX                        = 6,
 };
 
-// Enum FortniteUI.EFortPlayerPowerRatingType
-// NumValues: 0x0005
-enum class EFortPlayerPowerRatingType : uint8
+// Enum FortniteUI.EViewerNavigationDirection
+// NumValues: 0x0003
+enum class EViewerNavigationDirection : uint8
 {
-	Auto                                     = 0,
-	Campaign                                 = 1,
-	Phoenix                                  = 2,
-	Max_None                                 = 3,
-	EFortPlayerPowerRatingType_MAX           = 4,
+	Previous                                 = 0,
+	Next                                     = 1,
+	EViewerNavigationDirection_MAX           = 2,
 };
 
 // Enum FortniteUI.EGridSortKind
@@ -426,77 +439,6 @@ enum class EGridSortKind : uint8
 	EGridSortKind_MAX                        = 5,
 };
 
-// Enum FortniteUI.EFortItemInspectionMode
-// NumValues: 0x0008
-enum class EFortItemInspectionMode : uint8
-{
-	Overview                                 = 0,
-	Details                                  = 1,
-	View                                     = 2,
-	Evolution                                = 3,
-	Upgrade                                  = 4,
-	UpgradeRarity                            = 5,
-	Promotion                                = 6,
-	EFortItemInspectionMode_MAX              = 7,
-};
-
-// Enum FortniteUI.EFortItemCardSize
-// NumValues: 0x0009
-enum class EFortItemCardSize : uint8
-{
-	XXS                                      = 0,
-	XS                                       = 1,
-	Wide_S                                   = 2,
-	S                                        = 3,
-	M                                        = 4,
-	L                                        = 5,
-	XL                                       = 6,
-	XXL                                      = 7,
-	EFortItemCardSize_MAX                    = 8,
-};
-
-// Enum FortniteUI.EFortCollectionBookPopupButtonType
-// NumValues: 0x0007
-enum class EFortCollectionBookPopupButtonType : uint8
-{
-	Invalid                                  = 0,
-	SelectItem                               = 1,
-	Preview                                  = 2,
-	Purchase                                 = 3,
-	Unslot                                   = 4,
-	Back                                     = 5,
-	EFortCollectionBookPopupButtonType_MAX   = 6,
-};
-
-// Enum FortniteUI.ECollectionBookSectionNavTarget
-// NumValues: 0x0003
-enum class ECollectionBookSectionNavTarget : uint8
-{
-	SlotSelect                               = 0,
-	SlotPicker                               = 1,
-	ECollectionBookSectionNavTarget_MAX      = 2,
-};
-
-// Enum FortniteUI.EViewerNavigationDirection
-// NumValues: 0x0003
-enum class EViewerNavigationDirection : uint8
-{
-	Previous                                 = 0,
-	Next                                     = 1,
-	EViewerNavigationDirection_MAX           = 2,
-};
-
-// Enum FortniteUI.EHeroLoadoutSlotType
-// NumValues: 0x0005
-enum class EHeroLoadoutSlotType : uint8
-{
-	CommanderSlot                            = 0,
-	TeamPerkSlot                             = 1,
-	CrewSlot                                 = 2,
-	GadgetSlot                               = 3,
-	EHeroLoadoutSlotType_MAX                 = 4,
-};
-
 // Enum FortniteUI.ESquadSlotSortType
 // NumValues: 0x0006
 enum class ESquadSlotSortType : uint8
@@ -509,88 +451,15 @@ enum class ESquadSlotSortType : uint8
 	ESquadSlotSortType_MAX                   = 5,
 };
 
-// Enum FortniteUI.EBattleMapTimelineWidgetState
-// NumValues: 0x0008
-enum class EBattleMapTimelineWidgetState : uint8
-{
-	None                                     = 0,
-	HasNext                                  = 1,
-	HasPrevious                              = 2,
-	IsInReplay                               = 4,
-	CanBeScrubbed                            = 8,
-	IsStreaming                              = 16,
-	Invalid                                  = 32,
-	EBattleMapTimelineWidgetState_MAX        = 33,
-};
-
-// Enum FortniteUI.ECountdownDisplay
-// NumValues: 0x0005
-enum class ECountdownDisplay : uint8
-{
-	EventEndTime                             = 0,
-	ChallengeUnlockTime                      = 1,
-	ChallengeBundleUnlockTime                = 2,
-	UnlockAlreadySet                         = 3,
-	MAX                                      = 4,
-};
-
-// Enum FortniteUI.EChallengeInfoPage
-// NumValues: 0x0006
-enum class EChallengeInfoPage : uint8
-{
-	PartyAssist                              = 0,
-	Daily                                    = 1,
-	Suggested                                = 2,
-	Contextual                               = 3,
-	Selected                                 = 4,
-	EChallengeInfoPage_MAX                   = 5,
-};
-
-// Enum FortniteUI.EChallengeListSection
-// NumValues: 0x0007
-enum class EChallengeListSection : uint8
-{
-	SpecialOffers                            = 0,
-	CompletionRewards                        = 1,
-	AllChallenges                            = 2,
-	FreeChallenges                           = 3,
-	PaidChallenges                           = 4,
-	Objectives                               = 5,
-	EChallengeListSection_MAX                = 6,
-};
-
-// Enum FortniteUI.EAthenaChallengePageState
-// NumValues: 0x0005
-enum class EAthenaChallengePageState : uint8
-{
-	NotDisplayed                             = 0,
-	Intro                                    = 1,
-	Displayed                                = 2,
-	Outro                                    = 3,
-	EAthenaChallengePageState_MAX            = 4,
-};
-
-// Enum FortniteUI.EAthenaConfirmationResult
-// NumValues: 0x0005
-enum class EAthenaConfirmationResult : uint8
-{
-	Confirmed                                = 0,
-	Declined                                 = 1,
-	Canceled                                 = 2,
-	Max_NONE                                 = 3,
-	EAthenaConfirmationResult_MAX            = 4,
-};
-
 // Enum FortniteUI.EEquippedWeaponDisplay
-// NumValues: 0x0006
+// NumValues: 0x0005
 enum class EEquippedWeaponDisplay : uint8
 {
 	None                                     = 0,
 	Resource                                 = 1,
 	Magazine                                 = 2,
 	Utility                                  = 3,
-	Chargeable                               = 4,
-	EEquippedWeaponDisplay_MAX               = 5,
+	EEquippedWeaponDisplay_MAX               = 4,
 };
 
 // Enum FortniteUI.EAthenaEventMatchInfoSortMethod
@@ -603,36 +472,14 @@ enum class EAthenaEventMatchInfoSortMethod : uint8
 	EAthenaEventMatchInfoSortMethod_MAX      = 3,
 };
 
-// Enum FortniteUI.EAthenaGameFeatureStatus
-// NumValues: 0x0004
-enum class EAthenaGameFeatureStatus : uint8
-{
-	InProgress                               = 0,
-	ProgressPaused                           = 1,
-	ErrorOccured                             = 2,
-	EAthenaGameFeatureStatus_MAX             = 3,
-};
-
 // Enum FortniteUI.EAthenaPlayerActionAlert
-// NumValues: 0x0006
+// NumValues: 0x0004
 enum class EAthenaPlayerActionAlert : uint8
 {
 	PlayerDown                               = 0,
 	PlayerKill                               = 1,
 	EnteredStorm                             = 2,
-	NewZebulonDrone                          = 3,
-	NewZebulonDroneYou                       = 4,
-	EAthenaPlayerActionAlert_MAX             = 5,
-};
-
-// Enum FortniteUI.EAthenaInventoryDoubleClickAction
-// NumValues: 0x0004
-enum class EAthenaInventoryDoubleClickAction : uint8
-{
-	Nothing                                  = 0,
-	Equip                                    = 1,
-	DropStack                                = 2,
-	EAthenaInventoryDoubleClickAction_MAX    = 3,
+	EAthenaPlayerActionAlert_MAX             = 3,
 };
 
 // Enum FortniteUI.EFortAthenaPlaylist
@@ -645,89 +492,15 @@ enum class EFortAthenaPlaylist : uint8
 	EFortAthenaPlaylist_MAX                  = 3,
 };
 
-// Enum FortniteUI.EAthenaLockerInfoRestrictionWarning
-// NumValues: 0x0004
-enum class EAthenaLockerInfoRestrictionWarning : uint8
-{
-	UnsatisfiedExclusiveItem                 = 0,
-	LockedEmote                              = 1,
-	Unknown                                  = 2,
-	EAthenaLockerInfoRestrictionWarning_MAX  = 3,
-};
-
-// Enum FortniteUI.EMapChallengeCategoryType
-// NumValues: 0x0007
-enum class EMapChallengeCategoryType : uint8
-{
-	Daily                                    = 0,
-	Suggested                                = 1,
-	All                                      = 2,
-	Custom                                   = 3,
-	Contextual                               = 4,
-	Max_None                                 = 5,
-	EMapChallengeCategoryType_MAX            = 6,
-};
-
-// Enum FortniteUI.EFortMarkerActions
-// NumValues: 0x0004
-enum class EFortMarkerActions : uint8
-{
-	None                                     = 0,
-	Cancel                                   = 1,
-	Confirm                                  = 2,
-	EFortMarkerActions_MAX                   = 3,
-};
-
 // Enum FortniteUI.EHealthBarType
-// NumValues: 0x0006
+// NumValues: 0x0005
 enum class EHealthBarType : uint8
 {
 	Health                                   = 0,
 	Shield                                   = 1,
 	Stamina                                  = 2,
 	VehicleHealth                            = 3,
-	SignalInStorm                            = 4,
-	EHealthBarType_MAX                       = 5,
-};
-
-// Enum FortniteUI.EBPStatus
-// NumValues: 0x0003
-enum class EBPStatus : uint8
-{
-	UnpurchasedBP                            = 0,
-	PurchasedBP                              = 1,
-	EBPStatus_MAX                            = 2,
-};
-
-// Enum FortniteUI.EPunchType
-// NumValues: 0x0003
-enum class EPunchType : uint8
-{
-	Horizontal                               = 0,
-	Vertical                                 = 1,
-	EPunchType_MAX                           = 2,
-};
-
-// Enum FortniteUI.EPunchCardLocation
-// NumValues: 0x0006
-enum class EPunchCardLocation : uint8
-{
-	NONE                                     = 0,
-	HUD                                      = 1,
-	Map                                      = 2,
-	EndGame                                  = 3,
-	Lobby                                    = 4,
-	EPunchCardLocation_MAX                   = 5,
-};
-
-// Enum FortniteUI.EAthenaSquadListUpdateType
-// NumValues: 0x0004
-enum class EAthenaSquadListUpdateType : uint8
-{
-	None                                     = 0,
-	CanResurrect                             = 1,
-	FindResurrectChip                        = 2,
-	EAthenaSquadListUpdateType_MAX           = 3,
+	EHealthBarType_MAX                       = 4,
 };
 
 // Enum FortniteUI.ERespawnUIState
@@ -740,17 +513,6 @@ enum class ERespawnUIState : uint8
 	ERespawnUIState_MAX                      = 3,
 };
 
-// Enum FortniteUI.ESpectatorBuildCountType
-// NumValues: 0x0005
-enum class ESpectatorBuildCountType : uint8
-{
-	BuildCount                               = 0,
-	Wood                                     = 1,
-	Stone                                    = 2,
-	Metal                                    = 3,
-	ESpectatorBuildCountType_MAX             = 4,
-};
-
 // Enum FortniteUI.ESpectatorMapPlayerListState
 // NumValues: 0x0004
 enum class ESpectatorMapPlayerListState : uint8
@@ -761,17 +523,6 @@ enum class ESpectatorMapPlayerListState : uint8
 	ESpectatorMapPlayerListState_MAX         = 3,
 };
 
-// Enum FortniteUI.EAthenaSpectatorNameplateDetailState
-// NumValues: 0x0005
-enum class EAthenaSpectatorNameplateDetailState : uint8
-{
-	High                                     = 0,
-	Low                                      = 1,
-	Arrow                                    = 2,
-	Off                                      = 3,
-	EAthenaSpectatorNameplateDetailState_MAX = 4,
-};
-
 // Enum FortniteUI.EAthenaSpectatorNameplateDistanceState
 // NumValues: 0x0004
 enum class EAthenaSpectatorNameplateDistanceState : uint8
@@ -780,19 +531,6 @@ enum class EAthenaSpectatorNameplateDistanceState : uint8
 	MidDistance                              = 1,
 	FurtherThanMaxDistance                   = 2,
 	EAthenaSpectatorNameplateDistanceState_MAX = 3,
-};
-
-// Enum FortniteUI.ESpectatorPlayerListSortMethod
-// NumValues: 0x0007
-enum class ESpectatorPlayerListSortMethod : uint8
-{
-	SquadId                                  = 0,
-	PlayerName                               = 1,
-	Eliminations                             = 2,
-	EventScore                               = 3,
-	State                                    = 4,
-	Count                                    = 5,
-	ESpectatorPlayerListSortMethod_MAX       = 6,
 };
 
 // Enum FortniteUI.EStormSurgeThresholdType
@@ -806,29 +544,15 @@ enum class EStormSurgeThresholdType : uint8
 	EStormSurgeThresholdType_MAX             = 4,
 };
 
-// Enum FortniteUI.EFrontendVisibilityMode
-// NumValues: 0x0007
-enum class EFrontendVisibilityMode : uint8
-{
-	Normal                                   = 0,
-	HideTopTabsOnly                          = 1,
-	HideTopTabsOnlyWithoutBottomBar          = 2,
-	OnlyBottom                               = 3,
-	OnlyTop                                  = 4,
-	Empty                                    = 5,
-	EFrontendVisibilityMode_MAX              = 6,
-};
-
 // Enum FortniteUI.EComboSlotType
-// NumValues: 0x0006
+// NumValues: 0x0005
 enum class EComboSlotType : uint8
 {
 	Primary                                  = 0,
 	Secondary                                = 1,
 	Combo                                    = 2,
-	Creative                                 = 3,
-	COUNT                                    = 4,
-	EComboSlotType_MAX                       = 5,
+	COUNT                                    = 3,
+	EComboSlotType_MAX                       = 4,
 };
 
 // Enum FortniteUI.EBacchusSignalQuality
@@ -842,73 +566,13 @@ enum class EBacchusSignalQuality : uint8
 	EBacchusSignalQuality_MAX                = 4,
 };
 
-// Enum FortniteUI.EBattleLabAlertType
-// NumValues: 0x0004
-enum class EBattleLabAlertType : uint8
-{
-	QuestComplete                            = 0,
-	QuestGranted                             = 1,
-	Reward                                   = 2,
-	EBattleLabAlertType_MAX                  = 3,
-};
-
-// Enum FortniteUI.EBattlePassView
-// NumValues: 0x0004
-enum class EBattlePassView : uint8
-{
-	None                                     = 0,
-	Track                                    = 1,
-	ItemDetails                              = 2,
-	EBattlePassView_MAX                      = 3,
-};
-
-// Enum FortniteUI.EBattlePassPurchaseButtonLayout
-// NumValues: 0x0004
-enum class EBattlePassPurchaseButtonLayout : uint8
-{
-	Normal                                   = 0,
-	Bundle                                   = 1,
-	Normal_PaysForSelf                       = 2,
-	EBattlePassPurchaseButtonLayout_MAX      = 3,
-};
-
 // Enum FortniteUI.EAthenaNewsStyle
-// NumValues: 0x0004
+// NumValues: 0x0003
 enum class EAthenaNewsStyle : uint8
 {
 	None                                     = 0,
 	SpecialEvent                             = 1,
-	SpecialEvent2                            = 2,
-	EAthenaNewsStyle_MAX                     = 3,
-};
-
-// Enum FortniteUI.EAthenaNewsEntryType
-// NumValues: 0x000E
-enum class EAthenaNewsEntryType : uint8
-{
-	Text                                     = 0,
-	Item                                     = 1,
-	RMTItem                                  = 2,
-	Website                                  = 3,
-	NavigateToTab                            = 4,
-	SmallNews                                = 5,
-	STWUpsell                                = 6,
-	Challenge                                = 7,
-	SpatialBattlePass                        = 8,
-	BattlePassPurchaseScreen                 = 9,
-	Setting                                  = 10,
-	Playlist                                 = 11,
-	NavigateToSpatialScreen                  = 12,
-	EAthenaNewsEntryType_MAX                 = 13,
-};
-
-// Enum FortniteUI.EFortTournamentAlertType
-// NumValues: 0x0003
-enum class EFortTournamentAlertType : uint8
-{
-	Warning                                  = 0,
-	Info                                     = 1,
-	EFortTournamentAlertType_MAX             = 2,
+	EAthenaNewsStyle_MAX                     = 2,
 };
 
 // Enum FortniteUI.ESubGameFilter
@@ -919,25 +583,6 @@ enum class ESubGameFilter : uint32
 	SaveTheWorld                             = 1,
 	BattleRoyale                             = 2,
 	ESubGameFilter_MAX                       = 3,
-};
-
-// Enum FortniteUI.ECobaltStatusTeam
-// NumValues: 0x0003
-enum class ECobaltStatusTeam : uint8
-{
-	Ally                                     = 0,
-	Enemy                                    = 1,
-	MAX                                      = 255,
-};
-
-// Enum FortniteUI.EBracketNodeState
-// NumValues: 0x0004
-enum class EBracketNodeState : uint8
-{
-	LocalTeam                                = 0,
-	EnemyTeam                                = 1,
-	Neutral                                  = 2,
-	EBracketNodeState_MAX                    = 3,
 };
 
 // Enum FortniteUI.ESurvivalObjectiveIconState
@@ -997,29 +642,14 @@ enum class EDiscoCaptureIconState : uint8
 	EDiscoCaptureIconState_MAX               = 5,
 };
 
-// Enum FortniteUI.EFortDonutIdleGameObject
-// NumValues: 0x000A
-enum class EFortDonutIdleGameObject : uint8
+// Enum FortniteUI.EPlayerReportingStep
+// NumValues: 0x0004
+enum class EPlayerReportingStep : uint8
 {
-	UnsetObject                              = 0,
-	Tree                                     = 1,
-	Mound                                    = 2,
-	SmallMound                               = 3,
-	JumpPad                                  = 4,
-	Torch                                    = 5,
-	PeelMonster                              = 6,
-	Chimichanga                              = 7,
-	Arm                                      = 8,
-	EFortDonutIdleGameObject_MAX             = 9,
-};
-
-// Enum FortniteUI.UFortActivatableVideoPanelEvents
-// NumValues: 0x0003
-enum class EUFortActivatableVideoPanelEvents : uint8
-{
-	Finished                                 = 0,
-	Skipped                                  = 1,
-	UFortActivatableVideoPanelEvents_MAX     = 2,
+	ReportingPlayer                          = 0,
+	ReportingReason                          = 1,
+	AdditionalInfo                           = 2,
+	EPlayerReportingStep_MAX                 = 3,
 };
 
 // Enum FortniteUI.EFortAlterationOptionType
@@ -1053,7 +683,7 @@ enum class EFillDisableReason : uint8
 	PartyTooSmall                            = 4,
 	PartyTooBig                              = 5,
 	InactiveTournament                       = 6,
-	NoSplitscreen                            = 7,
+	CreativeModeWarning                      = 7,
 	EFillDisableReason_MAX                   = 8,
 };
 
@@ -1073,7 +703,7 @@ enum class ESpectatorQueueType : uint8
 {
 	Invalid                                  = 0,
 	Player                                   = 1,
-	BroadcastSpectator                       = 2,
+	Spectator                                = 2,
 	ESpectatorQueueType_MAX                  = 3,
 };
 
@@ -1085,131 +715,6 @@ enum class ESquadFillSetting : uint8
 	Fill                                     = 1,
 	NoFill                                   = 2,
 	ESquadFillSetting_MAX                    = 3,
-};
-
-// Enum FortniteUI.EPlayButtonJoinInProgressState
-// NumValues: 0x0004
-enum class EPlayButtonJoinInProgressState : uint8
-{
-	None                                     = 0,
-	JoinAsPlayer                             = 1,
-	SpectateAPartyMember                     = 2,
-	EPlayButtonJoinInProgressState_MAX       = 3,
-};
-
-// Enum FortniteUI.ETutorialButtonInteractionType
-// NumValues: 0x0003
-enum class ETutorialButtonInteractionType : uint8
-{
-	Click                                    = 0,
-	Press                                    = 1,
-	ETutorialButtonInteractionType_MAX       = 2,
-};
-
-// Enum FortniteUI.EHighlightType
-// NumValues: 0x0004
-enum class EHighlightType : uint8
-{
-	ESquareHighlight                         = 0,
-	ECircleHighlight_Big                     = 1,
-	ECircleHighlight_Small                   = 2,
-	EHighlightType_MAX                       = 3,
-};
-
-// Enum FortniteUI.EFortAthenaTutorialScreenExtraWidget
-// NumValues: 0x0005
-enum class EFortAthenaTutorialScreenExtraWidget : uint8
-{
-	None                                     = 0,
-	DragToTurn                               = 1,
-	Completed                                = 2,
-	Count                                    = 3,
-	EFortAthenaTutorialScreenExtraWidget_MAX = 4,
-};
-
-// Enum FortniteUI.EFortAthenaTutorialSubstep
-// NumValues: 0x0027
-enum class EFortAthenaTutorialSubstep : uint8
-{
-	ScreenSwipeToLook                        = 0,
-	ScreenFindMarker                         = 1,
-	ScreenUseLeftStick                       = 2,
-	ScreenMoveToBuilding                     = 3,
-	ScreenJump                               = 4,
-	ScreenCrouch                             = 5,
-	ScreenReachMarker                        = 6,
-	ScreenUsePickaxe                         = 7,
-	ScreenReachPickUp                        = 8,
-	ScreenPickUpItems                        = 9,
-	ScreenEquipItem                          = 10,
-	ScreenShootTargets                       = 11,
-	ScreenReload                             = 12,
-	ScreenReachLocation                      = 13,
-	ScreenDefendYourself                     = 14,
-	ScreenHealthAlert                        = 15,
-	ScreenDestroyEnemies                     = 16,
-	ScreenCollectLoot                        = 17,
-	ScreenUseMedkit                          = 18,
-	ScreenUseShield                          = 19,
-	ScreenShieldInfo                         = 20,
-	ScreenLookForChest                       = 21,
-	ScreenChestFound                         = 22,
-	ScreenSelectBuildMode                    = 23,
-	ScreenShowMaterials                      = 24,
-	ScreenShowBuildPieces                    = 25,
-	ScreenSelectStairs                       = 26,
-	ScreenPlaceStairs                        = 27,
-	ScreenReachChest                         = 28,
-	ScreenExitBuildMode                      = 29,
-	ScreenLootChest                          = 30,
-	ScreenCollectLootChest                   = 31,
-	ScreenEquipRifle                         = 32,
-	ScreenUseScope                           = 33,
-	ScreenShootTargetsScoping                = 34,
-	ScreenCompleted                          = 35,
-	HealingInterrupted                       = 36,
-	Count                                    = 37,
-	EFortAthenaTutorialSubstep_MAX           = 38,
-};
-
-// Enum FortniteUI.EFortAthenaTutorialStep
-// NumValues: 0x000D
-enum class EFortAthenaTutorialStep : uint8
-{
-	Look                                     = 0,
-	Move                                     = 1,
-	Harvest                                  = 2,
-	Pickup                                   = 3,
-	Shoot                                    = 4,
-	Ambush                                   = 5,
-	Heal                                     = 6,
-	Build                                    = 7,
-	Chest                                    = 8,
-	Scoping                                  = 9,
-	Completed                                = 10,
-	Count                                    = 11,
-	EFortAthenaTutorialStep_MAX              = 12,
-};
-
-// Enum FortniteUI.EFuelTankState
-// NumValues: 0x0004
-enum class EFuelTankState : uint8
-{
-	Empty                                    = 0,
-	LowFuel                                  = 1,
-	RegularFuel                              = 2,
-	EFuelTankState_MAX                       = 3,
-};
-
-// Enum FortniteUI.EFortMemberConnectionState
-// NumValues: 0x0005
-enum class EFortMemberConnectionState : uint8
-{
-	Open                                     = 0,
-	Connecting                               = 1,
-	Connected                                = 2,
-	Invalid                                  = 3,
-	EFortMemberConnectionState_MAX           = 4,
 };
 
 // Enum FortniteUI.ECollectionBookRewardStatus
@@ -1229,67 +734,6 @@ enum class ECollectionBookPrimaryNavTarget : uint8
 	Overview                                 = 0,
 	SectionTileView                          = 1,
 	ECollectionBookPrimaryNavTarget_MAX      = 2,
-};
-
-// Enum FortniteUI.EColorPickerColorRepresentation
-// NumValues: 0x0004
-enum class EColorPickerColorRepresentation : uint8
-{
-	HSV                                      = 0,
-	RGB                                      = 1,
-	Max_NONE                                 = 2,
-	EColorPickerColorRepresentation_MAX      = 3,
-};
-
-// Enum FortniteUI.EColorPickerType
-// NumValues: 0x0004
-enum class EColorPickerType : uint8
-{
-	Swatches                                 = 0,
-	CustomColor                              = 1,
-	Both                                     = 2,
-	EColorPickerType_MAX                     = 3,
-};
-
-// Enum FortniteUI.ELeaderboardDisplayType
-// NumValues: 0x0003
-enum class ELeaderboardDisplayType : uint8
-{
-	Default                                  = 0,
-	Floating                                 = 1,
-	ELeaderboardDisplayType_MAX              = 2,
-};
-
-// Enum FortniteUI.EFortLoadoutCardType
-// NumValues: 0x0006
-enum class EFortLoadoutCardType : uint8
-{
-	Items                                    = 0,
-	RandomTile                               = 1,
-	AddTile                                  = 2,
-	AddPreviewItems                          = 3,
-	Blank                                    = 4,
-	EFortLoadoutCardType_MAX                 = 5,
-};
-
-// Enum FortniteUI.EFortCosmeticLoadoutScreenMode
-// NumValues: 0x0003
-enum class EFortCosmeticLoadoutScreenMode : uint8
-{
-	Browse                                   = 0,
-	Save                                     = 1,
-	EFortCosmeticLoadoutScreenMode_MAX       = 2,
-};
-
-// Enum FortniteUI.EFortCreativeItemType
-// NumValues: 0x0005
-enum class EFortCreativeItemType : uint8
-{
-	Chest                                    = 0,
-	Item                                     = 1,
-	Collection                               = 2,
-	SubItems                                 = 3,
-	EFortCreativeItemType_MAX                = 4,
 };
 
 // Enum FortniteUI.EFortCreativeIslandLinkCategory
@@ -1314,17 +758,6 @@ enum class EFortCreativeIslandLinkValidationResult : uint8
 	InvalidKeyTooLong                        = 4,
 	InvalidKeyCharacters                     = 5,
 	EFortCreativeIslandLinkValidationResult_MAX = 6,
-};
-
-// Enum FortniteUI.EFortContentBrowserQuickbarState
-// NumValues: 0x0005
-enum class EFortContentBrowserQuickbarState : uint8
-{
-	Disabled                                 = 0,
-	Creative                                 = 1,
-	Primary                                  = 2,
-	Trap                                     = 3,
-	EFortContentBrowserQuickbarState_MAX     = 4,
 };
 
 // Enum FortniteUI.EFortCreativeServerPrivacySetting
@@ -1356,17 +789,6 @@ enum class EDynamicEntryPatternDirection : uint8
 	EDynamicEntryPatternDirection_MAX        = 2,
 };
 
-// Enum FortniteUI.DateFormat
-// NumValues: 0x0005
-enum class EDateFormat : uint8
-{
-	CountdownTextual                         = 0,
-	CountdownNumeric                         = 1,
-	CountdownNumUnder12Hours                 = 2,
-	Date                                     = 3,
-	DateFormat_MAX                           = 4,
-};
-
 // Enum FortniteUI.EFortExpeditionListSort
 // NumValues: 0x0004
 enum class EFortExpeditionListSort : uint8
@@ -1388,7 +810,7 @@ enum class EShareButtonType : uint8
 };
 
 // Enum FortniteUI.EFrontEndRewardType
-// NumValues: 0x000B
+// NumValues: 0x000A
 enum class EFrontEndRewardType : uint8
 {
 	Mission                                  = 0,
@@ -1400,8 +822,18 @@ enum class EFrontEndRewardType : uint8
 	DifficultyIncrease                       = 6,
 	GiftBox                                  = 7,
 	ItemCache                                = 8,
-	PhoenixLevelUp                           = 9,
-	EFrontEndRewardType_MAX                  = 10,
+	EFrontEndRewardType_MAX                  = 9,
+};
+
+// Enum FortniteUI.EFortUIGameFeedbackType
+// NumValues: 0x0005
+enum class EFortUIGameFeedbackType : uint8
+{
+	Bug                                      = 0,
+	Comment                                  = 1,
+	Player                                   = 2,
+	Content                                  = 3,
+	EFortUIGameFeedbackType_MAX              = 4,
 };
 
 // Enum FortniteUI.ESelectionState
@@ -1412,18 +844,6 @@ enum class ESelectionState : uint8
 	Selected                                 = 1,
 	CannotGift                               = 2,
 	ESelectionState_MAX                      = 3,
-};
-
-// Enum FortniteUI.EFortHeroPerkDisplayType
-// NumValues: 0x0006
-enum class EFortHeroPerkDisplayType : uint8
-{
-	CommanderPerk                            = 0,
-	TeamPerk                                 = 1,
-	ClassPerk                                = 2,
-	StandardPerk                             = 3,
-	Max_None                                 = 4,
-	EFortHeroPerkDisplayType_MAX             = 5,
 };
 
 // Enum FortniteUI.EFortSupportPerkWidgetState
@@ -1437,12 +857,14 @@ enum class EFortSupportPerkWidgetState : uint8
 };
 
 // Enum FortniteUI.ECenterPopupMessageStateEnum
-// NumValues: 0x0003
+// NumValues: 0x0005
 enum class ECenterPopupMessageStateEnum : uint8
 {
 	NotVisible                               = 0,
-	WaitingForOutpostOwner                   = 1,
-	ECenterPopupMessageStateEnum_MAX         = 2,
+	WaitingForMatchDelayCountDown            = 1,
+	WaitingForOutpostOwner                   = 2,
+	WaitingForPlayers                        = 3,
+	ECenterPopupMessageStateEnum_MAX         = 4,
 };
 
 // Enum FortniteUI.EBuildingFocusType
@@ -1456,15 +878,6 @@ enum class EBuildingFocusType : uint8
 	EBuildingFocusType_MAX                   = 4,
 };
 
-// Enum FortniteUI.EContextPositionPlatform
-// NumValues: 0x0003
-enum class EContextPositionPlatform : uint8
-{
-	NonMobile                                = 0,
-	Mobile                                   = 1,
-	EContextPositionPlatform_MAX             = 2,
-};
-
 // Enum FortniteUI.EFortItemCountStyle
 // NumValues: 0x0004
 enum class EFortItemCountStyle : uint8
@@ -1475,6 +888,19 @@ enum class EFortItemCountStyle : uint8
 	EFortItemCountStyle_MAX                  = 3,
 };
 
+// Enum FortniteUI.EFortItemInspectionMode
+// NumValues: 0x0007
+enum class EFortItemInspectionMode : uint8
+{
+	Overview                                 = 0,
+	Details                                  = 1,
+	View                                     = 2,
+	Evolution                                = 3,
+	Upgrade                                  = 4,
+	UpgradeRarity                            = 5,
+	EFortItemInspectionMode_MAX              = 6,
+};
+
 // Enum FortniteUI.EFortItemManagementMode
 // NumValues: 0x0004
 enum class EFortItemManagementMode : uint8
@@ -1483,46 +909,6 @@ enum class EFortItemManagementMode : uint8
 	Comparison                               = 1,
 	Mulch                                    = 2,
 	EFortItemManagementMode_MAX              = 3,
-};
-
-// Enum FortniteUI.ESceneTransitionType
-// NumValues: 0x0004
-enum class ESceneTransitionType : uint8
-{
-	NoTransition                             = 0,
-	Clockwise                                = 1,
-	CounterClockwise                         = 2,
-	ESceneTransitionType_MAX                 = 3,
-};
-
-// Enum FortniteUI.EViolatorIntensity
-// NumValues: 0x0004
-enum class EViolatorIntensity : uint8
-{
-	Low                                      = 0,
-	Medium                                   = 1,
-	High                                     = 2,
-	EViolatorIntensity_MAX                   = 3,
-};
-
-// Enum FortniteUI.EItemShopTileSize
-// NumValues: 0x0005
-enum class EItemShopTileSize : uint8
-{
-	Mini                                     = 0,
-	Small                                    = 1,
-	Normal                                   = 2,
-	DoubleWide                               = 3,
-	Max                                      = 4,
-};
-
-// Enum FortniteUI.EItemShopCurrency
-// NumValues: 0x0003
-enum class EItemShopCurrency : uint8
-{
-	VBucks                                   = 0,
-	RealMOney                                = 1,
-	EItemShopCurrency_MAX                    = 2,
 };
 
 // Enum FortniteUI.EFortKeybindForcedHoldStatus
@@ -1557,35 +943,15 @@ enum class ELocalUserOnlineStatus : uint8
 	ELocalUserOnlineStatus_MAX               = 6,
 };
 
-// Enum FortniteUI.EFortLoginInteraction
-// NumValues: 0x000F
-enum class EFortLoginInteraction : uint8
+// Enum FortniteUI.UFortMatchmakingKnobsDataSource
+// NumValues: 0x0005
+enum class EUFortMatchmakingKnobsDataSource : uint8
 {
-	Begin                                    = 0,
-	PlayedBefore                             = 1,
-	CredentialSelect                         = 2,
-	NamePassword                             = 3,
-	RedirectEpicAccount                      = 4,
-	AccountNotFound                          = 5,
-	CreateDisplayName                        = 6,
-	MultiFactorAuth                          = 7,
-	EULA                                     = 8,
-	AccountLink                              = 9,
-	AccountPinLink                           = 10,
-	WebLogin                                 = 11,
-	WebAccountCreation                       = 12,
-	AgeGate                                  = 13,
-	EFortLoginInteraction_MAX                = 14,
-};
-
-// Enum FortniteUI.EFortModifiedStatus
-// NumValues: 0x0004
-enum class EFortModifiedStatus : uint8
-{
-	IsDefault                                = 0,
-	IsModified                               = 1,
-	Unsupported                              = 2,
-	EFortModifiedStatus_MAX                  = 3,
+	Playlist                                 = 0,
+	Mutator                                  = 1,
+	GameMode                                 = 2,
+	Permissions                              = 3,
+	Max                                      = 4,
 };
 
 // Enum FortniteUI.EFortMaterialProgressBarSectionOverflowBehavior
@@ -1629,26 +995,6 @@ enum class EFortMissionActivationWidgetState : uint8
 	EFortMissionActivationWidgetState_MAX    = 4,
 };
 
-// Enum FortniteUI.EActionBindingComparisonType
-// NumValues: 0x0004
-enum class EActionBindingComparisonType : uint8
-{
-	NoneBound                                = 0,
-	AnyBound                                 = 1,
-	AllBound                                 = 2,
-	EActionBindingComparisonType_MAX         = 3,
-};
-
-// Enum FortniteUI.ETagComparisonType
-// NumValues: 0x0004
-enum class ETagComparisonType : uint8
-{
-	HasAny                                   = 0,
-	HasAll                                   = 1,
-	HasNone                                  = 2,
-	ETagComparisonType_MAX                   = 3,
-};
-
 // Enum FortniteUI.EFortFortMobileShareButtonOS
 // NumValues: 0x0003
 enum class EFortFortMobileShareButtonOS : uint8
@@ -1669,16 +1015,6 @@ enum class EModalContainerSlot : uint8
 	Max                                      = 4,
 };
 
-// Enum FortniteUI.EFortMtxOfferDisplaySize
-// NumValues: 0x0004
-enum class EFortMtxOfferDisplaySize : uint8
-{
-	Small                                    = 0,
-	Medium                                   = 1,
-	Large                                    = 2,
-	EFortMtxOfferDisplaySize_MAX             = 3,
-};
-
 // Enum FortniteUI.EFortMtxStoreOfferType
 // NumValues: 0x0005
 enum class EFortMtxStoreOfferType : uint8
@@ -1691,25 +1027,21 @@ enum class EFortMtxStoreOfferType : uint8
 };
 
 // Enum FortniteUI.ESettingTab
-// NumValues: 0x0010
+// NumValues: 0x000C
 enum class ESettingTab : uint8
 {
 	None                                     = 0,
 	Video                                    = 1,
 	Game                                     = 2,
-	GameUI                                   = 3,
-	Brightness                               = 4,
-	Audio                                    = 5,
-	Accessibility                            = 6,
-	Input                                    = 7,
-	MouseAndKeyboard                         = 8,
-	Controller                               = 9,
-	ControllerSensitivity                    = 10,
-	TouchAndMotion                           = 11,
-	Account                                  = 12,
-	CreativeWorld                            = 13,
-	CreativePlayer                           = 14,
-	ESettingTab_MAX                          = 15,
+	Brightness                               = 3,
+	Audio                                    = 4,
+	Accessibility                            = 5,
+	Input                                    = 6,
+	Controller                               = 7,
+	Account                                  = 8,
+	CreativeWorld                            = 9,
+	CreativePlayer                           = 10,
+	ESettingTab_MAX                          = 11,
 };
 
 // Enum FortniteUI.ESettingValueType
@@ -1723,7 +1055,7 @@ enum class ESettingValueType : uint8
 };
 
 // Enum FortniteUI.ESettingType
-// NumValues: 0x009E
+// NumValues: 0x0072
 enum class ESettingType : uint8
 {
 	None                                     = 0,
@@ -1747,160 +1079,99 @@ enum class ESettingType : uint8
 	AllowLowPower                            = 18,
 	AllowVideoPlayback                       = 19,
 	AllowDynamicResolution                   = 20,
-	AllowMultithreadedRendering              = 21,
-	RenderingAPI                             = 22,
-	UseGPUCrashDebugging                     = 23,
-	RegionHeader                             = 24,
-	Language                                 = 25,
-	Region                                   = 26,
-	MouseSensitivityYaw                      = 27,
-	MouseSensitivityPitch                    = 28,
-	MouseSensitivityMultiplierForAircraft    = 29,
-	TouchDragSensitivity                     = 30,
-	ControllerLookSensitivityYaw             = 31,
-	ControllerLookSensitivityPitch           = 32,
-	MouseTargetingMultiplier                 = 33,
-	MouseScopedMultiplier                    = 34,
-	GamepadTargetingMultiplier               = 35,
-	GamepadScopedMultiplier                  = 36,
-	GamepadBuildingMultiplier                = 37,
-	GamepadEditModeMultiplier                = 38,
-	TouchLookAccelerationMultiplier          = 39,
-	TouchDragTargetingSensitivity            = 40,
-	TouchDragScopedSensitivity               = 41,
-	TouchBuildingMultiplier                  = 42,
-	TouchEditModeMultiplier                  = 43,
-	TouchVerticalSensitivity                 = 44,
-	InvertPitch                              = 45,
-	InvertYaw                                = 46,
-	InvertPitchForMotion                     = 47,
-	InvertPitchForAircraftPrimary            = 48,
-	InvertPitchForAircraftSecondary          = 49,
-	InvertYawForMotion                       = 50,
-	GyroEnabled                              = 51,
-	GyroYawAxis                              = 52,
-	GyroSensitivity                          = 53,
-	GyroTargetingSensitivity                 = 54,
-	GyroScopedSensitivity                    = 55,
-	GyroHarvestingToolSensitivity            = 56,
-	SafeZone                                 = 57,
-	AnonymousMode                            = 58,
-	AnonymousCharacterMode                   = 59,
-	HideOtherPlayerNames                     = 60,
-	HiddenMatchmakingDelay                   = 61,
-	AutoJoinGameVoiceChannel                 = 62,
-	ShowVoiceIndicators                      = 63,
-	HUDScale                                 = 64,
-	ShowViewerCount                          = 65,
-	FirstPersonCamera                        = 66,
-	PeripheralLighting                       = 67,
-	PingPlaceDangerMarkerWhenTargeting       = 68,
-	ShowGlobalChat                           = 69,
-	ConsoleUnlockedFPS                       = 70,
-	ToggleSprint                             = 71,
-	SprintByDefault                          = 72,
-	SprintCancelsReload                      = 73,
-	TapInteract                              = 74,
-	InWorldInteract                          = 75,
-	ToggleTargeting                          = 76,
-	HoldToSwapPickup                         = 77,
-	AutoEquipBetterItems                     = 78,
-	EquipFirstBuildingPieceWhenSwappingQuickbars = 79,
-	EquipFirstBuildingPieceWhenSwappingQuickbarsAthena = 80,
-	AimAssist                                = 81,
-	EditModeAimAssist                        = 82,
-	TouchEdit                                = 83,
-	EditConfirmOnRelease                     = 84,
-	QuickEdit                                = 85,
-	TurboBuild                               = 86,
-	CreativeTurboDelete                      = 87,
-	AutoChangeMaterial                       = 88,
-	GamepadAutoRun                           = 89,
-	CrossplayPreference                      = 90,
-	AutoOpenDoors                            = 91,
-	AutoPickupWeapons                        = 92,
-	AutoPickupWeaponsConsolePC               = 93,
-	AutoSortConsumablesToRight               = 94,
-	EnableTryBuildOnFocus                    = 95,
-	EditButtonHoldTime                       = 96,
-	AccessoriesHeader                        = 97,
-	ForceFeedback                            = 98,
-	ContextTutorial                          = 99,
-	ReplayRecording                          = 100,
-	ReplayRecordingLargeTeams                = 101,
-	ReplayRecordingCreativeMode              = 102,
-	UsePowerSavingMode                       = 103,
-	ShadowPlayHighlights                     = 104,
-	ShowTemperature                          = 105,
-	BuildingPossession                       = 106,
-	GammaValue                               = 107,
-	MusicVolume                              = 108,
-	SoundFXVolume                            = 109,
-	DialogVolume                             = 110,
-	VoiceChatVolume                          = 111,
-	CinematicsVolume                         = 112,
-	Subtitles                                = 113,
-	Quality                                  = 114,
-	VoiceChat                                = 115,
-	PushToTalk                               = 116,
-	ProximityVoiceChat                       = 117,
-	VoiceChatInputDevice                     = 118,
-	VoiceChatOutputDevice                    = 119,
-	AllowBackgroundAudio                     = 120,
-	ColorBlindMode                           = 121,
-	ColorBlindStrength                       = 122,
-	IgnoreGamepadInput                       = 123,
-	LockPrimaryInputMethodToMouse            = 124,
-	EnableRudderControl                      = 125,
-	RudderDeadZone                           = 126,
-	RudderMaxThrottle                        = 127,
-	VisualizeSoundEffects                    = 128,
-	VisualizeSoundEffectsHeader              = 129,
-	MoveStickDeadZone                        = 130,
-	LookStickDeadZone                        = 131,
-	LookSensitivityPreset                    = 132,
-	LookSensitivityPresetAds                 = 133,
-	LookBuildModeMultiplier                  = 134,
-	LookEditModeMultiplier                   = 135,
-	UseAdvancedOptions                       = 136,
-	LookHorizontalSpeed                      = 137,
-	LookVerticalSpeed                        = 138,
-	LookHorizontalSpeedAds                   = 139,
-	LookVerticalSpeedAds                     = 140,
-	LookHorizontalBoostSpeed                 = 141,
-	LookVerticalBoostSpeed                   = 142,
-	LookBoostAccelerationTime                = 143,
-	LookHorizontalBoostSpeedAds              = 144,
-	LookVerticalBoostSpeedAds                = 145,
-	LookBoostAccelerationTimeAds             = 146,
-	InstantBoostWhenBuilding                 = 147,
-	LookEaseTime                             = 148,
-	LookInputCurve                           = 149,
-	AimAssistStrength                        = 150,
-	UseLegacyControls                        = 151,
-	PlayerSurveysAllowed                     = 152,
-	NotifyWhenPlaying                        = 153,
-	LocalNotifications                       = 154,
-	FireMode                                 = 155,
-	COUNT                                    = 156,
-	ESettingType_MAX                         = 157,
-};
-
-// Enum FortniteUI.EParentalControlsViewState
-// NumValues: 0x000B
-enum class EParentalControlsViewState : uint8
-{
-	Invalid                                  = 0,
-	EnterPin                                 = 1,
-	AskToEnableControls                      = 2,
-	VerifyEmail                              = 3,
-	SetupEmail                               = 4,
-	SetupPin                                 = 5,
-	DisplaySettings                          = 6,
-	DisableParentalControls                  = 7,
-	AskToReEnable                            = 8,
-	ReEnabling                               = 9,
-	EParentalControlsViewState_MAX           = 10,
+	RegionHeader                             = 21,
+	Language                                 = 22,
+	Region                                   = 23,
+	MouseSensitivityYaw                      = 24,
+	MouseSensitivityPitch                    = 25,
+	MouseSensitivityMultiplierForAircraft    = 26,
+	TouchDragSensitivity                     = 27,
+	ControllerLookSensitivityYaw             = 28,
+	ControllerLookSensitivityPitch           = 29,
+	MouseTargetingMultiplier                 = 30,
+	MouseScopedMultiplier                    = 31,
+	GamepadTargetingMultiplier               = 32,
+	GamepadScopedMultiplier                  = 33,
+	GamepadBuildingMultiplier                = 34,
+	TouchDragTargetingSensitivity            = 35,
+	TouchDragScopedSensitivity               = 36,
+	TouchVerticalSensitivity                 = 37,
+	InvertPitch                              = 38,
+	InvertYaw                                = 39,
+	InvertPitchForMotion                     = 40,
+	InvertPitchForAircraftPrimary            = 41,
+	InvertPitchForAircraftSecondary          = 42,
+	InvertYawForMotion                       = 43,
+	GyroEnabled                              = 44,
+	GyroYawAxis                              = 45,
+	GyroSensitivity                          = 46,
+	GyroTargetingSensitivity                 = 47,
+	GyroScopedSensitivity                    = 48,
+	GyroHarvestingToolSensitivity            = 49,
+	SafeZone                                 = 50,
+	AnonymousMode                            = 51,
+	HideOtherPlayerNames                     = 52,
+	HiddenMatchmakingDelay                   = 53,
+	HUDScale                                 = 54,
+	ShowViewerCount                          = 55,
+	FirstPersonCamera                        = 56,
+	PeripheralLighting                       = 57,
+	ShowGlobalChat                           = 58,
+	ConsoleUnlockedFPS                       = 59,
+	ToggleSprint                             = 60,
+	SprintByDefault                          = 61,
+	SprintCancelsReload                      = 62,
+	TapInteract                              = 63,
+	ToggleTargeting                          = 64,
+	AutoEquipBetterItems                     = 65,
+	EquipFirstBuildingPieceWhenSwappingQuickbars = 66,
+	EquipFirstBuildingPieceWhenSwappingQuickbarsAthena = 67,
+	AimAssist                                = 68,
+	EditModeAimAssist                        = 69,
+	TurboBuild                               = 70,
+	CreativeTurboDelete                      = 71,
+	AutoChangeMaterial                       = 72,
+	GamepadAutoRun                           = 73,
+	CrossplayPreference                      = 74,
+	UseTapToShoot                            = 75,
+	AutoOpenDoors                            = 76,
+	AutoPickupWeapons                        = 77,
+	AutoPickupWeaponsConsolePC               = 78,
+	AutoSortConsumablesToRight               = 79,
+	EnableTryBuildOnFocus                    = 80,
+	EditButtonHoldTime                       = 81,
+	ShowHeadAccessories                      = 82,
+	ShowBackpack                             = 83,
+	ForceFeedback                            = 84,
+	ReplayRecording                          = 85,
+	ReplayRecordingLargeTeams                = 86,
+	ReplayRecordingCreativeMode              = 87,
+	UsePowerSavingMode                       = 88,
+	ShadowPlayHighlights                     = 89,
+	GammaValue                               = 90,
+	MusicVolume                              = 91,
+	SoundFXVolume                            = 92,
+	DialogVolume                             = 93,
+	VoiceChatVolume                          = 94,
+	CinematicsVolume                         = 95,
+	Subtitles                                = 96,
+	Quality                                  = 97,
+	VoiceChat                                = 98,
+	PushToTalk                               = 99,
+	ProximityVoiceChat                       = 100,
+	VoiceChatInputDevice                     = 101,
+	VoiceChatOutputDevice                    = 102,
+	AllowBackgroundAudio                     = 103,
+	ColorBlindMode                           = 104,
+	ColorBlindStrength                       = 105,
+	IgnoreGamepadInput                       = 106,
+	LockPrimaryInputMethodToMouse            = 107,
+	VisualizeSoundEffects                    = 108,
+	VisualizeSoundEffectsHeader              = 109,
+	MoveStickDeadZone                        = 110,
+	LookStickDeadZone                        = 111,
+	COUNT                                    = 112,
+	ESettingType_MAX                         = 113,
 };
 
 // Enum FortniteUI.EFortPerksWidgetState
@@ -1922,192 +1193,14 @@ enum class ESaveProfileForBanners : uint32
 	ESaveProfileForBanners_MAX               = 2,
 };
 
-// Enum FortniteUI.EFortPlayerSurveyAggregateOp
-// NumValues: 0x0002
-enum class EFortPlayerSurveyAggregateOp : uint8
-{
-	Sum                                      = 0,
-	Max                                      = 1,
-};
-
-// Enum FortniteUI.EFortPlayerSurveyAthenaSeasonStat
-// NumValues: 0x0005
-enum class EFortPlayerSurveyAthenaSeasonStat : uint8
-{
-	XP                                       = 0,
-	Level                                    = 1,
-	BookXP                                   = 2,
-	BookLevel                                = 3,
-	EFortPlayerSurveyAthenaSeasonStat_MAX    = 4,
-};
-
-// Enum FortniteUI.EFortPlayerSurveyButtonListMultipleSelectionAnswerWidgetFocusType
-// NumValues: 0x0003
-enum class EFortPlayerSurveyButtonListMultipleSelectionAnswerWidgetFocusType : uint8
-{
-	Unknown                                  = 0,
-	ChoiceButton                             = 1,
-	EFortPlayerSurveyButtonListMultipleSelectionAnswerWidgetFocusType_MAX = 2,
-};
-
-// Enum FortniteUI.EFortPlayerSurveyCMSDataAggregateOp
-// NumValues: 0x0003
-enum class EFortPlayerSurveyCMSDataAggregateOp : uint8
-{
-	s                                        = 0,
-	mx                                       = 1,
-	EFortPlayerSurveyCMSDataAggregateOp_MAX  = 2,
-};
-
-// Enum FortniteUI.EFortPlayerSurveyCMSDataAthenaSeasonStat
-// NumValues: 0x0005
-enum class EFortPlayerSurveyCMSDataAthenaSeasonStat : uint8
-{
-	sx                                       = 0,
-	sl                                       = 1,
-	bx                                       = 2,
-	bl                                       = 3,
-	EFortPlayerSurveyCMSDataAthenaSeasonStat_MAX = 4,
-};
-
-// Enum FortniteUI.EFortPlayerSurveyCMSDataBinaryComparisonOp
-// NumValues: 0x0007
-enum class EFortPlayerSurveyCMSDataBinaryComparisonOp : uint8
-{
-	e                                        = 0,
-	n                                        = 1,
-	l                                        = 2,
-	g                                        = 3,
-	le                                       = 4,
-	ge                                       = 5,
-	EFortPlayerSurveyCMSDataBinaryComparisonOp_MAX = 6,
-};
-
-// Enum FortniteUI.EFortPlayerSurveyCMSDataGameMode
+// Enum FortniteUI.EItemRefundability
 // NumValues: 0x0004
-enum class EFortPlayerSurveyCMSDataGameMode : uint8
+enum class EItemRefundability : uint8
 {
-	c                                        = 0,
-	a                                        = 1,
-	pc                                       = 2,
-	EFortPlayerSurveyCMSDataGameMode_MAX     = 3,
-};
-
-// Enum FortniteUI.EFortPlayerSurveyCMSDataGameplayTagQueryExprType
-// NumValues: 0x0004
-enum class EFortPlayerSurveyCMSDataGameplayTagQueryExprType : uint8
-{
-	n                                        = 3,
-	s                                        = 1,
-	a                                        = 2,
-	EFortPlayerSurveyCMSDataGameplayTagQueryExprType_MAX = 4,
-};
-
-// Enum FortniteUI.EFortPlayerSurveyCMSDataPlaylistCategory
-// NumValues: 0x0008
-enum class EFortPlayerSurveyCMSDataPlaylistCategory : uint8
-{
-	a                                        = 0,
-	s                                        = 1,
-	d                                        = 2,
-	q                                        = 3,
-	lt                                       = 4,
-	c                                        = 5,
-	pl                                       = 6,
-	EFortPlayerSurveyCMSDataPlaylistCategory_MAX = 7,
-};
-
-// Enum FortniteUI.EFortPlayerSurveyCMSDataPresentationStyle
-// NumValues: 0x0003
-enum class EFortPlayerSurveyCMSDataPresentationStyle : uint8
-{
-	standard                                 = 1,
-	rating                                   = 2,
-	EFortPlayerSurveyCMSDataPresentationStyle_MAX = 3,
-};
-
-// Enum FortniteUI.EFortPlayerSurveyCMSDataQuestState
-// NumValues: 0x0005
-enum class EFortPlayerSurveyCMSDataQuestState : uint8
-{
-	i                                        = 0,
-	a                                        = 1,
-	co                                       = 2,
-	cl                                       = 3,
-	EFortPlayerSurveyCMSDataQuestState_MAX   = 4,
-};
-
-// Enum FortniteUI.EFortPlayerSurveyCMSDataRelativeSurveyKeyType
-// NumValues: 0x0004
-enum class EFortPlayerSurveyCMSDataRelativeSurveyKeyType : uint8
-{
-	s                                        = 0,
-	a                                        = 1,
-	o                                        = 2,
-	EFortPlayerSurveyCMSDataRelativeSurveyKeyType_MAX = 3,
-};
-
-// Enum FortniteUI.EFortPlayerSurveyCMSDataTrigger
-// NumValues: 0x0002
-enum class EFortPlayerSurveyCMSDataTrigger : uint8
-{
-	rm                                       = 2,
-	EFortPlayerSurveyCMSDataTrigger_MAX      = 3,
-};
-
-// Enum FortniteUI.EFortPlayerSurveyPlaylistCategory
-// NumValues: 0x0008
-enum class EFortPlayerSurveyPlaylistCategory : uint8
-{
-	All                                      = 0,
-	Solo                                     = 1,
-	Duo                                      = 2,
-	Squad                                    = 3,
-	LTM                                      = 4,
-	Creative                                 = 5,
-	Playground                               = 6,
-	EFortPlayerSurveyPlaylistCategory_MAX    = 7,
-};
-
-// Enum FortniteUI.EFortPlayerSurveyTrigger
-// NumValues: 0x0004
-enum class EFortPlayerSurveyTrigger : uint8
-{
-	Invalid                                  = 0,
-	Any                                      = 1,
-	ReturnToMainMenu                         = 2,
-	EFortPlayerSurveyTrigger_MAX             = 3,
-};
-
-// Enum FortniteUI.EPostGameClickCatcherMode
-// NumValues: 0x0005
-enum class EPostGameClickCatcherMode : uint8
-{
-	Catch_None                               = 0,
-	Catch_MobileOnly                         = 1,
-	Catch_MouseOnly                          = 2,
-	Catch_All                                = 3,
-	Catch_MAX                                = 4,
-};
-
-// Enum FortniteUI.EPostGameHUDMode
-// NumValues: 0x0005
-enum class EPostGameHUDMode : uint8
-{
-	None                                     = 0,
-	AllHidden                                = 1,
-	Spectating                               = 2,
-	AllHiddenExceptXP                        = 3,
-	EPostGameHUDMode_MAX                     = 4,
-};
-
-// Enum FortniteUI.EPostGameScreenContinueBehavior
-// NumValues: 0x0003
-enum class EPostGameScreenContinueBehavior : uint8
-{
-	Next                                     = 0,
-	Previous                                 = 1,
-	EPostGameScreenContinueBehavior_MAX      = 2,
+	NotRefundable                            = 0,
+	Refundable                               = 1,
+	AlreadyRefunded                          = 2,
+	EItemRefundability_MAX                   = 3,
 };
 
 // Enum FortniteUI.EPurchaseReturnStep
@@ -2120,13 +1213,13 @@ enum class EPurchaseReturnStep : uint8
 	EPurchaseReturnStep_MAX                  = 3,
 };
 
-// Enum FortniteUI.ECalloutNavigationDirection
+// Enum FortniteUI.EQuestMapScreenMode
 // NumValues: 0x0003
-enum class ECalloutNavigationDirection : uint8
+enum class EQuestMapScreenMode : uint8
 {
-	Previous                                 = 0,
-	Next                                     = 1,
-	ECalloutNavigationDirection_MAX          = 2,
+	MainCampaign                             = 0,
+	Event                                    = 1,
+	EQuestMapScreenMode_MAX                  = 2,
 };
 
 // Enum FortniteUI.ERedeemCodeFailureReason
@@ -2152,41 +1245,6 @@ enum class EFortRewardItemType : uint8
 	EFortRewardItemType_MAX                  = 4,
 };
 
-// Enum FortniteUI.EFortServerBrowserAction
-// NumValues: 0x0005
-enum class EFortServerBrowserAction : uint8
-{
-	BattleLabServerCreate                    = 0,
-	PlaygroundServerCreate                   = 1,
-	CreativeServerCreate                     = 2,
-	Play                                     = 3,
-	EFortServerBrowserAction_MAX             = 4,
-};
-
-// Enum FortniteUI.EFortServerItemIneligibleReason
-// NumValues: 0x0008
-enum class EFortServerItemIneligibleReason : uint8
-{
-	None                                     = 0,
-	PartyTooBig                              = 1,
-	PartyTooSmall                            = 2,
-	NotPartyLeader                           = 3,
-	MatchmakingAlready                       = 4,
-	NotSupportedByLeto                       = 5,
-	InvalidData                              = 6,
-	EFortServerItemIneligibleReason_MAX      = 7,
-};
-
-// Enum FortniteUI.EFortSettingGameVisibility
-// NumValues: 0x0004
-enum class EFortSettingGameVisibility : uint8
-{
-	None                                     = 0,
-	Campaign                                 = 1,
-	Athena                                   = 2,
-	EFortSettingGameVisibility_MAX           = 3,
-};
-
 // Enum FortniteUI.EFortShowdownPinState
 // NumValues: 0x0004
 enum class EFortShowdownPinState : uint8
@@ -2209,21 +1267,19 @@ enum class EFortEventWindowEligibility : uint8
 };
 
 // Enum FortniteUI.EFortShowdownEventState
-// NumValues: 0x000C
+// NumValues: 0x000A
 enum class EFortShowdownEventState : uint8
 {
 	Unknown                                  = 0,
 	FutureTBD                                = 1,
 	FutureScheduled                          = 2,
 	FutureNext                               = 3,
-	Live                                     = 4,
-	LiveParticipating                        = 5,
-	LiveNotParticipating                     = 6,
-	Completed                                = 7,
-	CompletedParticipated                    = 8,
-	CompletedNotPartipated                   = 9,
-	Cancelled                                = 10,
-	EFortShowdownEventState_MAX              = 11,
+	LiveParticipating                        = 4,
+	LiveNotParticipating                     = 5,
+	CompletedParticipated                    = 6,
+	CompletedNotPartipated                   = 7,
+	Cancelled                                = 8,
+	EFortShowdownEventState_MAX              = 9,
 };
 
 // Enum FortniteUI.EFortShowdownMatchType
@@ -2249,33 +1305,6 @@ enum class EFortDateTimeStyle : uint8
 	EFortDateTimeStyle_MAX                   = 5,
 };
 
-// Enum FortniteUI.ERadialOrderingMode
-// NumValues: 0x0005
-enum class ERadialOrderingMode : uint8
-{
-	CounterClockwise                         = 0,
-	Clockwise                                = 1,
-	Cardinal                                 = 2,
-	Custom                                   = 3,
-	ERadialOrderingMode_MAX                  = 4,
-};
-
-// Enum FortniteUI.ECardinalPoint
-// NumValues: 0x000A
-enum class ECardinalPoint : uint8
-{
-	E                                        = 0,
-	NE                                       = 1,
-	N                                        = 2,
-	NW                                       = 3,
-	W                                        = 4,
-	SW                                       = 5,
-	S                                        = 6,
-	SE                                       = 7,
-	None                                     = 8,
-	ECardinalPoint_MAX                       = 9,
-};
-
 // Enum FortniteUI.ESocialImportPanelType
 // NumValues: 0x0003
 enum class ESocialImportPanelType : uint8
@@ -2295,36 +1324,15 @@ enum class EFriendLinkShareButtonType : uint8
 	EFriendLinkShareButtonType_MAX           = 3,
 };
 
-// Enum FortniteUI.EListHeaderType
-// NumValues: 0x000E
-enum class EListHeaderType : uint8
-{
-	TeamMember                               = 0,
-	PartyMember                              = 1,
-	JoinableParty                            = 2,
-	PlatformOnlineFriend                     = 3,
-	McpOnlineFriend                          = 4,
-	OfflineFriend                            = 5,
-	Blocked                                  = 6,
-	VoiceChatMember                          = 7,
-	FriendInvite                             = 8,
-	SuggestedFriend                          = 9,
-	RecentPlayer                             = 10,
-	SearchResults                            = 11,
-	Invalid                                  = 12,
-	EListHeaderType_MAX                      = 13,
-};
-
 // Enum FortniteUI.EFortSquadSlottingRestrictionReason
-// NumValues: 0x0006
+// NumValues: 0x0005
 enum class EFortSquadSlottingRestrictionReason : uint8
 {
 	ItemIsInInventoryOverflow                = 0,
 	MandatorySlotWouldBeEmptied              = 1,
 	ItemIsOnActiveExpedition                 = 2,
 	HeroRequiresMissingGameplayTag           = 3,
-	HeroAlreadyEquippedInLoadout             = 4,
-	EFortSquadSlottingRestrictionReason_MAX  = 5,
+	EFortSquadSlottingRestrictionReason_MAX  = 4,
 };
 
 // Enum FortniteUI.EPauseType
@@ -2358,23 +1366,16 @@ enum class EFortStoreTransition : uint8
 	EFortStoreTransition_MAX                 = 1,
 };
 
-// Enum FortniteUI.ESubgameTileType
-// NumValues: 0x0004
-enum class ESubgameTileType : uint8
+// Enum FortniteUI.EFortSubgameSelectOption
+// NumValues: 0x0006
+enum class EFortSubgameSelectOption : uint8
 {
 	Campaign                                 = 0,
 	Athena                                   = 1,
 	Creative                                 = 2,
-	ESubgameTileType_MAX                     = 3,
-};
-
-// Enum FortniteUI.ESubgameLoadFromCMS
-// NumValues: 0x0003
-enum class ESubgameLoadFromCMS : uint8
-{
-	DoNotLoadFromCMS                         = 0,
-	LoadImageFromCMS                         = 1,
-	ESubgameLoadFromCMS_MAX                  = 2,
+	Invalid                                  = 3,
+	Count                                    = 3,
+	EFortSubgameSelectOption_MAX             = 4,
 };
 
 // Enum FortniteUI.EFortUISurvivorSquadMatchType
@@ -2422,17 +1423,6 @@ enum class EFortTouchControlRegion : uint8
 	EFortTouchControlRegion_MAX              = 4,
 };
 
-// Enum FortniteUI.ETournmentPosterViolatorState
-// NumValues: 0x0005
-enum class ETournmentPosterViolatorState : uint8
-{
-	Hidden                                   = 0,
-	Live                                     = 1,
-	Countdown                                = 2,
-	Info                                     = 3,
-	ETournmentPosterViolatorState_MAX        = 4,
-};
-
 // Enum FortniteUI.EFortNamedBundle
 // NumValues: 0x000A
 enum class EFortNamedBundle : uint8
@@ -2461,16 +1451,6 @@ enum class EFortReturnToFrontendBehavior : uint8
 	EFortReturnToFrontendBehavior_MAX        = 5,
 };
 
-// Enum FortniteUI.ELetoDisplayMode
-// NumValues: 0x0004
-enum class ELetoDisplayMode : uint8
-{
-	PrimaryOnly                              = 0,
-	SingleToggle                             = 1,
-	Simultaneous                             = 2,
-	ELetoDisplayMode_MAX                     = 3,
-};
-
 // Enum FortniteUI.EFortUINavigationOp
 // NumValues: 0x000A
 enum class EFortUINavigationOp : uint8
@@ -2485,37 +1465,6 @@ enum class EFortUINavigationOp : uint8
 	NavigateToCollectionBook                 = 7,
 	None                                     = 8,
 	EFortUINavigationOp_MAX                  = 9,
-};
-
-// Enum FortniteUI.EFortLoginStage
-// NumValues: 0x000D
-enum class EFortLoginStage : uint8
-{
-	Begin                                    = 0,
-	SplashScreen                             = 1,
-	UpdateCheck                              = 2,
-	SignIn                                   = 3,
-	PostSignin                               = 4,
-	SafeZoneEditor                           = 5,
-	Benchmark                                = 6,
-	RejoinCheck                              = 7,
-	LoadingAthenaProfile                     = 8,
-	HealthWarning                            = 9,
-	WaitingForCMS                            = 10,
-	Complete                                 = 11,
-	EFortLoginStage_MAX                      = 12,
-};
-
-// Enum FortniteUI.EFortLoginDisplay
-// NumValues: 0x0006
-enum class EFortLoginDisplay : uint8
-{
-	LoginStatus                              = 0,
-	SplashScreen                             = 1,
-	SignIn                                   = 2,
-	SafeZoneEditor                           = 3,
-	HealthWarning                            = 4,
-	EFortLoginDisplay_MAX                    = 5,
 };
 
 // Enum FortniteUI.EFortLoginAccountType
@@ -2533,7 +1482,7 @@ enum class EFortLoginAccountType : uint8
 };
 
 // Enum FortniteUI.EPlayerReportReasons
-// NumValues: 0x0013
+// NumValues: 0x000E
 enum class EPlayerReportReasons : uint8
 {
 	None                                     = 0,
@@ -2549,12 +1498,7 @@ enum class EPlayerReportReasons : uint8
 	TeamingUpWithEnemies                     = 10,
 	InappropriateContent                     = 11,
 	ExploitingOrHacking                      = 12,
-	Harassment_Threatening                   = 13,
-	Harassment_Annoying                      = 14,
-	Harassment_Selling                       = 15,
-	Harassment_Verbal                        = 16,
-	Harassment_GameBehavior                  = 17,
-	EPlayerReportReasons_MAX                 = 18,
+	EPlayerReportReasons_MAX                 = 13,
 };
 
 // Enum FortniteUI.EFortComparisonType
@@ -2690,35 +1634,6 @@ enum class EUpgradeInfoImageSize : uint8
 	EUpgradeInfoImageSize_MAX                = 2,
 };
 
-// Enum FortniteUI.EChannelSpeakerStyle
-// NumValues: 0x0004
-enum class EChannelSpeakerStyle : uint8
-{
-	InGame                                   = 0,
-	InLobby                                  = 1,
-	OutOfClient                              = 2,
-	Max                                      = 3,
-};
-
-// Enum FortniteUI.EWinterQuestViewState
-// NumValues: 0x000D
-enum class EWinterQuestViewState : uint8
-{
-	Intro                                    = 0,
-	Lobby                                    = 1,
-	Preview                                  = 2,
-	PurchaseConfirmation                     = 3,
-	Scenic                                   = 4,
-	Fireplace                                = 5,
-	Stocking                                 = 6,
-	Tree                                     = 7,
-	PresentBundle                            = 8,
-	IndividualPresent                        = 9,
-	Transitioning                            = 10,
-	Invalid                                  = 11,
-	EWinterQuestViewState_MAX                = 12,
-};
-
 // Enum FortniteUI.EHeistExitCraftIconState
 // NumValues: 0x0005
 enum class EHeistExitCraftIconState : uint8
@@ -2753,63 +1668,6 @@ enum class EHeistExitCraftUIState : uint8
 	EHeistExitCraftUIState_MAX               = 4,
 };
 
-// Enum FortniteUI.ENumericalIndicatorActionType
-// NumValues: 0x0004
-enum class ENumericalIndicatorActionType : uint8
-{
-	Adding                                   = 0,
-	Removing                                 = 1,
-	Nothing                                  = 2,
-	ENumericalIndicatorActionType_MAX        = 3,
-};
-
-// Enum FortniteUI.ELinkAcrossSimpleAction
-// NumValues: 0x0004
-enum class ELinkAcrossSimpleAction : uint8
-{
-	AddToAll                                 = 0,
-	RemovedFromAll                           = 1,
-	Nothing                                  = 2,
-	ELinkAcrossSimpleAction_MAX              = 3,
-};
-
-// Enum FortniteUI.EHUDLayoutToolPopupType
-// NumValues: 0x0003
-enum class EHUDLayoutToolPopupType : uint8
-{
-	Warning                                  = 0,
-	Generic                                  = 1,
-	EHUDLayoutToolPopupType_MAX              = 2,
-};
-
-// Enum FortniteUI.EHUDLayoutToolTextInputPopupType
-// NumValues: 0x0003
-enum class EHUDLayoutToolTextInputPopupType : uint8
-{
-	Rename                                   = 0,
-	ImportLayoutID                           = 1,
-	EHUDLayoutToolTextInputPopupType_MAX     = 2,
-};
-
-// Enum FortniteUI.EHUDLayoutToolToasterType
-// NumValues: 0x0005
-enum class EHUDLayoutToolToasterType : uint8
-{
-	Success                                  = 0,
-	Failure                                  = 1,
-	LocalFailure                             = 2,
-	CloudFailure                             = 3,
-	EHUDLayoutToolToasterType_MAX            = 4,
-};
-
-// Enum FortniteUI.ELiveStreamStandaloneBlocked
-// NumValues: 0x0002
-enum class ELiveStreamStandaloneBlocked : uint8
-{
-	StreamInWorldActive                      = 0,
-	ELiveStreamStandaloneBlocked_MAX         = 1,
-};
-
 // Enum FortniteUI.EMatchmakingInputSource
 // NumValues: 0x0004
 enum class EMatchmakingInputSource : uint8
@@ -2820,17 +1678,6 @@ enum class EMatchmakingInputSource : uint8
 	EMatchmakingInputSource_MAX              = 3,
 };
 
-// Enum FortniteUI.ESpectatorLeaderboardEntryType
-// NumValues: 0x0005
-enum class ESpectatorLeaderboardEntryType : uint8
-{
-	ScoreWithEndScore                        = 0,
-	NoEndScore                               = 1,
-	Time                                     = 2,
-	Invalid                                  = 3,
-	ESpectatorLeaderboardEntryType_MAX       = 4,
-};
-
 // Enum FortniteUI.EMinigameCaptureObjectiveIconState
 // NumValues: 0x0003
 enum class EMinigameCaptureObjectiveIconState : uint8
@@ -2838,115 +1685,6 @@ enum class EMinigameCaptureObjectiveIconState : uint8
 	NotCaptured                              = 0,
 	Captured                                 = 1,
 	EMinigameCaptureObjectiveIconState_MAX   = 2,
-};
-
-// Enum FortniteUI.EFortPlayerFeedbackFlags
-// NumValues: 0x0008
-enum class EFortPlayerFeedbackFlags : uint8
-{
-	SubscreenFlow_ForceDisplayFreeText       = 0,
-	SubscreenFlow_IncludeScreenshotSubscreen = 1,
-	DoNotDisplay_SaveTheWorld                = 2,
-	DoNotDisplay_Athena                      = 3,
-	DoNotDisplay_Creative                    = 4,
-	Submit_TryDisplayBlockUser               = 5,
-	Submit_TryDisplayCommunityRulesURL       = 6,
-	EFortPlayerFeedbackFlags_MAX             = 7,
-};
-
-// Enum FortniteUI.EPlayerFeedback_EpicQAState
-// NumValues: 0x0005
-enum class EPlayerFeedback_EpicQAState : uint8
-{
-	SignInPage                               = 0,
-	SigningInFailed                          = 1,
-	SigningIn                                = 2,
-	SelectBugComponent                       = 3,
-	EPlayerFeedback_MAX                      = 4,
-};
-
-// Enum FortniteUI.EPlayerFeedbackSubmitState
-// NumValues: 0x0005
-enum class EPlayerFeedbackSubmitState : uint8
-{
-	Start                                    = 0,
-	Submitting                               = 1,
-	SubmitFailed                             = 2,
-	SubmitSucceeded                          = 3,
-	EPlayerFeedbackSubmitState_MAX           = 4,
-};
-
-// Enum FortniteUI.EFortPrioritizedWidgetInterruptedBehavior
-// NumValues: 0x0003
-enum class EFortPrioritizedWidgetInterruptedBehavior : uint8
-{
-	RemainInQueue                            = 0,
-	Drop                                     = 1,
-	EFortPrioritizedWidgetInterruptedBehavior_MAX = 2,
-};
-
-// Enum FortniteUI.EFortPrioritizedWidgetContestedBehavior
-// NumValues: 0x0003
-enum class EFortPrioritizedWidgetContestedBehavior : uint8
-{
-	QueueBehind                              = 0,
-	StompOther                               = 1,
-	EFortPrioritizedWidgetContestedBehavior_MAX = 2,
-};
-
-// Enum FortniteUI.EFortPrioritizedWidgetPriority
-// NumValues: 0x0007
-enum class EFortPrioritizedWidgetPriority : uint8
-{
-	Priority_0                               = 0,
-	Priority_1                               = 1,
-	Priority_2                               = 2,
-	Priority_3                               = 3,
-	Priority_4                               = 4,
-	Priority_5                               = 5,
-	NumberOfPrios                            = 6,
-};
-
-// Enum FortniteUI.ECooldownTrackingType
-// NumValues: 0x0004
-enum class ECooldownTrackingType : uint8
-{
-	Cue                                      = 0,
-	AbilityCooldownTags                      = 1,
-	COUNT                                    = 2,
-	ECooldownTrackingType_MAX                = 3,
-};
-
-// Enum FortniteUI.ESpatialCustomizationRoomState
-// NumValues: 0x0004
-enum class ESpatialCustomizationRoomState : uint8
-{
-	None                                     = 0,
-	CategorySelection                        = 1,
-	CustomizationSelection                   = 2,
-	ESpatialCustomizationRoomState_MAX       = 3,
-};
-
-// Enum FortniteUI.ESpatialCustomizationCategoryState
-// NumValues: 0x0007
-enum class ESpatialCustomizationCategoryState : uint8
-{
-	LockedByBattlePass                       = 0,
-	LockedByChallenge                        = 1,
-	LockedByChallengeCompletion              = 2,
-	UnlockAvailable                          = 3,
-	UnlockUsed                               = 4,
-	Max_NONE                                 = 5,
-	ESpatialCustomizationCategoryState_MAX   = 6,
-};
-
-// Enum FortniteUI.ESpatialStyleCharacterUnlockPrerequisite
-// NumValues: 0x0003
-enum class ESpatialStyleCharacterUnlockPrerequisite : uint8
-{
-	BattlepassPurchase                       = 0,
-	BattlepassLevel                          = 1,
-	ESpatialStyleCharacterUnlockPrerequisite_MAX = 2,
 };
 
 // Enum FortniteUI.ETDMScoreProgressTypes
@@ -2962,151 +1700,15 @@ enum class ETDMScoreProgressTypes : uint8
 	ETDMScoreProgressTypes_MAX               = 6,
 };
 
-// ScriptStruct FortniteUI.FortPlayerSurveyConditionsContextLegacy
-// 0x0028 (0x0028 - 0x0000)
-struct FFortPlayerSurveyConditionsContextLegacy final
+// ScriptStruct FortniteUI.AthenaWinnerInfo
+// 0x0020 (0x0020 - 0x0000)
+struct FAthenaWinnerInfo final
 {
 public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPlayer*                                Player;                                            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10[0x10];                                      // 0x0010(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortPlayerSurveyContext*               Context;                                           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BigNameWinnerName;                                 // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         WinnerNames;                                       // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFortPlayerSurveyConditionsContextLegacy;
-
-// ScriptStruct FortniteUI.PreviewRewardData
-// 0x0088 (0x0088 - 0x0000)
-struct alignas(0x08) FPreviewRewardData final
-{
-public:
-	uint8                                         Pad_0[0x88];                                       // 0x0000(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPreviewRewardData;
-
-// ScriptStruct FortniteUI.PreviewUnlockRewardData
-// 0x0030 (0x0030 - 0x0000)
-struct FPreviewUnlockRewardData final
-{
-public:
-	int32                                         Currency;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumAdditionalRewards;                              // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TotalRewards;                                      // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumCharacters;                                     // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FPreviewRewardData>             Characters;                                        // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FPreviewRewardData>             AdditionalRewards;                                 // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPreviewUnlockRewardData;
-
-// ScriptStruct FortniteUI.PreviewUnlockData
-// 0x00B0 (0x00B0 - 0x0000)
-struct FPreviewUnlockData final
-{
-public:
-	struct FPreviewUnlockRewardData               InstantRewards;                                    // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FPreviewUnlockRewardData               EarnedRewards;                                     // 0x0030(0x0030)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   ChapterNumberText;                                 // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   SeasonNumberText;                                  // 0x0078(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   SummaryText;                                       // 0x0090(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	bool                                          bPaysForSelf;                                      // 0x00A8(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPreviewUnlockData;
-
-// ScriptStruct FortniteUI.OptionsReleaseInfo
-// 0x0008 (0x0008 - 0x0000)
-struct FOptionsReleaseInfo final
-{
-public:
-	ESettingType                                  SettingType;                                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReleaseVersion;                                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOptionsReleaseInfo;
-
-// ScriptStruct FortniteUI.FortFocusedBuildingInfo
-// 0x0038 (0x0038 - 0x0000)
-struct FFortFocusedBuildingInfo final
-{
-public:
-	bool                                          bIsInteractable;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanBePlayerEdited;                                // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                IndicatorRelativeLocation;                         // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortBuildingHealthDisplayRule                HealthDisplayRule;                                 // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxHealth;                                         // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsAnyTrapAttached;                                // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsTrapAttachedFacingPlayer;                       // 0x0019(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsPreviewTrapAttached;                            // 0x001A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B[0x1];                                       // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AttachedTrapMaxDurability;                         // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortBuildingInteraction                      InteractionType;                                   // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         InteractionCost;                                   // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortResourceType                             BuildingMaterial;                                  // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   QuickEditClass;                                    // 0x002C(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsPlayerBuilt;                                    // 0x0034(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortFocusedBuildingInfo;
-
-// ScriptStruct FortniteUI.FortToastDisplayInfo
-// 0x0060 (0x0060 - 0x0000)
-struct FFortToastDisplayInfo final
-{
-public:
-	class FText                                   Header;                                            // 0x0000(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   Body;                                              // 0x0018(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              Image;                                             // 0x0030(0x0028)(BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortToastType                                Type;                                              // 0x0058(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortToastDisplayInfo;
-
-// ScriptStruct FortniteUI.StoreCallout
-// 0x0090 (0x0090 - 0x0000)
-struct FStoreCallout final
-{
-public:
-	struct FFortToastDisplayInfo                  ToastDisplayInfo;                                  // 0x0000(0x0060)(BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   ItemName;                                          // 0x0060(0x0018)(NativeAccessSpecifierPublic)
-	class FText                                   ItemSet;                                           // 0x0078(0x0018)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FStoreCallout;
-
-// ScriptStruct FortniteUI.FortHUDState
-// 0x0004 (0x0004 - 0x0000)
-struct alignas(0x04) FFortHUDState final
-{
-public:
-	uint8                                         bInBuildMode : 1;                                  // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bInCombatMode : 1;                                 // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bInEditMode : 1;                                   // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bInCreativeMode : 1;                               // 0x0000(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bInBattleLabMode : 1;                              // 0x0000(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bIsParachuteOpen : 1;                              // 0x0000(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bIsFreeFalling : 1;                                // 0x0000(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bInLockedBus : 1;                                  // 0x0000(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bInUnlockedBus : 1;                                // 0x0001(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOnTargeting : 1;                                  // 0x0001(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOnUsingScopeTargeting : 1;                        // 0x0001(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOnCanTarget : 1;                                  // 0x0001(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOnCanUseScopeTargeting : 1;                       // 0x0001(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOnCanUseSecondaryAbility : 1;                     // 0x0001(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bCanOpenChute : 1;                                 // 0x0001(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bCrouching : 1;                                    // 0x0001(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bDBNO : 1;                                         // 0x0002(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bIsControllingRCPawn : 1;                          // 0x0002(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bIsInVehicle : 1;                                  // 0x0002(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bIsDrivingVehicle : 1;                             // 0x0002(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bCanSwapSeats : 1;                                 // 0x0002(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bIsCarryingDBNO : 1;                               // 0x0002(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bIsCarryingHeldObject : 1;                         // 0x0002(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bIsZiplining : 1;                                  // 0x0002(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bIsCreativeFlying : 1;                             // 0x0003(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-DUMPER7_ASSERTS_FFortHUDState;
+DUMPER7_ASSERTS_FAthenaWinnerInfo;
 
 // ScriptStruct FortniteUI.FortTabButtonLabelInfo
 // 0x00A0 (0x00A0 - 0x0000)
@@ -3117,59 +1719,6 @@ public:
 	struct FSlateBrush                            IconBrush;                                         // 0x0018(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortTabButtonLabelInfo;
-
-// ScriptStruct FortniteUI.GlyphUpdateTransition
-// 0x000C (0x000C - 0x0000)
-struct FGlyphUpdateTransition final
-{
-public:
-	int32                                         Count;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinTimeOffset;                                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTimeOffset;                                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FGlyphUpdateTransition;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionBase
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FFortPlayerSurveyCMSDataConditionBase
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionBase;
-
-// ScriptStruct FortniteUI.FortSimpleWidgetAnimation
-// 0x0070 (0x0070 - 0x0000)
-struct FFortSimpleWidgetAnimation final
-{
-public:
-	class FName                                   TargetName;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveVector*                           Translation;                                       // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveVector*                           Scale;                                             // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            Alpha;                                             // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bResetOnFinish;                                    // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldAnimateTranslation;                         // 0x0021(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldAnimateScale;                               // 0x0022(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldAnimateAlpha;                               // 0x0023(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x14];                                      // 0x0024(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWorld*                                 World;                                             // 0x0038(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_40[0x30];                                      // 0x0040(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortSimpleWidgetAnimation;
-
-// ScriptStruct FortniteUI.FortAttributeModifierDisplayData
-// 0x00C0 (0x00C0 - 0x0000)
-struct FFortAttributeModifierDisplayData final
-{
-public:
-	struct FGameplayAttribute                     Attribute;                                         // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGameplayModOp                                ModifierType;                                      // 0x003C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagRequirements               SourceTags;                                        // 0x0040(0x0040)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FGameplayTagRequirements               TargetTags;                                        // 0x0080(0x0040)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortAttributeModifierDisplayData;
 
 // ScriptStruct FortniteUI.FortTabListRegistrationInfo
 // 0x00C8 (0x00C8 - 0x0000)
@@ -3187,36 +1736,341 @@ public:
 };
 DUMPER7_ASSERTS_FFortTabListRegistrationInfo;
 
-// ScriptStruct FortniteUI.FortItemFilterDefinition
-// 0x0060 (0x0060 - 0x0000)
-struct alignas(0x10) FFortItemFilterDefinition final
+// ScriptStruct FortniteUI.RadialOptionData
+// 0x00C8 (0x00C8 - 0x0000)
+struct FRadialOptionData
 {
 public:
-	TArray<EFortItemType>                         ItemTypeFilters;                                   // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10[0x40];                                      // 0x0010(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bRequiresItemDetails;                              // 0x0050(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0xF];                                       // 0x0051(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FText                                   Label;                                             // 0x0000(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            Brush;                                             // 0x0018(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              SoftIcon;                                          // 0x00A0(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFortItemFilterDefinition;
+DUMPER7_ASSERTS_FRadialOptionData;
 
-// ScriptStruct FortniteUI.FortItemSorterDefinition
+// ScriptStruct FortniteUI.ItemCategoryOptionData
+// 0x0018 (0x00E0 - 0x00C8)
+struct FItemCategoryOptionData final : public FRadialOptionData
+{
+public:
+	class FString                                 TemplatePrefix;                                    // 0x00C8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBuildingAttachmentType                       BuildingAttachmentType;                            // 0x00D8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FItemCategoryOptionData;
+
+// ScriptStruct FortniteUI.FortDailyRewardsItemData
+// 0x0010 (0x0010 - 0x0000)
+struct FFortDailyRewardsItemData final
+{
+public:
+	class UFortItem*                              RewardItem;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RewardDay;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsCurrentReward;                                   // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsClaimed;                                         // 0x000D(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FFortDailyRewardsItemData;
+
+// ScriptStruct FortniteUI.FortItemTransformFilterTabLabelInfo
+// 0x00C0 (0x00C0 - 0x0000)
+struct FFortItemTransformFilterTabLabelInfo final
+{
+public:
+	class FName                                   FilterTabNameId;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortTabButtonLabelInfo                TabButtonLabelInfo;                                // 0x0008(0x00A0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<EFortInventoryFilter>                  ItemFilters;                                       // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	EFortItemType                                 ItemType;                                          // 0x00B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FFortItemTransformFilterTabLabelInfo;
+
+// ScriptStruct FortniteUI.FortFocusedBuildingInfo
 // 0x0050 (0x0050 - 0x0000)
-struct alignas(0x10) FFortItemSorterDefinition final
+struct FFortFocusedBuildingInfo final
 {
 public:
-	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bIsInteractable;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanBePlayerEdited;                                // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                IndicatorRelativeLocation;                         // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFortBuildingHealthDisplayRule                HealthDisplayRule;                                 // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxHealth;                                         // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsAnyTrapAttached;                                // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsTrapAttachedFacingPlayer;                       // 0x0019(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPreviewTrapAttached;                            // 0x001A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B[0x1];                                       // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AttachedTrapMaxDurability;                         // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CurrentLevel;                                      // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFortBuildingInteraction                      InteractionType;                                   // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         InteractionCost;                                   // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UpgradeBonus;                                      // 0x002C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFortResourceType                             BuildingMaterial;                                  // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsHostile;                                        // 0x0031(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ContextualText;                                    // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFortItemSorterDefinition;
+DUMPER7_ASSERTS_FFortFocusedBuildingInfo;
 
-// ScriptStruct FortniteUI.FortHeroLoadoutHeroPickerTabConfiguration
-// 0x00B0 (0x00B0 - 0x0000)
-struct FFortHeroLoadoutHeroPickerTabConfiguration final
+// ScriptStruct FortniteUI.FortItemListFilter
+// 0x0018 (0x0018 - 0x0000)
+struct FFortItemListFilter final
 {
 public:
-	struct FFortItemFilterDefinition              Filter;                                            // 0x0000(0x0060)(NativeAccessSpecifierPublic)
-	struct FFortItemSorterDefinition              Sorter;                                            // 0x0060(0x0050)(NativeAccessSpecifierPublic)
+	class FString                                 SearchText;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFortInventoryFilter                          FilterType;                                        // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInStorageVault;                                   // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIncludeVaultOverflow;                             // 0x0012(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FFortHeroLoadoutHeroPickerTabConfiguration;
+DUMPER7_ASSERTS_FFortItemListFilter;
+
+// ScriptStruct FortniteUI.CreativeAdData
+// 0x0068 (0x0068 - 0x0000)
+struct FCreativeAdData final
+{
+public:
+	class FString                                 Header;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Sub_Header;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Description;                                       // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Creator_Name;                                      // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Island_Code;                                       // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFortCreativeAdType                           Ad_Type;                                           // 0x0050(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFortCreativeAdColorPreset                    Ad_Color_Preset;                                   // 0x0051(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Image;                                             // 0x0058(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCreativeAdData;
+
+// ScriptStruct FortniteUI.CreativeAdJsonObject
+// 0x0010 (0x0010 - 0x0000)
+struct FCreativeAdJsonObject final
+{
+public:
+	TArray<struct FCreativeAdData>                Ads;                                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCreativeAdJsonObject;
+
+// ScriptStruct FortniteUI.CreativeAdSource
+// 0x0030 (0x0030 - 0x0000)
+struct FCreativeAdSource final
+{
+public:
+	class FString                                 _title;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 __locale;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCreativeAdJsonObject                  Ad_Info;                                           // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCreativeAdSource;
+
+// ScriptStruct FortniteUI.FortAttributeModifierDisplayData
+// 0x00A8 (0x00A8 - 0x0000)
+struct FFortAttributeModifierDisplayData final
+{
+public:
+	struct FGameplayAttribute                     Attribute;                                         // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameplayModOp                                ModifierType;                                      // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagRequirements               SourceTags;                                        // 0x0028(0x0040)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FGameplayTagRequirements               TargetTags;                                        // 0x0068(0x0040)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortAttributeModifierDisplayData;
+
+// ScriptStruct FortniteUI.BackgroundColors
+// 0x0030 (0x0030 - 0x0000)
+struct FBackgroundColors final
+{
+public:
+	struct FLinearColor                           Color_0;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Color_1;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           GridColor;                                         // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FBackgroundColors;
+
+// ScriptStruct FortniteUI.DiscoTeamScoreData
+// 0x0020 (0x0020 - 0x0000)
+struct FDiscoTeamScoreData final
+{
+public:
+	class FText                                   CurrScoreText;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	float                                         CurrScorePercent;                                  // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CurrScore;                                         // 0x001C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDiscoTeamScoreData;
+
+// ScriptStruct FortniteUI.GiftingErrorText
+// 0x0038 (0x0038 - 0x0000)
+struct FGiftingErrorText final
+{
+public:
+	EOfferPurchaseError                           GiftingError;                                      // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ErrorTitle;                                        // 0x0008(0x0018)(Edit, NativeAccessSpecifierPublic)
+	class FText                                   ErrorDesc;                                         // 0x0020(0x0018)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGiftingErrorText;
+
+// ScriptStruct FortniteUI.FortHUDState
+// 0x0014 (0x0014 - 0x0000)
+struct FFortHUDState final
+{
+public:
+	bool                                          bInBuildMode;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInCombatMode;                                     // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInEditMode;                                       // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInCreativeMode;                                   // 0x0003(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsParachuteOpen;                                  // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsFreeFalling;                                    // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInLockedBus;                                      // 0x0006(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInUnlockedBus;                                    // 0x0007(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnTargeting;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnUsingScopeTargeting;                            // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnCanTarget;                                      // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnCanUseScopeTargeting;                           // 0x000B(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnCanUseSecondaryAbility;                         // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanOpenChute;                                     // 0x000D(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCrouching;                                        // 0x000E(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDBNO;                                             // 0x000F(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsControllingRCPawn;                              // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInVehicle;                                      // 0x0011(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsDrivingVehicle;                                 // 0x0012(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanSwapSeats;                                     // 0x0013(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortHUDState;
+
+// ScriptStruct FortniteUI.OptionsReleaseInfo
+// 0x0008 (0x0008 - 0x0000)
+struct FOptionsReleaseInfo final
+{
+public:
+	ESettingType                                  SettingType;                                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReleaseVersion;                                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOptionsReleaseInfo;
+
+// ScriptStruct FortniteUI.FortItemCard_PowerRatingBlock_Configuration
+// 0x0050 (0x0050 - 0x0000)
+struct FFortItemCard_PowerRatingBlock_Configuration
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMargin                                CustomRatingInternalPadding;                       // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector2D                              CustomRatingIconSize;                              // 0x0018(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   CustomRatingTextStyle;                             // 0x0020(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ComparisonIndicatorSize;                           // 0x0048(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortItemCard_PowerRatingBlock_Configuration;
+
+// ScriptStruct FortniteUI.FortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration
+// 0x0160 (0x01B0 - 0x0050)
+struct FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration final : public FFortItemCard_PowerRatingBlock_Configuration
+{
+public:
+	struct FSlateBrush                            PersonnelPowerRatingIconBrush;                     // 0x0050(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   PersonnelPowerRatingTextStyle;                     // 0x00D8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            SchematicPowerRatingIconBrush;                     // 0x0100(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   SchematicPowerRatingTextStyle;                     // 0x0188(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration;
+
+// ScriptStruct FortniteUI.FortItemCard_TierMeter_Configuration
+// 0x000C (0x000C - 0x0000)
+struct FFortItemCard_TierMeter_Configuration final
+{
+public:
+	struct FVector2D                              PipSize;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InterPipPadding;                                   // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortItemCard_TierMeter_Configuration;
+
+// ScriptStruct FortniteUI.FortItemCard_NameplateBorder_Configuration
+// 0x0098 (0x0098 - 0x0000)
+struct FFortItemCard_NameplateBorder_Configuration final
+{
+public:
+	struct FMargin                                Padding;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            Brush;                                             // 0x0010(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortItemCard_NameplateBorder_Configuration;
+
+// ScriptStruct FortniteUI.FortItemCard_DefenderWeaponTypeIcon_Configuration
+// 0x0008 (0x0008 - 0x0000)
+struct FFortItemCard_DefenderWeaponTypeIcon_Configuration final
+{
+public:
+	struct FVector2D                              IconConstraints;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortItemCard_DefenderWeaponTypeIcon_Configuration;
+
+// ScriptStruct FortniteUI.FortItemCard_DetailAreaBorder_Configuration
+// 0x0014 (0x0014 - 0x0000)
+struct FFortItemCard_DetailAreaBorder_Configuration final
+{
+public:
+	float                                         MinimumHeight;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                Padding;                                           // 0x0004(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortItemCard_DetailAreaBorder_Configuration;
+
+// ScriptStruct FortniteUI.FortItemCard_LevelMeter_Configuration
+// 0x0014 (0x0014 - 0x0000)
+struct FFortItemCard_LevelMeter_Configuration final
+{
+public:
+	float                                         MeterThickness;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                MeterPadding;                                      // 0x0004(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortItemCard_LevelMeter_Configuration;
+
+// ScriptStruct FortniteUI.FortItemCard_L_PersonnelAndSchematics_Configuration
+// 0x02C8 (0x02C8 - 0x0000)
+struct FFortItemCard_L_PersonnelAndSchematics_Configuration final
+{
+public:
+	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration PowerRatingBlock;     // 0x0010(0x01B0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FVector2D                              BookmarkImageSize;                                 // 0x01C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_NameplateBorder_Configuration Nameplate;                                    // 0x01C8(0x0098)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FVector2D                              ClassIconSize;                                     // 0x0260(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              LeadSurvivorTypeIconSize;                          // 0x0268(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              FirstIconSlotSize;                                 // 0x0270(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PaddingBetweenIconSlots;                           // 0x0278(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              SecondIconSlotSize;                                // 0x027C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_DefenderWeaponTypeIcon_Configuration DefenderWeaponTypeIcon;                // 0x0284(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_DetailAreaBorder_Configuration DetailAreaBorder;                            // 0x028C(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_LevelMeter_Configuration LevelMeter;                                        // 0x02A0(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         TierMeterLeftPadding;                              // 0x02B4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x02B8(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C4[0x4];                                      // 0x02C4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FFortItemCard_L_PersonnelAndSchematics_Configuration;
+
+// ScriptStruct FortniteUI.FortAthenaItemManagementInventoryFilterTabLabelInfo
+// 0x0028 (0x00C8 - 0x00A0)
+struct FFortAthenaItemManagementInventoryFilterTabLabelInfo final : public FFortTabButtonLabelInfo
+{
+public:
+	class FName                                   FilterTabNameId;                                   // 0x00A0(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowEmptySlotItem;                               // 0x00A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   EmptyFilterDisplay;                                // 0x00B0(0x0018)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortAthenaItemManagementInventoryFilterTabLabelInfo;
+
+// ScriptStruct FortniteUI.FortReceivedItemLootInfo
+// 0x0028 (0x0028 - 0x0000)
+struct FFortReceivedItemLootInfo final
+{
+public:
+	class UFortItemDefinition*                    ItemDef;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Quantity;                                          // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 TemplateId;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFortItem*                              GeneratedItemInstance;                             // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortReceivedItemLootInfo;
 
 // ScriptStruct FortniteUI.FortUIStatStyle
 // 0x00C0 (0x00C0 - 0x0000)
@@ -3232,90 +2086,20 @@ public:
 };
 DUMPER7_ASSERTS_FFortUIStatStyle;
 
-// ScriptStruct FortniteUI.FortItemListFilter
-// 0x0018 (0x0018 - 0x0000)
-struct FFortItemListFilter final
+// ScriptStruct FortniteUI.FortErrorInfo
+// 0x0070 (0x0070 - 0x0000)
+struct FFortErrorInfo final
 {
 public:
-	class FString                                 SearchText;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortInventoryFilter                          FilterType;                                        // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInStorageVault;                                   // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIncludeVaultOverflow;                             // 0x0012(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FText                                   Operation;                                         // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   ErrorMessage;                                      // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FString                                 ErrorCode;                                         // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFortErrorSeverity                            ErrorSeverity;                                     // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ContinueButtonText;                                // 0x0048(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	uint8                                         Pad_60[0x10];                                      // 0x0060(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FFortItemListFilter;
-
-// ScriptStruct FortniteUI.ItemDefinitionChangedStruct
-// 0x0010 (0x0010 - 0x0000)
-struct FItemDefinitionChangedStruct final
-{
-public:
-	TMulticastInlineDelegate<void(class UFortItem* Item, class UFortItemDefinition* ItemDefinition)> ChangeDelegate; // 0x0000(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FItemDefinitionChangedStruct;
-
-// ScriptStruct FortniteUI.CardPackOffer
-// 0x0078 (0x0078 - 0x0000)
-struct FCardPackOffer final
-{
-public:
-	class FText                                   Title;                                             // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   Description;                                       // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	int32                                         MtxPrice;                                          // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECatalogSaleType                              SaleType;                                          // 0x0034(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   SaleText;                                          // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	int32                                         Price;                                             // 0x0050(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RegularPrice;                                      // 0x0054(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFortAccountItemDefinition*             CurrencyType;                                      // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         QuantityRemaining;                                 // 0x0060(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTimedOffer;                                       // 0x0064(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_65[0x13];                                      // 0x0065(0x0013)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FCardPackOffer;
-
-// ScriptStruct FortniteUI.KoreanCafeData
-// 0x0038 (0x0038 - 0x0000)
-struct FKoreanCafeData final
-{
-public:
-	struct FGameplayTag                           Korean_Cafe;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Korean_Cafe_Header;                                // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   Korean_Cafe_Description;                           // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKoreanCafeData;
-
-// ScriptStruct FortniteUI.KoreanCafeJsonObject
-// 0x0010 (0x0010 - 0x0000)
-struct FKoreanCafeJsonObject final
-{
-public:
-	TArray<struct FKoreanCafeData>                Cafes;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKoreanCafeJsonObject;
-
-// ScriptStruct FortniteUI.KoreanCafeSource
-// 0x0030 (0x0030 - 0x0000)
-struct FKoreanCafeSource final
-{
-public:
-	class FString                                 _title;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 __locale;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKoreanCafeJsonObject                  Cafe_Info;                                         // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKoreanCafeSource;
-
-// ScriptStruct FortniteUI.FortAthenaItemManagementInventoryFilterTabLabelInfo
-// 0x0028 (0x00C8 - 0x00A0)
-struct FFortAthenaItemManagementInventoryFilterTabLabelInfo final : public FFortTabButtonLabelInfo
-{
-public:
-	class FName                                   FilterTabNameId;                                   // 0x00A0(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowEmptySlotItem;                               // 0x00A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   EmptyFilterDisplay;                                // 0x00B0(0x0018)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortAthenaItemManagementInventoryFilterTabLabelInfo;
+DUMPER7_ASSERTS_FFortErrorInfo;
 
 // ScriptStruct FortniteUI.FortLastMissionInfo
 // 0x0048 (0x0048 - 0x0000)
@@ -3327,17 +2111,6 @@ public:
 	class FText                                   Difficulty;                                        // 0x0030(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortLastMissionInfo;
-
-// ScriptStruct FortniteUI.HUDMessageCanvasSlotPlacementData
-// 0x0020 (0x0020 - 0x0000)
-struct FHUDMessageCanvasSlotPlacementData final
-{
-public:
-	struct FAnchors                               Anchors;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector2D                              position;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Alignment;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FHUDMessageCanvasSlotPlacementData;
 
 // ScriptStruct FortniteUI.FortBackendVersion
 // 0x0098 (0x0098 - 0x0000)
@@ -3358,206 +2131,82 @@ public:
 };
 DUMPER7_ASSERTS_FFortBackendVersion;
 
-// ScriptStruct FortniteUI.FortItemCard_DefenderWeaponTypeIcon_Configuration
-// 0x0008 (0x0008 - 0x0000)
-struct FFortItemCard_DefenderWeaponTypeIcon_Configuration final
+// ScriptStruct FortniteUI.AthenaNewsData
+// 0x0070 (0x0070 - 0x0000)
+struct FAthenaNewsData final
 {
 public:
-	struct FVector2D                              IconConstraints;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Title;                                             // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   Body;                                              // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FString                                 Image;                                             // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 _type;                                             // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   AdSpace;                                           // 0x0050(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	bool                                          SpotLight;                                         // 0x0068(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Hidden;                                            // 0x0069(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6A[0x2];                                       // 0x006A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	ESubGameFilter                                SubGameFilter;                                     // 0x006C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFortItemCard_DefenderWeaponTypeIcon_Configuration;
+DUMPER7_ASSERTS_FAthenaNewsData;
 
-// ScriptStruct FortniteUI.MutatorAddedWidgets
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x04) FMutatorAddedWidgets final
+// ScriptStruct FortniteUI.AthenaNewsPlatformData
+// 0x0090 (0x0090 - 0x0000)
+struct FAthenaNewsPlatformData final
 {
 public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 Platform;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAthenaNewsData                        MESSAGE;                                           // 0x0010(0x0070)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FString                                 _type;                                             // 0x0080(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMutatorAddedWidgets;
+DUMPER7_ASSERTS_FAthenaNewsPlatformData;
 
 // ScriptStruct FortniteUI.FortUIFeatureStruct
 // 0x0018 (0x0018 - 0x0000)
-struct FFortUIFeatureStruct final
+struct alignas(0x08) FFortUIFeatureStruct final
 {
 public:
 	EFortUIFeatureState                           CurrentState;                                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFortUIFeatureState                           ForcedState;                                       // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFortUIFeatureStateReason                     ForcedStateReason;                                 // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(EFortUIFeature ChangedFeature, EFortUIFeatureState NewState, EFortUIFeatureStateReason StateReason)> ChangeDelegate; // 0x0008(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	UMulticastDelegateProperty_                   ChangeDelegate;                                    // 0x0008(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortUIFeatureStruct;
 
-// ScriptStruct FortniteUI.AthenaStyleMissionData
-// 0x0028 (0x0028 - 0x0000)
-struct FAthenaStyleMissionData final
-{
-public:
-	class UFortVariantTokenType*                  StyleDefinition;                                   // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UFortVariantTokenType*>          OptionalAdditionalStyleDefinitions;                // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFortQuestItemDefinition*               Mission;                                           // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimationAsset*                        OverrideIdleAnimation;                             // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAthenaStyleMissionData;
-
-// ScriptStruct FortniteUI.AthenaSpatialStyleCharacterData
+// ScriptStruct FortniteUI.FortItemCard_StackCountBlock_Configuration
 // 0x0030 (0x0030 - 0x0000)
-struct FAthenaSpatialStyleCharacterData final
+struct FFortItemCard_StackCountBlock_Configuration final
 {
 public:
-	class UAthenaCharacterItemDefinition*         Character;                                         // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FAthenaStyleMissionData>        Styles;                                            // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<ESpatialStyleCharacterUnlockPrerequisite> CharacterPrerequisites;                         // 0x0018(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimationAsset*                        CharacterIdleAnimation;                            // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowShorthandStackCount;                          // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   TextStyle;                                         // 0x0008(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAthenaSpatialStyleCharacterData;
+DUMPER7_ASSERTS_FFortItemCard_StackCountBlock_Configuration;
 
-// ScriptStruct FortniteUI.FortModalContainerSizeEntry
-// 0x001C (0x001C - 0x0000)
-struct FFortModalContainerSizeEntry final
-{
-public:
-	float                                         AbsoluteWidth;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TopPercent;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MiddlePercent;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BottomPercent;                                     // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         VerticalPadding;                                   // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HorizontalPadding;                                 // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ContentPadding;                                    // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortModalContainerSizeEntry;
-
-// ScriptStruct FortniteUI.PrimaryContentSetup
-// 0x0001 (0x0001 - 0x0000)
-struct FPrimaryContentSetup final
-{
-public:
-	bool                                          ShowBottomBar;                                     // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPrimaryContentSetup;
-
-// ScriptStruct FortniteUI.FortReceivedItemLootInfo
-// 0x00C8 (0x00C8 - 0x0000)
-struct FFortReceivedItemLootInfo final
-{
-public:
-	struct FFortItemHeaderInformation             HeaderInformation;                                 // 0x0000(0x0098)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class UFortItem*                              GeneratedItemInstance;                             // 0x0098(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFortItemDefinition*                    ItemDef;                                           // 0x00A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TemplateId;                                        // 0x00A8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Quantity;                                          // 0x00B8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_BC[0xC];                                       // 0x00BC(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortReceivedItemLootInfo;
-
-// ScriptStruct FortniteUI.AthenaPlaylistLeaderboardData
-// 0x0068 (0x0068 - 0x0000)
-struct FAthenaPlaylistLeaderboardData final
-{
-public:
-	class FName                                   StatId;                                            // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   StatDisplayName;                                   // 0x0008(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   TabDisplayName;                                    // 0x0020(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   RowDisplayName;                                    // 0x0038(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FString                                 BaseGameplayTag;                                   // 0x0050(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsGlobal;                                         // 0x0060(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAthenaPlaylistLeaderboardData;
-
-// ScriptStruct FortniteUI.AthenaLeaderboardData
-// 0x0038 (0x0040 - 0x0008)
-struct FAthenaLeaderboardData final : public FTableRowBase
-{
-public:
-	EFortAthenaPlaylist                           Playlist;                                          // 0x0008(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   PlaylistName;                                      // 0x000C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECommonInputType                              InputType;                                         // 0x0014(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAthenaPlaylistLeaderboardData> Stats;                                             // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExcludePlaylistNames;                             // 0x0028(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         PlaylistNames;                                     // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAthenaLeaderboardData;
-
-// ScriptStruct FortniteUI.AthenaVariantFilterTabInfo
-// 0x0068 (0x0068 - 0x0000)
-struct FAthenaVariantFilterTabInfo final
-{
-public:
-	TSoftObjectPtr<class UObject>                 Icon;                                              // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Label;                                             // 0x0028(0x0018)(Edit, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  IncludedVariantChannels;                           // 0x0040(0x0020)(Edit, NativeAccessSpecifierPublic)
-	float                                         ZoomLevel;                                         // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableScrollBox;                                 // 0x0064(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAthenaVariantFilterTabInfo;
-
-// ScriptStruct FortniteUI.AthenaVariantFilterTabInfo_Primary
-// 0x0078 (0x0078 - 0x0000)
-struct FAthenaVariantFilterTabInfo_Primary final
-{
-public:
-	struct FAthenaVariantFilterTabInfo            PrimaryTab;                                        // 0x0000(0x0068)(Edit, NativeAccessSpecifierPublic)
-	TArray<struct FAthenaVariantFilterTabInfo>    SubTabs;                                           // 0x0068(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAthenaVariantFilterTabInfo_Primary;
-
-// ScriptStruct FortniteUI.AthenaVariantFilterSet
-// 0x0010 (0x0010 - 0x0000)
-struct FAthenaVariantFilterSet final
-{
-public:
-	TArray<struct FAthenaVariantFilterTabInfo_Primary> PrimaryTabs;                                  // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAthenaVariantFilterSet;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyQuestionBase
+// ScriptStruct FortniteUI.FortItemCard_XS_TransformKey_Configuration
 // 0x0048 (0x0048 - 0x0000)
-struct alignas(0x08) FFortPlayerSurveyQuestionBase
+struct FFortItemCard_XS_TransformKey_Configuration final
 {
 public:
-	uint8                                         Pad_0[0x48];                                       // 0x0000(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x0010(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FVector2D                              TransformKeyIconSize;                              // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFortPlayerSurveyQuestionBase;
+DUMPER7_ASSERTS_FFortItemCard_XS_TransformKey_Configuration;
 
-// ScriptStruct FortniteUI.FortPlayerSurveyQuestionYesNo
-// 0x0000 (0x0048 - 0x0048)
-struct FFortPlayerSurveyQuestionYesNo final : public FFortPlayerSurveyQuestionBase
-{
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyQuestionYesNo;
-
-// ScriptStruct FortniteUI.AthenaWinnerInfo
-// 0x0020 (0x0020 - 0x0000)
-struct FAthenaWinnerInfo final
+// ScriptStruct FortniteUI.StatGroupData
+// 0x00B0 (0x00B0 - 0x0000)
+struct FStatGroupData final
 {
 public:
-	class FString                                 BigNameWinnerName;                                 // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         WinnerNames;                                       // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   GroupName;                                         // 0x0000(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            Group;                                             // 0x0018(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x00A0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ChartValue;                                        // 0x00A4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ChartOrigionalValue;                               // 0x00A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAthenaWinnerInfo;
-
-// ScriptStruct FortniteUI.AthenaCustomizationParams
-// 0x0048 (0x0048 - 0x0000)
-struct FAthenaCustomizationParams final
-{
-public:
-	EAthenaCustomizationCategory                  Category;                                          // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CategorySubslotIndex;                              // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   CategoryDisplayName;                               // 0x0008(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   ItemDisplayTypeName;                               // 0x0020(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          bAllowUnownedItems;                                // 0x0038(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOneItemPerSlot;                                   // 0x0039(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstance*                      OverrideSlotImage;                                 // 0x0040(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAthenaCustomizationParams;
+DUMPER7_ASSERTS_FStatGroupData;
 
 // ScriptStruct FortniteUI.FortUIPerk
 // 0x0098 (0x0098 - 0x0000)
@@ -3576,115 +2225,39 @@ public:
 };
 DUMPER7_ASSERTS_FFortUIPerk;
 
-// ScriptStruct FortniteUI.FortItemCard_LevelMeter_Configuration
-// 0x0014 (0x0014 - 0x0000)
-struct FFortItemCard_LevelMeter_Configuration final
+// ScriptStruct FortniteUI.ShowdownTournamentData
+// 0x01C8 (0x01C8 - 0x0000)
+struct FShowdownTournamentData final
 {
 public:
-	float                                         MeterThickness;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMargin                                MeterPadding;                                      // 0x0004(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FString                                 Tournament_Display_Id;                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Title_Line_1;                                      // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   Title_Line_2;                                      // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   Schedule_Info;                                     // 0x0040(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FString                                 Poster_Front_Image;                                // 0x0058(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Poster_Back_Image;                                 // 0x0068(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Flavor_Description;                                // 0x0078(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   Details_Description;                               // 0x0090(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   Short_Format_Title;                                // 0x00A8(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   Long_Format_Title;                                 // 0x00C0(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	int32                                         Pin_Score_Requirement;                             // 0x00D8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Pin_Earned_Text;                                   // 0x00E0(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Base_Color;                                        // 0x00F8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Primary_Color;                                     // 0x0108(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Secondary_Color;                                   // 0x0118(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Highlight_Color;                                   // 0x0128(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Title_Color;                                       // 0x0138(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Shadow_Color;                                      // 0x0148(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Background_Left_Color;                             // 0x0158(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Background_Right_Color;                            // 0x0168(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Background_Text_Color;                             // 0x0178(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Poster_Fade_Color;                                 // 0x0188(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Playlist_Tile_Image;                               // 0x0198(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Loading_Screen_Image;                              // 0x01A8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Style_Info_Id;                                     // 0x01B8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFortItemCard_LevelMeter_Configuration;
-
-// ScriptStruct FortniteUI.FortItemCard_PowerRatingBlock_Configuration
-// 0x00F8 (0x00F8 - 0x0000)
-struct FFortItemCard_PowerRatingBlock_Configuration
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            MoonbeamBorderBrush;                               // 0x0008(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FMargin                                MoonbeamBorderExteriorPadding;                     // 0x0090(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMargin                                MoonbeamBorderPadding;                             // 0x00A0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMargin                                CustomRatingInternalPadding;                       // 0x00B0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector2D                              CustomRatingIconSize;                              // 0x00C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   CustomRatingTextStyle;                             // 0x00C8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ComparisonIndicatorSize;                           // 0x00F0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortItemCard_PowerRatingBlock_Configuration;
-
-// ScriptStruct FortniteUI.FortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration
-// 0x0160 (0x0258 - 0x00F8)
-struct FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration final : public FFortItemCard_PowerRatingBlock_Configuration
-{
-public:
-	struct FSlateBrush                            PersonnelPowerRatingIconBrush;                     // 0x00F8(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   PersonnelPowerRatingTextStyle;                     // 0x0180(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            SchematicPowerRatingIconBrush;                     // 0x01A8(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   SchematicPowerRatingTextStyle;                     // 0x0230(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration;
-
-// ScriptStruct FortniteUI.FortItemCard_DetailAreaBorder_Configuration
-// 0x0014 (0x0014 - 0x0000)
-struct FFortItemCard_DetailAreaBorder_Configuration final
-{
-public:
-	float                                         MinimumHeight;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMargin                                Padding;                                           // 0x0004(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortItemCard_DetailAreaBorder_Configuration;
-
-// ScriptStruct FortniteUI.FortItemCard_NameplateBorder_Configuration
-// 0x0098 (0x0098 - 0x0000)
-struct FFortItemCard_NameplateBorder_Configuration final
-{
-public:
-	struct FMargin                                Padding;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            Brush;                                             // 0x0010(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortItemCard_NameplateBorder_Configuration;
-
-// ScriptStruct FortniteUI.FortItemCard_TierMeter_Configuration
-// 0x000C (0x000C - 0x0000)
-struct FFortItemCard_TierMeter_Configuration final
-{
-public:
-	struct FVector2D                              PipSize;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InterPipPadding;                                   // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortItemCard_TierMeter_Configuration;
-
-// ScriptStruct FortniteUI.FortItemCard_S_PersonnelAndSchematics_Configuration
-// 0x0370 (0x0370 - 0x0000)
-struct FFortItemCard_S_PersonnelAndSchematics_Configuration final
-{
-public:
-	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration PowerRatingBlock;     // 0x0010(0x0258)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FVector2D                              BookmarkImageSize;                                 // 0x0268(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_NameplateBorder_Configuration Nameplate;                                    // 0x0270(0x0098)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FVector2D                              ClassIconSize;                                     // 0x0308(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              LeadSurvivorTypeIconSize;                          // 0x0310(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              FirstIconSlotSize;                                 // 0x0318(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PaddingBetweenIconSlots;                           // 0x0320(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              SecondIconSlotSize;                                // 0x0324(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_DefenderWeaponTypeIcon_Configuration DefenderWeaponTypeIcon;                // 0x032C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_DetailAreaBorder_Configuration DetailAreaBorder;                            // 0x0334(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_LevelMeter_Configuration LevelMeter;                                        // 0x0348(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         TierMeterLeftPadding;                              // 0x035C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x0360(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_36C[0x4];                                      // 0x036C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortItemCard_S_PersonnelAndSchematics_Configuration;
-
-// ScriptStruct FortniteUI.PlaylistFilter
-// 0x0018 (0x0018 - 0x0000)
-struct FPlaylistFilter
-{
-public:
-	class UDataTable*                             PlaylistsData;                                     // 0x0000(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPlaylistFilter;
-
-// ScriptStruct FortniteUI.LeaderboardFilter
-// 0x0008 (0x0020 - 0x0018)
-struct FLeaderboardFilter final : public FPlaylistFilter
-{
-public:
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FLeaderboardFilter;
+DUMPER7_ASSERTS_FShowdownTournamentData;
 
 // ScriptStruct FortniteUI.FortStateStyle
 // 0x0350 (0x0350 - 0x0000)
@@ -3696,20 +2269,6 @@ public:
 	struct FLinearColor                           SecondaryColor;                                    // 0x0340(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortStateStyle;
-
-// ScriptStruct FortniteUI.StatGroupData
-// 0x00B0 (0x00B0 - 0x0000)
-struct FStatGroupData final
-{
-public:
-	class FText                                   GroupName;                                         // 0x0000(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            Group;                                             // 0x0018(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x00A0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ChartValue;                                        // 0x00A4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ChartOrigionalValue;                               // 0x00A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FStatGroupData;
 
 // ScriptStruct FortniteUI.UINavigationData
 // 0x0030 (0x0030 - 0x0000)
@@ -3735,685 +2294,64 @@ public:
 };
 DUMPER7_ASSERTS_FGridSortKey;
 
-// ScriptStruct FortniteUI.AthenaChallengeListVisualOptions
-// 0x000C (0x000C - 0x0000)
-struct FAthenaChallengeListVisualOptions final
-{
-public:
-	bool                                          bHideHeaders;                                      // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHideCompletionRewards;                            // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHideQuestRewards;                                 // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseCompactActionInfo;                             // 0x0003(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHideLockedQuests;                                 // 0x0004(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHideCompletedQuests;                              // 0x0005(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowOnlyCurentBundleLevelChallenges;              // 0x0006(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSortCompletedToEnd;                               // 0x0007(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PreviewBundleLevel;                                // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAthenaChallengeListVisualOptions;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionGroupReference
-// 0x0008 (0x0010 - 0x0008)
-struct FFortPlayerSurveyCMSDataConditionGroupReference final : public FFortPlayerSurveyCMSDataConditionBase
-{
-public:
-	class FName                                   ID;                                                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionGroupReference;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyAnswerWidgetDataTableEntry
-// 0x0058 (0x0058 - 0x0000)
-struct FFortPlayerSurveyAnswerWidgetDataTableEntry final
-{
-public:
-	TMap<EFortPlayerSurveyQuestionPresentationStyle, TSubclassOf<class UFortPlayerSurveyAnswerWidgetBase>> WidgetClassMap; // 0x0000(0x0050)(Edit, UObjectWrapper, NativeAccessSpecifierPublic)
-	TSubclassOf<class UFortPlayerSurveyAnswerWidgetBase> FallbackWidgetClass;                        // 0x0050(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyAnswerWidgetDataTableEntry;
-
-// ScriptStruct FortniteUI.FortItemManagementInventoryFilterTabLabelInfo
-// 0x0008 (0x00A8 - 0x00A0)
-struct FFortItemManagementInventoryFilterTabLabelInfo final : public FFortTabButtonLabelInfo
-{
-public:
-	class FName                                   FilterTabNameId;                                   // 0x00A0(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortItemManagementInventoryFilterTabLabelInfo;
-
-// ScriptStruct FortniteUI.HUDMessageOverlaySlotPlacementData
-// 0x0014 (0x0014 - 0x0000)
-struct FHUDMessageOverlaySlotPlacementData final
-{
-public:
-	struct FMargin                                Padding;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	EHorizontalAlignment                          HorizontalAlignment;                               // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EVerticalAlignment                            VerticalAlignment;                                 // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FHUDMessageOverlaySlotPlacementData;
-
-// ScriptStruct FortniteUI.FortDisplayAttribute
-// 0x0088 (0x0088 - 0x0000)
-struct FFortDisplayAttribute final
-{
-public:
-	struct FGameplayAttribute                     Attribute;                                         // 0x0000(0x0038)(BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Label;                                             // 0x0038(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   Value;                                             // 0x0050(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   HoverText;                                         // 0x0068(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	float                                         NumericValue;                                      // 0x0080(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortStatValueDisplayType                     DisplayType;                                       // 0x0084(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortBuffState                                BuffState;                                         // 0x0085(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortClampState                               ClampState;                                        // 0x0086(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortComparisonType                           ComparisonType;                                    // 0x0087(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortDisplayAttribute;
-
-// ScriptStruct FortniteUI.FortSettingsFilterState
-// 0x03B8 (0x03B8 - 0x0000)
-struct FFortSettingsFilterState final
-{
-public:
-	bool                                          bIncludeDisabled;                                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIncludeHidden;                                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIncludeResetable;                                 // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIncludeNestedPages;                               // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x394];                                      // 0x0004(0x0394)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UFortSetting*>                   SettingRootList;                                   // 0x0398(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UFortSetting*>                   SettingWhiteList;                                  // 0x03A8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FFortSettingsFilterState;
-
-// ScriptStruct FortniteUI.FortItemCard_StackCountBlock_Configuration
-// 0x0030 (0x0030 - 0x0000)
-struct FFortItemCard_StackCountBlock_Configuration final
-{
-public:
-	bool                                          bShowShorthandStackCount;                          // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   TextStyle;                                         // 0x0008(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortItemCard_StackCountBlock_Configuration;
-
-// ScriptStruct FortniteUI.FortItemCard_L_TransformKey_Configuration
-// 0x0048 (0x0048 - 0x0000)
-struct FFortItemCard_L_TransformKey_Configuration final
-{
-public:
-	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x0010(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FVector2D                              TransformKeyIconSize;                              // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortItemCard_L_TransformKey_Configuration;
-
-// ScriptStruct FortniteUI.AthenaReplayBrowserRowData
-// 0x0040 (0x0040 - 0x0000)
-struct FAthenaReplayBrowserRowData final
-{
-public:
-	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDateTime                              Date;                                              // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Length;                                            // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Rank;                                              // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumPlayers;                                        // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Eliminations;                                      // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAthenaReplayBrowserRowData;
-
-// ScriptStruct FortniteUI.FortSimpleWidgetAnimations
+// ScriptStruct FortniteUI.KoreanCafeData
 // 0x0038 (0x0038 - 0x0000)
-struct FFortSimpleWidgetAnimations final
+struct FKoreanCafeData final
 {
 public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsEnabled;                                        // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFortSimpleWidgetAnimation>     Targets;                                           // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName Name)> OnAnimationsFinished;                           // 0x0020(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           Korean_Cafe;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Korean_Cafe_Header;                                // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   Korean_Cafe_Description;                           // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFortSimpleWidgetAnimations;
+DUMPER7_ASSERTS_FKoreanCafeData;
 
-// ScriptStruct FortniteUI.AthenaNewsData
-// 0x0070 (0x0070 - 0x0000)
-struct FAthenaNewsData final
+// ScriptStruct FortniteUI.KoreanCafeJsonObject
+// 0x0010 (0x0010 - 0x0000)
+struct FKoreanCafeJsonObject final
 {
 public:
-	class FText                                   Title;                                             // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   Body;                                              // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FString                                 Image;                                             // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 _type;                                             // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   AdSpace;                                           // 0x0050(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	bool                                          SpotLight;                                         // 0x0068(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Hidden;                                            // 0x0069(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6A[0x2];                                       // 0x006A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	ESubGameFilter                                SubGameFilter;                                     // 0x006C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FKoreanCafeData>                Cafes;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAthenaNewsData;
+DUMPER7_ASSERTS_FKoreanCafeJsonObject;
 
-// ScriptStruct FortniteUI.AthenaNewsPlatformData
-// 0x0090 (0x0090 - 0x0000)
-struct FAthenaNewsPlatformData final
+// ScriptStruct FortniteUI.KoreanCafeSource
+// 0x0030 (0x0030 - 0x0000)
+struct FKoreanCafeSource final
 {
 public:
-	class FString                                 Platform;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAthenaNewsData                        Message;                                           // 0x0010(0x0070)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FString                                 _type;                                             // 0x0080(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 _title;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 __locale;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKoreanCafeJsonObject                  Cafe_Info;                                         // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAthenaNewsPlatformData;
+DUMPER7_ASSERTS_FKoreanCafeSource;
+
+// ScriptStruct FortniteUI.AthenaNews
+// 0x0028 (0x0028 - 0x0000)
+struct alignas(0x08) FAthenaNews final
+{
+public:
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAthenaNews;
 
 // ScriptStruct FortniteUI.SquadSlotSortTypes
 // 0x0010 (0x0010 - 0x0000)
 struct FSquadSlotSortTypes final
 {
 public:
-	TArray<ESquadSlotSortType>                    SortTypes;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<ESquadSlotSortType>                    SortTypes;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FSquadSlotSortTypes;
 
-// ScriptStruct FortniteUI.FortItemCard_PowerRatingBlock_ItemInstance_Configuration
-// 0x00B0 (0x01A8 - 0x00F8)
-struct FFortItemCard_PowerRatingBlock_ItemInstance_Configuration final : public FFortItemCard_PowerRatingBlock_Configuration
-{
-public:
-	struct FSlateBrush                            PowerRatingIconBrush;                              // 0x00F8(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   PowerRatingTextStyle;                              // 0x0180(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortItemCard_PowerRatingBlock_ItemInstance_Configuration;
-
-// ScriptStruct FortniteUI.AthenaRewardTracker
-// 0x0014 (0x0014 - 0x0000)
-struct alignas(0x04) FAthenaRewardTracker final
-{
-public:
-	uint8                                         Pad_0[0x14];                                       // 0x0000(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAthenaRewardTracker;
-
-// ScriptStruct FortniteUI.AthenaCatabaConfiguration
-// 0x0060 (0x0060 - 0x0000)
-struct FAthenaCatabaConfiguration final
-{
-public:
-	TArray<class FName>                           LimitedTimeStorefrontNames;                        // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   SectionWidgetClass;                                // 0x0010(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSoftClassPtr<class UClass>                   CarouselWidgetClass;                               // 0x0038(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FAthenaCatabaConfiguration;
-
-// ScriptStruct FortniteUI.FortItemCard_XXS_ItemInstance_Configuration
-// 0x0030 (0x0030 - 0x0000)
-struct FFortItemCard_XXS_ItemInstance_Configuration final
-{
-public:
-	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x0000(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortItemCard_XXS_ItemInstance_Configuration;
-
-// ScriptStruct FortniteUI.FortCatabaSectionData
-// 0x0038 (0x0038 - 0x0000)
-struct alignas(0x08) FFortCatabaSectionData final
-{
-public:
-	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortCatabaSectionData;
-
-// ScriptStruct FortniteUI.TimerDisplayData
-// 0x0038 (0x0038 - 0x0000)
-struct FTimerDisplayData final
-{
-public:
-	struct FLinearColor                           BrushColor;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   TimeRemainingDisplayText;                          // 0x0010(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FLinearColor                           TextColor;                                         // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTimerDisplayData;
-
-// ScriptStruct FortniteUI.FortHeroNamesData
-// 0x0030 (0x0038 - 0x0008)
-struct FFortHeroNamesData final : public FTableRowBase
-{
-public:
-	class FString                                 FirstName;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 NickName;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LastName;                                          // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortHeroNamesData;
-
-// ScriptStruct FortniteUI.GlyphAllUpdateTransitions
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x04) FGlyphAllUpdateTransitions final
-{
-public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FGlyphAllUpdateTransitions;
-
-// ScriptStruct FortniteUI.ShowdownTournamentData
-// 0x01F8 (0x01F8 - 0x0000)
-struct FShowdownTournamentData final
-{
-public:
-	class FString                                 Tournament_Display_Id;                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Title_Line_1;                                      // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   Title_Line_2;                                      // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   Schedule_Info;                                     // 0x0040(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FString                                 Poster_Front_Image;                                // 0x0058(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Poster_Back_Image;                                 // 0x0068(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Flavor_Description;                                // 0x0078(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   Details_Description;                               // 0x0090(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   Short_Format_Title;                                // 0x00A8(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   Long_Format_Title;                                 // 0x00C0(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   Background_Title;                                  // 0x00D8(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	int32                                         Pin_Score_Requirement;                             // 0x00F0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Pin_Earned_Text;                                   // 0x00F8(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Base_Color;                                        // 0x0110(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Primary_Color;                                     // 0x0120(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Secondary_Color;                                   // 0x0130(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Highlight_Color;                                   // 0x0140(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Title_Color;                                       // 0x0150(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Shadow_Color;                                      // 0x0160(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Background_Left_Color;                             // 0x0170(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Background_Right_Color;                            // 0x0180(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Background_Text_Color;                             // 0x0190(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Poster_Fade_Color;                                 // 0x01A0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Playlist_Tile_Image;                               // 0x01B0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Loading_Screen_Image;                              // 0x01C0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Style_Info_Id;                                     // 0x01D0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Alert_Text;                                        // 0x01E0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortTournamentAlertType                      AlertType;                                         // 0x01F0(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F1[0x7];                                      // 0x01F1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FShowdownTournamentData;
-
-// ScriptStruct FortniteUI.DetailClassEntry
-// 0x0010 (0x0010 - 0x0000)
-struct FDetailClassEntry final
-{
-public:
-	struct FGameplayTag                           IdentifierTag;                                     // 0x0000(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UAthenaChallengeSetBaseDetails> DetailsWidgetClass;                            // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDetailClassEntry;
-
-// ScriptStruct FortniteUI.AthenaItemShopSectionDisplayData
-// 0x0068 (0x0068 - 0x0000)
-struct FAthenaItemShopSectionDisplayData final
-{
-public:
-	TArray<class FName>                           StorefrontNames;                                   // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   SectionDisplayName;                                // 0x0010(0x0018)(Edit, NativeAccessSpecifierPublic)
-	bool                                          bSortOffersByOwnership;                            // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowIneligibleOffers;                             // 0x0029(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowIneligibleOffersIfGiftable;                   // 0x002A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSplitByPrice;                                     // 0x002B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowTimerIcon;                                    // 0x002C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableToastNotification;                          // 0x002D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           SectionTag;                                        // 0x0030(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortBangType                                 BangType;                                          // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   SectionWidgetClass;                                // 0x0040(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FAthenaItemShopSectionDisplayData;
-
-// ScriptStruct FortniteUI.AthenaItemShopReloadMtxInfo
-// 0x00B8 (0x00B8 - 0x0000)
-struct FAthenaItemShopReloadMtxInfo final
-{
-public:
-	TArray<class FName>                           StaticStorefrontNames;                             // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FName>                           DynamicStorefrontNames;                            // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   IncrementalStorefrontName;                         // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DynamicOtherOptionOfferId;                         // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxMtxQuantityToShowDynamicReloadMtx;              // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   StaticReloadMtxScreenClass;                        // 0x0040(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSoftClassPtr<class UClass>                   DynamicReloadMtxScreenClass;                       // 0x0068(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSoftClassPtr<class UClass>                   ReloadMtxIntroModalPopupClass;                     // 0x0090(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FAthenaItemShopReloadMtxInfo;
-
-// ScriptStruct FortniteUI.ShowdownTournamentJsonObject
-// 0x0010 (0x0010 - 0x0000)
-struct FShowdownTournamentJsonObject final
-{
-public:
-	TArray<struct FShowdownTournamentData>        Tournaments;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FShowdownTournamentJsonObject;
-
-// ScriptStruct FortniteUI.ShowdownTournamentSource
-// 0x0030 (0x0030 - 0x0000)
-struct FShowdownTournamentSource final
-{
-public:
-	struct FShowdownTournamentJsonObject          Tournament_Info;                                   // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FString                                 _title;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 _locale;                                           // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FShowdownTournamentSource;
-
-// ScriptStruct FortniteUI.ItemShopCurrencyDislayData
-// 0x0010 (0x0010 - 0x0000)
-struct FItemShopCurrencyDislayData final
-{
-public:
-	EStoreCurrencyType                            CurrencyType;                                      // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UFortStoreFrontOfferWidgetBase> OfferTileClass;                                // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FItemShopCurrencyDislayData;
-
-// ScriptStruct FortniteUI.FortItemCard_L_PersonnelAndSchematics_Configuration
-// 0x0370 (0x0370 - 0x0000)
-struct FFortItemCard_L_PersonnelAndSchematics_Configuration final
-{
-public:
-	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration PowerRatingBlock;     // 0x0010(0x0258)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FVector2D                              BookmarkImageSize;                                 // 0x0268(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_NameplateBorder_Configuration Nameplate;                                    // 0x0270(0x0098)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FVector2D                              ClassIconSize;                                     // 0x0308(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              LeadSurvivorTypeIconSize;                          // 0x0310(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              FirstIconSlotSize;                                 // 0x0318(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PaddingBetweenIconSlots;                           // 0x0320(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              SecondIconSlotSize;                                // 0x0324(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_DefenderWeaponTypeIcon_Configuration DefenderWeaponTypeIcon;                // 0x032C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_DetailAreaBorder_Configuration DetailAreaBorder;                            // 0x0334(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_LevelMeter_Configuration LevelMeter;                                        // 0x0348(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         TierMeterLeftPadding;                              // 0x035C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x0360(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_36C[0x4];                                      // 0x036C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortItemCard_L_PersonnelAndSchematics_Configuration;
-
-// ScriptStruct FortniteUI.LevelEffectsData
-// 0x0050 (0x0050 - 0x0000)
-struct FLevelEffectsData final
-{
-public:
-	int32                                         MinPlayerLevel;                                    // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ContentColor;                                      // 0x0004(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           OutlineColor;                                      // 0x0014(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UObject>                 FlameDisplayObject;                                // 0x0028(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FLevelEffectsData;
-
-// ScriptStruct FortniteUI.SelectedChallengesData
-// 0x0020 (0x0020 - 0x0000)
-struct alignas(0x08) FSelectedChallengesData final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bIsCompleted;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsLocked;                                         // 0x0011(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasIconOverride;                                  // 0x0012(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Progress;                                          // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumObjectivesCompleted;                            // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumObjectives;                                     // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSelectedChallengesData;
-
-// ScriptStruct FortniteUI.AthenaMapScreenContainerTabInfo
-// 0x0068 (0x0068 - 0x0000)
-struct FAthenaMapScreenContainerTabInfo final
-{
-public:
-	class FText                                   TabTitle;                                          // 0x0000(0x0018)(Edit, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UObject>                 TabIcon;                                           // 0x0018(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   TabClass;                                          // 0x0040(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAthenaMapScreenContainerTabInfo;
-
-// ScriptStruct FortniteUI.FortItemCard_DurabilityMeter_Configuration
-// 0x0014 (0x0014 - 0x0000)
-struct FFortItemCard_DurabilityMeter_Configuration final
-{
-public:
-	float                                         MeterThickness;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMargin                                MeterPadding;                                      // 0x0004(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortItemCard_DurabilityMeter_Configuration;
-
-// ScriptStruct FortniteUI.FortItemCard_S_ItemInstance_Configuration
-// 0x0248 (0x0248 - 0x0000)
-struct FFortItemCard_S_ItemInstance_Configuration final
-{
-public:
-	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMargin                                PowerRatingBlockPadding;                           // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_PowerRatingBlock_ItemInstance_Configuration PowerRatingBlock;               // 0x0020(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FVector2D                              BookmarkImageSize;                                 // 0x01C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x01D0(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FMargin                                TraitBoxPadding;                                   // 0x0200(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector2D                              FirstTraitSize;                                    // 0x0210(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMargin                                TierMeterPadding;                                  // 0x0218(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x0228(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_DurabilityMeter_Configuration DurabilityMeter;                              // 0x0234(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortItemCard_S_ItemInstance_Configuration;
-
-// ScriptStruct FortniteUI.FortResurrectionUIData
-// 0x0003 (0x0003 - 0x0000)
-struct FFortResurrectionUIData final
-{
-public:
-	bool                                          bResurrectionChipAvailable;                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bResurrectionChipPickedUp;                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bResurrectionChipRebooting;                        // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortResurrectionUIData;
-
-// ScriptStruct FortniteUI.AthenaTeamDisplayInfo
-// 0x0088 (0x0088 - 0x0000)
-struct FAthenaTeamDisplayInfo final
-{
-public:
-	TSoftObjectPtr<class UObject>                 Icon;                                              // 0x0000(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UObject>                 Ribbon;                                            // 0x0028(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Name;                                              // 0x0050(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FLinearColor                           TextColor;                                         // 0x0068(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           PedestalColor;                                     // 0x0078(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAthenaTeamDisplayInfo;
-
-// ScriptStruct FortniteUI.SceneTransitionOptions
-// 0x0001 (0x0001 - 0x0000)
-struct FSceneTransitionOptions final
-{
-public:
-	ESceneTransitionType                          TRANSITION;                                        // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSceneTransitionOptions;
-
-// ScriptStruct FortniteUI.MarkerLargeIndicatorType
-// 0x0010 (0x0010 - 0x0000)
-struct FMarkerLargeIndicatorType final
-{
-public:
-	class UMaterialInterface*                     MarkerMaterial;                                    // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ImageSize;                                         // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMarkerLargeIndicatorType;
-
-// ScriptStruct FortniteUI.AthenaTeamCountSlotData
-// 0x0038 (0x0038 - 0x0000)
-struct FAthenaTeamCountSlotData final
-{
-public:
-	class FText                                   TeamNameText;                                      // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   TeamCountText;                                     // 0x0018(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          bIsMyTeam;                                         // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAthenaTeamCountSlotData;
-
-// ScriptStruct FortniteUI.FortItemCard_XL_ItemInstance_Configuration
-// 0x0258 (0x0258 - 0x0000)
-struct FFortItemCard_XL_ItemInstance_Configuration final
-{
-public:
-	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMargin                                PowerRatingBlockPadding;                           // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_PowerRatingBlock_ItemInstance_Configuration PowerRatingBlock;               // 0x0020(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FVector2D                              BookmarkImageSize;                                 // 0x01C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x01D0(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FMargin                                TraitBoxPadding;                                   // 0x0200(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector2D                              FirstTraitSize;                                    // 0x0210(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PaddingBetweenTraitIcons;                          // 0x0218(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              SecondTraitSize;                                   // 0x021C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMargin                                TierMeterPadding;                                  // 0x0224(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x0234(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_DurabilityMeter_Configuration DurabilityMeter;                              // 0x0240(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_254[0x4];                                      // 0x0254(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortItemCard_XL_ItemInstance_Configuration;
-
-// ScriptStruct FortniteUI.FortTopBarTabButtonInfo
-// 0x00E8 (0x00E8 - 0x0000)
-struct FFortTopBarTabButtonInfo final
-{
-public:
-	class FName                                   TabId;                                             // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CalendarEventName;                                 // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   DisplayName;                                       // 0x0018(0x0018)(Edit, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            IconBrush;                                         // 0x0030(0x0088)(Edit, NativeAccessSpecifierPublic)
-	EFortUIFeature                                LinkedUIFeature;                                   // 0x00B8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortBangType                                 BangType;                                          // 0x00B9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceImage;                                       // 0x00BA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrimaryPlayerOnly;                                // 0x00BB(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInteractAnalytic;                                 // 0x00BC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   OverrideTabWidget;                                 // 0x00C0(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortTopBarTabButtonInfo;
-
-// ScriptStruct FortniteUI.FortItemCard_M_ItemInstance_Configuration
-// 0x0258 (0x0258 - 0x0000)
-struct FFortItemCard_M_ItemInstance_Configuration final
-{
-public:
-	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMargin                                PowerRatingBlockPadding;                           // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_PowerRatingBlock_ItemInstance_Configuration PowerRatingBlock;               // 0x0020(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FVector2D                              BookmarkImageSize;                                 // 0x01C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x01D0(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FMargin                                TraitBoxPadding;                                   // 0x0200(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector2D                              FirstTraitSize;                                    // 0x0210(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PaddingBetweenTraitIcons;                          // 0x0218(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              SecondTraitSize;                                   // 0x021C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMargin                                TierMeterPadding;                                  // 0x0224(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x0234(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_DurabilityMeter_Configuration DurabilityMeter;                              // 0x0240(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_254[0x4];                                      // 0x0254(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortItemCard_M_ItemInstance_Configuration;
-
-// ScriptStruct FortniteUI.IconPicker
+// ScriptStruct FortniteUI.LeaderboardFilter
 // 0x0028 (0x0028 - 0x0000)
-struct FIconPicker final
+struct FLeaderboardFilter final
 {
 public:
-	struct FGameplayTagContainer                  Tags;                                              // 0x0000(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	class UPaperSprite*                           Sprite;                                            // 0x0020(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataTable*                             LeaderboardDisplayData;                            // 0x0000(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x20];                                       // 0x0008(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FIconPicker;
-
-// ScriptStruct FortniteUI.BarrierObjectState
-// 0x0010 (0x0010 - 0x0000)
-struct FBarrierObjectState final
-{
-public:
-	class AAthenaBarrierObjective*                ObjectiveActor;                                    // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         TeamNum;                                           // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBarrierFoodTeam                              FoodTeam;                                          // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBarrierObjectiveDamageState                  DamageState;                                       // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FBarrierObjectState;
-
-// ScriptStruct FortniteUI.BattleLabDisplayData
-// 0x0068 (0x0068 - 0x0000)
-struct FBattleLabDisplayData final
-{
-public:
-	class FText                                   TitleText;                                         // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   DescriptionText;                                   // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	EBattleLabAlertType                           AlertType;                                         // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         RewardCount;                                       // 0x0034(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RewardCountTotal;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UTexture2D>              MainIconTexture;                                   // 0x0040(0x0028)(BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FBattleLabDisplayData;
-
-// ScriptStruct FortniteUI.MeasuredText
-// 0x0028 (0x0028 - 0x0000)
-struct alignas(0x08) FMeasuredText final
-{
-public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMeasuredText;
-
-// ScriptStruct FortniteUI.TrackCategoryUI
-// 0x0050 (0x0050 - 0x0000)
-struct FTrackCategoryUI final
-{
-public:
-	struct FTrackCategory                         TrackData;                                         // 0x0000(0x0048)(NativeAccessSpecifierPublic)
-	int32                                         LastSelectedIndex;                                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTrackCategoryUI;
-
-// ScriptStruct FortniteUI.BattlePassPageData
-// 0x0008 (0x0008 - 0x0000)
-struct FBattlePassPageData final
-{
-public:
-	int32                                         StartingIndex;                                     // 0x0000(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         EndingIndex;                                       // 0x0004(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FBattlePassPageData;
-
-// ScriptStruct FortniteUI.FortRefundDescriptionsData
-// 0x0038 (0x0040 - 0x0008)
-struct FFortRefundDescriptionsData final : public FTableRowBase
-{
-public:
-	class FString                                 SearchString;                                      // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TargetReleaseVersion;                              // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   RefundDescriptionText;                             // 0x0028(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortRefundDescriptionsData;
-
-// ScriptStruct FortniteUI.BattlePassCharacterPreviewDisplayData
-// 0x0010 (0x0010 - 0x0000)
-struct FBattlePassCharacterPreviewDisplayData final
-{
-public:
-	class UAthenaCharacterItemDefinition*         CharacterItemDef;                                  // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstance*                      PreviewMaterial;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FBattlePassCharacterPreviewDisplayData;
-
-// ScriptStruct FortniteUI.FortPhoenixSeasonDisplayInfoMapRow
-// 0x0018 (0x0020 - 0x0008)
-struct FFortPhoenixSeasonDisplayInfoMapRow final : public FTableRowBase
-{
-public:
-	class FString                                 EventFlagName;                                     // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFortPhoenixSeasonDisplayInfo*          DisplayInfo;                                       // 0x0018(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPhoenixSeasonDisplayInfoMapRow;
+DUMPER7_ASSERTS_FLeaderboardFilter;
 
 // ScriptStruct FortniteUI.AthenaBossHealthData
 // 0x0030 (0x0030 - 0x0000)
@@ -4431,167 +2369,111 @@ public:
 };
 DUMPER7_ASSERTS_FAthenaBossHealthData;
 
-// ScriptStruct FortniteUI.DynamicBackground
-// 0x0048 (0x0048 - 0x0000)
-struct FDynamicBackground final
+// ScriptStruct FortniteUI.AthenaPlaylistLeaderboardData
+// 0x0050 (0x0050 - 0x0000)
+struct FAthenaPlaylistLeaderboardData final
 {
 public:
-	class FString                                 _title;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 __locale;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDynamicBackgroudKey                          Key;                                               // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BackgroundImage;                                   // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Stage;                                             // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   StatId;                                            // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   StatDisplayName;                                   // 0x0008(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   TabDisplayName;                                    // 0x0020(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FString                                 BaseGameplayTag;                                   // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsGlobal;                                         // 0x0048(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDynamicBackground;
+DUMPER7_ASSERTS_FAthenaPlaylistLeaderboardData;
 
-// ScriptStruct FortniteUI.AthenaShopSection
-// 0x0078 (0x0078 - 0x0000)
-struct FAthenaShopSection final
+// ScriptStruct FortniteUI.AthenaLeaderboardData
+// 0x0020 (0x0028 - 0x0008)
+struct FAthenaLeaderboardData final : public FTableRowBase
 {
 public:
-	class FName                                   SectionId;                                         // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   SectionDisplayName;                                // 0x0008(0x0018)(NativeAccessSpecifierPublic)
-	bool                                          bSortOffersByOwnership;                            // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowIneligibleOffers;                             // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowIneligibleOffersIfGiftable;                   // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowTimer;                                        // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableToastNotification;                          // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         LandingPriority;                                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDynamicBackground                     SectionBackground;                                 // 0x0030(0x0048)(NativeAccessSpecifierPublic)
+	EFortAthenaPlaylist                           Playlist;                                          // 0x0008(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   PlaylistName;                                      // 0x000C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECommonInputType                              InputType;                                         // 0x0014(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAthenaPlaylistLeaderboardData> Stats;                                             // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAthenaShopSection;
+DUMPER7_ASSERTS_FAthenaLeaderboardData;
 
-// ScriptStruct FortniteUI.AthenaShopCarouselItem
-// 0x0068 (0x0068 - 0x0000)
-struct FAthenaShopCarouselItem final
+// ScriptStruct FortniteUI.CachedComponentMaterials
+// 0x0018 (0x0018 - 0x0000)
+struct FCachedComponentMaterials final
 {
 public:
-	class FText                                   PreviewTitle;                                      // 0x0000(0x0018)(NativeAccessSpecifierPublic)
-	class FText                                   FullTitle;                                         // 0x0018(0x0018)(NativeAccessSpecifierPublic)
-	class FString                                 TileImage;                                         // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 VideoString;                                       // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OfferId;                                           // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LandingPriority;                                   // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemShopNavigationAction                     Action;                                            // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHidden;                                           // 0x0065(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_66[0x2];                                       // 0x0066(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             OriginalMaterials;                                 // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAthenaShopCarouselItem;
+DUMPER7_ASSERTS_FCachedComponentMaterials;
 
-// ScriptStruct FortniteUI.AthenaNews
+// ScriptStruct FortniteUI.ShowdownTournamentJsonObject
+// 0x0010 (0x0010 - 0x0000)
+struct FShowdownTournamentJsonObject final
+{
+public:
+	TArray<struct FShowdownTournamentData>        Tournaments;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FShowdownTournamentJsonObject;
+
+// ScriptStruct FortniteUI.ShowdownTournamentSource
+// 0x0030 (0x0030 - 0x0000)
+struct FShowdownTournamentSource final
+{
+public:
+	struct FShowdownTournamentJsonObject          Tournament_Info;                                   // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FString                                 _title;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 _locale;                                           // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FShowdownTournamentSource;
+
+// ScriptStruct FortniteUI.AthenaReplayBrowserMatchStats
 // 0x0028 (0x0028 - 0x0000)
-struct alignas(0x08) FAthenaNews final
+struct FAthenaReplayBrowserMatchStats final
 {
 public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         Hits;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Headshots;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Revives;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DamageTaken;                                       // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DamagePlayers;                                     // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DamageStructures;                                  // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ChestsOpened;                                      // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Distance;                                          // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaterialsGathered;                                 // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaterialsUsed;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAthenaNews;
+DUMPER7_ASSERTS_FAthenaReplayBrowserMatchStats;
 
-// ScriptStruct FortniteUI.AthenaNewsEntry
-// 0x01F0 (0x01F0 - 0x0000)
-struct FAthenaNewsEntry final
+// ScriptStruct FortniteUI.AthenaReplayBrowserRowData
+// 0x0090 (0x0090 - 0x0000)
+struct FAthenaReplayBrowserRowData final
 {
 public:
-	EAthenaNewsEntryType                          EntryType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ID;                                                // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TabTitleOverride;                                  // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Title;                                             // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Body;                                              // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Image;                                             // 0x0048(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TileImage;                                         // 0x0058(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ButtonTextOverride;                                // 0x0068(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 AdSpace;                                           // 0x0078(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SpotLight;                                         // 0x0088(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHidden;                                           // 0x0089(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8A[0x2];                                       // 0x008A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	ESubGameFilter                                SubGameFilter;                                     // 0x008C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PlaylistId;                                        // 0x0090(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasCustomColor;                                   // 0x00A0(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FColor                                 CustomDarkColor;                                   // 0x00A4(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 CustomLightColor;                                  // 0x00A8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         SortingPriority;                                   // 0x00B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ExperimentPercent;                                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ExperimentId;                                      // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OfferId;                                           // 0x00C0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemShopNavigationAction                     OfferAction;                                       // 0x00D0(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 OfferButtonText;                                   // 0x00D8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ChallengeCategoryTag;                              // 0x00E8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 WebsiteURL;                                        // 0x00F8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 WebsiteButtonText;                                 // 0x0108(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortUIFeature                                NavigateToTabValue;                                // 0x0118(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 NavigateToTabButtonText;                           // 0x0120(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 STWUpsellButtonText;                               // 0x0130(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_140[0x30];                                     // 0x0140(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 VideoButtonText;                                   // 0x0170(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 VideoVideoString;                                  // 0x0180(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 VideoStreamingVideoID;                             // 0x0190(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 VideoFallbackVideoID;                              // 0x01A0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 VideoProdLinkID;                                   // 0x01B0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 VideoGamedevLinkID;                                // 0x01C0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          VideoAutoplay;                                     // 0x01D0(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          VideoForceAutoplay;                                // 0x01D1(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          VideoLoop;                                         // 0x01D2(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          VideoMute;                                         // 0x01D3(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          VideoFullscreen;                                   // 0x01D4(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          VideoStreamingEnabled;                             // 0x01D5(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D6[0x2];                                      // 0x01D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 VideoUID;                                          // 0x01D8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 Name;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              Date;                                              // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Version;                                           // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Size;                                              // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Mode;                                              // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Length;                                            // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Rank;                                              // 0x0034(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumPlayers;                                        // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Kills;                                             // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Views;                                             // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Assists;                                           // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Accuracy;                                          // 0x0048(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsOld;                                            // 0x004C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAthenaReplayBrowserMatchStats         MatchStats;                                        // 0x0050(0x0028)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bIsSaved;                                          // 0x0078(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsCorrupt;                                        // 0x0079(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsFeatured;                                       // 0x007A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7B[0x15];                                      // 0x007B(0x0015)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAthenaNewsEntry;
-
-// ScriptStruct FortniteUI.AthenaPlaylistEntry
-// 0x0078 (0x0078 - 0x0000)
-struct FAthenaPlaylistEntry final
-{
-public:
-	class FString                                 PlaylistName;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DisplayName;                                       // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DisplaySubName;                                    // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Description;                                       // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Violator;                                          // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Image;                                             // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ExtraImages;                                       // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CropOffset;                                        // 0x0070(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortMatchmakingTileStyle                     SpecialBorderId;                                   // 0x0074(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowRevealAnimation;                              // 0x0075(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsCMSDataHidden;                                  // 0x0076(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_77[0x1];                                       // 0x0077(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAthenaPlaylistEntry;
-
-// ScriptStruct FortniteUI.LeaderboardEntry
-// 0x0028 (0x0028 - 0x0000)
-struct FLeaderboardEntry final
-{
-public:
-	class FString                                 LeaderboardId;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LeaderboardName;                                   // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShowDetailsPanel;                                  // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FLeaderboardEntry;
-
-// ScriptStruct FortniteUI.LatestLeaderboardData
-// 0x0020 (0x0020 - 0x0000)
-struct FLatestLeaderboardData final
-{
-public:
-	class FString                                 LastModified;                                      // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FLeaderboardEntry>              Entries;                                           // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FLatestLeaderboardData;
+DUMPER7_ASSERTS_FAthenaReplayBrowserRowData;
 
 // ScriptStruct FortniteUI.ShowdownTournamentEntry
-// 0x01B0 (0x01B0 - 0x0000)
+// 0x0188 (0x0188 - 0x0000)
 struct FShowdownTournamentEntry final
 {
 public:
@@ -4605,49 +2487,146 @@ public:
 	class FString                                 DetailsDescription;                                // 0x0070(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ShortFormatTitle;                                  // 0x0080(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 LongFormatTitle;                                   // 0x0090(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 BackgroundTitle;                                   // 0x00A0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PinScoreRequirement;                               // 0x00B0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 PinEarnedText;                                     // 0x00B8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 BaseColor;                                         // 0x00C8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PrimaryColor;                                      // 0x00D8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SecondaryColor;                                    // 0x00E8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 HighlightColor;                                    // 0x00F8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TitleColor;                                        // 0x0108(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ShadowColor;                                       // 0x0118(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 BackgroundLeftColor;                               // 0x0128(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 BackgroundRightColor;                              // 0x0138(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 BackgroundTextColor;                               // 0x0148(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PosterFadeColor;                                   // 0x0158(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PlaylistTileImage;                                 // 0x0168(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LoadingScreenImage;                                // 0x0178(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 StyleInfoId;                                       // 0x0188(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 AlertText;                                         // 0x0198(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortTournamentAlertType                      AlertType;                                         // 0x01A8(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         PinScoreRequirement;                               // 0x00A0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 PinEarnedText;                                     // 0x00A8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BaseColor;                                         // 0x00B8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PrimaryColor;                                      // 0x00C8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SecondaryColor;                                    // 0x00D8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 HighlightColor;                                    // 0x00E8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TitleColor;                                        // 0x00F8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ShadowColor;                                       // 0x0108(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BackgroundLeftColor;                               // 0x0118(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BackgroundRightColor;                              // 0x0128(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BackgroundTextColor;                               // 0x0138(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PosterFadeColor;                                   // 0x0148(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PlaylistTileImage;                                 // 0x0158(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LoadingScreenImage;                                // 0x0168(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 StyleInfoId;                                       // 0x0178(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FShowdownTournamentEntry;
 
-// ScriptStruct FortniteUI.ShowdownLatestTournamentData
-// 0x0060 (0x0060 - 0x0000)
-struct FShowdownLatestTournamentData final
+// ScriptStruct FortniteUI.AthenaTeamCountSlotData
+// 0x0038 (0x0038 - 0x0000)
+struct FAthenaTeamCountSlotData final
 {
 public:
-	class FString                                 LastModified;                                      // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, struct FShowdownTournamentEntry> Entries;                                    // 0x0010(0x0050)(NativeAccessSpecifierPublic)
+	class FText                                   TeamNameText;                                      // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   TeamCountText;                                     // 0x0018(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          bIsMyTeam;                                         // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FShowdownLatestTournamentData;
+DUMPER7_ASSERTS_FAthenaTeamCountSlotData;
+
+// ScriptStruct FortniteUI.RarityArray
+// 0x0010 (0x0010 - 0x0000)
+struct FRarityArray final
+{
+public:
+	TArray<class UFortItemDefinition*>            Items;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRarityArray;
 
 // ScriptStruct FortniteUI.AthenaNewsMessages
 // 0x0030 (0x0030 - 0x0000)
 struct FAthenaNewsMessages final
 {
 public:
-	TArray<struct FAthenaNewsData>                Messages;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FAthenaNewsPlatformData>        platform_messages;                                 // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FAthenaNewsData>                messages;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FAthenaNewsPlatformData>        platform_messages;                                 // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	class FString                                 _type;                                             // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAthenaNewsMessages;
+
+// ScriptStruct FortniteUI.FortVideoInfo
+// 0x0058 (0x0058 - 0x0000)
+struct FFortVideoInfo final
+{
+public:
+	class FName                                   ID;                                                // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             PreviewImage;                                      // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMediaSource*                           VideoSource;                                       // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULocalizedOverlays*                     SubtitleOverlays;                                  // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsQuestDrivenVideo;                               // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPrimaryAssetId                        RequiredActiveQuest;                               // 0x0024(0x0010)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPrimaryAssetId                        RequiredCompletedQuest;                            // 0x0034(0x0010)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataTableRowHandle                    EventMovieQuestObjective;                          // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortVideoInfo;
+
+// ScriptStruct FortniteUI.BarrierObjectState
+// 0x0010 (0x0010 - 0x0000)
+struct FBarrierObjectState final
+{
+public:
+	class AAthenaBarrierObjective*                ObjectiveActor;                                    // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         TeamNum;                                           // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBarrierFoodTeam                              FoodTeam;                                          // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBarrierObjectiveDamageState                  DamageState;                                       // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBarrierObjectState;
+
+// ScriptStruct FortniteUI.AthenaNewsEntry
+// 0x0048 (0x0048 - 0x0000)
+struct alignas(0x08) FAthenaNewsEntry final
+{
+public:
+	uint8                                         Pad_0[0x48];                                       // 0x0000(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAthenaNewsEntry;
+
+// ScriptStruct FortniteUI.Card
+// 0x0018 (0x0018 - 0x0000)
+struct FCard final
+{
+public:
+	int32                                         QuantityReceived;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortItem*                              Item;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPauseType                                    PauseType;                                         // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FCard;
+
+// ScriptStruct FortniteUI.AthenaLatestPlaylistData
+// 0x0080 (0x0080 - 0x0000)
+struct alignas(0x08) FAthenaLatestPlaylistData final
+{
+public:
+	uint8                                         Pad_0[0x80];                                       // 0x0000(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAthenaLatestPlaylistData;
+
+// ScriptStruct FortniteUI.AthenaPlaylistEntry
+// 0x0078 (0x0078 - 0x0000)
+struct FAthenaPlaylistEntry final
+{
+public:
+	class FString                                 PlaylistName;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DisplayName;                                       // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DisplaySubName;                                    // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Description;                                       // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Violator;                                          // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Image;                                             // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ExtraImages;                                       // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         CropOffset;                                        // 0x0070(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFortMatchmakingTileStyle                     SpecialBorderId;                                   // 0x0074(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowRevealAnimation;                              // 0x0075(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAthenaPlaylistEntry;
+
+// ScriptStruct FortniteUI.ShowdownLatestTournamentData
+// 0x0050 (0x0050 - 0x0000)
+struct alignas(0x08) FShowdownLatestTournamentData final
+{
+public:
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FShowdownLatestTournamentData;
 
 // ScriptStruct FortniteUI.AthenaNewsSource
 // 0x0050 (0x0050 - 0x0000)
@@ -4655,78 +2634,13 @@ struct FAthenaNewsSource final
 {
 public:
 	class FString                                 Header;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAthenaNewsMessages                    news;                                              // 0x0010(0x0030)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FAthenaNewsMessages                    News;                                              // 0x0010(0x0030)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	class FString                                 _locale;                                           // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAthenaNewsSource;
 
-// ScriptStruct FortniteUI.SubgameDisplayData
-// 0x0098 (0x0098 - 0x0000)
-struct FSubgameDisplayData final
-{
-public:
-	class FText                                   Title;                                             // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   Description;                                       // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   SpecialMessage;                                    // 0x0030(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   StandardMessageLine1;                              // 0x0048(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   StandardMessageLine2;                              // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FString                                 Image;                                             // 0x0078(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Color;                                             // 0x0088(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSubgameDisplayData;
-
-// ScriptStruct FortniteUI.SubgameScreenSource
-// 0x01E8 (0x01E8 - 0x0000)
-struct FSubgameScreenSource final
-{
-public:
-	class FString                                 _title;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 __locale;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSubgameDisplayData                    Creative;                                          // 0x0020(0x0098)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FSubgameDisplayData                    SaveTheWorld;                                      // 0x00B8(0x0098)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FSubgameDisplayData                    BattleRoyale;                                      // 0x0150(0x0098)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSubgameScreenSource;
-
-// ScriptStruct FortniteUI.CreativeAdData
-// 0x0068 (0x0068 - 0x0000)
-struct FCreativeAdData final
-{
-public:
-	class FString                                 Header;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Sub_Header;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Description;                                       // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Creator_Name;                                      // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Island_Code;                                       // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortCreativeAdType                           Ad_Type;                                           // 0x0050(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortCreativeAdColorPreset                    Ad_Color_Preset;                                   // 0x0051(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Image;                                             // 0x0058(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCreativeAdData;
-
-// ScriptStruct FortniteUI.CreativeAdJsonObject
-// 0x0010 (0x0010 - 0x0000)
-struct FCreativeAdJsonObject final
-{
-public:
-	TArray<struct FCreativeAdData>                Ads;                                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCreativeAdJsonObject;
-
-// ScriptStruct FortniteUI.CreativeAdSource
-// 0x0030 (0x0030 - 0x0000)
-struct FCreativeAdSource final
-{
-public:
-	class FString                                 _title;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 __locale;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FCreativeAdJsonObject                  Ad_Info;                                           // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCreativeAdSource;
-
 // ScriptStruct FortniteUI.CmsJsonMessages
-// 0x02E8 (0x02E8 - 0x0000)
+// 0x0100 (0x0100 - 0x0000)
 struct FCmsJsonMessages final
 {
 public:
@@ -4735,47 +2649,58 @@ public:
 	struct FAthenaNewsSource                      BattleRoyaleNews;                                  // 0x0020(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FShowdownTournamentSource              TournamentInformation;                             // 0x0070(0x0030)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FKoreanCafeSource                      KoreanCafe;                                        // 0x00A0(0x0030)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FSubgameScreenSource                   SubGameInfo;                                       // 0x00D0(0x01E8)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FCreativeAdSource                      CreativeAds;                                       // 0x02B8(0x0030)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FCreativeAdSource                      CreativeAds;                                       // 0x00D0(0x0030)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCmsJsonMessages;
 
-// ScriptStruct FortniteUI.DynamicBackgrounds
-// 0x0010 (0x0010 - 0x0000)
-struct FDynamicBackgrounds final
+// ScriptStruct FortniteUI.FortDailyRewardsScheduleData
+// 0x0098 (0x0098 - 0x0000)
+struct FFortDailyRewardsScheduleData final
 {
 public:
-	TArray<struct FDynamicBackground>             Backgrounds;                                       // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ScheduleTitle;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   ScheduleDescription;                               // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   ScheduleItemDescription;                           // 0x0030(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   ScheduleEpicItemDescription;                       // 0x0048(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	int32                                         WeekOffset;                                        // 0x0060(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RewardsGiven;                                      // 0x0064(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RewardsAllowed;                                    // 0x0068(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFortDailyRewardsItemData>      CalendarItems;                                     // 0x0070(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FFortDailyRewardsItemData>      HighValueItems;                                    // 0x0080(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ClaimedToday;                                      // 0x0090(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDynamicBackgrounds;
+DUMPER7_ASSERTS_FFortDailyRewardsScheduleData;
 
-// ScriptStruct FortniteUI.DynamicBackgroundsSource
-// 0x0040 (0x0040 - 0x0000)
-struct FDynamicBackgroundsSource final
+// ScriptStruct FortniteUI.FortDailyRewardsData
+// 0x0018 (0x0018 - 0x0000)
+struct FFortDailyRewardsData final
 {
 public:
-	class FString                                 _title;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 __locale;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LastModified;                                      // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDynamicBackgrounds                    Backgrounds;                                       // 0x0030(0x0010)(NativeAccessSpecifierPublic)
+	int32                                         CurrentLoginDays;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanClaim;                                         // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFortDailyRewardsScheduleData>  Schedules;                                         // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDynamicBackgroundsSource;
+DUMPER7_ASSERTS_FFortDailyRewardsData;
 
-// ScriptStruct FortniteUI.CobaltPlayerPortraitIndexInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FCobaltPlayerPortraitIndexInfo final
+// ScriptStruct FortniteUI.FortCreativeServerDisplayOption
+// 0x0018 (0x0020 - 0x0008)
+struct FFortCreativeServerDisplayOption final : public FTableRowBase
 {
 public:
-	TArray<int32>                                 PortraitIndexArray;                                // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture*                               Image;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Color;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCobaltPlayerPortraitIndexInfo;
+DUMPER7_ASSERTS_FFortCreativeServerDisplayOption;
 
 // ScriptStruct FortniteUI.SurvivalObjectiveText
 // 0x0010 (0x0010 - 0x0000)
 struct FSurvivalObjectiveText final
 {
 public:
-	TArray<class FString>                         SafezoneStateText;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         SafezoneStateText;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FSurvivalObjectiveText;
 
@@ -4808,17 +2733,6 @@ public:
 };
 DUMPER7_ASSERTS_FDiscoCaptureUIData;
 
-// ScriptStruct FortniteUI.DiscoTeamScoreData
-// 0x0020 (0x0020 - 0x0000)
-struct FDiscoTeamScoreData final
-{
-public:
-	class FText                                   CurrScoreText;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	float                                         CurrScorePercent;                                  // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CurrScore;                                         // 0x001C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDiscoTeamScoreData;
-
 // ScriptStruct FortniteUI.DiscoCaptureIconData
 // 0x0010 (0x0010 - 0x0000)
 struct FDiscoCaptureIconData final
@@ -4832,175 +2746,29 @@ public:
 };
 DUMPER7_ASSERTS_FDiscoCaptureIconData;
 
-// ScriptStruct FortniteUI.QuestRecapData
-// 0x0014 (0x0014 - 0x0000)
-struct FQuestRecapData final
+// ScriptStruct FortniteUI.CharacterRanges
+// 0x0030 (0x0030 - 0x0000)
+struct FCharacterRanges final
 {
 public:
-	TWeakObjectPtr<class UFortQuestItem>          QuestItem;                                         // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LastKnownMcpValue;                                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AchivedCount;                                      // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RequiredCount;                                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 Ranges;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 SinglePoints;                                      // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 ExcludedPoints;                                    // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FQuestRecapData;
+DUMPER7_ASSERTS_FCharacterRanges;
 
-// ScriptStruct FortniteUI.VideoConfig_Mono
-// 0x0060 (0x0060 - 0x0000)
-struct FVideoConfig_Mono final
+// ScriptStruct FortniteUI.HomebaseNodeDisplayData
+// 0x0088 (0x0090 - 0x0008)
+struct FHomebaseNodeDisplayData final : public FTableRowBase
 {
 public:
-	class UFortStreamMediaSource*                 StreamingMediaSource;                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   VideoString;                                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   StreamingVideoID;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   FallbackVideoID;                                   // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ProdLinkID;                                        // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 GamedevLinkID;                                     // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsAutoPlay;                                       // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceAutoPlay;                                    // 0x0041(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStreamingEnabled;                                 // 0x0042(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_43[0x5];                                       // 0x0043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 VideoUID;                                          // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldBeModal;                                    // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseSkipBoundaries;                                // 0x0059(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bKairosPlayer;                                     // 0x005A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHoldToSkip;                                       // 0x005B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FText                                   Title;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   Description;                                       // 0x0020(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              LargePreviewImage;                                 // 0x0038(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              SmallPreviewImage;                                 // 0x0060(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMediaSource*                           PreviewVideoMediaSource;                           // 0x0088(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVideoConfig_Mono;
-
-// ScriptStruct FortniteUI.FortAthenaTutorialHighlightInfo
-// 0x0050 (0x0050 - 0x0000)
-struct FFortAthenaTutorialHighlightInfo final
-{
-public:
-	struct FGameplayTag                           WidgetToHighlight;                                 // 0x0000(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           ItemHighlightTag;                                  // 0x0008(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMargin                                HighlightMargin;                                   // 0x0010(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   HighlightWidgetOverride;                           // 0x0020(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsLegacyHighlight;                                // 0x0048(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortAthenaTutorialHighlightInfo;
-
-// ScriptStruct FortniteUI.FortAthenaTutorialScreenInfo
-// 0x00D0 (0x00D0 - 0x0000)
-struct FFortAthenaTutorialScreenInfo final
-{
-public:
-	EFortAthenaTutorialSubstep                    Substep;                                           // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              TextPromptPosition;                                // 0x0004(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              TextPromptPosition_AthenaHUD;                      // 0x000C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAnchors                               TextPromptAnchors;                                 // 0x0014(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FAnchors                               TextPromptAnchors_AthenaHUD;                       // 0x0024(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   TextPromptText_Touch;                              // 0x0038(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class FText                                   TextPromptText_Gamepad;                            // 0x0050(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class FText                                   TextPromptText_TouchLegacy;                        // 0x0068(0x0018)(Edit, NativeAccessSpecifierPublic)
-	struct FDataTableRowHandle                    ActionWidget_DataTableRow;                         // 0x0080(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<class FName>                           KeybindWidget_NameArray;                           // 0x0090(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FName>                           KeybindWidget_GamepadNameArray;                    // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ForceSingleInputKeybind;                           // 0x00B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFortAthenaTutorialHighlightInfo> HighlightInfo;                                   // 0x00B8(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          DisplayNextButton;                                 // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          DisplayTextPromptTarget;                           // 0x00C9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortAthenaTutorialScreenExtraWidget          ExtraWidget;                                       // 0x00CA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CB[0x5];                                       // 0x00CB(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortAthenaTutorialScreenInfo;
-
-// ScriptStruct FortniteUI.FortAthenaStandaloneTutorialStepInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FFortAthenaStandaloneTutorialStepInfo final
-{
-public:
-	TArray<struct FFortAthenaTutorialScreenInfo>  StepScreenInfo;                                    // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortAthenaStandaloneTutorialStepInfo;
-
-// ScriptStruct FortniteUI.FortAthenaTutorialStandaloneStepInfo
-// 0x00D8 (0x00D8 - 0x0000)
-struct FFortAthenaTutorialStandaloneStepInfo final
-{
-public:
-	EFortAthenaTutorial_StandaloneStep            StandaloneStep;                                    // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortAthenaTutorialScreenInfo          StepScreenInfo;                                    // 0x0008(0x00D0)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortAthenaTutorialStandaloneStepInfo;
-
-// ScriptStruct FortniteUI.FortAthenaTutorialStepInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FFortAthenaTutorialStepInfo final
-{
-public:
-	EFortAthenaTutorialStep                       TutorialStep;                                      // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFortAthenaTutorialScreenInfo>  StepScreenInfo;                                    // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortAthenaTutorialStepInfo;
-
-// ScriptStruct FortniteUI.FortBattlePassVideoAnnotation
-// 0x0020 (0x0020 - 0x0000)
-struct FFortBattlePassVideoAnnotation final
-{
-public:
-	float                                         StartTime;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EndTime;                                           // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ScreenPosition;                                    // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         EntryAngle;                                        // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EntryMagnitude;                                    // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFortItemDefinition*                    RewardItemDefinition;                              // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortBattlePassVideoAnnotation;
-
-// ScriptStruct FortniteUI.VaultVariantOverrideOption
-// 0x0020 (0x0020 - 0x0000)
-struct FVaultVariantOverrideOption final
-{
-public:
-	struct FGameplayTag                           VariantChannelOverride;                            // 0x0000(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           VariantTagOverride;                                // 0x0008(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CustomDataPayload;                                 // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FVaultVariantOverrideOption;
-
-// ScriptStruct FortniteUI.ItemPreviewSettings
-// 0x0050 (0x0050 - 0x0000)
-struct FItemPreviewSettings final
-{
-public:
-	class UFortAccountItemDefinition*             ItemToView;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SubslotIndex;                                      // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  PreviewExcludedTags;                               // 0x0010(0x0020)(NativeAccessSpecifierPublic)
-	int32                                         ItemVariantPreviewIndex;                           // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasEtherealBackground;                            // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_35[0xB];                                       // 0x0035(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVaultVariantOverrideOption>    VariantOverrides;                                  // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FItemPreviewSettings;
-
-// ScriptStruct FortniteUI.FortConfirmationButtonInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FFortConfirmationButtonInfo final
-{
-public:
-	class UCommonButton*                          Button;                                            // 0x0000(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortConfirmationButtonInfo;
-
-// ScriptStruct FortniteUI.CachedIslandsGroup
-// 0x0028 (0x0028 - 0x0000)
-struct FCachedIslandsGroup final
-{
-public:
-	TArray<class UFortCreativeIslandLink*>        IslandLinks;                                       // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10[0x18];                                      // 0x0010(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FCachedIslandsGroup;
+DUMPER7_ASSERTS_FHomebaseNodeDisplayData;
 
 // ScriptStruct FortniteUI.FortCreativeItemListCategoryData
 // 0x0008 (0x0010 - 0x0008)
@@ -5019,134 +2787,20 @@ DUMPER7_ASSERTS_FFortCreativeItemListCategoryData;
 struct FItemListCategoryArray final
 {
 public:
-	TArray<struct FFortItemEntry>                 ItemList;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FFortItemEntry>                 ItemList;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	class FText                                   CategoryTitle;                                     // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FItemListCategoryArray;
 
-// ScriptStruct FortniteUI.FortWeightedObject
-// 0x0010 (0x0010 - 0x0000)
-struct FFortWeightedObject final
+// ScriptStruct FortniteUI.FortPickerTemporaryWheel
+// 0x0030 (0x0030 - 0x0000)
+struct FFortPickerTemporaryWheel final
 {
 public:
-	class UObject*                                Object;                                            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Weight;                                            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UFortItemDefinition*>            Items;                                             // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFortWeightedObject;
-
-// ScriptStruct FortniteUI.FortItemListOptionBucket
-// 0x0020 (0x0020 - 0x0000)
-struct FFortItemListOptionBucket final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ItemIndex;                                         // 0x0008(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UFortItemListOptionProxy*>       ItemOptionData;                                    // 0x0010(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortItemListOptionBucket;
-
-// ScriptStruct FortniteUI.RarityArray
-// 0x0010 (0x0010 - 0x0000)
-struct FRarityArray final
-{
-public:
-	TArray<class UFortItemDefinition*>            Items;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRarityArray;
-
-// ScriptStruct FortniteUI.BulkSanitizationTaskData
-// 0x0078 (0x0078 - 0x0000)
-struct alignas(0x08) FBulkSanitizationTaskData final
-{
-public:
-	uint8                                         Pad_0[0x78];                                       // 0x0000(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FBulkSanitizationTaskData;
-
-// ScriptStruct FortniteUI.FortCreativeServerDisplayOption
-// 0x0038 (0x0040 - 0x0008)
-struct FFortCreativeServerDisplayOption final : public FTableRowBase
-{
-public:
-	TSoftObjectPtr<class UTexture>                Image;                                             // 0x0008(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Color;                                             // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortCreativeServerDisplayOption;
-
-// ScriptStruct FortniteUI.FortDailyRewardsItemData
-// 0x0010 (0x0010 - 0x0000)
-struct FFortDailyRewardsItemData final
-{
-public:
-	class UFortItem*                              RewardItem;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RewardDay;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsCurrentReward;                                   // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsClaimed;                                         // 0x000D(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortDailyRewardsItemData;
-
-// ScriptStruct FortniteUI.FortDailyRewardsScheduleData
-// 0x0098 (0x0098 - 0x0000)
-struct FFortDailyRewardsScheduleData final
-{
-public:
-	class FText                                   ScheduleTitle;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   ScheduleDescription;                               // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   ScheduleItemDescription;                           // 0x0030(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   ScheduleEpicItemDescription;                       // 0x0048(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	int32                                         WeekOffset;                                        // 0x0060(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RewardsGiven;                                      // 0x0064(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RewardsAllowed;                                    // 0x0068(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFortDailyRewardsItemData>      CalendarItems;                                     // 0x0070(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FFortDailyRewardsItemData>      HighValueItems;                                    // 0x0080(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ClaimedToday;                                      // 0x0090(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortDailyRewardsScheduleData;
-
-// ScriptStruct FortniteUI.FortDailyRewardsData
-// 0x0018 (0x0018 - 0x0000)
-struct FFortDailyRewardsData final
-{
-public:
-	int32                                         CurrentLoginDays;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanClaim;                                         // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFortDailyRewardsScheduleData>  Schedules;                                         // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortDailyRewardsData;
-
-// ScriptStruct FortniteUI.FortPickerSubCategoryIdentifier
-// 0x0020 (0x0020 - 0x0000)
-struct FFortPickerSubCategoryIdentifier final
-{
-public:
-	struct FGameplayTag                           Tag;                                               // 0x0000(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Name;                                              // 0x0008(0x0018)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPickerSubCategoryIdentifier;
-
-// ScriptStruct FortniteUI.FortPickerCategory
-// 0x0028 (0x0028 - 0x0000)
-struct alignas(0x08) FFortPickerCategory final
-{
-public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortPickerCategory;
-
-// ScriptStruct FortniteUI.FortLeaderboardRequestIds
-// 0x0020 (0x0020 - 0x0000)
-struct alignas(0x08) FFortLeaderboardRequestIds final
-{
-public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortLeaderboardRequestIds;
+DUMPER7_ASSERTS_FFortPickerTemporaryWheel;
 
 // ScriptStruct FortniteUI.ExpeditionTabInfo
 // 0x00A8 (0x00A8 - 0x0000)
@@ -5165,30 +2819,20 @@ struct FConsumedCriteriaData final
 public:
 	float                                         PowerMod;                                          // 0x0000(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           CriteriaNames;                                     // 0x0008(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           CriteriaNames;                                     // 0x0008(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FConsumedCriteriaData;
 
-// ScriptStruct FortniteUI.ViewVaultItemsParams
-// 0x0018 (0x0018 - 0x0000)
-struct FViewVaultItemsParams final
-{
-public:
-	TArray<class UFortItemDefinition*>            ItemsToView;                                       // 0x0000(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FViewVaultItemsParams;
-
 // ScriptStruct FortniteUI.FortFrontEndFeatureStruct
 // 0x0018 (0x0018 - 0x0000)
-struct FFortFrontEndFeatureStruct final
+struct alignas(0x08) FFortFrontEndFeatureStruct final
 {
 public:
 	EFortFrontEndFeatureState                     CurrentState;                                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFortFrontEndFeatureState                     ForcedState;                                       // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFortFrontEndFeatureStateReason               ForcedStateReason;                                 // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(EFortFrontEndFeature ChangedFeature, EFortFrontEndFeatureState NewState, EFortFrontEndFeatureStateReason Reason)> ChangeDelegate; // 0x0008(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	UMulticastDelegateProperty_                   ChangeDelegate;                                    // 0x0008(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortFrontEndFeatureStruct;
 
@@ -5220,7 +2864,7 @@ public:
 DUMPER7_ASSERTS_FFortMissionRewardInfo;
 
 // ScriptStruct FortniteUI.FortMissionDetails
-// 0x0170 (0x0170 - 0x0000)
+// 0x0168 (0x0168 - 0x0000)
 struct FFortMissionDetails final
 {
 public:
@@ -5237,24 +2881,20 @@ public:
 	class FText                                   RegionThemeName;                                   // 0x0090(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class USlateBrushAsset>        RegionThemeIcon;                                   // 0x00A8(0x0028)(BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   DifficultyName;                                    // 0x00D0(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TArray<struct FFortMissionRewardInfo>         MissionRewards;                                    // 0x00E8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FFortMissionRewardInfo>         MissionRewards;                                    // 0x00E8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FTimespan                              AvailableTime;                                     // 0x00F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERatingsEnforcementType                       RatingsEnforcement;                                // 0x0100(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         RequiredBaseRating;                                // 0x0104(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RecommendedBaseRating;                             // 0x0108(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxBaseRating;                                     // 0x010C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ContentDifficultyLevel;                            // 0x0110(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsOnboarding;                                     // 0x0114(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RequiredBaseRating;                                // 0x0100(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RecommendedBaseRating;                             // 0x0104(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ContentDifficultyLevel;                            // 0x0108(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ContentAccountLevel;                               // 0x010C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LootLevel;                                         // 0x0110(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOverrideConningText;                              // 0x0114(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_115[0x3];                                      // 0x0115(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         LootLevel;                                         // 0x0118(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOverrideConningText;                              // 0x011C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11D[0x3];                                      // 0x011D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ConningOverrideText;                               // 0x0120(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FString                                 TheaterUniqueId;                                   // 0x0138(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFortCloudSaveItemDefinition*           AssociatedCloudSaveItemDefinition;                 // 0x0148(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UFortGameplayModifierItemDefinition*> GameplayModifiers;                            // 0x0150(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FText>                           Objectives;                                        // 0x0160(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ConningOverrideText;                               // 0x0118(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FString                                 TheaterUniqueId;                                   // 0x0130(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFortCloudSaveItemDefinition*           AssociatedCloudSaveItemDefinition;                 // 0x0140(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UFortGameplayModifierItemDefinition*> GameplayModifiers;                            // 0x0148(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FText>                           Objectives;                                        // 0x0158(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortMissionDetails;
 
@@ -5277,7 +2917,7 @@ struct FBuildingRequirements final
 public:
 	int32                                         RequiredAccountLevel;                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         CurrentAccountLevel;                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FAttributeRequirement>          AttributeRequirements;                             // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FAttributeRequirement>          AttributeRequirements;                             // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	int32                                         RequiredPower;                                     // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         CurrentPower;                                      // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         RequiredManufacturing;                             // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5285,43 +2925,44 @@ public:
 };
 DUMPER7_ASSERTS_FBuildingRequirements;
 
-// ScriptStruct FortniteUI.NotificationWidgetClass
-// 0x0020 (0x0020 - 0x0000)
-struct FNotificationWidgetClass final
+// ScriptStruct FortniteUI.FortItemFilterDefinition
+// 0x0050 (0x0050 - 0x0000)
+struct alignas(0x10) FFortItemFilterDefinition final
 {
 public:
-	TSubclassOf<class UFortNotificationEntry>     NotificationWidgetClass;                           // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InitialPoolSize;                                   // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanIncreasePoolSizeAtRunTime;                     // 0x000C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UFortNotificationEntry*>         WidgetPool;                                        // 0x0010(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNotificationWidgetClass;
+DUMPER7_ASSERTS_FFortItemFilterDefinition;
 
-// ScriptStruct FortniteUI.GiftingErrorText
-// 0x0038 (0x0038 - 0x0000)
-struct FGiftingErrorText final
+// ScriptStruct FortniteUI.FortItemSorterDefinition
+// 0x0040 (0x0040 - 0x0000)
+struct alignas(0x10) FFortItemSorterDefinition final
 {
 public:
-	EOfferPurchaseError                           GiftingError;                                      // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ErrorTitle;                                        // 0x0008(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class FText                                   ErrorDesc;                                         // 0x0020(0x0018)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FGiftingErrorText;
+DUMPER7_ASSERTS_FFortItemSorterDefinition;
 
-// ScriptStruct FortniteUI.FortInGamePerkDisplayData
-// 0x0010 (0x0010 - 0x0000)
-struct FFortInGamePerkDisplayData final
+// ScriptStruct FortniteUI.FortHeroLoadoutHeroPickerTabConfiguration
+// 0x0090 (0x0090 - 0x0000)
+struct FFortHeroLoadoutHeroPickerTabConfiguration final
 {
 public:
-	EFortHeroPerkDisplayType                      PerkDisplayType;                                   // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Index;                                             // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Row;                                               // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Column;                                            // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemFilterDefinition              Filter;                                            // 0x0000(0x0050)(NativeAccessSpecifierPublic)
+	struct FFortItemSorterDefinition              Sorter;                                            // 0x0050(0x0040)(NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFortInGamePerkDisplayData;
+DUMPER7_ASSERTS_FFortHeroLoadoutHeroPickerTabConfiguration;
+
+// ScriptStruct FortniteUI.FortHeroNamesData
+// 0x0030 (0x0038 - 0x0008)
+struct FFortHeroNamesData final : public FTableRowBase
+{
+public:
+	class FString                                 FirstName;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 NickName;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LastName;                                          // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortHeroNamesData;
 
 // ScriptStruct FortniteUI.FortItemDelta
 // 0x0010 (0x0010 - 0x0000)
@@ -5335,7 +2976,7 @@ public:
 DUMPER7_ASSERTS_FFortItemDelta;
 
 // ScriptStruct FortniteUI.FortBasicMissionInfo
-// 0x0390 (0x0390 - 0x0000)
+// 0x0388 (0x0388 - 0x0000)
 struct FFortBasicMissionInfo final
 {
 public:
@@ -5344,26 +2985,21 @@ public:
 	class FText                                   TheaterName;                                       // 0x0348(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	class FText                                   DifficultyName;                                    // 0x0360(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	class UMediaSource*                           EndOfMissionMediaSource;                           // 0x0378(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMediaSource*                           EndOfMissionMediaSourceStreamed;                   // 0x0380(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSkipEndOfMissionVideo;                            // 0x0388(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsGroupContent;                                   // 0x0389(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38A[0x6];                                      // 0x038A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bSkipEndOfMissionVideo;                            // 0x0380(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsGroupContent;                                   // 0x0381(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_382[0x6];                                      // 0x0382(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FFortBasicMissionInfo;
 
-// ScriptStruct FortniteUI.ContextPosition
-// 0x0010 (0x0010 - 0x0000)
-struct FContextPosition final
+// ScriptStruct FortniteUI.FortKillerVisualInfo
+// 0x00A0 (0x00A0 - 0x0000)
+struct FFortKillerVisualInfo final
 {
 public:
-	EContextPositionPlatform                      Platform;                                          // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              position;                                          // 0x0004(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EHorizontalAlignment                          HorizontalAlignment;                               // 0x000C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EVerticalAlignment                            VerticalAlignment;                                 // 0x000D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            KillerBrush;                                       // 0x0000(0x0088)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   KillerName;                                        // 0x0088(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FContextPosition;
+DUMPER7_ASSERTS_FFortKillerVisualInfo;
 
 // ScriptStruct FortniteUI.FortActionBeingUnbound
 // 0x000C (0x000C - 0x0000)
@@ -5375,31 +3011,69 @@ public:
 };
 DUMPER7_ASSERTS_FFortActionBeingUnbound;
 
-// ScriptStruct FortniteUI.FortItemCard_XS_TransformKey_Configuration
+// ScriptStruct FortniteUI.ItemDefinitionChangedStruct
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FItemDefinitionChangedStruct final
+{
+public:
+	UMulticastDelegateProperty_                   ChangeDelegate;                                    // 0x0000(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FItemDefinitionChangedStruct;
+
+// ScriptStruct FortniteUI.FortItemCard_XXS_ItemInstance_Configuration
+// 0x0030 (0x0030 - 0x0000)
+struct FFortItemCard_XXS_ItemInstance_Configuration final
+{
+public:
+	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x0000(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortItemCard_XXS_ItemInstance_Configuration;
+
+// ScriptStruct FortniteUI.FortItemCard_L_TransformKey_Configuration
 // 0x0048 (0x0048 - 0x0000)
-struct FFortItemCard_XS_TransformKey_Configuration final
+struct FFortItemCard_L_TransformKey_Configuration final
 {
 public:
 	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x0010(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FVector2D                              TransformKeyIconSize;                              // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFortItemCard_XS_TransformKey_Configuration;
+DUMPER7_ASSERTS_FFortItemCard_L_TransformKey_Configuration;
+
+// ScriptStruct FortniteUI.FortItemCard_PowerRatingBlock_ItemInstance_Configuration
+// 0x00B0 (0x0100 - 0x0050)
+struct FFortItemCard_PowerRatingBlock_ItemInstance_Configuration final : public FFortItemCard_PowerRatingBlock_Configuration
+{
+public:
+	struct FSlateBrush                            PowerRatingIconBrush;                              // 0x0050(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   PowerRatingTextStyle;                              // 0x00D8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortItemCard_PowerRatingBlock_ItemInstance_Configuration;
+
+// ScriptStruct FortniteUI.FortItemCard_DurabilityMeter_Configuration
+// 0x0014 (0x0014 - 0x0000)
+struct FFortItemCard_DurabilityMeter_Configuration final
+{
+public:
+	float                                         MeterThickness;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                MeterPadding;                                      // 0x0004(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortItemCard_DurabilityMeter_Configuration;
 
 // ScriptStruct FortniteUI.FortItemCard_XS_ItemInstance_Configuration
-// 0x0230 (0x0230 - 0x0000)
+// 0x0188 (0x0188 - 0x0000)
 struct FFortItemCard_XS_ItemInstance_Configuration final
 {
 public:
 	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FMargin                                PowerRatingBlockPadding;                           // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_PowerRatingBlock_ItemInstance_Configuration PowerRatingBlock;               // 0x0020(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FVector2D                              BookmarkImageSize;                                 // 0x01C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMargin                                TraitBoxPadding;                                   // 0x01D0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector2D                              FirstTraitSize;                                    // 0x01E0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x01E8(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FFortItemCard_DurabilityMeter_Configuration DurabilityMeter;                              // 0x0218(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22C[0x4];                                      // 0x022C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FFortItemCard_PowerRatingBlock_ItemInstance_Configuration PowerRatingBlock;               // 0x0020(0x0100)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FVector2D                              BookmarkImageSize;                                 // 0x0120(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                TraitBoxPadding;                                   // 0x0128(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector2D                              FirstTraitSize;                                    // 0x0138(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x0140(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FFortItemCard_DurabilityMeter_Configuration DurabilityMeter;                              // 0x0170(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FFortItemCard_XS_ItemInstance_Configuration;
 
@@ -5426,6 +3100,47 @@ public:
 };
 DUMPER7_ASSERTS_FFortItemCard_S_TransformKey_Configuration;
 
+// ScriptStruct FortniteUI.FortItemCard_S_ItemInstance_Configuration
+// 0x01A0 (0x01A0 - 0x0000)
+struct FFortItemCard_S_ItemInstance_Configuration final
+{
+public:
+	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMargin                                PowerRatingBlockPadding;                           // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_PowerRatingBlock_ItemInstance_Configuration PowerRatingBlock;               // 0x0020(0x0100)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FVector2D                              BookmarkImageSize;                                 // 0x0120(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x0128(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FMargin                                TraitBoxPadding;                                   // 0x0158(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector2D                              FirstTraitSize;                                    // 0x0168(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                TierMeterPadding;                                  // 0x0170(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x0180(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_DurabilityMeter_Configuration DurabilityMeter;                              // 0x018C(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortItemCard_S_ItemInstance_Configuration;
+
+// ScriptStruct FortniteUI.FortItemCard_S_PersonnelAndSchematics_Configuration
+// 0x02C8 (0x02C8 - 0x0000)
+struct FFortItemCard_S_PersonnelAndSchematics_Configuration final
+{
+public:
+	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration PowerRatingBlock;     // 0x0010(0x01B0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FVector2D                              BookmarkImageSize;                                 // 0x01C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_NameplateBorder_Configuration Nameplate;                                    // 0x01C8(0x0098)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FVector2D                              ClassIconSize;                                     // 0x0260(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              LeadSurvivorTypeIconSize;                          // 0x0268(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              FirstIconSlotSize;                                 // 0x0270(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PaddingBetweenIconSlots;                           // 0x0278(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              SecondIconSlotSize;                                // 0x027C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_DefenderWeaponTypeIcon_Configuration DefenderWeaponTypeIcon;                // 0x0284(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_DetailAreaBorder_Configuration DetailAreaBorder;                            // 0x028C(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_LevelMeter_Configuration LevelMeter;                                        // 0x02A0(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         TierMeterLeftPadding;                              // 0x02B4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x02B8(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C4[0x4];                                      // 0x02C4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FFortItemCard_S_PersonnelAndSchematics_Configuration;
+
 // ScriptStruct FortniteUI.FortItemCard_M_TransformKey_Configuration
 // 0x0048 (0x0048 - 0x0000)
 struct FFortItemCard_M_TransformKey_Configuration final
@@ -5437,47 +3152,77 @@ public:
 };
 DUMPER7_ASSERTS_FFortItemCard_M_TransformKey_Configuration;
 
+// ScriptStruct FortniteUI.FortItemCard_M_ItemInstance_Configuration
+// 0x01B0 (0x01B0 - 0x0000)
+struct FFortItemCard_M_ItemInstance_Configuration final
+{
+public:
+	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMargin                                PowerRatingBlockPadding;                           // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_PowerRatingBlock_ItemInstance_Configuration PowerRatingBlock;               // 0x0020(0x0100)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FVector2D                              BookmarkImageSize;                                 // 0x0120(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x0128(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FMargin                                TraitBoxPadding;                                   // 0x0158(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector2D                              FirstTraitSize;                                    // 0x0168(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PaddingBetweenTraitIcons;                          // 0x0170(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              SecondTraitSize;                                   // 0x0174(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                TierMeterPadding;                                  // 0x017C(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x018C(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_DurabilityMeter_Configuration DurabilityMeter;                              // 0x0198(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FFortItemCard_M_ItemInstance_Configuration;
+
+// ScriptStruct FortniteUI.PanZoomFingerState
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FPanZoomFingerState final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPanZoomFingerState;
+
 // ScriptStruct FortniteUI.FortItemCard_M_PersonnelAndSchematics_Configuration
-// 0x0370 (0x0370 - 0x0000)
+// 0x02C8 (0x02C8 - 0x0000)
 struct FFortItemCard_M_PersonnelAndSchematics_Configuration final
 {
 public:
 	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration PowerRatingBlock;     // 0x0010(0x0258)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FVector2D                              BookmarkImageSize;                                 // 0x0268(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_NameplateBorder_Configuration Nameplate;                                    // 0x0270(0x0098)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FVector2D                              ClassIconSize;                                     // 0x0308(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              LeadSurvivorTypeIconSize;                          // 0x0310(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              FirstIconSlotSize;                                 // 0x0318(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PaddingBetweenIconSlots;                           // 0x0320(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              SecondIconSlotSize;                                // 0x0324(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_DefenderWeaponTypeIcon_Configuration DefenderWeaponTypeIcon;                // 0x032C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_DetailAreaBorder_Configuration DetailAreaBorder;                            // 0x0334(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_LevelMeter_Configuration LevelMeter;                                        // 0x0348(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         TierMeterLeftPadding;                              // 0x035C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x0360(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_36C[0x4];                                      // 0x036C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration PowerRatingBlock;     // 0x0010(0x01B0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FVector2D                              BookmarkImageSize;                                 // 0x01C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_NameplateBorder_Configuration Nameplate;                                    // 0x01C8(0x0098)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FVector2D                              ClassIconSize;                                     // 0x0260(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              LeadSurvivorTypeIconSize;                          // 0x0268(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              FirstIconSlotSize;                                 // 0x0270(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PaddingBetweenIconSlots;                           // 0x0278(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              SecondIconSlotSize;                                // 0x027C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_DefenderWeaponTypeIcon_Configuration DefenderWeaponTypeIcon;                // 0x0284(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_DetailAreaBorder_Configuration DetailAreaBorder;                            // 0x028C(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_LevelMeter_Configuration LevelMeter;                                        // 0x02A0(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         TierMeterLeftPadding;                              // 0x02B4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x02B8(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C4[0x4];                                      // 0x02C4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FFortItemCard_M_PersonnelAndSchematics_Configuration;
 
 // ScriptStruct FortniteUI.FortItemCard_L_ItemInstance_Configuration
-// 0x0258 (0x0258 - 0x0000)
+// 0x01B0 (0x01B0 - 0x0000)
 struct FFortItemCard_L_ItemInstance_Configuration final
 {
 public:
 	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FMargin                                PowerRatingBlockPadding;                           // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_PowerRatingBlock_ItemInstance_Configuration PowerRatingBlock;               // 0x0020(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FVector2D                              BookmarkImageSize;                                 // 0x01C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x01D0(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FMargin                                TraitBoxPadding;                                   // 0x0200(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector2D                              FirstTraitSize;                                    // 0x0210(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PaddingBetweenTraitIcons;                          // 0x0218(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              SecondTraitSize;                                   // 0x021C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMargin                                TierMeterPadding;                                  // 0x0224(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x0234(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_DurabilityMeter_Configuration DurabilityMeter;                              // 0x0240(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_254[0x4];                                      // 0x0254(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FFortItemCard_PowerRatingBlock_ItemInstance_Configuration PowerRatingBlock;               // 0x0020(0x0100)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FVector2D                              BookmarkImageSize;                                 // 0x0120(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x0128(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FMargin                                TraitBoxPadding;                                   // 0x0158(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector2D                              FirstTraitSize;                                    // 0x0168(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PaddingBetweenTraitIcons;                          // 0x0170(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              SecondTraitSize;                                   // 0x0174(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                TierMeterPadding;                                  // 0x017C(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x018C(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_DurabilityMeter_Configuration DurabilityMeter;                              // 0x0198(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FFortItemCard_L_ItemInstance_Configuration;
 
@@ -5492,55 +3237,90 @@ public:
 };
 DUMPER7_ASSERTS_FFortItemCard_XL_TransformKey_Configuration;
 
+// ScriptStruct FortniteUI.FortItemCard_XL_ItemInstance_Configuration
+// 0x01B0 (0x01B0 - 0x0000)
+struct FFortItemCard_XL_ItemInstance_Configuration final
+{
+public:
+	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMargin                                PowerRatingBlockPadding;                           // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_PowerRatingBlock_ItemInstance_Configuration PowerRatingBlock;               // 0x0020(0x0100)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FVector2D                              BookmarkImageSize;                                 // 0x0120(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_StackCountBlock_Configuration StackCountBlock;                              // 0x0128(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FMargin                                TraitBoxPadding;                                   // 0x0158(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector2D                              FirstTraitSize;                                    // 0x0168(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PaddingBetweenTraitIcons;                          // 0x0170(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              SecondTraitSize;                                   // 0x0174(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                TierMeterPadding;                                  // 0x017C(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x018C(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_DurabilityMeter_Configuration DurabilityMeter;                              // 0x0198(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FFortItemCard_XL_ItemInstance_Configuration;
+
 // ScriptStruct FortniteUI.FortItemCard_XL_PersonnelAndSchematics_Configuration
-// 0x03F8 (0x03F8 - 0x0000)
+// 0x0350 (0x0350 - 0x0000)
 struct FFortItemCard_XL_PersonnelAndSchematics_Configuration final
 {
 public:
 	struct FMargin                                BackgroundPadding;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration PowerRatingBlock;     // 0x0010(0x0258)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FVector2D                              BookmarkImageSize;                                 // 0x0268(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_NameplateBorder_Configuration Nameplate;                                    // 0x0270(0x0098)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   ItemNameTextStyle;                                 // 0x0308(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              LeadSurvivorTypeIconSize;                          // 0x0330(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              FirstIconSlotSize;                                 // 0x0338(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PaddingBetweenIconSlots;                           // 0x0340(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              SecondIconSlotSize;                                // 0x0344(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_DefenderWeaponTypeIcon_Configuration DefenderWeaponTypeIcon;                // 0x034C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFortItemCard_DetailAreaBorder_Configuration DetailAreaBorder;                            // 0x0354(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         RarityNameTextLeftPadding;                         // 0x0368(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_36C[0x4];                                      // 0x036C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   RarityNameTextStyle;                               // 0x0370(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ClassIconImageLeftPadding;                         // 0x0398(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ClassIconSize;                                     // 0x039C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PaddingBetweenClassIconAndName;                    // 0x03A4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   ClassNameTextStyle;                                // 0x03A8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TierMeterLeftPadding;                              // 0x03D0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x03D4(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMargin                                IconSlotOverNameplatePadding;                      // 0x03E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector2D                              IconSlotOverNameplateSize;                         // 0x03F0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration PowerRatingBlock;     // 0x0010(0x01B0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FVector2D                              BookmarkImageSize;                                 // 0x01C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_NameplateBorder_Configuration Nameplate;                                    // 0x01C8(0x0098)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   ItemNameTextStyle;                                 // 0x0260(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              LeadSurvivorTypeIconSize;                          // 0x0288(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              FirstIconSlotSize;                                 // 0x0290(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PaddingBetweenIconSlots;                           // 0x0298(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              SecondIconSlotSize;                                // 0x029C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_DefenderWeaponTypeIcon_Configuration DefenderWeaponTypeIcon;                // 0x02A4(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFortItemCard_DetailAreaBorder_Configuration DetailAreaBorder;                            // 0x02AC(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         RarityNameTextLeftPadding;                         // 0x02C0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C4[0x4];                                      // 0x02C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   RarityNameTextStyle;                               // 0x02C8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ClassIconImageLeftPadding;                         // 0x02F0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ClassIconSize;                                     // 0x02F4(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PaddingBetweenClassIconAndName;                    // 0x02FC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   ClassNameTextStyle;                                // 0x0300(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TierMeterLeftPadding;                              // 0x0328(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFortItemCard_TierMeter_Configuration  TierMeter;                                         // 0x032C(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMargin                                IconSlotOverNameplatePadding;                      // 0x0338(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector2D                              IconSlotOverNameplateSize;                         // 0x0348(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortItemCard_XL_PersonnelAndSchematics_Configuration;
 
-// ScriptStruct FortniteUI.FortItemListViewConfig
-// 0x00C0 (0x00C0 - 0x0000)
-struct alignas(0x10) FFortItemListViewConfig final
+// ScriptStruct FortniteUI.FortRefundDescriptionsData
+// 0x0038 (0x0040 - 0x0008)
+struct FFortRefundDescriptionsData final : public FTableRowBase
 {
 public:
-	uint8                                         Pad_0[0xC0];                                       // 0x0000(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 SearchString;                                      // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TargetReleaseVersion;                              // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   RefundDescriptionText;                             // 0x0028(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFortItemListViewConfig;
+DUMPER7_ASSERTS_FFortRefundDescriptionsData;
 
-// ScriptStruct FortniteUI.InterpolatedTransitionCamera
-// 0x0040 (0x0040 - 0x0000)
-struct FInterpolatedTransitionCamera final
+// ScriptStruct FortniteUI.FortItemManagementInventoryFilterTabLabelInfo
+// 0x0008 (0x00A8 - 0x00A0)
+struct FFortItemManagementInventoryFilterTabLabelInfo final : public FFortTabButtonLabelInfo
 {
 public:
-	struct FTransform                             CameraTransform;                                   // 0x0000(0x0030)(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         FieldOfView;                                       // 0x0030(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0xC];                                       // 0x0034(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   FilterTabNameId;                                   // 0x00A0(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterpolatedTransitionCamera;
+DUMPER7_ASSERTS_FFortItemManagementInventoryFilterTabLabelInfo;
+
+// ScriptStruct FortniteUI.FortUIPickerTrapSortScores
+// 0x0018 (0x0018 - 0x0000)
+struct FFortUIPickerTrapSortScores final
+{
+public:
+	float                                         UniqueTrapBonus;                                   // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SlottedBonus;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FavoriteBonus;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PinnedBonus;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxTrackedTrapBonusTime;                           // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TrackedTrapBonusMultiplier;                        // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortUIPickerTrapSortScores;
 
 // ScriptStruct FortniteUI.FortItemEntryPreviewData
 // 0x0008 (0x0008 - 0x0000)
@@ -5552,6 +3332,15 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FFortItemEntryPreviewData;
+
+// ScriptStruct FortniteUI.MeasuredText
+// 0x0028 (0x0028 - 0x0000)
+struct alignas(0x08) FMeasuredText final
+{
+public:
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMeasuredText;
 
 // ScriptStruct FortniteUI.OfferGroup
 // 0x0018 (0x0018 - 0x0000)
@@ -5589,190 +3378,20 @@ public:
 };
 DUMPER7_ASSERTS_FFortMaterialProgressBarSectionInfo;
 
-// ScriptStruct FortniteUI.ActionBindingIconPicker
-// 0x0018 (0x0018 - 0x0000)
-struct FActionBindingIconPicker final
+// ScriptStruct FortniteUI.FortModalContainerSizeEntry
+// 0x001C (0x001C - 0x0000)
+struct FFortModalContainerSizeEntry final
 {
 public:
-	TArray<class FName>                           ActionNames;                                       // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPaperSprite*                           Sprite;                                            // 0x0010(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AbsoluteWidth;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TopPercent;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MiddlePercent;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BottomPercent;                                     // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         VerticalPadding;                                   // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HorizontalPadding;                                 // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ContentPadding;                                    // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FActionBindingIconPicker;
-
-// ScriptStruct FortniteUI.ActionBindingVisibility
-// 0x0018 (0x0018 - 0x0000)
-struct FActionBindingVisibility final
-{
-public:
-	TArray<class FName>                           ActionNames;                                       // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EActionBindingComparisonType                  ComparisonType;                                    // 0x0010(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESlateVisibility                              Visibility;                                        // 0x0011(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FActionBindingVisibility;
-
-// ScriptStruct FortniteUI.TagVisibility
-// 0x0028 (0x0028 - 0x0000)
-struct FTagVisibility final
-{
-public:
-	struct FGameplayTagContainer                  Tags;                                              // 0x0000(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	ETagComparisonType                            ComparisonType;                                    // 0x0020(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESlateVisibility                              Visibility;                                        // 0x0021(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTagVisibility;
-
-// ScriptStruct FortniteUI.FortMobileContextFilter
-// 0x0040 (0x0040 - 0x0000)
-struct FFortMobileContextFilter final
-{
-public:
-	struct FGameplayTagContainer                  ShownInContexts;                                   // 0x0000(0x0020)(Edit, NativeAccessSpecifierPrivate)
-	struct FGameplayTagContainer                  HiddenInContexts;                                  // 0x0020(0x0020)(Edit, NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FFortMobileContextFilter;
-
-// ScriptStruct FortniteUI.FortMobileHUDContextLayout
-// 0x0020 (0x0020 - 0x0000)
-struct FFortMobileHUDContextLayout final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortMobileHUDContextModel*             HUDContextModel;                                   // 0x0010(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortMobileHUDContextLayout;
-
-// ScriptStruct FortniteUI.TDMTeamScoreData
-// 0x0020 (0x0020 - 0x0000)
-struct FTDMTeamScoreData final
-{
-public:
-	class FText                                   CurrScoreText;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	float                                         CurrScorePercent;                                  // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CurrScore;                                         // 0x001C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTDMTeamScoreData;
-
-// ScriptStruct FortniteUI.FortMobileHUDContextModelExtension
-// 0x0028 (0x0028 - 0x0000)
-struct FFortMobileHUDContextModelExtension final
-{
-public:
-	struct FGameplayTag                           ContextLayoutTag;                                  // 0x0000(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  UseableHUDWidgetTags;                              // 0x0008(0x0020)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortMobileHUDContextModelExtension;
-
-// ScriptStruct FortniteUI.FortMobileHUDLayoutProfile
-// 0x0030 (0x0030 - 0x0000)
-struct FFortMobileHUDLayoutProfile final
-{
-public:
-	class FText                                   ProfileName;                                       // 0x0000(0x0018)(Transient, NativeAccessSpecifierPrivate)
-	TArray<struct FFortMobileHUDContextLayout>    ContextLayouts;                                    // 0x0018(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortMobileHUDLayoutProfile;
-
-// ScriptStruct FortniteUI.PickupStreamEntry
-// 0x0018 (0x0018 - 0x0000)
-struct FPickupStreamEntry final
-{
-public:
-	class UUserWidget*                            PickupWidget;                                      // 0x0000(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPickupStreamEntry;
-
-// ScriptStruct FortniteUI.UserAction
-// 0x0018 (0x0018 - 0x0000)
-struct FUserAction
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ActionName;                                        // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FUserAction;
-
-// ScriptStruct FortniteUI.UserSelectProfileAction
-// 0x0080 (0x0098 - 0x0018)
-struct FUserSelectProfileAction final : public FUserAction
-{
-public:
-	struct FFortMobileHUDProfileBase              PreviousProfile;                                   // 0x0018(0x0040)(NativeAccessSpecifierPublic)
-	struct FFortMobileHUDProfileBase              NewProfile;                                        // 0x0058(0x0040)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FUserSelectProfileAction;
-
-// ScriptStruct FortniteUI.UserRenameAction
-// 0x0020 (0x0038 - 0x0018)
-struct FUserRenameAction final : public FUserAction
-{
-public:
-	class FString                                 PreviousName;                                      // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 NewName;                                           // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FUserRenameAction;
-
-// ScriptStruct FortniteUI.UserGenericAction
-// 0x0040 (0x0058 - 0x0018)
-struct FUserGenericAction final : public FUserAction
-{
-public:
-	struct FFortMobileHUDProfileBase              ActiveProfile;                                     // 0x0018(0x0040)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FUserGenericAction;
-
-// ScriptStruct FortniteUI.FortMobileHUDWidgetLayout
-// 0x0040 (0x0040 - 0x0000)
-struct alignas(0x08) FFortMobileHUDWidgetLayout final
-{
-public:
-	struct FAnchorData                            LayoutData;                                        // 0x0000(0x0028)(Transient, NoDestructor, NativeAccessSpecifierPrivate)
-	int32                                         ZOrder;                                            // 0x0028(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2C[0x14];                                      // 0x002C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortMobileHUDWidgetLayout;
-
-// ScriptStruct FortniteUI.HUDWidgetSchemaInitializer
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FHUDWidgetSchemaInitializer final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FHUDWidgetSchemaInitializer;
-
-// ScriptStruct FortniteUI.HUDWidgetBehaviorRegistryEntry
-// 0x0018 (0x0018 - 0x0000)
-struct FHUDWidgetBehaviorRegistryEntry final
-{
-public:
-	struct FGameplayTag                           HUDWidgetBehaviorTag;                              // 0x0000(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           HUDWidgetOverrideTag;                              // 0x0008(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UHUDWidgetBehavior>         HUDWidgetBehaviorClass;                            // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FHUDWidgetBehaviorRegistryEntry;
-
-// ScriptStruct FortniteUI.HUDWidgetRegistryEntry
-// 0x0040 (0x0040 - 0x0000)
-struct FHUDWidgetRegistryEntry final
-{
-public:
-	struct FGameplayTag                           HUDWidgetTag;                                      // 0x0000(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsMandatory;                                      // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MandatoryOnScreenPercent;                          // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaximumAmountOfInstances;                          // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ZOrder;                                            // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UFortMobileHUDElement>      HUDWidgetClass;                                    // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UFortMobileHUDElementProxy> HUDWidgetProxyClass;                               // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UHUDLayoutToolV2_WidgetPreview> HUDWidgetPreviewClass;                         // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UFortMobileHUDWidgetCustomPropertyModel*> CustomPropertyModels;                     // 0x0030(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FHUDWidgetRegistryEntry;
+DUMPER7_ASSERTS_FFortModalContainerSizeEntry;
 
 // ScriptStruct FortniteUI.FortMtxGradient
 // 0x0020 (0x0020 - 0x0000)
@@ -5794,85 +3413,79 @@ public:
 };
 DUMPER7_ASSERTS_FFortMtxDetailsAttribute;
 
+// ScriptStruct FortniteUI.PlatformOverrides
+// 0x0038 (0x0038 - 0x0000)
+struct FPlatformOverrides final
+{
+public:
+	bool                                          DisplayOnPlatform;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   PlatformDisplayText;                               // 0x0008(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class FText                                   PlatformHoverText;                                 // 0x0020(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPlatformOverrides;
+
+// ScriptStruct FortniteUI.SliderSettings
+// 0x0020 (0x0020 - 0x0000)
+struct FSliderSettings final
+{
+public:
+	int32                                         MinIntegralDigits;                                 // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxIntegralDigits;                                 // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MinFractionalDigits;                               // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxFractionalDigits;                               // 0x000C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinSensitivityValue;                               // 0x0010(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxSensitivityValue;                               // 0x0014(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StepSize;                                          // 0x0018(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERoundingMode                                 RoundingMode;                                      // 0x001C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSliderSettings;
+
+// ScriptStruct FortniteUI.SettingData
+// 0x0198 (0x0198 - 0x0000)
+struct FSettingData final
+{
+public:
+	ESettingType                                  SettingType;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UFortOptionsMenuSetting>    SettingWidgetType;                                 // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   DisplayText;                                       // 0x0010(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class FText                                   HoverText;                                         // 0x0028(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FPlatformOverrides                     PlatformPCOverrides;                               // 0x0040(0x0038)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FPlatformOverrides                     PlatformXboxOverrides;                             // 0x0078(0x0038)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FPlatformOverrides                     PlatformPS4Overrides;                              // 0x00B0(0x0038)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FPlatformOverrides                     PlatformSwitchOverrides;                           // 0x00E8(0x0038)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FPlatformOverrides                     PlatformMobileOverrides;                           // 0x0120(0x0038)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<ESubGame>                              HiddenModes;                                       // 0x0158(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FSliderSettings                        SliderSettings;                                    // 0x0168(0x0020)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCurveTableRowHandle                   Curve;                                             // 0x0188(0x0010)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSettingData;
+
+// ScriptStruct FortniteUI.OptionsTabData
+// 0x0010 (0x0010 - 0x0000)
+struct FOptionsTabData final
+{
+public:
+	TArray<struct FSettingData>                   SettingDatas;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOptionsTabData;
+
 // ScriptStruct FortniteUI.FortUIPerkTier
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct FFortUIPerkTier final
 {
 public:
 	class UFortHeroSpecialization*                HeroSpecialization;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFortHero*                              CurrentHero;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortItemTier                                 Tier;                                              // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsUpgrade;                                        // 0x0011(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsEvolution;                                      // 0x0012(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EFortItemTier                                 Tier;                                              // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortHero*                              CurrentHero;                                       // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsUpgrade;                                        // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsEvolution;                                      // 0x0019(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FFortUIPerkTier;
-
-// ScriptStruct FortniteUI.HUDLayoutToolV2_TextInputPopupContent
-// 0x0068 (0x0068 - 0x0000)
-struct FHUDLayoutToolV2_TextInputPopupContent final
-{
-public:
-	EHUDLayoutToolTextInputPopupType              PopupType;                                         // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   TitleText;                                         // 0x0008(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class FText                                   DescriptionText;                                   // 0x0020(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class FText                                   ButtonConfirmText;                                 // 0x0038(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class FText                                   ButtonCancelText;                                  // 0x0050(0x0018)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FHUDLayoutToolV2_TextInputPopupContent;
-
-// ScriptStruct FortniteUI.FortPhoenixLevelProgressionRewards
-// 0x0030 (0x0030 - 0x0000)
-struct FFortPhoenixLevelProgressionRewards final
-{
-public:
-	int32                                         NextRewardLevel;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemQuantityPair                  NextReward;                                        // 0x0004(0x0014)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         NextMajorRewardLevel;                              // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortItemQuantityPair                  NextMajorReward;                                   // 0x001C(0x0014)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPhoenixLevelProgressionRewards;
-
-// ScriptStruct FortniteUI.TrackedTrapTimeAndCount
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x04) FTrackedTrapTimeAndCount final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTrackedTrapTimeAndCount;
-
-// ScriptStruct FortniteUI.FortPickerTemporaryWheelItem
-// 0x0020 (0x0020 - 0x0000)
-struct FFortPickerTemporaryWheelItem final
-{
-public:
-	class FText                                   LabelOverride;                                     // 0x0000(0x0018)(NativeAccessSpecifierPublic)
-	class UFortItemDefinition*                    Item;                                              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPickerTemporaryWheelItem;
-
-// ScriptStruct FortniteUI.FortPickerTemporaryWheel
-// 0x0030 (0x0030 - 0x0000)
-struct FFortPickerTemporaryWheel final
-{
-public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFortPickerTemporaryWheelItem>  Items;                                             // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPickerTemporaryWheel;
-
-// ScriptStruct FortniteUI.RadialOptionData
-// 0x00C8 (0x00C8 - 0x0000)
-struct FRadialOptionData
-{
-public:
-	class FText                                   Label;                                             // 0x0000(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            Brush;                                             // 0x0018(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              SoftIcon;                                          // 0x00A0(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRadialOptionData;
 
 // ScriptStruct FortniteUI.SquadQuickChatOptionData
 // 0x0018 (0x00E0 - 0x00C8)
@@ -5903,17 +3516,6 @@ public:
 };
 DUMPER7_ASSERTS_FEmoteOptionData;
 
-// ScriptStruct FortniteUI.SoundThreshold
-// 0x0010 (0x0010 - 0x0000)
-struct FSoundThreshold final
-{
-public:
-	class USoundCue*                              SoundCue;                                          // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Threshold;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FSoundThreshold;
-
 // ScriptStruct FortniteUI.MapNoteOptionData
 // 0x0018 (0x00E0 - 0x00C8)
 struct FMapNoteOptionData final : public FRadialOptionData
@@ -5941,17 +3543,6 @@ public:
 };
 DUMPER7_ASSERTS_FChatOptionData;
 
-// ScriptStruct FortniteUI.ItemCategoryOptionData
-// 0x0018 (0x00E0 - 0x00C8)
-struct FItemCategoryOptionData final : public FRadialOptionData
-{
-public:
-	class FString                                 TemplatePrefix;                                    // 0x00C8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBuildingAttachmentType                       BuildingAttachmentType;                            // 0x00D8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FItemCategoryOptionData;
-
 // ScriptStruct FortniteUI.BuildingOptionData
 // 0x0018 (0x00E0 - 0x00C8)
 struct FBuildingOptionData final : public FRadialOptionData
@@ -5972,406 +3563,6 @@ public:
 	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FBuildingCategoryOptionData;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyButtonListMultipleSelectionAnswerWidgetFocusInfo
-// 0x0008 (0x0008 - 0x0000)
-struct FFortPlayerSurveyButtonListMultipleSelectionAnswerWidgetFocusInfo final
-{
-public:
-	EFortPlayerSurveyButtonListMultipleSelectionAnswerWidgetFocusType FocusType;                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Index;                                             // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyButtonListMultipleSelectionAnswerWidgetFocusInfo;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyButtonListMultipleSelectionAnswerWidgetBaseInternalButtonData
-// 0x0018 (0x0018 - 0x0000)
-struct FFortPlayerSurveyButtonListMultipleSelectionAnswerWidgetBaseInternalButtonData final
-{
-public:
-	class UCommonButton*                          ButtonWidget;                                      // 0x0000(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyButtonListMultipleSelectionAnswerWidgetBaseInternalButtonData;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataCondition
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FFortPlayerSurveyCMSDataCondition final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataCondition;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionGroupBase
-// 0x0010 (0x0018 - 0x0008)
-struct FFortPlayerSurveyCMSDataConditionGroupBase : public FFortPlayerSurveyCMSDataConditionBase
-{
-public:
-	TArray<struct FJsonObjectWrapper>             C;                                                 // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionGroupBase;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionAnd
-// 0x0000 (0x0018 - 0x0018)
-struct FFortPlayerSurveyCMSDataConditionAnd final : public FFortPlayerSurveyCMSDataConditionGroupBase
-{
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionAnd;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionSimpleIntComparisonBase
-// 0x0008 (0x0010 - 0x0008)
-struct FFortPlayerSurveyCMSDataConditionSimpleIntComparisonBase : public FFortPlayerSurveyCMSDataConditionBase
-{
-public:
-	EFortPlayerSurveyCMSDataBinaryComparisonOp    O;                                                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         T;                                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionSimpleIntComparisonBase;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionAthenaMatchStat
-// 0x0088 (0x0098 - 0x0010)
-struct FFortPlayerSurveyCMSDataConditionAthenaMatchStat final : public FFortPlayerSurveyCMSDataConditionSimpleIntComparisonBase
-{
-public:
-	TArray<EFortPlayerSurveyCMSDataPlaylistCategory> pt;                                             // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSet<class FName>                             P;                                                 // 0x0020(0x0050)(NativeAccessSpecifierPublic)
-	TArray<class FString>                         I;                                                 // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 S;                                                 // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortPlayerSurveyCMSDataAggregateOp           ag;                                                // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionAthenaMatchStat;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataGameplayTagQuery
-// 0x0018 (0x0018 - 0x0000)
-struct FFortPlayerSurveyCMSDataGameplayTagQuery final
-{
-public:
-	EFortPlayerSurveyCMSDataGameplayTagQueryExprType T;                                              // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           N;                                                 // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataGameplayTagQuery;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionAthenaPoi
-// 0x0018 (0x0020 - 0x0008)
-struct FFortPlayerSurveyCMSDataConditionAthenaPoi final : public FFortPlayerSurveyCMSDataConditionBase
-{
-public:
-	struct FFortPlayerSurveyCMSDataGameplayTagQuery Q;                                               // 0x0008(0x0018)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionAthenaPoi;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionAthenaSeasonBookState
-// 0x0008 (0x0010 - 0x0008)
-struct FFortPlayerSurveyCMSDataConditionAthenaSeasonBookState final : public FFortPlayerSurveyCMSDataConditionBase
-{
-public:
-	bool                                          T;                                                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionAthenaSeasonBookState;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionAthenaSeasonStat
-// 0x0008 (0x0018 - 0x0010)
-struct FFortPlayerSurveyCMSDataConditionAthenaSeasonStat final : public FFortPlayerSurveyCMSDataConditionSimpleIntComparisonBase
-{
-public:
-	EFortPlayerSurveyCMSDataAthenaSeasonStat      S;                                                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionAthenaSeasonStat;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionGroup
-// 0x0018 (0x0018 - 0x0000)
-struct FFortPlayerSurveyCMSDataConditionGroup final
-{
-public:
-	class FName                                   ID;                                                // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FJsonObjectWrapper>             C;                                                 // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionGroup;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataRelativeSurveyKey
-// 0x0018 (0x0018 - 0x0000)
-struct FFortPlayerSurveyCMSDataRelativeSurveyKey final
-{
-public:
-	EFortPlayerSurveyCMSDataRelativeSurveyKeyType T;                                                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ID;                                                // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataRelativeSurveyKey;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionMostRecentlyCompleted
-// 0x0028 (0x0030 - 0x0008)
-struct FFortPlayerSurveyCMSDataConditionMostRecentlyCompleted final : public FFortPlayerSurveyCMSDataConditionBase
-{
-public:
-	struct FFortPlayerSurveyCMSDataRelativeSurveyKey S;                                              // 0x0008(0x0018)(NativeAccessSpecifierPublic)
-	EFortPlayerSurveyCMSDataBinaryComparisonOp    O;                                                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        T;                                                 // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionMostRecentlyCompleted;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionOr
-// 0x0000 (0x0018 - 0x0018)
-struct FFortPlayerSurveyCMSDataConditionOr final : public FFortPlayerSurveyCMSDataConditionGroupBase
-{
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionOr;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionPlatform
-// 0x0050 (0x0058 - 0x0008)
-struct FFortPlayerSurveyCMSDataConditionPlatform final : public FFortPlayerSurveyCMSDataConditionBase
-{
-public:
-	TSet<class FString>                           P;                                                 // 0x0008(0x0050)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionPlatform;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionQuestState
-// 0x0028 (0x0030 - 0x0008)
-struct FFortPlayerSurveyCMSDataConditionQuestState final : public FFortPlayerSurveyCMSDataConditionBase
-{
-public:
-	EFortPlayerSurveyCMSDataGameMode              sg;                                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Q;                                                 // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<EFortPlayerSurveyCMSDataQuestState>    st;                                                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionQuestState;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionRandom
-// 0x0008 (0x0010 - 0x0008)
-struct FFortPlayerSurveyCMSDataConditionRandom final : public FFortPlayerSurveyCMSDataConditionBase
-{
-public:
-	float                                         P;                                                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionRandom;
-
-// ScriptStruct FortniteUI.HUDLayoutToolV2_PopupContent
-// 0x0068 (0x0068 - 0x0000)
-struct FHUDLayoutToolV2_PopupContent final
-{
-public:
-	EHUDLayoutToolPopupType                       PopupType;                                         // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   TitleText;                                         // 0x0008(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class FText                                   DescriptionText;                                   // 0x0020(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class FText                                   ButtonConfirmText;                                 // 0x0038(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class FText                                   ButtonCancelText;                                  // 0x0050(0x0018)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FHUDLayoutToolV2_PopupContent;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionSeasonNumber
-// 0x0000 (0x0010 - 0x0010)
-struct FFortPlayerSurveyCMSDataConditionSeasonNumber final : public FFortPlayerSurveyCMSDataConditionSimpleIntComparisonBase
-{
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionSeasonNumber;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataConditionTimesCompleted
-// 0x0020 (0x0028 - 0x0008)
-struct FFortPlayerSurveyCMSDataConditionTimesCompleted final : public FFortPlayerSurveyCMSDataConditionBase
-{
-public:
-	struct FFortPlayerSurveyCMSDataRelativeSurveyKey S;                                              // 0x0008(0x0018)(NativeAccessSpecifierPublic)
-	EFortPlayerSurveyCMSDataBinaryComparisonOp    O;                                                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         T;                                                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataConditionTimesCompleted;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataQuestion
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FFortPlayerSurveyCMSDataQuestion final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataQuestion;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataQuestionBase
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FFortPlayerSurveyCMSDataQuestionBase
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataQuestionBase;
-
-// ScriptStruct FortniteUI.FortCountdownSounds
-// 0x0020 (0x0020 - 0x0000)
-struct FFortCountdownSounds final
-{
-public:
-	class USoundBase*                             Sound;                                             // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         StartTime;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         StopTime;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FadeOutTime;                                       // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPlayed;                                           // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAudioComponent*                        PlayInstance;                                      // 0x0018(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortCountdownSounds;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataQuestionStandardBase
-// 0x0020 (0x0028 - 0x0008)
-struct FFortPlayerSurveyCMSDataQuestionStandardBase : public FFortPlayerSurveyCMSDataQuestionBase
-{
-public:
-	EFortPlayerSurveyCMSDataPresentationStyle     S;                                                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   T;                                                 // 0x0010(0x0018)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataQuestionStandardBase;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataQuestionFreeFormText
-// 0x0020 (0x0048 - 0x0028)
-struct FFortPlayerSurveyCMSDataQuestionFreeFormText final : public FFortPlayerSurveyCMSDataQuestionStandardBase
-{
-public:
-	class FText                                   ht;                                                // 0x0028(0x0018)(NativeAccessSpecifierPublic)
-	bool                                          R;                                                 // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         L;                                                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataQuestionFreeFormText;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataQuestionChoice
-// 0x0018 (0x0018 - 0x0000)
-struct FFortPlayerSurveyCMSDataQuestionChoice final
-{
-public:
-	class FText                                   T;                                                 // 0x0000(0x0018)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataQuestionChoice;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataQuestionMultipleChoice
-// 0x0010 (0x0038 - 0x0028)
-struct FFortPlayerSurveyCMSDataQuestionMultipleChoice final : public FFortPlayerSurveyCMSDataQuestionStandardBase
-{
-public:
-	TArray<struct FFortPlayerSurveyCMSDataQuestionChoice> C;                                         // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataQuestionMultipleChoice;
-
-// ScriptStruct FortniteUI.FortFeedbackDropdownCategoryHotfix_Add
-// 0x0010 (0x0010 - 0x0000)
-struct FFortFeedbackDropdownCategoryHotfix_Add final
-{
-public:
-	class FName                                   ParentInternalName;                                // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InternalName;                                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortFeedbackDropdownCategoryHotfix_Add;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataQuestionMultipleSelection
-// 0x0018 (0x0040 - 0x0028)
-struct FFortPlayerSurveyCMSDataQuestionMultipleSelection final : public FFortPlayerSurveyCMSDataQuestionStandardBase
-{
-public:
-	TArray<struct FFortPlayerSurveyCMSDataQuestionChoice> C;                                         // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         mn;                                                // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         mx;                                                // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataQuestionMultipleSelection;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataSurveyDescriptionMessage
-// 0x0030 (0x0030 - 0x0000)
-struct FFortPlayerSurveyCMSDataSurveyDescriptionMessage final
-{
-public:
-	class FText                                   T;                                                 // 0x0000(0x0018)(NativeAccessSpecifierPublic)
-	class FText                                   M;                                                 // 0x0018(0x0018)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataSurveyDescriptionMessage;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataSurvey
-// 0x0098 (0x0098 - 0x0000)
-struct FFortPlayerSurveyCMSDataSurvey final
-{
-public:
-	class FString                                 ID;                                                // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   T;                                                 // 0x0010(0x0018)(NativeAccessSpecifierPublic)
-	bool                                          rt;                                                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FJsonObjectWrapper>             C;                                                 // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortPlayerSurveyCMSDataSurveyDescriptionMessage cm;                                      // 0x0040(0x0030)(NativeAccessSpecifierPublic)
-	EFortPlayerSurveyCMSDataTrigger               R;                                                 // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EFortPlayerSurveyCMSDataGameMode>      sg;                                                // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FJsonObjectWrapper>             Q;                                                 // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataSurvey;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyCMSDataRoot
-// 0x0028 (0x0028 - 0x0000)
-struct FFortPlayerSurveyCMSDataRoot final
-{
-public:
-	bool                                          E;                                                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFortPlayerSurveyCMSDataConditionGroup> cg;                                        // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FFortPlayerSurveyCMSDataSurvey> S;                                                 // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyCMSDataRoot;
-
-// ScriptStruct FortniteUI.AthenaSpatialCustomizationCategoryGroup
-// 0x0010 (0x0010 - 0x0000)
-struct FAthenaSpatialCustomizationCategoryGroup final
-{
-public:
-	TArray<class UAthenaSpatialCustomizationCategoryEntry*> CategoryEntryList;                       // 0x0000(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAthenaSpatialCustomizationCategoryGroup;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyQuestionRating
-// 0x0050 (0x0098 - 0x0048)
-struct FFortPlayerSurveyQuestionRating final : public FFortPlayerSurveyQuestionBase
-{
-public:
-	uint8                                         Pad_48[0x50];                                      // 0x0048(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyQuestionRating;
-
-// ScriptStruct FortniteUI.FortPlayerSurveyQuestionStandard
-// 0x0000 (0x0048 - 0x0048)
-struct FFortPlayerSurveyQuestionStandard final : public FFortPlayerSurveyQuestionBase
-{
-};
-DUMPER7_ASSERTS_FFortPlayerSurveyQuestionStandard;
-
-// ScriptStruct FortniteUI.FortPostGameScreenConfig
-// 0x0004 (0x0004 - 0x0000)
-struct FFortPostGameScreenConfig final
-{
-public:
-	EPostGameClickCatcherMode                     ClickCatcherState;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPostGameHUDMode                              PostGameHUDMode;                                   // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSohwCinematicBars;                                // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowPlacementOverlay;                             // 0x0003(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPostGameScreenConfig;
-
-// ScriptStruct FortniteUI.FortQuestMapEventQuestSideBarData
-// 0x0020 (0x0028 - 0x0008)
-struct FFortQuestMapEventQuestSideBarData final : public FTableRowBase
-{
-public:
-	class UFortQuestItemDefinition*               QuestItemDefinition;                               // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         EventFlags;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowAlways;                                       // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CycleTime;                                         // 0x0024(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortQuestMapEventQuestSideBarData;
 
 // ScriptStruct FortniteUI.PlatformSupportDesc
 // 0x0020 (0x0020 - 0x0000)
@@ -6395,35 +3586,6 @@ public:
 };
 DUMPER7_ASSERTS_FFortRichTextStyleData;
 
-// ScriptStruct FortniteUI.SanitizationTaskData
-// 0x0078 (0x0078 - 0x0000)
-struct alignas(0x08) FSanitizationTaskData final
-{
-public:
-	uint8                                         Pad_0[0x78];                                       // 0x0000(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FSanitizationTaskData;
-
-// ScriptStruct FortniteUI.FortSettingNameExtensions
-// 0x0018 (0x0018 - 0x0000)
-struct FFortSettingNameExtensions final
-{
-public:
-	bool                                          bIncludeClassDefaultExtensions;                    // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TSoftClassPtr<class UClass>>           Extensions;                                        // 0x0008(0x0010)(Edit, ZeroConstructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortSettingNameExtensions;
-
-// ScriptStruct FortniteUI.FortSettingClassExtensions
-// 0x0010 (0x0010 - 0x0000)
-struct FFortSettingClassExtensions final
-{
-public:
-	TArray<TSoftClassPtr<class UClass>>           Extensions;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortSettingClassExtensions;
-
 // ScriptStruct FortniteUI.FortEventStyleInfo
 // 0x00A0 (0x00A8 - 0x0008)
 struct FFortEventStyleInfo final : public FTableRowBase
@@ -6443,7 +3605,7 @@ public:
 DUMPER7_ASSERTS_FFortEventStyleInfo;
 
 // ScriptStruct FortniteUI.FortTournamentDisplayInfo
-// 0x01A0 (0x01A8 - 0x0008)
+// 0x0168 (0x0170 - 0x0008)
 struct FFortTournamentDisplayInfo final : public FTableRowBase
 {
 public:
@@ -6454,23 +3616,19 @@ public:
 	class FText                                   DetailsDescription;                                // 0x0068(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	class FText                                   ShortFormatTitle;                                  // 0x0080(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	class FText                                   LongFormatTitle;                                   // 0x0098(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   BackgroundTitle;                                   // 0x00B0(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	int32                                         PinScoreRequirement;                               // 0x00C8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   PinEarnedText;                                     // 0x00D0(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FLinearColor                           BaseColor;                                         // 0x00E8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           PrimaryColor;                                      // 0x00F8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SecondaryColor;                                    // 0x0108(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           HighlightColor;                                    // 0x0118(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           TitleColor;                                        // 0x0128(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ShadowColor;                                       // 0x0138(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           BackgroundLeftColor;                               // 0x0148(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           BackgroundRightColor;                              // 0x0158(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           BackgroundTextColor;                               // 0x0168(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           PosterFadeColor;                                   // 0x0178(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   AlertText;                                         // 0x0188(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	EFortTournamentAlertType                      AlertType;                                         // 0x01A0(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         PinScoreRequirement;                               // 0x00B0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   PinEarnedText;                                     // 0x00B8(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FLinearColor                           BaseColor;                                         // 0x00D0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           PrimaryColor;                                      // 0x00E0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SecondaryColor;                                    // 0x00F0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           HighlightColor;                                    // 0x0100(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           TitleColor;                                        // 0x0110(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ShadowColor;                                       // 0x0120(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           BackgroundLeftColor;                               // 0x0130(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           BackgroundRightColor;                              // 0x0140(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           BackgroundTextColor;                               // 0x0150(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           PosterFadeColor;                                   // 0x0160(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortTournamentDisplayInfo;
 
@@ -6484,8 +3642,19 @@ public:
 };
 DUMPER7_ASSERTS_FFortShowdownScoringRuleDisplayInfo;
 
+// ScriptStruct FortniteUI.FortShowdownScoringRuleInfo
+// 0x0010 (0x0018 - 0x0008)
+struct FFortShowdownScoringRuleInfo final : public FTableRowBase
+{
+public:
+	class FName                                   DisplayInfoId;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PointValue;                                        // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ScoreRequirement;                                  // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortShowdownScoringRuleInfo;
+
 // ScriptStruct FortniteUI.FortShowdownEventBestResultsSummary
-// 0x0018 (0x0018 - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 struct FFortShowdownEventBestResultsSummary final
 {
 public:
@@ -6494,7 +3663,6 @@ public:
 	int32                                         NumVictoryRoyales;                                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PlacementPoints;                                   // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         EliminationPoints;                                 // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         EntryFeePoints;                                    // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortShowdownEventBestResultsSummary;
 
@@ -6513,18 +3681,9 @@ DUMPER7_ASSERTS_FPlatformPrefixIcon;
 struct FPlatformPrefixIconList final
 {
 public:
-	TArray<struct FPlatformPrefixIcon>            PlatformPrefixIcons;                               // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPlatformPrefixIcon>            PlatformPrefixIcons;                               // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPlatformPrefixIconList;
-
-// ScriptStruct FortniteUI.FortUserListHeaderInfo
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FFortUserListHeaderInfo final
-{
-public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortUserListHeaderInfo;
 
 // ScriptStruct FortniteUI.PotentialSpectatorTarget
 // 0x0010 (0x0010 - 0x0000)
@@ -6550,15 +3709,15 @@ public:
 DUMPER7_ASSERTS_FFortLandingPageDefenderSummaryInfo;
 
 // ScriptStruct FortniteUI.FortAttributeModifierAccumulation
-// 0x0048 (0x0048 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct FFortAttributeModifierAccumulation final
 {
 public:
 	struct FGameplayTag                           GameplayTag;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0038)(BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGameplayModOp                                ModifierOp;                                        // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Magnitude;                                         // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0020)(BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameplayModOp                                ModifierOp;                                        // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Magnitude;                                         // 0x002C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortAttributeModifierAccumulation;
 
@@ -6573,18 +3732,50 @@ public:
 };
 DUMPER7_ASSERTS_FOpenedCardPack;
 
-// ScriptStruct FortniteUI.Card
-// 0x0018 (0x0018 - 0x0000)
-struct FCard final
+// ScriptStruct FortniteUI.CardPackOffer
+// 0x0090 (0x0090 - 0x0000)
+struct FCardPackOffer final
 {
 public:
-	int32                                         QuantityReceived;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortItem*                              Item;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPauseType                                    PauseType;                                         // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FText                                   Title;                                             // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   Description;                                       // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	int32                                         MtxPrice;                                          // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECatalogSaleType                              SaleType;                                          // 0x0034(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   SaleText;                                          // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	int32                                         Price;                                             // 0x0050(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RegularPrice;                                      // 0x0054(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFortAccountItemDefinition*             CurrencyType;                                      // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         QuantityRemaining;                                 // 0x0060(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTimedOffer;                                       // 0x0064(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortCatalogMeta                       OfferMetaData;                                     // 0x0068(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	uint8                                         Pad_80[0x10];                                      // 0x0080(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCard;
+DUMPER7_ASSERTS_FCardPackOffer;
+
+// ScriptStruct FortniteUI.FortToastDisplayInfo
+// 0x0060 (0x0060 - 0x0000)
+struct FFortToastDisplayInfo final
+{
+public:
+	class FText                                   Header;                                            // 0x0000(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   Body;                                              // 0x0018(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              Image;                                             // 0x0030(0x0028)(BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFortToastType                                Type;                                              // 0x0058(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FFortToastDisplayInfo;
+
+// ScriptStruct FortniteUI.StoreCallout
+// 0x0078 (0x0078 - 0x0000)
+struct FStoreCallout final
+{
+public:
+	struct FFortToastDisplayInfo                  ToastDisplayInfo;                                  // 0x0000(0x0060)(BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   ItemName;                                          // 0x0060(0x0018)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FStoreCallout;
 
 // ScriptStruct FortniteUI.BundledItemInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -6598,15 +3789,6 @@ public:
 };
 DUMPER7_ASSERTS_FBundledItemInfo;
 
-// ScriptStruct FortniteUI.OfferPopUpData
-// 0x0018 (0x0020 - 0x0008)
-struct FOfferPopUpData final : public FTableRowBase
-{
-public:
-	class FText                                   FormatedText;                                      // 0x0008(0x0018)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOfferPopUpData;
-
 // ScriptStruct FortniteUI.FortSurvivorSquadSlottingFeedbackData
 // 0x00B0 (0x00B0 - 0x0000)
 struct FFortSurvivorSquadSlottingFeedbackData final
@@ -6615,8 +3797,8 @@ public:
 	bool                                          HadLeaderMatch;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          HasLeaderMatch;                                    // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FGameplayTag, int32>              PreviousSetBonusCounts;                            // 0x0008(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TMap<struct FGameplayTag, int32>              CurrentSetBonusCounts;                             // 0x0058(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TMap<struct FGameplayTag, int32>              PreviousSetBonusCounts;                            // 0x0008(0x0050)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<struct FGameplayTag, int32>              CurrentSetBonusCounts;                             // 0x0058(0x0050)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	int32                                         PreviousPersonalityMatchCount;                     // 0x00A8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         CurrentPersonalityMatchCount;                      // 0x00AC(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -6636,18 +3818,18 @@ public:
 DUMPER7_ASSERTS_FFortSurvivorSquadSelectorButtonPersonalityMatches;
 
 // ScriptStruct FortniteUI.FortSurvivorSquadSelectorButtonSummaryStats
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct FFortSurvivorSquadSelectorButtonSummaryStats final
 {
 public:
 	class FName                                   SquadId;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     FortAttribute;                                     // 0x0008(0x0038)(BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FortAttributeValue;                                // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAttribute                     FortTeamAttribute;                                 // 0x0048(0x0038)(BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TeamFortAttributeValue;                            // 0x0080(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SquadPowerValue;                                   // 0x0084(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   FortAttributeName;                                 // 0x0088(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     FortAttribute;                                     // 0x0008(0x0020)(BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FortAttributeValue;                                // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAttribute                     FortTeamAttribute;                                 // 0x0030(0x0020)(BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TeamFortAttributeValue;                            // 0x0050(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SquadPowerValue;                                   // 0x0054(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   FortAttributeName;                                 // 0x0058(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortSurvivorSquadSelectorButtonSummaryStats;
 
@@ -6677,16 +3859,6 @@ public:
 };
 DUMPER7_ASSERTS_FFortSwipeDetector;
 
-// ScriptStruct FortniteUI.CachedComponentMaterials
-// 0x0018 (0x0018 - 0x0000)
-struct FCachedComponentMaterials final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInterface*>             OriginalMaterials;                                 // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCachedComponentMaterials;
-
 // ScriptStruct FortniteUI.TouchMove
 // 0x000C (0x000C - 0x0000)
 struct alignas(0x04) FTouchMove final
@@ -6695,40 +3867,6 @@ public:
 	uint8                                         Pad_0[0xC];                                        // 0x0000(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FTouchMove;
-
-// ScriptStruct FortniteUI.TouchInteractionIconOverride
-// 0x0030 (0x0030 - 0x0000)
-struct FTouchInteractionIconOverride final
-{
-public:
-	TSoftObjectPtr<class UTexture2D>              IconOverride;                                      // 0x0000(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         IconScale;                                         // 0x0028(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTouchInteractionIconOverride;
-
-// ScriptStruct FortniteUI.ButtonInteractionPair
-// 0x0010 (0x0010 - 0x0000)
-struct FButtonInteractionPair final
-{
-public:
-	class AActor*                                 TrackedInteraction;                                // 0x0000(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFortTouchInteractionButton*            TrackedButton;                                     // 0x0008(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FButtonInteractionPair;
-
-// ScriptStruct FortniteUI.FortItemTransformFilterTabLabelInfo
-// 0x00C0 (0x00C0 - 0x0000)
-struct FFortItemTransformFilterTabLabelInfo final
-{
-public:
-	class FName                                   FilterTabNameId;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFortTabButtonLabelInfo                TabButtonLabelInfo;                                // 0x0008(0x00A0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<EFortInventoryFilter>                  ItemFilters;                                       // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortItemType                                 ItemType;                                          // 0x00B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortItemTransformFilterTabLabelInfo;
 
 // ScriptStruct FortniteUI.StateWidgetEntry
 // 0x0030 (0x0030 - 0x0000)
@@ -6740,38 +3878,6 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FStateWidgetEntry;
-
-// ScriptStruct FortniteUI.FortRootViewportLayoutInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FFortRootViewportLayoutInfo final
-{
-public:
-	class UFortLocalPlayer*                       LocalPlayer;                                       // 0x0000(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUserWidget*                            RootLayout;                                        // 0x0008(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortRootViewportLayoutInfo;
-
-// ScriptStruct FortniteUI.UIStateTag
-// 0x0000 (0x0008 - 0x0008)
-struct FUIStateTag : public FUITag
-{
-};
-DUMPER7_ASSERTS_FUIStateTag;
-
-// ScriptStruct FortniteUI.AthenaUIStateTag
-// 0x0000 (0x0008 - 0x0008)
-struct FAthenaUIStateTag final : public FUIStateTag
-{
-};
-DUMPER7_ASSERTS_FAthenaUIStateTag;
-
-// ScriptStruct FortniteUI.FortStartupUIStateTag
-// 0x0000 (0x0008 - 0x0008)
-struct FFortStartupUIStateTag final : public FUIStateTag
-{
-};
-DUMPER7_ASSERTS_FFortStartupUIStateTag;
 
 // ScriptStruct FortniteUI.FortUINavigationOperation
 // 0x0030 (0x0030 - 0x0000)
@@ -6796,7 +3902,7 @@ DUMPER7_ASSERTS_FFortUINavigationOperation;
 struct FFortUINavigationRequest final
 {
 public:
-	TArray<struct FFortUINavigationOperation>     Operations;                                        // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FFortUINavigationOperation>     Operations;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortUINavigationRequest;
 
@@ -6822,19 +3928,6 @@ public:
 };
 DUMPER7_ASSERTS_FFortUIPickerTrapSortModifier;
 
-// ScriptStruct FortniteUI.FortUIPickerTrapSortScores
-// 0x0014 (0x0014 - 0x0000)
-struct FFortUIPickerTrapSortScores final
-{
-public:
-	float                                         UniqueTrapBonus;                                   // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SlottedBonus;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FavoriteBonus;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTrackedTrapBonusTime;                           // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TrackedTrapBonusMultiplier;                        // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortUIPickerTrapSortScores;
-
 // ScriptStruct FortniteUI.FortUIXpInfo
 // 0x002C (0x002C - 0x0000)
 struct FFortUIXpInfo final
@@ -6851,9 +3944,9 @@ DUMPER7_ASSERTS_FFortUIXpInfo;
 struct FContentPushState final
 {
 public:
-	bool                                          bHideHeader;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHideFooter;                                       // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHideChatWidget;                                   // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHideHeader;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHideFooter;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHideChatWidget;                                   // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FContentPushState;
 
@@ -6886,8 +3979,8 @@ public:
 	class FName                                   TutorialWidgetName;                                // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   Title;                                             // 0x0010(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	class FString                                 DevComment;                                        // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FText>                           Descriptions;                                      // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<TSoftObjectPtr<class UTexture2D>>      PreviewImages;                                     // 0x0048(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FText>                           Descriptions;                                      // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<TSoftObjectPtr<class UTexture2D>>      PreviewImages;                                     // 0x0048(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortUITutorialData;
 
@@ -6906,7 +3999,7 @@ public:
 	class FText                                   AntiAddictionTotalDescriptionFormat;               // 0x0060(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	bool                                          bUsePlayerTimeLimitSystem;                         // 0x0078(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TSoftObjectPtr<class UTexture2D>>      RatingIcons;                                       // 0x0080(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<TSoftObjectPtr<class UTexture2D>>      RatingIcons;                                       // 0x0080(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortHealthyGamingData;
 
@@ -6918,6 +4011,23 @@ public:
 	struct FFortMultiSizeBrush                    Brush;                                             // 0x0008(0x0330)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFortSquadIconData;
+
+// ScriptStruct FortniteUI.FortDisplayAttribute
+// 0x0070 (0x0070 - 0x0000)
+struct FFortDisplayAttribute final
+{
+public:
+	struct FGameplayAttribute                     Attribute;                                         // 0x0000(0x0020)(BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Label;                                             // 0x0020(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   Value;                                             // 0x0038(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   HoverText;                                         // 0x0050(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         NumericValue;                                      // 0x0068(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFortStatValueDisplayType                     DisplayType;                                       // 0x006C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFortBuffState                                BuffState;                                         // 0x006D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFortClampState                               ClampState;                                        // 0x006E(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFortComparisonType                           ComparisonType;                                    // 0x006F(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFortDisplayAttribute;
 
 // ScriptStruct FortniteUI.FortDisplayModifier
 // 0x0038 (0x0038 - 0x0000)
@@ -6931,105 +4041,6 @@ public:
 	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FFortDisplayModifier;
-
-// ScriptStruct FortniteUI.FortErrorInfo
-// 0x0070 (0x0070 - 0x0000)
-struct FFortErrorInfo final
-{
-public:
-	class FText                                   Operation;                                         // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   ErrorMessage;                                      // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FString                                 ErrorCode;                                         // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortErrorSeverity                            ErrorSeverity;                                     // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ContinueButtonText;                                // 0x0048(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	uint8                                         Pad_60[0x10];                                      // 0x0060(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortErrorInfo;
-
-// ScriptStruct FortniteUI.HomebaseNodeDisplayData
-// 0x0088 (0x0090 - 0x0008)
-struct FHomebaseNodeDisplayData final : public FTableRowBase
-{
-public:
-	class FText                                   Title;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   Description;                                       // 0x0020(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              LargePreviewImage;                                 // 0x0038(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              SmallPreviewImage;                                 // 0x0060(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMediaSource*                           PreviewVideoMediaSource;                           // 0x0088(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FHomebaseNodeDisplayData;
-
-// ScriptStruct FortniteUI.FortVariantFilterContext
-// 0x0020 (0x0020 - 0x0000)
-struct alignas(0x08) FFortVariantFilterContext final
-{
-public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortVariantFilterContext;
-
-// ScriptStruct FortniteUI.FortVideoInfo
-// 0x0038 (0x0038 - 0x0000)
-struct FFortVideoInfo final
-{
-public:
-	class FName                                   ID;                                                // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             PreviewImage;                                      // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMediaSource*                           VideoSource;                                       // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULocalizedOverlays*                     SubtitleOverlays;                                  // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   QuestObjectiveName;                                // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPrimaryAssetId                        RequiredActiveQuest;                               // 0x0028(0x0010)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortVideoInfo;
-
-// ScriptStruct FortniteUI.FortWeaponBoardDisplaySlot
-// 0x0050 (0x0050 - 0x0000)
-struct FFortWeaponBoardDisplaySlot final
-{
-public:
-	struct FGameplayTag                           RequiredTag;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             MeshRelativeTransform;                             // 0x0010(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                LocalOffsetMultiplier;                             // 0x0040(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortWeaponBoardDisplaySlot;
-
-// ScriptStruct FortniteUI.FortWeaponBoardDisplaySlotItem
-// 0x0060 (0x0060 - 0x0000)
-struct FFortWeaponBoardDisplaySlotItem final
-{
-public:
-	struct FFortWeaponBoardDisplaySlot            DisplaySlot;                                       // 0x0000(0x0050)(NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortWeaponBoardDisplaySlotItem;
-
-// ScriptStruct FortniteUI.CameraToWinterQuestViewState
-// 0x0028 (0x0028 - 0x0000)
-struct FCameraToWinterQuestViewState final
-{
-public:
-	EWinterQuestViewState                         UIViewState;                                       // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CameraTagsToSetFrom;                               // 0x0008(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCameraToWinterQuestViewState;
-
-// ScriptStruct FortniteUI.GGCenterDisplayEntry
-// 0x0017 (0x0018 - 0x0001)
-struct FGGCenterDisplayEntry final : public FFortChangeMonitoringStruct
-{
-public:
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortWeaponItemDefinition*              WeaponAt;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PlayersAtWeapon;                                   // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsEnabled;                                        // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsFinal;                                          // 0x0015(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FGGCenterDisplayEntry;
 
 // ScriptStruct FortniteUI.HeistExitCraftIconData
 // 0x0010 (0x0010 - 0x0000)
@@ -7058,133 +4069,15 @@ public:
 };
 DUMPER7_ASSERTS_FHeistBlingIconData;
 
-// ScriptStruct FortniteUI.HUDLayoutToolV2_ButtonStateColor
-// 0x0050 (0x0050 - 0x0000)
-struct FHUDLayoutToolV2_ButtonStateColor final
-{
-public:
-	struct FSlateColor                            TextColor;                                         // 0x0000(0x0028)(Edit, NativeAccessSpecifierPublic)
-	struct FLinearColor                           IconColor;                                         // 0x0028(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           BackgroundColor;                                   // 0x0038(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         IconAngle;                                         // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FHUDLayoutToolV2_ButtonStateColor;
-
-// ScriptStruct FortniteUI.LinkAcrossNumericalIndicatorActionSymbol
-// 0x0030 (0x0030 - 0x0000)
-struct FLinkAcrossNumericalIndicatorActionSymbol final
-{
-public:
-	ENumericalIndicatorActionType                 ActionType;                                        // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ActionSymbol;                                      // 0x0008(0x0018)(Edit, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ActionColor;                                       // 0x0020(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FLinkAcrossNumericalIndicatorActionSymbol;
-
-// ScriptStruct FortniteUI.SimpleActionMessages
-// 0x0038 (0x0038 - 0x0000)
-struct FSimpleActionMessages final
-{
-public:
-	ELinkAcrossSimpleAction                       SimpleActionType;                                  // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   SimpleActionTitle;                                 // 0x0008(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class FText                                   SimpleActionBody;                                  // 0x0020(0x0018)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSimpleActionMessages;
-
-// ScriptStruct FortniteUI.QuickbarProxySlotIconContainer
-// 0x0010 (0x0010 - 0x0000)
-struct FQuickbarProxySlotIconContainer final
-{
-public:
-	TArray<class UPaperSprite*>                   SlotIcons;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FQuickbarProxySlotIconContainer;
-
-// ScriptStruct FortniteUI.HUDLayoutToolV2_ToastNotificationContent
-// 0x0038 (0x0038 - 0x0000)
-struct FHUDLayoutToolV2_ToastNotificationContent final
-{
-public:
-	EHUDLayoutToolToasterType                     ToasterType;                                       // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   TitleText;                                         // 0x0008(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class FText                                   DescriptionText;                                   // 0x0020(0x0018)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FHUDLayoutToolV2_ToastNotificationContent;
-
-// ScriptStruct FortniteUI.PerkPipData
-// 0x0010 (0x0010 - 0x0000)
-struct FPerkPipData final
-{
-public:
-	class UFortAccoladeItemDefinition*            AccoladeItemDef;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumOfPips;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPerkPipData;
-
-// ScriptStruct FortniteUI.FortFeedbackDropdownCategoryHotfix_Modify
-// 0x000C (0x000C - 0x0000)
-struct FFortFeedbackDropdownCategoryHotfix_Modify final
-{
-public:
-	class FName                                   InternalName;                                      // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddFlag;                                          // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortPlayerFeedbackFlags                      Flag;                                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FFortFeedbackDropdownCategoryHotfix_Modify;
-
-// ScriptStruct FortniteUI.FortPrioritizedWidgetData
-// 0x0002 (0x0002 - 0x0000)
-struct FFortPrioritizedWidgetData final
-{
-public:
-	EFortPrioritizedWidgetPriority                Priority;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFortPrioritizedWidgetContestedBehavior       WhenContesting;                                    // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFortPrioritizedWidgetData;
-
-// ScriptStruct FortniteUI.ActiveSidekickInstance
+// ScriptStruct FortniteUI.TDMTeamScoreData
 // 0x0020 (0x0020 - 0x0000)
-struct FActiveSidekickInstance final
+struct FTDMTeamScoreData final
 {
 public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class USidekickDisplayWidget*                 Widget;                                            // 0x0010(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FText                                   CurrScoreText;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	float                                         CurrScorePercent;                                  // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CurrScore;                                         // 0x001C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FActiveSidekickInstance;
-
-// ScriptStruct FortniteUI.SpatialCustomizationCategoryStateData
-// 0x0030 (0x0030 - 0x0000)
-struct FSpatialCustomizationCategoryStateData final
-{
-public:
-	ESpatialCustomizationCategoryState            State;                                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           Color;                                             // 0x0004(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CategorySelectionHeaderText;                       // 0x0018(0x0018)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSpatialCustomizationCategoryStateData;
-
-// ScriptStruct FortniteUI.WaxPlacementData
-// 0x0020 (0x0020 - 0x0000)
-struct FWaxPlacementData final
-{
-public:
-	int32                                         Placement;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 PlayerName;                                        // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CoinCount;                                         // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsPlayer;                                         // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FWaxPlacementData;
+DUMPER7_ASSERTS_FTDMTeamScoreData;
 
 SDK_NAMESPACE_END

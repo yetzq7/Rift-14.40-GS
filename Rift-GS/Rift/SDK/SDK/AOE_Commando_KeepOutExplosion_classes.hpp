@@ -17,25 +17,26 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass AOE_Commando_KeepOutExplosion.AOE_Commando_KeepOutExplosion_C
-// 0x03D8 (0x0978 - 0x05A0)
+// 0x0320 (0x0908 - 0x05E8)
 class AAOE_Commando_KeepOutExplosion_C final : public AFortAreaOfEffectCloud
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        AOE_Audio_Effect;                                  // 0x05A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               P_Grenade_Linger;                                  // 0x05B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       DamageArea;                                        // 0x05B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x05C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         Radius;                                            // 0x05C8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CC[0x4];                                      // 0x05CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoundAttenuationSettings              AOE_Sound_Attenuation_Based_On_Radius;             // 0x05D0(0x03A0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class USoundBase*                             AOE_Electric_Sound;                                // 0x0970(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        AOE_Audio_Effect;                                  // 0x05F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               P_Grenade_Linger;                                  // 0x05F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       DamageArea;                                        // 0x0600(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0608(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         Radius;                                            // 0x0610(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_614[0x4];                                      // 0x0614(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoundAttenuationSettings              AOE_Sound_Attenuation_Based_On_Radius;             // 0x0618(0x02E8)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class USoundBase*                             AOE_Electric_Sound;                                // 0x0900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_AOE_Commando_KeepOutExplosion(int32 EntryPoint);
 	void ReceiveBeginPlay();
 	void ReceiveDestroyed();
 	void Send_Info(float Radius_0);
+	void UserConstructionScript();
 	void OnRep_Radius();
 
 public:

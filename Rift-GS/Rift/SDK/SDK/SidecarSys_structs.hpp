@@ -18,21 +18,12 @@ SDK_NAMESPACE_START
 struct FSidecarFileInfo final
 {
 public:
-	TMap<class FString, class FString>            Meta;                                              // 0x0000(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            Meta;                                              // 0x0000(0x0050)(ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bIsCheckedOut;                                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOperationPending;                                 // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CheckoutGuid;                                      // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FSidecarFileInfo;
-
-// ScriptStruct SidecarSys.InventoryFlushPayload
-// 0x0010 (0x0010 - 0x0000)
-struct FInventoryFlushPayload final
-{
-public:
-	TArray<class FString>                         InventoryNames;                                    // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FInventoryFlushPayload;
 
 SDK_NAMESPACE_END

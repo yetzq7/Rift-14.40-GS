@@ -191,12 +191,11 @@ void UCinematic_C::Construct()
 // Function Cinematic.Cinematic_C.ShowMovie
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UMediaPlayer*                     MediaPlayer                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UMediaSource*                     MediaSource                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UNamedSlot*&                      MovieSlot_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ULegacy_MovieWidget_C*&           MovieWidget_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMovieWidget_C*&                  MovieWidget_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCinematic_C::ShowMovie(class UMediaPlayer* MediaPlayer, class UMediaSource* MediaSource, class UNamedSlot*& MovieSlot_0, class ULegacy_MovieWidget_C*& MovieWidget_0)
+void UCinematic_C::ShowMovie(class UMediaSource* MediaSource, class UNamedSlot*& MovieSlot_0, class UMovieWidget_C*& MovieWidget_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -205,7 +204,6 @@ void UCinematic_C::ShowMovie(class UMediaPlayer* MediaPlayer, class UMediaSource
 
 	Params::Cinematic_C_ShowMovie Parms{};
 
-	Parms.MediaPlayer = MediaPlayer;
 	Parms.MediaSource = MediaSource;
 	Parms.MovieSlot_0 = MovieSlot_0;
 	Parms.MovieWidget_0 = MovieWidget_0;
@@ -369,7 +367,7 @@ void UCinematic_C::StopAndClearSubtitles()
 
 
 // Function Cinematic.Cinematic_C.GetAudioTrackIndex
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32*                                  AudioTrack                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

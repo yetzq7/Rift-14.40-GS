@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass AccountLinkingWindow.AccountLinkingWindow_C
-// 0x0000 (0x0558 - 0x0558)
+// 0x0000 (0x0410 - 0x0410)
 class UAccountLinkingWindow_C final : public UFortAccountLinkingWindow
 {
 public:

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_SpeedLines_Camera_Lens.BP_SpeedLines_Camera_Lens_C
-// 0x0000 (0x02E0 - 0x02E0)
+// 0x0000 (0x03F0 - 0x03F0)
 class ABP_SpeedLines_Camera_Lens_C final : public AEmitterCameraLensEffectBase
 {
 public:
